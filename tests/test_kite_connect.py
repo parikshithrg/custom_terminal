@@ -3,8 +3,9 @@ from hashlib import sha256
 import pytest
 
 from market_intel.foundation.kite_connect import (
-    SESSION_URL, KiteAuthenticationError, build_login_url, current_data_scope,
-    exchange_request_token, extract_request_token,
+    SESSION_URL, KiteAuthenticationError, KiteSession, KiteSessionState,
+    build_login_url, current_data_scope, disconnect, exchange_request_token,
+    extract_request_token, finish_login, invalidate_session,
 )
 
 
@@ -52,3 +53,42 @@ def test_kite_scope_cannot_approve_historical_universe():
     assert scope["trade_execution_enabled"] is False
     assert scope["historical_universe_approved"] is False
     assert scope["delisted_instruments_in_live_view"] is False
+
+
+def test_session_representation_is_redacted():
+    rendered = repr(KiteSession("visible-id", "access-secret", "AB123"))
+    assert "access-secret" not in rendered
+    assert "visible-id" not in rendered
+    assert "<redacted>" in rendered
+
+
+def test_login_cleans_sensitive_inputs_on_success():
+    state = {"kite_api_key": "key", "kite_api_secret": "secret", "kite_request_token": "request"}
+    finish_login(state, http=Http(Response({"data": {"access_token": "access"}})))
+    assert "kite_api_secret" not in state and "kite_request_token" not in state
+    assert state["kite_connection_state"] == KiteSessionState.AUTHENTICATED
+
+
+def test_failed_login_cleans_one_time_and_secret_values():
+    state = {"kite_api_key": "key", "kite_api_secret": "secret", "kite_request_token": "request"}
+    finish_login(state, http=Http(Response({}, True)))
+    assert "kite_api_secret" not in state and "kite_request_token" not in state
+    assert "kite_session" not in state
+    assert state["kite_connection_state"] == KiteSessionState.INVALID
+
+
+def test_disconnect_removes_all_session_material():
+    state = {"kite_api_key": "key", "kite_api_secret": "secret", "kite_request_token": "request",
+             "kite_session": object(), "kite_client": object(), "kite_inventory": object(),
+             "kite_quote_cache": object(), "kite_authenticated_user": "AB123", "kite_last_request": "now"}
+    disconnect(state)
+    assert not any(key in state for key in ("kite_api_key", "kite_api_secret", "kite_request_token",
+        "kite_session", "kite_client", "kite_inventory", "kite_quote_cache", "kite_authenticated_user"))
+    assert state["kite_connection_state"] == KiteSessionState.DISCONNECTED
+
+
+def test_provider_rejection_clears_access_material_and_marks_expired():
+    state = {"kite_session": object(), "kite_client": object(), "kite_inventory": object()}
+    invalidate_session(state, expired=True)
+    assert not any(key in state for key in ("kite_session", "kite_client", "kite_inventory"))
+    assert state["kite_connection_state"] == KiteSessionState.EXPIRED

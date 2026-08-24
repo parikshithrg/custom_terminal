@@ -87,6 +87,7 @@ Current decision: `AWAITING_SUBSTANTIVE_OFFICIAL_RESPONSE`.
 
 ```
 pip install -r requirements.txt
+pip install -e .
 streamlit run app.py
 ```
 
@@ -96,20 +97,39 @@ so editing a page updates the running app automatically.
 
 ## Kite Connect daily login
 
-Open **Markets Data Library → Data Coverage → Kite Connect Login**. Enter the
+Open **Markets Data Library → Data Coverage → Kite Connection**. Enter the
 API key and API secret, open the Zerodha login link, then paste the returned
 one-time `request_token` (or complete redirect URL) and create the daily
 session. Repeat after Kite's access token expires.
 
-The API secret, request token, and access token remain only in Streamlit
-session memory; they are not saved to files, databases, logs, artifacts, or
-Git. This connector is read-only and does not place orders.
+The API secret and one-time request token are removed from application state
+after every exchange attempt. The access token remains only in Streamlit
+session memory until provider rejection, disconnect, or process termination.
+These values are not intentionally saved to files, databases, logs, artifacts,
+or Git. Removal of Python references is not a claim of secure memory erasure.
+
+The application allowlists only these Kite GET endpoints:
+
+- `/user/profile` for bounded session validation;
+- `/instruments` for an ephemeral current instrument inventory;
+- `/quote`, `/quote/ohlc`, and `/quote/ltp` for user-requested snapshots.
+
+The token exchange at `/session/token` is the sole allowed authentication POST
+and is isolated from market-data methods. No order, order modification,
+cancellation, basket, GTT, funds-transfer, holdings-mutation, order-margin, or
+WebSocket order-update functionality is implemented. The user's token may have
+broader account permissions; this application allows only the declared data
+endpoints. Quotes are limited to 25 current inventory entries per request and
+cached in memory for 15 seconds. Provider entitlements can still limit results.
 
 Kite is scoped to currently tradable instruments and current-market analysis.
 Delisted securities are omitted from live views. Its current instrument list
 is never substituted for a historical universe: historical research still
 requires point-in-time inactive membership to avoid survivorship bias. The
 connector therefore does not change the A.8–A.10 historical trust verdicts.
+
+Detailed current-data scope: `reports/KITE_CURRENT_DATA_SCOPE.md`. A.11
+implementation report: `reports/SLICE_A11_REPORT.md`.
 
 ## Structure
 

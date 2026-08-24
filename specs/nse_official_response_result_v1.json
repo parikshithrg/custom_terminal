@@ -1,0 +1,25 @@
+{
+  "result_version": "nse_official_response_result_v1",
+  "request_version": "nse_official_clarification_request_v1",
+  "evaluation_status": "NO_RESPONSE_SUPPLIED",
+  "classifications": {
+    "manual_download_permission": "NOT_ANSWERED",
+    "automated_retrieval_permission": "NOT_ANSWERED",
+    "immutable_local_retention": "NOT_ANSWERED",
+    "corrected_and_prior_vintage_retention": "NOT_ANSWERED",
+    "normalized_local_tables": "NOT_ANSWERED",
+    "derived_noncommercial_research": "NOT_ANSWERED",
+    "pre_2024_snapshots_available": "NOT_ANSWERED",
+    "approved_snapshot_access_path": "NOT_ANSWERED",
+    "payment_required": "NOT_ANSWERED",
+    "institutional_affiliation_required": "NOT_ANSWERED",
+    "agreement_nda_or_proposal_required": "NOT_ANSWERED",
+    "display_restrictions": "NOT_ANSWERED",
+    "raw_data_redistribution": "NOT_ANSWERED",
+    "normalized_data_redistribution": "NOT_ANSWERED"
+  },
+  "supporting_sections": {},
+  "acquisition_authorized": false,
+  "research_path": "PATH_E_NO_SUBSTANTIVE_RESPONSE",
+  "decision": "AWAITING_SUBSTANTIVE_OFFICIAL_RESPONSE"
+}

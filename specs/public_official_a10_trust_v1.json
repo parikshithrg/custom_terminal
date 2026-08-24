@@ -1,0 +1,20 @@
+{
+  "dataset_id": "official_public_a10_response_evaluation",
+  "version": "public_official_a10_trust_v1",
+  "supersedes_for_evaluation_only": "public_official_a8_trust_v1",
+  "technical_accessibility": "PARTIAL_AS_ESTABLISHED_IN_A8",
+  "manual_access_permission": "NOT_ANSWERED",
+  "automated_retrieval_permission": "PROHIBITED_BY_EXISTING_TERMS_UNLESS_OFFICIALLY_OVERRIDDEN",
+  "immutable_retention_permission": "NOT_ANSWERED",
+  "derived_research_permission": "NOT_ANSWERED",
+  "pre_2024_snapshot_availability": "NOT_ANSWERED",
+  "historical_population_sample": "FAIL_3_OF_12_PAIRS",
+  "historical_universe_reconstructible": "FAIL",
+  "survivorship_safe": "UNKNOWN",
+  "stable_security_identity_verified": "FAIL",
+  "corporate_actions_verified": "UNKNOWN",
+  "delisting_outcomes_available": "FAIL",
+  "production_historical_coverage": "FAIL",
+  "experiment_readiness": "FAIL",
+  "acquisition_authorized": false
+}

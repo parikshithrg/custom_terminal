@@ -12,6 +12,8 @@
 
 > Vertical Slice A.9 official access and rights clarification packet: `reports/SLICE_A9_REPORT.md` and `reports/NSE_DATA_CLARIFICATION_REQUEST.md`.
 
+> Vertical Slice A.10 response evaluation gate: `reports/SLICE_A10_REPORT.md` and `reports/NSE_OFFICIAL_RESPONSE_EVALUATION.md`.
+
 A one-stop information & analytics terminal spanning trading decisions,
 long-term investment decisions, and event risk - **deliberately with no
 trade execution**. This is a pages-only scaffold: every page exists and
@@ -74,6 +76,12 @@ Current decision: `HISTORICAL_POPULATION_RECONSTRUCTION_INCOMPLETE`.
 An official clarification request is ready for `marketdata@nse.co.in`, with the NSE Economic Policy & Research route at `nseri@nse.co.in`. No message was transmitted from this workspace and acquisition remains stopped. A deterministic response gate requires an authoritative, retained, hashed written reply before manual access, retention, derived research, or pre-2024 availability can be treated as permitted.
 
 Current gate: `AWAITING_OFFICIAL_WRITTEN_RESPONSE`.
+
+### Vertical Slice A.10
+
+No official response bytes, headers, or attachments were present in the supplied task or attachment registry. All fourteen permission questions therefore remain `NOT_ANSWERED`; no acquisition or research-scope promotion is authorized. The response evaluator now validates official domains, headers, exact bodies, referenced attachments, permission categories, and mandatory acquisition gates.
+
+Current decision: `AWAITING_SUBSTANTIVE_OFFICIAL_RESPONSE`.
 
 ## Run it
 

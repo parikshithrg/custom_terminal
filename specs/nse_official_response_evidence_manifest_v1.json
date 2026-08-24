@@ -1,0 +1,27 @@
+{
+  "manifest_version": "nse_official_response_evidence_manifest_v1",
+  "source_classification": "NOT_SUPPLIED",
+  "exact_response_preserved": false,
+  "private_raw_evidence_path": null,
+  "sender_domain": null,
+  "department": null,
+  "recipient_redacted": true,
+  "response_date": null,
+  "subject": null,
+  "relationship_to_request": "UNVERIFIABLE",
+  "export_or_retrieval_timestamp": null,
+  "content_type": null,
+  "content_hash": null,
+  "attachments": [],
+  "preservation_method": "NONE_RESPONSE_NOT_PRESENT",
+  "parser_version": "nse_official_response_envelope_v1",
+  "provenance_failures": [
+    "response_not_present_in_workspace_or_attachment_registry",
+    "sender_domain_unavailable",
+    "headers_unavailable",
+    "department_unavailable",
+    "exact_body_unavailable",
+    "attachment_completeness_unverifiable"
+  ],
+  "publication_permission": "NOT_APPLICABLE_NO_PRIVATE_RESPONSE_COMMITTED"
+}

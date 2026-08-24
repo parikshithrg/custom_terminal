@@ -1,0 +1,19 @@
+{
+  "result_version": "a7_qualification_result_v1",
+  "source_accessibility": "PARTIAL",
+  "lifecycle_sample": "INCOMPLETE",
+  "qualified_cases": ["ADANITRANS_TO_ADANIENSOL_2023_08_24"],
+  "unresolved_terminal_cases": ["CABOTINDIA", "TOLANIBULK", "HOGANAS"],
+  "unfilled_lifecycle_quotas": ["identity_transition:2", "split:1", "bonus:1", "dividend:1", "rights:1", "demerger:1", "economic_terminal:3"],
+  "population_sample": "BLOCKED_NOT_EXECUTED",
+  "benchmark_sample": "SOURCE_IDENTIFIED_NOT_DOWNLOADED",
+  "historical_cost_sample": "INCOMPLETE",
+  "one_year_pilot_readiness": "BLOCKED",
+  "one_year_pilot_completion": "NOT_EXECUTED",
+  "production_historical_coverage": "FAIL",
+  "experiment_readiness": "FAIL",
+  "new_external_objects_retrieved": 0,
+  "new_quarantined_objects": 0,
+  "tests": {"root": "42 passed", "data_test": "289 passed"},
+  "final_readiness_decision": "PUBLIC_SOURCES_REQUIRE_FURTHER_MANUAL_EVIDENCE"
+}

@@ -1,0 +1,15 @@
+{
+  "spec_version": "one_year_archive_pilot_2024_v1",
+  "selected_year": 2024,
+  "justification": "Recent completed year with demonstrated official bhavcopy access and modern formats; chosen for readiness design, not because completeness has passed.",
+  "expected_calendar_source": "NSE official trading holiday/session publications",
+  "required_daily_objects": ["NSE cash-equity bhavcopy", "dated NSE MII security snapshot"],
+  "required_supporting_objects": ["NSE/BSE corporate actions", "terminal/lifecycle notices", "NIFTY 50 PRI", "NIFTY 50 TRI", "date-effective statutory costs"],
+  "correction_policy": "Retain every raw vintage; link revisions; never overwrite successful content-addressed bytes.",
+  "thresholds": {"expected_session_coverage": 1.0, "price_file_coverage": 1.0, "security_snapshot_coverage": 1.0, "benchmark_pri_coverage": 1.0, "benchmark_tri_coverage": 1.0, "cost_schedule_coverage": 1.0, "unresolved_price_security_keys": 0},
+  "abort_conditions": ["CAPTCHA or access-control response", "authentication required", "rate-limit response", "unclear retention terms", "missing mandatory session", "unrecognized schema transition", "hash mismatch or mutable upstream object"],
+  "estimated_request_volume": {"daily_pairs": "approximately 500 for about 250 sessions", "supporting_objects": "bounded and event-driven"},
+  "access_policy": {"minimum_interval_seconds": 1.0, "cache": "content-addressed and URL/request keyed", "retries": 2, "no_bypass": true},
+  "readiness_status": "BLOCKED",
+  "missing_prerequisites": ["historical_security_snapshot_access", "archive_retention_permission", "qualified_PRI_and_TRI_downloads", "complete_2024_statutory_cost_schedule", "lifecycle_coverage_method"]
+}

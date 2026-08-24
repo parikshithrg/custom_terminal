@@ -1,0 +1,18 @@
+{
+  "spec_version": "historical_population_sample_12_dates_v1",
+  "exchange": "NSE",
+  "cash_series": ["EQ"],
+  "dates": [
+    "2016-01-04", "2016-08-24", "2018-02-06", "2018-09-21",
+    "2020-01-02", "2020-03-23", "2022-02-24", "2022-06-17",
+    "2024-01-02", "2024-06-04", "2025-01-02", "2025-04-07"
+  ],
+  "required_pair_per_date": ["official_security_snapshot", "official_cash_equity_bhavcopy"],
+  "required_keys": ["exchange", "symbol", "series", "isin"],
+  "causal_rule": "Current security files cannot establish historical membership. Unexplained additions or removals remain unresolved.",
+  "execution_status": "BLOCKED",
+  "blockers": [
+    "Historical dated MII security snapshots were not proven retrievable for all fixed dates",
+    "Retention and permitted research use were not established for an annual archive"
+  ]
+}

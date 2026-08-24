@@ -28,6 +28,7 @@ market-intel-momentum = "market_intel.application.momentum_cli:main"
 packages = ["src/market_intel"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "Data test/tests"]
+testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-ra"
+addopts = "-ra --basetemp=.pytest_tmp/root"
+norecursedirs = ["Data test", "Local Terminal", "artifacts", ".pytest_tmp"]

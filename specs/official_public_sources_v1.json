@@ -1,6 +1,13 @@
 {
   "registry_version": "official_public_sources_v1",
   "as_of": "2026-08-24",
+  "a7_manual_qualification": {
+    "population_sample": "BLOCKED_NOT_EXECUTED",
+    "benchmark_sample": "SOURCE_IDENTIFIED_NOT_DOWNLOADED",
+    "cost_schedule": "INCOMPLETE",
+    "one_year_pilot": "BLOCKED_NOT_EXECUTED",
+    "note": "Individual accessibility does not establish sample qualification, annual completeness, production coverage, or experiment readiness."
+  },
   "sources": [
     {
       "source_id": "nse_cash_bhavcopy",

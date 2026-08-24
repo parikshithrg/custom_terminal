@@ -94,6 +94,23 @@ Opens at `http://127.0.0.1:8501`. Home is a grid of boxes (not tabs, not
 a sidebar) - click any box to open that page. `runOnSave = true` is set,
 so editing a page updates the running app automatically.
 
+## Kite Connect daily login
+
+Open **Markets Data Library → Data Coverage → Kite Connect Login**. Enter the
+API key and API secret, open the Zerodha login link, then paste the returned
+one-time `request_token` (or complete redirect URL) and create the daily
+session. Repeat after Kite's access token expires.
+
+The API secret, request token, and access token remain only in Streamlit
+session memory; they are not saved to files, databases, logs, artifacts, or
+Git. This connector is read-only and does not place orders.
+
+Kite is scoped to currently tradable instruments and current-market analysis.
+Delisted securities are omitted from live views. Its current instrument list
+is never substituted for a historical universe: historical research still
+requires point-in-time inactive membership to avoid survivorship bias. The
+connector therefore does not change the A.8–A.10 historical trust verdicts.
+
 ## Structure
 
 17 pages across 4 sections (`views/_registry.py` is the single source of

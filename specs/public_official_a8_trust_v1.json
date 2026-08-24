@@ -1,0 +1,19 @@
+{
+  "dataset_id": "official_public_a8_historical_population_sample",
+  "version": "public_official_a8_trust_v1",
+  "price_history_complete": "UNKNOWN",
+  "survivorship_safe": "UNKNOWN",
+  "historical_universe_reconstructible": "FAIL",
+  "corporate_actions_verified": "UNKNOWN",
+  "delisting_outcomes_available": "FAIL",
+  "exchange_turnover_available": "PASS_FOR_12_BHAVCOPY_OBJECTS_ONLY",
+  "publication_timing_known": "UNKNOWN",
+  "stable_security_identity_verified": "FAIL",
+  "historical_population_sample": "FAIL_3_OF_12_PAIRS",
+  "direct_snapshot_reconstructibility": "FAIL",
+  "event_derived_reconstructibility": "FAIL",
+  "automated_retrieval": "FAIL",
+  "raw_retention_and_derived_use": "REQUIRES_REVIEW",
+  "production_historical_coverage": "FAIL",
+  "experiment_readiness": "FAIL"
+}

@@ -1,0 +1,18 @@
+{
+  "spec_version": "historical_population_paired_acquisition_v1",
+  "parent_sample": "historical_population_sample_12_dates_v1",
+  "representative_date": "2024-06-04",
+  "security_object": "NSE_CM_security_DDMMYYYY.csv.gz",
+  "price_objects": {
+    "2016_to_2018": "cmDDMONYYYYbhav.csv.zip",
+    "2020_to_2024_07_07": "sec_bhavdata_full_DDMMYYYY.csv",
+    "after_2024_07_07": "BhavCopy_NSE_CM_0_0_0_YYYYMMDD_F_0000.csv.zip"
+  },
+  "official_mii_website_dissemination_start": "2024-02-05",
+  "request_policy": {"minimum_interval_seconds": 1.0, "retries": 2, "content_addressed_cache": true,
+    "abort_on": ["CAPTCHA", "authentication", "persistent rate limiting", "unrecognized schema", "prohibited retrieval"]},
+  "normalization": {"security_parser": "nse_mii_security_v1", "price_parser": "nse_bhavcopy_router_v2",
+    "cash_series": ["EQ"], "current_list_substitution": "PROHIBITED"},
+  "access_stop": "NSE Terms of Use prohibit systematic or automated collection; no requests after discovery",
+  "large_raw_storage": "ignored artifacts/population_a8/raw; never committed"
+}

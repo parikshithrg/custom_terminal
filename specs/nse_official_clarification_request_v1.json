@@ -1,0 +1,23 @@
+{
+  "request_version": "nse_official_clarification_request_v1",
+  "status": "READY_TO_SEND_NOT_TRANSMITTED",
+  "primary_contact": "marketdata@nse.co.in",
+  "research_contact": "nseri@nse.co.in",
+  "official_contact_evidence": [
+    "https://www.nseindia.com/static/market-data/eod-historical-data-subscription",
+    "https://www.nseindia.com/static/research/research-initiatives"
+  ],
+  "project_constraints": ["personal non-commercial research", "no paid data", "no redistribution",
+    "no automated acquisition unless expressly permitted", "local immutable evidence required"],
+  "questions": [
+    "May an individual manually download the dated public bhavcopy and MII security files for personal non-commercial research?",
+    "May exact downloaded files be retained locally and immutably with hashes and retrieval metadata?",
+    "May derived normalized tables, aggregate diagnostics and unpublished research results be created and retained?",
+    "May corrected/revised public files be retained alongside earlier vintages?",
+    "Are dated cash-market security snapshots for the nine locked dates before 2024-02-05 available from an official non-paid public or research route?",
+    "If available, what manual access path and file nomenclature should be used?",
+    "Does any permitted route require payment, subscription, an institutional affiliation, NDA, declaration or other agreement?",
+    "What restrictions apply to display of aggregates and redistribution of raw or normalized rows?"
+  ],
+  "acquisition_while_pending": "PROHIBITED"
+}

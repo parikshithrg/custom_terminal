@@ -1,0 +1,269 @@
+{
+  "version": "historical_population_access_log_v1",
+  "objects": [
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20250407_F_0000.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:22.676543+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "170992",
+        "content-type": "application/zip",
+        "etag": "W/\"170992-1744031942190\"",
+        "last-modified": "Mon, 07 Apr 2025 13:19:02 GMT"
+      },
+      "content_hash": "16aeacbb3b3c1ca82021b27afc00d97de2d2c5a409fd51d1b70dff8cd94786d7",
+      "byte_size": 170992,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/content/historical/EQUITIES/2018/SEP/cm21SEP2018bhav.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:11.548121+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "71810",
+        "content-type": "application/zip",
+        "etag": "W/\"71810-1547726273000\"",
+        "last-modified": "Thu, 17 Jan 2019 11:57:53 GMT"
+      },
+      "content_hash": "41d8abd9d903b24c5bad3777841d378e8091842f702aadb12d886b86e17f703f",
+      "byte_size": 71810,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20250102_F_0000.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:20.323211+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "171515",
+        "content-type": "application/zip",
+        "etag": "W/\"171515-1735815722000\"",
+        "last-modified": "Thu, 02 Jan 2025 11:02:02 GMT"
+      },
+      "content_hash": "4a4b668c477ea6182d7c3e4f6bd963486c266849dacc91d4afc7d3735ea5a07f",
+      "byte_size": 171515,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/content/historical/EQUITIES/2018/FEB/cm06FEB2018bhav.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:10.455361+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "69515",
+        "content-type": "application/zip",
+        "etag": "W/\"69515-1547726271000\"",
+        "last-modified": "Thu, 17 Jan 2019 11:57:51 GMT"
+      },
+      "content_hash": "5bc4759ac3864a3ad97be1d046bad3582803981a9f018535571648505507d131",
+      "byte_size": 69515,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_24022022.csv",
+      "retrieval_timestamp": "2026-08-24T11:40:15.304525+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"253009-1645727135000\"",
+        "last-modified": "Thu, 24 Feb 2022 18:25:35 GMT"
+      },
+      "content_hash": "666d3608349c1b1132d5ee13dcd9b0a8148629597cbc29f46c2f428083bcbea3",
+      "byte_size": 253009,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_17062022.csv",
+      "retrieval_timestamp": "2026-08-24T11:40:16.521669+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"246837-1655490327000\"",
+        "last-modified": "Fri, 17 Jun 2022 18:25:27 GMT"
+      },
+      "content_hash": "725f0f603aa9a08fbc04ae29fa7f82e9ca8942c55e4c5eca13e0b3b2f48c1e53",
+      "byte_size": 246837,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/content/historical/EQUITIES/2016/JAN/cm04JAN2016bhav.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:08.234293+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "59858",
+        "content-type": "application/zip",
+        "etag": "W/\"59858-1547726267000\"",
+        "last-modified": "Thu, 17 Jan 2019 11:57:47 GMT"
+      },
+      "content_hash": "75871681374cfe0fcb0d53d5ff9c4a4763996a345398c5679edd2111cad5b9fc",
+      "byte_size": 59858,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_02012020.csv",
+      "retrieval_timestamp": "2026-08-24T11:40:12.808543+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"214885-1577989527000\"",
+        "last-modified": "Thu, 02 Jan 2020 18:25:27 GMT"
+      },
+      "content_hash": "7e9a7146f2e29b7a5b9092d7e7a3bc1011167bce0fa2b8c5316a8ccc29117fe6",
+      "byte_size": 214885,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_04062024.csv",
+      "retrieval_timestamp": "2026-08-24T11:36:49.873845+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"296514-1717525523000\"",
+        "last-modified": "Tue, 04 Jun 2024 18:25:23 GMT"
+      },
+      "content_hash": "ac04230c30466c46211f7b598bd79fec3f37d4a5d9f085648f87a47539c19420",
+      "byte_size": 296514,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/content/historical/EQUITIES/2016/AUG/cm24AUG2016bhav.csv.zip",
+      "retrieval_timestamp": "2026-08-24T11:40:09.346710+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "61339",
+        "content-type": "application/zip",
+        "etag": "W/\"61339-1547726267000\"",
+        "last-modified": "Thu, 17 Jan 2019 11:57:47 GMT"
+      },
+      "content_hash": "bbc305c8f8eefe2daccbeca64572b8686faa06f506342fe5a126020db6214d93",
+      "byte_size": 61339,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_02012024.csv",
+      "retrieval_timestamp": "2026-08-24T11:40:17.801513+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"296657-1704219922000\"",
+        "last-modified": "Tue, 02 Jan 2024 18:25:22 GMT"
+      },
+      "content_hash": "d2f36a41f6730b79c52b15d0e96ab74a0facfc89d1d576c39cc1404508ae65ae",
+      "byte_size": 296657,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "daily_equity",
+      "source_url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_23032020.csv",
+      "retrieval_timestamp": "2026-08-24T11:40:13.932716+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-type": "text/csv",
+        "etag": "W/\"213692-1584987928000\"",
+        "last-modified": "Mon, 23 Mar 2020 18:25:28 GMT"
+      },
+      "content_hash": "d5c1e674c04c5b4215ca3965e472527a42620bbc9bb855704c28f8a764203875",
+      "byte_size": 213692,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "security_snapshot",
+      "source_url": "https://nsearchives.nseindia.com/content/cm/NSE_CM_security_04062024.csv.gz",
+      "retrieval_timestamp": "2026-08-24T11:36:48.466665+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "868904",
+        "content-type": "application/x-gzip",
+        "etag": "W/\"868904-1717514701000\"",
+        "last-modified": "Tue, 04 Jun 2024 15:25:01 GMT"
+      },
+      "content_hash": "072addc7036eb6f6c9cc31d729326b8c84532392de1e8b24550b61f0ca8da449",
+      "byte_size": 868904,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "security_snapshot",
+      "source_url": "https://nsearchives.nseindia.com/content/cm/NSE_CM_security_07042025.csv.gz",
+      "retrieval_timestamp": "2026-08-24T11:40:21.484244+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "999635",
+        "content-type": "application/x-gzip",
+        "etag": "W/\"999635-1744034102000\"",
+        "last-modified": "Mon, 07 Apr 2025 13:55:02 GMT"
+      },
+      "content_hash": "291a9421ac972f397d86e4b01d7f26df4557b68875be98d0aa51d0bc9650fc3d",
+      "byte_size": 999635,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    },
+    {
+      "dataset": "security_snapshot",
+      "source_url": "https://nsearchives.nseindia.com/content/cm/NSE_CM_security_02012025.csv.gz",
+      "retrieval_timestamp": "2026-08-24T11:40:19.192916+00:00",
+      "request_parameters": {},
+      "http_status": 200,
+      "response_metadata": {
+        "content-length": "959077",
+        "content-type": "application/x-gzip",
+        "etag": "W/\"959077-1735822804000\"",
+        "last-modified": "Thu, 02 Jan 2025 13:00:04 GMT"
+      },
+      "content_hash": "ad620cdd441b7240a64564463651ac594e131a1bb788f2ae9e2902f838180ffa",
+      "byte_size": 959077,
+      "parser_version": "a8_router_v1",
+      "retrieval_outcome": "SUCCEEDED",
+      "quarantine_reason": null
+    }
+  ]
+}

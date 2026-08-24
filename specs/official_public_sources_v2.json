@@ -1,0 +1,13 @@
+{
+  "registry_version": "official_public_sources_v2",
+  "supersedes": "official_public_sources_v1",
+  "as_of": "2026-08-24",
+  "scope": "A.8 NSE historical population access delta",
+  "sources": [
+    {"source_id":"nse_all_reports","landing_page":"https://www.nseindia.com/all-reports/","purpose":"dated bhavcopy and current/post-2024 MII files","accessibility":"PASS_INDIVIDUAL_FILES","automated_retrieval":"FAIL_TERMS_PROHIBIT_SYSTEMATIC_AUTOMATED_COLLECTION","retention":"REQUIRES_REVIEW"},
+    {"source_id":"nse_archive_direct_objects","landing_page":"https://nsearchives.nseindia.com/","purpose":"exact official dated objects linked/named by NSE","accessibility":"PASS_BOUNDED_SAMPLE","automated_retrieval":"FAIL_AFTER_TERMS_REVIEW","retention":"REQUIRES_REVIEW"},
+    {"source_id":"nse_mii_dissemination_circular","landing_page":"https://nsearchives.nseindia.com/content/circulars/MSD60315.pdf","purpose":"proves website MII dissemination effective 2024-02-05","accessibility":"PASS","automated_retrieval":"NOT_APPLICABLE","retention":"PUBLIC_CIRCULAR_REQUIRES_COPYRIGHT_COMPLIANCE"},
+    {"source_id":"nse_terms_of_use","landing_page":"https://www.nseindia.com/static/nse-terms-of-use","purpose":"access-control evidence","accessibility":"PASS","automated_retrieval":"FAIL","retention":"REQUIRES_REVIEW"},
+    {"source_id":"nse_data_policy","landing_page":"https://www.nseindia.com/static/market-data/nse-data-policy","purpose":"market-data use/retention/licensing evidence","accessibility":"PASS","automated_retrieval":"REQUIRES_AGREEMENT_OR_REVIEW","retention":"REQUIRES_REVIEW"}
+  ]
+}

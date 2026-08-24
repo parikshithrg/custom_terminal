@@ -8,6 +8,10 @@
 
 > Vertical Slice A.7 manual official-evidence qualification and archive readiness: `reports/SLICE_A7_REPORT.md`.
 
+> Vertical Slice A.8 locked twelve-date historical-population qualification: `reports/SLICE_A8_REPORT.md`.
+
+> Vertical Slice A.9 official access and rights clarification packet: `reports/SLICE_A9_REPORT.md` and `reports/NSE_DATA_CLARIFICATION_REQUEST.md`.
+
 A one-stop information & analytics terminal spanning trading decisions,
 long-term investment decisions, and event risk - **deliberately with no
 trade execution**. This is a pages-only scaffold: every page exists and
@@ -56,6 +60,20 @@ Machine-readable outputs:
 - `specs/a7_qualification_result_v1.json`
 
 The recommended next milestone is to prove ordinary, retainable access to paired official NSE security snapshots and bhavcopies for the fixed 12 dates, then execute only that population qualification before reconsidering the 2024 pilot.
+
+### Vertical Slice A.8
+
+The fixed sample retrieved 12/12 official bhavcopies but only 3/12 dated MII security snapshots. The three modern pairs preserved 1,488, 1,611, and 1,557 snapshot-only/non-trading EQ securities and had no price-only EQ rows. Nine older pairs remain incomplete because NSE's website dissemination of the dated MII file began on 2024-02-05; no current security list was substituted.
+
+The current NSE Terms of Use prohibit systematic automated collection. Further acquisition stopped, raw objects remain outside Git, and retention/derived-use permission requires written review. Direct and event-derived historical-population reconstruction both fail for the locked interval.
+
+Current decision: `HISTORICAL_POPULATION_RECONSTRUCTION_INCOMPLETE`.
+
+### Vertical Slice A.9
+
+An official clarification request is ready for `marketdata@nse.co.in`, with the NSE Economic Policy & Research route at `nseri@nse.co.in`. No message was transmitted from this workspace and acquisition remains stopped. A deterministic response gate requires an authoritative, retained, hashed written reply before manual access, retention, derived research, or pre-2024 availability can be treated as permitted.
+
+Current gate: `AWAITING_OFFICIAL_WRITTEN_RESPONSE`.
 
 ## Run it
 

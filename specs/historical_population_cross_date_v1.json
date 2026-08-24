@@ -1,0 +1,9 @@
+{
+  "version": "historical_population_cross_date_v1",
+  "scope": "EQ series only",
+  "comparisons": [
+    {"previous":"2024-06-04","current":"2025-01-02","additions":242,"removals":62,"supported_causal_transitions":0,"unresolved_transitions":304},
+    {"previous":"2025-01-02","current":"2025-04-07","additions":98,"removals":22,"supported_causal_transitions":0,"unresolved_transitions":120}
+  ],
+  "interpretation": "Differences are observations, not inferred listings, delistings, suspensions, mergers, or symbol changes. A complete event ledger was not available."
+}

@@ -1,0 +1,17 @@
+{
+  "response_version": "nse_official_response_template_v1",
+  "status": "AWAITING_OFFICIAL_WRITTEN_RESPONSE",
+  "organization": null,
+  "responder_name": null,
+  "responder_role": null,
+  "received_at": null,
+  "source_message_hash": null,
+  "answers": {
+    "manual_download": "UNKNOWN", "automated_download": "UNKNOWN",
+    "immutable_local_retention": "UNKNOWN", "correction_vintage_retention": "UNKNOWN",
+    "derived_noncommercial_research": "UNKNOWN", "raw_redistribution": "UNKNOWN",
+    "pre_2024_snapshots_available": "UNKNOWN", "paid_relationship_required": "UNKNOWN"
+  },
+  "acquisition_authorized": false,
+  "rule": "Only an exact retained response from an authoritative NSE/NSE Data representative may change this gate."
+}

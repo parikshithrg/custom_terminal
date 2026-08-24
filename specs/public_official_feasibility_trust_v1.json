@@ -1,0 +1,14 @@
+{
+  "dataset_id": "official_public_feasibility_sample",
+  "version": "public_official_feasibility_trust_v1",
+  "price_history_complete": "FAIL",
+  "survivorship_safe": "UNKNOWN",
+  "historical_universe_reconstructible": "FAIL",
+  "corporate_actions_verified": "UNKNOWN",
+  "delisting_outcomes_available": "FAIL",
+  "exchange_turnover_available": "UNKNOWN",
+  "publication_timing_known": "UNKNOWN",
+  "stable_security_identity_verified": "FAIL",
+  "scope": "Qualification sample only; no production capability may pass from sample evidence.",
+  "proposed_trustworthy_research_start_date": null
+}

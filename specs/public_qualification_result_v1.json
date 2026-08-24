@@ -1,0 +1,57 @@
+{
+  "qualification_version": "official_public_qualification_v1",
+  "executed_at": "2026-08-24",
+  "raw_objects": [
+    {
+      "dataset": "daily_equity",
+      "url": "https://archives.nseindia.com/content/historical/EQUITIES/2012/JAN/cm03JAN2012bhav.csv.zip",
+      "sha256": "3f4a1f4f773f1c3469da1ba6a3eb7d198985be951541daa492893f760d4a6769",
+      "outcome": "QUARANTINED",
+      "reason": "CAPTCHA_OR_ACCESS_CONTROL"
+    },
+    {
+      "dataset": "daily_equity",
+      "url": "https://archives.nseindia.com/content/historical/EQUITIES/2016/JAN/cm04JAN2016bhav.csv.zip",
+      "sha256": "75871681374cfe0fcb0d53d5ff9c4a4763996a345398c5679edd2111cad5b9fc",
+      "outcome": "SUCCEEDED"
+    },
+    {
+      "dataset": "daily_equity",
+      "url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_02012020.csv",
+      "sha256": "7e9a7146f2e29b7a5b9092d7e7a3bc1011167bce0fa2b8c5316a8ccc29117fe6",
+      "outcome": "SUCCEEDED"
+    },
+    {
+      "dataset": "daily_equity",
+      "url": "https://archives.nseindia.com/products/content/sec_bhavdata_full_02012024.csv",
+      "sha256": "d2f36a41f6730b79c52b15d0e96ab74a0facfc89d1d576c39cc1404508ae65ae",
+      "outcome": "SUCCEEDED"
+    },
+    {
+      "dataset": "terminal_outcomes",
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Copy_of_List_of_delisted_Companies_20260612152719.xlsx",
+      "sha256": "72225a8ab568308c129b705b65998e9dba3209065a86bc4962499ebe9315b5d9",
+      "outcome": "SUCCEEDED"
+    },
+    {
+      "dataset": "symbol_changes",
+      "url": "https://archives.nseindia.com/content/circulars/CML58016.pdf",
+      "sha256": "66497abfee3e004cdb361f202c5638198e4096ac9c35e87e8267cf5ccd2984ea",
+      "outcome": "SUCCEEDED"
+    }
+  ],
+  "sample_counts": {
+    "continuous_equities": 3,
+    "qualified_trading_dates": 3,
+    "delisted_records": 3,
+    "symbol_isin_merger_transitions": 1,
+    "split": 0,
+    "bonus": 0,
+    "dividend": 0,
+    "rights": 0,
+    "demerger": 0
+  },
+  "production_historical_coverage": "FAIL",
+  "proposed_trustworthy_research_start_date": null,
+  "readiness_decision": "public sources remain insufficient without manual evidence collection"
+}

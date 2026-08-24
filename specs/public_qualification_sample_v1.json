@@ -1,0 +1,24 @@
+{
+  "sample_version": "public_qualification_sample_v1",
+  "fixed_seed": 20260824,
+  "requested_cases": {
+    "continuously_listed_equities": 3,
+    "delisted_securities": 3,
+    "merger_ticker_or_isin_transitions": 3,
+    "split": 1,
+    "bonus": 1,
+    "dividend": 1,
+    "rights": 1,
+    "demerger": 1,
+    "historical_trading_dates": 4
+  },
+  "fixed_trading_dates": ["2012-01-03", "2016-01-04", "2020-01-02", "2024-01-02"],
+  "continuous_symbols": ["INFY", "RELIANCE", "TCS"],
+  "declared_transition": {
+    "old_symbol": "ADANITRANS",
+    "new_symbol": "ADANIENSOL",
+    "effective_date": "2023-08-24",
+    "official_evidence": "https://archives.nseindia.com/content/circulars/CML58016.pdf"
+  },
+  "rule": "Unfilled quotas remain FAIL or UNKNOWN; unofficial evidence and guessed mappings are prohibited."
+}

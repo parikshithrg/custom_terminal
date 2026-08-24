@@ -36,6 +36,13 @@ class RawObjectManifest:
     retry_count: int = 0
     error_state: str | None = None
     stored_payload: str | None = None
+    source_organization: str | None = None
+    source_url: str | None = None
+    http_status: int | None = None
+    response_metadata: dict[str, str] = field(default_factory=dict)
+    retry_history: tuple[str, ...] = ()
+    retrieval_outcome: str = "SUCCEEDED"
+    quarantine_reason: str | None = None
 
 
 def bytes_hash(path: Path) -> str:

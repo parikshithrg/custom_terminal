@@ -4,6 +4,8 @@
 
 > Slice A.6 provider-neutral ingestion readiness: `reports/SLICE_A6_REPORT.md`. Candidate sources must be reviewed with `reports/DATA_SOURCE_EVALUATION_TEMPLATE.md` before any acquisition.
 
+> Official-public-source feasibility and bounded qualification: `reports/PUBLIC_DATA_FEASIBILITY.md` and `reports/PUBLIC_DATA_QUALIFICATION.md`.
+
 A one-stop information & analytics terminal spanning trading decisions,
 long-term investment decisions, and event risk - **deliberately with no
 trade execution**. This is a pages-only scaffold: every page exists and

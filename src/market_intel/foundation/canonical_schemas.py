@@ -32,6 +32,17 @@ class FrameSchema:
         return result
 
 
+PROVENANCE_COLUMNS = ("source_id", "raw_payload_hash", "parser_version")
+
+
+def validate_row_provenance(frame: pd.DataFrame) -> None:
+    missing = set(PROVENANCE_COLUMNS) - set(frame.columns)
+    if missing:
+        raise ValueError(f"normalized rows missing provenance columns: {sorted(missing)}")
+    if frame[list(PROVENANCE_COLUMNS)].isna().any().any():
+        raise ValueError("normalized row provenance cannot be null")
+
+
 DAILY_EQUITY_SCHEMA = FrameSchema("daily_equity", "daily_equity_v1", {
     "trade_date": "datetime64[ns]", "instrument_id": "string", "listing_id": "string",
     "exchange_symbol": "string", "series": "string", "open": "float64", "high": "float64",

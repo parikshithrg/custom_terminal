@@ -1,0 +1,26 @@
+# Derived data. Regenerable from source + config; never the source of truth.
+artifacts/
+runs/*/data/
+runs/*/*.parquet
+
+# Holding-period diagnostic output - regenerable via
+# scripts/build_holding_period_analysis*.py, kept local only (~370MB+,
+# too large to be worth versioning).
+runs/holding_period_analysis/
+runs/holding_period_analysis_val_only/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Never commit credentials
+*credentials*.json
+*session*.json
+
+# OS
+Thumbs.db
+desktop.ini

@@ -1,0 +1,12 @@
+{
+  "dataset_id": "local_dashboard_equity_daily",
+  "version": "local_equity_daily_trust_v1",
+  "price_history_complete": "FAIL",
+  "survivorship_safe": "FAIL",
+  "historical_universe_reconstructible": "FAIL",
+  "corporate_actions_verified": "UNKNOWN",
+  "delisting_outcomes_available": "FAIL",
+  "exchange_turnover_available": "FAIL",
+  "publication_timing_known": "UNKNOWN",
+  "stable_security_identity_verified": "FAIL"
+}

@@ -1,0 +1,36 @@
+{
+  "date_end": "2016-12-31",
+  "date_start": "2013-01-01",
+  "fixture_version": "momentum_golden_v1",
+  "hashes": {
+    "legacy_feature": "f24f68d3e24f06cf6c6a5dced8f45f96b4d072710f103ea227d5c3598337826a",
+    "legacy_signals": "2a77677f2d51d4bbd840093649cd1376a1fa0639bc7eec7dbff743dd135f20a0"
+  },
+  "legacy": {
+    "mean_net_pct": 0.607732568233929,
+    "resolved": 45,
+    "signals": 68,
+    "trades": 47
+  },
+  "source_file_hashes": [
+    "ASIANPAINT_DAILY.csv:ed11361a495210ce60e6305316680f3208ff1d2289afcf560a66d4d52d3b5562",
+    "HDFCBANK_DAILY.csv:33e37170c316045bfa67ad492017b5df21e0e3b070cd96daaf2fe467ed543869",
+    "HINDUNILVR_DAILY.csv:f893027c55eeac931d64e6bb7c697e180f0df64a19562b591344767e9c2ac0ea",
+    "ICICIBANK_DAILY.csv:256aa60cf0020d4c911d9669fbd7873d94cee05a48398a02e06b4bce2395658d",
+    "INFY_DAILY.csv:c89269fdb3b4fcfab66fae58acb746f3914ffc7b1717761cb1654488fc9653a3",
+    "ITC_DAILY.csv:eb78d80fbe7c305dab1eaf8a484eccdbc7303856c9c0142c2af8bedd22fb020f",
+    "RELIANCE_DAILY.csv:1e9785b0e0914252ce6382c6443416041c5d40f25608a22ebb8199dfd8efe8f0",
+    "TCS_DAILY.csv:9603fb8ab60888f4eb3a785d4f436735d6924280ac1d723617d18cf30cae9e40",
+    "NIFTY50_DAILY.csv:f6fd5a0b26f946326491d260280073459d57621fc3a328a0373bacd5a99bd625"
+  ],
+  "symbols": [
+    "ASIANPAINT",
+    "HDFCBANK",
+    "HINDUNILVR",
+    "ICICIBANK",
+    "INFY",
+    "ITC",
+    "RELIANCE",
+    "TCS"
+  ]
+}

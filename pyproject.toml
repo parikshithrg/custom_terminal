@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "local-terminal-market-intel"
+version = "0.1.0"
+description = "Local-first, point-in-time market research infrastructure"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy==2.5.1",
+  "pandas==3.0.3",
+  "scipy==1.17.1",
+  "pyarrow==23.0.1",
+  "duckdb==1.4.4",
+  "beautifulsoup4==4.15.0",
+  "PyMuPDF==1.26.4",
+  "requests==2.34.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.2"]
+
+[project.scripts]
+market-intel-momentum = "market_intel.application.momentum_cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/market_intel"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "Data test/tests"]
+pythonpath = ["src"]
+addopts = "-ra"

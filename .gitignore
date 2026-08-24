@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+.venv/
+artifacts/
+*.egg-info/
+
+# Imported source snapshots retained locally for reference, not canonical code.
+Local Terminal/
+Local Terminal.zip
+
+# Legacy research code is retained for compatibility; bulky acquired/generated
+# datasets and runs are not source-controlled in this repository.
+Data test/data/
+Data test/runs/
+Data test/artifacts/
+
+# Local analytical/database outputs.
+*.db
+*.sqlite

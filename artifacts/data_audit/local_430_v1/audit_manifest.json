@@ -1,0 +1,27 @@
+{
+  "audit_version": "local_430_historical_data_audit_v1",
+  "code_commit": "NO_GIT_METADATA",
+  "dirty_worktree_fingerprint": "ad604dc216277ebcebc6e618c32819dc9992b2029c84a4f0d8e376275387c66b",
+  "input_snapshot_hashes": {
+    "benchmark": "f6fd5a0b26f946326491d260280073459d57621fc3a328a0373bacd5a99bd625",
+    "events": "86d7908d5c21d496a6b5e8ee302054d024dab281ec075cfb14242c96b9ca25d4",
+    "industry_map": "47e984a8e846d3ed7d50a5439a5100093759bf7c4ed45cf3dfeb70ef8d39a3bc"
+  },
+  "output_artifact_hashes": {
+    "audit_summary.json": "ffc8c1c5c7231cc978d7b9f33d32c793b4ad8824988d132324b2daa03a2a5354",
+    "corporate_action_discontinuities.csv": "85ed672361d451d1903549c45ce17e0dbf6cd76a0aaeac9b1973d8808f27c7f3",
+    "corporate_action_discontinuities.parquet": "ddca8cdafbc5efa5f187a3d83de11ca5a002061a27905bb0493d3c548601e2ae",
+    "coverage_by_year.csv": "3eac87793c084ea35094b7b08142e960a6be89a50519377ef1b7fc6fe2af04e6",
+    "coverage_by_year.parquet": "6272f0500e7b34464511b494a0fb6c57d52ddfa12c96e34e64c249aa4e5ef1f7",
+    "historical_reference_symbols_absent.csv": "f1f5ced160b511cf0b164c235605d3e8bfa5de0a20221a208e9696b03d2c4394",
+    "historical_reference_symbols_absent.parquet": "d4fba9323bf513c8f7dc97cbc743747bb1e8b270029b1c7e2a9d3c918535d74b",
+    "security_master_provisional.csv": "3b9ee04cc972ae12afc669d3846260490452558e6bfbe1e51b0c056b110bb4a9",
+    "security_master_provisional.parquet": "d721576672eee316a0d1900167384c5c8d23a790ad3a243388fdbf7bab02dfb1",
+    "symbol_aliases_provisional.csv": "ecf6a4e2b42389c78e07e634fed5b53b359cbcf36ef2b50daf2bfd0f212de067",
+    "symbol_aliases_provisional.parquet": "c57d86f9f2fec2796d4144bb7ff5a7f44d84f132fe512c45d2f75a3dba645720",
+    "symbol_inventory.csv": "c8bd71adcfe6d0851596093ae33856428c765785905dc4a885d0abf21424786a",
+    "symbol_inventory.parquet": "d82965e809718b728c2c7298051ff13f0c2cfe5aa2fcd1e60e4f9797e10ad82b"
+  },
+  "python": "3.14.6",
+  "source_tree_fingerprint": "ef0ec35a48e4050c6fcfee0bb1e48f89b72b566fffceb5d744745e7e29aa2644"
+}

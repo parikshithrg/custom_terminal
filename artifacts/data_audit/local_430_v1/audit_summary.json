@@ -1,0 +1,31 @@
+{
+  "dataset_cutoff": "2026-08-13",
+  "dataset_end": "2026-08-13",
+  "daily_files": 430,
+  "current_map_equity_files": 294,
+  "benchmark_or_index_files": 131,
+  "other_or_unresolved_files": 5,
+  "reference_event_symbols": 1993,
+  "reference_symbols_absent": 1699,
+  "terminated_or_unresolved_equities": 0,
+  "late_start_after_2010_equities": 125,
+  "equities_with_turnover": 0,
+  "equities_with_large_gaps": 127,
+  "equities_with_duplicates": 0,
+  "equities_with_nonpositive_prices": 4,
+  "suspected_discontinuities_all_files": 3243,
+  "benchmark": {
+    "symbol": "NIFTY50",
+    "first": "2000-01-03",
+    "last": "2026-08-13",
+    "columns": [
+      "date",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "sha256": "f6fd5a0b26f946326491d260280073459d57621fc3a328a0373bacd5a99bd625"
+  }
+}

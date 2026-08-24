@@ -1,0 +1,20 @@
+{
+  "captured_from": "Data test/runs/momentum_primary_train",
+  "captured_on": "2026-08-24",
+  "research_window": "primary/train (2004-01-01 through 2016-12-31)",
+  "hypothesis_state": "rejected",
+  "signals": 4147,
+  "resolved": 4031,
+  "mean_net_pct": 0.6013887475221125,
+  "mean_gross_pct": 0.9250550411277239,
+  "mean_cost_pct": 0.3236662936056115,
+  "ending_equity": 63899.11686443102,
+  "max_drawdown_pct": -39.16498992223367,
+  "artifact_sha256": {
+    "trades.csv": "744e8e1763f5a2b0ca241244fe4f06e90db6cbed240363add40550f87dfd52e0",
+    "equity_curve.csv": "55ab899155b715d9470d622dba591b37675d3ba99aa8bfd1138a2ab290bf8ed0",
+    "placebo_seeds.csv": "1b6428e1feaaaa598196a1e983dd42293a56396bff6598e52053c2b9026bd8bd",
+    "portfolio_trades.csv": "596ad6ee35c3443556a3a0b181bfde08a0095f4a7bca146d1875c4183ff343b9"
+  },
+  "replay_limitation": "The legacy bhavcopy cash-equity input cache referenced by the experiment is absent from the supplied workspace and configured artifact location. The outputs are hash-captured but a full source-to-result replay is not currently possible."
+}

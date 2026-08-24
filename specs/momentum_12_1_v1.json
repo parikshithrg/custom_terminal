@@ -1,0 +1,51 @@
+{
+  "experiment_id": "momentum_12_1_slice_a_v1",
+  "research_family_id": "cross_sectional_price_momentum",
+  "hypothesis": "Stocks with stronger trailing 12-month performance, excluding the most recent month, have higher subsequent executable 21-session returns.",
+  "universe_version": "liquidity_monthly_200_250_v1",
+  "feature_version": "momentum_12_1_v1",
+  "outcome_version": "next_open_21_session_excess_v1",
+  "benchmark": "NIFTY50",
+  "research_start": "2004-01-01",
+  "research_end": "2026-08-13",
+  "decision_clock": "NSE_CLOSE",
+  "entry_convention": "NEXT_SESSION_OPEN",
+  "exit_convention": "OPEN_AFTER_21_SESSIONS_FROM_ENTRY",
+  "cost_version": "india_delivery_2026_08_13_slippage_5bps_v1",
+  "lookback_sessions": 252,
+  "skip_sessions": 21,
+  "holding_sessions": 21,
+  "top_fraction": 0.2,
+  "target_value_per_trade": 10000.0,
+  "fold_plan": {
+    "kind": "expanding_walk_forward",
+    "minimum_train_years": 5,
+    "validation_years": 1,
+    "step_years": 1,
+    "purge_sessions": 22,
+    "embargo_sessions": 22
+  },
+  "primary_metric": "mean_net_excess_return_pct",
+  "secondary_diagnostics": [
+    "spearman_rank_ic",
+    "quintile_monotonicity",
+    "mean_gross_return_pct",
+    "mean_net_return_pct",
+    "max_drawdown_pct",
+    "turnover_pct",
+    "mae_pct",
+    "mfe_pct"
+  ],
+  "expected_direction": "POSITIVE",
+  "expected_monotonicity": "NON_DECREASING_QUINTILE_OUTCOMES",
+  "acceptance_gates": {
+    "minimum_oos_decision_dates": 60,
+    "mean_net_excess_return_positive": true,
+    "rank_ic_positive": true,
+    "bucket_monotonicity_required": true,
+    "positive_fold_fraction_minimum": 0.6,
+    "survivorship_safe_dataset_required": true
+  },
+  "seed": 42,
+  "non_actionable": true
+}

@@ -1,0 +1,14 @@
+{
+  "requirement_set_id": "cross_sectional_equity_data_requirements_v1",
+  "required_capabilities": [
+    "price_history_complete",
+    "survivorship_safe",
+    "historical_universe_reconstructible",
+    "corporate_actions_verified",
+    "delisting_outcomes_available",
+    "exchange_turnover_available",
+    "publication_timing_known",
+    "stable_security_identity_verified"
+  ],
+  "promotion_rule": "Every required capability must be PASS; FAIL and UNKNOWN are non-promotable."
+}

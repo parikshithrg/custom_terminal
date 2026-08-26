@@ -1,0 +1,43 @@
+{
+  "version": "shared_population_capabilities_v1",
+  "status_vocabulary": ["PASS", "FAIL", "UNKNOWN"],
+  "capabilities": {
+    "historically_traded_population_reconstructible": {
+      "definition": "Every in-scope exchange observation that traded in each covered session can be reconstructed from dated official trade files.",
+      "does_not_imply": "Complete listed, suspended, inactive, or terminal population.",
+      "current_status": "UNKNOWN",
+      "evidence": "All 12 locked A.8 bhavcopies were retrieved, but full-interval completeness and immutable permitted retention are not established."
+    },
+    "historically_listed_population_reconstructible": {
+      "definition": "Every security listed in scope at each decision time is present whether or not it traded.",
+      "does_not_imply": "Economic treatment of later disappearance.",
+      "current_status": "FAIL",
+      "evidence": "A.8 qualified only 3 of 12 dated security-snapshot pairs and found no complete event-ledger alternative."
+    },
+    "inactive_security_coverage": {
+      "definition": "Dated population evidence retains non-trading and inactive listings within their applicable intervals.",
+      "does_not_imply": "Complete suspension reasons or terminal consideration.",
+      "current_status": "UNKNOWN",
+      "evidence": "Modern A.8 snapshots contain snapshot-only rows, but pre-2024 coverage is unproved."
+    },
+    "suspension_history_available": {
+      "definition": "Authoritative dated suspension and resumption events are complete for the covered population and interval.",
+      "does_not_imply": "Permanent delisting or zero economic value.",
+      "current_status": "UNKNOWN",
+      "evidence": "No complete authoritative suspension ledger has been qualified."
+    },
+    "terminal_outcomes_available": {
+      "definition": "Every permanent disappearance has authoritative economic treatment, including cash or successor consideration where applicable.",
+      "does_not_imply": "A final quoted price is delisting consideration.",
+      "current_status": "FAIL",
+      "evidence": "A.5-A.10 retain unresolved terminal outcomes and explicitly fail delisting coverage."
+    },
+    "stable_security_identity_verified": {
+      "definition": "Dated listing, instrument, ISIN, and alias continuity is authoritative and ambiguous mappings remain unresolved.",
+      "does_not_imply": "Issuer-name or ticker similarity is identity evidence.",
+      "current_status": "FAIL",
+      "evidence": "A.8 identity was complete only in three modern snapshot samples; the historical interval remains unresolved."
+    }
+  },
+  "promotion_rule": "No current status may be promoted by this reconciliation specification."
+}

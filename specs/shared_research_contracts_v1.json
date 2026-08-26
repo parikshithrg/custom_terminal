@@ -1,0 +1,72 @@
+{
+  "version": "shared_research_contracts_v1",
+  "ownership": {
+    "hypothesis_laboratory": "Data test/dtest",
+    "canonical_trust_and_approval": "market_intel",
+    "neutral_boundary": "research_contracts"
+  },
+  "corporate_action_stages": [
+    "EXCHANGE_PREV_CLOSE_OBSERVED",
+    "ISOLATED_DISCONTINUITY_CANDIDATE",
+    "MARKET_WIDE_INCONSISTENCY_REJECTED",
+    "ADJUSTMENT_FACTOR_DERIVED",
+    "CORPORATE_ACTION_TYPE_VERIFIED",
+    "RATIO_VERIFIED_AUTHORITATIVELY",
+    "DIVIDEND_INCLUSIVE_RETURN_AVAILABLE",
+    "AUTHORITATIVE_ACTION_RECORD_LINKED"
+  ],
+  "terminal_classifications": [
+    "ORDINARY_MISSING_OBSERVATION",
+    "TEMPORARY_SUSPENSION",
+    "PERMANENT_DELISTING",
+    "MERGER_ACQUISITION",
+    "DEMERGER",
+    "SYMBOL_OR_ISIN_TRANSITION",
+    "SOURCE_FAILURE",
+    "UNRESOLVED_DISAPPEARANCE"
+  ],
+  "hypothesis_components": [
+    "economic_story",
+    "selection_rule",
+    "decision_clock",
+    "entry_rule",
+    "holding_horizon_sessions",
+    "exit_overlay",
+    "cost_schedule_version",
+    "portfolio_construction",
+    "research_split",
+    "research_status",
+    "experiment_family_id"
+  ],
+  "research_statuses": ["EXPLORATORY", "DIAGNOSTIC", "CONFIRMATORY"],
+  "lifecycle_states": [
+    "PROPOSED",
+    "PREREGISTERED",
+    "TRAIN_REJECTED",
+    "TRAIN_PROMOTED",
+    "VALIDATION_REJECTED",
+    "VALIDATION_CONFIRMED",
+    "TEST_REJECTED",
+    "TEST_CONFIRMED",
+    "REPLICATION_FAILED",
+    "REPLICATION_CONFIRMED",
+    "PRODUCTION_INELIGIBLE",
+    "UNRESOLVED_LEGACY_STATE"
+  ],
+  "legacy_mapping": {
+    "train.accepted": "TRAIN_PROMOTED",
+    "train.rejected": "TRAIN_REJECTED",
+    "val.accepted": "VALIDATION_CONFIRMED",
+    "val.rejected": "VALIDATION_REJECTED",
+    "test.accepted": "TEST_CONFIRMED",
+    "test.rejected": "TEST_REJECTED",
+    "otherwise": "UNRESOLVED_LEGACY_STATE"
+  },
+  "non_negotiable_rules": [
+    "Legacy accepted never maps directly to production eligibility.",
+    "A derived adjustment factor is not a verified corporate action.",
+    "Unknown terminal economics remain unresolved.",
+    "Raw prices remain separate from adjusted series.",
+    "Current-only Kite data cannot satisfy any historical contract."
+  ]
+}

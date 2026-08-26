@@ -1,0 +1,49 @@
+{
+  "version": "data_test_status_correction_v1",
+  "original_pdf": {
+    "path": "Data_Test_Status_Report.pdf",
+    "sha256": "940efd19fa4b385230c3b5cb51e66c6cb2353e178381b0188e001c0f536bdae3",
+    "created_at_local": "2026-08-26T11:58:01+05:30",
+    "reported_entries": 32,
+    "reported_rejected": 26,
+    "reported_accepted": 6,
+    "reported_constructions": 13
+  },
+  "repository_local_log": {
+    "path": "Data test/runs/hypothesis_log.csv",
+    "git_tracking": "IGNORED_NOT_VERSIONED",
+    "sha256": "80d80aa9372f5dc0ff857acba36575c125438508ebededecd789a31ece799777",
+    "entries": 31,
+    "rejected": 25,
+    "accepted": 6
+  },
+  "located_source_checkout": {
+    "path_classification": "SIBLING_DATA_TEST_CHECKOUT_REDACTED",
+    "initially_inspected_commit": "c3acfaf963813ad875b1d4e72590bc16861429e2",
+    "log_sha256": "124886d439a90071a9b0f884851afbffdba5dd783e52c2cedaeb4b2ac82eae1d",
+    "config_sha256": "82dd7d602560c35c40062ba30df7c5fe647f78249568749928cab93adcf584c9",
+    "entries": 32,
+    "rejected": 26,
+    "accepted": 6,
+    "missing_repository_row_id": "7facf033cb36",
+    "missing_repository_row_title": "mf_accumulation (Axis+SBI holdings, honest execution)",
+    "classification": "LOCATED_BUT_NOT_REPRODUCIBLE"
+  },
+  "generator": {
+    "sha256": "02eabbb70d9c405d1721df0df241217394e499ffeee61b98046435ef2b8a1109",
+    "subsequent_commit": "349cf12448ffc4c74e649b25f4b35086fd3eb73e",
+    "commit_relationship": "PDF predates the generator commit by 53 seconds; exact generation commit and dirty fingerprint were not embedded."
+  },
+  "repository_config_sha256": "cb68999f6e0dd16796d017f1104cc630483ada44ed1959143b99c9e9d11d29a2",
+  "dataset_provenance": {
+    "status": "INCOMPLETE",
+    "evidence": "The only located Data test manifest is audit_data/manifest.json with 430 input hashes from 2026-08-14; hypothesis rows and the PDF do not identify dataset-version hashes."
+  },
+  "corrected_claims": {
+    "validation": "One legacy momentum row is accepted on validation; no row reached the test window and none is production eligible.",
+    "accepted_entries": "Six accepted rows represent three economic families, not six independently validated hypotheses.",
+    "manifests": "The inspected hypothesis artifacts do not carry mandatory per-run manifests despite the documentation claim."
+  },
+  "original_pdf_preserved": true,
+  "original_log_rows_modified": false
+}

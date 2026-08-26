@@ -1,0 +1,56 @@
+{
+  "policy_id": "research_promotion_policy_v1",
+  "preregistration": {
+    "required_before_confirmatory_outcome_access": true,
+    "required_fields": [
+      "economic_story",
+      "experiment_family_id",
+      "population_scope",
+      "feature_and_selection_version",
+      "outcome_and_horizon_version",
+      "execution_cost_and_portfolio_versions",
+      "primary_metric",
+      "direction",
+      "fold_plan",
+      "multiplicity_method",
+      "acceptance_gates"
+    ]
+  },
+  "stages": {
+    "exploratory": {
+      "minimum_placebo_count": 99,
+      "minimum_empirical_p_resolution": 0.01,
+      "may_promote": false
+    },
+    "confirmation": {
+      "minimum_placebo_count": 999,
+      "minimum_empirical_p_resolution": 0.001,
+      "may_promote": "VALIDATION_CONFIRMED_ONLY"
+    },
+    "test": {
+      "minimum_placebo_count": 999,
+      "minimum_empirical_p_resolution": 0.001,
+      "may_promote": "TEST_CONFIRMED_ONLY"
+    }
+  },
+  "placebo_p_value": "Use the plus-one estimator (1 + exceedances) / (1 + permutations); never report zero.",
+  "experiment_families": "All diagnostics, parameter variants, universe variants, split variants and follow-up gates sharing an economic mechanism belong to one append-only family ledger.",
+  "multiple_testing": {
+    "within_family": "Use a preregistered max-statistic permutation across all registered variants, or Holm correction over valid p-values.",
+    "across_families": "Report false-discovery exposure and apply the preregistered FDR or family-wise policy; do not select the method after results are known."
+  },
+  "validation_gates": [
+    "Point-in-time and dataset capability gates pass.",
+    "Multiplicity-adjusted uncertainty excludes the null in the declared direction.",
+    "Net economics survive the declared cost range.",
+    "Results are not concentrated in one fold, sector, date cluster, or repeated security.",
+    "Effective sample size satisfies the preregistered minimum."
+  ],
+  "test_window": {
+    "access": "One recorded access per locked family/version after confirmation approval.",
+    "reuse": "Any reuse creates a new exploratory family version and cannot remain confirmatory."
+  },
+  "replication": "Independent later period or independently reconstructed dataset using the locked specification.",
+  "production_eligibility": "Requires TEST_CONFIRMED, REPLICATION_CONFIRMED, all data/terminal/cost capabilities PASS, and a separately approved portfolio implementation.",
+  "retroactive_rule": "Existing Data test rows remain exploratory legacy evidence and are not retroactively preregistered."
+}

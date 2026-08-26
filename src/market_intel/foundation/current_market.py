@@ -9,6 +9,7 @@ CURRENT_SCOPE="CURRENT_TRADABLE_ONLY"
 class CurrentInstrument:
     provider_instrument_token:int; exchange_token:int|None; trading_symbol:str; exchange:str
     segment:str; instrument_type:str; expiry:str|None; strike:float|None; tick_size:float|None; lot_size:int|None
+    quality_flags:tuple[str,...]=()
     @property
     def provider_key(self)->str: return f"{self.exchange}:{self.trading_symbol}"
 

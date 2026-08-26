@@ -69,3 +69,26 @@ fails explicitly.
 
 The NSE official-response gate remains
 `AWAITING_SUBSTANTIVE_OFFICIAL_RESPONSE`. A.8–A.10 trust verdicts are unchanged.
+
+## A.12 coverage-health semantics
+
+The ephemeral health contract reports session/validation state, aggregate
+inventory integrity, quote coverage, local snapshot ages, provider timestamp
+availability, cache classification, entitlement uncertainty and a sanitized
+last-failure category. It is a current operational health surface—not a data
+trust, edge-validation or historical-readiness score.
+
+Refreshes are user-triggered with a five-second cooldown and no retry loop.
+Quotes retain the existing 15-second in-memory cache. `FRESH_NETWORK` means a
+fresh application request with a provider timestamp; when the timestamp is
+absent, the classification is `UNKNOWN_PROVIDER_TIME` and age is based only on
+local retrieval. Neither label claims exchange real-time delivery.
+
+No maintained official current NSE holiday calendar is configured. The UI
+therefore reports market session `UNKNOWN`; the classifier produces
+`PRE_OPEN`, `OPEN`, `POST_CLOSE` or `NON_TRADING_DAY` only when supplied with
+an explicit versioned set of trading and non-trading dates in Asia/Kolkata.
+
+The optional health JSON is generated only in memory and contains aggregate
+counts and classifications. It excludes credentials, account/user fields,
+provider tokens, raw instruments, raw quotes and full provider responses.

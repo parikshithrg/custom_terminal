@@ -131,6 +131,24 @@ connector therefore does not change the A.8–A.10 historical trust verdicts.
 Detailed current-data scope: `reports/KITE_CURRENT_DATA_SCOPE.md`. A.11
 implementation report: `reports/SLICE_A11_REPORT.md`.
 
+### Ephemeral coverage health
+
+The **Coverage Health** tab summarizes the authenticated session, validation
+state, current inventory/quote ages, cache freshness, aggregate coverage,
+missing results, integrity counts and sanitized provider failure category. It
+never renders the full instrument dump on that tab.
+
+Inventory, session and quote refreshes are manual with a five-second cooldown;
+there are no background loops. Quote snapshots retain the 15-second in-memory
+cache. A sanitized JSON summary can be downloaded on demand from memory and
+contains aggregate classifications only—no account details, credentials,
+tokens, raw instruments or raw quote responses.
+
+No maintained current NSE holiday calendar is configured, so the live market
+session label is deliberately `UNKNOWN`. It will not infer holidays from absent
+quotes or guess from weekdays. See `reports/KITE_CURRENT_COVERAGE_HEALTH.md`
+and `reports/SLICE_A12_REPORT.md`.
+
 ## Structure
 
 17 pages across 4 sections (`views/_registry.py` is the single source of

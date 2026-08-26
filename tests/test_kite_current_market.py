@@ -6,7 +6,7 @@ from market_intel.foundation.kite_connect import KiteSession
 from market_intel.foundation.current_market import format_quote_rows, search_current_instruments
 from market_intel.foundation.kite_current_market import (
     MAX_QUOTE_SYMBOLS, KiteCurrentDataError, KiteCurrentMarketClient,
-    KiteInvalidSessionError, KiteReadOnlyViolation,
+    KiteEntitlementError, KiteInvalidSessionError, KiteReadOnlyViolation,
 )
 
 CSV = """instrument_token,exchange_token,tradingsymbol,name,last_price,expiry,strike,tick_size,lot_size,instrument_type,segment,exchange
@@ -55,6 +55,24 @@ def test_token_exception_in_success_status_is_invalid_session():
         client([Response(body={"status": "error", "error_type": "TokenException"})]).validate_session()
 
 
+def test_explicit_permission_failure_is_entitlement_not_missing_data():
+    with pytest.raises(KiteEntitlementError):
+        client([Response(body={"status": "error", "error_type": "PermissionException"})]).validate_session()
+
+
+def test_explicit_permission_failure_is_not_hidden_by_stale_quote_cache():
+    clock = [datetime(2026, 8, 26, tzinfo=timezone.utc)]
+    c = client([Response(text=CSV),
+                Response(body={"data": {"NSE:INFY": {"last_price": 100}}}),
+                Response(body={"status": "error", "error_type": "PermissionException"})],
+               now=lambda: clock[0])
+    c.discover_current_instruments()
+    c.get_current_quotes(["NSE:INFY"])
+    clock[0] += timedelta(seconds=16)
+    with pytest.raises(KiteEntitlementError):
+        c.get_current_quotes(["NSE:INFY"])
+
+
 def test_read_only_allowlist_rejects_orders_and_post_before_network():
     c = client([])
     with pytest.raises(KiteReadOnlyViolation): c._request("orders")
@@ -69,6 +87,13 @@ def test_instrument_normalization_and_current_only_scope():
     assert {i.instrument_type for i in snapshot.instruments} == {"EQ", "INDICES", "FUT", "CE"}
     assert snapshot.instruments[0].provider_key == "NSE:INFY"
     with pytest.raises(TypeError): snapshot.as_historical_universe()
+
+
+def test_incomplete_inventory_rows_are_preserved_with_quality_flags():
+    broken = CSV + ",,,,,,,,,,NSE,NSE\n"
+    snapshot = client([Response(text=broken)]).discover_current_instruments()
+    assert len(snapshot.instruments) == 5
+    assert snapshot.instruments[-1].quality_flags
 
 
 def test_inventory_search_is_bounded_and_filterable():

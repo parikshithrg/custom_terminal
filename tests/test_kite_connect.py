@@ -109,7 +109,10 @@ def test_disconnect_removes_all_session_material():
 
 
 def test_provider_rejection_clears_access_material_and_marks_expired():
-    state = {"kite_session": object(), "kite_client": object(), "kite_inventory": object()}
+    state = {"kite_session": object(), "kite_client": object(), "kite_inventory": object(),
+             "kite_quote_cache": object(), "kite_last_quote_snapshot": object(),
+             "kite_last_requested_count": 2}
     invalidate_session(state, expired=True)
-    assert not any(key in state for key in ("kite_session", "kite_client", "kite_inventory"))
+    assert not any(key in state for key in ("kite_session", "kite_client", "kite_inventory",
+        "kite_quote_cache", "kite_last_quote_snapshot", "kite_last_requested_count"))
     assert state["kite_connection_state"] == KiteSessionState.EXPIRED

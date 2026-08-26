@@ -87,14 +87,16 @@ def finish_login(state: MutableMapping[str,Any], *, http: HttpClient) -> None:
         state.pop("kite_api_secret",None); state.pop("kite_request_token",None)
 
 def disconnect(state: MutableMapping[str,Any], *, clear_api_key: bool=True) -> None:
-    for key in SENSITIVE_STATE_KEYS: state.pop(key,None)
-    if clear_api_key: state.pop("kite_api_key",None)
-    state.pop("kite_authenticated_user",None); state.pop("kite_last_request",None)
+    for key in list(state):
+        if str(key).startswith("kite_"):
+            if key=="kite_api_key" and not clear_api_key: continue
+            state.pop(key,None)
     state["kite_connection_state"]=KiteSessionState.DISCONNECTED
     state["kite_ui_message"]="Disconnected. Values were removed from application references; Python memory is not claimed to be securely erased."
 
 def invalidate_session(state: MutableMapping[str,Any], *, expired: bool=False) -> None:
-    for key in ("kite_session","kite_client","kite_inventory","kite_quote_cache"):
+    for key in ("kite_session","kite_client","kite_inventory","kite_quote_cache",
+                "kite_last_quote_snapshot","kite_last_requested_count"):
         state.pop(key,None)
     state.pop("kite_authenticated_user",None)
     state["kite_connection_state"]=KiteSessionState.EXPIRED if expired else KiteSessionState.INVALID

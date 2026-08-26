@@ -11,6 +11,7 @@ ALLOWED_ENDPOINTS={"profile":("GET","/user/profile"),"instruments":("GET","/inst
 MAX_QUOTE_SYMBOLS=25; QUOTE_CACHE_SECONDS=15
 class KiteCurrentDataError(RuntimeError): pass
 class KiteInvalidSessionError(KiteCurrentDataError): pass
+class KiteEntitlementError(KiteCurrentDataError): pass
 class KiteReadOnlyViolation(KiteCurrentDataError): pass
 
 class KiteCurrentMarketClient:
@@ -31,7 +32,15 @@ class KiteCurrentMarketClient:
         try:
             response=self._http.get(API_ROOT+allowed[1],params=params,
                 headers={"X-Kite-Version":"3","Authorization":self._session.authorization_header},timeout=20)
-            if getattr(response,"status_code",None) in (401,403):
+            if getattr(response,"status_code",None)==401:
+                raise KiteInvalidSessionError("Kite session is expired or invalid; log in again")
+            if getattr(response,"status_code",None)==403:
+                try:
+                    error_type=response.json().get("error_type")
+                except Exception:
+                    error_type=None
+                if error_type=="PermissionException":
+                    raise KiteEntitlementError("Kite denied this current-data request")
                 raise KiteInvalidSessionError("Kite session is expired or invalid; log in again")
             response.raise_for_status(); return response
         except KiteCurrentDataError: raise
@@ -40,7 +49,10 @@ class KiteCurrentMarketClient:
     def discover_current_instruments(self)->CurrentInstrumentSnapshot:
         response=self._request("instruments")
         try:
-            instruments=tuple(self._normalize_instrument(r) for r in csv.DictReader(io.StringIO(response.text)))
+            reader=csv.DictReader(io.StringIO(response.text))
+            required={"instrument_token","tradingsymbol","exchange","segment","instrument_type"}
+            if not reader.fieldnames or not required.issubset(reader.fieldnames): raise ValueError
+            instruments=tuple(self._normalize_instrument(r) for r in reader)
             if not instruments: raise ValueError
         except Exception as exc: raise KiteCurrentDataError("Kite instrument response has an unsupported schema") from exc
         now=self._now(); self._inventory=CurrentInstrumentSnapshot("kite_connect",now,now.date().isoformat(),"/instruments","kite_instruments_csv_v1",instruments)
@@ -57,7 +69,7 @@ class KiteCurrentMarketClient:
             return CurrentQuoteSnapshot(cached.provider,cached.retrieved_at,cached.source_endpoint,cached.quotes,"FRESH_CACHE",cached.scope)
         try:
             payload=self._data(self._request(mode,params=[("i",k) for k in keys]))
-        except KiteInvalidSessionError:
+        except (KiteInvalidSessionError,KiteEntitlementError):
             raise
         except KiteCurrentDataError:
             if cached:
@@ -80,10 +92,12 @@ class KiteCurrentMarketClient:
         try:
             body=response.json()
             if not isinstance(body,dict): raise TypeError
-            if body.get("status")=="error" and body.get("error_type") in {"TokenException","PermissionException"}:
+            if body.get("status")=="error" and body.get("error_type")=="PermissionException":
+                raise KiteEntitlementError("Kite denied this current-data request")
+            if body.get("status")=="error" and body.get("error_type")=="TokenException":
                 raise KiteInvalidSessionError("Kite session is expired or invalid; log in again")
             return body
-        except KiteInvalidSessionError: raise
+        except (KiteInvalidSessionError,KiteEntitlementError): raise
         except Exception as exc: raise KiteCurrentDataError("Kite returned a malformed response") from exc
     def _data(self,response:Any)->dict[str,Any]:
         data=self._json(response).get("data",{})
@@ -93,8 +107,26 @@ class KiteCurrentMarketClient:
     def _number(value:Any)->float|None: return None if value in (None,"") else float(value)
     @classmethod
     def _normalize_instrument(cls,row:dict[str,str])->CurrentInstrument:
-        required=("instrument_token","tradingsymbol","exchange","segment","instrument_type")
-        if any(not row.get(f) for f in required): raise ValueError
-        return CurrentInstrument(int(row["instrument_token"]),int(row["exchange_token"]) if row.get("exchange_token") else None,
-            row["tradingsymbol"],row["exchange"],row["segment"],row["instrument_type"],row.get("expiry") or None,
-            cls._number(row.get("strike")),cls._number(row.get("tick_size")),int(row["lot_size"]) if row.get("lot_size") else None)
+        flags=[]
+        def integer(field:str,*,required:bool=False)->int|None:
+            value=row.get(field)
+            if value in (None,""):
+                if required: flags.append(f"MISSING_{field.upper()}")
+                return None
+            try: return int(value)
+            except (TypeError,ValueError): flags.append(f"INVALID_{field.upper()}"); return None
+        def number(field:str)->float|None:
+            value=row.get(field)
+            if value in (None,""): return None
+            try: return float(value)
+            except (TypeError,ValueError): flags.append(f"INVALID_{field.upper()}"); return None
+        token=integer("instrument_token",required=True)
+        symbol=(row.get("tradingsymbol") or "").strip()
+        exchange=(row.get("exchange") or "").strip()
+        segment=(row.get("segment") or "").strip()
+        instrument_type=(row.get("instrument_type") or "").strip()
+        for field,value in (("TRADINGSYMBOL",symbol),("EXCHANGE",exchange),("SEGMENT",segment),("INSTRUMENT_TYPE",instrument_type)):
+            if not value: flags.append(f"MISSING_{field}")
+        return CurrentInstrument(token or 0,integer("exchange_token"),symbol,exchange,segment,instrument_type,
+            (row.get("expiry") or "").strip() or None,number("strike"),number("tick_size"),
+            integer("lot_size"),tuple(flags))

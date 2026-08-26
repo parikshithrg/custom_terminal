@@ -16,7 +16,8 @@ class KiteSessionState(StrEnum):
     UNAUTHENTICATED="UNAUTHENTICATED"; AUTHENTICATING="AUTHENTICATING"
     AUTHENTICATED="AUTHENTICATED"; EXPIRED="EXPIRED"; INVALID="INVALID"; DISCONNECTED="DISCONNECTED"
 class HttpClient(Protocol):
-    def post(self, url: str, *, data: dict[str, str], timeout: int) -> Any: ...
+    def post(self, url: str, *, data: dict[str, str], headers: dict[str, str],
+             timeout: int) -> Any: ...
 
 @dataclass(frozen=True, repr=False)
 class KiteSession:
@@ -49,13 +50,28 @@ def exchange_request_token(api_key: str, api_secret: str, request_token_or_url: 
     request_token=extract_request_token(request_token_or_url)
     checksum=sha256(f"{key}{request_token}{secret}".encode()).hexdigest()
     try:
-        response=http.post(SESSION_URL,data={"api_key":key,"request_token":request_token,"checksum":checksum},timeout=20)
-        response.raise_for_status(); data=response.json().get("data",{}); access_token=data.get("access_token")
+        response=http.post(SESSION_URL,data={"api_key":key,"request_token":request_token,"checksum":checksum},
+            headers={"X-Kite-Version":"3"},timeout=20)
+        try:
+            body=response.json()
+        except Exception:
+            body={}
+        if isinstance(body,dict) and body.get("status")=="error":
+            error_type=body.get("error_type")
+            safe_types={"TokenException","InputException","PermissionException","NetworkException","GeneralException"}
+            category=error_type if error_type in safe_types else "PROVIDER_ERROR"
+            raise KiteAuthenticationError(f"Kite login failed ({category}). Use a fresh request token and verify your credentials.")
+        response.raise_for_status(); data=body.get("data",{}) if isinstance(body,dict) else {}; access_token=data.get("access_token")
         if not access_token: raise KiteAuthenticationError("Kite did not return an access token")
         return KiteSession(key,str(access_token),data.get("user_id"))
     except KiteAuthenticationError: raise
     except Exception as exc:
-        raise KiteAuthenticationError("Kite login failed. Use a fresh request token and verify your credentials.") from exc
+        error_name=type(exc).__name__
+        if error_name in {"ConnectionError","ConnectTimeout","ReadTimeout","TimeoutError"}:
+            category="NETWORK_ERROR"
+        else:
+            category="AUTHENTICATION_ERROR"
+        raise KiteAuthenticationError(f"Kite login failed ({category}). Use a fresh request token and verify your credentials.") from exc
 
 def finish_login(state: MutableMapping[str,Any], *, http: HttpClient) -> None:
     state["kite_connection_state"]=KiteSessionState.AUTHENTICATING

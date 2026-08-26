@@ -11,7 +11,21 @@ from market_intel.foundation.kite_current_market import (
     MAX_QUOTE_SYMBOLS, KiteCurrentDataError, KiteCurrentMarketClient,
     KiteInvalidSessionError,
 )
+from market_intel.foundation.current_market import format_quote_rows, search_current_instruments
 from views._topbar import render_section_tabs
+
+# Streamlit retains session objects across source hot reloads. Upgrade an old
+# in-memory client while preserving its current-only inventory and access
+# session, so a UI-only compatibility fix does not force another broker login.
+_existing_client=st.session_state.get("kite_client")
+_existing_session=st.session_state.get("kite_session")
+if (_existing_session and _existing_client and
+        getattr(_existing_client,"client_version",None)!=KiteCurrentMarketClient.client_version):
+    _upgraded_client=KiteCurrentMarketClient(_existing_session,http=requests)
+    _existing_inventory=st.session_state.get("kite_inventory")
+    if _existing_inventory:
+        _upgraded_client.attach_current_inventory(_existing_inventory)
+    st.session_state["kite_client"]=_upgraded_client
 
 def _login() -> None:
     finish_login(st.session_state, http=requests)
@@ -78,15 +92,29 @@ with quotes_tab:
     snapshot=st.session_state.get("kite_inventory"); client=st.session_state.get("kite_client")
     if not snapshot or not client: st.info("Authenticate and load the current inventory first.")
     else:
-        options=sorted(i.provider_key for i in snapshot.instruments)
+        exchanges=sorted({i.exchange for i in snapshot.instruments})
+        instrument_types=sorted({i.instrument_type for i in snapshot.instruments})
+        exchange=st.selectbox("Exchange",["All"]+exchanges)
+        instrument_type=st.selectbox("Instrument type",["All"]+instrument_types)
+        query=st.text_input("Search trading symbol",placeholder="Type at least 2 characters, for example INFY")
+        options=search_current_instruments(snapshot,query,
+            exchange=None if exchange=="All" else exchange,
+            instrument_type=None if instrument_type=="All" else instrument_type,
+            limit=100)
+        if len(query.strip())<2:
+            st.info("Enter at least two characters to search the in-session inventory.")
+        elif not options:
+            st.warning("No current inventory matches the selected filters.")
+        elif len(options)==100:
+            st.caption("Showing the first 100 matches. Refine the search to narrow the list.")
         selected=st.multiselect(f"Select up to {MAX_QUOTE_SYMBOLS} current instruments",options,max_selections=MAX_QUOTE_SYMBOLS)
         mode=st.selectbox("Snapshot type",["quote","ohlc","ltp"])
         if st.button("Retrieve current snapshot",disabled=not selected):
             try:
                 result=client.get_current_quotes(selected,mode=mode); st.session_state["kite_last_request"]=result.retrieved_at.isoformat()
-                st.caption(f"Provider: {result.provider} · retrieved: {result.retrieved_at.isoformat()} · {result.cache_status}")
-                st.dataframe([{"instrument":q.instrument_key,"status":q.status,"last_price":q.last_price,
-                    "provider_timestamp":q.provider_timestamp,"message":q.message} for q in result.quotes],use_container_width=True)
+                st.subheader(f"{mode.upper()} snapshot")
+                st.caption(f"Endpoint: {result.source_endpoint} · provider: {result.provider} · retrieved: {result.retrieved_at.isoformat()} · {result.cache_status}")
+                st.dataframe(format_quote_rows(result,mode),width="stretch")
             except (ValueError,KiteCurrentDataError) as exc: _provider_error(exc); st.rerun()
         st.caption("Snapshots are user-requested, not streaming. In-session quote cache lifetime: 15 seconds.")
 

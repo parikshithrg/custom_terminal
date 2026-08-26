@@ -18,8 +18,8 @@ class Response:
 
 class Http:
     def __init__(self, response): self.response, self.call = response, None
-    def post(self, url, *, data, timeout):
-        self.call = (url, data, timeout)
+    def post(self, url, *, data, headers, timeout):
+        self.call = (url, data, headers, timeout)
         return self.response
 
 
@@ -33,9 +33,10 @@ def test_daily_session_exchange_uses_official_checksum():
     http = Http(Response({"data": {"access_token": "access", "user_id": "AB123"}}))
     session = exchange_request_token("key", "secret", "request", http=http)
     assert session.authorization_header == "token key:access"
-    url, data, timeout = http.call
+    url, data, headers, timeout = http.call
     assert url == SESSION_URL
     assert data["checksum"] == sha256(b"keyrequestsecret").hexdigest()
+    assert headers == {"X-Kite-Version": "3"}
     assert timeout == 20
 
 
@@ -45,6 +46,26 @@ def test_authentication_error_does_not_leak_secrets():
     rendered = str(caught.value)
     assert "very-secret" not in rendered and "one-time" not in rendered
     assert "sensitive material" not in rendered
+    assert "AUTHENTICATION_ERROR" in rendered
+
+
+def test_network_error_is_safely_classified():
+    class NetworkHttp:
+        def post(self, *args, **kwargs):
+            raise ConnectionError("private network detail")
+    with pytest.raises(KiteAuthenticationError) as caught:
+        exchange_request_token("key", "secret", "request", http=NetworkHttp())
+    assert "NETWORK_ERROR" in str(caught.value)
+    assert "private network detail" not in str(caught.value)
+
+
+def test_provider_error_exposes_only_safe_category():
+    response = Response({"status": "error", "error_type": "InputException",
+                         "message": "secret provider detail"})
+    with pytest.raises(KiteAuthenticationError) as caught:
+        exchange_request_token("key", "secret", "request", http=Http(response))
+    assert "InputException" in str(caught.value)
+    assert "secret provider detail" not in str(caught.value)
 
 
 def test_kite_scope_cannot_approve_historical_universe():

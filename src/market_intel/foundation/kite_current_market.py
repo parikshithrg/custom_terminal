@@ -15,10 +15,15 @@ class KiteReadOnlyViolation(KiteCurrentDataError): pass
 
 class KiteCurrentMarketClient:
     provider_id="kite_connect"
+    client_version="kite_current_market_v2"
     def __init__(self,session:KiteSession,*,http:Any,now:Callable[[],datetime]|None=None):
         self._session,self._http=session,http; self._now=now or (lambda:datetime.now(timezone.utc))
         self._inventory=None; self._quote_cache={}
     def __repr__(self)->str: return "KiteCurrentMarketClient(session=<redacted>, mode=read-only)"
+    def attach_current_inventory(self,snapshot:CurrentInstrumentSnapshot)->None:
+        if snapshot.provider!="kite_connect" or snapshot.scope!="CURRENT_TRADABLE_ONLY":
+            raise ValueError("Only a Kite current-only inventory can be attached")
+        self._inventory=snapshot
     def _request(self,endpoint:str,*,method:str="GET",params:list[tuple[str,str]]|None=None)->Any:
         allowed=ALLOWED_ENDPOINTS.get(endpoint)
         if allowed is None or allowed[0]!=method.upper():
@@ -63,8 +68,13 @@ class KiteCurrentMarketClient:
         for key in keys:
             item=payload.get(key)
             if item is None: quotes.append(CurrentQuote(key,"MISSING",None,None,None,"Provider returned no value")); continue
-            ohlc=item.get("ohlc"); quotes.append(CurrentQuote(key,"AVAILABLE",self._number(item.get("last_price")),
-                {k:float(v) for k,v in ohlc.items()} if isinstance(ohlc,dict) else None,item.get("timestamp") or item.get("last_trade_time")))
+            ohlc=item.get("ohlc")
+            detail_fields=("last_quantity","average_price","volume","buy_quantity","sell_quantity",
+                "oi","oi_day_high","oi_day_low","lower_circuit_limit","upper_circuit_limit")
+            details={field:item.get(field) for field in detail_fields if field in item}
+            quotes.append(CurrentQuote(key,"AVAILABLE",self._number(item.get("last_price")),
+                {k:float(v) for k,v in ohlc.items() if v is not None} if isinstance(ohlc,dict) else None,
+                item.get("timestamp") or item.get("last_trade_time"),details=details or None))
         result=CurrentQuoteSnapshot("kite_connect",now,ALLOWED_ENDPOINTS[mode][1],tuple(quotes)); self._quote_cache[cache_key]=result; return result
     def _json(self,response:Any)->dict[str,Any]:
         try:

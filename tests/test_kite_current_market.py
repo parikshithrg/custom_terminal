@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from market_intel.foundation.kite_connect import KiteSession
+from market_intel.foundation.current_market import format_quote_rows, search_current_instruments
 from market_intel.foundation.kite_current_market import (
     MAX_QUOTE_SYMBOLS, KiteCurrentDataError, KiteCurrentMarketClient,
     KiteInvalidSessionError, KiteReadOnlyViolation,
@@ -68,6 +69,53 @@ def test_instrument_normalization_and_current_only_scope():
     assert {i.instrument_type for i in snapshot.instruments} == {"EQ", "INDICES", "FUT", "CE"}
     assert snapshot.instruments[0].provider_key == "NSE:INFY"
     with pytest.raises(TypeError): snapshot.as_historical_universe()
+
+
+def test_inventory_search_is_bounded_and_filterable():
+    snapshot = client([Response(text=CSV)]).discover_current_instruments()
+    assert search_current_instruments(snapshot, "in") == ("NSE:INFY",)
+    assert search_current_instruments(snapshot, "nifty", exchange="NFO", instrument_type="FUT") == (
+        "NFO:NIFTY26AUGFUT",
+    )
+    assert search_current_instruments(snapshot, "i") == ()
+    assert len(search_current_instruments(snapshot, "nifty", limit=2)) == 2
+    with pytest.raises(ValueError): search_current_instruments(snapshot, "nifty", limit=0)
+
+
+def test_snapshot_tables_are_mode_specific():
+    c = client([Response(text=CSV), Response(body={"data": {
+        "NSE:INFY": {"last_price": 1500, "timestamp": "2026-08-26 12:00:00", "volume": 1234,
+                     "ohlc": {"open": 1490, "high": 1510, "low": 1480, "close": 1495}}
+    }})])
+    c.discover_current_instruments()
+    snapshot = c.get_current_quotes(["NSE:INFY"], mode="quote")
+    assert list(format_quote_rows(snapshot, "ltp")[0]) == ["instrument", "status", "last_price", "message"]
+    assert list(format_quote_rows(snapshot, "ohlc")[0]) == [
+        "instrument", "status", "last_price", "open", "high", "low", "close", "message"
+    ]
+    assert "provider_timestamp" in format_quote_rows(snapshot, "quote")[0]
+    assert format_quote_rows(snapshot, "quote")[0]["volume"] == 1234
+    with pytest.raises(ValueError): format_quote_rows(snapshot, "streaming")
+
+
+def test_quote_formatter_accepts_pre_reload_quote_objects():
+    class LegacyQuote:
+        instrument_key = "NSE:INFY"
+        status = "AVAILABLE"
+        last_price = 1500.0
+        ohlc = {"open": 1490.0, "high": 1510.0, "low": 1480.0, "close": 1495.0}
+        provider_timestamp = None
+        message = None
+    class LegacySnapshot:
+        quotes = (LegacyQuote(),)
+    assert format_quote_rows(LegacySnapshot(), "quote")[0]["last_price"] == 1500.0
+
+
+def test_upgraded_client_can_attach_only_current_kite_inventory():
+    snapshot = client([Response(text=CSV)]).discover_current_instruments()
+    upgraded = client([])
+    upgraded.attach_current_inventory(snapshot)
+    assert upgraded._inventory is snapshot
 
 
 def test_quote_limit_and_inventory_validation():

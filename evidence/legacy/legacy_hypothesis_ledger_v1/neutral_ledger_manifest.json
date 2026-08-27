@@ -1,0 +1,45 @@
+{
+  "manifest_version": "neutral_legacy_ledger_manifest_v1",
+  "ledger_version": "neutral_legacy_hypothesis_ledger_v1",
+  "ledger_contract_version": "legacy_ledger_contract_v1",
+  "exporter_version": "legacy_ledger_export_v1",
+  "importer_version": "market_intel_legacy_importer_v1",
+  "snapshot_version": "legacy_hypothesis_snapshot_v1",
+  "snapshot_sha256": "124886d439a90071a9b0f884851afbffdba5dd783e52c2cedaeb4b2ac82eae1d",
+  "snapshot_manifest_sha256": "005a59b3033ac02500902d8fc0f8e79d90ac7bb9e78e8b194d316e2050fd5599",
+  "family_mapping_version": "legacy_family_mapping_v1",
+  "family_mapping_sha256": "e876933a7367301594448c0475b995a0cd57e13103ceec32b371cc558156eeb4",
+  "outputs": {
+    "neutral_ledger.json": {
+      "sha256": "79df7b785fef5025f605e0cef4a6dd49a039b034d66a92ea0aaafd99056fb392",
+      "byte_size": 147733
+    },
+    "neutral_ledger.csv": {
+      "sha256": "730ae1fd1cb6fb6d4f2c1896a3cc052d3fb89ec5e158b0c121588214fdbf5d4d",
+      "byte_size": 9397
+    }
+  },
+  "declared_artifact_boundaries": [
+    {
+      "label": "repository_local_runs",
+      "classification": "IGNORED_REPOSITORY_LOCAL_LEGACY_ARTIFACTS",
+      "path_redacted_in_ledger": true
+    },
+    {
+      "label": "sibling_source_runs",
+      "classification": "IGNORED_MUTABLE_SIBLING_LEGACY_ARTIFACTS",
+      "path_redacted_in_ledger": true
+    }
+  ],
+  "unlinked_manifest_evidence": {
+    "relative_path": "audit_data/manifest.json",
+    "sha256": "64288ce7f8f056e25bbcadf8f01bdec410b78e1b25b180b508f4a761f5e9ba10",
+    "relationship": "Audit-data manifest only; no hypothesis row ID and not linked to any of the 32 runs."
+  },
+  "source_row_count": 32,
+  "manifest_status_counts": {
+    "PARTIAL_ARTIFACTS_NO_MANIFEST": 29,
+    "AMBIGUOUS_ARTIFACT_MATCH": 3
+  },
+  "production_eligible": false
+}

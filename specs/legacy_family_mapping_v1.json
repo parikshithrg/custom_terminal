@@ -1,0 +1,321 @@
+{
+  "mapping_version": "legacy_family_mapping_v1",
+  "snapshot_version": "legacy_hypothesis_snapshot_v1",
+  "snapshot_sha256": "124886d439a90071a9b0f884851afbffdba5dd783e52c2cedaeb4b2ac82eae1d",
+  "review_method": "Manual row-ID mapping based on R.1's 13-construction taxonomy; runtime title inference is prohibited.",
+  "families": [
+    {"family_id": "legacy_mean_reversion_v1", "name": "mean reversion"},
+    {"family_id": "legacy_delivery_breakout_v1", "name": "delivery breakout"},
+    {"family_id": "legacy_oi_momentum_v1", "name": "OI momentum"},
+    {"family_id": "legacy_participant_tilt_v1", "name": "participant tilt"},
+    {"family_id": "legacy_volatility_squeeze_v1", "name": "volatility-squeeze breakout"},
+    {"family_id": "legacy_price_action_v1", "name": "price action"},
+    {"family_id": "legacy_pairs_reversion_v1", "name": "pairs reversion"},
+    {"family_id": "legacy_same_sector_pairing_v1", "name": "same-sector pairing"},
+    {"family_id": "legacy_momentum_12_1_v1", "name": "12-1 momentum"},
+    {"family_id": "legacy_earnings_surprise_v1", "name": "earnings surprise"},
+    {"family_id": "legacy_value_v1", "name": "value"},
+    {"family_id": "legacy_quality_v1", "name": "quality"},
+    {"family_id": "legacy_mf_accumulation_v1", "name": "MF accumulation"}
+  ],
+  "rows": [
+    {
+      "row_id": "5d7650b1840e", "family_id": "legacy_mean_reversion_v1", "variant_id": "primary_train_honest_execution", "lineage_parent_ids": [],
+      "rationale": "Primary/train mean-reversion re-test.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "mean_reversion_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "61fcd3023c4b", "family_id": "legacy_delivery_breakout_v1", "variant_id": "delivery_train_honest_execution", "lineage_parent_ids": [],
+      "rationale": "Delivery/train standalone breakout construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "delivery_breakout_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "delivery_breakout_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "delivery_breakout_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "delivery_breakout_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "80aff81a749e", "family_id": "legacy_oi_momentum_v1", "variant_id": "primary_train_honest_execution", "lineage_parent_ids": [],
+      "rationale": "Primary/train OI-momentum construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "oi_momentum_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "ee447825d3a7", "family_id": "legacy_participant_tilt_v1", "variant_id": "delivery_train_base", "lineage_parent_ids": [],
+      "rationale": "Base participant-tilt row; the later stress gate remains in this economic family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "participant_tilt_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "663cebb9f054", "family_id": "legacy_volatility_squeeze_v1", "variant_id": "primary_train_immediate_entry", "lineage_parent_ids": [],
+      "rationale": "Base immediate-entry volatility-squeeze row.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "e39de46a0f24", "family_id": "legacy_volatility_squeeze_v1", "variant_id": "primary_train_delay_2", "lineage_parent_ids": ["663cebb9f054"],
+      "rationale": "Delayed-entry diagnostic variant of the base volatility-squeeze row; not a new family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delay2_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delay2_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delay2_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delay2_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "cdd796d6e171", "family_id": "legacy_pairs_reversion_v1", "variant_id": "primary_train_pre_rollforward_fix", "lineage_parent_ids": [],
+      "rationale": "Earlier primary/train pair row; saved folder cannot distinguish it from the later roll-forward-fix row.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "AMBIGUOUS", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/real_trades_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/placebo_trades_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "ddc14822fb70", "family_id": "legacy_price_action_v1", "variant_id": "primary_train_long", "lineage_parent_ids": [],
+      "rationale": "Primary/train long-side price-action row.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "price_action_long_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "0b11b017cef9", "family_id": "legacy_pairs_reversion_v1", "variant_id": "primary_train_rollforward_fix", "lineage_parent_ids": ["cdd796d6e171"],
+      "rationale": "Later primary/train pair row after roll-forward-at-entry fix; saved folder does not bind which primary row it represents.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "AMBIGUOUS", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/real_trades_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/placebo_trades_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "c55019a896e7", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "primary_train_random", "lineage_parent_ids": [],
+      "rationale": "Random-selection train variant in the same-sector family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/random_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_random_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "1d82fec2bbbc", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "primary_train_liquidity_ranked", "lineage_parent_ids": [],
+      "rationale": "Liquidity-ranked train variant in the same-sector family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/liquidity_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_liquidity_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "5dbcd00310b3", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "primary_validation_random", "lineage_parent_ids": ["c55019a896e7"],
+      "rationale": "Validation row for the random-selection variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/random_primary_val.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_random_primary_val.csv"}
+      ]
+    },
+    {
+      "row_id": "a7f9414d3392", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "primary_validation_liquidity_ranked", "lineage_parent_ids": ["1d82fec2bbbc"],
+      "rationale": "Validation row for the liquidity-ranked variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/liquidity_primary_val.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_liquidity_primary_val.csv"}
+      ]
+    },
+    {
+      "row_id": "71357c1af8cd", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "delivery_train_random", "lineage_parent_ids": ["c55019a896e7"],
+      "rationale": "Delivery-split train diagnostic for the random variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/random_delivery_train.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_random_delivery_train.csv"}
+      ]
+    },
+    {
+      "row_id": "99a2610cabee", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "delivery_train_liquidity_ranked", "lineage_parent_ids": ["1d82fec2bbbc"],
+      "rationale": "Delivery-split train diagnostic for the liquidity-ranked variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/liquidity_delivery_train.csv"},
+        {"boundary": "repository_local_runs", "path": "same_sector_pairing/placebo_for_liquidity_delivery_train.csv"}
+      ]
+    },
+    {
+      "row_id": "fac149cb6b0b", "family_id": "legacy_volatility_squeeze_v1", "variant_id": "delivery_train_immediate_entry", "lineage_parent_ids": ["663cebb9f054"],
+      "rationale": "Delivery-split diagnostic of the base volatility-squeeze variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "vol_squeeze_breakout_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "423c548cc0d3", "family_id": "legacy_momentum_12_1_v1", "variant_id": "primary_train", "lineage_parent_ids": [],
+      "rationale": "Primary/train 12-1 momentum row.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "momentum_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "0d8f2ac002c2", "family_id": "legacy_mean_reversion_v1", "variant_id": "delivery_train_honest_execution", "lineage_parent_ids": ["5d7650b1840e"],
+      "rationale": "Delivery-split diagnostic of mean reversion.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "mean_reversion_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "mean_reversion_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "c9d3ab9ffc36", "family_id": "legacy_oi_momentum_v1", "variant_id": "delivery_train_honest_execution", "lineage_parent_ids": ["80aff81a749e"],
+      "rationale": "Delivery-split diagnostic of OI momentum.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "oi_momentum_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "oi_momentum_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "fc8303956df7", "family_id": "legacy_price_action_v1", "variant_id": "delivery_train_long", "lineage_parent_ids": ["ddc14822fb70"],
+      "rationale": "Delivery-split diagnostic of the long-side price-action row.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "price_action_long_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "price_action_long_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "0151b95c725e", "family_id": "legacy_momentum_12_1_v1", "variant_id": "delivery_train", "lineage_parent_ids": ["423c548cc0d3"],
+      "rationale": "Delivery-split train row for the same 12-1 construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "f68079c5b0b8", "family_id": "legacy_pairs_reversion_v1", "variant_id": "delivery_train_rollforward_fix", "lineage_parent_ids": ["0b11b017cef9"],
+      "rationale": "Delivery-split pair-reversion row after the noted roll-forward fix.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/real_trades_delivery_train.csv"},
+        {"boundary": "repository_local_runs", "path": "pairs_reversion_honest/placebo_trades_delivery_train.csv"}
+      ]
+    },
+    {
+      "row_id": "ee89fa192a3e", "family_id": "legacy_momentum_12_1_v1", "variant_id": "delivery_validation", "lineage_parent_ids": ["0151b95c725e"],
+      "rationale": "Legacy validation row for the delivery-split momentum variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_val/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_val/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_val/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "momentum_delivery_val/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "dc18a3964319", "family_id": "legacy_participant_tilt_v1", "variant_id": "delivery_train_calm_tercile_stress_gate", "lineage_parent_ids": ["ee447825d3a7"],
+      "rationale": "Adaptive calm-tercile stress-gate diagnostic of participant tilt; remains in the same family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "participant_tilt_stress_gated_delivery_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_stress_gated_delivery_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_stress_gated_delivery_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "participant_tilt_stress_gated_delivery_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "180ea073ac1a", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "oil_gas_primary_train_random", "lineage_parent_ids": ["c55019a896e7"],
+      "rationale": "Sector-screened Oil & Gas random variant; a diagnostic in the same-sector family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/random_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/placebo_for_random_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "0e0d594da875", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "oil_gas_primary_train_liquidity_ranked", "lineage_parent_ids": ["1d82fec2bbbc"],
+      "rationale": "Sector-screened Oil & Gas liquidity-ranked variant; same family.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/liquidity_primary_train.csv"},
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/placebo_for_liquidity_primary_train.csv"}
+      ]
+    },
+    {
+      "row_id": "12b05d12a039", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "oil_gas_primary_validation_random", "lineage_parent_ids": ["180ea073ac1a"],
+      "rationale": "Validation row for the sector-screened random variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/random_primary_val.csv"},
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/placebo_for_random_primary_val.csv"}
+      ]
+    },
+    {
+      "row_id": "f3eb92550553", "family_id": "legacy_same_sector_pairing_v1", "variant_id": "oil_gas_primary_validation_liquidity_ranked", "lineage_parent_ids": ["0e0d594da875"],
+      "rationale": "Validation row for the sector-screened liquidity-ranked variant.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/liquidity_primary_val.csv"},
+        {"boundary": "repository_local_runs", "path": "sector_pairing_oilgas/placebo_for_liquidity_primary_val.csv"}
+      ]
+    },
+    {
+      "row_id": "b3c0793a9edd", "family_id": "legacy_earnings_surprise_v1", "variant_id": "primary_train_sue_pead", "lineage_parent_ids": [],
+      "rationale": "Standalone SUE/PEAD construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "component_overrides": {"holding_horizon_sessions": {"value": 60, "status": "PROVED_FROM_SNAPSHOT_ROW", "evidence_refs": ["legacy_row:b3c0793a9edd:notes"]}},
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "earnings_surprise_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "earnings_surprise_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "earnings_surprise_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "earnings_surprise_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "e39e744cc436", "family_id": "legacy_value_v1", "variant_id": "primary_train_pe_own_history", "lineage_parent_ids": [],
+      "rationale": "Standalone trailing-P/E-versus-own-history construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "component_overrides": {"holding_horizon_sessions": {"value": 126, "status": "PROVED_FROM_SNAPSHOT_ROW", "evidence_refs": ["legacy_row:e39e744cc436:notes"]}},
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "value_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "value_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "value_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "value_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "f5263108087e", "family_id": "legacy_quality_v1", "variant_id": "primary_train_margin_trend", "lineage_parent_ids": [],
+      "rationale": "Standalone margin-trend quality construction.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "component_overrides": {"holding_horizon_sessions": {"value": 60, "status": "PROVED_FROM_SNAPSHOT_ROW", "evidence_refs": ["legacy_row:f5263108087e:notes"]}},
+      "artifact_linkage": "REVIEWED_EXACT_PATH", "artifact_candidates": [
+        {"boundary": "repository_local_runs", "path": "quality_primary_train/trades.csv"},
+        {"boundary": "repository_local_runs", "path": "quality_primary_train/placebo_seeds.csv"},
+        {"boundary": "repository_local_runs", "path": "quality_primary_train/portfolio_trades.csv"},
+        {"boundary": "repository_local_runs", "path": "quality_primary_train/equity_curve.csv"}
+      ]
+    },
+    {
+      "row_id": "7facf033cb36", "family_id": "legacy_mf_accumulation_v1", "variant_id": "delivery_train_axis_sbi", "lineage_parent_ids": [],
+      "rationale": "The 32nd row is the Axis+SBI MF-accumulation construction; its live sibling artifacts are mutable and not run-bound.", "mapping_evidence": "R1_taxonomy_and_row_review",
+      "artifact_linkage": "AMBIGUOUS", "artifact_candidates": [
+        {"boundary": "sibling_source_runs", "path": "mf_accumulation_delivery_train/trades.csv"},
+        {"boundary": "sibling_source_runs", "path": "mf_accumulation_delivery_train/placebo_seeds.csv"},
+        {"boundary": "sibling_source_runs", "path": "mf_accumulation_delivery_train/portfolio_trades.csv"},
+        {"boundary": "sibling_source_runs", "path": "mf_accumulation_delivery_train/equity_curve.csv"}
+      ]
+    }
+  ],
+  "production_eligibility": false
+}

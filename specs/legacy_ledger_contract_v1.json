@@ -1,0 +1,47 @@
+{
+  "contract_version": "legacy_ledger_contract_v1",
+  "evidence_classification": "LEGACY_EXPLORATORY_EVIDENCE",
+  "required_row_fields": [
+    "snapshot_version",
+    "snapshot_sha256",
+    "original_row_number",
+    "original_row_id",
+    "original_row_sha256",
+    "legacy_row",
+    "legacy_decision",
+    "neutral_lifecycle",
+    "experiment_family_id",
+    "variant_id",
+    "reviewed_lineage_parent_ids",
+    "supersession_reference",
+    "hypothesis_components",
+    "artifact_references",
+    "manifest_reference",
+    "provenance_status",
+    "production_eligible"
+  ],
+  "component_evidence_statuses": [
+    "PROVED_FROM_SNAPSHOT_ROW",
+    "PROVED_FROM_REVIEWED_MAPPING",
+    "ASSIGNED_BY_RETROACTIVE_POLICY",
+    "UNRESOLVED_NO_RUN_MANIFEST"
+  ],
+  "provenance_statuses": [
+    "VERIFIED_MANIFEST",
+    "PARTIAL_ARTIFACTS_NO_MANIFEST",
+    "MISSING_MANIFEST",
+    "AMBIGUOUS_ARTIFACT_MATCH",
+    "MISSING_ARTIFACTS"
+  ],
+  "unresolved_value": null,
+  "rules": [
+    "Exact legacy strings and metrics are preserved without recomputation.",
+    "Every source-row hash includes the original CRLF record terminator.",
+    "A missing run manifest remains missing.",
+    "Plausible title or timestamp matches are not deterministic artifact links.",
+    "Legacy acceptance maps only to the row-level neutral lifecycle.",
+    "Every legacy row is production ineligible.",
+    "Current Kite or other current-market evidence is prohibited.",
+    "Unknown exact-run components use UNRESOLVED_NO_RUN_MANIFEST rather than current configuration."
+  ]
+}

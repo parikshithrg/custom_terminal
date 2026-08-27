@@ -1,0 +1,27 @@
+{
+  "input_declaration_id": "synthetic_inputs",
+  "version": "v1",
+  "datasets": [
+    {
+      "dataset_id": "synthetic_dataset",
+      "version": "v1",
+      "snapshot_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "security_master_version": "synthetic_security_master_v1",
+  "population_capability_assessment": {"price_history_complete": "PASS"},
+  "corporate_action_evidence_version": "synthetic_not_applicable_v1",
+  "terminal_outcome_policy_version": "synthetic_not_applicable_v1",
+  "benchmark_version": "synthetic_benchmark_v1",
+  "cost_schedule_version": "synthetic_zero_cost_v1",
+  "calendar_version": "synthetic_calendar_v1",
+  "configuration_hash": "a9ad51c5c96bad8a85da86d0e8ed82267a36ff5181b80317a873163ead00d18f",
+  "code_commit": "SYNTHETIC_COMMIT",
+  "dirty_worktree": false,
+  "dirty_worktree_fingerprint": "e10a794c643b8b8c5b01c110542f2f91d9aca0bd73660b8892f51bdd5b637412",
+  "environment": {"python": "synthetic-1"},
+  "environment_fingerprint": "7f8d2803a3c72f0570da7eb245151c88e51004148a4524866fcccdb828d37a55",
+  "parser_versions": {"synthetic": "v1"},
+  "feature_versions": {"synthetic": "v1"},
+  "dataset_split_version": "synthetic_train_v1"
+}

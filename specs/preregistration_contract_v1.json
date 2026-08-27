@@ -1,0 +1,19 @@
+{
+  "contract_version": "preregistration_contract_v1",
+  "canonicalization": "UTF-8 JSON, keys sorted, compact separators, one trailing LF",
+  "required_fields": [
+    "experiment_id", "version", "family_id", "family_version",
+    "economic_story", "selection_rule", "decision_clock", "entry_rule",
+    "holding_horizon_sessions", "exit_overlay", "portfolio_construction",
+    "benchmark_version", "cost_schedule_version", "population_scope",
+    "security_identity_requirements", "corporate_action_requirements",
+    "terminal_outcome_policy", "dataset_capability_requirements",
+    "split_requested", "primary_metric", "secondary_diagnostics",
+    "placebo_design", "permutation_draws", "dependence_treatment",
+    "multiplicity_treatment", "promotion_threshold", "expected_artifacts",
+    "code_entry_point", "expected_configuration", "research_classification",
+    "seeds", "limited_data_non_promotable"
+  ],
+  "lock_rule": "Canonicalize and hash before RUN_AUTHORIZED. A locked ID/version cannot change.",
+  "limited_data_rule": "Only EXPLORATORY plus limited_data_non_promotable=true may proceed with failed or unknown required capabilities."
+}

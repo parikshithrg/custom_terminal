@@ -1,0 +1,22 @@
+{
+  "family_id": "synthetic_governance_fixture",
+  "version": "v1",
+  "economic_mechanism": "SYNTHETIC_GOVERNANCE_FIXTURE_ONLY",
+  "hypothesis_category": "SYNTHETIC_TEST",
+  "parent_family": null,
+  "registered_variants": ["deterministic_fixture"],
+  "allowed_diagnostic_scope": ["schema_and_gateway_testing_only"],
+  "primary_metric": "synthetic_mean",
+  "outcome_horizon_sessions": 5,
+  "multiplicity_method": "max_statistic",
+  "significance_threshold": 0.05,
+  "minimum_effective_sample_size": 10,
+  "minimum_placebo_count": 99,
+  "declared_datasets": ["synthetic_dataset_v1"],
+  "required_capabilities": ["price_history_complete"],
+  "allowed_research_splits": ["train", "validation", "test", "replication"],
+  "current_lifecycle": "REGISTERED",
+  "creation_event": "synthetic_fixture_registration",
+  "supersedes": null,
+  "retirement_state": "ACTIVE"
+}

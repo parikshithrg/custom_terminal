@@ -1,0 +1,9 @@
+{
+  "registry_version": "future_family_registry_v1",
+  "contract_version": "family_registry_contract_v1",
+  "event_count": 0,
+  "head_event_sha256": null,
+  "substantive_family_count": 0,
+  "status": "EMPTY_PROSPECTIVE_REGISTRY",
+  "reason": "R.3 defines governance and does not register a new substantive hypothesis."
+}

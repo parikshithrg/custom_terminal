@@ -11,4 +11,5 @@
 evidence/legacy/legacy_hypothesis_ledger_v1/hypothesis_log.csv binary
 evidence/legacy/legacy_hypothesis_ledger_v1/** -text
 evidence/legacy/legacy_evidence_catalog_v1.jsonl -text
+evidence/governance/** -text
 specs/legacy_family_mapping_v1.json -text

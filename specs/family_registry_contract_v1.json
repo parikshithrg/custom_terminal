@@ -1,0 +1,16 @@
+{
+  "contract_version": "family_registry_contract_v1",
+  "storage": "append-only versioned JSON objects plus FAMILY_REGISTERED events",
+  "required_fields": [
+    "family_id", "version", "economic_mechanism", "hypothesis_category",
+    "parent_family", "registered_variants", "allowed_diagnostic_scope",
+    "primary_metric", "outcome_horizon_sessions", "multiplicity_method",
+    "significance_threshold", "minimum_effective_sample_size",
+    "minimum_placebo_count", "declared_datasets", "required_capabilities",
+    "allowed_research_splits", "current_lifecycle", "creation_event",
+    "supersedes", "retirement_state"
+  ],
+  "immutability": "A family ID/version is immutable after registration. Any changed field requires a new version.",
+  "allowed_lifecycle": ["REGISTERED", "RESEARCHING", "SUPERSEDED", "RETIRED"],
+  "r3_registry_content": "No substantive family is registered by R.3; tests use synthetic fixtures only."
+}

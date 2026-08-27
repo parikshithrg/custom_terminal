@@ -1,0 +1,23 @@
+{
+  "contract_version": "root_run_manifest_contract_v1",
+  "required_fields": [
+    "run_attempt_id", "experiment_id", "experiment_version", "family_id",
+    "family_version", "preregistration_sha256", "authorization_event_sha256",
+    "split_access_event", "code_commit", "dirty_worktree",
+    "dirty_worktree_fingerprint", "environment_fingerprint",
+    "configuration_hash", "input_declaration", "deterministic_seeds",
+    "started_at", "completed_at", "runner_entry_point",
+    "output_artifact_inventory", "unexpected_outputs", "completion_status",
+    "sanitized_failure_category", "lifecycle_result", "promotion_eligible",
+    "catalog_event_reference"
+  ],
+  "completion_statuses": ["COMPLETED", "FAILED", "ABORTED"],
+  "rule": "A failed or aborted governed attempt still receives a root manifest. Without one, output is noncanonical.",
+  "atomic_finalization": [
+    "write temporary attempt directory",
+    "validate and hash declared artifacts",
+    "write root manifest",
+    "atomically rename to immutable final attempt directory",
+    "append final catalog event"
+  ]
+}

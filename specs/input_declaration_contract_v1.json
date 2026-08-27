@@ -1,0 +1,20 @@
+{
+  "contract_version": "input_declaration_contract_v1",
+  "required_fields": [
+    "input_declaration_id", "version", "datasets", "security_master_version",
+    "population_capability_assessment", "corporate_action_evidence_version",
+    "terminal_outcome_policy_version", "benchmark_version",
+    "cost_schedule_version", "calendar_version", "configuration_hash",
+    "code_commit", "dirty_worktree", "dirty_worktree_fingerprint",
+    "environment", "environment_fingerprint", "parser_versions",
+    "feature_versions", "dataset_split_version"
+  ],
+  "dataset_required_fields": ["dataset_id", "version", "snapshot_sha256"],
+  "rules": [
+    "Mutable paths without exact hashes are rejected.",
+    "Configuration hash must equal the locked expected configuration.",
+    "Failed or unknown required capabilities fail preflight except permanently non-promotable limited exploratory scope.",
+    "Current Kite inventories, quotes and CURRENT_TRADABLE_ONLY data are prohibited as historical evidence.",
+    "Dirty state is captured, not claimed to be securely prevented."
+  ]
+}

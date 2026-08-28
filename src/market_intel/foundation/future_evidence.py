@@ -12,6 +12,7 @@ from research_contracts.governance import (
     GovernanceCatalog,
     GovernanceError,
     canonical_hash,
+    lifecycle_result_is_promotion_eligible,
     validate_family,
     validate_input_declaration,
     validate_preregistration,
@@ -166,6 +167,11 @@ def validate_governed_bundle(
         raise GovernanceError("manifest completion state conflicts with catalog")
     if manifest.get("completion_status") == "COMPLETED" and manifest.get("missing_required_outputs"):
         raise GovernanceError("completed bundle has unresolved required outputs")
+    if not lifecycle_result_is_promotion_eligible(str(manifest.get("lifecycle_result"))):
+        if manifest.get("promotion_eligible"):
+            raise GovernanceError("infrastructure-canary lifecycle is permanently nonpromotable")
+        if manifest.get("family_id") != "governance_canary":
+            raise GovernanceError("infrastructure-canary lifecycle is restricted to its dedicated family")
 
     declared = {str(item["relative_path"]): item for item in manifest["output_artifact_inventory"]}
     expected = {str(item["relative_path"]): item for item in prereg["expected_artifacts"]}

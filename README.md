@@ -230,7 +230,14 @@ $env:PYTHONPATH = (Resolve-Path -LiteralPath 'Data test').Path
 
 Latest verified results:
 
-- Root suite: **191 passed**.
+- Root suite: **200 passed**.
 - Separate `Data test` suite: **289 passed**.
 - R.4 focused suite: **25 passed**.
-- All **46** repository JSON specification/evidence/fixture objects parsed successfully.
+- R.5 focused proposal suite: **9 passed**.
+- Combined R.3–R.5 governance suite: **64 passed**.
+- All **56** versioned JSON specification/evidence/fixture/proposal objects validated successfully.
+
+Research R.5 prepares a quarantined, deterministic infrastructure-canary
+proposal under `proposals/first_governed_run`. It does not register, authorize
+or execute the canary. A separate future response tied to finalized hashes is
+required before any governed execution.

@@ -1,0 +1,18 @@
+{
+  "proposal_only": true,
+  "execution_authorized": false,
+  "estimate_version": "governance_canary_resource_envelope_v1",
+  "maximum_compute_budget": {"wall_time_seconds": 5, "memory_mb": 64, "attempts": 1},
+  "compute_budget_enforcement": {
+    "attempts": "ENFORCED_BY_ONE_TIME_APPROVAL",
+    "wall_time_seconds": "DECLARED_NOT_ENFORCED",
+    "memory_mb": "DECLARED_NOT_ENFORCED"
+  },
+  "maximum_disk_output_bytes": 32768,
+  "declared_runner_artifact_count": 3,
+  "governed_bundle_artifact_count_including_root_manifest": 4,
+  "basis": "Conservative static bound for three sub-kilobyte deterministic outputs plus root manifest; no governed execution measurement was performed.",
+  "network_requests": 0,
+  "market_data_objects": 0,
+  "trading_actions": 0
+}

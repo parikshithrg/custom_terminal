@@ -1,0 +1,40 @@
+{
+  "proposal_manifest_version": "first_governed_canary_proposal_v1",
+  "proposal_only": true,
+  "execution_authorized": false,
+  "family_id": "governance_canary",
+  "family_version": "v1",
+  "experiment_id": "governance_canary_execution_v1",
+  "experiment_version": "v1",
+  "runner_entry_point": "research_contracts.canary:run_governance_canary",
+  "lifecycle_result": "INFRASTRUCTURE_CANARY_COMPLETED",
+  "promotion_eligible": false,
+  "canonical_candidate_hashes": {
+    "family_definition_sha256": "ab7bd1ad7d106e08ebbd9bf54d9a109701e39e6a66229a1724b9bcb58b9117ed",
+    "preregistration_sha256": "29f5bc780cdc4fcdbce58657e65d03695ea6b2ffeef9c449cd7af22e58a0f1a0",
+    "input_declaration_sha256_before_runtime_binding": "2e3292520a40e7ca4e565fb59bc5580c92fc0495b1e66b858a21c6a15e0b931d",
+    "synthetic_dataset_snapshot_sha256": "b139b0d653a6171a2e07ae30ae770bdde5779d0d02cbc2f5fb6aee74bb1a15d2"
+  },
+  "objects": [
+    {"relative_path": "expected_output_declaration_v1.json", "sha256": "eb04836e4b1ed85a6a183af6815f95a9ebf68dc3db7b6ba8c6118b27f1234142"},
+    {"relative_path": "family_definition_candidate_v1.json", "sha256": "60eade3d890316d617c57a1ef5385c79bde01cbb217ebcd629b0160b9a644a52"},
+    {"relative_path": "fixtures/canary_input_v1.json", "sha256": "b139b0d653a6171a2e07ae30ae770bdde5779d0d02cbc2f5fb6aee74bb1a15d2"},
+    {"relative_path": "operator_review_checklist_v1.json", "sha256": "870974a6582f446fc9eb43b2d436ba585d9a9438ab5e4046d14155573e1ea8a8"},
+    {"relative_path": "preregistration_candidate_v1.json", "sha256": "cd87ab1f046bd2c1d4dff702a8e92939eb2139ee5276ca67d8e7df81b644216d"},
+    {"relative_path": "proposed_approval_payload_v1.json", "sha256": "7a69743a8f62150f6e6cdaa688415cd13e8fed4b49f6c4033672a735e6fc6d1c"},
+    {"relative_path": "resource_envelope_v1.json", "sha256": "402b137f48148d6dae696101afa5a8f9e584730d07caa1858fbcd12b66a6d479"},
+    {"relative_path": "synthetic_input_declaration_candidate_v1.json", "sha256": "fe77c62722fced3454e0b9516223ab120f734bda4396c09b065d77bb33241761"}
+  ],
+  "future_runtime_bindings_required_before_approval": [
+    "exact clean Git commit",
+    "actual dirty-worktree fingerprint",
+    "actual environment declaration and fingerprint",
+    "resulting finalized input-declaration hash",
+    "approval ID, approving identity, issue time and expiry time"
+  ],
+  "registration_status": "NOT_REGISTERED",
+  "preregistration_status": "NOT_LOCKED",
+  "approval_status": "NOT_ISSUED_NOT_SEALED_NOT_REGISTERED",
+  "execution_status": "NOT_AUTHORIZED_NOT_EXECUTED",
+  "canonical_evidence_status": "NONE_CREATED"
+}

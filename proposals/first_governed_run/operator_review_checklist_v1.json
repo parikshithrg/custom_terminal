@@ -1,0 +1,19 @@
+{
+  "proposal_only": true,
+  "execution_authorized": false,
+  "checklist_version": "first_governed_canary_review_checklist_v1",
+  "required_confirmations": [
+    "Displayed family, experiment, preregistration, finalized input and fixture hashes match reviewed objects.",
+    "The finalized input declaration binds the exact clean committed source state and environment.",
+    "Only the train split and declared canary runner are requested.",
+    "Exactly three runner artifacts plus the gateway root manifest are expected.",
+    "Wall time and memory are declared but not process-enforced; one attempt is enforced.",
+    "No market, broker, network, scoring, recommendation, portfolio or trading dependency is involved.",
+    "Approval authorizes one execution only and does not authorize interpretation, promotion or deployment.",
+    "The approval issue/expiry window is no longer than 30 minutes.",
+    "The user explicitly affirms the displayed final hashes in a separate turn."
+  ],
+  "silence_is_approval": false,
+  "approval_of_r5_is_execution_approval": false,
+  "generic_continue_is_execution_approval": false
+}

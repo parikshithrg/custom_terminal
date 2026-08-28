@@ -1,0 +1,42 @@
+{
+  "experiment_id": "governance_canary_execution_v1",
+  "version": "v1",
+  "family_id": "governance_canary",
+  "family_version": "v1",
+  "economic_story": "None. This deterministic synthetic operation verifies governance plumbing only.",
+  "selection_rule": "Read exactly the three committed synthetic rows in governance_canary_input_v1.",
+  "decision_clock": "NOT_APPLICABLE_SYNTHETIC_CANARY",
+  "entry_rule": "NO_TRADE_NO_POSITION",
+  "holding_horizon_sessions": 1,
+  "exit_overlay": "NOT_APPLICABLE_SYNTHETIC_CANARY",
+  "portfolio_construction": "NONE",
+  "benchmark_version": "not_applicable_canary_v1",
+  "cost_schedule_version": "not_applicable_canary_v1",
+  "population_scope": "THREE_COMMITTED_SYNTHETIC_ROWS_ONLY",
+  "security_identity_requirements": "NO_SECURITIES_PERMITTED",
+  "corporate_action_requirements": "NOT_APPLICABLE",
+  "terminal_outcome_policy": "NOT_APPLICABLE",
+  "dataset_capability_requirements": ["synthetic_fixture_integrity"],
+  "split_requested": "train",
+  "primary_metric": "declared_artifact_integrity",
+  "secondary_diagnostics": ["artifact_count", "row_count", "content_hash_match"],
+  "placebo_design": "NOT_APPLICABLE_INFRASTRUCTURE_CANARY",
+  "permutation_draws": 1,
+  "dependence_treatment": "NOT_APPLICABLE_INFRASTRUCTURE_CANARY",
+  "multiplicity_treatment": "NOT_APPLICABLE_INFRASTRUCTURE_CANARY",
+  "promotion_threshold": "PERMANENTLY_INELIGIBLE",
+  "expected_artifacts": [
+    {"name": "synthetic_result", "relative_path": "synthetic_result.json", "required": true},
+    {"name": "synthetic_rows", "relative_path": "synthetic_rows.csv", "required": true},
+    {"name": "execution_receipt", "relative_path": "execution_receipt.json", "required": true}
+  ],
+  "code_entry_point": "research_contracts.canary:run_governance_canary",
+  "expected_configuration": {
+    "mode": "INFRASTRUCTURE_CANARY_ONLY",
+    "multiplier": 2,
+    "unexpected_output_policy": "FAIL"
+  },
+  "research_classification": "EXPLORATORY",
+  "seeds": [0],
+  "limited_data_non_promotable": true
+}

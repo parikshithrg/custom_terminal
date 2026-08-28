@@ -31,6 +31,9 @@ INPUT_CONTRACT_VERSION = "input_declaration_contract_v1"
 ROOT_MANIFEST_CONTRACT_VERSION = "root_run_manifest_contract_v1"
 GOVERNED_EVIDENCE_CLASS = "GOVERNED_FUTURE_RESEARCH_EVIDENCE"
 UNGOVERNED_CLASS = "UNGOVERNED_NONCANONICAL_OUTPUT"
+PERMANENTLY_NONPROMOTABLE_LIFECYCLE_RESULTS = frozenset({
+    "INFRASTRUCTURE_CANARY_COMPLETED",
+})
 
 EVENT_TYPES = {
     "FAMILY_REGISTERED", "PREREGISTRATION_CREATED", "PREREGISTRATION_LOCKED",
@@ -101,6 +104,11 @@ def utc_now() -> str:
 
 def canonical_hash(value: Any) -> str:
     return sha256_bytes(canonical_json_bytes(value))
+
+
+def lifecycle_result_is_promotion_eligible(lifecycle_result: str) -> bool:
+    """Return False for lifecycle states that can never represent research evidence."""
+    return lifecycle_result not in PERMANENTLY_NONPROMOTABLE_LIFECYCLE_RESULTS
 
 
 def environment_declaration() -> dict[str, Any]:

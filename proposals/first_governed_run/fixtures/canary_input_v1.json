@@ -1,0 +1,10 @@
+{
+  "fixture_id": "governance_canary_input_v1",
+  "purpose": "DETERMINISTIC_INFRASTRUCTURE_CANARY_ONLY",
+  "rows": [
+    {"row_id": "CANARY_A", "value": 1},
+    {"row_id": "CANARY_B", "value": 2},
+    {"row_id": "CANARY_C", "value": 3}
+  ],
+  "synthetic_only": true
+}

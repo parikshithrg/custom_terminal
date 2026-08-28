@@ -1,0 +1,32 @@
+{
+  "input_declaration_id": "governance_canary_inputs_v1",
+  "version": "v1",
+  "datasets": [
+    {
+      "dataset_id": "governance_canary_fixture",
+      "version": "v1",
+      "snapshot_sha256": "b139b0d653a6171a2e07ae30ae770bdde5779d0d02cbc2f5fb6aee74bb1a15d2",
+      "path": "proposals/first_governed_run/fixtures/canary_input_v1.json"
+    }
+  ],
+  "security_master_version": "not_applicable_canary_v1",
+  "population_capability_assessment": {"synthetic_fixture_integrity": "PASS"},
+  "corporate_action_evidence_version": "not_applicable_canary_v1",
+  "terminal_outcome_policy_version": "not_applicable_canary_v1",
+  "benchmark_version": "not_applicable_canary_v1",
+  "cost_schedule_version": "not_applicable_canary_v1",
+  "calendar_version": "not_applicable_canary_v1",
+  "configuration_hash": "43dc37000406641c8fbf284ab1fe24b7ffe41224af52dbc451b4e5a108245072",
+  "code_commit": "BIND_EXACT_COMMITTED_R5_HEAD_DURING_FUTURE_APPROVAL_CEREMONY",
+  "dirty_worktree": false,
+  "dirty_worktree_fingerprint": "13e81673dbd86bb6947e19f0d61eb42d9ba0fc096cbce7bf23a925783a5f3a6a",
+  "environment": {
+    "network": "PROHIBITED",
+    "runtime": "CPython",
+    "scope": "OFFLINE_SYNTHETIC_CANARY"
+  },
+  "environment_fingerprint": "69f6638785e4a014c0febd6e5b2e51fd066a1dcefdea886c85b48c1e5ad518b9",
+  "parser_versions": {"governance_canary_fixture": "v1"},
+  "feature_versions": {"none": "not_applicable_canary_v1"},
+  "dataset_split_version": "synthetic_canary_train_v1"
+}

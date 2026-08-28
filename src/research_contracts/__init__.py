@@ -39,6 +39,7 @@ from .governance import (
     canonical_hash,
     environment_declaration,
     label_ungoverned_output,
+    lifecycle_result_is_promotion_eligible,
     lock_preregistration,
     register_family,
     register_run_approval,
@@ -57,6 +58,18 @@ from .approval import (
 )
 from .development import DEVELOPMENT_WARNING, mark_development_output
 from .preflight import PREFLIGHT_VERSION, preview_governed_run
+from .canary import (
+    CANARY_EXPERIMENT_ID,
+    CANARY_FAMILY_ID,
+    CANARY_LIFECYCLE_RESULT,
+    CANARY_PROMOTION_ELIGIBLE,
+    CANARY_RUNNER_ENTRY_POINT,
+    CANARY_RUNNER_VERSION,
+    can_promote_lifecycle_result,
+    review_canary_proposal,
+    run_governance_canary,
+    validate_canary_output_directory,
+)
 from .divergence import DIVERGENCE_VERSION, compare_legacy_logs, write_divergence_report
 
 __all__ = [
@@ -73,6 +86,7 @@ __all__ = [
     "GovernedAbort", "GovernedExecutionGateway", "GovernanceCatalog",
     "GovernanceError", "authorize_split_access", "canonical_hash",
     "environment_declaration", "label_ungoverned_output",
+    "lifecycle_result_is_promotion_eligible",
     "lock_preregistration", "register_family", "register_run_approval", "validate_family",
     "validate_input_declaration", "validate_preregistration",
     "DIVERGENCE_VERSION", "compare_legacy_logs", "write_divergence_report",
@@ -80,4 +94,8 @@ __all__ = [
     "approval_payload_hash", "dataset_snapshot_refs", "seal_approval",
     "validate_run_approval", "DEVELOPMENT_WARNING", "mark_development_output",
     "PREFLIGHT_VERSION", "preview_governed_run",
+    "CANARY_EXPERIMENT_ID", "CANARY_FAMILY_ID", "CANARY_LIFECYCLE_RESULT",
+    "CANARY_PROMOTION_ELIGIBLE", "CANARY_RUNNER_ENTRY_POINT", "CANARY_RUNNER_VERSION",
+    "can_promote_lifecycle_result", "review_canary_proposal",
+    "run_governance_canary", "validate_canary_output_directory",
 ]

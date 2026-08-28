@@ -1,0 +1,42 @@
+{
+  "proposal_only": true,
+  "execution_authorized": false,
+  "declaration_version": "governance_canary_expected_outputs_v1",
+  "unexpected_output_policy": "FAIL_VALIDATION",
+  "lifecycle_result": "INFRASTRUCTURE_CANARY_COMPLETED",
+  "promotion_eligible": false,
+  "artifacts": [
+    {
+      "name": "execution_receipt",
+      "relative_path": "execution_receipt.json",
+      "media_type": "application/json",
+      "schema": "governance_canary_execution_receipt_v1",
+      "row_count": null,
+      "byte_size": 372,
+      "sha256": "29d63c1fb001d1512c1b0c3148f441b8aa7ef0a24a671b9671bb075c014562f8"
+    },
+    {
+      "name": "synthetic_result",
+      "relative_path": "synthetic_result.json",
+      "media_type": "application/json",
+      "schema": "governance_canary_result_v1",
+      "row_count": null,
+      "byte_size": 168,
+      "sha256": "27f57d6d0fe30591f8b5d0fb3a9f1a309e3914545ba31cb1b660a9bee6560775"
+    },
+    {
+      "name": "synthetic_rows",
+      "relative_path": "synthetic_rows.csv",
+      "media_type": "text/csv",
+      "schema": "row_id:string,input_value:integer,deterministic_value:integer",
+      "row_count": 3,
+      "byte_size": 78,
+      "sha256": "f0a3bd05e9829f9b1d6eb80b616d2606e8925961771475160287a671e5c72d25"
+    }
+  ],
+  "gateway_artifact": {
+    "relative_path": "root_manifest.json",
+    "hash_known_before_execution": false,
+    "reason": "The manifest binds future approval, attempt, catalog-event and execution timestamps."
+  }
+}

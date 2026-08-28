@@ -1,0 +1,22 @@
+{
+  "family_id": "governance_canary",
+  "version": "v1",
+  "economic_mechanism": "NONE_INFRASTRUCTURE_VERIFICATION_ONLY",
+  "hypothesis_category": "INFRASTRUCTURE_CANARY",
+  "parent_family": null,
+  "registered_variants": ["deterministic_three_row_canary_v1"],
+  "allowed_diagnostic_scope": ["governance_chain_integrity_only"],
+  "primary_metric": "declared_artifact_integrity",
+  "outcome_horizon_sessions": 1,
+  "multiplicity_method": "NOT_APPLICABLE_INFRASTRUCTURE_CANARY",
+  "significance_threshold": 0.5,
+  "minimum_effective_sample_size": 1,
+  "minimum_placebo_count": 1,
+  "declared_datasets": ["governance_canary_fixture__v1"],
+  "required_capabilities": ["synthetic_fixture_integrity"],
+  "allowed_research_splits": ["train"],
+  "current_lifecycle": "REGISTERED",
+  "creation_event": "PROPOSED_R5_CANARY_REGISTRATION_NOT_EXECUTED",
+  "supersedes": null,
+  "retirement_state": "PERMANENTLY_NONPROMOTABLE"
+}

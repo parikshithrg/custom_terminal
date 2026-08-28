@@ -1,0 +1,21 @@
+{
+  "delta_version": "research_r5_entrypoint_delta_v1",
+  "base_inventory": "laboratory_entrypoint_inventory_v1",
+  "base_commit": "c689cb8",
+  "added_callable_entrypoints": [
+    {
+      "path": "src/research_contracts/canary.py",
+      "callable": "run_governance_canary",
+      "classification": "DEVELOPMENT_ONLY_NONCANONICAL",
+      "canonical_condition": "Only a later explicitly approved GovernedExecutionGateway.run may make its declared output part of a governed bundle. Direct invocation is noncanonical."
+    }
+  ],
+  "removed_entrypoints": [],
+  "effective_totals": {
+    "CANONICAL_GOVERNED": 2,
+    "DEVELOPMENT_ONLY_NONCANONICAL": 65,
+    "DEPRECATED": 2,
+    "UNSAFE_BYPASS": 0,
+    "TOTAL": 69
+  }
+}

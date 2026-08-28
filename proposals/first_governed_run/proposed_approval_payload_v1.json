@@ -1,0 +1,33 @@
+{
+  "approval_schema_version": "governed_run_approval_v1",
+  "approval_id": "TO_BE_ISSUED_ONLY_AFTER_SEPARATE_EXPLICIT_USER_APPROVAL",
+  "family_id": "governance_canary",
+  "family_version": "v1",
+  "experiment_id": "governance_canary_execution_v1",
+  "experiment_version": "v1",
+  "experiment_specification_sha256": "BIND_FINAL_PREREGISTRATION_SHA256_AT_FUTURE_CEREMONY",
+  "preregistration_sha256": "BIND_FINAL_PREREGISTRATION_SHA256_AT_FUTURE_CEREMONY",
+  "input_declaration_sha256": "BIND_COMMIT_AND_ENVIRONMENT_AWARE_INPUT_SHA256_AT_FUTURE_CEREMONY",
+  "allowed_dataset_snapshots": [
+    {
+      "dataset_id": "governance_canary_fixture",
+      "version": "v1",
+      "snapshot_sha256": "b139b0d653a6171a2e07ae30ae770bdde5779d0d02cbc2f5fb6aee74bb1a15d2"
+    }
+  ],
+  "permitted_split_access": ["train"],
+  "maximum_compute_budget": {"wall_time_seconds": 5, "memory_mb": 64, "attempts": 1},
+  "compute_budget_enforcement": {
+    "attempts": "ENFORCED_BY_ONE_TIME_APPROVAL",
+    "wall_time_seconds": "DECLARED_NOT_ENFORCED",
+    "memory_mb": "DECLARED_NOT_ENFORCED"
+  },
+  "authorized_gateway_action": "GovernedExecutionGateway.run",
+  "issued_at": "SET_DURING_FUTURE_APPROVAL_CEREMONY",
+  "expires_at": "SET_DURING_FUTURE_APPROVAL_CEREMONY_MAXIMUM_30_MINUTES",
+  "one_time_use_status": "UNUSED_AT_ISSUE",
+  "approving_identity": "SET_FROM_EXPLICIT_FUTURE_USER_APPROVAL",
+  "approval_reason": "One synthetic infrastructure canary attempt only; no research or trading authorization.",
+  "template_only": true,
+  "approval_payload_sha256": "NOT_SEALED_PROPOSAL_ONLY"
+}

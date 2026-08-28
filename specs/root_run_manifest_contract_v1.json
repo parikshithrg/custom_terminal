@@ -9,10 +9,12 @@
     "started_at", "completed_at", "runner_entry_point",
     "output_artifact_inventory", "unexpected_outputs", "completion_status",
     "sanitized_failure_category", "lifecycle_result", "promotion_eligible",
-    "catalog_event_reference"
+    "catalog_event_reference", "run_approval_reference",
+    "maximum_compute_budget", "compute_budget_enforcement"
   ],
   "completion_statuses": ["COMPLETED", "FAILED", "ABORTED"],
   "rule": "A failed or aborted governed attempt still receives a root manifest. Without one, output is noncanonical.",
+  "approval_rule": "Every future manifest binds the exact registered approval and RUN_STARTED consumption event. Approval to execute never implies promotion.",
   "atomic_finalization": [
     "write temporary attempt directory",
     "validate and hash declared artifacts",

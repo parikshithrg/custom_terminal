@@ -18,7 +18,7 @@ import pandas as pd
 
 from market_intel.evidence.metrics import economic_report, portfolio_report, prediction_report
 from market_intel.evidence.baselines import baseline_distributions
-from market_intel.foundation.artifacts import Catalog, canonical_json, frame_hash, sha256_file, write_parquet_immutable
+from market_intel.foundation.artifacts import canonical_json, frame_hash, sha256_file, write_parquet_immutable
 from market_intel.foundation.prices import PricePanels
 from market_intel.foundation.quality import DatasetTrustContract, evaluate_requirements
 from market_intel.research.folds import assert_no_label_overlap, expanding_folds
@@ -89,6 +89,11 @@ def run_momentum(
     if run_dir.exists():
         raise FileExistsError(f"immutable run already exists: {run_dir}")
     run_dir.mkdir(parents=True)
+    from research_contracts.development import mark_development_output
+    mark_development_output(
+        run_dir,
+        entrypoint="market_intel.application.runner.run_momentum (deprecated Slice A)",
+    )
 
     feature_def = MomentumFeatureDefinition(
         lookback_sessions=int(spec["lookback_sessions"]),
@@ -226,14 +231,7 @@ def run_momentum(
         "recorded_at": datetime.now(timezone.utc).isoformat(),
     }
     _json_write(run_dir / "manifest.json", manifest)
-    catalog = Catalog(output_root.parent / "catalog.sqlite")
-    try:
-        catalog.record_run({
-            "run_id": run_id, "experiment_id": spec["experiment_id"], "state": state,
-            "manifest_path": str(run_dir / "manifest.json"),
-            "manifest_hash": sha256_file(run_dir / "manifest.json"),
-            "created_at": manifest["recorded_at"],
-        })
-    finally:
-        catalog.close()
+    # R.4 deliberately does not update even the old SQLite run catalog. This
+    # compatibility runner is useful only for synthetic regression tests and
+    # its manifest is not a governed root_run_manifest_contract_v1 object.
     return run_dir

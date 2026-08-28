@@ -95,6 +95,8 @@ def append_entry(path: str | Path, entry: HypothesisEntry) -> pd.DataFrame:
     chronological order.
     """
     path = Path(path)
+    from research_contracts.development import mark_development_output
+    mark_development_output(path.parent / "noncanonical_hypothesis_log", entrypoint=__name__)
     existing = load_log(path)
     new_row = pd.DataFrame([entry.as_row()])
     combined = pd.concat([existing, new_row], ignore_index=True)

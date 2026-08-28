@@ -41,10 +41,22 @@ from .governance import (
     label_ungoverned_output,
     lock_preregistration,
     register_family,
+    register_run_approval,
     validate_family,
     validate_input_declaration,
     validate_preregistration,
 )
+from .approval import (
+    APPROVAL_SCHEMA_VERSION,
+    AUTHORIZED_GATEWAY_ACTION,
+    ApprovalError,
+    approval_payload_hash,
+    dataset_snapshot_refs,
+    seal_approval,
+    validate_run_approval,
+)
+from .development import DEVELOPMENT_WARNING, mark_development_output
+from .preflight import PREFLIGHT_VERSION, preview_governed_run
 from .divergence import DIVERGENCE_VERSION, compare_legacy_logs, write_divergence_report
 
 __all__ = [
@@ -61,7 +73,11 @@ __all__ = [
     "GovernedAbort", "GovernedExecutionGateway", "GovernanceCatalog",
     "GovernanceError", "authorize_split_access", "canonical_hash",
     "environment_declaration", "label_ungoverned_output",
-    "lock_preregistration", "register_family", "validate_family",
+    "lock_preregistration", "register_family", "register_run_approval", "validate_family",
     "validate_input_declaration", "validate_preregistration",
     "DIVERGENCE_VERSION", "compare_legacy_logs", "write_divergence_report",
+    "APPROVAL_SCHEMA_VERSION", "AUTHORIZED_GATEWAY_ACTION", "ApprovalError",
+    "approval_payload_hash", "dataset_snapshot_refs", "seal_approval",
+    "validate_run_approval", "DEVELOPMENT_WARNING", "mark_development_output",
+    "PREFLIGHT_VERSION", "preview_governed_run",
 ]

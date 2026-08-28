@@ -1,0 +1,29 @@
+{
+  "contract_version": "governed_run_approval_v1",
+  "required_fields": [
+    "approval_schema_version", "approval_id", "family_id", "family_version",
+    "experiment_id", "experiment_version", "experiment_specification_sha256",
+    "preregistration_sha256", "input_declaration_sha256",
+    "allowed_dataset_snapshots", "permitted_split_access",
+    "maximum_compute_budget", "compute_budget_enforcement",
+    "authorized_gateway_action", "issued_at",
+    "expires_at", "one_time_use_status", "approving_identity",
+    "approval_reason", "template_only", "approval_payload_sha256"
+  ],
+  "hash_rule": "SHA-256 over canonical approval JSON excluding approval_payload_sha256",
+  "consumption_rule": "The first exact RUN_STARTED event binds and consumes the approval atomically for governed purposes.",
+  "one_time_use_status_at_issue": "UNUSED_AT_ISSUE",
+  "compute_budget_enforcement": {
+    "attempts": "ENFORCED_BY_ONE_TIME_APPROVAL",
+    "wall_time_seconds": "DECLARED_NOT_ENFORCED",
+    "memory_mb": "DECLARED_NOT_ENFORCED"
+  },
+  "authorized_gateway_action": "GovernedExecutionGateway.run",
+  "rules": [
+    "Approval is explicit and exact; silence is never approval.",
+    "Family, experiment, preregistration, inputs, dataset snapshots, split and action must match.",
+    "Expired, altered, reused, incomplete and unregistered approvals fail closed.",
+    "Preflight does not consume approval.",
+    "Approval to execute is not approval to interpret, promote or deploy."
+  ]
+}

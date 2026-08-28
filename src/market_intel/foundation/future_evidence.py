@@ -98,9 +98,33 @@ def validate_governed_bundle(
         == manifest["preregistration_sha256"]
         and event.get("object_hashes", {}).get("input_declaration_sha256")
         == declaration["sha256"]
+        and event.get("object_hashes", {}).get("approval_sha256")
+        == manifest.get("run_approval_reference", {}).get("approval_sha256")
     ]
     if len(authorization) != 1:
         raise GovernanceError("canonical import requires the exact authorization event")
+    approval_ref = manifest.get("run_approval_reference", {})
+    registered_approval = [
+        event for event in events
+        if event.get("event_type") == "RUN_APPROVAL_REGISTERED"
+        and event.get("object_refs", {}).get("approval_id") == approval_ref.get("approval_id")
+        and event.get("object_hashes", {}).get("approval_sha256")
+        == approval_ref.get("approval_sha256")
+        and event.get("object_hashes", {}).get("approval_payload_sha256")
+        == approval_ref.get("approval_payload_sha256")
+    ]
+    consumed_approval = [
+        event for event in events
+        if event.get("event_type") == "RUN_STARTED"
+        and event.get("event_id") == approval_ref.get("consumed_by_event_id")
+        and event.get("event_sha256") == approval_ref.get("consumed_by_event_sha256")
+        and event.get("object_refs", {}).get("run_attempt_id") == manifest["run_attempt_id"]
+        and event.get("object_refs", {}).get("approval_id") == approval_ref.get("approval_id")
+        and event.get("object_hashes", {}).get("approval_sha256")
+        == approval_ref.get("approval_sha256")
+    ]
+    if len(registered_approval) != 1 or len(consumed_approval) != 1:
+        raise GovernanceError("canonical import requires exact registered and consumed run approval")
     final_ref = manifest.get("catalog_event_reference", {})
     final_events = [
         event for event in events
@@ -203,8 +227,19 @@ class CanonicalFutureEvidenceCatalog:
         return [json.loads(line) for line in self.path.read_text(encoding="utf-8").splitlines() if line]
 
     def register(self, validation: Mapping[str, Any], *, imported_at: str) -> tuple[dict[str, Any], bool]:
-        if validation.get("validation_result") != "PASS":
-            raise GovernanceError("invalid governed bundle cannot be cataloged")
+        raise GovernanceError(
+            "caller-supplied validation cannot be cataloged; use register_bundle for mandatory revalidation"
+        )
+
+    def register_bundle(
+        self, *, bundle_path: str | Path, family_path: str | Path,
+        preregistration_path: str | Path, governance_catalog: GovernanceCatalog,
+        imported_at: str,
+    ) -> tuple[dict[str, Any], bool]:
+        validation = validate_governed_bundle(
+            bundle_path=bundle_path, family_path=family_path,
+            preregistration_path=preregistration_path, catalog=governance_catalog,
+        )
         record = {**dict(validation), "imported_at": imported_at}
         for existing in self.records():
             if existing.get("run_attempt_id") != record["run_attempt_id"]:

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -12,6 +13,14 @@ from market_intel.foundation.prices import load_symbol_csvs
 
 
 def main() -> int:
+    print(
+        "DEPRECATED: the Slice A momentum CLI is not an R.4 governed entry point. "
+        "No research was executed. Use the governed preflight and obtain a run-specific approval.",
+        file=sys.stderr,
+    )
+    return 2
+    # The parser is retained below as historical command documentation; this
+    # entry point intentionally fails closed before loading any data.
     parser = argparse.ArgumentParser()
     parser.add_argument("--spec", default="specs/momentum_12_1_v1.json")
     parser.add_argument("--price-dir", required=True)
@@ -43,4 +52,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

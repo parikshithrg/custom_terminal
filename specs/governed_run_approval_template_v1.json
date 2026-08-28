@@ -1,0 +1,31 @@
+{
+  "approval_schema_version": "governed_run_approval_v1",
+  "approval_id": "REPLACE_WITH_UNIQUE_APPROVAL_ID",
+  "family_id": "REPLACE_WITH_REGISTERED_FAMILY_ID",
+  "family_version": "REPLACE_WITH_FAMILY_VERSION",
+  "experiment_id": "REPLACE_WITH_PREREGISTERED_EXPERIMENT_ID",
+  "experiment_version": "REPLACE_WITH_EXPERIMENT_VERSION",
+  "experiment_specification_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "preregistration_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "input_declaration_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "allowed_dataset_snapshots": [],
+  "permitted_split_access": [],
+  "maximum_compute_budget": {
+    "wall_time_seconds": 0,
+    "memory_mb": 0,
+    "attempts": 0
+  },
+  "compute_budget_enforcement": {
+    "attempts": "ENFORCED_BY_ONE_TIME_APPROVAL",
+    "wall_time_seconds": "DECLARED_NOT_ENFORCED",
+    "memory_mb": "DECLARED_NOT_ENFORCED"
+  },
+  "authorized_gateway_action": "GovernedExecutionGateway.run",
+  "issued_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP",
+  "expires_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP",
+  "one_time_use_status": "UNUSED_AT_ISSUE",
+  "approving_identity": "REPLACE_WITH_LOCAL_APPROVAL_IDENTITY",
+  "approval_reason": "REPLACE_WITH_EXPLICIT_RUN_REASON",
+  "template_only": true,
+  "approval_payload_sha256": "REPLACE_AFTER_COMPLETING_PAYLOAD"
+}

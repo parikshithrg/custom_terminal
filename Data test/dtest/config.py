@@ -223,6 +223,12 @@ def load_config(path: str | Path | None = None) -> Config:
     paths = Paths(**{
         k: _resolve(PROJECT_ROOT, v) for k, v in paths_raw.items()
     })
+    # Every executable under Data test/scripts loads this configuration before
+    # it reaches its research or write path. Mark that invocation at the shared
+    # boundary so direct shell, wrapper and subprocess launches are equally
+    # classified as development-only and noncanonical.
+    from research_contracts.development import mark_data_test_script_if_present
+    mark_data_test_script_if_present(paths.artifacts)
 
     cfg = Config(
         as_of=as_of,

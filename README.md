@@ -23,6 +23,33 @@ is reachable, none are wired to real data yet.
 
 Vertical Slices A through A.7 now provide a deterministic, local-first research foundation alongside the original Streamlit product scaffold. The quantitative infrastructure remains separate from the UI and no research result is connected to production recommendations.
 
+### Research governance R.4
+
+Every future canonical research attempt must now use the governed gateway with
+an immutable registered family, locked preregistration, hashed input declaration,
+successful side-effect-free preflight and exact registered one-use user
+approval. Direct Data-test and compatibility runners are development-only and
+their outputs are rejected by the future canonical importer. The old momentum
+CLI is deprecated and fails before loading data.
+
+Approval to execute is not approval to interpret, promote or trade. Test access
+requires separate explicit permission. R.4 does not authorize a first real run.
+The one-attempt limit is enforced; declared wall-time and memory limits are not
+yet enforced by the in-process runner.
+
+See:
+
+- `reports/RESEARCH_R4_REPORT.md`
+- `reports/LABORATORY_ENTRYPOINT_INVENTORY.md`
+- `reports/FIRST_GOVERNED_RUN_APPROVAL.md`
+- `reports/GOVERNED_EXECUTION_OPERATIONS.md`
+
+Side-effect-free preview syntax:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\preview_governed_run.py --help
+```
+
 ### Vertical Slice A.7
 
 A.7 added conservative qualification contracts for official Indian-market evidence:
@@ -203,6 +230,7 @@ $env:PYTHONPATH = (Resolve-Path -LiteralPath 'Data test').Path
 
 Latest verified results:
 
-- Root suite: **42 passed**.
+- Root suite: **191 passed**.
 - Separate `Data test` suite: **289 passed**.
-- All versioned JSON specifications parsed successfully.
+- R.4 focused suite: **25 passed**.
+- All **46** repository JSON specification/evidence/fixture objects parsed successfully.

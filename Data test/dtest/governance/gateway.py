@@ -9,9 +9,11 @@ from research_contracts.governance import (
     GovernedExecutionGateway,
     GovernanceError,
     label_ungoverned_output,
+    register_run_approval,
 )
+from research_contracts.preflight import preview_governed_run
 
 __all__ = [
     "GovernedAbort", "GovernedExecutionGateway", "GovernanceError",
-    "label_ungoverned_output",
+    "label_ungoverned_output", "register_run_approval", "preview_governed_run",
 ]

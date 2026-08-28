@@ -22,6 +22,8 @@ from research_contracts import (
     label_ungoverned_output,
     lock_preregistration,
     register_family,
+    register_run_approval,
+    seal_approval,
     sha256_file,
     validate_input_declaration,
     validate_preregistration,
@@ -101,17 +103,50 @@ def _setup(
         catalog=catalog, actor="SYNTHETIC_TEST", timestamp="2026-01-01T00:00:00+00:00",
     )
     input_path = _write(tmp_path / "inputs.json", inputs)
+    approval = seal_approval({
+        "approval_schema_version": "governed_run_approval_v1",
+        "approval_id": f"approval-{attempt_id}",
+        "family_id": family["family_id"], "family_version": family["version"],
+        "experiment_id": prereg["experiment_id"], "experiment_version": prereg["version"],
+        "experiment_specification_sha256": prereg_hash,
+        "preregistration_sha256": prereg_hash,
+        "input_declaration_sha256": canonical_hash(inputs),
+        "allowed_dataset_snapshots": [{
+            "dataset_id": inputs["datasets"][0]["dataset_id"],
+            "version": inputs["datasets"][0]["version"],
+            "snapshot_sha256": inputs["datasets"][0]["snapshot_sha256"],
+        }],
+        "permitted_split_access": [split],
+        "maximum_compute_budget": {"wall_time_seconds": 60, "memory_mb": 256, "attempts": 1},
+        "compute_budget_enforcement": {
+            "attempts": "ENFORCED_BY_ONE_TIME_APPROVAL",
+            "wall_time_seconds": "DECLARED_NOT_ENFORCED",
+            "memory_mb": "DECLARED_NOT_ENFORCED",
+        },
+        "authorized_gateway_action": "GovernedExecutionGateway.run",
+        "issued_at": "2025-01-01T00:00:00+00:00",
+        "expires_at": "2030-01-01T00:00:00+00:00",
+        "one_time_use_status": "UNUSED_AT_ISSUE",
+        "approving_identity": "SYNTHETIC_TEST_APPROVER",
+        "approval_reason": "offline synthetic governance test",
+        "template_only": False,
+    })
+    approval_path, _ = register_run_approval(
+        approval, approval_root=tmp_path / "approvals", catalog=catalog,
+        actor="SYNTHETIC_TEST", timestamp="2026-01-01T00:00:00+00:00",
+    )
     gateway = GovernedExecutionGateway(
         catalog=catalog, attempts_root=tmp_path / "attempts",
         runner_registry={"synthetic:runner": runner}, actor="SYNTHETIC_TEST",
         clock=lambda: "2026-01-01T00:00:00+00:00",
         attempt_id_factory=lambda: attempt_id,
+        approval_path=approval_path,
     )
     return {
         "family": family, "family_path": family_path, "family_hash": family_hash,
         "prereg": prereg, "prereg_path": prereg_path, "prereg_hash": prereg_hash,
         "inputs": inputs, "input_path": input_path, "catalog": catalog,
-        "gateway": gateway,
+        "gateway": gateway, "approval": approval, "approval_path": approval_path,
     }
 
 
@@ -123,6 +158,20 @@ def _authorize(ctx: dict, split: str):
         reason="synthetic access test", actor="SYNTHETIC_TEST",
         timestamp="2026-01-01T00:00:00+00:00", authorization_id=f"{split}-auth-001",
     )
+
+
+def _replace_approval(ctx: dict, tmp_path: Path, suffix: str) -> None:
+    approval = copy.deepcopy(ctx["approval"])
+    approval["approval_id"] = f"{approval['approval_id']}-{suffix}"
+    approval["input_declaration_sha256"] = canonical_hash(ctx["inputs"])
+    approval = seal_approval(approval)
+    approval_path, _ = register_run_approval(
+        approval, approval_root=tmp_path / "approvals", catalog=ctx["catalog"],
+        actor="SYNTHETIC_TEST", timestamp="2026-01-01T00:00:00+00:00",
+    )
+    ctx["approval"] = approval
+    ctx["approval_path"] = approval_path
+    ctx["gateway"].approval_path = approval_path
 
 
 def test_family_version_is_immutable(tmp_path):
@@ -199,6 +248,7 @@ def test_dirty_and_environment_state_are_captured(tmp_path):
     ctx["inputs"]["dirty_worktree"] = True
     ctx["inputs"]["dirty_worktree_fingerprint"] = "b" * 64
     _write(ctx["input_path"], ctx["inputs"])
+    _replace_approval(ctx, tmp_path, "dirty")
     bundle = ctx["gateway"].run(
         family_path=ctx["family_path"], preregistration_path=ctx["prereg_path"],
         input_declaration_path=ctx["input_path"],
@@ -268,6 +318,7 @@ def test_duplicate_run_attempt_rejected(tmp_path):
         input_declaration_path=ctx["input_path"],
     )
     ctx["gateway"].run(**args)
+    _replace_approval(ctx, tmp_path, "duplicate-attempt")
     with pytest.raises(GovernanceError, match="duplicate run-attempt"):
         ctx["gateway"].run(**args)
 
@@ -322,6 +373,7 @@ def test_one_time_test_authorization_cannot_be_reused(tmp_path):
         runner_registry={"synthetic:runner": _success_runner}, actor="SYNTHETIC_TEST",
         clock=lambda: "2026-01-01T00:00:00+00:00",
         attempt_id_factory=lambda: "synthetic-attempt-002",
+        approval_path=ctx["approval_path"],
     )
     with pytest.raises(GovernanceError, match="already been consumed"):
         second_gateway.run(**args)
@@ -365,9 +417,17 @@ def test_governed_bundle_import_and_catalog_idempotency(tmp_path):
     assert validation["classification"] == "CANONICAL_COMPLETED_EVIDENCE"
     assert validation["promotion_eligible"] is False
     catalog = CanonicalFutureEvidenceCatalog(tmp_path / "canonical.jsonl")
-    _, appended = catalog.register(validation, imported_at="2026-01-01T00:00:00+00:00")
+    registration = dict(
+        bundle_path=bundle, family_path=ctx["family_path"],
+        preregistration_path=ctx["prereg_path"], governance_catalog=ctx["catalog"],
+    )
+    _, appended = catalog.register_bundle(
+        **registration, imported_at="2026-01-01T00:00:00+00:00"
+    )
     assert appended is True
-    _, appended = catalog.register(validation, imported_at="2099-01-01T00:00:00+00:00")
+    _, appended = catalog.register_bundle(
+        **registration, imported_at="2099-01-01T00:00:00+00:00"
+    )
     assert appended is False
 
 

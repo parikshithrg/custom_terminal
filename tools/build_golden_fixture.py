@@ -33,6 +33,10 @@ START, END = pd.Timestamp("2013-01-01"), pd.Timestamp("2016-12-31")
 
 
 def main() -> int:
+    raise RuntimeError(
+        "DEPRECATED: the committed momentum golden fixture is immutable; "
+        "R.4 does not permit rebuilding it through this direct entry point."
+    )
     source = Path("C:/Users/parik/OneDrive/Desktop/Dashboard/data")
     out = ROOT / "tests" / "fixtures" / "momentum_golden_v1"
     out.mkdir(parents=True, exist_ok=True)

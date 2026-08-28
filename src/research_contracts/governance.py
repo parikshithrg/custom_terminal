@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping
 
+from .approval import APPROVAL_REQUIRED, ApprovalError, approval_payload_hash, validate_run_approval
 from .legacy_ledger import canonical_json_bytes, sha256_bytes, sha256_file
 
 
@@ -36,7 +37,7 @@ EVENT_TYPES = {
     "RUN_AUTHORIZED", "RUN_STARTED", "RUN_COMPLETED", "RUN_FAILED", "RUN_ABORTED",
     "VALIDATION_ACCESS_GRANTED", "TEST_ACCESS_GRANTED", "TEST_ACCESS_CONSUMED",
     "REPLICATION_REGISTERED", "PROMOTION_REJECTED", "PROMOTION_APPROVED",
-    "FAMILY_SUPERSEDED", "FAMILY_RETIRED",
+    "FAMILY_SUPERSEDED", "FAMILY_RETIRED", "RUN_APPROVAL_REGISTERED",
 }
 
 FAMILY_REQUIRED = (
@@ -77,7 +78,8 @@ ROOT_MANIFEST_REQUIRED = (
     "deterministic_seeds", "started_at", "completed_at", "runner_entry_point",
     "output_artifact_inventory", "unexpected_outputs", "completion_status",
     "sanitized_failure_category", "lifecycle_result", "promotion_eligible",
-    "catalog_event_reference",
+    "catalog_event_reference", "run_approval_reference", "maximum_compute_budget",
+    "compute_budget_enforcement",
 )
 FORBIDDEN_HISTORICAL_INPUT_TOKENS = (
     "kite", "current_market", "current_tradable_only", "current quote",
@@ -171,6 +173,8 @@ def validate_preregistration(prereg: Mapping[str, Any]) -> None:
     paths = [str(item.get("relative_path", "")) for item in prereg["expected_artifacts"]]
     if any(not path for path in paths) or len(paths) != len(set(paths)):
         raise GovernanceError("expected artifact paths must be present and unique")
+    if any(Path(path).is_absolute() or ".." in Path(path).parts for path in paths):
+        raise GovernanceError("expected artifact paths must remain inside the attempt directory")
     if not isinstance(prereg["seeds"], list) or not prereg["seeds"]:
         raise GovernanceError("deterministic seeds are required")
 
@@ -282,6 +286,14 @@ class GovernanceCatalog:
                 for p in prior
             ):
                 raise GovernanceError("run authorization lacks locked preregistration")
+            if event_type == "RUN_AUTHORIZED" and not any(
+                p.get("event_type") == "RUN_APPROVAL_REGISTERED"
+                and p.get("object_refs", {}).get("approval_id") == refs.get("approval_id")
+                and p.get("object_hashes", {}).get("approval_sha256")
+                == event.get("object_hashes", {}).get("approval_sha256")
+                for p in prior
+            ):
+                raise GovernanceError("run authorization lacks registered user approval")
             if event_type == "RUN_STARTED" and not any(
                 p.get("event_type") == "RUN_AUTHORIZED"
                 and p.get("object_refs", {}).get("run_attempt_id") == refs.get("run_attempt_id")
@@ -399,6 +411,48 @@ def lock_preregistration(
     return path, object_hash
 
 
+def register_run_approval(
+    approval: Mapping[str, Any], *, approval_root: str | Path,
+    catalog: GovernanceCatalog, actor: str, timestamp: str | None = None,
+) -> tuple[Path, str]:
+    """Preserve an exact issued approval without consuming it."""
+    missing = [field for field in APPROVAL_REQUIRED if field not in approval]
+    if missing:
+        raise GovernanceError(f"approval incomplete: missing={missing}")
+    if approval.get("template_only") is not False:
+        raise GovernanceError("approval templates cannot be registered")
+    approval_hash = str(approval.get("approval_payload_sha256", ""))
+    if approval_hash != approval_payload_hash(approval):
+        raise GovernanceError("approval payload hash mismatch")
+    approval_id = str(approval.get("approval_id", ""))
+    if not approval_id:
+        raise GovernanceError("approval ID is required")
+    path = Path(approval_root) / f"{approval_id}.json"
+    object_hash, created = _immutable_json(path, approval)
+    matching_events = [
+        event for event in catalog.events()
+        if event.get("event_type") == "RUN_APPROVAL_REGISTERED"
+        and event.get("object_refs", {}).get("approval_id") == approval_id
+        and event.get("object_hashes", {}).get("approval_sha256") == object_hash
+    ]
+    if len(matching_events) > 1:
+        raise GovernanceError("approval has duplicate registration events")
+    if created or not matching_events:
+        catalog.append(
+            event_type="RUN_APPROVAL_REGISTERED", actor_classification=actor,
+            object_refs={
+                "approval_id": approval_id,
+                "family_key": f"{approval['family_id']}__{approval['family_version']}",
+                "experiment_key": f"{approval['experiment_id']}__{approval['experiment_version']}",
+            },
+            object_hashes={"approval_sha256": object_hash,
+                           "approval_payload_sha256": approval_hash},
+            reason=str(approval["approval_reason"]), resulting_state="APPROVAL_UNUSED",
+            timestamp=timestamp,
+        )
+    return path, object_hash
+
+
 def authorize_split_access(
     *, catalog: GovernanceCatalog, family: Mapping[str, Any], prereg: Mapping[str, Any],
     preregistration_sha256: str, dataset_split_version: str, split: str,
@@ -489,6 +543,7 @@ class GovernedExecutionGateway:
         runner_registry: Mapping[str, Callable[[Path, Mapping[str, Any], Mapping[str, Any]], Mapping[str, Any]]],
         actor: str = "LOCAL_RESEARCH_OPERATOR", clock: Callable[[], str] = utc_now,
         attempt_id_factory: Callable[[], str] | None = None,
+        approval_path: str | Path | None = None,
     ):
         self.catalog = catalog
         self.attempts_root = Path(attempts_root)
@@ -496,10 +551,11 @@ class GovernedExecutionGateway:
         self.actor = actor
         self.clock = clock
         self.attempt_id_factory = attempt_id_factory or (lambda: uuid.uuid4().hex)
+        self.approval_path = None if approval_path is None else Path(approval_path)
 
     def run(
         self, *, family_path: str | Path, preregistration_path: str | Path,
-        input_declaration_path: str | Path,
+        input_declaration_path: str | Path, approval_path: str | Path | None = None,
     ) -> Path:
         family = json.loads(Path(family_path).read_text(encoding="utf-8"))
         prereg = json.loads(Path(preregistration_path).read_text(encoding="utf-8"))
@@ -513,8 +569,21 @@ class GovernedExecutionGateway:
         prereg_hash = sha256_file(preregistration_path)
         family_hash = sha256_file(family_path)
         input_hash = canonical_hash(inputs)
+        resolved_approval_path = Path(approval_path) if approval_path is not None else self.approval_path
+        if resolved_approval_path is None:
+            raise GovernanceError("explicit registered user approval is required")
+        approval = json.loads(resolved_approval_path.read_text(encoding="utf-8"))
+        approval_file_hash = sha256_file(resolved_approval_path)
         experiment_key = f"{prereg['experiment_id']}__{prereg['version']}"
         family_key = f"{family['family_id']}__{family['version']}"
+        registered_family = [
+            event for event in self.catalog.events()
+            if event.get("event_type") == "FAMILY_REGISTERED"
+            and event.get("object_refs", {}).get("family_key") == family_key
+            and event.get("object_hashes", {}).get("family_sha256") == family_hash
+        ]
+        if len(registered_family) != 1:
+            raise GovernanceError("execution requires one exact registered family version")
         locked = [
             event for event in self.catalog.events()
             if event.get("event_type") == "PREREGISTRATION_LOCKED"
@@ -532,6 +601,28 @@ class GovernedExecutionGateway:
         entry_point = prereg["code_entry_point"]
         if entry_point not in self.runner_registry:
             raise GovernanceError("declared runner entry point is not registered")
+        try:
+            validate_run_approval(
+                approval, family=family, preregistration=prereg, inputs=inputs,
+                preregistration_sha256=prereg_hash,
+                input_declaration_sha256=input_hash, evaluated_at=self.clock(),
+            )
+        except ApprovalError as exc:
+            raise GovernanceError(str(exc)) from exc
+        registered_approvals = [
+            event for event in self.catalog.events()
+            if event.get("event_type") == "RUN_APPROVAL_REGISTERED"
+            and event.get("object_refs", {}).get("approval_id") == approval["approval_id"]
+            and event.get("object_hashes", {}).get("approval_sha256") == approval_file_hash
+        ]
+        if len(registered_approvals) != 1:
+            raise GovernanceError("execution requires one exact registered user approval")
+        if any(
+            event.get("event_type") == "RUN_STARTED"
+            and event.get("object_refs", {}).get("approval_id") == approval["approval_id"]
+            for event in self.catalog.events()
+        ):
+            raise GovernanceError("run approval has already been consumed")
 
         attempt_id = self.attempt_id_factory()
         temp_dir = self.attempts_root / f".tmp-{attempt_id}"
@@ -545,9 +636,11 @@ class GovernedExecutionGateway:
         authorization = self.catalog.append(
             event_type="RUN_AUTHORIZED", actor_classification=self.actor,
             object_refs={"run_attempt_id": attempt_id, "experiment_key": experiment_key,
-                         "family_key": family_key, "split": prereg["split_requested"]},
+                         "family_key": family_key, "split": prereg["split_requested"],
+                         "approval_id": approval["approval_id"]},
             object_hashes={"preregistration_sha256": prereg_hash,
-                           "family_sha256": family_hash, "input_declaration_sha256": input_hash},
+                           "family_sha256": family_hash, "input_declaration_sha256": input_hash,
+                           "approval_sha256": approval_file_hash},
             reason="governed preflight passed", resulting_state="AUTHORIZED",
             timestamp=self.clock(),
         )
@@ -560,11 +653,12 @@ class GovernedExecutionGateway:
                 resulting_state="TEST_ACCESS_CONSUMED", timestamp=self.clock(),
             )
         started_at = self.clock()
-        self.catalog.append(
+        start_event = self.catalog.append(
             event_type="RUN_STARTED", actor_classification=self.actor,
             object_refs={"run_attempt_id": attempt_id, "experiment_key": experiment_key,
-                         "family_key": family_key},
-            object_hashes={"authorization_event_sha256": authorization["event_sha256"]},
+                         "family_key": family_key, "approval_id": approval["approval_id"]},
+            object_hashes={"authorization_event_sha256": authorization["event_sha256"],
+                           "approval_sha256": approval_file_hash},
             reason="declared runner started", resulting_state="RUNNING", timestamp=started_at,
         )
 
@@ -644,6 +738,15 @@ class GovernedExecutionGateway:
             "dataset_capability_gate_passed": capability_pass,
             "promotion_eligible": promotion_eligible,
             "catalog_event_reference": {"event_id": final_event_id, "event_type": final_event_type},
+            "run_approval_reference": {
+                "approval_id": approval["approval_id"],
+                "approval_sha256": approval_file_hash,
+                "approval_payload_sha256": approval["approval_payload_sha256"],
+                "consumed_by_event_id": start_event["event_id"],
+                "consumed_by_event_sha256": start_event["event_sha256"],
+            },
+            "maximum_compute_budget": dict(approval["maximum_compute_budget"]),
+            "compute_budget_enforcement": dict(approval["compute_budget_enforcement"]),
         }
         _require_presence(manifest, ROOT_MANIFEST_REQUIRED, "root manifest")
         manifest_path = temp_dir / "root_manifest.json"

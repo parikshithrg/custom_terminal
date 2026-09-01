@@ -1,0 +1,31 @@
+{
+  "schema_version": "canary_execution_anchor_v1",
+  "attempt_id": "governance-canary-attempt-126aeed-001",
+  "source_commit": "126aeedde9c50cce5f1896cdb656c89d678e30d6",
+  "family": {"id": "governance_canary", "version": "v1"},
+  "experiment": {"id": "governance_canary_execution_v1", "version": "v1"},
+  "approval": {
+    "id": "governance-canary-126aeed-20260828T075323962604Z",
+    "file_sha256": "326afafdee722925c3fafbdbe3dc6b33ee61e0f2b7aaa48f564e8b6e993378e5",
+    "payload_sha256": "e554f0c9968e9920fb2488028fa66a2627012b01eb58eb45587d9b48a557610c"
+  },
+  "hashes": {
+    "family_sha256": "ab7bd1ad7d106e08ebbd9bf54d9a109701e39e6a66229a1724b9bcb58b9117ed",
+    "preregistration_sha256": "29f5bc780cdc4fcdbce58657e65d03695ea6b2ffeef9c449cd7af22e58a0f1a0",
+    "input_declaration_sha256": "944de49313bdd5db57f047b7bf9f8cd36eacd7e3c8c1bbe0940647951fb06488",
+    "fixture_sha256": "b139b0d653a6171a2e07ae30ae770bdde5779d0d02cbc2f5fb6aee74bb1a15d2",
+    "execution_receipt_sha256": "29d63c1fb001d1512c1b0c3148f441b8aa7ef0a24a671b9671bb075c014562f8",
+    "synthetic_result_sha256": "27f57d6d0fe30591f8b5d0fb3a9f1a309e3914545ba31cb1b660a9bee6560775",
+    "synthetic_rows_sha256": "f0a3bd05e9829f9b1d6eb80b616d2606e8925961771475160287a671e5c72d25",
+    "root_manifest_sha256": "bdb3ee240ce2939dff6c523c305d5affdf9cd6b4deaf1fd0995efe675a9c40fb"
+  },
+  "event_chain_terminal_sha256": "9ddfaedf8fb0dd113417645b127c7dd3c021c478ae89b1648cf5e5d3caa5a0bb",
+  "canonical_record_terminal_sha256": "63f9fa81774313355033841960a34c2f1ef6ef5c1ffdc69c34c0a652e6fa0c6e",
+  "completion_status": "COMPLETED",
+  "lifecycle_result": "INFRASTRUCTURE_CANARY_COMPLETED",
+  "promotion_eligible": false,
+  "validation_decision": "PASS",
+  "audit_timestamp": "2026-08-28T08:04:31.9566907Z",
+  "runtime_evidence_location": "artifacts/governed_research/run_attempts/governance-canary-attempt-126aeed-001",
+  "runtime_retention": "Raw runtime evidence is stored locally under ignored artifact storage and is not committed to Git."
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "canary_execution_anchor_contract_v1",
+  "anchor_schema_value": "canary_execution_anchor_v1",
+  "required_fields": [
+    "schema_version",
+    "attempt_id",
+    "source_commit",
+    "family",
+    "experiment",
+    "approval",
+    "hashes",
+    "event_chain_terminal_sha256",
+    "canonical_record_terminal_sha256",
+    "completion_status",
+    "lifecycle_result",
+    "promotion_eligible",
+    "validation_decision",
+    "audit_timestamp",
+    "runtime_evidence_location",
+    "runtime_retention"
+  ],
+  "rules": [
+    "The anchor contains hashes and sanitized identities only; raw runtime evidence remains ignored local data.",
+    "promotion_eligible must be false.",
+    "lifecycle_result must be INFRASTRUCTURE_CANARY_COMPLETED.",
+    "The governance event terminal hash anchors the hash-chained governance catalog.",
+    "The canonical record terminal hash anchors the exact sole append-only record; canonical catalog chaining is not implemented.",
+    "Any changed runtime byte produces a failed independent audit rather than an overwritten anchor."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "delta_version": "research_r6_entrypoint_delta_v1",
+  "base_inventory": "research_r5_entrypoint_delta_v1",
+  "base_commit": "126aeed",
+  "added_callable_entrypoints": [
+    {
+      "path": "src/research_contracts/canary_audit.py",
+      "callable": "audit_canary_evidence",
+      "classification": "CANONICAL_GOVERNED",
+      "execution_capability": "READ_ONLY_AUDIT",
+      "canonical_condition": "Validates an already completed governed canary from immutable bytes; it cannot register, authorize, execute, import, or mutate evidence."
+    }
+  ],
+  "removed_entrypoints": [],
+  "effective_totals": {
+    "CANONICAL_GOVERNED": 3,
+    "DEVELOPMENT_ONLY_NONCANONICAL": 65,
+    "DEPRECATED": 2,
+    "UNSAFE_BYPASS": 0,
+    "TOTAL": 70
+  }
+}

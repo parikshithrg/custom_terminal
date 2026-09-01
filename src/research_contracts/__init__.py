@@ -71,6 +71,13 @@ from .canary import (
     validate_canary_output_directory,
 )
 from .divergence import DIVERGENCE_VERSION, compare_legacy_logs, write_divergence_report
+from .canary_audit import (
+    ANCHOR_SCHEMA_VERSION,
+    CANARY_AUDIT_VERSION,
+    CanaryAuditError,
+    audit_canary_evidence,
+    validate_anchor,
+)
 
 __all__ = [
     "CapabilityStatus", "CorporateActionEvidence", "EvidenceStage",
@@ -98,4 +105,6 @@ __all__ = [
     "CANARY_PROMOTION_ELIGIBLE", "CANARY_RUNNER_ENTRY_POINT", "CANARY_RUNNER_VERSION",
     "can_promote_lifecycle_result", "review_canary_proposal",
     "run_governance_canary", "validate_canary_output_directory",
+    "ANCHOR_SCHEMA_VERSION", "CANARY_AUDIT_VERSION", "CanaryAuditError",
+    "audit_canary_evidence", "validate_anchor",
 ]

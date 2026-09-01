@@ -228,16 +228,18 @@ $env:PYTHONPATH = (Resolve-Path -LiteralPath 'Data test').Path
 .\.venv\Scripts\python.exe -m pytest "Data test\tests" -q
 ```
 
-Latest verified results:
+Latest verified results through Research R.6B:
 
-- Root suite: **200 passed**.
+- Root suite: **213 passed**.
 - Separate `Data test` suite: **289 passed**.
-- R.4 focused suite: **25 passed**.
-- R.5 focused proposal suite: **9 passed**.
-- Combined R.3–R.5 governance suite: **64 passed**.
-- All **56** versioned JSON specification/evidence/fixture/proposal objects validated successfully.
+- R.6 focused audit suite: **13 passed**.
+- Combined R.3–R.6 governance suite: **77 passed**.
+- All **61** versioned JSON specification/evidence/fixture/proposal objects
+  parsed successfully; anchor-contract and inventory invariants passed.
 
-Research R.5 prepares a quarantined, deterministic infrastructure-canary
-proposal under `proposals/first_governed_run`. It does not register, authorize
-or execute the canary. A separate future response tied to finalized hashes is
-required before any governed execution.
+Research R.6B independently audits the completed, bounded synthetic governance
+canary without rerunning it. The tracked anchor preserves only sanitized hashes
+and identifiers; raw runtime evidence remains in ignored local artifact storage.
+The result is permanently nonpromotable and proves governance mechanics only,
+not historical data trust or investment validity. See
+`reports/RESEARCH_R6_REPORT.md` and `reports/GOVERNED_CANARY_AUDIT.md`.

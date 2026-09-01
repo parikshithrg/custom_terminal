@@ -78,6 +78,18 @@ from .canary_audit import (
     audit_canary_evidence,
     validate_anchor,
 )
+from .pre_research_review import (
+    APPROVED_REVIEW_STATE,
+    PRE_RESEARCH_POLICY_VERSION,
+    PRE_RESEARCH_RECORD_VERSION,
+    REPORT_GATE_PASS_STATE,
+    PreResearchReviewError,
+    compute_research_state_fingerprint,
+    is_market_research_family,
+    research_state_inventory,
+    validate_review_record,
+    validate_review_record_path,
+)
 
 __all__ = [
     "CapabilityStatus", "CorporateActionEvidence", "EvidenceStage",
@@ -107,4 +119,9 @@ __all__ = [
     "run_governance_canary", "validate_canary_output_directory",
     "ANCHOR_SCHEMA_VERSION", "CANARY_AUDIT_VERSION", "CanaryAuditError",
     "audit_canary_evidence", "validate_anchor",
+    "APPROVED_REVIEW_STATE", "PRE_RESEARCH_POLICY_VERSION",
+    "PRE_RESEARCH_RECORD_VERSION", "REPORT_GATE_PASS_STATE",
+    "PreResearchReviewError", "compute_research_state_fingerprint",
+    "is_market_research_family", "research_state_inventory",
+    "validate_review_record", "validate_review_record_path",
 ]

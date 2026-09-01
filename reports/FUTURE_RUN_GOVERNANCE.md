@@ -10,6 +10,10 @@ laboratory outputs remain possible for development, but must be marked
 ## Required flow
 
 ```text
+current status PDF + exact research-state fingerprint
+→ explicit post-generation owner review
+→ report-gate validation (not execution authorization)
+→
 versioned family registration
 → complete preregistration
 → canonical hash and lock event
@@ -25,6 +29,21 @@ versioned family registration
 → completion/failure/abort catalog event
 → canonical-import validation
 ```
+
+## Permanent owner-review boundary
+
+Beginning with R.7, every market-research family must reference the exact
+current status PDF, PDF hash, source hash, research-state fingerprint, approved
+review record and covered scope before its preregistration can lock. The same
+binding is checked again during preflight and by the gateway before any attempt
+directory or runner invocation. Missing, pending, stale, superseded, changed,
+predated, generic, synthetic or scope-mismatched review evidence fails closed.
+
+Owner approval of the PDF permits only preparation of a separate research
+proposal. It is not a run approval. The existing exact one-use approval,
+dataset, split and gateway requirements remain mandatory. The completed
+infrastructure canary is historical non-market evidence and is not
+retroactively invalidated.
 
 ## Family registry
 

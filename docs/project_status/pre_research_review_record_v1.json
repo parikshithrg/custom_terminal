@@ -1,0 +1,29 @@
+{
+  "schema_version": "pre_research_review_record_v1",
+  "record_path": "docs/project_status/pre_research_review_record_v1.json",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v1",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v1.pdf",
+  "pdf_sha256": "38afdf49612f42797268ed7e02579377629662b36e6c780590f07084be7023e5",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v1.md",
+  "source_sha256": "527130720e40995e748f4f3dd45f46f8f131617ab8c92393fa9a59098c68c634",
+  "summarized_source_commit": "bc3f11f",
+  "research_state_fingerprint": "f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70",
+  "generation_timestamp": "2026-09-01T03:37:51.6128893Z",
+  "rendered_page_count": 15,
+  "visual_verification_result": "PASS_15_PAGES_NO_MATERIAL_DEFECTS",
+  "covered_future_scope": [
+    "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING"
+  ],
+  "review_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "report_current": true,
+  "superseded_by": null,
+  "reviewer_approval": {
+    "approved_at": null,
+    "approval_kind": null,
+    "approval_statement": null,
+    "reviewer_classification": null
+  },
+  "research_execution_status": "BLOCKED_PENDING_OWNER_REVIEW_AND_SEPARATE_RUN_APPROVAL",
+  "statement": "PDF review is pending. This record does not authorize data acquisition, market analysis, simulation, backtesting, preregistration lock, run approval, gateway execution, scoring, or trading."
+}

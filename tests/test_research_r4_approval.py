@@ -425,8 +425,14 @@ def test_entrypoint_inventory_accounts_for_every_non_test_python_main():
                 continue
             if "__main__" in path.read_text(encoding="utf-8"):
                 discovered.add(relative)
-    assert discovered == set(inventory["executable_paths"])
-    assert set(inventory["executable_paths"].values()) <= {
+    accounted = dict(inventory["executable_paths"])
+    r7_delta_path = ROOT / "specs" / "research_r7_entrypoint_delta_v1.json"
+    if r7_delta_path.is_file():
+        r7_delta = json.loads(r7_delta_path.read_text(encoding="utf-8"))
+        for entry in r7_delta["added_executable_entrypoints"]:
+            accounted[entry["path"]] = entry["classification"]
+    assert discovered == set(accounted)
+    assert set(accounted.values()) <= {
         "CANONICAL_GOVERNED", "DEVELOPMENT_ONLY_NONCANONICAL", "DEPRECATED", "UNSAFE_BYPASS"
     }
     assert inventory["unsafe_bypass_count"] == 0

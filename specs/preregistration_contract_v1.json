@@ -16,4 +16,15 @@
   ],
   "lock_rule": "Canonicalize and hash before RUN_AUTHORIZED. A locked ID/version cannot change.",
   "limited_data_rule": "Only EXPLORATORY plus limited_data_non_promotable=true may proceed with failed or unknown required capabilities."
+  ,
+  "market_research_additional_fields": [
+    "proposed_research_scope",
+    "pre_research_review.report_id",
+    "pre_research_review.report_version",
+    "pre_research_review.pdf_sha256",
+    "pre_research_review.research_state_fingerprint",
+    "pre_research_review.review_record_path",
+    "pre_research_review.covered_scope"
+  ],
+  "pre_research_review_rule": "Every market-research family must bind an exact current owner-reviewed status PDF before preregistration lock. Infrastructure canaries and synthetic governance tests are exempt and remain permanently nonpromotable."
 }

@@ -27,6 +27,12 @@ It governs future work only. Existing runs remain exploratory legacy evidence.
 
 ## New stage rules
 
+Before any stage begins, the owner must review the current status PDF and the
+exact proposed scope must be covered by its approved review record. The PDF
+gate is a prerequisite to preregistration, not scientific evidence and not an
+execution approval. Any research-relevant state change invalidates the report
+binding and requires regeneration and review.
+
 | Stage | Minimum placebo/permutation draws | Tail resolution | Promotion |
 |---|---:|---:|---|
 | Exploratory/development | 99 | 0.01 | none |

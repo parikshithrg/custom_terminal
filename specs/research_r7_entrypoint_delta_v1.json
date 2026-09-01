@@ -1,0 +1,21 @@
+{
+  "delta_version": "research_r7_entrypoint_delta_v1",
+  "base_inventory": "research_r6_entrypoint_delta_v1",
+  "base_commit": "bc3f11f",
+  "added_executable_entrypoints": [
+    {
+      "path": "tools/generate_project_status_pdf.py",
+      "classification": "CANONICAL_GOVERNED",
+      "execution_capability": "DOCUMENT_GENERATION_ONLY",
+      "canonical_condition": "Renders the tracked owner-review source into a PDF; it performs no market analysis, data acquisition, simulation, backtest, approval, gateway call, or catalog mutation."
+    }
+  ],
+  "removed_entrypoints": [],
+  "effective_totals": {
+    "CANONICAL_GOVERNED": 4,
+    "DEVELOPMENT_ONLY_NONCANONICAL": 65,
+    "DEPRECATED": 2,
+    "UNSAFE_BYPASS": 0,
+    "TOTAL": 71
+  }
+}

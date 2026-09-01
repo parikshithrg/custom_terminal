@@ -1,0 +1,22 @@
+{
+  "contract_version": "pre_research_review_record_v1",
+  "initial_state": "REPORT_GENERATED_PENDING_REVIEW",
+  "approved_state": "REPORT_REVIEWED_APPROVED",
+  "required_bindings": [
+    "report identity and version",
+    "PDF path and SHA-256",
+    "source path and SHA-256",
+    "summarized source commit",
+    "research-state fingerprint",
+    "generation timestamp",
+    "rendered-page count and visual-verification result",
+    "covered future scope",
+    "post-generation explicit reviewer approval"
+  ],
+  "rules": [
+    "Pending, changed, stale, superseded, missing, mismatched, generic, synthetic, and predated approvals fail closed.",
+    "The preregistration must bind the exact report, PDF hash, fingerprint, record path, and covered scope.",
+    "PDF review satisfies only the pre-research report gate and is never a run approval.",
+    "A separate exact one-use governed run approval remains mandatory."
+  ]
+}

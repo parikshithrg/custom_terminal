@@ -486,5 +486,9 @@ Only then fit a calibration, publish an `AssetEvidenceSnapshot`, and connect one
 - **Confidence:** transparent evidence assessment first; calibrated numeric confidence only after reliability history exists.
 - **AI:** read-only over approved artifacts plus draft-spec creation.
 - **Options:** deferred until instrument, expiry, surface, execution, and cost contracts exist.
+- **Pre-research owner review:** every future market analysis requires a
+  current rendered status PDF, deterministic research-state fingerprint and
+  explicit post-generation owner review before preregistration; this report
+  gate never replaces the separate run-specific approval.
 
 Open choices should now be limited to instrument identifier sourcing, raw-data retention/licensing, the exact first publishable edge candidate, and mandate-specific decision policy—not the broad architecture.

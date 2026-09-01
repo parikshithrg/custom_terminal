@@ -19,10 +19,15 @@
     "memory_mb": "DECLARED_NOT_ENFORCED"
   },
   "authorized_gateway_action": "GovernedExecutionGateway.run",
+  "market_research_additional_fields": [
+    "pre_research_review",
+    "report_gate_status"
+  ],
   "rules": [
     "Approval is explicit and exact; silence is never approval.",
     "Family, experiment, preregistration, inputs, dataset snapshots, split and action must match.",
     "Expired, altered, reused, incomplete and unregistered approvals fail closed.",
+    "A market-research approval must repeat the exact preregistration review binding and record RESEARCH_EXECUTION_PERMITTED_BY_REPORT_GATE.",
     "Preflight does not consume approval.",
     "Approval to execute is not approval to interpret, promote or deploy."
   ]

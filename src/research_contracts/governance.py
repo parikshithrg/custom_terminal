@@ -22,6 +22,10 @@ from typing import Any, Callable, Mapping
 
 from .approval import APPROVAL_REQUIRED, ApprovalError, approval_payload_hash, validate_run_approval
 from .legacy_ledger import canonical_json_bytes, sha256_bytes, sha256_file
+from .pre_research_review import (
+    is_market_research_family,
+    validate_review_record_path,
+)
 
 
 GOVERNANCE_VERSION = "future_research_governance_v1"
@@ -389,10 +393,23 @@ def register_family(
 def lock_preregistration(
     prereg: Mapping[str, Any], *, family_path: str | Path, prereg_root: str | Path,
     catalog: GovernanceCatalog, actor: str, timestamp: str | None = None,
+    repository_root: str | Path | None = None,
+    review_record_path: str | Path | None = None,
 ) -> tuple[Path, str]:
     validate_preregistration(prereg)
     family = json.loads(Path(family_path).read_text(encoding="utf-8"))
     validate_family(family)
+    if is_market_research_family(family):
+        if repository_root is None or review_record_path is None:
+            raise GovernanceError("market research requires an approved current status PDF")
+        try:
+            validate_review_record_path(
+                review_record_path,
+                preregistration=prereg,
+                repository_root=repository_root,
+            )
+        except ValueError as exc:
+            raise GovernanceError(str(exc)) from exc
     if (prereg["family_id"], prereg["family_version"]) != (family["family_id"], family["version"]):
         raise GovernanceError("preregistration family does not match registry")
     if prereg["split_requested"] not in family["allowed_research_splits"]:
@@ -552,6 +569,8 @@ class GovernedExecutionGateway:
         actor: str = "LOCAL_RESEARCH_OPERATOR", clock: Callable[[], str] = utc_now,
         attempt_id_factory: Callable[[], str] | None = None,
         approval_path: str | Path | None = None,
+        repository_root: str | Path | None = None,
+        review_record_path: str | Path | None = None,
     ):
         self.catalog = catalog
         self.attempts_root = Path(attempts_root)
@@ -560,6 +579,10 @@ class GovernedExecutionGateway:
         self.clock = clock
         self.attempt_id_factory = attempt_id_factory or (lambda: uuid.uuid4().hex)
         self.approval_path = None if approval_path is None else Path(approval_path)
+        self.repository_root = None if repository_root is None else Path(repository_root)
+        self.review_record_path = (
+            None if review_record_path is None else Path(review_record_path)
+        )
 
     def run(
         self, *, family_path: str | Path, preregistration_path: str | Path,
@@ -570,6 +593,17 @@ class GovernedExecutionGateway:
         inputs = json.loads(Path(input_declaration_path).read_text(encoding="utf-8"))
         validate_family(family)
         validate_preregistration(prereg)
+        if is_market_research_family(family):
+            if self.repository_root is None or self.review_record_path is None:
+                raise GovernanceError("market research requires an approved current status PDF")
+            try:
+                validate_review_record_path(
+                    self.review_record_path,
+                    preregistration=prereg,
+                    repository_root=self.repository_root,
+                )
+            except ValueError as exc:
+                raise GovernanceError(str(exc)) from exc
         if (prereg["family_id"], prereg["family_version"]) != (family["family_id"], family["version"]):
             raise GovernanceError("family/preregistration mismatch")
         if prereg["split_requested"] not in family["allowed_research_splits"]:

@@ -3,6 +3,10 @@
 ## Required operator flow
 
 ```text
+generate current status PDF and fingerprint
+  -> owner reviews exact PDF and covered scope
+  -> validate report gate
+  ->
 register family
   -> lock preregistration
   -> declare and hash inputs
@@ -19,6 +23,12 @@ These are separate decisions. Preflight diagnoses; approval authorizes one
 execution; the gateway executes; the importer verifies evidence; scientific
 review interprets it; a later promotion process decides whether it can affect
 an actionable system. None implies the next.
+
+For market research, the first three steps are mandatory. The preregistration
+and later run approval both bind the reviewed PDF and research-state
+fingerprint. Report review never substitutes for the separate exact one-use run
+approval. Infrastructure-only canaries and synthetic governance fixtures are
+exempt because they contain no market analysis and remain nonpromotable.
 
 ## Side-effect-free preview
 
@@ -49,6 +59,9 @@ a non-authorizing template:
 It returns blocking issues and exit code 2; it still creates no listed path.
 The valid synthetic preview path is exercised twice, byte-equivalently and
 without side effects, by `test_preflight_is_deterministic_side_effect_free_and_does_not_consume_approval`.
+
+Market-research previews additionally require `--repository-root` and
+`--review-record`; omitting either produces a fail-closed report-gate issue.
 
 ## Approval issuance
 

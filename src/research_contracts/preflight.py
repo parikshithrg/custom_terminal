@@ -17,6 +17,7 @@ from .governance import (
     validate_preregistration,
 )
 from .legacy_ledger import sha256_file
+from .pre_research_review import is_market_research_family, validate_review_record_path
 
 
 PREFLIGHT_VERSION = "governed_run_preflight_v1"
@@ -34,7 +35,8 @@ def preview_governed_run(
     input_declaration_path: str | Path, approval_path: str | Path | None,
     catalog: GovernanceCatalog, attempts_root: str | Path,
     canonical_catalog_path: str | Path, registered_runner_entry_points: Iterable[str],
-    evaluated_at: str,
+    evaluated_at: str, repository_root: str | Path | None = None,
+    review_record_path: str | Path | None = None,
 ) -> dict[str, Any]:
     """Return a preview; never writes an event, artifact, or approval state."""
     issues: list[dict[str, str]] = []
@@ -63,6 +65,22 @@ def preview_governed_run(
         issues.append({"category": "GOVERNANCE_CATALOG_INVALID", "message": str(exc)})
 
     if family is not None and prereg is not None:
+        if is_market_research_family(family):
+            try:
+                if repository_root is None or review_record_path is None:
+                    raise GovernanceError(
+                        "market research requires an approved current status PDF"
+                    )
+                validate_review_record_path(
+                    review_record_path,
+                    preregistration=prereg,
+                    repository_root=repository_root,
+                )
+            except Exception as exc:
+                issues.append({
+                    "category": "PRE_RESEARCH_REVIEW_INVALID",
+                    "message": str(exc),
+                })
         if (prereg["family_id"], prereg["family_version"]) != (
             family["family_id"], family["version"]
         ):

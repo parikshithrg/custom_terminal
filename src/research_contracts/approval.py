@@ -94,6 +94,12 @@ def validate_run_approval(
         raise ApprovalError("approval preregistration hash mismatch")
     if approval["input_declaration_sha256"] != input_declaration_sha256:
         raise ApprovalError("approval input-declaration hash mismatch")
+    review_reference = preregistration.get("pre_research_review")
+    if review_reference is not None:
+        if approval.get("pre_research_review") != review_reference:
+            raise ApprovalError("approval pre-research review binding mismatch")
+        if approval.get("report_gate_status") != "RESEARCH_EXECUTION_PERMITTED_BY_REPORT_GATE":
+            raise ApprovalError("approval lacks the satisfied pre-research report gate")
     if approval["allowed_dataset_snapshots"] != dataset_snapshot_refs(inputs):
         raise ApprovalError("approval dataset snapshot binding mismatch")
     permitted = approval["permitted_split_access"]

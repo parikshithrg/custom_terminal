@@ -228,14 +228,12 @@ $env:PYTHONPATH = (Resolve-Path -LiteralPath 'Data test').Path
 .\.venv\Scripts\python.exe -m pytest "Data test\tests" -q
 ```
 
-Latest verified results through Research R.6B:
+Latest verified results through Research R.7:
 
-- Root suite: **213 passed**.
+- Root suite: **230 passed**.
 - Separate `Data test` suite: **289 passed**.
-- R.6 focused audit suite: **13 passed**.
-- Combined R.3–R.6 governance suite: **77 passed**.
-- All **61** versioned JSON specification/evidence/fixture/proposal objects
-  parsed successfully; anchor-contract and inventory invariants passed.
+- R.7 focused report-gate/PDF suite: **17 passed**.
+- Combined R.3-R.7 governance suite: **94 passed**.
 
 Research R.6B independently audits the completed, bounded synthetic governance
 canary without rerunning it. The tracked anchor preserves only sanitized hashes
@@ -243,3 +241,9 @@ and identifiers; raw runtime evidence remains in ignored local artifact storage.
 The result is permanently nonpromotable and proves governance mechanics only,
 not historical data trust or investment validity. See
 `reports/RESEARCH_R6_REPORT.md` and `reports/GOVERNED_CANARY_AUDIT.md`.
+
+Research R.7 adds a permanent owner-review gate before any future market
+research preregistration can lock or execute. The first 15-page status PDF is
+`output/pdf/market_system_status_pre_research_review_v1.pdf`; its review record
+is `REPORT_GENERATED_PENDING_REVIEW`. Reading or approving that PDF does not
+replace the separate run-specific governance approval.

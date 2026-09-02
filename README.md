@@ -263,3 +263,15 @@ bounded non-empirical component-integration plan and preparation of a read-only
 F&O database trust-audit plan. Market analysis, score calculation, backtesting,
 recommendations, broker actions, trading, external acquisition, and execution
 of the F&O audit remain blocked.
+
+Research R.8 contains planning documents only. It separates market stress,
+positioning, management tone, breadth, derivatives positioning and macro
+conditions rather than manufacturing one sentiment formula; it keeps stock
+evidence categories separate rather than defining an opaque weighted score;
+and it specifies a staged, cancellable, read-only F&O database audit without
+opening or querying the database. See `reports/RESEARCH_R8_PLAN.md`.
+
+R.8 verification: **8 focused planning tests**, **240 root tests**, and **289
+separate Data-test tests** passed. The reviewed PDF and its 230-file
+research-state fingerprint remain unchanged. The planning package decision is
+`R8_PLANNING_PACKAGE_READY_FOR_OWNER_REVIEW`.

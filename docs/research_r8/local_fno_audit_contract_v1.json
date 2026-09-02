@@ -1,0 +1,99 @@
+{
+  "contract_version": "local_fno_audit_contract_v1",
+  "status": "PLAN_ONLY_NOT_EXECUTED",
+  "database_locator": {
+    "configuration_file": "Data test/config/config.toml",
+    "configuration_key": "paths.fno_db",
+    "resolved_path_must_not_be_committed": true
+  },
+  "connection_policy": {
+    "sqlite_uri_mode": "ro",
+    "pragma_query_only": true,
+    "immutable_hint_allowed_only_after_file_stability_check": true,
+    "single_connection_default": true,
+    "busy_timeout_ms": 5000,
+    "progress_handler_required_for_scans": true,
+    "query_timeout_seconds": 30,
+    "memory_limit_mib": 512,
+    "temporary_store": "MEMORY_OR_TASK_SCOPED_OUTSIDE_DATABASE",
+    "cancellation_required": true
+  },
+  "prohibited_sql_or_operations": [
+    "ATTACH",
+    "DETACH",
+    "CREATE",
+    "DROP",
+    "ALTER",
+    "INSERT",
+    "UPDATE",
+    "DELETE",
+    "REPLACE",
+    "VACUUM",
+    "REINDEX",
+    "ANALYZE",
+    "PRAGMA_WRITABLE_SCHEMA",
+    "LOAD_EXTENSION",
+    "FULL_TABLE_EXPORT",
+    "NETWORK_ACQUISITION"
+  ],
+  "ordered_audit_stages": [
+    {
+      "stage": 1,
+      "name": "locate_and_freeze_identity",
+      "checks": ["existence", "file_size", "modification_time_metadata", "scalable_content_identity", "backup_and_retention_state"],
+      "scan_class": "FILESYSTEM_METADATA_ONLY"
+    },
+    {
+      "stage": 2,
+      "name": "sqlite_safety_and_catalog",
+      "checks": ["header", "quick_check_then_integrity_check_if_bounded", "schema", "tables", "columns", "indexes", "query_plans"],
+      "scan_class": "BOUNDED_METADATA"
+    },
+    {
+      "stage": 3,
+      "name": "provenance_inventory",
+      "checks": ["source_report_types", "raw_object_locations", "hashes", "retrieval_timestamps", "parser_versions", "corrections", "rights"],
+      "scan_class": "MANIFEST_ONLY"
+    },
+    {
+      "stage": 4,
+      "name": "bounded_coverage_samples",
+      "checks": ["date_bounds_by_table", "bounded_session_counts", "instrument_types", "symbols", "expiries", "strikes", "classification_transitions"],
+      "scan_class": "INDEX_SUPPORTED_OR_ABORT"
+    },
+    {
+      "stage": 5,
+      "name": "bounded_integrity_samples",
+      "checks": ["duplicate_keys", "OHLC_consistency", "negative_values", "option_type", "strike", "expiry_order", "stale_rows", "truncated_sessions"],
+      "scan_class": "PARTITIONED_BOUNDED"
+    },
+    {
+      "stage": 6,
+      "name": "point_in_time_and_reconciliation_design",
+      "checks": ["available_at", "publication_time", "revised_vintages", "final_history_risk", "bounded_raw_file_comparison"],
+      "scan_class": "NO_EXTERNAL_ACQUISITION"
+    }
+  ],
+  "abort_conditions": [
+    "READ_ONLY_CONNECTION_CANNOT_BE_PROVED",
+    "DATABASE_CHANGES_DURING_AUDIT",
+    "QUERY_PLAN_REQUIRES_UNBOUNDED_SCAN_BEFORE_APPROVAL",
+    "TIMEOUT_OR_CANCELLATION_UNAVAILABLE",
+    "TEMPORARY_WRITE_TARGETS_DATABASE_DIRECTORY",
+    "RIGHTS_OR_RETENTION_CLEARLY_PROHIBIT_AUDIT",
+    "SCHEMA_CANNOT_BE_SAFELY_IDENTIFIED",
+    "CREDENTIAL_OR_TOKEN_EXPOSURE_RISK"
+  ],
+  "content_identity_plan": {
+    "small_file_method": "SHA256_WHOLE_FILE",
+    "large_file_method": "SIZE_PLUS_SQLITE_HEADER_PLUS_ORDERED_CHUNK_SHA256_MERKLE_MANIFEST",
+    "full_sha256_optional_later": true,
+    "modification_time_is_identity": false
+  },
+  "coverage_dimensions": ["trade_dates", "sessions", "symbols", "stock_vs_index", "futures_vs_options", "expiries", "strikes", "contract_transitions", "schema_transitions"],
+  "integrity_dimensions": ["natural_key_duplicates", "price_volume_turnover_oi_contract_ranges", "high_low_close_settlement", "expiry_order", "option_type", "strike", "identifiers", "symbol_and_contract_continuity", "repeated_rows", "session_truncation", "discontinuities"],
+  "readiness_decisions": ["FNO_AUDIT_PLAN_READY", "FNO_PROVENANCE_INCOMPLETE", "FNO_RETENTION_RIGHTS_UNRESOLVED", "FNO_AUDIT_UNSAFE", "FNO_DATABASE_NOT_LOCATED"],
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "research_r8_component_inventory_v1",
+  "classification": "PLANNING_ONLY_NONEXECUTABLE",
+  "reference_repository": {
+    "name": "version2.0",
+    "url": "https://github.com/parikshithrg/version2.0.git",
+    "branch": "master",
+    "reviewed_commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+    "remote_commit_rechecked_at": "2026-09-02T06:34:44.3686602Z",
+    "remote_commit_changed": false,
+    "relationship": "EXTERNAL_UNTRUSTED_REFERENCE_ONLY"
+  },
+  "authoritative_repository": "custom_terminal",
+  "components": [
+    {
+      "component_id": "market_sentiment_component_v0_plan",
+      "initial_classification": "EXPLORATORY_NONACTIONABLE",
+      "candidate_concepts": [
+        "market_stress",
+        "investor_positioning",
+        "corporate_management_tone",
+        "market_breadth",
+        "derivatives_positioning",
+        "macro_conditions"
+      ],
+      "reference_inputs": [
+        "earnings_transcript_sentiment",
+        "macro_context",
+        "ownership",
+        "insider_disclosures",
+        "market_regime_inputs",
+        "existing_composite_score"
+      ],
+      "execution_authorized": false,
+      "score_computation_authorized": false,
+      "recommendations_authorized": false,
+      "readiness_decisions": [
+        "SENTIMENT_COMPONENT_READY_FOR_DATA_QUALIFICATION",
+        "SENTIMENT_DEFINITION_AMBIGUOUS",
+        "SENTIMENT_INPUTS_NOT_POINT_IN_TIME",
+        "SENTIMENT_COMPONENT_BLOCKED"
+      ]
+    },
+    {
+      "component_id": "stock_score_component_v0_plan",
+      "initial_classification": "EXPLORATORY_NONACTIONABLE",
+      "candidate_categories": [
+        "data_quality",
+        "liquidity",
+        "market_behavior",
+        "corporate_disclosure",
+        "ownership",
+        "sentiment",
+        "derivatives_context"
+      ],
+      "reference_inputs": [
+        "price_and_liquidity",
+        "ownership",
+        "insider_disclosures",
+        "earnings_transcripts",
+        "credit_ratings",
+        "delivery_statistics",
+        "options_data",
+        "corporate_filings"
+      ],
+      "execution_authorized": false,
+      "ranking_authorized": false,
+      "score_computation_authorized": false,
+      "recommendations_authorized": false,
+      "readiness_decisions": [
+        "STOCK_SCORE_COMPONENT_READY_FOR_DATA_QUALIFICATION",
+        "STOCK_SCORE_DEFINITION_AMBIGUOUS",
+        "STOCK_SCORE_INPUTS_NOT_POINT_IN_TIME",
+        "STOCK_SCORE_COMPONENT_BLOCKED"
+      ]
+    },
+    {
+      "component_id": "local_fno_database_audit_v0_plan",
+      "classification": "READ_ONLY_TRUST_AUDIT_PLAN",
+      "database_locator": "Data test/config/config.toml::paths.fno_db",
+      "machine_path_committed": false,
+      "audit_executed": false,
+      "empirical_research_authorized": false,
+      "readiness_decisions": [
+        "FNO_AUDIT_PLAN_READY",
+        "FNO_PROVENANCE_INCOMPLETE",
+        "FNO_RETENTION_RIGHTS_UNRESOLVED",
+        "FNO_AUDIT_UNSAFE",
+        "FNO_DATABASE_NOT_LOCATED"
+      ]
+    }
+  ],
+  "prohibited_actions": [
+    "EXECUTE_VERSION2_CODE",
+    "QUERY_MARKET_OUTCOMES",
+    "COMPUTE_SCORE",
+    "RANK_SECURITIES",
+    "BACKTEST",
+    "SIMULATE",
+    "ACQUIRE_EXTERNAL_DATA",
+    "GENERATE_RECOMMENDATION",
+    "BROKER_ACTION",
+    "TRADE"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "record_version": "research_r8_owner_decision_record_v1",
+  "recorded_at": "2026-09-02T06:15:22.3487202Z",
+  "source_review_record": "docs/project_status/pre_research_review_record_v1.json",
+  "approved_scope": "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING",
+  "approved_planning_tasks": [
+    "MARKET_SENTIMENT_COMPONENT_PLAN",
+    "STOCK_SCORE_COMPONENT_PLAN",
+    "LOCAL_FNO_DATABASE_TRUST_AUDIT_PLAN"
+  ],
+  "owner_priorities": ["market_sentiment_score", "stock_scores"],
+  "fno_permission": "READ_ONLY_AUDIT_PLAN_PERMITTED_AUDIT_NOT_EXECUTED",
+  "repository_boundary": "VERSION2_REMAINS_SEPARATE_REFERENCE_ONLY",
+  "deferred_decisions": [
+    {"question": 13, "topic": "display-only current-data providers"},
+    {"question": 14, "topic": "legacy passed-validation label renaming"}
+  ],
+  "execution_authorized": false,
+  "separate_preregistration_required": true,
+  "separate_exact_run_approval_required": true,
+  "prohibited_actions": [
+    "DATA_ACQUISITION",
+    "MARKET_ANALYSIS",
+    "SIMULATION",
+    "BACKTESTING",
+    "STRATEGY_EVALUATION",
+    "SCORE_CALCULATION",
+    "RECOMMENDATIONS",
+    "BROKER_ACTIONS",
+    "TRADING",
+    "FNO_AUDIT_EXECUTION"
+  ]
+}

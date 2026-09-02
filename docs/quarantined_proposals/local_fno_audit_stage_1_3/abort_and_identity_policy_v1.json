@@ -1,0 +1,42 @@
+{
+  "schema_version": "local_fno_audit_abort_and_identity_policy_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "identity_checkpoints": [
+    "IMMEDIATELY_BEFORE_OPEN",
+    "AFTER_STAGE_1",
+    "AFTER_STAGE_2",
+    "AFTER_STAGE_3",
+    "IMMEDIATELY_BEFORE_EVIDENCE_FINALIZATION"
+  ],
+  "identity_fields": [
+    "approved locator file SHA-256 and configuration key",
+    "sanitized database handle",
+    "regular-file status",
+    "file size",
+    "modification time as metadata",
+    "first 100 SQLite header bytes hash",
+    "ordered chunk offsets and hashes",
+    "Merkle root over ordered sampled chunks",
+    "source-directory WAL, journal and sidecar inventory"
+  ],
+  "abort_on_change": [
+    "database path or file identity",
+    "file size",
+    "modification time",
+    "SQLite header identity",
+    "sampled chunk identity",
+    "unexpected WAL, journal, shared-memory or other sidecar appearance",
+    "any source mutation",
+    "approval mismatch, expiry or reuse",
+    "statement outside allowlist",
+    "resource or output declaration breach",
+    "network request attempt",
+    "resolved-path disclosure risk"
+  ],
+  "on_abort": "CLOSE_READ_ONLY_CONNECTION_IF_OPEN; WRITE_SANITIZED_TERMINAL_EVENT; DO_NOT_REPAIR, RETRY, STABILIZE_OR_EXPAND_SCOPE"
+}

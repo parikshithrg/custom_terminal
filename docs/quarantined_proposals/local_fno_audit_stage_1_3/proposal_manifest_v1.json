@@ -1,0 +1,24 @@
+{
+  "schema_version": "local_fno_audit_proposal_manifest_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "canonicalization": "ordered file rows encoded as compact UTF-8 JSON with sorted keys",
+  "package_content_sha256": "9eff345b453d1f0f0072c927f2a7dcb5b60cd98af6d9c415703fa0e504016acd",
+  "objects": [
+    {"path": "abort_and_identity_policy_v1.json", "sha256": "e178ea58215abf9740b2048709b84e57587bc417e1a2c6261ca28d701b5e07c9", "byte_size": 1442},
+    {"path": "approval_template_v1.json", "sha256": "70e3c6bacd2e732f07ccddd208ca6ad9afc2e98b33e43d038340a397319f5071", "byte_size": 995},
+    {"path": "audit_scope_v1.json", "sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d", "byte_size": 3493},
+    {"path": "expected_outputs_v1.json", "sha256": "b1d05cfba2de056156d07c4f93512372af9eafd6f2de7d682404050e742f0d8a", "byte_size": 1258},
+    {"path": "implementation_proposal_v1.json", "sha256": "00c0ed05a5cfcc08073fdeb000ac3e61c860a1ceaa2841ec612e6467b322cde5", "byte_size": 2583},
+    {"path": "operator_checklist_v1.json", "sha256": "5037580762e943f2507d424aed967823be77c9748b97294a3629c5d67c487327", "byte_size": 1530},
+    {"path": "resource_envelope_v1.json", "sha256": "1aec4f54a6e3cf88cfa1ecde91b5b8c1579886d38a5282e5131471b2694436b5", "byte_size": 2278}
+  ],
+  "approval_template_is_usable": false,
+  "registered_or_sealed": false,
+  "execution_entry_point_exists": false,
+  "statement": "This manifest binds a quarantined review proposal. It is not an audit approval or execution manifest."
+}

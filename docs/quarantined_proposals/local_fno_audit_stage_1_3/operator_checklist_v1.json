@@ -1,0 +1,33 @@
+{
+  "schema_version": "local_fno_audit_operator_checklist_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "before_execution": [
+    "confirm repository is clean at the proposal commit",
+    "confirm reviewed PDF and research-state fingerprint are current",
+    "confirm a distinct exact one-use data-audit approval exists and is unexpired",
+    "confirm the approval binds every proposal object hash and only stages 1, 2 and 3",
+    "confirm no market-research approval is being substituted",
+    "confirm implementation and synthetic safety tests have been separately reviewed",
+    "confirm output and temporary directories are outside the database directory",
+    "confirm network access is disabled"
+  ],
+  "during_execution": [
+    "consume approval before first database connection",
+    "freeze identity before opening SQLite",
+    "record every attempted statement before execution",
+    "recheck identity and sidecars at every checkpoint",
+    "abort on any mismatch, deadline, write attempt or scope expansion"
+  ],
+  "after_execution": [
+    "close the connection",
+    "perform final identity and sidecar check",
+    "write terminal status and content hashes",
+    "verify outputs contain no resolved paths, credentials or market observations",
+    "do not infer historical completeness, point-in-time fitness or research eligibility"
+  ]
+}

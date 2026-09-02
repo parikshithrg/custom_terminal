@@ -1,0 +1,40 @@
+{
+  "schema_version": "local_fno_audit_expected_outputs_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "permitted_outputs": [
+    "sanitized_file_identity_manifest.json",
+    "sqlite_read_only_safety_result.json",
+    "schema_catalog_inventory.json",
+    "later_stage_query_plan_inventory.json",
+    "local_provenance_inventory.json",
+    "rights_retention_evidence_matrix.json",
+    "audit_event_log.jsonl",
+    "root_audit_manifest.json",
+    "completion_report.md"
+  ],
+  "prohibited_output_categories": [
+    "market observations or row samples",
+    "research features or labels",
+    "market statistics or returns",
+    "signals, ranks or scores",
+    "strategy or hypothesis results",
+    "recommendations",
+    "resolved personal paths",
+    "credentials or tokens",
+    "full-table exports"
+  ],
+  "required_capability_decisions": [
+    "file_identity",
+    "sqlite_structural_validity",
+    "source_provenance",
+    "retention_rights",
+    "historical_completeness_NOT_EVALUATED",
+    "point_in_time_fitness_NOT_EVALUATED",
+    "research_eligibility_NOT_APPROVED"
+  ]
+}

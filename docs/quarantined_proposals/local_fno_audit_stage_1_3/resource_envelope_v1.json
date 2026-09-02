@@ -1,0 +1,54 @@
+{
+  "schema_version": "local_fno_audit_resource_envelope_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "stage_1_identity": {
+    "method": "SIZE_MTIME_SQLITE_HEADER_PLUS_ORDERED_64_CHUNK_MERKLE_V1",
+    "chunk_size_bytes": 4194304,
+    "chunk_count": 64,
+    "chunk_selection": "first, last and 62 deterministic evenly spaced offsets derived only from file size",
+    "expected_bytes_read_once": 268435556,
+    "identity_checkpoint_count_maximum": 5,
+    "maximum_identity_bytes_across_all_checkpoints": 1342177780,
+    "expected_elapsed_seconds_once": 120,
+    "expected_peak_memory_mib": 32,
+    "identity_strength": "BOUNDED_SAMPLED_CHANGE_DETECTION_NOT_A_FULL_FILE_HASH"
+  },
+  "stage_2": {
+    "maximum_attempted_statements": 50,
+    "per_statement_timeout_seconds": 5,
+    "quick_check_included": false,
+    "integrity_check_included": false,
+    "market_table_reads_included": false,
+    "expected_elapsed_seconds": 300,
+    "expected_peak_memory_mib": 128
+  },
+  "stage_3": {
+    "maximum_files_inspected": 500,
+    "maximum_bytes_read": 536870912,
+    "expected_elapsed_seconds": 300,
+    "expected_peak_memory_mib": 128
+  },
+  "whole_audit": {
+    "declared_wall_time_seconds": 1200,
+    "declared_memory_limit_mib": 512,
+    "declared_output_limit_bytes": 26214400,
+    "declared_temporary_storage_limit_bytes": 134217728,
+    "temporary_storage_location": "TASK_SCOPED_DIRECTORY_OUTSIDE_DATABASE_AND_SOURCE_DIRECTORIES",
+    "full_database_sha256_included": false,
+    "full_table_export_included": false
+  },
+  "enforcement_truth": {
+    "write_prohibition": "MUST_BE_ENFORCED_BY_MODE_RO, QUERY_ONLY, STATEMENT_ALLOWLIST_AND_DENYLIST",
+    "statement_cancellation": "MUST_BE_ENFORCED_BY_SQLITE_PROGRESS_HANDLER_AND_MONOTONIC_DEADLINE",
+    "approval_one_use": "MUST_BE_ENFORCED_ATOMICALLY_BEFORE_CONNECTION",
+    "total_wall_time": "DECLARED_NOT_OS_ENFORCED",
+    "memory_limit": "DECLARED_NOT_PROCESS_ENFORCED",
+    "output_limit": "MUST_BE_ENFORCED_BY_ARTIFACT_WRITER_BYTE_COUNTER",
+    "temporary_storage_limit": "DECLARED_AND_MUST_BE_CHECKED_BY_WRITER; NOT_OS_QUOTA_ENFORCED"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "local_fno_audit_scope_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_classification": "QUARANTINED_DATA_AUDIT_PROPOSAL",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "baseline_commit": "b4768207a9a322f7ba676c0d3c47262b37afe44c",
+  "reviewed_pdf_sha256": "cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c",
+  "approved_planning_scope": "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING",
+  "database_locator": {
+    "configuration_file": "Data test/config/config.toml",
+    "configuration_file_sha256": "cb68999f6e0dd16796d017f1104cc630483ada44ed1959143b99c9e9d11d29a2",
+    "configuration_key": "paths.fno_db",
+    "resolved_path_must_not_be_committed": true,
+    "binding_method": "APPROVAL_BINDS_LOCATOR_AND_IDENTITY_POLICY; STAGE_1_RESOLVES_ONCE_AND_FREEZES_DATABASE_IDENTITY_BEFORE_SQLITE_OPEN"
+  },
+  "requested_stages": [
+    {
+      "stage": 1,
+      "name": "LOCATE_AND_FREEZE_IDENTITY",
+      "permitted_operations": [
+        "resolve approved configuration key",
+        "verify existence and regular-file status",
+        "record size and modification time as metadata",
+        "read the first 100 SQLite header bytes",
+        "calculate the approved bounded ordered-chunk identity",
+        "inspect already-local backup and retention metadata"
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "SQLITE_READ_ONLY_SAFETY_AND_CATALOG",
+      "permitted_operations": [
+        "open exactly one SQLite URI connection with mode=ro",
+        "enable and verify PRAGMA query_only=ON",
+        "set a five-second busy timeout",
+        "install a progress handler and per-statement deadline",
+        "read sqlite_schema and bounded pragma table/view/column/index metadata",
+        "inspect EXPLAIN QUERY PLAN for proposed later queries without running them",
+        "check before and after that no source-directory sidecar appeared"
+      ],
+      "quick_check_authorized": false,
+      "full_integrity_check_authorized": false
+    },
+    {
+      "stage": 3,
+      "name": "LOCAL_PROVENANCE_AND_RETENTION_INVENTORY",
+      "permitted_operations": [
+        "inspect bounded local manifests, configuration, documentation and ingestion scripts",
+        "inventory retained raw-file names and existing metadata without opening market observations",
+        "record source report types, hashes, acquisition timestamps and methods when already documented",
+        "record parser versions, schema transitions, correction handling, vintages, backups and rights evidence"
+      ]
+    }
+  ],
+  "explicitly_excluded_stages": [4, 5, 6],
+  "prohibited_operations": [
+    "database writes or repairs",
+    "writable pragmas",
+    "ATTACH or DETACH",
+    "CREATE, DROP or ALTER",
+    "INSERT, UPDATE, DELETE or REPLACE",
+    "VACUUM, REINDEX or ANALYZE",
+    "extension loading",
+    "quick_check or integrity_check",
+    "coverage or market-row integrity queries",
+    "full-table scan or export",
+    "external network access or data acquisition",
+    "market outcomes, returns, features, signals, ranks or scores",
+    "strategy, hypothesis, sentiment or participant-positioning analysis",
+    "recommendations, broker actions or trading"
+  ],
+  "scope_expansion_rule": "DISCOVERY_NEVER_EXPANDS_SCOPE; ABORT_AND_REQUEST_A_NEW_PROPOSAL",
+  "distinct_authorization_type": "LOCAL_DATA_AUDIT_STAGE_1_3_APPROVAL_V1"
+}

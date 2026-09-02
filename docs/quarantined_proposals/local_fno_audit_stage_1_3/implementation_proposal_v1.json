@@ -1,0 +1,51 @@
+{
+  "schema_version": "local_fno_audit_implementation_proposal_v1",
+  "proposal_id": "local_fno_audit_stage_1_3_v1",
+  "proposal_only": true,
+  "audit_execution_authorized": false,
+  "market_research_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "future_entry_point": {
+    "module": "market_intel.foundation.local_fno_audit",
+    "callable": "execute_approved_stage_1_3_audit",
+    "implementation_status": "NOT_IMPLEMENTED",
+    "default_mode": "PROPOSAL_DRY_RUN",
+    "direct_cli_execution_permitted": false
+  },
+  "preconditions_before_any_database_open": [
+    "load an exact LOCAL_DATA_AUDIT_STAGE_1_3_APPROVAL_V1 object",
+    "reject missing, expired, changed, previously consumed or wrong-purpose approval",
+    "verify approval binds proposal ID, proposal manifest hash, locator file hash, requested stages, resource envelope and expected outputs",
+    "resolve the approved locator once without committing the path",
+    "capture size, modification time, header and bounded chunk identity",
+    "freeze the captured identity in the attempt manifest",
+    "revalidate the frozen identity immediately before SQLite open"
+  ],
+  "runtime_requirements": [
+    "single SQLite mode=ro connection",
+    "PRAGMA query_only=ON verified before catalog statements",
+    "statement allowlist and write-token rejection before execution",
+    "progress-handler cancellation deadline",
+    "every attempted statement recorded before execution with literals sanitized",
+    "temporary output outside the database and source directories",
+    "path aliases in committed output, never resolved personal paths",
+    "identity rechecked after every stage and immediately before finalization",
+    "immutable content-addressed audit artifacts and root manifest",
+    "terminal state COMPLETED, ABORTED or FAILED",
+    "one-use approval consumed atomically before the first database connection"
+  ],
+  "statement_allowlist": [
+    "PRAGMA query_only",
+    "PRAGMA busy_timeout",
+    "SELECT from sqlite_schema",
+    "bounded read-only table_info/index_list/index_info pragma equivalents",
+    "EXPLAIN QUERY PLAN without executing the explained query"
+  ],
+  "statement_denylist": [
+    "ATTACH", "DETACH", "CREATE", "DROP", "ALTER", "INSERT", "UPDATE",
+    "DELETE", "REPLACE", "VACUUM", "REINDEX", "ANALYZE", "LOAD_EXTENSION",
+    "PRAGMA writable_schema", "PRAGMA journal_mode", "PRAGMA wal_checkpoint"
+  ],
+  "implementation_gate": "NO_EXECUTION_UNTIL_IMPLEMENTATION_EXISTS, OFFLINE SAFETY TESTS PASS, AND AN EXACT SEPARATE APPROVAL IS COMMITTED"
+}

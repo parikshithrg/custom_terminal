@@ -275,3 +275,16 @@ R.8 verification: **8 focused planning tests**, **240 root tests**, and **289
 separate Data-test tests** passed. The reviewed PDF and its 230-file
 research-state fingerprint remain unchanged. The planning package decision is
 `R8_PLANNING_PACKAGE_READY_FOR_OWNER_REVIEW`.
+
+Research R.9A prepares the quarantined, unusable-by-default proposal
+`local_fno_audit_stage_1_3_v1`. It requests a future distinct one-use approval
+for file identity, SQLite read-only catalog inspection, and local provenance
+inventory only. It excludes database connection during proposal preparation,
+market-row queries, `quick_check`, full integrity checks, external acquisition,
+scores, backtests, recommendations, broker actions, and trading. See
+`reports/RESEARCH_R9A_REPORT.md`.
+
+R.9A verification: **12 focused proposal tests**, **252 root tests**, and **289
+separate Data-test tests** passed. The reviewed PDF and 230-file research-state
+fingerprint remain unchanged. No audit implementation, usable approval,
+database connection, SQL execution, or observation output was created.

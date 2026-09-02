@@ -113,7 +113,7 @@ def test_owner_record_approves_planning_only_and_keeps_empirical_gates():
             "FNO_AUDIT_EXECUTION"} <= set(decision["prohibited_actions"])
 
 
-def test_reviewed_pdf_and_planning_scope_remain_exact_and_current():
+def test_reviewed_pdf_remains_exact_but_is_stale_after_r9b():
     record = json.loads(
         (ROOT / "docs" / "project_status" / "pre_research_review_record_v1.json")
         .read_text(encoding="utf-8")
@@ -122,16 +122,17 @@ def test_reviewed_pdf_and_planning_scope_remain_exact_and_current():
         "cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c"
     )
     assert sha256_file(ROOT / record["pdf_path"]) == record["pdf_sha256"]
-    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
+    assert record["review_status"] == "REPORT_STALE"
     assert record["covered_future_scope"] == ["BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING"]
-    assert "SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED" in record[
-        "research_execution_status"
-    ]
+    assert record["research_execution_status"] == (
+        "REVIEWED_PDF_STALE_AFTER_AUDITOR_IMPLEMENTATION"
+    )
     policy = json.loads(
         (ROOT / "specs" / "pre_research_review_policy_v1.json").read_text(encoding="utf-8")
     )
     state = compute_research_state_fingerprint(ROOT, policy)
-    assert state["sha256"] == record["research_state_fingerprint"]
+    assert state["sha256"] != record["research_state_fingerprint"]
+    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
     paths = {item["path"] for item in state["inventory"]}
     assert not any(path.startswith("docs/research_r8/") for path in paths)
     assert not any("RESEARCH_R8" in path for path in paths)

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sqlite3
-import tomllib
 from pathlib import Path
 
 from research_contracts.legacy_ledger import canonical_json_bytes, sha256_file
@@ -33,7 +33,7 @@ def test_proposal_inspection_never_connects_or_executes_sql(monkeypatch):
     assert len(_objects()) == 8
     assert calls == []
     assert not any(path.suffix == ".py" for path in PACKAGE.rglob("*"))
-    assert not (ROOT / "src" / "market_intel" / "foundation" / "local_fno_audit.py").exists()
+    assert (ROOT / "src" / "market_intel" / "foundation" / "local_fno_audit.py").is_file()
 
 
 def test_every_proposal_object_is_explicitly_non_authorizing():
@@ -46,17 +46,17 @@ def test_every_proposal_object_is_explicitly_non_authorizing():
 
 
 def test_resolved_personal_database_path_is_not_committed_in_package_or_reports():
-    config = tomllib.loads(
-        (ROOT / "Data test" / "config" / "config.toml").read_text(encoding="utf-8")
-    )
-    resolved_literal = config["paths"]["fno_db"]
     inspected = list(PACKAGE.glob("*")) + [
         ROOT / "reports" / "RESEARCH_R9A_REPORT.md",
         ROOT / "reports" / "FNO_STAGE_1_3_AUTHORIZATION_PROPOSAL.md",
         ROOT / "reports" / "FNO_AUDIT_SAFETY_REVIEW.md",
         ROOT / "reports" / "FNO_AUDIT_EXPECTED_OUTPUTS.md",
     ]
-    assert all(resolved_literal not in path.read_text(encoding="utf-8") for path in inspected)
+    drive_path = re.compile(r"[A-Za-z]:[\\/](?:Users|Documents|Data)[\\/]")
+    assert all(not drive_path.search(path.read_text(encoding="utf-8")) for path in inspected)
+    assert _load("audit_scope_v1.json")["database_locator"][
+        "configuration_file_sha256"
+    ] == "cb68999f6e0dd16796d017f1104cc630483ada44ed1959143b99c9e9d11d29a2"
 
 
 def test_approval_template_is_distinct_exact_empty_and_unusable():
@@ -166,7 +166,7 @@ def test_proposal_manifest_binds_exact_package_bytes():
     assert manifest["execution_entry_point_exists"] is False
 
 
-def test_reviewed_pdf_and_research_fingerprint_remain_current():
+def test_reviewed_pdf_bytes_remain_exact_and_fingerprint_is_stale_after_r9b():
     record = json.loads(
         (ROOT / "docs" / "project_status" / "pre_research_review_record_v1.json")
         .read_text(encoding="utf-8")
@@ -178,11 +178,12 @@ def test_reviewed_pdf_and_research_fingerprint_remain_current():
         (ROOT / "specs" / "pre_research_review_policy_v1.json").read_text(encoding="utf-8")
     )
     current = compute_research_state_fingerprint(ROOT, policy)
-    assert current["sha256"] == record["research_state_fingerprint"]
+    assert current["sha256"] != record["research_state_fingerprint"]
+    assert current["sha256"] == record["staleness"]["current_research_state_fingerprint"]
     paths = {item["path"] for item in current["inventory"]}
     assert not any(path.startswith("docs/quarantined_proposals/") for path in paths)
-    assert record["research_execution_status"].endswith(
-        "SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED"
+    assert record["research_execution_status"] == (
+        "REVIEWED_PDF_STALE_AFTER_AUDITOR_IMPLEMENTATION"
     )
 
 

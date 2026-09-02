@@ -8,13 +8,16 @@ Streamlit laboratory surfaces; subprocess references; notebooks; and shell,
 batch and PowerShell launchers. No notebook or repository shell/batch/PowerShell
 research launcher and no production subprocess research launcher was found.
 
-The versioned inventory contains 68 entries:
+The inventory was reconciled through R.9B and contains 71 entries. R.6 added
+the read-only canary evidence auditor and one governed canary path; R.9B added
+one synthetic-only local-data audit entry point.
 
 | Classification | Count |
 |---|---:|
-| `CANONICAL_GOVERNED` | 2 |
-| `DEVELOPMENT_ONLY_NONCANONICAL` | 64 |
+| `CANONICAL_GOVERNED` | 3 |
+| `DEVELOPMENT_ONLY_NONCANONICAL` | 65 |
 | `DEPRECATED` | 2 |
+| `SYNTHETIC_ONLY_NONPROMOTABLE` | 1 |
 | `UNSAFE_BYPASS` | 0 |
 
 `scripts/preview_governed_run.py` is counted as governed administration but
@@ -29,6 +32,7 @@ path.
 | `scripts/preview_governed_run.py::main` | Paths, catalog and explicit evaluation time → stdout JSON only | Reads governance state; never executes/imports | `CANONICAL_GOVERNED`; side-effect-free preview |
 | `src/market_intel/application/momentum_cli.py::main` | Former Slice A command | No; exits before parsing or loading | `DEPRECATED`; fail-closed warning |
 | `tools/build_golden_fixture.py::main` | Former external-data fixture builder → committed fixture | No | `DEPRECATED`; raises before access/write |
+| `src/market_intel/foundation/local_fno_audit.py::execute_approved_stage_1_3_audit` | Caller-supplied marked synthetic SQLite fixture → bounded noncanonical audit bundle | Separate exact local-data-audit approval; production locator rejected | `SYNTHETIC_ONLY_NONPROMOTABLE`; R.9B contract prevents real database access |
 
 ## Direct callable surfaces
 

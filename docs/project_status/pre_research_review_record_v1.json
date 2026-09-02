@@ -32,9 +32,16 @@
   "covered_future_scope": [
     "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING"
   ],
-  "review_status": "REPORT_REVIEWED_APPROVED",
-  "report_current": true,
+  "review_status": "REPORT_STALE",
+  "report_current": false,
   "superseded_by": null,
+  "staleness": {
+    "detected_at": "2026-09-02T13:04:42.1220626+05:30",
+    "reason": "R.9B added the research-relevant synthetic-only local F&O auditor implementation.",
+    "reviewed_research_state_fingerprint": "40a18b14949d13b383dd549fe1d37c86881a61acf2d98bac9db2e6770d820e01",
+    "current_research_state_fingerprint": "9382d3d7511dba094a1321294d4f6575cf2cd857a0e43c6d0c024df55202ec31",
+    "status": "REVIEWED_PDF_STALE_AFTER_AUDITOR_IMPLEMENTATION"
+  },
   "reviewer_approval": {
     "approved_at": "2026-09-02T06:15:22.3487202Z",
     "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
@@ -70,6 +77,6 @@
     "LOCAL_FNO_DATABASE_TRUST_AUDIT_PERMITTED",
     "NO_MARKET_ANALYSIS_SIMULATION_OR_BACKTEST_AUTHORIZED_BY_THIS REVIEW"
   ],
-  "research_execution_status": "REPORT_GATE_APPROVED_FOR_COVERED_PLANNING_ONLY_SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED",
+  "research_execution_status": "REVIEWED_PDF_STALE_AFTER_AUDITOR_IMPLEMENTATION",
   "statement": "The owner approved the exact v1 PDF for BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING after generation. The review also permits a bounded component-integration planning task and a read-only local F&O trust audit plan. It does not authorize data acquisition, empirical market analysis, simulation, backtesting, preregistration lock, run approval, gateway execution, scoring, recommendations, broker actions, or trading."
 }

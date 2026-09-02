@@ -257,7 +257,7 @@ def test_completed_infrastructure_canary_is_not_retroactively_invalidated():
     assert anchor["promotion_eligible"] is False
 
 
-def test_current_review_record_hashes_and_fingerprint_are_exact_and_approved_for_planning_only():
+def test_review_record_bytes_are_exact_and_now_stale_after_r9b():
     record_path = ROOT / "docs" / "project_status" / "pre_research_review_record_v1.json"
     record = json.loads(record_path.read_text(encoding="utf-8"))
     policy = json.loads(
@@ -266,9 +266,11 @@ def test_current_review_record_hashes_and_fingerprint_are_exact_and_approved_for
     assert sha256_file(ROOT / record["pdf_path"]) == record["pdf_sha256"]
     assert sha256_file(ROOT / record["source_path"]) == record["source_sha256"]
     state = compute_research_state_fingerprint(ROOT, policy)
-    assert state["sha256"] == record["research_state_fingerprint"]
-    assert state["file_count"] >= 229
-    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
+    assert state["sha256"] != record["research_state_fingerprint"]
+    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert state["file_count"] == 231
+    assert record["review_status"] == "REPORT_STALE"
+    assert record["report_current"] is False
     approval = record["reviewer_approval"]
     assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
     assert approval["reviewer_classification"] == "PROJECT_OWNER"
@@ -282,9 +284,9 @@ def test_current_review_record_hashes_and_fingerprint_are_exact_and_approved_for
     assert responses[14]["decision"] == "DEFERRED"
     assert responses[15]["decision"] == "APPROVED"
     assert "NO_TRADE_EXECUTION_THROUGH_SITE_OR_PROJECT" in record["standing_constraints"]
-    assert "SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED" in record[
-        "research_execution_status"
-    ]
+    assert record["research_execution_status"] == (
+        "REVIEWED_PDF_STALE_AFTER_AUDITOR_IMPLEMENTATION"
+    )
 
 
 def test_current_status_pdf_structure_and_required_text():

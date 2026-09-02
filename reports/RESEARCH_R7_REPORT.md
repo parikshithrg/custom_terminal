@@ -1,5 +1,20 @@
 # Research R.7 - Mandatory Pre-Research Review Gate and Status PDF
 
+## Two-repository amendment
+
+The status report was amended after a static audit of the exact current
+`version2.0` remote state: `master` commit
+`f9a6eaec2cab1dd9e85d284e48b9863cae0b1298`, tree
+`ad3c21fb2244f0acd7680bd0bdc4958d2516b16f`. The custom authority baseline is
+`main` commit `1a082bdad1667410c95931c4482971c133de918a`.
+
+The amended architecture keeps version2.0 as the product/current-display and
+exploratory system, while custom_terminal remains the canonical governance,
+trust, evidence, approval and lifecycle authority. Every version2.0 analysis
+or backtest path is `UNGOVERNED_NONCANONICAL`; its live broker method is
+`LIVE_ACTION_CAPABLE` and blocked. No merge, copy, analysis, backtest, data
+acquisition or integration occurred.
+
 ## Baseline and scope
 
 R.7 began from clean, synchronized `main` commit `bc3f11f`. It reviewed the
@@ -40,9 +55,9 @@ preserved.
 
 ## Research-state fingerprint
 
-`f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70`
+`40a18b14949d13b383dd549fe1d37c86881a61acf2d98bac9db2e6770d820e01`
 
-The canonical inventory contains 229 research-relevant files. It includes
+The canonical inventory contains 230 research-relevant files. It includes
 research/simulation source, contracts/specifications, data-trust declarations,
 proposals, policies, evidence anchors, architecture and scientific-scope
 reports. It excludes the PDF/source/review mechanics, this completion report,
@@ -55,44 +70,52 @@ included substantive change stale the report.
 - Source: `docs/project_status/market_system_status_pre_research_review_v1.md`.
 - PDF: `output/pdf/market_system_status_pre_research_review_v1.pdf`.
 - PDF SHA-256:
-  `38afdf49612f42797268ed7e02579377629662b36e6c780590f07084be7023e5`.
+  `cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c`.
 - Source SHA-256:
-  `527130720e40995e748f4f3dd45f46f8f131617ab8c92393fa9a59098c68c634`.
-- Pages: 15 A4 pages.
+  `19324a69c66185169e548d959a41d70002711b3cabb4a77089a6a176c5be5d18`.
+- Pages: 21 A4 pages.
 - Structural result: valid PDF 1.4, no encryption, forms or JavaScript.
 - Visual result: every rendered page inspected; no material clipping,
   overlap, accidental blank page or unreadable table.
 - Review state: `REPORT_GENERATED_PENDING_REVIEW`.
 
-The report covers project purpose, chronology, evidence/data inventory,
+The report additionally covers the two-repository responsibility matrix,
+capability classifications, every reviewed execution surface, positive
+findings, conflicts, selective integration boundaries and eight additional
+owner questions. It also covers project purpose, chronology, evidence/data inventory,
 unresolved blockers, free-source roles, next steps and stop/go gates, future
 analysis boundaries, owner decisions, timeline, hashes, glossary, limitations
 and staleness policy. It selects no investment hypothesis.
 
 ## Verification
 
-- Focused R.7 gate/PDF suite: **17 passed**.
-- Combined R.3-R.7 governance suite: **94 passed**.
-- Complete root suite: **230 passed**, with two existing
+- Focused R.7 gate/PDF suite: **19 passed**.
+- Combined R.3-R.7 governance suite: **96 passed**.
+- Complete root suite: **232 passed**, with two existing
   deprecated-runner boundary warnings.
 - Complete Data-test suite: **289 passed**, with existing SWIG
   and noncanonical-log warnings.
 - JSON parse validation: **61 tracked JSON files passed**.
-- PDF structure/text/page-count validation: **15 nonblank pages**, unencrypted,
+- PDF structure/text/page-count validation: **21 nonblank pages**, unencrypted,
   with no forms, open action or embedded names tree.
-- Full-page rendering and visual review: **15 of 15 pages passed**.
-- The research-state fingerprint revalidated at 229 files, the protected
+- Full-page rendering and visual review: **21 of 21 pages passed**.
+- The research-state fingerprint revalidated at 230 files, the protected
   momentum/canary/legacy evidence diff was empty, and Git whitespace checks
   passed.
 
 ## Current boundary and owner action
 
-The pending record has no reviewer identity, timestamp, statement or approval
-kind. Research remains blocked. The owner must read the exact PDF, request any
-changes, and explicitly answer the seven review questions. Approval may cover
-only `BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING`; it will still not authorize
-acquisition, analysis, simulation, backtesting, a run, scoring or trading.
+The 21-page PDF preserves its generation-time pending state. The owner later
+reviewed the exact PDF, answered all 15 questions, and the separate record now
+states `REPORT_REVIEWED_APPROVED`. Questions 13 and 14 remain deferred. The
+approval covers only `BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING`, a bounded
+non-empirical component-integration plan, and preparation of a read-only F&O
+trust-audit plan. It does not authorize acquisition, analysis, simulation,
+backtesting, scoring, recommendations, broker actions, trading, or a governed
+research run.
 
 ## Primary decision
 
 PRE_RESEARCH_PDF_READY_FOR_USER_REVIEW
+
+Post-generation review-record state: REPORT_REVIEWED_APPROVED_FOR_PLANNING_ONLY

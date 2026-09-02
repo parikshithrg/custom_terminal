@@ -115,6 +115,13 @@ def validate_review_record(
     if record.get("report_current") is not True or record.get("superseded_by") is not None:
         raise PreResearchReviewError("status PDF is stale or superseded")
 
+    expected_repositories = policy.get("external_repository_bindings")
+    actual_repositories = record.get("external_repository_bindings")
+    if not isinstance(expected_repositories, list) or not expected_repositories:
+        raise PreResearchReviewError("policy lacks external repository bindings")
+    if actual_repositories != expected_repositories:
+        raise PreResearchReviewError("external repository binding mismatch")
+
     root = Path(repository_root).resolve()
     pdf_path = root / str(record["pdf_path"])
     source_path = root / str(record["source_path"])
@@ -138,6 +145,7 @@ def validate_review_record(
         "pdf_sha256": record["pdf_sha256"],
         "research_state_fingerprint": record["research_state_fingerprint"],
         "review_record_path": record["record_path"],
+        "external_repository_bindings": record["external_repository_bindings"],
     }
     for field, expected in exact_bindings.items():
         if reference.get(field) != expected:

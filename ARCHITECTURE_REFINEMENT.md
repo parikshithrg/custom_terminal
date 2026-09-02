@@ -3,6 +3,20 @@
 Date: 2026-08-24  
 Status: proposed design following review of `ARCHITECTURE_AUDIT.md`
 
+## Two-repository boundary (R.7 amendment)
+
+The reviewed system spans two repositories. `version2.0` is the product-facing
+Streamlit dashboard, current-state display and exploratory-tool repository.
+`custom_terminal` is the authoritative governance, provenance, historical-data
+trust, preregistration, approval, canonical evidence and lifecycle repository.
+
+No version2.0 analysis, backtest, validation, live-scan, recommendation or
+broker output is canonical. Product components may be selectively proposed for
+integration only through published read models and the custom_terminal gates;
+the repositories are not merged by this architecture decision. Exact reviewed
+bindings and execution paths are versioned in
+`specs/cross_repository_reconciliation_v1.json`.
+
 ## Review verdict
 
 The audit's main recommendation stands: preserve the honest research kernel, stop building page-specific engines, and prove one deterministic vertical slice before expanding the product surface.

@@ -25,6 +25,7 @@
     "pre_research_review.research_state_fingerprint",
     "pre_research_review.review_record_path",
     "pre_research_review.covered_scope"
+    ,"pre_research_review.external_repository_bindings"
   ],
   "pre_research_review_rule": "Every market-research family must bind an exact current owner-reviewed status PDF before preregistration lock. Infrastructure canaries and synthetic governance tests are exempt and remain permanently nonpromotable."
 }

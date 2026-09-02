@@ -29,6 +29,24 @@
     "superseded_by",
     "reviewer_approval",
     "research_execution_status"
+    ,"external_repository_bindings"
+  ],
+  "external_repository_bindings": [
+    {
+      "repository": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "1a082bdad1667410c95931c4482971c133de918a",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL"
+    },
+    {
+      "repository": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS"
+    }
   ],
   "research_state": {
     "algorithm": "sha256_canonical_inventory_v1",

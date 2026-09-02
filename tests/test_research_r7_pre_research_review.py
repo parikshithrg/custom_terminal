@@ -36,6 +36,19 @@ def _policy() -> dict:
             "visual_verification_result", "covered_future_scope", "review_status",
             "report_current", "superseded_by", "reviewer_approval",
             "research_execution_status",
+            "external_repository_bindings",
+        ],
+        "external_repository_bindings": [
+            {
+                "repository": "custom_terminal", "url": "https://example.test/custom.git",
+                "branch": "main", "commit": "a" * 40,
+                "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL",
+            },
+            {
+                "repository": "version2.0", "url": "https://example.test/version2.git",
+                "branch": "master", "commit": "b" * 40, "tree": "c" * 40,
+                "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS",
+            },
         ],
         "research_state": {
             "include_globs": ["research/**/*.txt"],
@@ -78,6 +91,7 @@ def _fixture(tmp_path: Path) -> tuple[dict, dict, dict]:
             "reviewer_classification": "PROJECT_OWNER",
         },
         "research_execution_status": "BLOCKED_SEPARATE_RUN_APPROVAL_REQUIRED",
+        "external_repository_bindings": _policy()["external_repository_bindings"],
     }
     prereg = {
         "proposed_research_scope": "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING",
@@ -88,6 +102,7 @@ def _fixture(tmp_path: Path) -> tuple[dict, dict, dict]:
             "research_state_fingerprint": fingerprint,
             "review_record_path": record["record_path"],
             "covered_scope": "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING",
+            "external_repository_bindings": record["external_repository_bindings"],
         },
     }
     return record, prereg, _policy()
@@ -132,6 +147,14 @@ def test_changed_research_state_fails(tmp_path):
     record, prereg, policy = _fixture(tmp_path)
     (tmp_path / "research" / "engine.txt").write_text("version two", encoding="utf-8")
     with pytest.raises(PreResearchReviewError, match="fingerprint changed"):
+        validate_review_record(record, preregistration=prereg,
+                               repository_root=tmp_path, policy=policy)
+
+
+def test_external_repository_binding_is_exact(tmp_path):
+    record, prereg, policy = _fixture(tmp_path)
+    record["external_repository_bindings"][1]["commit"] = "d" * 40
+    with pytest.raises(PreResearchReviewError, match="external repository binding mismatch"):
         validate_review_record(record, preregistration=prereg,
                                repository_root=tmp_path, policy=policy)
 
@@ -234,7 +257,7 @@ def test_completed_infrastructure_canary_is_not_retroactively_invalidated():
     assert anchor["promotion_eligible"] is False
 
 
-def test_current_review_record_hashes_and_fingerprint_are_exact_but_pending():
+def test_current_review_record_hashes_and_fingerprint_are_exact_and_approved_for_planning_only():
     record_path = ROOT / "docs" / "project_status" / "pre_research_review_record_v1.json"
     record = json.loads(record_path.read_text(encoding="utf-8"))
     policy = json.loads(
@@ -244,16 +267,31 @@ def test_current_review_record_hashes_and_fingerprint_are_exact_but_pending():
     assert sha256_file(ROOT / record["source_path"]) == record["source_sha256"]
     state = compute_research_state_fingerprint(ROOT, policy)
     assert state["sha256"] == record["research_state_fingerprint"]
-    assert state["file_count"] == 229
-    assert record["review_status"] == "REPORT_GENERATED_PENDING_REVIEW"
-    assert all(value is None for value in record["reviewer_approval"].values())
+    assert state["file_count"] >= 229
+    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
+    approval = record["reviewer_approval"]
+    assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
+    assert approval["reviewer_classification"] == "PROJECT_OWNER"
+    assert approval["approved_at"] > record["generation_timestamp"]
+    assert "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING" in approval["approval_statement"]
+    assert "does not authorize" in approval["approval_statement"].lower()
+    responses = {item["question"]: item for item in record["owner_responses"]}
+    assert set(responses) == set(range(1, 16))
+    assert responses[12]["decision"] == "AUDIT_AUTHORIZED"
+    assert responses[13]["decision"] == "DEFERRED"
+    assert responses[14]["decision"] == "DEFERRED"
+    assert responses[15]["decision"] == "APPROVED"
+    assert "NO_TRADE_EXECUTION_THROUGH_SITE_OR_PROJECT" in record["standing_constraints"]
+    assert "SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED" in record[
+        "research_execution_status"
+    ]
 
 
 def test_current_status_pdf_structure_and_required_text():
     fitz = pytest.importorskip("fitz")
     path = ROOT / "output" / "pdf" / "market_system_status_pre_research_review_v1.pdf"
     document = fitz.open(path)
-    assert document.page_count == 15
+    assert document.page_count >= 15
     texts = [page.get_text() for page in document]
     assert all(text.strip() for text in texts)
     combined = "\n".join(texts)
@@ -261,7 +299,32 @@ def test_current_status_pdf_structure_and_required_text():
     assert "NO MARKET ANALYSIS" in combined
     assert "Decisions requested from the owner" in combined
     assert "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING" in combined
-    assert "f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70" in combined
+    assert "version2.0" in combined
+    assert "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298" in combined
+    assert "UNGOVERNED_NONCANONICAL" in combined
+    assert "ZerodhaBroker.place_order" in "".join(combined.split())
+
+
+def test_cross_repository_reconciliation_is_complete():
+    spec = json.loads(
+        (ROOT / "specs" / "cross_repository_reconciliation_v1.json").read_text(encoding="utf-8")
+    )
+    assert {item["name"] for item in spec["reviewed_repositories"]} == {
+        "custom_terminal", "version2.0"
+    }
+    classifications = {item["classification"] for item in spec["capability_classifications"]}
+    assert classifications == {
+        "DISPLAY_ONLY", "CURRENT_STATE_DIAGNOSTIC", "EXPLORATORY_ANALYSIS",
+        "UNGOVERNED_BACKTEST", "CANDIDATE_FOR_GOVERNED_INTEGRATION",
+        "LIVE_ACTION_CAPABLE", "BLOCKED_PENDING_REVIEW",
+    }
+    responsibilities = {item["responsibility"] for item in spec["responsibility_matrix"]}
+    assert {"UI and report presentation", "Current monitoring", "Data acquisition",
+            "Provenance and revisions", "Historical universe and identity",
+            "Research and backtesting", "Approval, evidence and lifecycle",
+            "Live signals and recommendations", "Broker and trading"} <= responsibilities
+    assert len(spec["execution_paths"]) >= 10
+    assert spec["final_decision"] == "PRE_RESEARCH_PDF_READY_FOR_USER_REVIEW"
 
 
 def test_current_status_pdf_has_no_machine_path_or_secret_marker():

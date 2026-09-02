@@ -1,0 +1,106 @@
+{
+  "specification_version": "cross_repository_reconciliation_v1",
+  "review_milestone": "R.7_AMENDMENT",
+  "remote_reference_rechecked_at": "2026-09-01T09:26:09.1399840Z",
+  "reviewed_repositories": [
+    {
+      "name": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "1a082bdad1667410c95931c4482971c133de918a",
+      "purpose": "Authoritative governance, provenance, trust, preregistration, approval, evidence, lifecycle and canonical import system",
+      "authority": "CANONICAL_RESEARCH_AUTHORITY"
+    },
+    {
+      "name": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "commit_subject": "Add 8 new data pages, sentiment scoring, options chain EOD refresh, and site-wide 2dp rounding fix",
+      "commit_timestamp": "2026-09-01T14:28:04+05:30",
+      "purpose": "Product dashboard, current displays, exploratory tools and candidate backtests",
+      "authority": "NONCANONICAL_PRODUCT_AND_EXPLORATORY_SYSTEM"
+    }
+  ],
+  "architecture_rule": "The repositories remain separate during R.7. version2.0 may supply selectively reviewed product components; custom_terminal remains the sole authority for governed research and evidence.",
+  "capability_classifications": [
+    {"capability": "Streamlit dashboard and current display pages", "classification": "DISPLAY_ONLY"},
+    {"capability": "Market regime and current monitoring", "classification": "CURRENT_STATE_DIAGNOSTIC"},
+    {"capability": "Lab analysis controls", "classification": "EXPLORATORY_ANALYSIS"},
+    {"capability": "Strategy validation, recommendation backtest and research scripts", "classification": "UNGOVERNED_BACKTEST"},
+    {"capability": "Read-only options, macro, filing and provider presentation components", "classification": "CANDIDATE_FOR_GOVERNED_INTEGRATION"},
+    {"capability": "ZerodhaBroker.place_order implementation", "classification": "LIVE_ACTION_CAPABLE"},
+    {"capability": "Recommendations, live signals, market deployment language and broker actions", "classification": "BLOCKED_PENDING_REVIEW"}
+  ],
+  "responsibility_matrix": [
+    {"responsibility": "UI and report presentation", "implementation": "version2.0 candidate components", "authority": "custom_terminal published read models", "trust": "display/exploratory", "decision": "selectively retain"},
+    {"responsibility": "Current monitoring", "implementation": "both repositories have current-data paths", "authority": "custom_terminal scope and endpoint controls", "trust": "current-only", "decision": "reconcile later"},
+    {"responsibility": "Data acquisition", "implementation": "provider adapters in both", "authority": "custom_terminal immutable acquisition contracts", "trust": "version2.0 historical sources unqualified", "decision": "adapt selectively"},
+    {"responsibility": "Provenance and revisions", "implementation": "custom_terminal", "authority": "custom_terminal", "trust": "canonical", "decision": "retain"},
+    {"responsibility": "Historical universe and identity", "implementation": "custom_terminal contracts; version2.0 current Nifty 500 list", "authority": "custom_terminal", "trust": "historical capability currently failed", "decision": "prohibit current-list substitution"},
+    {"responsibility": "Research and backtesting", "implementation": "both", "authority": "custom_terminal governed gateway", "trust": "version2.0 runs ungoverned/noncanonical", "decision": "import only after preregistration"},
+    {"responsibility": "Approval, evidence and lifecycle", "implementation": "custom_terminal", "authority": "custom_terminal", "trust": "canonical", "decision": "retain exclusively"},
+    {"responsibility": "Live signals and recommendations", "implementation": "version2.0", "authority": "none approved", "trust": "blocked", "decision": "disable pending review"},
+    {"responsibility": "Broker and trading", "implementation": "version2.0 contains simulated and Zerodha broker classes", "authority": "none approved", "trust": "live-action code exists but is not wired", "decision": "isolate/retire before integration"}
+  ],
+  "execution_paths": [
+    {"path": "main.py", "action": "configured strategy backtests and HTML reports", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "core/runner.py", "action": "strategy execution, comparison and reports", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/views/status.py", "action": "strategy validation, live signal scan and recommendation backtest", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/views/lab.py", "action": "interactive backtest", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/views/backtest.py", "action": "legacy directly runnable validation, scan, recommendation and backtest controls", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/eod_refresh_widget.py", "action": "EOD refresh, regime update and live signal snapshot", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/views/options_chain.py", "action": "options refresh and read-only display queries", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "market_gate/research/*.py", "action": "20 command-line diagnostics, reruns, sweeps and research outputs", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "run_scanner.py; run_analysis.py; market_gate/cli.py", "action": "scanner, analysis and macro diagnostics", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "fetch_universe.py; fetch_fo_history.py; fetch_sp500.py; nse_bhavcopy.py; nse_extra_sources.py; fno_ingest.py; reparse_full.py; build_features.py; build_options_features.py; build_options_universe.py; clean_data.py; audit_data.py; run_study.py", "action": "data refresh, mutation, feature build, audit and study commands", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "core/broker.py::SimulatedBroker", "action": "simulated orders", "classification": "UNGOVERNED_NONCANONICAL"},
+    {"path": "core/broker.py::ZerodhaBroker.place_order", "action": "live broker order placement and order-history lookup", "classification": "LIVE_ACTION_CAPABLE"}
+  ],
+  "positive_findings": [
+    "Shared SHOW_STRATEGY_RECOMMENDATIONS flag hides recommendation tables.",
+    "No tested strategy demonstrated a meaningful benchmark-relative edge; rejected results are preserved.",
+    "Options display queries open the SQLite database read-only and do not fabricate implied volatility.",
+    "Several pages disclose coverage, estimation and timing limitations.",
+    "Causal shifts, the Status/Lab separation and reusable UI/provider components are constructive design elements."
+  ],
+  "material_risks": [
+    "Present-day NIFTY 500 membership is used and cannot support historical population claims.",
+    "Survivorship, stable identity, corporate-action continuity and terminal outcomes are not qualified.",
+    "Direct execution controls sit outside the governed gateway; hidden live scans still compute and the recommendation flag is mutable.",
+    "Yahoo, Kite and CSV histories are not historically qualified; provenance, adjustment, corrections and revision vintages are incomplete.",
+    "The approximately 45 GB F&O database is unqualified for provenance, coverage, corrections, retention and research use.",
+    "Transcript, ownership, insider, ratings, AUM and index-reconstitution timing need point-in-time qualification.",
+    "Claims such as passed validation, point-in-time, historical universe and heldout require canonical re-evaluation.",
+    "The version2.0 Kite path persists credentials/tokens and conflicts with custom_terminal memory-only controls.",
+    "Broker substitution is currently disabled, but live order-capable code exists and must remain isolated."
+  ],
+  "selective_integration_candidates": [
+    "Streamlit design and report presentation",
+    "read-only current-data display components",
+    "current market monitoring",
+    "read-only options queries",
+    "macro and filing presentation",
+    "strategy/provider interfaces after contract review"
+  ],
+  "canonical_authority_retained": [
+    "research-family registration",
+    "preregistration and input hashes",
+    "pre-research PDF gate",
+    "split access and exact one-use run approval",
+    "immutable manifests and canonical import",
+    "evidence lifecycle and promotion decisions"
+  ],
+  "owner_questions": [
+    "Should version2.0 remain a separate product repository or become a UI package later?",
+    "Which version2.0 pages are highest-value candidates for selective integration?",
+    "Should all recommendation and live-scan computation be disabled until governed publication exists?",
+    "Should live broker code be removed, quarantined, or retained in a separately approved repository?",
+    "May the local 45 GB F&O database be retained and audited, and under what rights?",
+    "Which current-data providers may be used for display-only diagnostics?",
+    "Should legacy validation labels be renamed to ungoverned/noncanonical immediately?",
+    "Should the next approved task be a bounded component-integration plan with no empirical execution?"
+  ],
+  "final_decision": "PRE_RESEARCH_PDF_READY_FOR_USER_REVIEW"
+}

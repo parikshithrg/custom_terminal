@@ -22,6 +22,7 @@ is therefore not retroactively invalidated.
 - Explicit post-generation owner approval identifying the report and scope.
 - Exact covered scope repeated in the preregistration.
 - Current, non-superseded review status.
+- Exact reviewed branch and commit bindings for both `custom_terminal` and `version2.0`.
 - The same review binding repeated in the separate run approval.
 
 Missing, pending, changed, stale, superseded, predated, scope-mismatched,
@@ -50,5 +51,14 @@ The successful report-gate state is named
 proposal may proceed through the existing governance process. It does not
 authorize acquisition, analysis, backtesting or execution.
 
-The current v1 record remains `REPORT_GENERATED_PENDING_REVIEW`; all research
-remains blocked.
+The PDF preserves its generation-time state `REPORT_GENERATED_PENDING_REVIEW`.
+After reviewing that exact PDF, the owner record moved to
+`REPORT_REVIEWED_APPROVED` for `BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING` only.
+Empirical research and execution remain blocked pending the existing separate
+preregistration, immutable-input, and exact one-use run-approval gates.
+
+The R.7 amendment binds `custom_terminal` main commit
+`1a082bdad1667410c95931c4482971c133de918a` and `version2.0` master commit
+`f9a6eaec2cab1dd9e85d284e48b9863cae0b1298`. A missing or changed repository
+binding fails closed. Approval of the PDF still does not make any version2.0
+backtest, live scan, recommendation or broker path canonical or executable.

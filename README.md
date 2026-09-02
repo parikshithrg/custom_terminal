@@ -230,10 +230,10 @@ $env:PYTHONPATH = (Resolve-Path -LiteralPath 'Data test').Path
 
 Latest verified results through Research R.7:
 
-- Root suite: **230 passed**.
+- Root suite: **232 passed**.
 - Separate `Data test` suite: **289 passed**.
-- R.7 focused report-gate/PDF suite: **17 passed**.
-- Combined R.3-R.7 governance suite: **94 passed**.
+- R.7 focused report-gate/PDF suite: **19 passed**.
+- Combined R.3-R.7 governance suite: **96 passed**.
 
 Research R.6B independently audits the completed, bounded synthetic governance
 canary without rerunning it. The tracked anchor preserves only sanitized hashes
@@ -245,5 +245,21 @@ not historical data trust or investment validity. See
 Research R.7 adds a permanent owner-review gate before any future market
 research preregistration can lock or execute. The first 15-page status PDF is
 `output/pdf/market_system_status_pre_research_review_v1.pdf`; its review record
-is `REPORT_GENERATED_PENDING_REVIEW`. Reading or approving that PDF does not
-replace the separate run-specific governance approval.
+records the subsequent owner decision as `REPORT_REVIEWED_APPROVED`. The PDF
+itself correctly preserves its generation-time state as
+`REPORT_GENERATED_PENDING_REVIEW`. Approval covers planning only and does not
+replace separate preregistration, input binding, or run-specific approval.
+
+The R.7 amendment expands the report to 21 pages and binds the exact reviewed
+`version2.0` master commit `f9a6eaec2cab1dd9e85d284e48b9863cae0b1298`.
+`version2.0` is treated as a product/current-display and exploratory repository;
+`custom_terminal` remains the canonical governance and evidence authority.
+All version2.0 analysis/backtest outputs are `UNGOVERNED_NONCANONICAL`, and no
+code or data was merged during the review. See
+`reports/CROSS_REPOSITORY_RECONCILIATION.md`.
+
+The owner approved only `BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING`, including a
+bounded non-empirical component-integration plan and preparation of a read-only
+F&O database trust-audit plan. Market analysis, score calculation, backtesting,
+recommendations, broker actions, trading, external acquisition, and execution
+of the F&O audit remain blocked.

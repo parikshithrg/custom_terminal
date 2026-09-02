@@ -11,11 +11,13 @@
     "generation timestamp",
     "rendered-page count and visual-verification result",
     "covered future scope",
+    "exact external repository bindings",
     "post-generation explicit reviewer approval"
   ],
   "rules": [
     "Pending, changed, stale, superseded, missing, mismatched, generic, synthetic, and predated approvals fail closed.",
     "The preregistration must bind the exact report, PDF hash, fingerprint, record path, and covered scope.",
+    "The report, review record, and preregistration must bind the exact reviewed commits and branches of both repositories.",
     "PDF review satisfies only the pre-research report gate and is never a run approval.",
     "A separate exact one-use governed run approval remains mandatory."
   ]

@@ -4,26 +4,72 @@
   "report_id": "market_system_development_status_pre_research_review",
   "report_version": "v1",
   "pdf_path": "output/pdf/market_system_status_pre_research_review_v1.pdf",
-  "pdf_sha256": "38afdf49612f42797268ed7e02579377629662b36e6c780590f07084be7023e5",
+  "pdf_sha256": "cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c",
   "source_path": "docs/project_status/market_system_status_pre_research_review_v1.md",
-  "source_sha256": "527130720e40995e748f4f3dd45f46f8f131617ab8c92393fa9a59098c68c634",
-  "summarized_source_commit": "bc3f11f",
-  "research_state_fingerprint": "f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70",
-  "generation_timestamp": "2026-09-01T03:37:51.6128893Z",
-  "rendered_page_count": 15,
-  "visual_verification_result": "PASS_15_PAGES_NO_MATERIAL_DEFECTS",
+  "source_sha256": "19324a69c66185169e548d959a41d70002711b3cabb4a77089a6a176c5be5d18",
+  "summarized_source_commit": "1a082bdad1667410c95931c4482971c133de918a",
+  "external_repository_bindings": [
+    {
+      "repository": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "1a082bdad1667410c95931c4482971c133de918a",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL"
+    },
+    {
+      "repository": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS"
+    }
+  ],
+  "research_state_fingerprint": "40a18b14949d13b383dd549fe1d37c86881a61acf2d98bac9db2e6770d820e01",
+  "generation_timestamp": "2026-09-01T09:26:48.1175614Z",
+  "rendered_page_count": 21,
+  "visual_verification_result": "PASS_21_PAGES_NO_MATERIAL_DEFECTS",
   "covered_future_scope": [
     "BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING"
   ],
-  "review_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "review_status": "REPORT_REVIEWED_APPROVED",
   "report_current": true,
   "superseded_by": null,
   "reviewer_approval": {
-    "approved_at": null,
-    "approval_kind": null,
-    "approval_statement": null,
-    "reviewer_classification": null
+    "approved_at": "2026-09-02T06:15:22.3487202Z",
+    "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
+    "approval_statement": "The owner reviewed Market System Development - Status and Pre-Research Review v1, answered all 15 questions, and approved only BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING and the next bounded component-integration planning task with no empirical execution. This approval does not authorize data acquisition, market analysis, simulation, backtesting, scoring, recommendations, broker actions, trading, or a governed research run.",
+    "reviewer_classification": "PROJECT_OWNER"
   },
-  "research_execution_status": "BLOCKED_PENDING_OWNER_REVIEW_AND_SEPARATE_RUN_APPROVAL",
-  "statement": "PDF review is pending. This record does not authorize data acquisition, market analysis, simulation, backtesting, preregistration lock, run approval, gateway execution, scoring, or trading."
+  "owner_responses": [
+    {"question": 1, "decision": "APPROVED", "response": "The project objective is correct."},
+    {"question": 2, "decision": "APPROVED", "response": "The development order is acceptable."},
+    {"question": 3, "decision": "CONFIRMED", "response": "Use no paid data. Additional data may use Kite Connect only where available and only within the project's data-governance rules."},
+    {"question": 4, "decision": "NO_CHANGE", "response": "Continue with the existing milestone order and priorities."},
+    {"question": 5, "decision": "DO_NOT_PRIORITIZE", "response": "Optional governance hardening does not need to precede source planning; continue as intended."},
+    {"question": 6, "decision": "APPROVED", "response": "Proceed only with free-source choices under BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING."},
+    {"question": 7, "decision": "NO_CORRECTION_REQUESTED", "response": "No report correction or clarification is requested at this time."},
+    {"question": 8, "decision": "KEEP_SEPARATE", "response": "version2.0 must remain separate and is only a reference copy for potential ideas or data-source candidates."},
+    {"question": 9, "decision": "PRIORITIZE_FOR_REVIEW", "response": "The highest-value version2.0 candidates are the market sentiment score and stock scores."},
+    {"question": 10, "decision": "KEEP_HIDDEN", "response": "Keep recommendations and live-scan results hidden until trustworthy evidence exists; untested output should not be presented."},
+    {"question": 11, "decision": "RETAIN_NONEXECUTING", "response": "Live broker code may be retained only if isolated from existing data sources. No trade execution is permitted through the site or project; the system is analysis-only."},
+    {"question": 12, "decision": "AUDIT_AUTHORIZED", "response": "The local F&O database may be audited locally for validity and trustworthiness as a possible data source. This does not authorize strategy analysis or backtesting."},
+    {"question": 13, "decision": "DEFERRED", "response": "Approved display-only current-data providers will be decided later."},
+    {"question": 14, "decision": "DEFERRED", "response": "Renaming legacy passed-validation labels will be decided later."},
+    {"question": 15, "decision": "APPROVED", "response": "Proceed with the next bounded component-integration planning task with no empirical execution."}
+  ],
+  "standing_constraints": [
+    "NO_PAID_DATA",
+    "FREE_OFFICIAL_SOURCES_PREFERRED",
+    "KITE_CONNECT_DATA_PERMITTED_ONLY_WHERE_AVAILABLE_AND_GOVERNED",
+    "VERSION2_REMAINS_SEPARATE_REFERENCE_ONLY",
+    "MARKET_SENTIMENT_AND_STOCK_SCORES_ARE_PRIORITY_REVIEW_CANDIDATES",
+    "UNTESTED_RECOMMENDATIONS_AND_LIVE_SCANS_REMAIN_HIDDEN",
+    "NO_TRADE_EXECUTION_THROUGH_SITE_OR_PROJECT",
+    "ANALYSIS_ONLY_SYSTEM",
+    "LOCAL_FNO_DATABASE_TRUST_AUDIT_PERMITTED",
+    "NO_MARKET_ANALYSIS_SIMULATION_OR_BACKTEST_AUTHORIZED_BY_THIS REVIEW"
+  ],
+  "research_execution_status": "REPORT_GATE_APPROVED_FOR_COVERED_PLANNING_ONLY_SEPARATE_PREREGISTRATION_AND_RUN_APPROVAL_STILL_REQUIRED",
+  "statement": "The owner approved the exact v1 PDF for BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING after generation. The review also permits a bounded component-integration planning task and a read-only local F&O trust audit plan. It does not authorize data acquisition, empirical market analysis, simulation, backtesting, preregistration lock, run approval, gateway execution, scoring, recommendations, broker actions, or trading."
 }

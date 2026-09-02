@@ -103,6 +103,10 @@ def _table(rows: list[list[str]], styles, width: float):
         widths = [width * 0.28, width * 0.72]
     elif columns == 3:
         widths = [width * 0.22, width * 0.24, width * 0.54]
+    elif columns == 4:
+        widths = [width * 0.18, width * 0.27, width * 0.20, width * 0.35]
+    elif columns == 5:
+        widths = [width * 0.14, width * 0.23, width * 0.14, width * 0.19, width * 0.30]
     else:
         widths = [width / columns] * columns
     table = Table(data, colWidths=widths, repeatRows=1, hAlign="LEFT")
@@ -214,7 +218,7 @@ def render(source: Path, output: Path) -> None:
     doc = SimpleDocTemplate(
         str(output), pagesize=A4, rightMargin=20 * mm, leftMargin=20 * mm,
         topMargin=21 * mm, bottomMargin=18 * mm,
-        title="Market System Development - Status and Pre-Research Review",
+        title="Two-Repository Market System - Status and Pre-Research Review",
         author="custom_terminal project",
         subject="R.7 owner-review status report; research remains blocked",
     )

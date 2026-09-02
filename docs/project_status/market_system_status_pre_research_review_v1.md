@@ -1,9 +1,10 @@
-# Market System Development - Status and Pre-Research Review
+# Two-Repository Market System - Status and Pre-Research Review
 
 Report version: R.7 / v1
 Generation date: 1 September 2026
-Summarized source commit: bc3f11f
-Research-state fingerprint: f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70
+Authoritative repository baseline: custom_terminal main at 1a082bdad1667410c95931c4482971c133de918a
+Product repository reviewed: version2.0 master at f9a6eaec2cab1dd9e85d284e48b9863cae0b1298
+Research-state fingerprint: 40a18b14949d13b383dd549fe1d37c86881a61acf2d98bac9db2e6770d820e01
 PDF review status: PENDING USER REVIEW
 
 NO MARKET ANALYSIS, SIMULATION, BACKTEST, DATA ACQUISITION, OR RESEARCH EXECUTION IS AUTHORIZED BY THIS REPORT.
@@ -12,7 +13,9 @@ NO MARKET ANALYSIS, SIMULATION, BACKTEST, DATA ACQUISITION, OR RESEARCH EXECUTIO
 
 ## Executive summary
 
-This project is building a personal Indian-market research system that can explain what it knows, reproduce how it knew it, test ideas honestly, and keep investment decisions separate from unverified calculations. Its eventual purpose is decision support for trading, investing, asset allocation, portfolio balance, and downside risk. It is not yet an automated trading system, and it does not currently have an approved investment edge or production score.
+The project currently spans two separate repositories. `version2.0` is the product dashboard and current-display system with exploratory tools and candidate backtests. `custom_terminal` is the authoritative governance, provenance, data-trust, preregistration, approval, evidence and lifecycle system. This report reconciles them without merging or copying code. It does not approve either repository's market calculations.
+
+Together they are intended to become a personal Indian-market research system that can explain what it knows, reproduce how it knew it, test ideas honestly, and keep investment decisions separate from unverified calculations. Its eventual purpose is decision support for trading, investing, asset allocation, portfolio balance, and downside risk. It is not yet an automated trading system, and it does not currently have an approved investment edge or production score.
 
 The development order deliberately puts trust before strategy testing. A statistically attractive result is not useful if the historical population excludes failed companies, if ticker identities are wrong, if corporate actions are missing, or if today's transaction costs are applied to old trades. The project therefore stopped momentum research when the local data was shown to be survivor-selected and incomplete.
 
@@ -32,6 +35,70 @@ The proposed direction is cautious: review this report first, define one bounded
 | Historical population | FAIL | Only 3 of 12 locked security/bhavcopy pairs qualified. |
 | Market research execution | BLOCKED | This PDF is pending review; data and run-specific gates also remain closed. |
 | Production score or recommendation | NOT AVAILABLE | No edge has passed the required validation and evidence chain. |
+| version2.0 execution outputs | UNGOVERNED / NONCANONICAL | Useful product and exploratory work exists, but it did not run through custom_terminal governance. |
+
+[PAGE BREAK]
+
+## Two-repository architecture and authority
+
+The repositories are complementary but not equivalent. `version2.0` is a product-facing dashboard with current monitoring, data pages, exploratory backtests, live-signal computation and reusable presentation/provider code. `custom_terminal` is the only canonical authority for data provenance, point-in-time trust, historical-universe qualification, research-family registration, preregistration, input hashes, split access, exact one-use approval, immutable manifests, canonical import, evidence lifecycle and promotion.
+
+No code or data was merged or copied during R.7. Selective integration may be proposed later, one bounded component at a time, only after owner review.
+
+| Responsibility | Current implementation | Authority | Trust status | R.7 decision |
+|---|---|---|---|---|
+| UI and report presentation | Mainly version2.0 | custom_terminal published read models | Display/exploratory | Selectively retain |
+| Current monitoring | Both repositories | custom_terminal scope controls | Current-only | Reconcile later |
+| Data acquisition | Provider code in both | custom_terminal immutable contracts | Mixed/unqualified | Adapt selectively |
+| Provenance and revisions | custom_terminal | custom_terminal | Canonical contract | Retain |
+| Historical universe and identity | custom_terminal contracts; version2.0 current NIFTY 500 | custom_terminal | Current capability FAIL | Prohibit substitution |
+| Research and backtesting | Both repositories | custom_terminal governed gateway | version2.0 noncanonical | Re-evaluate only after preregistration |
+| Approval, evidence, lifecycle | custom_terminal | custom_terminal | Canonical | Retain exclusively |
+| Live signals and recommendations | version2.0 | None approved | Blocked | Disable pending review |
+| Broker and trading | version2.0 classes | None approved | Live-action code exists | Isolate or retire |
+
+[PAGE BREAK]
+
+## Product capability classification
+
+These labels describe what the reviewed code can currently be trusted to do. They are not judgments about visual quality or future usefulness.
+
+| Product capability | Classification | Meaning |
+|---|---|---|
+| Streamlit dashboard and report pages | DISPLAY_ONLY | Present information; displayed claims inherit their source limitations. |
+| Market-regime and current-monitoring views | CURRENT_STATE_DIAGNOSTIC | Current context only; not historical evidence or allocation authority. |
+| Lab controls and interactive studies | EXPLORATORY_ANALYSIS | Useful for hypothesis development; outputs are not canonical evidence. |
+| Validation, recommendation backtest and research scripts | UNGOVERNED_BACKTEST | Did not use the custom_terminal report, preregistration, input or approval gates. |
+| Read-only options, macro, filing and provider presentation | CANDIDATE_FOR_GOVERNED_INTEGRATION | Potentially reusable after contract, timing, provenance and rights review. |
+| `ZerodhaBroker.place_order` | LIVE_ACTION_CAPABLE | The code can submit an order if instantiated with a capable token. |
+| Recommendations, live scans, deployment language and broker actions | BLOCKED_PENDING_REVIEW | Must not become product decisions or trading actions. |
+
+All version2.0 analysis and backtest outputs are classified `UNGOVERNED_NONCANONICAL`. This preserves their history without treating them as validated by the newer system.
+
+[PAGE BREAK]
+
+## version2.0 positive findings and reusable value
+
+- One shared recommendation-display flag hides strategy recommendation tables.
+- Reviewed results do not show a meaningful benchmark-relative edge; negative and rejected strategies remain visible instead of being erased.
+- Options display queries open the local SQLite database read-only, bound expensive scans, and do not fabricate implied volatility when the source lacks it.
+- Several pages disclose incomplete coverage, estimated values, assumed timing and current-snapshot limitations.
+- Causal shifts exist in key feature paths, the Status and Lab responsibilities were separated, and reusable UI/provider abstractions exist.
+- Current monitoring, options-query presentation, macro and filing views, provider adapters and report design are candidates for selective future integration.
+
+These findings support reuse, not wholesale adoption. Product presentation can be good while the underlying historical research claim remains unqualified.
+
+### Material risks and contradictions
+
+- The current NIFTY 500 list is not a historical universe. Inactive, suspended, merged and terminated securities are not reconstructible from it.
+- Stable identity, terminal economics and corporate-action continuity are not qualified.
+- Direct validation, backtest, refresh and scan controls sit outside the governed gateway. A hidden live-signal table may still be computed, and the hiding flag is mutable.
+- Yahoo, Kite and CSV histories are not historical-qualified inputs. CSV provenance, adjustment status, corrections and revision vintages are incomplete.
+- The approximately 45 GB F&O database is unqualified for provenance, coverage, correction history, retention rights and research suitability.
+- Transcript, ownership, insider, ratings, AUM and index-reconstitution features need causal publication and revision timing before historical use.
+- Claims such as "passed validation", "point-in-time", "historical universe" and "heldout" conflict with the canonical trust record unless re-proved under governance. A recent period is not necessarily an untouched holdout.
+- version2.0 persists Kite credentials/session material, while custom_terminal deliberately uses memory-only, read-only controls.
+- Broker substitution is disabled in the reviewed engine, but live order-capable code still exists and must remain isolated.
 
 [PAGE BREAK]
 
@@ -215,19 +282,62 @@ No source is qualified merely because a webpage, download button, PDF, or curren
 
 [PAGE BREAK]
 
+## version2.0 execution-path inventory
+
+Every path below can initiate a calculation, refresh, report, recommendation-like output, simulated order or live-capable order. None is canonical research.
+
+| Path or surface | Action | Classification |
+|---|---|---|
+| `main.py`, `core/runner.py` | Configured backtests, comparisons and HTML reports | UNGOVERNED_NONCANONICAL |
+| Status page | Strategy validation, live scan, recommendation backtest and snapshot writes | UNGOVERNED_NONCANONICAL |
+| Lab page | Interactive strategy backtest | UNGOVERNED_NONCANONICAL |
+| Legacy directly runnable backtest page | Validation, scan, recommendation and backtest controls | UNGOVERNED_NONCANONICAL |
+| EOD refresh widget | Equity/F&O/OI/index refresh, then regime and live-signal snapshots | UNGOVERNED_NONCANONICAL |
+| Options page | Options database refresh and report queries | UNGOVERNED_NONCANONICAL |
+| `market_gate/research/*.py` | Attribution, blends, diffs, cost/exit sweeps, IC, reruns, neutralization and diagnostics | UNGOVERNED_NONCANONICAL |
+| Scanner, analysis and macro CLIs | Scanner runs, Yahoo/Claude analysis and diagnostics | UNGOVERNED_NONCANONICAL |
+| Fetch/build/clean/audit/study scripts | Data mutation, features, options universe and studies | UNGOVERNED_NONCANONICAL |
+| `SimulatedBroker` | Simulated orders | UNGOVERNED_NONCANONICAL |
+| `ZerodhaBroker.place_order` | Live order submission and history lookup | LIVE_ACTION_CAPABLE |
+
+The exact enumerated inventory is stored in `specs/cross_repository_reconciliation_v1.json`. The reviewed app currently instantiates the simulated broker, not the live broker. That reduces present wiring risk but does not make the live code safe or approved.
+
+[PAGE BREAK]
+
+## Selective integration strategy
+
+The recommended strategy is selective integration, not a rewrite and not a repository merge. Candidate components are Streamlit design, read-only current-data displays, current monitoring, bounded options queries, macro and filing presentation, strategy/provider interfaces and report presentation.
+
+Before any component enters the authoritative path it needs: a named owner; an explicit current-versus-historical scope; data provenance and availability contracts; no direct market execution; deterministic tests; and a published-read-model boundary. Existing product pages may remain as exploratory displays while this review is pending.
+
+The following responsibilities remain exclusively in `custom_terminal`: research-family registration, preregistration, exact input hashes, the pre-research PDF gate, split access, one-use run approval, immutable manifests, canonical evidence import, lifecycle state and promotion decisions.
+
+### Retain, redesign and retire boundaries
+
+| Disposition | Components |
+|---|---|
+| Retain as candidates | UI design, report presentation, read-only options query patterns, current monitoring and provider interfaces |
+| Redesign before use | timing/provenance for filings and macro, data refresh, current regime language, strategy interfaces and report labels |
+| Quarantine as legacy | all version2.0 backtest, validation, live-scan and research results |
+| Isolate or retire | credential/token persistence, live broker path, direct recommendation and deployment controls |
+| Keep authoritative | all custom_terminal trust, governance, approval, evidence and lifecycle contracts |
+
+[PAGE BREAK]
+
 ## What should happen next?
 
 ### Staged program
 
-1. The owner reads this PDF and records corrections or explicit approval of the covered planning scope.
-2. Define one bounded free-source capability question, not an alpha hypothesis.
-3. Identify official evidence and qualify manual access, automation, retention, correction, and derived-use conditions.
-4. Define a small acquisition pilot with a fixed object list, request budget, cache, abort rules, and no outcome selection.
-5. Verify identity, lifecycle, population, benchmark, and cost coverage before any empirical claim.
-6. Regenerate and re-review this PDF if an included research-state byte changes.
-7. Preregister one bounded descriptive or falsification study only if its required capabilities pass.
-8. Obtain a separate exact one-use run approval after preregistration and input binding.
-9. Only then allow the governed gateway to conduct that exact analysis.
+1. The owner reads this amended two-repository PDF and records corrections or explicit approval.
+2. Resolve the owner questions on repository roles, recommendations, broker code, data rights and integration priority.
+3. Freeze version2.0 market-analysis, backtest, live-scan and recommendation outputs as `UNGOVERNED_NONCANONICAL` evidence.
+4. Define one bounded component-integration proposal with no market execution.
+5. Map its inputs to custom_terminal provenance, availability and current-versus-historical contracts.
+6. Remove or isolate direct execution, persistent credentials and action-oriented outputs from the proposed boundary.
+7. Regenerate and re-review this PDF if any included research-state byte or reviewed repository binding changes.
+8. Only after report approval, preregister one bounded descriptive or falsification study if its data capabilities pass.
+9. Bind immutable inputs and obtain a separate exact one-use run approval.
+10. Only then permit the governed gateway to conduct that exact approved analysis.
 
 ### Go criteria
 
@@ -286,6 +396,14 @@ Please review and answer each question explicitly:
 5. Should optional governance hardening - raw-evidence backup, enforced process limits, or canonical-catalog chaining - happen before source planning?
 6. Do you approve proceeding only to a bounded free-source capability-planning phase under scope `BOUNDED_FREE_SOURCE_CAPABILITY_PLANNING`?
 7. What corrections or clarifications must be incorporated into a revised PDF before approval?
+8. Should version2.0 remain a separate product repository or become a UI package in a later governed change?
+9. Which version2.0 pages are the highest-value candidates for selective integration?
+10. Should recommendation and live-scan computation be disabled, rather than merely hidden, until governed evidence exists?
+11. Should live broker code be removed, quarantined, or retained in a separately approved repository?
+12. May the local F&O database be retained and audited, and what evidence supports those rights?
+13. Which current-data providers may be used for display-only diagnostics?
+14. Should legacy "passed validation" labels be renamed `UNGOVERNED_NONCANONICAL` immediately?
+15. Should the next approved task be a bounded component-integration plan with no empirical execution?
 
 An acceptable approval must identify this report/version and occur after PDF creation. A reply such as "continue," earlier approval, or approval of the synthetic canary does not satisfy this report gate. Even explicit PDF approval does not authorize data acquisition, analysis, simulation, backtesting, or a research run.
 
@@ -307,6 +425,7 @@ An acceptable approval must identify this report/version and occur after PDF cre
 | R.5 | Synthetic canary proposal | Infrastructure proposal |
 | R.6 | Canary executed once and independently audited PASS | Infrastructure evidence |
 | R.7 | Status PDF generated; owner review pending | Governance/documentation |
+| R.7 amendment | Exact version2.0 commit statically reconciled; no merge or execution | Cross-repository governance |
 
 Important current decisions:
 
@@ -319,7 +438,26 @@ Important current decisions:
 
 [PAGE BREAK]
 
-## Appendix B - Evidence and report index
+## Appendix B - Cross-repository reconciliation
+
+| Field | custom_terminal | version2.0 |
+|---|---|---|
+| URL | github.com/parikshithrg/custom_terminal.git | github.com/parikshithrg/version2.0.git |
+| Branch and commit | main / 1a082bdad1667410c95931c4482971c133de918a | master / f9a6eaec2cab1dd9e85d284e48b9863cae0b1298 |
+| Primary purpose | Governance, trust, evidence and canonical research control | Product dashboard, current displays and exploratory tools |
+| Execution model | Exact governed gateway and one-use approval | Direct UI/CLI scripts and refresh controls |
+| Data posture | Provider-neutral, immutable evidence and fail-closed capabilities | Current NIFTY 500, CSV/Yahoo/Kite and local F&O sources not historically qualified |
+| Strategy results | Legacy evidence quarantined; no active edge | No meaningful benchmark-relative edge; results noncanonical |
+| Retain | All authority and governance contracts | Selected UI, read-only display and provider patterns |
+| Retire/isolate | None identified in this review | Persistent Kite secrets/tokens, live broker and direct action controls |
+
+Duplicates include current-data providers, Streamlit views, backtest abstractions, reports and data-refresh logic. Conflicts include security scope, credential persistence, recommendation semantics, validation labels and direct execution outside governance. The integration boundary is a published read model: version2.0-style views may consume approved custom_terminal artifacts but may not calculate or promote canonical evidence.
+
+Unresolved matters are the eight repository-specific owner questions, data-use rights for the F&O and other local sources, which UI components to prioritize, and whether the live-action code should be removed or isolated. The complete machine-readable inventory is `specs/cross_repository_reconciliation_v1.json`.
+
+[PAGE BREAK]
+
+## Appendix C - Evidence and report index
 
 Key sources used to reconcile this report:
 
@@ -334,6 +472,7 @@ Key sources used to reconcile this report:
 - `reports/FUTURE_RUN_GOVERNANCE.md` and `reports/GOVERNED_EXECUTION_OPERATIONS.md`.
 - `evidence/governance/canary_execution_anchor_v1.json`.
 - `specs/pre_research_review_policy_v1.json`.
+- `specs/cross_repository_reconciliation_v1.json`.
 
 Key hashes:
 
@@ -345,11 +484,11 @@ Key hashes:
 | Canary canonical record | 63f9fa81774313355033841960a34c2f1ef6ef5c1ffdc69c34c0a652e6fa0c6e |
 | Frozen legacy log | 124886d439a90071a9b0f884851afbffdba5dd783e52c2cedaeb4b2ac82eae1d |
 | Neutral legacy ledger | 79df7b785fef5025f605e0cef4a6dd49a039b034d66a92ea0aaafd99056fb392 |
-| Research-state fingerprint | f40ba4e841fdc8839a039e29ed7deff03cf57b21b9ae303bbc03ac8ac0176c70 |
+| Research-state fingerprint | 40a18b14949d13b383dd549fe1d37c86881a61acf2d98bac9db2e6770d820e01 |
 
 [PAGE BREAK]
 
-## Appendix C - Glossary
+## Appendix D - Glossary
 
 | Term | Plain-language meaning |
 |---|---|
@@ -378,3 +517,5 @@ Any substantive change to included code, contracts, data declarations, assumptio
 Current review status: PENDING USER REVIEW.
 Research remains blocked.
 This document is ready to be read and corrected; it is not permission to analyze markets.
+
+PRE_RESEARCH_PDF_READY_FOR_USER_REVIEW

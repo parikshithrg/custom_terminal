@@ -1,0 +1,120 @@
+{
+  "schema_version": "pre_research_review_record_v1",
+  "record_path": "docs/project_status/pre_research_review_record_v4.json",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v4",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v4.pdf",
+  "pdf_sha256": "02a76f6d46bc74a69b7f0b10331ae26da1d07d60934091ce9d31c0abe8cdaec9",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v4.md",
+  "source_sha256": "0c03197df4f3c6ef85112c407efe4f1321a8fcf509e962ac4c7edc5ec12bbab0",
+  "generation_manifest_path": "docs/project_status/pre_research_generation_manifest_v4.json",
+  "generation_manifest_sha256": "e831d6c85651d3f5373c1e9e364d844c2fe955659a9a745efbcfd2cc74ee4148",
+  "summarized_source_commit": "b658033f7acf0fdc206831cedc5ef374c043e27d",
+  "external_repository_bindings": [
+    {
+      "repository": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "b658033f7acf0fdc206831cedc5ef374c043e27d",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL"
+    },
+    {
+      "repository": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS"
+    }
+  ],
+  "research_state_fingerprint": "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db",
+  "research_state_file_count": 242,
+  "generation_timestamp": "2026-09-03T07:59:03.7398987Z",
+  "rendered_page_count": 14,
+  "visual_verification_result": "PASS_14_PAGES_NO_MATERIAL_DEFECTS",
+  "covered_future_scope": [
+    "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY"
+  ],
+  "review_status": "REPORT_REVIEWED_APPROVED",
+  "report_current": true,
+  "supersedes": "docs/project_status/pre_research_review_record_v3.json",
+  "superseded_by": null,
+  "reviewer_approval": {
+    "approved_at": "2026-09-03T09:04:16.3232871Z",
+    "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
+    "approval_statement": "The project owner reviewed Market System Development - Status and Pre-Research Review v4, confirmed the objective, completed-work summary, free-source-only policy, R.9F description and sampled-identity limitation, added a constrained alternative-source policy, and authorized only a later task to prepare an interlock-removal proposal. The interlock must not be changed in that proposal task. Database connection, SQL, PRAGMAs, schema inspection, audit execution, market-row access, acquisition, market analysis, scoring, simulation, backtesting, recommendations, broker actions and trading remain prohibited.",
+    "reviewer_classification": "PROJECT_OWNER"
+  },
+  "reviewer_questions": [
+    {
+      "question": 1,
+      "answer": "Yes.",
+      "decision": "PROJECT_OBJECTIVE_CONFIRMED"
+    },
+    {
+      "question": 2,
+      "answer": "Yes.",
+      "decision": "COMPLETED_WORK_SUMMARY_CONFIRMED"
+    },
+    {
+      "question": 3,
+      "answer": "Yes.",
+      "decision": "FREE_SOURCE_ONLY_POLICY_CONFIRMED"
+    },
+    {
+      "question": 4,
+      "answer": "Yes.",
+      "decision": "R9F_DESCRIPTION_CONFIRMED"
+    },
+    {
+      "question": 5,
+      "answer": "Yes.",
+      "decision": "SAMPLED_IDENTITY_LIMITATION_ACCEPTED"
+    },
+    {
+      "question": 6,
+      "answer": "If current data sources fail, are unavailable, inaccessible, or do not meet required data-quality standards, suggest lawful free alternative sources. For example, if the existing F&O database fails qualification, evaluate official NSE F&O bhavcopies for all history that is lawfully available and accessible.",
+      "decision": "CONSTRAINED_ALTERNATIVE_SOURCE_POLICY_ADDED"
+    },
+    {
+      "question": 7,
+      "answer": "Yes. Authorized.",
+      "decision": "EXACT_PROPOSAL_PREPARATION_ONLY_AUTHORIZED"
+    }
+  ],
+  "alternative_source_policy": {
+    "trigger": "A current source is unavailable, inaccessible through ordinary permitted access, or fails declared data-quality acceptance gates.",
+    "required_response": "Identify and compare lawful free alternatives against the same provenance, completeness, point-in-time, identity, correction, retention and reproducibility requirements.",
+    "example_candidate": "Official NSE F&O bhavcopies for the lawfully available historical interval if the bound local F&O database fails qualification.",
+    "constraints": [
+      "Do not bypass CAPTCHA, authentication, access controls, robots restrictions, rate limits or licensing restrictions.",
+      "Do not treat technical availability as permission, completeness or research fitness.",
+      "Do not describe a bhavcopy as a complete historical security population without separate evidence.",
+      "Preserve raw evidence immutably only when retention is permitted.",
+      "Apply the existing provider-neutral ingestion and dataset trust gates.",
+      "Obtain any separate approval required before acquisition or use."
+    ],
+    "acquisition_authorized_by_this_review": false
+  },
+  "execution_authority": {
+    "interlock_removal_proposal_preparation_authorized": true,
+    "interlock_change_authorized": false,
+    "database_connection_authorized": false,
+    "sql_or_pragma_authorized": false,
+    "schema_inspection_authorized": false,
+    "audit_execution_authorized": false,
+    "market_row_access_authorized": false,
+    "data_acquisition_authorized": false,
+    "analysis_authorized": false,
+    "scoring_authorized": false,
+    "simulation_authorized": false,
+    "backtesting_authorized": false,
+    "recommendation_authorized": false,
+    "broker_actions_authorized": false,
+    "trading_authorized": false
+  },
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "research_execution_status": "INTERLOCK_REMOVAL_PROPOSAL_PREPARATION_ONLY_AUTHORIZED",
+  "statement": "PDF v4 was explicitly reviewed after generation. The next task may prepare only a code-reviewable interlock-removal proposal. It may not implement or remove the interlock, access the database, execute an audit, acquire alternative data, analyze markets, score, simulate, backtest, recommend, access a broker or trade."
+}

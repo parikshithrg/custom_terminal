@@ -120,13 +120,12 @@ def test_v4_keeps_interlock_and_all_authorities_false(monkeypatch):
     assert called == {"configuration": 0, "sqlite": 0}
 
 
-def test_v4_requests_only_the_exact_proposal_scope_and_no_approval_record_exists():
+def test_v4_requests_only_the_exact_proposal_scope():
     manifest = _load(MANIFEST)
     text = SOURCE.read_text(encoding="utf-8")
     scope = "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY"
     assert manifest["proposed_next_scope"] == scope
     assert scope in text
-    assert not (ROOT / "docs/project_status/pre_research_review_record_v4.json").exists()
     assert "Do you authorize the next task to prepare an interlock-removal proposal only" in text
 
 

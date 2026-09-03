@@ -38,12 +38,14 @@ def test_v1_and_v2_are_preserved_as_historical_review_evidence():
     assert sha256_file(ROOT / v2["pdf_path"]) == EXPECTED_PDF_V2
 
 
-def test_v3_supersession_chain_is_explicit_after_successful_generation():
+def test_v3_supersession_chain_is_explicit_through_current_v4_review():
     v2 = _load(V2)
     v3 = _load(V3)
     assert v2["superseded_by"] == v3["record_path"]
     assert v3["supersedes"] == v2["record_path"]
-    assert v3["superseded_by"] is None
+    assert v3["superseded_by"] == (
+        "docs/project_status/pre_research_review_record_v4.json"
+    )
 
 
 def test_v3_source_and_pdf_hashes_and_structure_are_exact():

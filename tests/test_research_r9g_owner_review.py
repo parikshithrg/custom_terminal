@@ -3,9 +3,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from market_intel.foundation import fno_production_boundary as boundary
 from research_contracts.legacy_ledger import sha256_file
 from research_contracts.pre_research_review import (
+    PreResearchReviewError,
     compute_research_state_fingerprint,
     validate_review_record,
 )
@@ -23,8 +26,8 @@ def _load(path: Path) -> dict:
 
 def test_v4_owner_review_binds_exact_generated_report():
     record = _load(RECORD)
-    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
-    assert record["report_current"] is True
+    assert record["review_status"] == "REPORT_STALE"
+    assert record["report_current"] is False
     assert record["covered_future_scope"] == [SCOPE]
     assert sha256_file(ROOT / record["pdf_path"]) == record["pdf_sha256"]
     assert sha256_file(ROOT / record["source_path"]) == record["source_sha256"]
@@ -56,7 +59,7 @@ def test_v4_authorizes_only_proposal_preparation():
     assert _load(RECORD)["deliberate_interlock"] == boundary.DELIBERATE_INTERLOCK
 
 
-def test_v4_record_satisfies_report_gate_without_execution_authority():
+def test_stale_v4_record_no_longer_satisfies_report_gate():
     record = _load(RECORD)
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
@@ -72,19 +75,21 @@ def test_v4_record_satisfies_report_gate_without_execution_authority():
             "covered_scope": SCOPE,
         },
     }
-    result = validate_review_record(
-        record, preregistration=preregistration, repository_root=ROOT, policy=policy
-    )
-    assert result["report_gate_satisfied"] is True
-    assert result["research_execution_authorized"] is False
-    assert result["separate_run_approval_required"] is True
+    with pytest.raises(PreResearchReviewError):
+        validate_review_record(
+            record, preregistration=preregistration, repository_root=ROOT, policy=policy
+        )
 
 
 def test_v4_review_preserves_research_fingerprint_and_prior_pdf_bytes():
     record = _load(RECORD)
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
-    assert state["sha256"] == record["research_state_fingerprint"]
-    assert state["file_count"] == record["research_state_file_count"] == 242
+    assert record["research_state_fingerprint"] == (
+        "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db"
+    )
+    assert record["research_state_file_count"] == 242
+    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert state["file_count"] == record["staleness"]["current_research_state_file_count"] == 252
     expected = {
         "v1": "cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c",
         "v2": "765c2facad827a3a6473b605037d9975135885e767420ca810ebbc28852c2adf",

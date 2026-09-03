@@ -1,0 +1,46 @@
+{
+  "schema_version": "fno_production_audit_state_event_failure_proposal_v1",
+  "proposal_only": true,
+  "usable": false,
+  "current_proposal_lifecycle": [
+    "PROPOSAL_PREPARED",
+    "OWNER_REVIEW_REQUIRED",
+    "IMPLEMENTATION_NOT_AUTHORIZED"
+  ],
+  "future_approval_lifecycle": [
+    "APPROVAL_ISSUED",
+    "APPROVAL_REGISTERED_UNUSED",
+    "APPROVAL_ATOMICALLY_CONSUMED_BEFORE_CONNECTION",
+    "AUDIT_ATTEMPT_STARTED",
+    "AUDIT_COMPLETED_OR_AUDIT_FAILED_OR_AUDIT_ABORTED"
+  ],
+  "rules": [
+    "Registration is not consumption.",
+    "Consumption is an atomic durable transaction completed before the first target database connection.",
+    "Consumed authority is never restored, including after process crash.",
+    "Every retry requires a new exact approval and attempt ID.",
+    "Duplicate approvals, payloads, attempts and terminal events are rejected.",
+    "Expired, partial, malformed, mutated or mismatched approvals are rejected before connection.",
+    "Every consumed attempt must reconcile to exactly one terminal state.",
+    "A missing terminal event remains detectable as an incomplete consumed attempt.",
+    "Terminal failure or abort creates no further access authority."
+  ],
+  "event_types": [
+    {"type": "APPROVAL_ISSUED", "required_before": "APPROVAL_REGISTERED", "future_only": true},
+    {"type": "APPROVAL_REGISTERED", "required_before": "APPROVAL_CONSUMED", "future_only": true},
+    {"type": "APPROVAL_CONSUMED", "required_before": "FIRST_TARGET_CONNECTION", "future_only": true},
+    {"type": "AUDIT_ATTEMPT_STARTED", "required_after": "APPROVAL_CONSUMED", "future_only": true},
+    {"type": "DATABASE_CONNECTION_OPENED", "maximum_count": 1, "future_only": true},
+    {"type": "STATEMENT_ATTEMPTED", "sanitized_and_hash_linked": true, "future_only": true},
+    {"type": "AUDIT_COMPLETED", "terminal": true, "future_only": true},
+    {"type": "AUDIT_FAILED", "terminal": true, "future_only": true},
+    {"type": "AUDIT_ABORTED", "terminal": true, "future_only": true}
+  ],
+  "failure_recovery": {
+    "before_consumption": "Fail without authority consumption and create a sanitized rejection record; no target connection.",
+    "after_consumption_before_connection": "Record or reconcile an incomplete consumed attempt to AUDIT_ABORTED; never restore or retry authority.",
+    "after_connection": "Close connection on every path, finalize bounded sanitized evidence if safe, and record exactly one terminal state.",
+    "partial_artifacts": "Keep in task-scoped temporary storage, mark noncanonical, and never replace an existing finalized attempt.",
+    "missing_terminal": "Reconciliation reports INCOMPLETE_CONSUMED_ATTEMPT and blocks all reuse or promotion."
+  }
+}

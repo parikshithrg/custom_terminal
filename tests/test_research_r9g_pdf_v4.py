@@ -54,8 +54,10 @@ def test_v4_binds_exact_r9f_evidence_and_research_state():
     assert evidence["proposals/fno_locator_binding_v1/binding_proposal.json"] == EXPECTED_PROPOSAL
     assert manifest["sampled_identity_root_sha256"] == EXPECTED_SAMPLE_ROOT
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
-    assert manifest["research_state_fingerprint"] == state["sha256"] == EXPECTED_STATE
-    assert manifest["research_state_file_count"] == state["file_count"] == 242
+    assert manifest["research_state_fingerprint"] == EXPECTED_STATE
+    assert manifest["research_state_file_count"] == 242
+    assert state["sha256"] == "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef"
+    assert state["file_count"] == 252
 
 
 def test_v4_plain_language_is_precise_about_binding_limitations():

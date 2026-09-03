@@ -1,0 +1,29 @@
+{
+  "schema_version": "fno_production_audit_input_declaration_proposal_v1",
+  "template_only": true,
+  "usable": false,
+  "declaration_sha256": "NOT_SEALED_PROPOSAL_ONLY",
+  "proposal_authority": {
+    "pdf_v4_sha256": "02a76f6d46bc74a69b7f0b10331ae26da1d07d60934091ce9d31c0abe8cdaec9",
+    "pdf_v4_owner_review_record_sha256": "f35a6319d855845876ec888d58acaf7a5fe1a66be6ecf2232ed50a71823a5066",
+    "authorized_scope": "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY"
+  },
+  "future_execution_bindings": {
+    "implementation_commit": "REQUIRED_AFTER_SEPARATE_IMPLEMENTATION_APPROVAL",
+    "research_state_fingerprint": "REQUIRED_CURRENT_VALUE",
+    "current_pdf_sha256": "REQUIRED_PDF_V5_OR_LATER_REVIEWED_HASH",
+    "current_owner_review_record_sha256": "REQUIRED_POST_GENERATION_REVIEW_HASH",
+    "approval_payload_sha256": "REQUIRED_EXACT_ONE_USE_APPROVAL_HASH",
+    "attempt_id": "REQUIRED_EXACT_UNIQUE_ATTEMPT",
+    "audit_scope_sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d",
+    "resource_envelope_sha256": "1aec4f54a6e3cf88cfa1ecde91b5b8c1579886d38a5282e5131471b2694436b5",
+    "expected_outputs_sha256": "b1d05cfba2de056156d07c4f93512372af9eafd6f2de7d682404050e742f0d8a",
+    "binding_anchor_sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc",
+    "configuration_file_sha256": "cb68999f6e0dd16796d017f1104cc630483ada44ed1959143b99c9e9d11d29a2",
+    "sampled_identity_root": "b1b8c0ca1338d477987da28e6d9647b151c120a0eac7bb17c9e9293edfd4bc47",
+    "sidecar_identity": "REQUIRED_EXACT_POLICY_AND_STATE"
+  },
+  "all_mismatches_terminal": true,
+  "resolved_path_committed": false,
+  "statement": "This declaration is incomplete and cannot authorize locator resolution, connection, SQL or audit execution."
+}

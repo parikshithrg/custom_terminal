@@ -1,0 +1,28 @@
+{
+  "schema_version": "fno_production_audit_threat_model_v1",
+  "proposal_only": true,
+  "usable": false,
+  "threats": [
+    {"threat":"stale or substituted database","prevention":"exact binding plus approved pre-connection identity check","detection":"metadata, header, sampled root and sidecar comparison","fail_closed":"abort; new binding and approval required"},
+    {"threat":"private-path disclosure","prevention":"path stays in process-local references; tracked alias only","detection":"artifact and exception scans","fail_closed":"reject publication and terminate"},
+    {"threat":"approval replay","prevention":"durable one-use consumption and unique approval/attempt IDs","detection":"registry uniqueness and reconciliation","fail_closed":"reject before connection"},
+    {"threat":"approval forgery or mutation","prevention":"canonical payload hash and exact owner identity classification","detection":"byte/hash comparison at registration and consumption","fail_closed":"terminal rejection"},
+    {"threat":"duplicate registration or double consumption","prevention":"transactional unique constraints","detection":"registry conflict","fail_closed":"reject without target access"},
+    {"threat":"validation-to-connection race","prevention":"identity check immediately before durable consumption and open; exact locator handle","detection":"post-stage identity checkpoints","fail_closed":"close and abort"},
+    {"threat":"process crash after consumption","prevention":"consumption and attempt projection in one durable transaction","detection":"incomplete-attempt reconciliation","fail_closed":"authority stays consumed; no retry"},
+    {"threat":"concurrent attempts","prevention":"unique attempt and approval bindings with immediate transaction locking","detection":"duplicate constraint or active-attempt reconciliation","fail_closed":"reject later attempt"},
+    {"threat":"expired approval","prevention":"short exact validity interval","detection":"trusted UTC comparison before registration and consumption","fail_closed":"reject"},
+    {"threat":"changed source, specification, PDF or review record","prevention":"exact hashes in approval","detection":"recompute before consumption","fail_closed":"reject"},
+    {"threat":"path redirection or reparse point","prevention":"no symlink/reparse and same-file identity checks","detection":"OS metadata validation before each access","fail_closed":"abort without disclosure"},
+    {"threat":"database or sidecar mutation","prevention":"reviewed quiescence/sidecar policy","detection":"before/after main and sidecar identity checks","fail_closed":"close and abort; never repair"},
+    {"threat":"hidden write behavior","prevention":"mode=ro, query_only, authorizer, denylist and source-directory monitoring","detection":"sidecar and metadata change","fail_closed":"close and fail"},
+    {"threat":"unbounded queries or outputs","prevention":"enumerated templates, progress handler, row and byte counters","detection":"budget counter breach","fail_closed":"cancel, close and abort"},
+    {"threat":"SQL injection","prevention":"no caller SQL; parameters for values and catalog-derived escaped identifiers","detection":"template hash and authorizer mismatch","fail_closed":"reject before execution"},
+    {"threat":"extension loading","prevention":"explicitly disable and authorizer deny","detection":"capability test and statement event","fail_closed":"abort"},
+    {"threat":"network or broker access","prevention":"dependency and capability prohibition","detection":"static import/call scan plus injected-service rejection","fail_closed":"block implementation or attempt"},
+    {"threat":"audit output promoted into research","prevention":"canonical=false and promotion_eligible=false","detection":"import/lifecycle gate","fail_closed":"reject import or score influence"},
+    {"threat":"partial artifacts","prevention":"task-scoped temporary directory and atomic finalization","detection":"missing output/hash reconciliation","fail_closed":"retain sanitized noncanonical failure evidence"},
+    {"threat":"missing terminal event","prevention":"finally-path terminal recorder","detection":"consumed-attempt reconciliation","fail_closed":"INCOMPLETE_CONSUMED_ATTEMPT blocks reuse"},
+    {"threat":"bypass of intended entrypoint","prevention":"no low-level production locator or connection API exposed; capability inventory","detection":"entrypoint/static scan","fail_closed":"release blocked"}
+  ]
+}

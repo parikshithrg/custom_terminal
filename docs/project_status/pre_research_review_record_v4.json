@@ -35,8 +35,8 @@
   "covered_future_scope": [
     "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY"
   ],
-  "review_status": "REPORT_REVIEWED_APPROVED",
-  "report_current": true,
+  "review_status": "REPORT_STALE",
+  "report_current": false,
   "supersedes": "docs/project_status/pre_research_review_record_v3.json",
   "superseded_by": null,
   "reviewer_approval": {
@@ -115,6 +115,21 @@
   },
   "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
   "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
-  "research_execution_status": "INTERLOCK_REMOVAL_PROPOSAL_PREPARATION_ONLY_AUTHORIZED",
-  "statement": "PDF v4 was explicitly reviewed after generation. The next task may prepare only a code-reviewable interlock-removal proposal. It may not implement or remove the interlock, access the database, execute an audit, acquire alternative data, analyze markets, score, simulate, backtest, recommend, access a broker or trade."
+  "authorized_scope_completion": {
+    "scope": "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY",
+    "state": "COMPLETED_NONACTIVATING",
+    "proposal_manifest": "proposals/fno_production_audit_boundary_v1/proposal_manifest_v1.json",
+    "proposal_manifest_sha256": "a6529ec14520d163e327e2dcc7a7f469ea473d14b8d39e3ede345bc3d49dcdc1",
+    "completed_without_database_connection": true,
+    "repeat_authorized": false
+  },
+  "staleness": {
+    "reason": "R.9H added the authorized non-executable F&O production audit boundary proposal package.",
+    "reviewed_research_state_fingerprint": "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db",
+    "current_research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+    "current_research_state_file_count": 252,
+    "status": "PDF_V4_STALE_AFTER_R9H_PROPOSAL_PREPARATION"
+  },
+  "research_execution_status": "PDF_V4_STALE_AFTER_R9H_PROPOSAL_PREPARATION",
+  "statement": "PDF v4 was explicitly reviewed after generation and authorized only proposal preparation. That non-executable scope is complete. PDF v4 is now historical and stale; PDF v5 generation and later owner review are required before any implementation may be considered. No interlock change, database connection, audit, acquisition, analysis, scoring, simulation, backtest, recommendation, broker action or trading is authorized."
 }

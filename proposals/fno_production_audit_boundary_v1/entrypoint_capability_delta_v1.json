@@ -1,0 +1,54 @@
+{
+  "schema_version": "fno_production_audit_entrypoint_delta_proposal_v1",
+  "proposal_only": true,
+  "base_commit": "18449fedafc21acbbabf2be3a395d07c8b4dc28c",
+  "existing_entrypoints": [
+    {
+      "path": "src/market_intel/foundation/local_fno_audit.py",
+      "callable": "execute_approved_stage_1_3_audit",
+      "scope": "GOVERNED_SYNTHETIC_EXECUTION_ONLY",
+      "database_connection": "SYNTHETIC_FIXTURE_ONLY",
+      "sql": "SYNTHETIC_CATALOG_ONLY",
+      "network": false,
+      "broker": false,
+      "audit": "SYNTHETIC_ONLY",
+      "analysis": false,
+      "trading": false
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "callable": "execute_production_stage_1_3_audit",
+      "scope": "FAIL_CLOSED_DISABLED_BOUNDARY",
+      "database_connection": false,
+      "sql": false,
+      "network": false,
+      "broker": false,
+      "audit": false,
+      "analysis": false,
+      "trading": false
+    }
+  ],
+  "proposed_future_entrypoints": [
+    {
+      "name": "exact_one_use_production_stage_1_3_audit",
+      "implementation_status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+      "database_connection": "ONE_READ_ONLY_CONNECTION_AFTER_DURABLE_CONSUMPTION",
+      "sql": "ENUMERATED_CATALOG_STATEMENT_CLASSES_ONLY",
+      "network": false,
+      "broker": false,
+      "audit": "STAGES_1_2_3_ONLY",
+      "analysis": false,
+      "trading": false
+    }
+  ],
+  "removed_entrypoints": [],
+  "new_executable_production_entrypoints": 0,
+  "interlock_changes": 0,
+  "database_connections": 0,
+  "sql_executions": 0,
+  "network_capabilities_added": 0,
+  "broker_capabilities_added": 0,
+  "analysis_capabilities_added": 0,
+  "trading_capabilities_added": 0,
+  "current_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE"
+}

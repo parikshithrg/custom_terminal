@@ -1,0 +1,66 @@
+{
+  "schema_version": "fno_production_audit_boundary_architecture_v1",
+  "proposal_id": "fno_production_audit_boundary_v1",
+  "proposal_only": true,
+  "executable": false,
+  "lifecycle_state": "PROPOSAL_PREPARED",
+  "objective": "Describe a future fail-closed boundary for exactly one bounded F&O database-quality audit attempt covering existing audit stages 1-3.",
+  "current_facts": {
+    "database_alias": "PRIVATE_FNO_DATABASE_V1",
+    "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+    "binding_anchor_sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc",
+    "sampled_identity_root": "b1b8c0ca1338d477987da28e6d9647b151c120a0eac7bb17c9e9293edfd4bc47",
+    "sampled_identity_is_full_file_hash": false,
+    "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+    "production_access_available": false
+  },
+  "reuse": [
+    "AuditApproval exact-payload hashing and fail-closed validation concepts",
+    "DurableAuditRegistry atomic registration, one-use consumption and hash-chained events",
+    "terminal attempt reconciliation and immutable evidence-store concepts",
+    "synthetic ReadOnlyCatalogConnection defense layers and bounded output contracts",
+    "pre-research PDF gate and exact owner-review binding"
+  ],
+  "must_remain_separate": [
+    "synthetic approvals and production approvals",
+    "synthetic fixture locators and the private production locator",
+    "data-quality audit authority and market-research authority",
+    "audit evidence and promotable research evidence",
+    "proposal review, boundary implementation approval and one-use audit approval"
+  ],
+  "identified_gaps": [
+    "The current production boundary is deliberately impossible and has no usable production execution path.",
+    "The synthetic validator rejects the production locator and synthetic fixture classification cannot qualify a production database.",
+    "The R.9F identity does not bind or reconcile SQLite sidecars and is not a full-file hash.",
+    "A production-safe OS-level byte-read budget is not implemented.",
+    "The exact WAL/journal consistency policy requires owner review before implementation.",
+    "No current PDF or approval authorizes a boundary implementation or database connection."
+  ],
+  "security_principles": [
+    "deny by default and terminally reject every mismatch",
+    "consume one-use authority durably before the first target connection",
+    "bind every mutable input to exact hashes or exact sanitized metadata",
+    "use enumerated statement templates rather than caller-supplied SQL",
+    "never expose the resolved private path in tracked evidence",
+    "do not promote audit artifacts into research evidence",
+    "crashes and failures never restore authority"
+  ],
+  "alternative_source_policy": {
+    "rule": "If the local database fails qualification, evaluate lawful free alternatives, including official NSE F&O bhavcopies for lawfully accessible historical periods.",
+    "acquisition_authorized": false,
+    "trust_rule": "Official status or availability alone does not establish completeness, point-in-time fidelity, retention permission or research fitness.",
+    "access_rule": "Do not bypass CAPTCHA, authentication, robots restrictions, rate limits, licences or access controls.",
+    "qualification_rule": "Apply the same provenance, point-in-time, identity, completeness, correction, retention and reproducibility gates."
+  },
+  "non_goals": [
+    "strategy or economic research",
+    "predictive analysis or signal generation",
+    "market-sentiment or stock scoring",
+    "simulation or backtesting",
+    "recommendations or portfolio decisions",
+    "broker access or trading",
+    "alternative-data acquisition",
+    "database repair, migration, export or mutation"
+  ],
+  "next_requested_scope": "GENERATE_PRE_RESEARCH_STATUS_PDF_V5_ONLY"
+}

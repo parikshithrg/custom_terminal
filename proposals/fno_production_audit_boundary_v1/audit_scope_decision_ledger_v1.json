@@ -1,0 +1,34 @@
+{
+  "schema_version": "fno_production_audit_scope_decision_ledger_v1",
+  "proposal_only": true,
+  "audit_scope": {
+    "proposal_id": "local_fno_audit_stage_1_3_v1",
+    "canonical_reference": "docs/quarantined_proposals/local_fno_audit_stage_1_3/audit_scope_v1.json",
+    "canonical_reference_sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d",
+    "included_stages": [1, 2, 3],
+    "excluded_stages": [4, 5, 6],
+    "intended_questions": [
+      "Does the approved filesystem identity match and remain stable under the approved checks?",
+      "Can one read-only SQLite connection safely inventory bounded catalog metadata without reading market rows?",
+      "What already-local provenance, correction, backup, retention and rights evidence exists?"
+    ],
+    "outputs_reference": "docs/quarantined_proposals/local_fno_audit_stage_1_3/expected_outputs_v1.json",
+    "outputs_reference_sha256": "b1d05cfba2de056156d07c4f93512372af9eafd6f2de7d682404050e742f0d8a",
+    "ambiguities": [
+      "Stage 1 in the older scope says locate and freeze identity, but R.9F already performed a one-time bounded binding; the future pre-connection check must be a separately approved verification, not a silent repeat.",
+      "Stage 2 permits EXPLAIN QUERY PLAN for proposed later queries; the exact query templates and hashes must be decided before implementation.",
+      "The existing resource envelope declares but does not technically enforce total wall time, memory or temporary-storage quotas.",
+      "An enforceable database-byte-read budget is not provided by the current Python sqlite3 abstraction."
+    ]
+  },
+  "owner_review_questions": [
+    "Should the future audit require a quiescent database with no WAL/SHM/journal sidecars, or bind and audit a reviewed sidecar set?",
+    "What technically enforceable mechanism will cap target database bytes read, or should that field be replaced by page and statement budgets with explicit limitations?",
+    "Should the attempt ID be explicitly named in the approval or deterministically derived from the sealed approval plus an operator nonce?",
+    "Which exact EXPLAIN QUERY PLAN templates, if any, are necessary in stages 1-3?",
+    "Are declared but unenforced process memory, whole-attempt wall time and temporary-storage limits acceptable for the first bounded audit?",
+    "After implementation review, may a separate task create one exact short-lived audit approval, with no research authority?"
+  ],
+  "current_decision": "OWNER_REVIEW_REQUIRED_IMPLEMENTATION_NOT_AUTHORIZED",
+  "next_requested_scope": "GENERATE_PRE_RESEARCH_STATUS_PDF_V5_ONLY"
+}

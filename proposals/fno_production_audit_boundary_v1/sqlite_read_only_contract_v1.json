@@ -1,0 +1,72 @@
+{
+  "schema_version": "fno_production_sqlite_read_only_contract_proposal_v1",
+  "proposal_only": true,
+  "implemented": false,
+  "usable": false,
+  "connection_preconditions": [
+    "exact current PDF and post-generation owner review validate",
+    "separately approved implementation commit and research fingerprint match",
+    "exact approval is registered, unused and unexpired",
+    "locator and R.9F binding fields match without path disclosure",
+    "sidecar policy is resolved and exact current sidecar state matches",
+    "pre-connection identity verification is explicitly approved",
+    "approval is atomically consumed and durably recorded"
+  ],
+  "connection_controls": {
+    "uri_mode": "mode=ro",
+    "database_creation": false,
+    "connections_maximum": 1,
+    "query_only_set_and_verified": true,
+    "extensions_enabled": false,
+    "authorizer_required": true,
+    "busy_timeout_ms": 5000,
+    "progress_handler_required": true,
+    "statement_timeout_seconds": 5,
+    "deterministic_ordering_required": true,
+    "caller_supplied_sql": false,
+    "parameters_only_for_values": true,
+    "identifiers_from_prior_catalog_allowlist_only": true
+  },
+  "mode_ro_limitations": [
+    "URI mode=ro prevents ordinary writes through that connection but is not the complete safety boundary.",
+    "It does not validate approval, target identity, symlinks, reparse points, sidecars or query scope.",
+    "It does not by itself prevent expensive reads, extension loading, ATTACH, unsafe PRAGMAs or information disclosure.",
+    "WAL-mode consistency and shared-memory behavior require an exact reviewed sidecar policy."
+  ],
+  "allowed_statement_templates": [
+    "PRAGMA query_only=ON",
+    "PRAGMA query_only",
+    "PRAGMA busy_timeout=5000",
+    "SELECT type,name,tbl_name,sql FROM sqlite_schema WHERE type IN ('table','view','index') ORDER BY type,name",
+    "PRAGMA table_info(escaped_catalog_identifier)",
+    "PRAGMA index_list(escaped_catalog_identifier)",
+    "PRAGMA index_info(escaped_catalog_identifier)",
+    "PRAGMA foreign_key_list(escaped_catalog_identifier)",
+    "EXPLAIN QUERY PLAN for separately hash-bound templates without executing the explained statement"
+  ],
+  "denied": [
+    "ATTACH", "DETACH", "CREATE", "DROP", "ALTER", "INSERT", "UPDATE",
+    "DELETE", "REPLACE", "VACUUM", "REINDEX", "ANALYZE", "LOAD_EXTENSION",
+    "writable_schema", "journal_mode", "wal_checkpoint", "arbitrary SQL",
+    "multiple statements", "market-row reads", "migrations", "repairs", "exports"
+  ],
+  "identity_and_sidecars": {
+    "r9f_repeat_permitted": false,
+    "metadata_equality_is_complete_identity": false,
+    "sampled_equality_is_complete_identity": false,
+    "changed_file_result": "TERMINAL_ABORT_NEW_BINDING_AND_EXPLICIT_REAUTHORIZATION_REQUIRED",
+    "pre_connection_identity_read_requires_future_approval": true,
+    "wal_shm_journal_policy": "UNRESOLVED_IMPLEMENTATION_BLOCKER",
+    "mutation_before_or_during_audit": "CLOSE_IF_OPEN_AND_TERMINALLY_ABORT_WITHOUT_RETRY"
+  },
+  "resource_controls": {
+    "statement_count": 50,
+    "wall_time_seconds": 1200,
+    "result_rows_total": 25000,
+    "output_bytes": 26214400,
+    "database_bytes_read": 268435456,
+    "database_byte_enforcement": "MUST_BE_PROVEN_BEFORE_IMPLEMENTATION; PYTHON_SQLITE_PROGRESS_CALLBACK_ALONE_IS_INSUFFICIENT"
+  },
+  "malformed_or_corrupt_database": "Sanitize the provider error, close the connection, record AUDIT_ABORTED or AUDIT_FAILED, and do not repair or retry.",
+  "all_paths": "Connection closure and a durable terminal event are mandatory."
+}

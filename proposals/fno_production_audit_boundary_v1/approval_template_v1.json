@@ -1,0 +1,81 @@
+{
+  "schema_version": "fno_production_audit_approval_proposal_v1",
+  "template_only": true,
+  "usable": false,
+  "approval_payload_sha256": "NOT_SEALED_PROPOSAL_ONLY",
+  "approval_id": "NOT_ISSUED_PROPOSAL_ONLY",
+  "approval_type": "EXACT_FNO_DATA_QUALITY_AUDIT_STAGE_1_3_ONE_USE_V1",
+  "owner_identity_classification": "PROJECT_OWNER_NOT_ASSERTED_TEMPLATE",
+  "issued_at": "NOT_ISSUED",
+  "expires_at": "NOT_ISSUED_SHORT_EXPIRY_REQUIRED",
+  "one_use": true,
+  "approved_attempt_id": "NOT_DERIVED_OR_APPROVED",
+  "approved_attempt_derivation_rule": "sha256(canonical approval body without approval_payload_sha256) plus exact operator nonce; final choice requires review",
+  "approved_audit_stages": [1, 2, 3],
+  "audit_specification": {
+    "path": "docs/quarantined_proposals/local_fno_audit_stage_1_3/audit_scope_v1.json",
+    "sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d"
+  },
+  "exact_source_commit": "REQUIRED_FUTURE_REVIEWED_IMPLEMENTATION_COMMIT",
+  "exact_research_state_fingerprint": "REQUIRED_FUTURE_CURRENT_FINGERPRINT",
+  "pre_research_pdf_sha256": "REQUIRED_FUTURE_CURRENT_REVIEWED_PDF_HASH",
+  "owner_review_record_sha256": "REQUIRED_FUTURE_POST_PDF_OWNER_REVIEW_HASH",
+  "database_binding": {
+    "sanitized_alias": "PRIVATE_FNO_DATABASE_V1",
+    "binding_anchor_sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc",
+    "configuration_file_sha256": "cb68999f6e0dd16796d017f1104cc630483ada44ed1959143b99c9e9d11d29a2",
+    "approved_locator_key": "paths.fno_db",
+    "locator_value_disclosure_permitted": false,
+    "sampled_identity_algorithm": "ORDERED_64_POSITION_SAMPLED_IDENTITY_V1",
+    "sampled_identity_root": "b1b8c0ca1338d477987da28e6d9647b151c120a0eac7bb17c9e9293edfd4bc47",
+    "expected_size_bytes": 48345137152,
+    "expected_modification_time_ns": 1786676996980301700,
+    "expected_header_sha256": "9d708fa6ca29946338e85c37c74cfd058312013721a348278981756067faedc2",
+    "full_file_hash_available": false,
+    "sidecar_state": "UNRESOLVED_REQUIRES_EXACT_FUTURE_BINDING"
+  },
+  "database_open": {
+    "mode": "READ_ONLY_URI_MODE_RO_NO_CREATE",
+    "maximum_connection_count": 1,
+    "query_only_must_be_verified": true,
+    "extension_loading": false,
+    "attach_detach": false
+  },
+  "permitted_statement_classes": [
+    "EXACT_QUERY_ONLY_AND_BUSY_TIMEOUT_PRAGMAS",
+    "EXACT_SQLITE_SCHEMA_INVENTORY_SELECT",
+    "IDENTIFIER_ESCAPED_TABLE_INFO_INDEX_LIST_INDEX_INFO_FOREIGN_KEY_LIST",
+    "HASH_BOUND_EXPLAIN_QUERY_PLAN_ONLY"
+  ],
+  "prohibited_statements_and_operations": [
+    "arbitrary SQL", "multiple statements", "user or market table row reads",
+    "ATTACH", "DETACH", "DDL", "DML", "VACUUM", "REINDEX", "ANALYZE",
+    "writable PRAGMAs", "extension loading", "database creation", "repair",
+    "migration", "export"
+  ],
+  "resource_budgets": {
+    "maximum_connection_count": 1,
+    "maximum_attempted_statements": 50,
+    "maximum_execution_seconds": 1200,
+    "per_statement_seconds": 5,
+    "maximum_result_rows_total": 25000,
+    "maximum_database_bytes_read": 268435456,
+    "database_byte_budget_enforcement": "REQUIRED_NOT_IMPLEMENTED_BLOCKING_DECISION",
+    "maximum_output_bytes": 26214400,
+    "maximum_provenance_files": 500,
+    "maximum_provenance_bytes": 536870912
+  },
+  "permitted_output_contract": {
+    "path": "docs/quarantined_proposals/local_fno_audit_stage_1_3/expected_outputs_v1.json",
+    "sha256": "b1d05cfba2de056156d07c4f93512372af9eafd6f2de7d682404050e742f0d8a"
+  },
+  "network_permitted": false,
+  "broker_permitted": false,
+  "analysis_permitted": false,
+  "scoring_permitted": false,
+  "simulation_permitted": false,
+  "backtesting_permitted": false,
+  "trading_permitted": false,
+  "explicit_approval_statement": "NOT_SUPPLIED_PROPOSAL_ONLY",
+  "generic_language_is_authority": false
+}

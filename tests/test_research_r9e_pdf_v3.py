@@ -65,9 +65,12 @@ def test_v3_preserves_the_exact_r9d_binding_but_is_stale_after_r9f():
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
     assert record["research_state_fingerprint"] == EXPECTED_STATE
     assert record["research_state_file_count"] == 237
-    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert record["staleness"]["current_research_state_fingerprint"] == (
+        "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db"
+    )
+    assert state["sha256"] == "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef"
     assert state["sha256"] != EXPECTED_STATE
-    assert state["file_count"] == record["staleness"]["current_research_state_file_count"]
+    assert state["file_count"] == 252
     assert record["summarized_source_commit"] == (
         "450e976ae472fa440a704c74ad959b60f1113219"
     )

@@ -1,0 +1,52 @@
+{
+  "schema_version": "fno_production_audit_verification_implementation_proposal_v1",
+  "proposal_only": true,
+  "implementation_authorized": false,
+  "test_matrix": [
+    "exact approval field, hash, time, owner, attempt, stage and input binding",
+    "template, generic-language, missing, expired, changed and replayed approval rejection",
+    "duplicate registration, atomic double-consumption and concurrent attempt rejection",
+    "crash after consumption and missing-terminal reconciliation",
+    "path, symlink, reparse, substitution and private-path disclosure rejection",
+    "main database and WAL/SHM/journal mutation before and during audit",
+    "mode=ro plus query_only, authorizer, extension, ATTACH and arbitrary-SQL defenses",
+    "statement time, count, row, database-byte and output-byte budget enforcement",
+    "deterministic ordering, serialization, artifact hashes and atomic finalization",
+    "malformed/corrupt database handling with no repair or retry",
+    "network, broker, analysis, scoring, simulation, backtesting and trading absence",
+    "audit evidence remains noncanonical and nonpromotable",
+    "protected evidence and previous PDFs remain byte-exact"
+  ],
+  "operator_review_checklist": [
+    "Confirm PDF v5 or later is current and explicitly reviewed after generation.",
+    "Confirm the proposal has been separately reviewed and implementation is explicitly authorized.",
+    "Confirm source commit, research fingerprint, specification and every input hash match.",
+    "Confirm approval is exact, short-lived, registered, unused and names one attempt.",
+    "Confirm private locator value is not displayed or committed.",
+    "Confirm main-file and sidecar policy is resolved and current identity matches.",
+    "Confirm output and registry roots are outside source and provenance directories.",
+    "Confirm no network, broker, research, scoring, simulation or backtest dependency is reachable.",
+    "Confirm resource budgets are technically enforced, not merely declared.",
+    "Stop on any mismatch; do not repair, retry or broaden scope."
+  ],
+  "implementation_sequence": [
+    "Generate PDF v5 summarizing this proposal and unresolved decisions.",
+    "Obtain explicit owner review of PDF v5.",
+    "Resolve sidecar consistency, database-byte accounting and attempt-ID decisions.",
+    "Prepare a separate exact implementation authorization request.",
+    "Implement production approval as a distinct type; do not weaken synthetic validation.",
+    "Implement locator-to-bound-handle validation without tracked path disclosure.",
+    "Implement durable pre-connection consumption and terminal reconciliation.",
+    "Implement the one-connection enumerated-query boundary and enforced budgets.",
+    "Pass adversarial offline synthetic tests and independent code review.",
+    "Generate a new current status PDF if research state changed.",
+    "Obtain a separate exact one-use audit approval before the first connection."
+  ],
+  "release_blockers": [
+    "sidecar consistency policy unresolved",
+    "database-byte budget enforcement unresolved",
+    "attempt-ID derivation versus explicit binding unresolved",
+    "no PDF v5 owner review",
+    "no separate implementation authorization"
+  ]
+}

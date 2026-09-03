@@ -1,0 +1,22 @@
+{
+  "schema_version": "fno_locator_binding_contract_v1",
+  "authorized_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION",
+  "configuration_source": "Data test/config/config.toml",
+  "configuration_key": "paths.fno_db",
+  "sanitized_alias": "PRIVATE_FNO_DATABASE_V1",
+  "sampling_algorithm": "ORDERED_64_POSITION_SAMPLED_IDENTITY_V1",
+  "header_bytes": 100,
+  "chunk_size_bytes": 4194304,
+  "nominal_positions": 64,
+  "interior_positions": 62,
+  "maximum_total_raw_bytes_read": 268435556,
+  "sample_passes": 1,
+  "full_file_hash": false,
+  "database_connection_permitted": false,
+  "sql_permitted": false,
+  "schema_inspection_permitted": false,
+  "market_row_access_permitted": false,
+  "audit_permitted": false,
+  "production_activation_permitted": false,
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE"
+}

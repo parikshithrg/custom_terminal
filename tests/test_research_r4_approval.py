@@ -426,14 +426,14 @@ def test_entrypoint_inventory_accounts_for_every_non_test_python_main():
             if "__main__" in path.read_text(encoding="utf-8"):
                 discovered.add(relative)
     accounted = dict(inventory["executable_paths"])
-    r7_delta_path = ROOT / "specs" / "research_r7_entrypoint_delta_v1.json"
-    if r7_delta_path.is_file():
-        r7_delta = json.loads(r7_delta_path.read_text(encoding="utf-8"))
-        for entry in r7_delta["added_executable_entrypoints"]:
+    for delta_path in sorted((ROOT / "specs").glob("research_*_entrypoint_delta_v1.json")):
+        delta = json.loads(delta_path.read_text(encoding="utf-8"))
+        for entry in delta.get("added_executable_entrypoints", []):
             accounted[entry["path"]] = entry["classification"]
     assert discovered == set(accounted)
     assert set(accounted.values()) <= {
-        "CANONICAL_GOVERNED", "DEVELOPMENT_ONLY_NONCANONICAL", "DEPRECATED", "UNSAFE_BYPASS"
+        "CANONICAL_GOVERNED", "DEVELOPMENT_ONLY_NONCANONICAL", "DEPRECATED",
+        "UNSAFE_BYPASS", "OWNER_APPROVED_FILESYSTEM_ONLY_BINDING_PREPARATION",
     }
     assert inventory["unsafe_bypass_count"] == 0
     for entry in inventory["callable_entrypoints"]:

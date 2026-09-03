@@ -1,0 +1,20 @@
+{
+  "schema_version": "research_entrypoint_delta_v1",
+  "milestone": "R.9F",
+  "added_executable_entrypoints": [
+    {
+      "path": "tools/prepare_fno_locator_binding.py",
+      "classification": "OWNER_APPROVED_FILESYSTEM_ONLY_BINDING_PREPARATION",
+      "database_connection": false,
+      "sql": false,
+      "network": false,
+      "market_rows": false,
+      "audit": false,
+      "activation": false,
+      "required_review_record": "docs/project_status/pre_research_review_record_v3.json",
+      "exact_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
+    }
+  ],
+  "removed_entrypoints": [],
+  "unsafe_bypass_count": 0
+}

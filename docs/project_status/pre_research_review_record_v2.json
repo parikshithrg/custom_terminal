@@ -32,24 +32,52 @@
   "covered_future_scope": [
     "FNO_PRODUCTION_ENABLEMENT_DESIGN_AND_SYNTHETIC_TESTING"
   ],
-  "review_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "review_status": "REPORT_REVIEWED_APPROVED",
   "report_current": true,
   "supersedes": "docs/project_status/pre_research_review_record_v1.json",
   "superseded_by": null,
   "reviewer_approval": {
-    "approved_at": null,
-    "approval_kind": null,
-    "approval_statement": null,
-    "reviewer_classification": null
+    "approved_at": "2026-09-03T03:03:44.5202004Z",
+    "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
+    "approval_statement": "The project owner reviewed Market System Development - Status and Pre-Research Review v2 and approved proceeding only to FNO_PRODUCTION_ENABLEMENT_DESIGN_AND_SYNTHETIC_TESTING. Real database access remains blocked until synthetic testing and all later authorization-ladder gates are complete. Market analysis, scoring, and recommendations remain future candidates requiring separate governance; broker actions and trading remain prohibited.",
+    "reviewer_classification": "PROJECT_OWNER"
   },
   "reviewer_questions": [
-    {"question": 1, "answer": null},
-    {"question": 2, "answer": null},
-    {"question": 3, "answer": null},
-    {"question": 4, "answer": null},
-    {"question": 5, "answer": null},
-    {"question": 6, "answer": null},
-    {"question": 7, "answer": null}
+    {
+      "question": 1,
+      "decision": "APPROVED",
+      "answer": "The summary is accurate enough to proceed."
+    },
+    {
+      "question": 2,
+      "decision": "CONFIRMED",
+      "answer": "version2.0 should remain separate and reference-only."
+    },
+    {
+      "question": 3,
+      "decision": "APPROVED",
+      "answer": "Proceed to the bounded next steps: production-enablement design and synthetic testing."
+    },
+    {
+      "question": 4,
+      "decision": "CONFIRMED_WITH_LATER_GATES_REQUIRED",
+      "answer": "Do not access the real database until synthetic testing is complete. Completion of synthetic testing does not itself authorize access; implementation review, exact database binding, and a separate exact one-use audit approval remain required."
+    },
+    {
+      "question": 5,
+      "decision": "CURRENTLY_BLOCKED_FUTURE_CANDIDATES_RETAINED",
+      "answer": "Trading and broker actions are not authorized. Market analysis, scoring, and recommendations remain on the future-action list but are not authorized by this review and require separate research governance."
+    },
+    {
+      "question": 6,
+      "decision": "NO_CORRECTIONS",
+      "answer": "No corrections requested."
+    },
+    {
+      "question": 7,
+      "decision": "DOCUMENT_LIMITATION",
+      "answer": "Keep the two Windows symlink-test skips documented for now."
+    }
   ],
   "execution_prohibitions": [
     "NO_PRODUCTION_FNO_LOCATOR_ENABLEMENT",
@@ -61,6 +89,21 @@
     "NO_SCORING_RANKING_OR_RECOMMENDATIONS",
     "NO_BROKER_ACTION_OR_TRADING"
   ],
-  "research_execution_status": "BLOCKED_PENDING_EXPLICIT_OWNER_REVIEW_AND_SEPARATE_APPROVALS",
-  "statement": "Version 2 summarizes the project through R.9B and is pending exact post-generation owner review. It covers only a possible next production-enablement design and synthetic-testing milestone. It does not authorize production locator resolution, real database access, audit approval, audit execution, market research, or trading."
+  "future_action_candidates": [
+    "MARKET_ANALYSIS_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE",
+    "SCORING_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE",
+    "RECOMMENDATIONS_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE"
+  ],
+  "real_database_access_condition": {
+    "currently_authorized": false,
+    "synthetic_testing_required_first": true,
+    "synthetic_testing_completion_is_sufficient_authority": false,
+    "later_required_gates": [
+      "PRODUCTION_ENABLEMENT_IMPLEMENTATION_REVIEW",
+      "EXACT_DATABASE_BINDING",
+      "EXACT_REGISTERED_ONE_USE_AUDIT_APPROVAL"
+    ]
+  },
+  "research_execution_status": "REPORT_GATE_SATISFIED_FOR_DESIGN_ONLY_SEPARATE_AUDIT_APPROVAL_REQUIRED",
+  "statement": "The owner approved Version 2 after generation for FNO_PRODUCTION_ENABLEMENT_DESIGN_AND_SYNTHETIC_TESTING only. This review does not authorize production locator resolution, real database access, audit approval, audit execution, market research, scoring, recommendations, broker actions, or trading. Market analysis, scoring, and recommendations remain future candidates subject to separate governance."
 }

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import copy
 import inspect
 import json
 from pathlib import Path
@@ -10,7 +9,6 @@ import pytest
 from market_intel.foundation import local_fno_audit as audit
 from research_contracts.legacy_ledger import sha256_file
 from research_contracts.pre_research_review import (
-    PreResearchReviewError,
     compute_research_state_fingerprint,
     validate_review_record,
 )
@@ -74,38 +72,41 @@ def test_v2_bytes_fingerprint_and_external_bindings_are_exact():
     assert version2["tree"] == "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f"
 
 
-def test_v2_starts_pending_with_every_reviewer_field_unanswered():
+def test_v2_records_exact_post_generation_owner_review():
     record = _load(V2_RECORD)
-    assert record["review_status"] == "REPORT_GENERATED_PENDING_REVIEW"
+    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
     assert record["report_current"] is True
     assert record["superseded_by"] is None
-    assert set(record["reviewer_approval"].values()) == {None}
+    approval = record["reviewer_approval"]
+    assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
+    assert approval["reviewer_classification"] == "PROJECT_OWNER"
+    assert approval["approved_at"] > record["generation_timestamp"]
     assert [item["question"] for item in record["reviewer_questions"]] == list(range(1, 8))
-    assert all(item["answer"] is None for item in record["reviewer_questions"])
+    assert all(item["answer"] and item["decision"] for item in record["reviewer_questions"])
+    decisions = {item["question"]: item["decision"] for item in record["reviewer_questions"]}
+    assert decisions[2] == "CONFIRMED"
+    assert decisions[6] == "NO_CORRECTIONS"
+    assert decisions[7] == "DOCUMENT_LIMITATION"
 
 
-def test_pending_v2_cannot_satisfy_report_gate():
+def test_reviewed_v2_satisfies_only_the_design_report_gate():
     record = _load(V2_RECORD)
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
-    with pytest.raises(PreResearchReviewError, match="not been explicitly reviewed"):
-        validate_review_record(
-            record,
-            preregistration=_v2_preregistration(record),
-            repository_root=ROOT,
-            policy=policy,
-        )
+    result = validate_review_record(
+        record,
+        preregistration=_v2_preregistration(record),
+        repository_root=ROOT,
+        policy=policy,
+    )
+    assert result["report_gate_satisfied"] is True
+    assert result["covered_scope"] == "FNO_PRODUCTION_ENABLEMENT_DESIGN_AND_SYNTHETIC_TESTING"
+    assert result["research_execution_authorized"] is False
+    assert result["separate_run_approval_required"] is True
 
 
-def test_even_hypothetical_pdf_approval_cannot_authorize_audit_execution():
-    record = copy.deepcopy(_load(V2_RECORD))
-    record["review_status"] = "REPORT_REVIEWED_APPROVED"
-    record["reviewer_approval"] = {
-        "approved_at": "2026-09-03T03:00:00Z",
-        "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
-        "approval_statement": "Synthetic in-memory contract check for the covered design scope.",
-        "reviewer_classification": "TEST_FIXTURE",
-    }
+def test_pdf_approval_cannot_authorize_audit_execution():
+    record = _load(V2_RECORD)
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
     result = validate_review_record(
@@ -118,6 +119,25 @@ def test_even_hypothetical_pdf_approval_cannot_authorize_audit_execution():
     assert result["research_execution_authorized"] is False
     assert result["separate_run_approval_required"] is True
     assert audit.AUDIT_APPROVAL_TYPE == "LOCAL_DATA_AUDIT_STAGE_1_3_APPROVAL_V1"
+
+
+def test_real_database_and_research_remain_blocked_after_review():
+    record = _load(V2_RECORD)
+    condition = record["real_database_access_condition"]
+    assert condition["currently_authorized"] is False
+    assert condition["synthetic_testing_required_first"] is True
+    assert condition["synthetic_testing_completion_is_sufficient_authority"] is False
+    assert condition["later_required_gates"] == [
+        "PRODUCTION_ENABLEMENT_IMPLEMENTATION_REVIEW",
+        "EXACT_DATABASE_BINDING",
+        "EXACT_REGISTERED_ONE_USE_AUDIT_APPROVAL",
+    ]
+    assert record["future_action_candidates"] == [
+        "MARKET_ANALYSIS_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE",
+        "SCORING_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE",
+        "RECOMMENDATIONS_SUBJECT_TO_SEPARATE_RESEARCH_GOVERNANCE",
+    ]
+    assert "NO_BROKER_ACTION_OR_TRADING" in record["execution_prohibitions"]
 
 
 def test_v2_scope_is_design_only_and_excludes_real_database_access():

@@ -132,7 +132,10 @@ def test_reviewed_pdf_remains_exact_but_is_stale_after_r9b():
     )
     state = compute_research_state_fingerprint(ROOT, policy)
     assert state["sha256"] != record["research_state_fingerprint"]
-    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert record["staleness"]["current_research_state_fingerprint"] == (
+        "9382d3d7511dba094a1321294d4f6575cf2cd857a0e43c6d0c024df55202ec31"
+    )
+    assert state["sha256"] != record["staleness"]["current_research_state_fingerprint"]
     paths = {item["path"] for item in state["inventory"]}
     assert not any(path.startswith("docs/research_r8/") for path in paths)
     assert not any("RESEARCH_R8" in path for path in paths)

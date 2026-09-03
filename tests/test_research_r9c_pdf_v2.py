@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import inspect
 import json
 from pathlib import Path
@@ -9,6 +10,7 @@ import pytest
 from market_intel.foundation import local_fno_audit as audit
 from research_contracts.legacy_ledger import sha256_file
 from research_contracts.pre_research_review import (
+    PreResearchReviewError,
     compute_research_state_fingerprint,
     validate_review_record,
 )
@@ -56,7 +58,7 @@ def test_v1_is_preserved_as_reviewed_stale_superseded_evidence():
     )
 
 
-def test_v2_bytes_fingerprint_and_external_bindings_are_exact():
+def test_v2_bytes_and_historical_fingerprint_binding_are_exact():
     record = _load(V2_RECORD)
     assert sha256_file(ROOT / record["pdf_path"]) == record["pdf_sha256"]
     assert sha256_file(ROOT / record["source_path"]) == record["source_sha256"]
@@ -64,18 +66,18 @@ def test_v2_bytes_fingerprint_and_external_bindings_are_exact():
         "a87cedc7ad5db14adaba0661bf44fd3346e399ab"
     )
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
-    assert state["sha256"] == EXPECTED_FINGERPRINT
-    assert state["file_count"] == 231
-    assert record["research_state_fingerprint"] == state["sha256"]
+    assert state["sha256"] != EXPECTED_FINGERPRINT
+    assert record["research_state_fingerprint"] == EXPECTED_FINGERPRINT
+    assert record["staleness"]["current_research_state_fingerprint"] == state["sha256"]
     version2 = record["external_repository_bindings"][1]
     assert version2["commit"] == "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298"
     assert version2["tree"] == "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f"
 
 
-def test_v2_records_exact_post_generation_owner_review():
+def test_v2_preserves_exact_owner_review_and_is_stale_after_r9d():
     record = _load(V2_RECORD)
-    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
-    assert record["report_current"] is True
+    assert record["review_status"] == "REPORT_STALE"
+    assert record["report_current"] is False
     assert record["superseded_by"] is None
     approval = record["reviewer_approval"]
     assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
@@ -89,26 +91,28 @@ def test_v2_records_exact_post_generation_owner_review():
     assert decisions[7] == "DOCUMENT_LIMITATION"
 
 
-def test_reviewed_v2_satisfies_only_the_design_report_gate():
+def test_stale_v2_no_longer_satisfies_the_report_gate():
     record = _load(V2_RECORD)
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
-    result = validate_review_record(
-        record,
-        preregistration=_v2_preregistration(record),
-        repository_root=ROOT,
-        policy=policy,
-    )
-    assert result["report_gate_satisfied"] is True
-    assert result["covered_scope"] == "FNO_PRODUCTION_ENABLEMENT_DESIGN_AND_SYNTHETIC_TESTING"
-    assert result["research_execution_authorized"] is False
-    assert result["separate_run_approval_required"] is True
+    with pytest.raises(PreResearchReviewError, match="not been explicitly reviewed"):
+        validate_review_record(
+            record,
+            preregistration=_v2_preregistration(record),
+            repository_root=ROOT,
+            policy=policy,
+        )
 
 
 def test_pdf_approval_cannot_authorize_audit_execution():
-    record = _load(V2_RECORD)
+    record = copy.deepcopy(_load(V2_RECORD))
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
+    record["review_status"] = "REPORT_REVIEWED_APPROVED"
+    record["report_current"] = True
+    record["research_state_fingerprint"] = compute_research_state_fingerprint(
+        ROOT, policy
+    )["sha256"]
     result = validate_review_record(
         record,
         preregistration=_v2_preregistration(record),

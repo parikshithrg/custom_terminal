@@ -717,6 +717,14 @@ def execute_approved_stage_1_3_audit(
         if not actual <= set(PERMITTED_OUTPUTS):
             raise LocalFnoAuditError("unexpected audit output exists")
         os.replace(temp, final)
+        terminal_recorder = getattr(registry, "record_terminal", None)
+        if callable(terminal_recorder):
+            terminal_recorder(
+                approval.approval_id,
+                attempt_id,
+                terminal,
+                {"output_alias": f"AUDIT_OUTPUT/{attempt_id}"},
+            )
 
     attempt = AuditAttempt(attempt_id, approval.approval_id, SYNTHETIC_FIXTURE_CLASS,
                            terminal, f"AUDIT_OUTPUT/{attempt_id}")

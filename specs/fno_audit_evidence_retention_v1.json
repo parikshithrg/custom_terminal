@@ -1,0 +1,17 @@
+{
+  "schema_version": "local_fno_audit_evidence_retention_v1",
+  "r9d_scope": "TEMPORARY_SYNTHETIC_FIXTURES_ONLY",
+  "task_scoped_directory_required": true,
+  "source_database_colocation_prohibited": true,
+  "atomic_finalization_required": true,
+  "completed_attempt_replacement_prohibited": true,
+  "exact_artifact_hashes_required": true,
+  "approval_event_head_required": true,
+  "unexpected_outputs_rejected": true,
+  "output_byte_limit_enforced": true,
+  "restore_verification_state": "RESTORE_NOT_TESTED_BACKUP_NOT_CLAIMED",
+  "backup_verified": false,
+  "local_retention_state": "LOCAL_TASK_SCOPED_SYNTHETIC_ONLY",
+  "canonical": false,
+  "promotion_eligible": false
+}

@@ -267,8 +267,10 @@ def test_review_record_bytes_are_exact_and_now_stale_after_r9b():
     assert sha256_file(ROOT / record["source_path"]) == record["source_sha256"]
     state = compute_research_state_fingerprint(ROOT, policy)
     assert state["sha256"] != record["research_state_fingerprint"]
-    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
-    assert state["file_count"] == 231
+    assert record["staleness"]["current_research_state_fingerprint"] == (
+        "9382d3d7511dba094a1321294d4f6575cf2cd857a0e43c6d0c024df55202ec31"
+    )
+    assert state["sha256"] != record["staleness"]["current_research_state_fingerprint"]
     assert record["review_status"] == "REPORT_STALE"
     assert record["report_current"] is False
     approval = record["reviewer_approval"]

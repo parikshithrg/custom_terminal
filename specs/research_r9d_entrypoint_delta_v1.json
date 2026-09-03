@@ -1,0 +1,31 @@
+{
+  "delta_version": "research_r9d_entrypoint_delta_v1",
+  "base_inventory": "research_r7_entrypoint_delta_v1",
+  "base_commit": "a08ca45c30484f331401e9f84f898c76db4274ee",
+  "added_callable_entrypoints": [
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "callable": "DurableAuditRegistry.create_synthetic/register/consume/record_terminal",
+      "classification": "CANONICAL_GOVERNED",
+      "execution_capability": "SYNTHETIC_AUDIT_GOVERNANCE_ONLY",
+      "canonical_condition": "Temporary marked roots only; approvals and events remain non-market governance evidence."
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "callable": "DurableAuditEvidenceStore.create_synthetic/finalize",
+      "classification": "CANONICAL_GOVERNED",
+      "execution_capability": "SYNTHETIC_AUDIT_EVIDENCE_ONLY",
+      "canonical_condition": "Temporary marked roots, bounded outputs, noncanonical and nonpromotable manifests."
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "callable": "execute_production_stage_1_3_audit",
+      "classification": "CANONICAL_GOVERNED",
+      "execution_capability": "FAIL_CLOSED_DISABLED_BOUNDARY",
+      "canonical_condition": "Always fails before configuration reads, path resolution, attempts, filesystem identity, or SQLite access in R.9D."
+    }
+  ],
+  "production_locator_state": "PRODUCTION_LOCATOR_DISABLED_PENDING_EXACT_BINDING",
+  "unsafe_bypass_count": 0,
+  "real_database_access_capability": false
+}

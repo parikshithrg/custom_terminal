@@ -1,0 +1,28 @@
+{
+  "schema_version": "local_fno_durable_audit_registry_v1",
+  "storage_engine": "SQLite",
+  "purpose": "Separate task-scoped audit governance; never stored in or beside the F&O database",
+  "r9d_initialization": "TEMPORARY_SYNTHETIC_ROOTS_ONLY",
+  "production_registry_initialized": false,
+  "tables": {
+    "approvals": "Immutable exact approval payload and SHA-256",
+    "consumptions": "Immutable unique approval-to-attempt one-use binding",
+    "attempts": "Crash-detectable projection; hash-chained events are authoritative",
+    "events": "Append-only independently verified SHA-256 chain"
+  },
+  "atomic_consumption": {
+    "mechanism": "SQLite BEGIN IMMEDIATE plus unique constraints",
+    "happens_before_first_sqlite_target_connection": true,
+    "cross_process": true,
+    "crash_after_consumption_state": "CONSUMED_BEFORE_CONNECTION_WITH_INCOMPLETE_ATTEMPT"
+  },
+  "terminal_states": ["COMPLETED", "ABORTED", "FAILED"],
+  "tamper_controls": [
+    "approval payload hash verification",
+    "append-only event triggers",
+    "event hash-chain verification",
+    "attempt projection reconciliation"
+  ],
+  "market_research_catalog_reuse": false,
+  "canonical_market_evidence": false
+}

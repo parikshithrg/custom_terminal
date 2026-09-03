@@ -1,0 +1,16 @@
+{
+  "schema_version": "local_fno_production_locator_contract_v1",
+  "state": "PRODUCTION_LOCATOR_DISABLED_PENDING_EXACT_BINDING",
+  "configuration_file_reference": "REDACTED_CONFIGURATION_REFERENCE_PLACEHOLDER",
+  "configuration_key": "paths.fno_db",
+  "expected_configuration_sha256": "REQUIRED_AFTER_SEPARATE_BINDING_REVIEW",
+  "target_classification": "PRODUCTION_LOCAL_FNO_DATABASE",
+  "path_redaction_alias": "PRIVATE_FNO_DATABASE_ALIAS_UNBOUND",
+  "required_sampled_identity_root": "REQUIRED_AFTER_AUTHORIZED_IDENTITY_CEREMONY",
+  "permitted_stages": [1, 2, 3],
+  "template_only": true,
+  "usable": false,
+  "locator_resolution_implemented": false,
+  "configuration_value_read_permitted": false,
+  "r9d_deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE"
+}

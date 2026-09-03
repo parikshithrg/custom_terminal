@@ -1,0 +1,36 @@
+{
+  "schema_version": "local_fno_production_activation_v1",
+  "activation_state": "TEMPLATE_NOT_APPROVED_NOT_USABLE",
+  "template_only": true,
+  "usable": false,
+  "audit_execution_authorized": false,
+  "locator_resolution_authorized": false,
+  "auditor_source_commit": "REQUIRED_COMMITTED_R9D_OR_LATER_SOURCE_COMMIT",
+  "pdf_binding": {
+    "pdf_path": "output/pdf/market_system_status_pre_research_review_v3.pdf",
+    "pdf_sha256": null,
+    "review_record_path": null,
+    "reviewed_after_generation": false,
+    "covered_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
+  },
+  "proposal_binding": {
+    "proposal_id": "local_fno_audit_stage_1_3_v1",
+    "proposal_manifest_sha256": "4fe0091ac405fbd5eac027038f6350b3b6a8bbe88d9141a982516b6489e95ed8",
+    "audit_scope_sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d",
+    "resource_envelope_sha256": "1aec4f54a6e3cf88cfa1ecde91b5b8c1579886d38a5282e5131471b2694436b5",
+    "expected_outputs_sha256": "b1d05cfba2de056156d07c4f93512372af9eafd6f2de7d682404050e742f0d8a"
+  },
+  "production_locator_configuration_sha256": null,
+  "redacted_database_alias": null,
+  "database_sampled_identity_root": null,
+  "approved_stages": [],
+  "resource_envelope": null,
+  "expected_outputs": [],
+  "issued_at": null,
+  "expires_at": null,
+  "owner_identity": null,
+  "exact_one_use_approval_id": null,
+  "activation_payload_sha256": null,
+  "deliberately_unsatisfied_field": "pdf_binding.pdf_sha256",
+  "statement": "Non-executable placeholder. R.9D cannot seal, register, or use this object."
+}

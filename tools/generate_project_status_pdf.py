@@ -1,4 +1,4 @@
-"""Render the tracked R.7 owner-review Markdown into a polished PDF only."""
+"""Render a tracked owner-review Markdown source into a polished PDF."""
 
 from __future__ import annotations
 
@@ -143,7 +143,7 @@ def _story(markdown: str, doc_width: float):
     while index < len(lines):
         line = lines[index]
         stripped = line.strip()
-        if stripped == "```":
+        if stripped.startswith("```"):
             flush_paragraph()
             if in_code:
                 story.append(Paragraph("<br/>".join(html.escape(x) for x in code_lines), styles["code"]))
@@ -156,7 +156,11 @@ def _story(markdown: str, doc_width: float):
             index += 1
             continue
         if stripped == "[PAGE BREAK]":
-            flush_paragraph(); story.append(PageBreak()); in_list = False; index += 1; continue
+            flush_paragraph()
+            story.extend([PageBreak(), Spacer(1, 3 * mm)])
+            in_list = False
+            index += 1
+            continue
         if stripped.startswith("|"):
             flush_paragraph()
             table_lines = []
@@ -218,9 +222,9 @@ def render(source: Path, output: Path) -> None:
     doc = SimpleDocTemplate(
         str(output), pagesize=A4, rightMargin=20 * mm, leftMargin=20 * mm,
         topMargin=21 * mm, bottomMargin=18 * mm,
-        title="Two-Repository Market System - Status and Pre-Research Review",
+        title="Market System Development - Status and Pre-Research Review",
         author="custom_terminal project",
-        subject="R.7 owner-review status report; research remains blocked",
+        subject="Pre-research owner-review status; execution remains blocked",
     )
     story = _story(source.read_text(encoding="utf-8"), doc.width)
     doc.build(story, onFirstPage=_page, onLaterPages=_page)

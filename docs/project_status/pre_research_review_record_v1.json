@@ -34,7 +34,7 @@
   ],
   "review_status": "REPORT_STALE",
   "report_current": false,
-  "superseded_by": null,
+  "superseded_by": "docs/project_status/pre_research_review_record_v2.json",
   "staleness": {
     "detected_at": "2026-09-02T13:04:42.1220626+05:30",
     "reason": "R.9B added the research-relevant synthetic-only local F&O auditor implementation.",

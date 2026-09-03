@@ -68,21 +68,26 @@ def test_v3_binds_the_unchanged_r9d_research_state():
     )
 
 
-def test_v3_is_pending_with_exact_scope_and_no_owner_answers():
+def test_v3_records_exact_post_generation_owner_review_and_scope():
     record = _load(V3)
-    assert record["review_status"] == "REPORT_GENERATED_PENDING_REVIEW"
+    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
     assert record["report_current"] is True
-    assert record["reviewer_approval"] is None
+    approval = record["reviewer_approval"]
+    assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
+    assert approval["reviewer_classification"] == "PROJECT_OWNER"
+    assert approval["approved_at"] > record["generation_timestamp"]
     assert record["covered_future_scope"] == [
         "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
     ]
     assert len(record["reviewer_questions"]) == 9
-    assert all(item["answer"] is None and item["decision"] == "UNRESOLVED"
+    assert all(item["answer"] and item["decision"] != "UNRESOLVED"
                for item in record["reviewer_questions"])
 
 
 def test_pending_v3_fails_the_review_gate():
     record = _load(V3)
+    record["review_status"] = "REPORT_GENERATED_PENDING_REVIEW"
+    record["reviewer_approval"] = None
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
     preregistration = {
@@ -103,11 +108,46 @@ def test_pending_v3_fails_the_review_gate():
         )
 
 
-def test_v3_explicitly_authorizes_no_execution_or_database_access():
+def test_reviewed_v3_passes_only_the_report_gate_without_execution_authority():
+    record = _load(V3)
+    policy = _load(POLICY)
+    policy["external_repository_bindings"] = record["external_repository_bindings"]
+    preregistration = {
+        "proposed_research_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION",
+        "pre_research_review": {
+            "report_id": record["report_id"],
+            "report_version": "v3",
+            "pdf_sha256": record["pdf_sha256"],
+            "research_state_fingerprint": record["research_state_fingerprint"],
+            "review_record_path": record["record_path"],
+            "external_repository_bindings": record["external_repository_bindings"],
+            "covered_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION",
+        },
+    }
+    result = validate_review_record(
+        record, preregistration=preregistration, repository_root=ROOT, policy=policy
+    )
+    assert result["report_gate_satisfied"] is True
+    assert result["covered_scope"] == "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
+    assert result["research_execution_authorized"] is False
+    assert result["separate_run_approval_required"] is True
+
+
+def test_v3_authorizes_only_bounded_locator_binding_preparation():
     authority = _load(V3)["execution_authority"]
     assert authority["later_exact_audit_approval_required"] is True
-    assert all(value is False for key, value in authority.items()
-               if key != "later_exact_audit_approval_required")
+    assert authority["locator_binding_preparation_authorized"] is True
+    assert authority["configuration_value_read_authorized"] is True
+    assert authority["filesystem_identity_pass_authorized"] is True
+    for key in (
+        "sqlite_access_authorized",
+        "audit_execution_authorized",
+        "market_row_access_authorized",
+        "scoring_or_backtesting_authorized",
+        "broker_actions_authorized",
+        "trading_authorized",
+    ):
+        assert authority[key] is False
 
 
 def test_locator_resolution_and_production_activation_remain_impossible(monkeypatch):

@@ -35,62 +35,67 @@
   "covered_future_scope": [
     "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
   ],
-  "review_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "review_status": "REPORT_REVIEWED_APPROVED",
   "report_current": true,
   "supersedes": "docs/project_status/pre_research_review_record_v2.json",
   "superseded_by": null,
-  "reviewer_approval": null,
+  "reviewer_approval": {
+    "approved_at": "2026-09-03T07:18:15.0581612Z",
+    "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
+    "approval_statement": "The project owner reviewed Market System Development - Status and Pre-Research Review v3 and authorized only EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. Reading the configured locator value and performing the bounded filesystem identity pass are authorized for that later phase. SQLite connection, SQL, pragmas, schema inspection, market-row access, audit execution, market analysis, scoring, recommendations, broker actions and trading remain prohibited. The absolute path must remain private, sampled identity is not a full-file hash, and another exact approval is required before the first database connection.",
+    "reviewer_classification": "PROJECT_OWNER"
+  },
   "reviewer_questions": [
     {
       "question": 1,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "The summary is accurate enough.",
+      "decision": "APPROVED"
     },
     {
       "question": 2,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "version2.0 remains separate.",
+      "decision": "CONFIRMED"
     },
     {
       "question": 3,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "Authorize only EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION.",
+      "decision": "AUTHORIZED"
     },
     {
       "question": 4,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "Reading the configured locator and performing the bounded filesystem identity pass are authorized for the later preparation phase.",
+      "decision": "AUTHORIZED"
     },
     {
       "question": 5,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "SQLite connection, SQL, pragmas, schema inspection and market-row access remain prohibited for now.",
+      "decision": "CONFIRMED_PROHIBITED"
     },
     {
       "question": 6,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "The absolute path must remain private and only a sanitized alias may appear in committed evidence.",
+      "decision": "CONFIRMED"
     },
     {
       "question": 7,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "The sampled identity limitation is accepted; it is not a full-file hash.",
+      "decision": "ACCEPTED"
     },
     {
       "question": 8,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "Another exact approval is required before the first database connection.",
+      "decision": "CONFIRMED"
     },
     {
       "question": 9,
-      "answer": null,
-      "decision": "UNRESOLVED"
+      "answer": "No corrections for now.",
+      "decision": "NO_CORRECTIONS"
     }
   ],
   "execution_authority": {
-    "locator_binding_preparation_authorized": false,
-    "configuration_value_read_authorized": false,
-    "filesystem_identity_pass_authorized": false,
+    "locator_binding_preparation_authorized": true,
+    "configuration_value_read_authorized": true,
+    "filesystem_identity_pass_authorized": true,
     "sqlite_access_authorized": false,
     "audit_execution_authorized": false,
     "market_row_access_authorized": false,
@@ -101,6 +106,6 @@
   },
   "production_locator_state": "PRODUCTION_LOCATOR_DISABLED_PENDING_EXACT_BINDING",
   "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
-  "research_execution_status": "REPORT_GENERATED_PENDING_REVIEW",
-  "statement": "PDF v3 is generated and visually verified but has not been reviewed by the owner. It requests approval only for EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. Production locator resolution, configuration reading, filesystem identity work, SQLite access, audit execution, market-row access, scoring, backtesting, broker actions and trading remain unauthorized. A later exact one-use audit approval remains mandatory before the first database connection."
+  "research_execution_status": "REPORT_GATE_SATISFIED_FOR_LOCATOR_BINDING_PREPARATION_ONLY",
+  "statement": "The owner reviewed PDF v3 after generation and authorized only EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. The later preparation phase may read the configured locator value and perform the bounded filesystem identity pass described in the PDF. This review does not itself execute that phase and does not authorize SQLite access, audit execution, market-row access, market analysis, scoring, backtesting, recommendations, broker actions or trading. A later exact one-use audit approval remains mandatory before the first database connection."
 }

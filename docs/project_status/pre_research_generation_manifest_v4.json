@@ -1,0 +1,49 @@
+{
+  "schema_version": "pre_research_generation_manifest_v1",
+  "manifest_kind": "NON_APPROVAL_REPORT_GENERATION",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v4",
+  "milestone": "R.9G",
+  "summarized_source_commit": "b658033f7acf0fdc206831cedc5ef374c043e27d",
+  "generation_timestamp": "2026-09-03T07:59:03.7398987Z",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v4.md",
+  "source_sha256": "0c03197df4f3c6ef85112c407efe4f1321a8fcf509e962ac4c7edc5ec12bbab0",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v4.pdf",
+  "pdf_sha256": "02a76f6d46bc74a69b7f0b10331ae26da1d07d60934091ce9d31c0abe8cdaec9",
+  "generator_path": "tools/generate_project_status_pdf.py",
+  "generator_sha256": "fa3f68a85d0a6a2f8548492d4df387b50937e0f621f05cec8c3a1d43bb3ecb83",
+  "deterministic_render_verified": true,
+  "rendered_page_count": 14,
+  "visual_verification_result": "PASS_14_PAGES_NO_MATERIAL_DEFECTS",
+  "research_state_fingerprint": "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db",
+  "research_state_file_count": 242,
+  "evidence_inputs": [
+    {
+      "path": "evidence/fno_locator_binding_v1/anchor.json",
+      "sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc"
+    },
+    {
+      "path": "proposals/fno_locator_binding_v1/binding_proposal.json",
+      "sha256": "995524b670dc95b717fa7d4b27935c788d661bcf75b8f7f4400d76831a8f434f"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v3.pdf",
+      "sha256": "75af99e3e481a4d8e490e24cbf24c979a2111067412d2a14344630beaca8b2a2"
+    }
+  ],
+  "sampled_identity_root_sha256": "b1b8c0ca1338d477987da28e6d9647b151c120a0eac7bb17c9e9293edfd4bc47",
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "lifecycle_state": "PDF_V4_GENERATED_AWAITING_OWNER_REVIEW",
+  "proposed_next_scope": "EXACT_BINDING_REVIEW_AND_INTERLOCK_REMOVAL_PROPOSAL_ONLY",
+  "owner_review_recorded": false,
+  "interlock_change_authorized": false,
+  "database_connection_authorized": false,
+  "audit_authorized": false,
+  "market_row_access_authorized": false,
+  "analysis_authorized": false,
+  "scoring_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "statement": "This manifest records deterministic report generation only. It is not an owner-review record and creates no authority."
+}

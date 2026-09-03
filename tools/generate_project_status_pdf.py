@@ -5,8 +5,10 @@ from __future__ import annotations
 import argparse
 import html
 import re
+from functools import partial
 from pathlib import Path
 
+from reportlab import rl_config
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.pagesizes import A4
@@ -21,6 +23,7 @@ from reportlab.platypus import (
     Table,
     TableStyle,
 )
+from reportlab.pdfgen.canvas import Canvas
 
 
 INK = colors.HexColor("#18212B")
@@ -218,6 +221,9 @@ def _page(canvas, doc):
 
 
 def render(source: Path, output: Path) -> None:
+    # Apply ReportLab's process-wide deterministic mode as well as the explicit
+    # canvas flag; some releases consult this setting while building metadata.
+    rl_config.invariant = 1
     output.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(
         str(output), pagesize=A4, rightMargin=20 * mm, leftMargin=20 * mm,
@@ -227,7 +233,15 @@ def render(source: Path, output: Path) -> None:
         subject="Pre-research owner-review status; execution remains blocked",
     )
     story = _story(source.read_text(encoding="utf-8"), doc.width)
-    doc.build(story, onFirstPage=_page, onLaterPages=_page)
+    # ReportLab otherwise embeds wall-clock metadata. The invariant canvas makes
+    # identical Markdown and generator inputs produce identical PDF bytes.
+    canvasmaker = partial(Canvas, invariant=1, pageCompression=1)
+    doc.build(
+        story,
+        onFirstPage=_page,
+        onLaterPages=_page,
+        canvasmaker=canvasmaker,
+    )
 
 
 def main() -> int:

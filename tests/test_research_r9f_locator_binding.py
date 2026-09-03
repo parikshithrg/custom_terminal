@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 import pytest
@@ -220,6 +221,16 @@ def test_entrypoint_delta_is_exact_and_nonactivating():
     ))
 
 
+def test_cli_rejects_repeat_before_production_preparation_call():
+    tool = (
+        Path(__file__).parents[1] / "tools/prepare_fno_locator_binding.py"
+    ).read_text(encoding="utf-8")
+    guard_call = tool.index("_require_clean_source_and_ignored_private_destination(root)")
+    preparation_call = tool.index("binding = prepare_production_binding(")
+    assert guard_call < preparation_call
+    assert "binding ceremony already completed; repeat sampling is prohibited" in tool
+
+
 def test_implementation_has_no_sqlite_network_market_or_broker_path():
     source = Path(binding.__file__).read_text(encoding="utf-8")
     tool = (Path(__file__).parents[1] / "tools/prepare_fno_locator_binding.py").read_text(
@@ -246,3 +257,43 @@ def test_existing_production_interlock_remains_impossible():
     assert binding.PRODUCTION_INTERLOCK == boundary.DELIBERATE_INTERLOCK
     assert result["database_access_authorized"] is False
     assert result["audit_execution_authorized"] is False
+
+
+def test_real_binding_anchor_is_sanitized_nonactivating_and_exact():
+    root = Path(__file__).parents[1]
+    path = root / "evidence/fno_locator_binding_v1/anchor.json"
+    anchor = json.loads(path.read_text(encoding="utf-8"))
+    serialized = path.read_text(encoding="utf-8")
+    assert anchor["lifecycle_state"] == binding.PREPARED
+    assert anchor["sanitized_alias"] == binding.SANITIZED_ALIAS
+    assert anchor["source_commit"] == "816333959097519297b3095da9c81a1677f50bf8"
+    assert anchor["header"]["format_verdict"] == "SQLITE_MAGIC_PRESENT_RAW_BYTES_ONLY"
+    assert anchor["sampled_identity"]["algorithm_version"] == binding.SAMPLING_ALGORITHM
+    assert anchor["sampled_identity"]["unique_sample_count"] == 64
+    assert anchor["sampled_identity"]["total_raw_bytes_read"] == 268435556
+    assert anchor["sampled_identity"]["sample_pass_count"] == 1
+    assert anchor["stability"]["verdict"] == "STABLE_DURING_SINGLE_BOUNDED_PASS"
+    assert anchor["production_activation_eligible"] is False
+    for key in (
+        "database_connected", "sql_executed", "schema_inspected", "market_rows_read",
+        "audit_started", "analysis_started", "backtest_started", "trading_enabled",
+    ):
+        assert anchor[key] is False
+    assert not re.search(r"[A-Za-z]:[\\/]", serialized)
+    assert "/Users/" not in serialized and "\\Users\\" not in serialized
+
+
+def test_binding_proposal_is_exact_pending_and_not_an_activation():
+    root = Path(__file__).parents[1]
+    anchor_path = root / "evidence/fno_locator_binding_v1/anchor.json"
+    proposal_path = root / "proposals/fno_locator_binding_v1/binding_proposal.json"
+    anchor = json.loads(anchor_path.read_text(encoding="utf-8"))
+    proposal = json.loads(proposal_path.read_text(encoding="utf-8"))
+    assert proposal["binding_anchor_sha256"] == binding.sha256_bytes(
+        binding.canonical_json_bytes(anchor)
+    )
+    assert proposal["proposal_state"] == "PENDING_PDF_V4_AND_EXPLICIT_OWNER_REVIEW"
+    assert proposal["production_activation_eligible"] is False
+    assert proposal["activation_requested"] is False
+    assert proposal["database_connection_requested"] is False
+    assert proposal["audit_execution_requested"] is False

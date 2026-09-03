@@ -400,7 +400,10 @@ def test_pdf_v2_is_byte_exact_reviewed_historical_evidence_but_stale_after_r9d()
     assert record["research_execution_status"] == "PDF_V2_STALE_AFTER_R9D_IMPLEMENTATION"
     policy = json.loads((ROOT / "specs" / "pre_research_review_policy_v1.json").read_text())
     current = compute_research_state_fingerprint(ROOT, policy)
-    assert current["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert record["staleness"]["current_research_state_fingerprint"] == (
+        "f7978db65c011c0dccf43dfd94623528a2e9672cc40c8c8505cb7666d6a69f38"
+    )
+    assert current["sha256"] != record["staleness"]["current_research_state_fingerprint"]
     assert current["sha256"] != record["research_state_fingerprint"]
 
 

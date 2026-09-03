@@ -35,8 +35,8 @@
   "covered_future_scope": [
     "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
   ],
-  "review_status": "REPORT_REVIEWED_APPROVED",
-  "report_current": true,
+  "review_status": "REPORT_STALE",
+  "report_current": false,
   "supersedes": "docs/project_status/pre_research_review_record_v2.json",
   "superseded_by": null,
   "reviewer_approval": {
@@ -106,6 +106,22 @@
   },
   "production_locator_state": "PRODUCTION_LOCATOR_DISABLED_PENDING_EXACT_BINDING",
   "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
-  "research_execution_status": "REPORT_GATE_SATISFIED_FOR_LOCATOR_BINDING_PREPARATION_ONLY",
-  "statement": "The owner reviewed PDF v3 after generation and authorized only EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. The later preparation phase may read the configured locator value and perform the bounded filesystem identity pass described in the PDF. This review does not itself execute that phase and does not authorize SQLite access, audit execution, market-row access, market analysis, scoring, backtesting, recommendations, broker actions or trading. A later exact one-use audit approval remains mandatory before the first database connection."
+  "authorized_scope_completion": {
+    "scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION",
+    "state": "COMPLETED_NONACTIVATING",
+    "binding_anchor": "evidence/fno_locator_binding_v1/anchor.json",
+    "binding_anchor_sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc",
+    "completed_without_database_connection": true,
+    "repeat_authorized": false
+  },
+  "staleness": {
+    "detected_at": "2026-09-03T07:39:59.0115116Z",
+    "reason": "R.9F added the approved filesystem-only locator-binding implementation and new sanitized production-binding evidence.",
+    "reviewed_research_state_fingerprint": "f7978db65c011c0dccf43dfd94623528a2e9672cc40c8c8505cb7666d6a69f38",
+    "current_research_state_fingerprint": "6218f979610ae66562ab070b55ef2e270b4d31ef52c9ccd78c7e877f194672db",
+    "current_research_state_file_count": 242,
+    "status": "PDF_V3_STALE_AFTER_R9F_BINDING_PREPARATION"
+  },
+  "research_execution_status": "PDF_V3_STALE_AFTER_R9F_BINDING_PREPARATION",
+  "statement": "The owner reviewed PDF v3 after generation and authorized only EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. That filesystem-only preparation completed without a SQLite connection, SQL, schema inspection, market-row access, audit, analysis, backtesting, broker action or trading. PDF v3 is now stale because R.9F added new production-binding evidence. PDF v4 and explicit owner review are required before any interlock-removal implementation may be proposed. A later exact one-use audit approval remains mandatory before the first database connection."
 }

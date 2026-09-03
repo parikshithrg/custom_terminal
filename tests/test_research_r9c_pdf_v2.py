@@ -68,7 +68,10 @@ def test_v2_bytes_and_historical_fingerprint_binding_are_exact():
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
     assert state["sha256"] != EXPECTED_FINGERPRINT
     assert record["research_state_fingerprint"] == EXPECTED_FINGERPRINT
-    assert record["staleness"]["current_research_state_fingerprint"] == state["sha256"]
+    assert record["staleness"]["current_research_state_fingerprint"] == (
+        "f7978db65c011c0dccf43dfd94623528a2e9672cc40c8c8505cb7666d6a69f38"
+    )
+    assert state["sha256"] != record["staleness"]["current_research_state_fingerprint"]
     version2 = record["external_repository_bindings"][1]
     assert version2["commit"] == "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298"
     assert version2["tree"] == "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f"

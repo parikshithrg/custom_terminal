@@ -43,6 +43,16 @@ def _require_clean_source_and_ignored_private_destination(root: Path) -> None:
         raise LocatorBindingError(
             "FNO_BINDING_SCOPE_VIOLATION", "private binding destination is not ignored"
         )
+    immutable_destinations = (
+        root / "artifacts/private_fno_binding/r9f/raw_binding.json",
+        root / "evidence/fno_locator_binding_v1/anchor.json",
+        root / "proposals/fno_locator_binding_v1/binding_proposal.json",
+    )
+    if any(path.exists() for path in immutable_destinations):
+        raise LocatorBindingError(
+            "FNO_BINDING_SCOPE_VIOLATION",
+            "binding ceremony already completed; repeat sampling is prohibited",
+        )
 
 
 def _validate_review(root: Path) -> None:

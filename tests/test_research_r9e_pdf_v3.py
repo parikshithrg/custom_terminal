@@ -58,20 +58,23 @@ def test_v3_source_and_pdf_hashes_and_structure_are_exact():
     assert b"/Encrypt" not in payload
 
 
-def test_v3_binds_the_unchanged_r9d_research_state():
+def test_v3_preserves_the_exact_r9d_binding_but_is_stale_after_r9f():
     record = _load(V3)
     state = compute_research_state_fingerprint(ROOT, _load(POLICY))
-    assert state["sha256"] == EXPECTED_STATE == record["research_state_fingerprint"]
-    assert state["file_count"] == record["research_state_file_count"] == 237
+    assert record["research_state_fingerprint"] == EXPECTED_STATE
+    assert record["research_state_file_count"] == 237
+    assert state["sha256"] == record["staleness"]["current_research_state_fingerprint"]
+    assert state["sha256"] != EXPECTED_STATE
+    assert state["file_count"] == record["staleness"]["current_research_state_file_count"]
     assert record["summarized_source_commit"] == (
         "450e976ae472fa440a704c74ad959b60f1113219"
     )
 
 
-def test_v3_records_exact_post_generation_owner_review_and_scope():
+def test_v3_preserves_exact_owner_review_scope_and_completed_lifecycle():
     record = _load(V3)
-    assert record["review_status"] == "REPORT_REVIEWED_APPROVED"
-    assert record["report_current"] is True
+    assert record["review_status"] == "REPORT_STALE"
+    assert record["report_current"] is False
     approval = record["reviewer_approval"]
     assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
     assert approval["reviewer_classification"] == "PROJECT_OWNER"
@@ -82,6 +85,8 @@ def test_v3_records_exact_post_generation_owner_review_and_scope():
     assert len(record["reviewer_questions"]) == 9
     assert all(item["answer"] and item["decision"] != "UNRESOLVED"
                for item in record["reviewer_questions"])
+    assert record["authorized_scope_completion"]["state"] == "COMPLETED_NONACTIVATING"
+    assert record["authorized_scope_completion"]["completed_without_database_connection"] is True
 
 
 def test_pending_v3_fails_the_review_gate():
@@ -108,7 +113,7 @@ def test_pending_v3_fails_the_review_gate():
         )
 
 
-def test_reviewed_v3_passes_only_the_report_gate_without_execution_authority():
+def test_stale_v3_cannot_authorize_any_later_execution():
     record = _load(V3)
     policy = _load(POLICY)
     policy["external_repository_bindings"] = record["external_repository_bindings"]
@@ -124,13 +129,10 @@ def test_reviewed_v3_passes_only_the_report_gate_without_execution_authority():
             "covered_scope": "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION",
         },
     }
-    result = validate_review_record(
-        record, preregistration=preregistration, repository_root=ROOT, policy=policy
-    )
-    assert result["report_gate_satisfied"] is True
-    assert result["covered_scope"] == "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
-    assert result["research_execution_authorized"] is False
-    assert result["separate_run_approval_required"] is True
+    with pytest.raises(PreResearchReviewError, match="not been explicitly reviewed"):
+        validate_review_record(
+            record, preregistration=preregistration, repository_root=ROOT, policy=policy
+        )
 
 
 def test_v3_authorizes_only_bounded_locator_binding_preparation():

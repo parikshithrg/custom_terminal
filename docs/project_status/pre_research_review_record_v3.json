@@ -1,0 +1,106 @@
+{
+  "schema_version": "pre_research_review_record_v1",
+  "record_path": "docs/project_status/pre_research_review_record_v3.json",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v3",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v3.pdf",
+  "pdf_sha256": "75af99e3e481a4d8e490e24cbf24c979a2111067412d2a14344630beaca8b2a2",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v3.md",
+  "source_sha256": "6313d72e9de7b54a5d531f3f72abd6e94148eacc261b0b12535ed9c3fed029bb",
+  "summarized_source_commit": "450e976ae472fa440a704c74ad959b60f1113219",
+  "external_repository_bindings": [
+    {
+      "repository": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "450e976ae472fa440a704c74ad959b60f1113219",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL"
+    },
+    {
+      "repository": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS"
+    }
+  ],
+  "external_reference_checked_at": "2026-09-03T03:39:00Z",
+  "external_reference_result": "UNCHANGED_READ_ONLY_NO_CLONE_NO_EXECUTION",
+  "research_state_fingerprint": "f7978db65c011c0dccf43dfd94623528a2e9672cc40c8c8505cb7666d6a69f38",
+  "research_state_file_count": 237,
+  "generation_timestamp": "2026-09-03T03:45:23.2323722Z",
+  "rendered_page_count": 16,
+  "visual_verification_result": "PASS_16_PAGES_NO_MATERIAL_DEFECTS",
+  "covered_future_scope": [
+    "EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION"
+  ],
+  "review_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "report_current": true,
+  "supersedes": "docs/project_status/pre_research_review_record_v2.json",
+  "superseded_by": null,
+  "reviewer_approval": null,
+  "reviewer_questions": [
+    {
+      "question": 1,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 2,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 3,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 4,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 5,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 6,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 7,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 8,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    },
+    {
+      "question": 9,
+      "answer": null,
+      "decision": "UNRESOLVED"
+    }
+  ],
+  "execution_authority": {
+    "locator_binding_preparation_authorized": false,
+    "configuration_value_read_authorized": false,
+    "filesystem_identity_pass_authorized": false,
+    "sqlite_access_authorized": false,
+    "audit_execution_authorized": false,
+    "market_row_access_authorized": false,
+    "scoring_or_backtesting_authorized": false,
+    "broker_actions_authorized": false,
+    "trading_authorized": false,
+    "later_exact_audit_approval_required": true
+  },
+  "production_locator_state": "PRODUCTION_LOCATOR_DISABLED_PENDING_EXACT_BINDING",
+  "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "research_execution_status": "REPORT_GENERATED_PENDING_REVIEW",
+  "statement": "PDF v3 is generated and visually verified but has not been reviewed by the owner. It requests approval only for EXACT_PRODUCTION_LOCATOR_BINDING_PREPARATION. Production locator resolution, configuration reading, filesystem identity work, SQLite access, audit execution, market-row access, scoring, backtesting, broker actions and trading remain unauthorized. A later exact one-use audit approval remains mandatory before the first database connection."
+}

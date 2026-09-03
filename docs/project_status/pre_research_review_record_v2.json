@@ -35,7 +35,7 @@
   "review_status": "REPORT_STALE",
   "report_current": false,
   "supersedes": "docs/project_status/pre_research_review_record_v1.json",
-  "superseded_by": null,
+  "superseded_by": "docs/project_status/pre_research_review_record_v3.json",
   "reviewer_approval": {
     "approved_at": "2026-09-03T03:03:44.5202004Z",
     "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",

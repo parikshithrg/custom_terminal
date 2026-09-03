@@ -78,7 +78,9 @@ def test_v2_preserves_exact_owner_review_and_is_stale_after_r9d():
     record = _load(V2_RECORD)
     assert record["review_status"] == "REPORT_STALE"
     assert record["report_current"] is False
-    assert record["superseded_by"] is None
+    assert record["superseded_by"] == (
+        "docs/project_status/pre_research_review_record_v3.json"
+    )
     approval = record["reviewer_approval"]
     assert approval["approval_kind"] == "EXPLICIT_POST_REPORT_REVIEW"
     assert approval["reviewer_classification"] == "PROJECT_OWNER"
@@ -110,6 +112,7 @@ def test_pdf_approval_cannot_authorize_audit_execution():
     policy["external_repository_bindings"] = record["external_repository_bindings"]
     record["review_status"] = "REPORT_REVIEWED_APPROVED"
     record["report_current"] = True
+    record["superseded_by"] = None
     record["research_state_fingerprint"] = compute_research_state_fingerprint(
         ROOT, policy
     )["sha256"]

@@ -1,0 +1,175 @@
+{
+  "catalog_resources": {
+    "arbitrary_catalog_sql_accepted": true,
+    "catalog": {
+      "application_read_events": [],
+      "eqp_count": 0,
+      "has_fk": true,
+      "objects": 4,
+      "sentinel_in_output": false,
+      "statements": [
+        "PRAGMA query_only=ON",
+        "PRAGMA query_only",
+        "PRAGMA busy_timeout=5000",
+        "SELECT type, name, tbl_name, sql FROM sqlite_schema WHERE type IN (?,?,?) ORDER BY type, name",
+        "PRAGMA table_info(<identifier>)",
+        "PRAGMA foreign_key_list(<identifier>)",
+        "PRAGMA index_list(<identifier>)",
+        "PRAGMA index_info(<identifier>)",
+        "PRAGMA table_info(<identifier>)",
+        "PRAGMA foreign_key_list(<identifier>)",
+        "PRAGMA index_list(<identifier>)",
+        "PRAGMA table_info(<identifier>)",
+        "PRAGMA foreign_key_list(<identifier>)"
+      ]
+    },
+    "execute_deadline_rejected": true,
+    "fetch_deadline": {
+      "handler_active_during_fetch": false,
+      "rows_after_deadline": 4
+    },
+    "output_cap": {
+      "emitted_bytes": 0,
+      "rejected": true
+    },
+    "provenance": {
+      "absence_is_permission": false,
+      "files": 1,
+      "rights": {
+        "backup_metadata": "MISSING",
+        "correction_vintages": "MISSING",
+        "retention_rights": "MISSING",
+        "source_provenance": "DECLARED_NOT_VERIFIED"
+      }
+    },
+    "rejected_statements": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "row_probe": {
+      "actual_rows": 64,
+      "declared_probe_cap": 2,
+      "rejected": false
+    },
+    "statement_cap_rejected": true
+  },
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "containment": {
+    "outside_rejected": true,
+    "symlink": "SKIPPED_PLATFORM_PRIVILEGE",
+    "unknown_id_rejected": true
+  },
+  "fixture": {
+    "bytes": 16384,
+    "database_sha256": "1de9c31488668346fcae982321aa36ecdf7879061e75e167d6a937ac15ed62a9",
+    "recipe_sha256": "9ae21fe22db802a42b862384440dcf70833ff6ceff5dcdfb780ac6f0df3b95d0"
+  },
+  "fixture_recipe": "CREATE TABLE parent(id INTEGER PRIMARY KEY, note TEXT);CREATE TABLE child(id INTEGER PRIMARY KEY, parent_id INTEGER REFERENCES parent(id));CREATE INDEX child_parent ON child(parent_id);CREATE VIEW parent_shape AS SELECT id FROM parent;INSERT INTO parent VALUES(1,'R9J_SYNTHETIC_SENTINEL_NEVER_EXPORT');INSERT INTO child VALUES(1,1);",
+  "platform": {
+    "python": "3.14.6",
+    "release": "11",
+    "sqlite": "3.50.4",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "production_access": false,
+  "quiescence": {
+    "active_rollback_writer_sidecars": [
+      "JOURNAL"
+    ],
+    "active_wal_writer_sidecars": [
+      "SHM",
+      "WAL"
+    ],
+    "closed_sidecars": 0,
+    "late_sidecar_detected": true,
+    "mutation_between_checks_detected": true,
+    "prevention_claim": false,
+    "replacement_open_succeeded": true,
+    "replacement_postcheck_detected": true,
+    "writer_succeeded_during_inspection": true
+  },
+  "registry": {
+    "approval_payload_has_attempt_id": false,
+    "crashes": [
+      {
+        "consumed_after_restart": false,
+        "exit_code": 21,
+        "incomplete": false,
+        "phase": "before",
+        "registry_connections": 0,
+        "target_connections": 0
+      },
+      {
+        "consumed_after_restart": true,
+        "exit_code": 22,
+        "incomplete": true,
+        "phase": "after",
+        "registry_connections": 1,
+        "replay_rejected": true,
+        "target_connections": 0,
+        "winner": true
+      },
+      {
+        "consumed_after_restart": true,
+        "exit_code": 23,
+        "incomplete": true,
+        "phase": "after_open",
+        "registry_connections": 1,
+        "replay_rejected": true,
+        "target_connections": 1,
+        "winner": true
+      }
+    ],
+    "duplicate_registration_rejected": true,
+    "expired_rejected": true,
+    "ledger_verified": "PASS",
+    "modified_rejected": true,
+    "parent_connections": {
+      "registry_connections": 19,
+      "target_connections": 0
+    },
+    "race": [
+      {
+        "phase": "race",
+        "registry_connections": 1,
+        "target_connections": 0,
+        "winner": true
+      },
+      {
+        "phase": "race",
+        "registry_connections": 1,
+        "target_connections": 0,
+        "winner": false
+      }
+    ],
+    "replay_rejected_after_restart": true,
+    "reused_attempt_rejected": true,
+    "winners": 1
+  },
+  "resource_probe": {
+    "allocated_bytes": 1048576,
+    "declared_memory_probe_limit": 524288,
+    "declared_temp_probe_limit": 4096,
+    "os_accounting_is_target_or_physical_bytes": false,
+    "process_os_read_transfer_bytes": 4062645,
+    "process_working_set_bytes": 35381248,
+    "registry_connections": 0,
+    "scratch_bytes": 8192,
+    "target_connections": 1
+  },
+  "schema_version": "r9j_synthetic_results_v1",
+  "worker_timeout": {
+    "deadline_seconds": 0.3,
+    "descendant_alive_after_self_expiry": false,
+    "descendant_lifetime_cap_seconds": 3,
+    "descendant_survived_parent": true,
+    "elapsed_seconds": 0.309,
+    "terminated": true,
+    "worker_dead": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "r9j_completion_manifest_v1",
+  "baseline_commit": "db3d8727807336560c1401ecadc80b4415c79897",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "production_authority": false,
+  "completion": "SYNTHETIC_BOUNDARY_INVESTIGATION_COMPLETED_PRODUCTION_BLOCKED",
+  "artifacts": [
+    {
+      "sha256": "2079d2f0b18e9a1d0951dae616652e0948e65a019e6014abdda37c9f4679f843",
+      "path": "docs/investigations/r9j/EXPERIMENT_PLAN.md"
+    },
+    {
+      "sha256": "01c519fa2645bb14e719fdca16c137ac543c669f798b884ab2a49e28f52f8db7",
+      "path": "docs/investigations/r9j/results_v1.json"
+    },
+    {
+      "sha256": "45f0cf0ed65905273125f94f00e85933f22d374fcea52e1dc0c9985ada019c73",
+      "path": "docs/investigations/r9j/manifest_v1.json"
+    },
+    {
+      "sha256": "e100e12988a3fed5354037ed75df711d03f638be4848c6d7a96eaa18bf8e2af5",
+      "path": "docs/investigations/r9j/assessment_v1.json"
+    },
+    {
+      "sha256": "3dd3a424ef3383bc912f2eb4201664078054d0a315cfaee5631506caaccf93b5",
+      "path": "tools/r9j_synthetic_boundary.py"
+    },
+    {
+      "sha256": "a929a9a7216b07fc5ae79ed632dca4b7ce3c9b860a3879262aa96fe7714e2694",
+      "path": "tests/test_research_r9j_synthetic_boundary.py"
+    },
+    {
+      "sha256": "dbb8781e9d6cce0029a4176f20552771c7800f1708c35fb3d79687155a91dd13",
+      "path": "reports/RESEARCH_R9J_REPORT.md"
+    }
+  ],
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "fingerprint_policy_changed": false,
+  "review_record_changed": false,
+  "production_source_changed": false,
+  "verification": {
+    "selected_offline_tests_passed": 91,
+    "skipped_symlink_tests": 3,
+    "root_full_suite_run": false,
+    "data_test_full_suite_run": false,
+    "artifact_privacy": "PASS",
+    "json": "PASS",
+    "whitespace": "PASS"
+  },
+  "remaining_blockers": [
+    "quiescence_writer_exclusion_and_open_races",
+    "logical_database_byte_enforcement",
+    "fetch_deadline_and_row_limits",
+    "whole_attempt_process_tree_memory_temp_limits",
+    "approval_prebinding_of_explicit_attempt_id",
+    "exact_catalog_templates"
+  ],
+  "next_task": "SEPARATELY_AUTHORIZED_SYNTHETIC_WINDOWS_CONTAINMENT_AND_RESOURCE_ENFORCEMENT_FEASIBILITY",
+  "no_new_approval": true
+}

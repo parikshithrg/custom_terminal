@@ -1,0 +1,134 @@
+{
+  "schema_version": "r9j_assessment_v1",
+  "source_results": "results_v1.json",
+  "resource_controls": [
+    {
+      "control": "statement_count",
+      "classification": "ENFORCED",
+      "evidence": "catalog_resources.statement_cap_rejected",
+      "limitations": "Existing wrapper rejects next statement after test-adjusted cap; includes three setup statements. Not a byte or CPU cap."
+    },
+    {
+      "control": "returned_row_count",
+      "classification": "DECLARED_ONLY",
+      "evidence": "catalog_resources.row_probe",
+      "limitations": "64 catalog rows returned despite a declared 2-row probe threshold. The existing wrapper has no row-budget argument/counter; this does not claim a 25,000-row production threshold was tested."
+    },
+    {
+      "control": "output_bytes",
+      "classification": "ENFORCED",
+      "evidence": "catalog_resources.output_cap",
+      "limitations": "Existing writer rejects 17 bytes against patched 16-byte cap before emitting. This tests writer payloads, not whole-process temporary storage."
+    },
+    {
+      "control": "sqlite_progress_deadline",
+      "classification": "MONITORED_ONLY",
+      "evidence": "catalog_resources.execute_deadline_rejected;catalog_resources.fetch_deadline",
+      "limitations": "Zero-deadline execution aborts, but handler is removed before fetch. Four rows fetched after a 20ms deadline. Blocking calls and fetch are not covered."
+    },
+    {
+      "control": "whole_attempt_wall_time",
+      "classification": "MONITORED_ONLY",
+      "evidence": "worker_timeout",
+      "limitations": "Exploratory parent terminates one sleeping worker at 0.309s for a 0.3s wait. Not a strict total audit bound and not implemented in existing audit runner."
+    },
+    {
+      "control": "worker_termination",
+      "classification": "ENFORCED",
+      "evidence": "worker_timeout.worker_dead",
+      "limitations": "Direct child terminated and joined in this experiment. Parent scheduling and termination latency remain; not a hard real-time guarantee."
+    },
+    {
+      "control": "descendant_cleanup",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "worker_timeout.descendant_survived_parent",
+      "limitations": "Descendant survived parent termination; self-expired after 3s. Self-expiry is not enforced tree cleanup."
+    },
+    {
+      "control": "process_memory",
+      "classification": "MONITORED_ONLY",
+      "evidence": "resource_probe.process_working_set_bytes",
+      "limitations": "Windows working set measurable; 1MiB allocation crosses declared 512KiB incremental probe with no refusal. No hard quota configured or demonstrated."
+    },
+    {
+      "control": "temporary_storage",
+      "classification": "MONITORED_ONLY",
+      "evidence": "resource_probe.scratch_bytes",
+      "limitations": "8KiB generated scratch observed after writing across declared 4KiB probe. No process-wide quota or SQLite spill limit demonstrated."
+    },
+    {
+      "control": "database_bytes_read",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "resource_probe.process_os_read_transfer_bytes",
+      "limitations": "OS process ReadTransferCount includes unrelated I/O and is cumulative, not per-target or physical disk bytes. No hard logical database-read cap or physical I/O attribution provided."
+    }
+  ],
+  "engineering_decisions": [
+    {
+      "question": 1,
+      "status": "UNRESOLVED",
+      "recommended_contract": "Require demonstrated quiescence/no sidecars, fail closed; no checkpoint or repair.",
+      "evidence": [
+        "quiescence"
+      ],
+      "residual_risk": "Checks detect changes, do not exclude writers or close validation/open races.",
+      "production_implementation_blocked": true
+    },
+    {
+      "question": 2,
+      "status": "UNRESOLVED",
+      "recommended_contract": "Retain hard byte-budget blocker; define logical read metric and evaluate enforcement without substituting rows/pages/statements.",
+      "evidence": [
+        "resource_probe",
+        "catalog_resources.row_probe"
+      ],
+      "residual_risk": "No target-specific read-byte interception or physical I/O attribution.",
+      "production_implementation_blocked": true
+    },
+    {
+      "question": 3,
+      "status": "PARTIALLY_RESOLVED",
+      "recommended_contract": "Explicit unique attempt ID sealed into any future approval; reuse durable registry concepts.",
+      "evidence": [
+        "registry"
+      ],
+      "residual_risk": "Current synthetic approval payload lacks attempt ID; consumption binds a caller ID only at consume time. Not exact prior owner binding.",
+      "production_implementation_blocked": true
+    },
+    {
+      "question": 4,
+      "status": "RESOLVED_FOR_SYNTHETIC_METADATA_SAMPLE_ONLY",
+      "recommended_contract": "No EXPLAIN QUERY PLAN in proposed minimal catalog path; exact template enumeration before any implementation.",
+      "evidence": [
+        "catalog_resources.catalog",
+        "catalog_resources.arbitrary_catalog_sql_accepted"
+      ],
+      "residual_risk": "Existing class accepts arbitrary catalog SELECT. Stage3 keyword inventory is not proof of provenance/rights. No production schema observed.",
+      "production_implementation_blocked": true
+    },
+    {
+      "question": 5,
+      "status": "UNRESOLVED",
+      "recommended_contract": "Hold resource decisions; do not treat monitored limits as enforcement. Investigate bounded process-tree containment.",
+      "evidence": [
+        "catalog_resources.fetch_deadline",
+        "worker_timeout",
+        "resource_probe"
+      ],
+      "residual_risk": "Fetch gap, no hard process memory/temp quota, descendants survive termination.",
+      "production_implementation_blocked": true
+    },
+    {
+      "question": 6,
+      "status": "DEFERRED_SEPARATE_APPROVAL_REQUIRED",
+      "recommended_contract": "No production approval until separately authorized implementation, evidence and current owner review.",
+      "evidence": [
+        "manifest_v1.production_authority"
+      ],
+      "residual_risk": "Synthetic tests cannot qualify real data or create authority.",
+      "production_implementation_blocked": true
+    }
+  ],
+  "completion": "SYNTHETIC_BOUNDARY_INVESTIGATION_COMPLETED_PRODUCTION_BLOCKED",
+  "production_authority": false
+}

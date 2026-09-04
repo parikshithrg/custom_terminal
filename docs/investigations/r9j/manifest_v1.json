@@ -1,0 +1,42 @@
+{
+  "baseline_commit": "db3d8727807336560c1401ecadc80b4415c79897",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "decision": "SYNTHETIC_BOUNDARY_INVESTIGATION_COMPLETED_PRODUCTION_BLOCKED",
+  "fixture": {
+    "bytes": 16384,
+    "database_sha256": "1de9c31488668346fcae982321aa36ecdf7879061e75e167d6a937ac15ed62a9",
+    "recipe_sha256": "9ae21fe22db802a42b862384440dcf70833ff6ceff5dcdfb780ac6f0df3b95d0"
+  },
+  "fixture_retention": "Fresh tiny fixtures generated per run and deleted; recipe and initial byte hash retained.",
+  "production_authority": false,
+  "recorded_at": "2026-09-04T06:22:50.241866+00:00",
+  "reproducibility": "Expect equivalent assertions, not identical timing, OS counters, or contender winner.",
+  "results_sha256": "01c519fa2645bb14e719fdca16c137ac543c669f798b884ab2a49e28f52f8db7",
+  "schema_version": "r9j_synthetic_manifest_v1",
+  "sources": [
+    {
+      "path": "tools/r9j_synthetic_boundary.py",
+      "sha256": "3dd3a424ef3383bc912f2eb4201664078054d0a315cfaee5631506caaccf93b5"
+    },
+    {
+      "path": "tests/test_research_r9j_synthetic_boundary.py",
+      "sha256": "a929a9a7216b07fc5ae79ed632dca4b7ce3c9b860a3879262aa96fe7714e2694"
+    },
+    {
+      "path": "docs/investigations/r9j/EXPERIMENT_PLAN.md",
+      "sha256": "2079d2f0b18e9a1d0951dae616652e0948e65a019e6014abdda37c9f4679f843"
+    },
+    {
+      "path": "src/market_intel/foundation/local_fno_audit.py",
+      "sha256": "261acdf0f30f7b6a2575edc341c73fe3b07378476c8f038d14e1941248d3055c"
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"
+    },
+    {
+      "path": "docs/project_status/pre_research_review_record_v5.json",
+      "sha256": "22fb038ebd5a3f4c889198561547f2b28057d9a2012dbb0248fd058a92d90729"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "pre_research_review_record_v1",
+  "record_path": "docs/project_status/pre_research_review_record_v5.json",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v5",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v5.pdf",
+  "pdf_sha256": "44502aa44d45ac666d4c849de00a62bae6d6fb5864014fa0214e92621fef46dd",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v5.md",
+  "source_sha256": "35aade76d7560abe849404772857478e0a36ecd93c3cdbf1c2776092bc33dedf",
+  "summarized_source_commit": "d1f1995d92acd55318310812fa24889a30367f51",
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "rendered_page_count": 10,
+  "visual_verification_result": "PASS_10_PAGES_NO_MATERIAL_DEFECTS",
+  "generation_manifest_path": "docs/project_status/pre_research_generation_manifest_v5.json",
+  "generation_manifest_sha256": "8f4b1da6cec5db38001e71f988c52809c6968d8f3a934592b637d98110209dd5",
+  "generation_timestamp": "2026-09-04T05:50:19Z",
+  "generation_timestamp_note": "ISO-8601 normalization of the unchanged manifest's 2026-09-04 05:50:19 UTC.",
+  "external_repository_bindings": [
+    {
+      "repository": "custom_terminal",
+      "url": "https://github.com/parikshithrg/custom_terminal.git",
+      "branch": "main",
+      "commit": "d1f1995d92acd55318310812fa24889a30367f51",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL"
+    },
+    {
+      "repository": "version2.0",
+      "url": "https://github.com/parikshithrg/version2.0.git",
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS"
+    }
+  ],
+  "covered_future_scope": [
+    "BOUNDED_SYNTHETIC_BOUNDARY_DESIGN_INVESTIGATION_ONLY"
+  ],
+  "review_status": "REPORT_REVIEWED_APPROVED",
+  "report_current": true,
+  "supersedes": "docs/project_status/pre_research_review_record_v4.json",
+  "superseded_by": null,
+  "reviewer_approval": {
+    "approved_at": "2026-09-04T06:10:08Z",
+    "approval_kind": "EXPLICIT_POST_REPORT_REVIEW",
+    "reviewer_classification": "PROJECT_OWNER",
+    "approval_statement": "Owner answered all nine PDF v5 questions explicitly. Summary and limitations accepted; preference for quiescent/no-sidecar policy, separate explicit run IDs and no unnecessary query plans. Resource decisions remain blocked pending evidence. Only bounded synthetic-only boundary design investigation is authorized. Real datasets require later separate approval after engineering evidence; no production implementation or audit authority is granted."
+  },
+  "reviewer_questions": [
+    {
+      "question": 1,
+      "answer": "yes accurate",
+      "decision": "SUMMARY_CONFIRMED"
+    },
+    {
+      "question": 2,
+      "answer": "yes",
+      "decision": "EVIDENCE_DISTINCTIONS_CONFIRMED"
+    },
+    {
+      "question": 3,
+      "answer": "yes. keep it simple",
+      "decision": "QUIESCENT_NO_SIDECAR_PREFERENCE_SUBJECT_TO_PROOF"
+    },
+    {
+      "question": 4,
+      "answer": "yes. keep each run ID separate",
+      "decision": "EXPLICIT_UNIQUE_ATTEMPT_ID_PREFERENCE"
+    },
+    {
+      "question": 5,
+      "answer": "yes",
+      "decision": "NO_QUERY_PLANS_UNLESS_NECESSITY_PROVEN"
+    },
+    {
+      "question": 6,
+      "answer": "yes. all limiting decisions should be held until evidence is provided",
+      "decision": "RESOURCE_DECISIONS_BLOCKED_PENDING_EVIDENCE"
+    },
+    {
+      "question": 7,
+      "answer": "yes",
+      "decision": "SAMPLED_IDENTITY_AND_STAGE_LIMITS_ACKNOWLEDGED"
+    },
+    {
+      "question": 8,
+      "answer": "yes. as mentioned. all tests on synthetic data only. we are first checking if engines are running as intended. only then do we move to real datasets",
+      "decision": "SYNTHETIC_ONLY_DESIGN_INVESTIGATION_AUTHORIZED"
+    },
+    {
+      "question": 9,
+      "answer": "yes",
+      "decision": "SEPARATE_FUTURE_AUDIT_APPROVAL_REQUIRED"
+    }
+  ],
+  "execution_authority": {
+    "synthetic_only_design_investigation_authorized": true,
+    "production_implementation_authorized": false,
+    "interlock_change_authorized": false,
+    "private_database_access_authorized": false,
+    "private_configuration_or_binding_access_authorized": false,
+    "database_connection_authorized": false,
+    "production_audit_authorized": false,
+    "production_approval_issuance_authorized": false,
+    "data_acquisition_authorized": false,
+    "market_analysis_authorized": false,
+    "scoring_authorized": false,
+    "simulation_authorized": false,
+    "backtesting_authorized": false,
+    "broker_actions_authorized": false,
+    "trading_authorized": false
+  },
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "deliberate_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "research_execution_status": "SYNTHETIC_DESIGN_INVESTIGATION_ONLY_PRODUCTION_BLOCKED",
+  "statement": "This post-generation owner review permits only the named synthetic-only design investigation, not a one-use production approval. Policy preferences do not prove technical feasibility. Prior PDF, generation manifest and proposal remain unchanged."
+}

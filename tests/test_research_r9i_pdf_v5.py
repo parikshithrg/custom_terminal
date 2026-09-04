@@ -40,7 +40,8 @@ def test_report_is_not_approval_and_all_authority_false():
     m = load_manifest()
     assert m['manifest_kind'] == 'NON_APPROVAL_REPORT_GENERATION'
     assert m['lifecycle_state'] == 'PDF_V5_GENERATED_AWAITING_OWNER_REVIEW'
-    assert not (ROOT / 'docs/project_status/pre_research_review_record_v5.json').exists()
+    # Generation remains non-approving even after a separate owner review.
+    assert m['owner_review_recorded'] is False
     for key, value in m.items():
         if key.endswith('_authorized') or key in (
             'owner_review_recorded', 'approval_issued', 'approval_registered',

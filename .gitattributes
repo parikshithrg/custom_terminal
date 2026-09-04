@@ -15,3 +15,5 @@ evidence/governance/** -text
 specs/legacy_family_mapping_v1.json -text
 proposals/first_governed_run/** -text
 proposals/fno_production_audit_boundary_v1/** -text
+docs/project_status/market_system_status_pre_research_review_v5.md -text
+docs/project_status/pre_research_generation_manifest_v5.json -text

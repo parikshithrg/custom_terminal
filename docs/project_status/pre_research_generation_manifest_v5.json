@@ -1,0 +1,150 @@
+{
+  "schema_version": "pre_research_generation_manifest_v1",
+  "manifest_kind": "NON_APPROVAL_REPORT_GENERATION",
+  "report_id": "market_system_development_status_pre_research_review",
+  "report_version": "v5",
+  "milestone": "R.9I",
+  "summarized_source_commit": "d1f1995d92acd55318310812fa24889a30367f51",
+  "generation_timestamp": "2026-09-04 05:50:19 UTC",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v5.md",
+  "source_sha256": "35aade76d7560abe849404772857478e0a36ecd93c3cdbf1c2776092bc33dedf",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v5.pdf",
+  "pdf_sha256": "44502aa44d45ac666d4c849de00a62bae6d6fb5864014fa0214e92621fef46dd",
+  "generator_path": "tools/generate_project_status_pdf.py",
+  "generator_sha256": "fa3f68a85d0a6a2f8548492d4df387b50937e0f621f05cec8c3a1d43bb3ecb83",
+  "deterministic_render_verified": true,
+  "rendered_page_count": 10,
+  "visual_verification_result": "PASS_10_PAGES_NO_MATERIAL_DEFECTS",
+  "extracted_text_privacy_scan": "PASS",
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "evidence_inputs": [
+    {
+      "path": "reports/RESEARCH_R9H_REPORT.md",
+      "sha256": "e3b8cc69688d3c242adc81bf495a0fd7c61ef9b84de2390aa691ca5ad306f2c7"
+    },
+    {
+      "path": "docs/quarantined_proposals/local_fno_audit_stage_1_3/audit_scope_v1.json",
+      "sha256": "86af643f9c88a1162ecaecf76d22e4e74b5d39816f6e6117eb6105b726588d8d"
+    },
+    {
+      "path": "docs/project_status/market_system_status_pre_research_review_v4.md",
+      "sha256": "0c03197df4f3c6ef85112c407efe4f1321a8fcf509e962ac4c7edc5ec12bbab0"
+    },
+    {
+      "path": "docs/project_status/pre_research_generation_manifest_v4.json",
+      "sha256": "e831d6c85651d3f5373c1e9e364d844c2fe955659a9a745efbcfd2cc74ee4148"
+    },
+    {
+      "path": "docs/project_status/pre_research_review_record_v4.json",
+      "sha256": "bce8b4fd7d8b711f84753a93ab1cf6336e74526441cfda5ed4f3411b4441fc5f"
+    },
+    {
+      "path": "evidence/fno_locator_binding_v1/anchor.json",
+      "sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc"
+    },
+    {
+      "path": "proposals/fno_locator_binding_v1/binding_proposal.json",
+      "sha256": "995524b670dc95b717fa7d4b27935c788d661bcf75b8f7f4400d76831a8f434f"
+    },
+    {
+      "path": "specs/pre_research_review_policy_v1.json",
+      "sha256": "dfd4c848ff6e73d8ecb63c069e8421dda848271c42c4b4900db9f5919d3ab5d4"
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/approval_template_v1.json",
+      "sha256": "9c483d78e8889d7870d9356a383d41680de0d58a8338924b9680b52b7361d11c"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/architecture_security_rationale_v1.json",
+      "sha256": "c057990d0a8b640dfaa2e5b2f2d126a703e061898efe488e8a6dcbe4e7a4dc5c"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/audit_scope_decision_ledger_v1.json",
+      "sha256": "a3d7359880156b2b3b19e38d29f158c743b06b57b3a88f20f40f14eb5daf5acf"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/entrypoint_capability_delta_v1.json",
+      "sha256": "416c344195020563465d43a35c6fd557255ca77c0fe2ba9334161ab01e227a5e"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/immutable_input_declaration_template_v1.json",
+      "sha256": "be4e38a8cd8484f452c898f90d7501f8558c0d0cabe35f28f854f68ddd3f4411"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/proposal_manifest_v1.json",
+      "sha256": "a6529ec14520d163e327e2dcc7a7f469ea473d14b8d39e3ede345bc3d49dcdc1"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/sqlite_read_only_contract_v1.json",
+      "sha256": "457c89084de630e3d74eb6300e0df3ff869b179ca1af3241f011b49c27aff464"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/state_event_failure_model_v1.json",
+      "sha256": "b1c0cd3b27ae9c4e583ab43c4159ba913bd4f4fed446fdffc63f08e7fe5b0cb0"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/threat_model_v1.json",
+      "sha256": "8dbf31bfcc6badbc32b3b394e491319295efc8e3d1863cb412f2380441d93493"
+    },
+    {
+      "path": "proposals/fno_production_audit_boundary_v1/verification_implementation_operator_v1.json",
+      "sha256": "b25a140f82feec852c969d50ed871cc4ad16a1a68751af944aa738fe194c6571"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v1.pdf",
+      "sha256": "cbd1b504a5526f294d359b3949822bb30f313a5a18305270e8761b7868372b6c"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v2.pdf",
+      "sha256": "765c2facad827a3a6473b605037d9975135885e767420ca810ebbc28852c2adf"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v3.pdf",
+      "sha256": "75af99e3e481a4d8e490e24cbf24c979a2111067412d2a14344630beaca8b2a2"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v4.pdf",
+      "sha256": "02a76f6d46bc74a69b7f0b10331ae26da1d07d60934091ce9d31c0abe8cdaec9"
+    }
+  ],
+  "proposal_package_content_sha256": "628be5879d34a0a2f7c53ca493279c0a797f4ad45575988083d58e7b27f2945f",
+  "sampled_identity_root_sha256": "b1b8c0ca1338d477987da28e6d9647b151c120a0eac7bb17c9e9293edfd4bc47",
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "lifecycle_state": "PDF_V5_GENERATED_AWAITING_OWNER_REVIEW",
+  "proposed_next_scope": "BOUNDED_SYNTHETIC_BOUNDARY_DESIGN_INVESTIGATION_ONLY",
+  "recommendation_status": "PROPOSED_NOT_APPROVED",
+  "unresolved_decisions": [
+    "SIDECAR_QUIESCENCE_POLICY",
+    "DATABASE_BYTE_BUDGET",
+    "ATTEMPT_ID",
+    "EXPLAIN_QUERY_PLAN_NECESSITY",
+    "PROCESS_RESOURCE_LIMITS",
+    "FUTURE_ONE_USE_APPROVAL_DEFERRED"
+  ],
+  "owner_review_recorded": false,
+  "implementation_authorized": false,
+  "interlock_change_authorized": false,
+  "database_connection_authorized": false,
+  "audit_authorized": false,
+  "market_row_access_authorized": false,
+  "analysis_authorized": false,
+  "scoring_authorized": false,
+  "simulation_authorized": false,
+  "backtesting_authorized": false,
+  "trading_authorized": false,
+  "data_acquisition_authorized": false,
+  "broker_authorized": false,
+  "recommendation_authorized": false,
+  "approval_issued": false,
+  "approval_registered": false,
+  "approval_consumed": false,
+  "private_database_accessed": false,
+  "verification_report": "reports/RESEARCH_R9I_REPORT.md",
+  "statement": "Report generation only; no owner-review record or implementation/execution authority. Current v4 review-record hash binds its historical stale lifecycle, not the earlier pre-R9H byte version. Fingerprint rules unchanged."
+}

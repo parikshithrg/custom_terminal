@@ -1,0 +1,47 @@
+{
+  "schema_version": "r9k_feasibility_v1",
+  "evidence": "results_v1.json",
+  "production_authority": false,
+  "decision": "SYNTHETIC_CONTAINMENT_FEASIBILITY_RECORDED_PRODUCTION_BLOCKED",
+  "blockers": [
+    {
+      "name": "writer_exclusion_and_identity",
+      "classification": "PARTIALLY_PROVEN",
+      "observed": "Main-file share-read-only handle permits mode=ro and prevents independent write/rename/replace before open and during reader lifetime.",
+      "open": "Sibling sidecars can be created/changed. Namespace redirection, preexisting writers/mappings, hostile same-user and filesystem threats not fully tested.",
+      "evidence_keys": ["file_guard"]
+    },
+    {
+      "name": "process_tree_cleanup",
+      "classification": "PROVEN_WITH_STATED_LIMITATIONS",
+      "observed": "Suspended assignment, native timeout, last-handle close and actual supervisor termination cleaned up fixed synthetic trees before self-expiry.",
+      "open": "Not hard real-time, not a general sandbox; no breakaway allowed, ordinary CreateProcess descendants only. Host job policy may differ elsewhere.",
+      "evidence_keys": ["job_timeout", "job_close", "supervisor_crash", "failure_paths"]
+    },
+    {
+      "name": "process_committed_memory",
+      "classification": "PROVEN_WITH_STATED_LIMITATIONS",
+      "observed": "1 MiB VirtualAlloc succeeds; 64 MiB fails with 48 MiB process committed-memory cap and succeeds in no-cap control.",
+      "open": "Not working set or aggregate job quota. Finite synthetic allocation probe only; no host exhaustion.",
+      "evidence_keys": ["job_memory", "job_memory_control"]
+    },
+    {
+      "name": "target_specific_logical_database_read_cap",
+      "classification": "NOT_FEASIBLE_WITH_CURRENT_APPROVED_STACK",
+      "observed": "No public Python sqlite3 VFS registration/read interception API. Python file-open hook is not used by two native catalog operations.",
+      "open": "Would require approved binding/VFS-level changes covering xRead and mapped xFetch paths. No custom VFS or alternative binding built.",
+      "evidence_keys": ["byte_budget"]
+    },
+    {
+      "name": "temporary_storage_quota",
+      "classification": "INCONCLUSIVE",
+      "observed": "Tested Job Object limits provide no process-wide disk quota; R9J scratch finding reused, not rerun.",
+      "open": "No disk quota prototype or system policy change authorized; output-byte guards are not temp-storage quotas.",
+      "evidence_keys": ["R9J.resource_probe", "documentation.job_limits"]
+    }
+  ],
+  "r9j_gaps_left_open": ["row_limit", "fetch_deadline", "exact_catalog_templates", "sealed_explicit_attempt_id"],
+  "fingerprint_changed": false,
+  "older_pdf_covers_new_findings": false,
+  "next_decision": "Owner decides whether to retain the current stack and stop the database-audit route, or separately authorize evaluation of a VFS-capable access approach. No weaker read-budget guarantee is adopted."
+}

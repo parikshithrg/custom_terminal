@@ -1,0 +1,163 @@
+{
+  "all_experimental_processes_confirmed_dead": true,
+  "byte_budget": {
+    "catalog_operations": 2,
+    "conclusion": "NOT_FEASIBLE_WITH_CURRENT_APPROVED_STACK",
+    "metric": "sum of target sqlite VFS logical read-request bytes, including cache-miss reads and mapped access; not result bytes or OS I/O",
+    "mmap_size": 0,
+    "public_vfs_registration_api": false,
+    "python_file_hook_calls": 0
+  },
+  "failure_paths": {
+    "mock_create_failure_rejected": true,
+    "native_invalid_assignment_rejected": true,
+    "winerror": 6,
+    "worker_dead": true,
+    "worker_never_resumed": true
+  },
+  "file_guard": {
+    "detected_sidecars": 3,
+    "guard_held_through_reader_close": true,
+    "guard_owner_differs_from_launcher": true,
+    "guard_release_seconds": 0.004339,
+    "main_hash_unchanged": true,
+    "owner_blocks_writer": true,
+    "reader_open_adversary": {
+      "rename": {
+        "prevented": true,
+        "winerror": 32
+      },
+      "replace": {
+        "prevented": true,
+        "winerror": 5
+      },
+      "write": {
+        "prevented": true,
+        "winerror": null
+      }
+    },
+    "rename": {
+      "prevented": true,
+      "winerror": 32
+    },
+    "replace": {
+      "prevented": true,
+      "winerror": 5
+    },
+    "sidecar_creation_and_change_succeeded": true,
+    "sqlite_readonly_compatible": true,
+    "verification_to_open_adversary": {
+      "rename": {
+        "prevented": true,
+        "winerror": 32
+      },
+      "replace": {
+        "prevented": true,
+        "winerror": 5
+      },
+      "write": {
+        "prevented": true,
+        "winerror": null
+      }
+    },
+    "write": {
+      "prevented": true,
+      "winerror": null
+    },
+    "writer_after_error_cleanup": true,
+    "writer_after_owner_termination": true
+  },
+  "fixture": {
+    "bytes": 8192,
+    "database_sha256": "163263c21ba0b1a0b59c4c0bcbf8c2a232528dc304dc166e69bcee803cd851a5",
+    "recipe_sha256": "9674b9afb78bcba92af932555102de573f714202cd8eb961c85f3b75e58d5b00"
+  },
+  "host_process_in_job": true,
+  "job_close": {
+    "all_pinned_job_processes_dead": true,
+    "assigned_before_resume": true,
+    "cleanup_seconds": 0.007215,
+    "deadline_overshoot_seconds": 3.2e-05,
+    "inherited_host_job": true,
+    "leaf_dead": true,
+    "leaf_in_same_job": true,
+    "no_worker_marker_before_assignment": true,
+    "observed_before_8_second_self_expiry": true,
+    "pinned_job_processes_before_termination": 4,
+    "worker_dead": true
+  },
+  "job_memory": {
+    "assigned_before_resume": true,
+    "inherited_host_job": true,
+    "metric": "committed_virtual_memory_not_working_set",
+    "no_worker_marker_before_assignment": true,
+    "observations": [
+      {
+        "allocated": true,
+        "requested_bytes": 1048576,
+        "winerror": null
+      },
+      {
+        "allocated": false,
+        "requested_bytes": 67108864,
+        "winerror": 1455
+      }
+    ],
+    "peak_process_commit_bytes": 24477696,
+    "process_limit_bytes": 50331648,
+    "worker_dead": true
+  },
+  "job_memory_control": {
+    "assigned_before_resume": true,
+    "inherited_host_job": true,
+    "metric": "committed_virtual_memory_not_working_set",
+    "no_worker_marker_before_assignment": true,
+    "observations": [
+      {
+        "allocated": true,
+        "requested_bytes": 1048576,
+        "winerror": null
+      },
+      {
+        "allocated": true,
+        "requested_bytes": 67108864,
+        "winerror": null
+      }
+    ],
+    "peak_process_commit_bytes": 87437312,
+    "process_limit_bytes": 0,
+    "worker_dead": true
+  },
+  "job_timeout": {
+    "all_pinned_job_processes_dead": true,
+    "assigned_before_resume": true,
+    "cleanup_seconds": 0.005615,
+    "deadline_overshoot_seconds": 0.000507,
+    "inherited_host_job": true,
+    "leaf_dead": true,
+    "leaf_in_same_job": true,
+    "no_worker_marker_before_assignment": true,
+    "observed_before_8_second_self_expiry": true,
+    "pinned_job_processes_before_termination": 5,
+    "worker_dead": true
+  },
+  "platform": {
+    "pointer_bits": 64,
+    "python": "3.14.6",
+    "release": "11",
+    "sqlite": "3.50.4",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "production_access": false,
+  "schema_version": "r9k_results_v1",
+  "supervisor_crash": {
+    "all_pinned_job_processes_dead": true,
+    "cleanup_seconds": 0.005823,
+    "leaf_dead": true,
+    "not_self_expiry": true,
+    "pinned_job_processes": 5,
+    "supervisor_terminated": true,
+    "worker_dead": true
+  }
+}

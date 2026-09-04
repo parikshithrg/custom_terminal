@@ -1,0 +1,94 @@
+{
+  "schema_version": "r9k_manifest_v1",
+  "baseline_commit": "4611d7e5025531e3e1dae690c71fa8f5dd105b39",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "completion": "SYNTHETIC_CONTAINMENT_FEASIBILITY_RECORDED_PRODUCTION_BLOCKED",
+  "production_authority": false,
+  "artifacts": [
+    {
+      "sha256": "bf08cce981b350dd349b187699e746361ce9b591de2d669a4c206f49f7fe778e",
+      "path": "docs/investigations/r9k/EXPERIMENT_PLAN.md"
+    },
+    {
+      "sha256": "048b06de230729c1243dd1d5effdd13dbe3582e3abf81430b23891d688181148",
+      "path": "docs/investigations/r9k/results_v1.json"
+    },
+    {
+      "sha256": "bde553e4c2cfec83f1d3ac4a78959e6f02e15a066a37268cc36fbe9647831f4b",
+      "path": "docs/investigations/r9k/feasibility_v1.json"
+    },
+    {
+      "sha256": "c16791775de7ecb0981b4c8d7a5fbb09a1d3d4ba6e010f35f7749701f4249cfb",
+      "path": "tools/r9k_windows_feasibility.py"
+    },
+    {
+      "sha256": "cc2f55b7ab86ae278c490dc92e97c4082d9133c6e5bf2f8b94655f0248cbfc36",
+      "path": "tests/test_research_r9k_windows_feasibility.py"
+    },
+    {
+      "sha256": "badcc6b35abebaebc6c1b4bed5a407820bcc087200a12c7610643ef3d46907a9",
+      "path": "reports/RESEARCH_R9K_REPORT.md"
+    },
+    {
+      "sha256": "45f0cf0ed65905273125f94f00e85933f22d374fcea52e1dc0c9985ada019c73",
+      "path": "docs/investigations/r9j/manifest_v1.json"
+    },
+    {
+      "sha256": "471b4e784e7b7cc679f2bd39d69b08577a5912e7c62deb6a3f795a2581cda071",
+      "path": "docs/investigations/r9j/completion_manifest_v1.json"
+    },
+    {
+      "sha256": "22fb038ebd5a3f4c889198561547f2b28057d9a2012dbb0248fd058a92d90729",
+      "path": "docs/project_status/pre_research_review_record_v5.json"
+    },
+    {
+      "sha256": "44502aa44d45ac666d4c849de00a62bae6d6fb5864014fa0214e92621fef46dd",
+      "path": "output/pdf/market_system_status_pre_research_review_v5.pdf"
+    },
+    {
+      "sha256": "a6529ec14520d163e327e2dcc7a7f469ea473d14b8d39e3ede345bc3d49dcdc1",
+      "path": "proposals/fno_production_audit_boundary_v1/proposal_manifest_v1.json"
+    },
+    {
+      "sha256": "115eb8da500a81455061c13c130ee458496b38190caf11dbe4bba35386652acc",
+      "path": "evidence/fno_locator_binding_v1/anchor.json"
+    },
+    {
+      "sha256": "995524b670dc95b717fa7d4b27935c788d661bcf75b8f7f4400d76831a8f434f",
+      "path": "proposals/fno_locator_binding_v1/binding_proposal.json"
+    },
+    {
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea",
+      "path": "src/market_intel/foundation/fno_production_boundary.py"
+    }
+  ],
+  "fixture": {
+    "recipe_sha256": "9674b9afb78bcba92af932555102de573f714202cd8eb961c85f3b75e58d5b00",
+    "database_sha256": "163263c21ba0b1a0b59c4c0bcbf8c2a232528dc304dc166e69bcee803cd851a5",
+    "bytes": 8192
+  },
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "fingerprint_changed": false,
+  "prior_pdf_summary_covers_new_findings": false,
+  "owner_review_changed": false,
+  "verification": {
+    "selected_tests_passed": 25,
+    "skipped": 0,
+    "root_or_real_data_suites_run": false,
+    "prior_evidence_unchanged": true,
+    "json_hashes": "PASS",
+    "artifact_privacy": "PASS",
+    "whitespace": "PASS",
+    "remaining_experimental_python_processes": 0,
+    "process_census": "Read-only same-user CIM retry outside sandbox; initial denied scan not accepted as evidence."
+  },
+  "reproduction": ".venv/Scripts/python.exe -m tools.r9k_windows_feasibility",
+  "limitations": [
+    "Fixed ordinary CreateProcess tree, not general hostile-code sandbox.",
+    "Timing, process census and commit peaks vary; behavioral assertions should reproduce.",
+    "Read-byte cap not feasible under approved binding/VFS constraints.",
+    "No whole-directory sidecar exclusion or disk quota established."
+  ],
+  "next_decision": "Owner must choose retaining the current blocked stack or separately authorizing a bounded VFS-capable access evaluation; no guarantee is weakened."
+}

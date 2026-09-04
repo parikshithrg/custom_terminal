@@ -21,3 +21,7 @@ docs/investigations/r9j/** -text
 tools/r9j_synthetic_boundary.py -text
 tests/test_research_r9j_synthetic_boundary.py -text
 reports/RESEARCH_R9J_REPORT.md -text
+docs/investigations/r9k/** -text
+tools/r9k_windows_feasibility.py -text
+tests/test_research_r9k_windows_feasibility.py -text
+reports/RESEARCH_R9K_REPORT.md -text

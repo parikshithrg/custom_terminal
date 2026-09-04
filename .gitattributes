@@ -22,6 +22,8 @@ tools/r9j_synthetic_boundary.py -text
 tests/test_research_r9j_synthetic_boundary.py -text
 reports/RESEARCH_R9J_REPORT.md -text
 docs/investigations/r9k/** -text
+# Preserve native CRLF evidence bytes while retaining real whitespace checks.
+docs/investigations/r9k/results_v1.json whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tools/r9k_windows_feasibility.py -text
 tests/test_research_r9k_windows_feasibility.py -text
 reports/RESEARCH_R9K_REPORT.md -text

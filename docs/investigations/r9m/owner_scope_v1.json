@@ -1,0 +1,32 @@
+{
+  "schema_version": "r9m_owner_scope_v1",
+  "recorded_at": "2026-09-04T07:36:00Z",
+  "record_kind": "TASK_SCOPE_CLARIFICATION_NOT_PRODUCTION_APPROVAL",
+  "baseline_commit": "d0102dce57acb8bebffbfc002f865f8abee3245c",
+  "pdf_v6_sha256": "a23a89c4590688185955231f82f597243a6db2805acdfc0a6c2be3f4c0c3c04d",
+  "generation_manifest_v6_sha256": "941e74bd0df3f46833b395a32aaa2702fd92ce406ea2697cb57e87212ad89dd7",
+  "answers": [
+    {"question": 1, "answer": "yes"},
+    {"question": 2, "answer": "authorized"},
+    {"question": 3, "answer": "defer it for now"},
+    {"question": 4, "answer": "no review needed. separate validation tests to be run later on data obtained from NSE sources to maintain accuracy. synthetic data ID's such as rows and column names should match real NSE data headers."}
+  ],
+  "clarification_asked": "Begin synthetic-only evaluation now with real-database access deferred, or defer evaluation too?",
+  "owner_clarification": "begin the evaluation",
+  "scope": "BOUNDED_SYNTHETIC_ONLY_DEPENDENCY_EVALUATION",
+  "real_database_route": "DEFERRED",
+  "resource_requirements_changed": false,
+  "future_nse_validation": "SEPARATE_LATER_TASK_NOT_AUTHORIZED_NOW",
+  "synthetic_schema_requirement": "Use documented NSE column names and separately label synthetic values. Exact F&O header/type qualification remains required before F&O schema tests.",
+  "authority": {
+    "bounded_synthetic_evaluation": true,
+    "production_dependency_adoption": false,
+    "production_implementation": false,
+    "real_database_access": false,
+    "audit_execution": false,
+    "market_data_acquisition": false,
+    "scoring_or_research": false,
+    "trading": false
+  },
+  "statement": "Records direct task authorization only. Not an executable approval payload or a rewritten prior review. Isolated candidate installation is an evaluation step, not production adoption."
+}

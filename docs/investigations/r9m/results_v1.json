@@ -1,0 +1,178 @@
+{
+  "apsw": "3.53.4.0",
+  "cases": {
+    "adequate": {
+      "delegated": 4212,
+      "error": null,
+      "failed": false,
+      "limit": 1048576,
+      "mmap": null,
+      "published_rows": 1,
+      "read_calls": 3,
+      "read_events": [
+        [
+          100,
+          0
+        ],
+        [
+          4096,
+          0
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "requested": 4212
+    },
+    "exact_observed": {
+      "delegated": 4212,
+      "error": null,
+      "failed": false,
+      "limit": 4212,
+      "mmap": null,
+      "published_rows": 1,
+      "read_calls": 3,
+      "read_events": [
+        [
+          100,
+          0
+        ],
+        [
+          4096,
+          0
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "requested": 4212
+    },
+    "late_sidecar": {
+      "delegated": 4212,
+      "error": "IOError",
+      "failed": true,
+      "limit": 1048576,
+      "mmap": null,
+      "published_rows": 0,
+      "read_calls": 3,
+      "read_events": [
+        [
+          100,
+          0
+        ],
+        [
+          4096,
+          0
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "requested": 4212
+    },
+    "mmap_requested": {
+      "delegated": 4212,
+      "error": null,
+      "failed": false,
+      "limit": 1048576,
+      "mmap": {
+        "readback": [],
+        "set_result": []
+      },
+      "published_rows": 1,
+      "read_calls": 3,
+      "read_events": [
+        [
+          100,
+          0
+        ],
+        [
+          4096,
+          0
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "requested": 4212
+    },
+    "one_under_observed": {
+      "delegated": 4196,
+      "error": "IOError",
+      "failed": true,
+      "limit": 4211,
+      "mmap": null,
+      "published_rows": 0,
+      "read_calls": 3,
+      "read_events": [
+        [
+          100,
+          0
+        ],
+        [
+          4096,
+          0
+        ]
+      ],
+      "requested": 4212
+    },
+    "small": {
+      "delegated": 100,
+      "error": "IOError",
+      "failed": true,
+      "limit": 200,
+      "mmap": null,
+      "published_rows": 0,
+      "read_calls": 2,
+      "read_events": [
+        [
+          100,
+          0
+        ]
+      ],
+      "requested": 4196
+    },
+    "zero": {
+      "delegated": 0,
+      "error": "IOError",
+      "failed": true,
+      "limit": 0,
+      "mmap": null,
+      "published_rows": 0,
+      "read_calls": 1,
+      "read_events": [],
+      "requested": 100
+    }
+  },
+  "classification": "SYNTHETIC_ONLY_NOT_PRODUCTION",
+  "direct_forbidden_opens_rejected": 4,
+  "direct_repeated_exact_sticky": {
+    "delegated": 32,
+    "rejections": 2
+  },
+  "fixture_bytes": 8192,
+  "fixture_sha256": "bbf7b73ee559b488d95007257eaac07f691be9ada35dd3b89b49df1b891e7a6e",
+  "fixture_unchanged": true,
+  "header_provenance": "Existing NSE MII parser subset; not F&O UDiFF schema qualification",
+  "headers": [
+    "FinInstrmId",
+    "TckrSymb",
+    "SctySrs",
+    "ISIN",
+    "Xchg",
+    "Sts",
+    "FinInstrmNm"
+  ],
+  "native_mmap_control": [
+    [
+      16777216
+    ]
+  ],
+  "schema_sha256": "913f68beea94edb86422875aae9b76b7e7efbc98c02ee36aae177c1c34f25f93",
+  "sqlite": "3.53.4",
+  "temporary_fixture_removed": true
+}

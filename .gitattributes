@@ -31,3 +31,7 @@ docs/project_status/market_system_status_pre_research_review_v6.md -text
 docs/project_status/pre_research_generation_manifest_v6.json -text
 reports/RESEARCH_R9L_REPORT.md -text
 tests/test_research_r9l_pdf_v6.py -text
+docs/investigations/r9m/** -text
+tools/r9m_vfs_evaluation.py -text
+tests/test_research_r9m_vfs_evaluation.py -text
+reports/RESEARCH_R9M_REPORT.md -text

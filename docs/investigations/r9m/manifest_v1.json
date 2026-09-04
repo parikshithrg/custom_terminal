@@ -1,0 +1,74 @@
+{
+  "schema_version": "r9m_evaluation_manifest_v1",
+  "recorded_at": "2026-09-04T07:38:55.953152+00:00",
+  "baseline_commit": "d0102dce57acb8bebffbfc002f865f8abee3245c",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "decision": "SYNTHETIC_VFS_READ_INTERCEPTION_DEMONSTRATED_FURTHER_REVIEW_REQUIRED",
+  "dependency_adopted": false,
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "real_database_accessed": false,
+  "requirements_weakened": false,
+  "candidate": {
+    "name": "apsw",
+    "version": "3.53.4.0",
+    "sqlite_version": "3.53.4",
+    "wheel": "apsw-3.53.4.0-cp314-cp314-win_amd64.whl",
+    "wheel_sha256": "13bd0c01cada861ce9cd4a09ff36c5a245185477c5fe6ce52d266c46e69f76e5",
+    "wheel_bytes": 3341532,
+    "metadata_url": "https://pypi.org/pypi/apsw/3.53.4.0/json",
+    "tagged_source_url": "https://raw.githubusercontent.com/rogerbinns/apsw/3.53.4.0/src/vfs.c",
+    "source_sha256": "55650ae46ea5f86b1e2ac6e96fa09559b9c065469a02d7fdf16ac4ad200cd047",
+    "source_bytes": 100457,
+    "installation_scope": "IGNORED_ISOLATED_EVALUATION_ONLY"
+  },
+  "verification": {
+    "static_tests_passed": 26,
+    "native_replay_matched": true,
+    "fixture_removed": true,
+    "root_candidate_absent": true,
+    "production_changed": false
+  },
+  "schema_status": "MII_HEADER_NAMES_REUSED_FO_UDIFF_FORMAT_EVIDENCE_PENDING",
+  "artifacts": [
+    {
+      "path": "docs/investigations/r9m/EVALUATION_PLAN.md",
+      "sha256": "a92a29dcc60dae80b698f357581d6b96e09f484cb8d1c6bab604a21cb80abc12"
+    },
+    {
+      "path": "docs/investigations/r9m/owner_scope_v1.json",
+      "sha256": "63d2c572b9b7b8087f90db7c418527a271861e94198de8105ff3b3d6da7d29db"
+    },
+    {
+      "path": "docs/investigations/r9m/results_v1.json",
+      "sha256": "f61dbaf55c803198fe23bbf008f5711253ea8f0c2ffada5fe01e7882defb7e38"
+    },
+    {
+      "path": "tools/r9m_vfs_evaluation.py",
+      "sha256": "41e1e5ae6c76c5ebbbfcdeab26d7f0f30451b8e18f4322269e7af1b236be2b3a"
+    },
+    {
+      "path": "tests/test_research_r9m_vfs_evaluation.py",
+      "sha256": "d537059d2542baa46fc5b3e97b343897b2caeeff983dd7fba092420bd28c9559"
+    },
+    {
+      "path": "reports/RESEARCH_R9M_REPORT.md",
+      "sha256": "09758f0c9ba32c555d8f6039a1c6dbd0eca980486ef97ec2ca15444ff972d3f7"
+    },
+    {
+      "path": "docs/project_status/pre_research_generation_manifest_v6.json",
+      "sha256": "941e74bd0df3f46833b395a32aaa2702fd92ce406ea2697cb57e87212ad89dd7"
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"
+    },
+    {
+      "path": "src/market_intel/foundation/nse_population_normalization.py",
+      "sha256": "2bd5d7d4c3b16c57891d41f3f3fd2daff46ebd495c7b0cebfcd314dd106beb81"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "a6fcded2b042f3ab65769a158f84ba44a3b646c1390fc2667e07c556c5265664"
+    }
+  ]
+}

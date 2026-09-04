@@ -1,0 +1,93 @@
+{
+  "schema_version": "r9n_manifest_v1",
+  "recorded_at": "2026-09-04T08:53:01.568123+00:00",
+  "baseline_commit": "fcddaa3",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "completion": "RESTRICTED_VFS_ADVERSARIAL_EVALUATION_RECORDED_PRODUCTION_BLOCKED",
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "dependency_adopted": false,
+  "real_database_accessed": false,
+  "market_data_acquired": false,
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "fingerprint_exclusions_changed": false,
+  "pdf_v6_covers_new_findings": false,
+  "candidate_version": "3.53.4.0",
+  "wheel_sha256": "13bd0c01cada861ce9cd4a09ff36c5a245185477c5fe6ce52d266c46e69f76e5",
+  "root_distribution_inventory_sha256": "27fd4f9f7952c7b8b172b180a52357a8eedd0f0d868b46e7686fa90194ced386",
+  "assessment": {
+    "scoped_logical_read_budget": "DEMONSTRATED_WITH_LIMITATIONS",
+    "cursor_row_output": "DEMONSTRATED_WITH_LIMITATIONS",
+    "restricted_access": "DEMONSTRATED_WITH_LIMITATIONS",
+    "complete_native_sidecar_path_coverage": "INCONCLUSIVE",
+    "official_fo_schema": "INCONCLUSIVE",
+    "production_readiness": "NOT_TESTED"
+  },
+  "verification": {
+    "native_tests_passed": 4,
+    "main_matrix_cases": 46,
+    "static_tests_passed": 34,
+    "cleanup": "EXACT_GENERATED_TEMPORARY_ROOTS_ONLY",
+    "experimental_processes_remaining": 0
+  },
+  "supplemental_context": {
+    "fixture_sha256": "2d83d2f6f9b0262ddb5e7a9d9a803e09c62c4fca9f540850428bfd325528fca6",
+    "measurement_scope": "Cumulative attempt xRead/rows/output; control and fixture I/O outside meter",
+    "runtime": "Pinned candidate runtime as results_v1.json",
+    "limitations": "Fixed generic schema, no production or hostile-process claim"
+  },
+  "artifacts": [
+    {
+      "path": "docs/investigations/r9n/EXPERIMENT_PLAN.md",
+      "sha256": "6575a82d4d7a4a955643b3dce370b88b4982f4f23c79b8f1faa69447a7ff0a6f"
+    },
+    {
+      "path": "docs/investigations/r9n/results_v1.json",
+      "sha256": "cd6f3c037549126a4d527010f2b39ded3855ad97d6a3b45bca08572f88ed03af"
+    },
+    {
+      "path": "docs/investigations/r9n/supplemental_results_v1.json",
+      "sha256": "6e68226bbd100d44c72ef9cf71405f6b4a6e070951fd24741d9b7f9e3ec19820"
+    },
+    {
+      "path": "docs/investigations/r9n/official_format_evidence_v1.json",
+      "sha256": "03bcbc223270073eee1556beff9804ee2dbd5da97a446d17cefd93d11e4065b8"
+    },
+    {
+      "path": "tools/r9n_adversarial.py",
+      "sha256": "242a444396f7194989872dc47cc417478348b7e046c644ac5c66f63daf9aadb4"
+    },
+    {
+      "path": "tools/r9n_regression.py",
+      "sha256": "cb94f121ec20b0f7f51ed3e6ab44d84debe2fc459bbcd3a139738dfb2b564e3c"
+    },
+    {
+      "path": "tests/test_research_r9n_adversarial.py",
+      "sha256": "f095cad71c490447ac0bb1d4f7e3bb6826526db97ea47963663af7aba16d3d40"
+    },
+    {
+      "path": "reports/RESEARCH_R9N_REPORT.md",
+      "sha256": "fa4c05748e5cb3e8a4f6bac6eb9db1eac0b5709780bef7badc49c0942fec08b3"
+    },
+    {
+      "path": "docs/investigations/r9m/manifest_v1.json",
+      "sha256": "37c6f578c9249653f0fd6d49a2be30b9454583eb803bdf4416dd01c0c3075a07"
+    },
+    {
+      "path": "docs/project_status/pre_research_generation_manifest_v6.json",
+      "sha256": "941e74bd0df3f46833b395a32aaa2702fd92ce406ea2697cb57e87212ad89dd7"
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "a6fcded2b042f3ab65769a158f84ba44a3b646c1390fc2667e07c556c5265664"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "654e2ca20bb0f2dac0fc5e2041e5f65ce808b7c1f401ad3cdbe46524dec841ab"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "r9n_official_format_evidence_v1",
+  "status": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "classification": "INCONCLUSIVE",
+  "attempts": [
+    {
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "retrieved_at": "2026-09-04T08:45:07.901739+00:00",
+      "error": "ReadTimeout",
+      "http_status": null,
+      "response_sha256": null
+    }
+  ],
+  "format_version": null,
+  "effective_date": null,
+  "document_sha256": null,
+  "field_definitions": [],
+  "market_records_acquired": false,
+  "security_lists_acquired": false,
+  "controls_bypassed": false,
+  "reason": "Ordinary bounded request timed out; no response body or format document was obtained. No guessed URL or parser is authoritative.",
+  "fixture_policy": "Clearly generic synthetic field names only; R.9M MII subset finding remains unchanged."
+}

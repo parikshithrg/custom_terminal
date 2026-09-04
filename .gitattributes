@@ -35,3 +35,8 @@ docs/investigations/r9m/** -text
 tools/r9m_vfs_evaluation.py -text
 tests/test_research_r9m_vfs_evaluation.py -text
 reports/RESEARCH_R9M_REPORT.md -text
+docs/investigations/r9n/** -text
+tools/r9n_adversarial.py -text
+tools/r9n_regression.py -text
+tests/test_research_r9n_adversarial.py -text
+reports/RESEARCH_R9N_REPORT.md -text

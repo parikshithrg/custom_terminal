@@ -27,3 +27,7 @@ docs/investigations/r9k/results_v1.json whitespace=blank-at-eol,blank-at-eof,spa
 tools/r9k_windows_feasibility.py -text
 tests/test_research_r9k_windows_feasibility.py -text
 reports/RESEARCH_R9K_REPORT.md -text
+docs/project_status/market_system_status_pre_research_review_v6.md -text
+docs/project_status/pre_research_generation_manifest_v6.json -text
+reports/RESEARCH_R9L_REPORT.md -text
+tests/test_research_r9l_pdf_v6.py -text

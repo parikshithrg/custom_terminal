@@ -1,0 +1,28 @@
+{
+  "acquisition_status": "SUCCEEDED",
+  "byte_size": 2999,
+  "content_hash": "254a51db0d9b5fa274d9defb770e51a42b84ab7db80f028bfc2ba11efcd068d7",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "security_master",
+  "error_state": null,
+  "expected_event_date": "2021-12-31",
+  "http_status": null,
+  "licensing_retention_notes": "GENERATED_SYNTHETIC_RETAINABLE",
+  "manifest_version": "raw_object_manifest_v1",
+  "provider": "synthetic_formula_provider",
+  "quarantine_reason": null,
+  "request_parameters": {
+    "fixture_id": "fictional_market_r10a_v1"
+  },
+  "response_metadata": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieval_outcome": "SUCCEEDED",
+  "retrieval_timestamp": "2022-01-03T00:00:00+00:00",
+  "retry_count": 0,
+  "retry_history": [],
+  "schema_parser_version": "synthetic_formula_parser_v1",
+  "source_identity": "fictional_market_r10a_v1:security_master",
+  "source_organization": null,
+  "source_url": null,
+  "stored_payload": "payload.json"
+}

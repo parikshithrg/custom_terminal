@@ -1,0 +1,68 @@
+{
+  "fixture_id": "fictional_market_r10a_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "seed": null,
+  "calendar": {
+    "start": "2012-01-02",
+    "end": "2021-12-31",
+    "frequency": "WEEKDAY_SYNTHETIC_SESSIONS",
+    "timezone": "Asia/Kolkata",
+    "decision_clock": "SESSION_CLOSE"
+  },
+  "versions": {
+    "dataset": "synthetic_daily_bars_r10a_v1",
+    "parser": "synthetic_formula_parser_v1",
+    "identity": "synthetic_identity_r10a_v1",
+    "universe": "liquidity_monthly_200_250_v1",
+    "feature": "momentum_12_1_v1",
+    "outcome": "next_open_21_session_excess_v1",
+    "cost": "synthetic_delivery_cost_oracle_v1",
+    "fold_plan": "synthetic_expanding_wf_r10a_v1"
+  },
+  "instruments": [
+    {"instrument_id": "SYN_I001", "listing_id": "SYN_L001", "symbol": "ALPHA", "start": "2012-01-02", "end": null, "base": 40.0, "slope": 0.030, "volume": 900000},
+    {"instrument_id": "SYN_I002", "listing_id": "SYN_L002", "symbol": "BETA", "start": "2012-01-02", "end": null, "base": 45.0, "slope": 0.025, "volume": 800000},
+    {"instrument_id": "SYN_I003", "listing_id": "SYN_L003", "symbol": "GAMMA_OLD", "start": "2012-01-02", "end": null, "base": 50.0, "slope": 0.020, "volume": 700000},
+    {"instrument_id": "SYN_I004", "listing_id": "SYN_L004", "symbol": "DELTA", "start": "2012-01-02", "end": "2018-07-10", "base": 55.0, "slope": 0.015, "volume": 1000000},
+    {"instrument_id": "SYN_I005", "listing_id": "SYN_L005", "symbol": "EPSILON", "start": "2016-01-04", "end": null, "base": 60.0, "slope": 0.035, "volume": 600000},
+    {"instrument_id": "SYN_I006", "listing_id": "SYN_L006", "symbol": "ZETA", "start": "2012-01-02", "end": null, "base": 65.0, "slope": 0.010, "volume": 500000},
+    {"instrument_id": "SYN_I007", "listing_id": "SYN_L007", "symbol": "ETA", "start": "2020-01-02", "end": null, "base": 70.0, "slope": 0.040, "volume": 400000},
+    {"instrument_id": "SYN_I008", "listing_id": "SYN_L008", "symbol": "THETA", "start": "2012-01-02", "end": null, "base": 75.0, "slope": 0.045, "volume": 1200000}
+  ],
+  "controlled_cases": {
+    "rename": {"instrument_id": "SYN_I003", "old_symbol": "GAMMA_OLD", "new_symbol": "GAMMA_NEW", "effective_at": "2017-01-02T03:45:00Z"},
+    "late_listing": {"instrument_id": "SYN_I005", "listing_date": "2016-01-04"},
+    "insufficient_history": {"instrument_id": "SYN_I007", "listing_date": "2020-01-02"},
+    "delisting": {"instrument_id": "SYN_I004", "last_session": "2018-07-10", "terminal_value_status": "UNRESOLVED"},
+    "missing_session": {"instrument_id": "SYN_I006", "session_date": "2017-03-15"},
+    "duplicate_source_row": {"instrument_id": "SYN_I006", "session_date": "2017-04-03"},
+    "invalid_price": {"instrument_id": "SYN_I006", "session_date": "2017-04-04", "close": -1.0},
+    "publication_delay": {"instrument_id": "SYN_I002", "session_date": "2017-08-01", "delay_days": 2},
+    "revision": {"instrument_id": "SYN_I001", "session_date": "2017-06-15", "revision_2_published_at": "2017-07-03T12:30:00Z", "close_multiplier": 1.05},
+    "missing_entry": {"instrument_id": "SYN_I008", "session_date": "2019-07-01"},
+    "missing_exit": {"instrument_id": "SYN_I008", "session_date": "2019-10-01"},
+    "corporate_action": {"action_id": "SYN_CA001", "instrument_id": "SYN_I001", "action_type": "SPLIT", "effective_date": "2016-07-01", "ratio": 2.0, "treatment": "MARKER_ONLY_NO_ADJUSTMENT"}
+  },
+  "benchmark": {"index_id": "SYN_BENCHMARK", "return_classification": "SYNTHETIC_PRI", "base": 1000.0, "slope": 0.20},
+  "holdout": {"start": "2021-01-01", "end": "2021-12-31", "state": "UNCONSUMED_SYNTHETIC_HOLDOUT"},
+  "expected_answers": {
+    "accepted_daily_bar_revisions": 16835,
+    "revision_before_publication": 1,
+    "revision_after_publication": 2,
+    "rename_preserves_instrument_id": "SYN_I003",
+    "old_alias_invalid_after_rename": true,
+    "duplicate_and_invalid_rows_quarantined": 3,
+    "universe_2019_06_28_ranked_selection": ["SYN_I008", "SYN_I001", "SYN_I005", "SYN_I002"],
+    "feature_2019_06_28_SYN_I001": 0.0835636122471537,
+    "rank_2019_06_28_SYN_I001": 1,
+    "missing_entry_case": {"decision_time": "2019-06-28", "instrument_id": "SYN_I008", "entry_time": "2019-07-01"},
+    "missing_exit_case": {"decision_time": "2019-08-30", "instrument_id": "SYN_I008", "exit_time": "2019-10-01", "status": "UNRESOLVED_DELISTING"},
+    "purge_sessions": 22,
+    "embargo_sessions": 22,
+    "oos_fold_count": 4,
+    "outcome_status_counts": {"MISSING_ENTRY": 6, "RESOLVED": 394, "UNRESOLVED_DELISTING": 2},
+    "round_trip_cost_10000_11000": 33.76818,
+    "feature_version": "momentum_12_1_v1",
+    "outcome_version": "next_open_21_session_excess_v1"
+  }
+}

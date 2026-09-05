@@ -1,0 +1,87 @@
+{
+  "challenges": {
+    "ARTIFACT_HASH_MISMATCH": "PASS_FAIL_CLOSED",
+    "DUPLICATE_RECORDS": "PASS_FAIL_CLOSED",
+    "FUTURE_REVISION_LEAKAGE": "PASS_FAIL_CLOSED",
+    "FUTURE_UNIVERSE_MEMBERSHIP": "PASS_FAIL_CLOSED",
+    "MODIFIED_RAW_PAYLOAD": "PASS_FAIL_CLOSED",
+    "NONDETERMINISTIC_ROW_ORDER": "PASS_FAIL_CLOSED",
+    "OVERLAPPING_LABELS": "PASS_FAIL_CLOSED",
+    "POST_DECISION_SYMBOL_MAPPING": "PASS_FAIL_CLOSED",
+    "SILENT_OUTCOME_DROP": "PASS_FAIL_CLOSED",
+    "VALIDATION_FITTED_TRANSFORMATION": "PASS_FAIL_CLOSED"
+  },
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "economic_quality": {
+    "cost_sensitivity_mean_net_pct": {
+      "0_bps_per_side": 0.42690586874842096,
+      "10_bps_per_side": 0.22690586874842095,
+      "5_bps_per_side": 0.3269058687484209
+    },
+    "estimated_round_trip_turnover_pct_per_rebalance": 200.0,
+    "mean_benchmark_return_pct": 0.3119583125640216,
+    "mean_cost_pct": 0.3233151165616077,
+    "mean_gross_return_pct": 0.6502209853100286,
+    "mean_mae_pct": -0.3139682245267897,
+    "mean_mfe_pct": 1.1532581233306376,
+    "mean_net_excess_return_pct": 0.014947556184399378,
+    "mean_net_return_pct": 0.3269058687484209,
+    "n_selected_resolved": 55,
+    "unresolved_by_reason": {
+      "MISSING_ENTRY": 6,
+      "UNRESOLVED_DELISTING": 2
+    },
+    "unresolved_count": 8
+  },
+  "engineering_oracle_not_market_edge": true,
+  "holdout": {
+    "end": "2021-12-31",
+    "start": "2021-01-01",
+    "state": "UNCONSUMED_SYNTHETIC_HOLDOUT"
+  },
+  "known_answers": {
+    "oos_fold_count": 4,
+    "outcome_status_counts": {
+      "MISSING_ENTRY": 6,
+      "RESOLVED": 394,
+      "UNRESOLVED_DELISTING": 2
+    },
+    "quarantine_rows": 3,
+    "round_trip_cost_10000_11000": 33.76818
+  },
+  "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+  "portfolio_quality": {
+    "benchmark_ending_equity": 54480.42482290415,
+    "benchmark_max_drawdown_pct": 0.0,
+    "benchmark_total_return_pct": 8.960849645808299,
+    "ending_equity": 54571.59331918716,
+    "gross_exposure_pct": 100.0,
+    "implementation_note": "Equal-weight rebalance approximation; legacy slot-constrained portfolio retained for compatibility comparison",
+    "max_drawdown_pct": 0.0,
+    "maximum_names_per_rebalance": 3,
+    "maximum_single_name_weight_pct": 33.333333333333336,
+    "mean_names_per_rebalance": 1.9642857142857142,
+    "n_rebalances": 28,
+    "terminal_excess_wealth_inr": 91.16849628301134,
+    "total_return_pct": 9.143186638374324
+  },
+  "prediction_quality": {
+    "bucket_monotonic": true,
+    "effective_decision_dates": 46,
+    "mean_rank_ic": 1.0,
+    "n_observations": 197,
+    "rank_ic_ci95_high": 1.0,
+    "rank_ic_ci95_low": 1.0,
+    "uncertainty_method": {
+      "block_length": 2,
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "estimate": 1.0,
+      "method": "moving_decision_date_block_bootstrap",
+      "n_dates": 46,
+      "replications": 2000,
+      "seed": 42
+    }
+  },
+  "schema_version": "synthetic_validation_summary_r10a_v1"
+}

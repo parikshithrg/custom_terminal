@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Iterable
 
 import pandas as pd
 
@@ -72,3 +73,28 @@ def assert_no_label_overlap(outcomes: pd.DataFrame, fold: WalkForwardFold) -> No
     if not train.empty and pd.to_datetime(train["exit_time"]).max() >= fold.validation_start:
         raise AssertionError(f"training label overlaps validation in {fold.fold_id}")
 
+
+def validate_fold_provenance(
+    fold: WalkForwardFold,
+    *,
+    fitted_through: pd.Timestamp | None,
+    input_snapshot_hash: str,
+    prediction_decision_times: Iterable[pd.Timestamp],
+    holding_sessions: int,
+) -> dict[str, object]:
+    """Fail closed when an OOS fold uses validation-fitted or misbound inputs."""
+    if fold.purge_sessions < holding_sessions + 1 or fold.embargo_sessions < holding_sessions + 1:
+        raise AssertionError("PURGE_EMBARGO_SHORTER_THAN_OUTCOME_WINDOW")
+    if fitted_through is not None and pd.Timestamp(fitted_through) > fold.train_end:
+        raise AssertionError("VALIDATION_FITTED_TRANSFORMATION")
+    if not input_snapshot_hash:
+        raise AssertionError("MISSING_FOLD_INPUT_SNAPSHOT")
+    decisions = pd.to_datetime(list(prediction_decision_times))
+    if len(decisions) and ((decisions < fold.validation_start) | (decisions > fold.validation_end)).any():
+        raise AssertionError("PREDICTION_OUTSIDE_OOS_FOLD")
+    return {
+        "fold_id": fold.fold_id,
+        "fit_scope": "NO_FITTED_PARAMETERS" if fitted_through is None else "TRAINING_ONLY",
+        "fitted_through": None if fitted_through is None else pd.Timestamp(fitted_through),
+        "input_snapshot_hash": input_snapshot_hash,
+    }

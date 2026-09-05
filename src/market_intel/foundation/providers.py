@@ -33,6 +33,8 @@ class ProviderObject:
     request_parameters: dict[str, str] = field(default_factory=dict)
     expected_event_date: str | None = None
     licensing_notes: str | None = None
+    retention_classification: str = "UNSPECIFIED"
+    data_classification: str = "UNCLASSIFIED"
 
 
 class HistoricalDataProvider(Protocol):

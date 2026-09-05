@@ -1,0 +1,28 @@
+{
+  "acquisition_status": "SUCCEEDED",
+  "byte_size": 1932,
+  "content_hash": "9d056bed1cbf9b4bea333497fdbfacd84c11a19e5d9ea25a3ae40fa33d4d667f",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "benchmark_history",
+  "error_state": null,
+  "expected_event_date": "2021-12-31",
+  "http_status": null,
+  "licensing_retention_notes": "GENERATED_SYNTHETIC_RETAINABLE",
+  "manifest_version": "raw_object_manifest_v1",
+  "provider": "synthetic_formula_provider",
+  "quarantine_reason": null,
+  "request_parameters": {
+    "fixture_id": "fictional_market_r10a_v1"
+  },
+  "response_metadata": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieval_outcome": "SUCCEEDED",
+  "retrieval_timestamp": "2022-01-03T00:00:00+00:00",
+  "retry_count": 0,
+  "retry_history": [],
+  "schema_parser_version": "synthetic_formula_parser_v1",
+  "source_identity": "fictional_market_r10a_v1:benchmark_history",
+  "source_organization": null,
+  "source_url": null,
+  "stored_payload": "payload.json"
+}

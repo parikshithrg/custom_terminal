@@ -1,5 +1,12 @@
 # Local Terminal
 
+> Synthetic pipeline, backtesting and walk-forward engine development now uses
+> the standing operating policy in
+> [`SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md`](docs/project_status/SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md),
+> rather than repeated per-experiment PDFs. Synthetic performance validates the
+> machinery, not a market edge. Real-data transitions and production actions
+> remain separately gated.
+
 > Research architecture: `ARCHITECTURE_REFINEMENT.md`. Slice A: `reports/SLICE_A_REPORT.md`. Slice A.5 data-trust decision: `reports/SLICE_A5_REPORT.md`, with detailed trust findings in `reports/DATASET_TRUST_REPORT.md` and acquisition requirements in `reports/HISTORICAL_DATA_REQUIREMENTS.md`.
 
 > Slice A.6 provider-neutral ingestion readiness: `reports/SLICE_A6_REPORT.md`. Candidate sources must be reviewed with `reports/DATA_SOURCE_EVALUATION_TEMPLATE.md` before any acquisition.

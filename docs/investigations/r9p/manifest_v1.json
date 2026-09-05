@@ -1,0 +1,80 @@
+{
+  "schema_version": "r9p_manifest_v1",
+  "recorded_at": "2026-09-05T04:00:00+00:00",
+  "baseline_commit": "cc4949188d9cac7a6194addb2a7dbebf32a215e5",
+  "baseline_synced_origin_main": true,
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "completion": "INTEGRATED_SYNTHETIC_BOUNDARY_ACCEPTANCE_PASSED_PRODUCTION_BLOCKED",
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "official_schema_status": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "dependency_adopted": false,
+  "real_database_accessed": false,
+  "private_configuration_accessed": false,
+  "network_accessed": false,
+  "market_data_acquired": false,
+  "broker_or_trading_action": false,
+  "approval_contract": {
+    "schema_version": "r9p_synthetic_approval_v1",
+    "explicit_attempt_id_in_sealed_payload": true,
+    "one_use": true,
+    "durable_consumption_before_worker_creation": true,
+    "catalog_template_sha256": "5cb411f692e291d90de58db951039547fa959d165d6060e4dd3be970f3a1da5b",
+    "columns_template_sha256": "d16221fde0009ca4107693d19fe24287ec89e6f514e0e862d1fd2ff490870c44",
+    "successful_output_schema": "r9p_success_v1",
+    "failure_output_schema": "r9p_failure_v1"
+  },
+  "runtime": {
+    "python": "3.14.6",
+    "apsw": "3.53.4.0",
+    "sqlite": "3.53.4",
+    "apsw_location": "ignored isolated evaluation environment",
+    "apsw_wheel_sha256": "13bd0c01cada861ce9cd4a09ff36c5a245185477c5fe6ce52d266c46e69f76e5",
+    "root_apsw_present": false
+  },
+  "fixture_bindings": [
+    {"page_size": 512, "bytes": 36352, "sha256": "2efff2d9aac889170a031dc956ae92e1d2cbd61913293a94309cfbbcc2552d90"},
+    {"page_size": 1024, "bytes": 49152, "sha256": "2d83d2f6f9b0262ddb5e7a9d9a803e09c62c4fca9f540850428bfd325528fca6"},
+    {"page_size": 4096, "bytes": 159744, "sha256": "426d6183783ce3133baa700dcb2cd4d778b7bd92edf13cce5a1161a9f05e8f89"}
+  ],
+  "verification": {
+    "acceptance_criteria_passed": 10,
+    "acceptance_criteria_total": 10,
+    "native_tests_passed": 6,
+    "focused_static_tests_passed": 52,
+    "focused_static_tests_skipped": 1,
+    "skip_reason": "Windows symbolic-link creation privilege unavailable; source-level fixed-path and reparse rejection retained",
+    "json_validation": "PASS",
+    "secret_privacy_scan": "PASS",
+    "git_whitespace": "PASS",
+    "experimental_workers_remaining": 0,
+    "temporary_cleanup": "EXACT_GENERATED_SYNTHETIC_ROOTS_ONLY"
+  },
+  "historical_preservation": {
+    "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+    "research_state_file_count": 252,
+    "historical_evidence_rerun": false,
+    "pdf_v7_changed": false,
+    "production_boundary_changed": false,
+    "root_dependencies_changed": false
+  },
+  "artifacts": [
+    {"path": "docs/investigations/r9p/ACCEPTANCE_MATRIX.md", "sha256": "510e99a52f8e30b863a99cd914f3ba62bacc915a954c8bbc7c849fe899cce6e6"},
+    {"path": "docs/investigations/r9p/results_v1.json", "sha256": "67ef77317f418e402bd5853b10648617971bebf8c3df81482d9e63a99e32a2d2"},
+    {"path": "tools/r9p_integrated.py", "sha256": "7809e23d5a3d802328bbaec286f7a3de1e2dfcbdac81df8d7aa8546099b9a4e8"},
+    {"path": "tools/r9p_regression.py", "sha256": "d8066769a698a385643a769003c7d425a406c2956261082f59d349277cd2500f"},
+    {"path": "tests/test_research_r9p_integrated.py", "sha256": "b4492da4bb0705c2643eb3512710a8fa82e1ad72055d9858e27a11b058baf221"},
+    {"path": "reports/RESEARCH_R9P_REPORT.md", "sha256": "c7a95a0ff62fcad289af4aceca25839ce6f461334b51dc59e1f89140ac4fdc78"},
+    {"path": "tools/r9n_adversarial.py", "sha256": "242a444396f7194989872dc47cc417478348b7e046c644ac5c66f63daf9aadb4"},
+    {"path": "tools/r9k_windows_feasibility.py", "sha256": "c16791775de7ecb0981b4c8d7a5fbb09a1d3d4ba6e010f35f7749701f4249cfb"},
+    {"path": "docs/project_status/SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md", "sha256": "f4961d12e0cc278dfdedf1807dc0e2546901c1e361721574c2b8d333928a1c0e"},
+    {"path": "docs/investigations/r9m/manifest_v1.json", "sha256": "37c6f578c9249653f0fd6d49a2be30b9454583eb803bdf4416dd01c0c3075a07"},
+    {"path": "docs/investigations/r9n/manifest_v1.json", "sha256": "3f154a3364e0ed87f1b2eeefd659b848fa5d71824e36589f79bf5a2b59913e0f"},
+    {"path": "docs/project_status/pre_research_generation_manifest_v7.json", "sha256": "8651a76f94ec1fbbb1fa53149d4ca70d9375d80e0fa7d0ea47e0de975952d430"},
+    {"path": "output/pdf/market_system_status_pre_research_review_v7.pdf", "sha256": "804c555b4ac422f26f2c6ce5c7d98e1a4e7af6f3f81037b5cd40e950ae1691a7"},
+    {"path": "src/market_intel/foundation/fno_production_boundary.py", "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"},
+    {"path": "pyproject.toml", "sha256": "a6fcded2b042f3ab65769a158f84ba44a3b646c1390fc2667e07c556c5265664"},
+    {"path": "requirements.txt", "sha256": "654e2ca20bb0f2dac0fc5e2041e5f65ce808b7c1f401ad3cdbe46524dec841ab"}
+  ],
+  "next_engineering_task": "Provider-neutral synthetic ingestion and analytical pipeline",
+  "statement": "Synthetic boundary acceptance only; production and real-data work remain blocked."
+}

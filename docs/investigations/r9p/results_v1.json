@@ -1,0 +1,68 @@
+{
+  "schema_version": "r9p_integrated_results_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "official_schema_status": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "runtime": {
+    "apsw": "3.53.4.0",
+    "sqlite": "3.53.4",
+    "python": "3.14.6"
+  },
+  "layouts": [
+    {"page_size": 512, "bytes": 36352, "sha256": "2efff2d9aac889170a031dc956ae92e1d2cbd61913293a94309cfbbcc2552d90", "rows": 37, "requested": 36484, "reserved": 36484, "delegated": 36484, "returned": 36484, "terminal": "SYNTHETIC_AUDIT_COMPLETED"},
+    {"page_size": 1024, "bytes": 49152, "sha256": "2d83d2f6f9b0262ddb5e7a9d9a803e09c62c4fca9f540850428bfd325528fca6", "rows": 37, "requested": 25732, "reserved": 25732, "delegated": 25732, "returned": 25732, "terminal": "SYNTHETIC_AUDIT_COMPLETED"},
+    {"page_size": 4096, "bytes": 159744, "sha256": "426d6183783ce3133baa700dcb2cd4d778b7bd92edf13cce5a1161a9f05e8f89", "rows": 37, "requested": 28804, "reserved": 28804, "delegated": 28804, "returned": 28804, "terminal": "SYNTHETIC_AUDIT_COMPLETED"}
+  ],
+  "adversarial_cases": {
+    "one_below_read": {"failure": "READ_BUDGET", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "row_limit": {"failure": "ROW_LIMIT", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "output_second_operation": {"failure": "OUTPUT_LIMIT", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "deadline_fetch": {"failure": "DEADLINE", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "late_sidecar": {"failure": "SIDECAR_PRESENT", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "replacement": {"failure": "fixture identity changed at before_connection", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "crash_before_connection": {"failure": "PROCESS_CRASH", "success_published": false, "terminal": "SYNTHETIC_AUDIT_INCOMPLETE_AFTER_CRASH"},
+    "crash_after_connection": {"failure": "PROCESS_CRASH", "success_published": false, "terminal": "SYNTHETIC_AUDIT_INCOMPLETE_AFTER_CRASH"},
+    "timeout_descendant": {"failure": "SUPERVISOR_TIMEOUT", "assigned_before_resume": true, "descendant_dead": true, "success_published": false, "terminal": "SYNTHETIC_AUDIT_INCOMPLETE_AFTER_CRASH"},
+    "second_connection": {"failure": "REOPEN_FORBIDDEN", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "arbitrary_sql": {"failure": "EXACT_TEMPLATE_REQUIRED", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "application_read": {"failure": "SQL_AUTHORIZATION", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "mmap": {"failure": "SQL_AUTHORIZATION", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"},
+    "unsupported_open": {"failure": "OPEN_FORBIDDEN", "success_published": false, "terminal": "SYNTHETIC_AUDIT_FAILED"}
+  },
+  "approval_checks": {
+    "explicit_attempt_id_sealed": true,
+    "malformed_rejected": true,
+    "expired_rejected": true,
+    "mutated_rejected": true,
+    "wrong_binding_rejected": true,
+    "concurrent_winners": 1,
+    "duplicate_id_rejected": true,
+    "replay_rejected": true,
+    "crash_before_consumption_left_permission_unused": true
+  },
+  "acceptance": {
+    "1_exact_attempt_binding": true,
+    "2_durable_one_use": true,
+    "3_one_connection": true,
+    "4_guard_and_checkpoints": true,
+    "5_unsupported_io": true,
+    "6_exact_templates": true,
+    "7_cumulative_budgets": true,
+    "8_no_success_after_failure": true,
+    "9_terminal_reconciliation": true,
+    "10_synthetic_containment": true
+  },
+  "temporary_roots_removed": true,
+  "experimental_workers_remaining": 0,
+  "mocked_failure_tests": {
+    "job_creation_failure_starts_no_worker": true,
+    "job_assignment_failure_never_resumes_worker": true
+  },
+  "passed": true,
+  "limitations": [
+    "Checkpoint observation does not prove continuous quiescence.",
+    "Job Objects constrain process trees and committed memory, not database bytes or temporary storage.",
+    "Direct xOpen probes do not prove every native SQLite path.",
+    "Unsafe-link creation was unavailable without Windows symlink privilege; fixed-path and reparse rejection are statically enforced.",
+    "Synthetic software evidence is not market evidence or production authorization."
+  ]
+}

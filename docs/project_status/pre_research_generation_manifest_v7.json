@@ -1,0 +1,98 @@
+{
+  "schema_version": "pre_research_generation_manifest_v1",
+  "manifest_kind": "NON_APPROVAL_REPORT_GENERATION",
+  "report_version": "v7",
+  "milestone": "R.9O",
+  "baseline_commit": "125af7bd30fa2e7eba1f01b4072b02dd2015e420",
+  "baseline_synced_origin_main": true,
+  "generated_at": "2026-09-05T03:51:37.942656+00:00",
+  "lifecycle_state": "PDF_V7_GENERATED_AWAITING_OWNER_DECISION",
+  "owner_review_recorded": false,
+  "recommendation_status": "PROPOSED_NOT_APPROVED",
+  "research_state_fingerprint": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+  "research_state_file_count": 252,
+  "fingerprint_policy_changed": false,
+  "production_interlock": "R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE",
+  "candidate_adopted": false,
+  "root_apsw_present": false,
+  "rendered_page_count": 6,
+  "deterministic_render_verified": true,
+  "visual_verification_result": "PASS_6_PAGES_NO_MATERIAL_DEFECTS",
+  "evidence_inputs": [
+    {
+      "path": "docs/investigations/r9m/manifest_v1.json",
+      "sha256": "37c6f578c9249653f0fd6d49a2be30b9454583eb803bdf4416dd01c0c3075a07"
+    },
+    {
+      "path": "docs/investigations/r9n/manifest_v1.json",
+      "sha256": "3f154a3364e0ed87f1b2eeefd659b848fa5d71824e36589f79bf5a2b59913e0f"
+    },
+    {
+      "path": "docs/investigations/r9n/official_format_evidence_v1.json",
+      "sha256": "03bcbc223270073eee1556beff9804ee2dbd5da97a446d17cefd93d11e4065b8"
+    },
+    {
+      "path": "reports/RESEARCH_R9M_REPORT.md",
+      "sha256": "09758f0c9ba32c555d8f6039a1c6dbd0eca980486ef97ec2ca15444ff972d3f7"
+    },
+    {
+      "path": "reports/RESEARCH_R9N_REPORT.md",
+      "sha256": "fa4c05748e5cb3e8a4f6bac6eb9db1eac0b5709780bef7badc49c0942fec08b3"
+    },
+    {
+      "path": "docs/project_status/pre_research_generation_manifest_v6.json",
+      "sha256": "941e74bd0df3f46833b395a32aaa2702fd92ce406ea2697cb57e87212ad89dd7"
+    },
+    {
+      "path": "docs/project_status/pre_research_review_record_v5.json",
+      "sha256": "22fb038ebd5a3f4c889198561547f2b28057d9a2012dbb0248fd058a92d90729"
+    },
+    {
+      "path": "output/pdf/market_system_status_pre_research_review_v6.pdf",
+      "sha256": "a23a89c4590688185955231f82f597243a6db2805acdfc0a6c2be3f4c0c3c04d"
+    },
+    {
+      "path": "src/market_intel/foundation/fno_production_boundary.py",
+      "sha256": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "a6fcded2b042f3ab65769a158f84ba44a3b646c1390fc2667e07c556c5265664"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "654e2ca20bb0f2dac0fc5e2041e5f65ce808b7c1f401ad3cdbe46524dec841ab"
+    }
+  ],
+  "authority": {
+    "synthetic_integrated_prototype_authorized": false,
+    "dependency_adopted": false,
+    "production_implementation_authorized": false,
+    "private_database_access_authorized": false,
+    "audit_authorized": false,
+    "data_acquisition_authorized": false,
+    "analysis_authorized": false,
+    "scoring_authorized": false,
+    "simulation_authorized": false,
+    "backtesting_authorized": false,
+    "broker_authorized": false,
+    "trading_authorized": false
+  },
+  "verification": {
+    "new_static_tests_passed": 42,
+    "native_candidate_tests_rerun": false,
+    "real_data_suites_run": false,
+    "private_data_accessed": false
+  },
+  "statement": "Non-approval report generation only; seven owner answers pending.",
+  "source_path": "docs/project_status/market_system_status_pre_research_review_v7.md",
+  "source_sha256": "06d8294979b8fdca5841304c536de643aad0c74363855e4d06114c4b26ff57dc",
+  "pdf_path": "output/pdf/market_system_status_pre_research_review_v7.pdf",
+  "pdf_sha256": "804c555b4ac422f26f2c6ce5c7d98e1a4e7af6f3f81037b5cd40e950ae1691a7",
+  "generator_path": "tools/generate_project_status_pdf.py",
+  "generator_sha256": "fa3f68a85d0a6a2f8548492d4df387b50937e0f621f05cec8c3a1d43bb3ecb83",
+  "report_path": "reports/RESEARCH_R9O_REPORT.md",
+  "report_sha256": "7733fe4f6ebc20c697edfe8d7340334b46e7df3f24bf85e14ea1992253472426",
+  "test_path": "tests/test_research_r9o_pdf_v7.py",
+  "test_sha256": "0da0501f6d873ddec2d108f3241c0dd8757d4185feefeedccec5916f10a305d2"
+}

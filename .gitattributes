@@ -40,3 +40,7 @@ tools/r9n_adversarial.py -text
 tools/r9n_regression.py -text
 tests/test_research_r9n_adversarial.py -text
 reports/RESEARCH_R9N_REPORT.md -text
+docs/project_status/market_system_status_pre_research_review_v7.md -text
+docs/project_status/pre_research_generation_manifest_v7.json -text
+reports/RESEARCH_R9O_REPORT.md -text
+tests/test_research_r9o_pdf_v7.py -text

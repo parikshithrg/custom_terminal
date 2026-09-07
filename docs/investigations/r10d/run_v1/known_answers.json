@@ -1,0 +1,50 @@
+{
+  "exit_21": {
+    "instant": "2020-02-28 03:45:00+00:00",
+    "reason": "RESOLVED_FROM_VERSIONED_CALENDAR",
+    "session_id": "SYNX-2020-02-28",
+    "status": "RESOLVED"
+  },
+  "holiday_after_announcement_tradable": false,
+  "holiday_before_announcement_tradable": true,
+  "local_open_to_utc": "2020-01-06 03:45:00+00:00",
+  "month_end_session": "SYNX-2020-02-29",
+  "next_entry_after_holiday": {
+    "instant": "2020-01-28 03:45:00+00:00",
+    "reason": "RESOLVED_FROM_VERSIONED_CALENDAR",
+    "session_id": "SYNX-2020-01-28",
+    "status": "RESOLVED"
+  },
+  "non_session_month_end_resolves_to": "SYNX-2019-11-29",
+  "publication_at_boundary": {
+    "available": true,
+    "available_at": "2020-01-24 10:20:00+00:00"
+  },
+  "session_distance": 21,
+  "shortened_close": "2019-12-31T07:00:00+00:00",
+  "special_session_included": true,
+  "t_plus_1": {
+    "instant": "2020-03-03 11:30:00+00:00",
+    "reason": "SYN_T_PLUS_1:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-03",
+    "status": "RESOLVED"
+  },
+  "t_plus_2": {
+    "instant": "2020-02-06 11:30:00+00:00",
+    "reason": "SYN_T_PLUS_2:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-02-06",
+    "status": "RESOLVED"
+  },
+  "terminal_cash_settlement": {
+    "instant": "2020-03-04 11:30:00+00:00",
+    "reason": "SYN_CA_CASH_T2:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-04",
+    "status": "RESOLVED"
+  },
+  "terminal_share_settlement": {
+    "instant": "2020-03-05 11:30:00+00:00",
+    "reason": "SYN_CA_SHARE_T3:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-05",
+    "status": "RESOLVED"
+  }
+}

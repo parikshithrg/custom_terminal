@@ -1,0 +1,45 @@
+{
+  "all_incremental_clean_equivalent": true,
+  "all_unaffected_hashes_preserved": true,
+  "artifact_hashes": {
+    "calendar_contracts.json": "64b831ab8349defc8ee42444242423fae7224b801dcf64217b2007fa4dd457d9",
+    "calendar_final.parquet": "9840509bdb694e2a38083939628504274082813cfb13d35fb558c1eb4b0143d1",
+    "calendar_vintages.parquet": "3a195a43bce47d28e04aeae6110788147ef22ab5dafaa60610a998d2e4228f76",
+    "failure_matrix.json": "c95a6a5054652f3fe2da91fc32072de0ef747c2c9bcd3d72cb8b9442fc3671c7",
+    "fold_reconciliation.json": "394f201f084f2cef53ab5287c8807cb2337238b1950973efc3bb65dbbb0d6cb4",
+    "historical_hash_preservation.json": "7e0eb88b3b037dbcf7de470dc0fe9d6545c8ef9dedff8a431547d2c5aad7b53d",
+    "incremental_equivalence.json": "7e0eb88b3b037dbcf7de470dc0fe9d6545c8ef9dedff8a431547d2c5aad7b53d",
+    "incremental_rebuild_ledger.json": "531dbf8225f2f0ac82f62fba42d2d680f927c3da04cc907ecbe1c0a42dc2528a",
+    "incremental_rebuild_plans.json": "1eda13164a7a69c0a4e45e461b377d873e7eca028b1ae0f2cd614884e5e62e70",
+    "known_answers.json": "9c9e662fb59f323a7fc1c5e74d5f0e938244515197135f883268e5120522ee45",
+    "session_outcomes.parquet": "b8a9ee5cb8db769e1a6cf74abfc73442d2abb1814b0bd535c507194b80d3f4d9"
+  },
+  "canonical": false,
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "entrypoint": "tools/r10d_generate_evidence.py",
+  "entrypoint_sha256": "4c4fdcf36b60c6a6d49b533dab68346ce6f8bcb47077ad6c60a53f670c52c952",
+  "environment": {
+    "pandas": "3.0.3",
+    "pyarrow": "23.0.1",
+    "python": "3.14.6"
+  },
+  "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+  "execution_start_dirty": false,
+  "execution_start_status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "fixture_recipe": "specs/synthetic_exchange_calendar_r10d_v1.json",
+  "fixture_recipe_sha256": "813bcdee7286b73841f799941d6c9a85242d59437cb9d202b1ce2a9746fd6219",
+  "official_exchange_compatibility": "NOT_CLAIMED",
+  "post_generation_worktree_expected_dirty": true,
+  "promotion_eligible": false,
+  "references": {
+    "golden_expected": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+    "momentum_spec": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+    "r10a_root": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+    "r10b_root": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+    "r10c_root": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6"
+  },
+  "reproducible_core_sha256": "464d0bc5495396db08f21593d084a3bb9a4acbeb23cfc9722e34e6ad985494f3",
+  "schema_version": "synthetic_session_clock_run_r10d_v1",
+  "source_commit": "447bf403fd4eb19b5d72b1cc2db9a7b1c7aa6698",
+  "source_tree_sha256": "72805365ac6377b5112cec0b41f8ba04dc9b5cafecc5f172fce544ae8f0db9d6"
+}

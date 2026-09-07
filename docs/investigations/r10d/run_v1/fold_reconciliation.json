@@ -1,0 +1,11 @@
+{
+  "calendar_version": "synthetic_exchange_calendar_r10d_v1",
+  "embargo_sessions": 22,
+  "purge_sessions": 22,
+  "train_end_ordinal": 26,
+  "train_end_session_id": "SYNX-2020-01-02",
+  "validation_boundary_session_id": "SYNX-2020-02-10",
+  "validation_end_session_id": "SYNX-2020-04-10",
+  "validation_start_ordinal": 71,
+  "validation_start_session_id": "SYNX-2020-03-10"
+}

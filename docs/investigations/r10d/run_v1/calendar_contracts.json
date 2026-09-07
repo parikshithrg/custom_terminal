@@ -1,0 +1,80 @@
+{
+  "availability_policies": [
+    {
+      "boundary_inclusive": true,
+      "dataset_id": "synthetic_daily_bar",
+      "date_only_policy": "NEXT_EXECUTABLE_SESSION_OPEN",
+      "policy_id": "SYN_DAILY_CLOSE",
+      "processing_lag_minutes": 20,
+      "version": "availability_policy_r10d_v1"
+    },
+    {
+      "boundary_inclusive": true,
+      "dataset_id": "synthetic_security_event",
+      "date_only_policy": "NEXT_EXECUTABLE_SESSION_OPEN",
+      "policy_id": "SYN_CORPORATE_EVENT",
+      "processing_lag_minutes": 60,
+      "version": "availability_policy_r10d_v1"
+    },
+    {
+      "boundary_inclusive": true,
+      "dataset_id": "synthetic_benchmark",
+      "date_only_policy": "NEXT_EXECUTABLE_SESSION_OPEN",
+      "policy_id": "SYN_BENCHMARK",
+      "processing_lag_minutes": 10,
+      "version": "availability_policy_r10d_v1"
+    }
+  ],
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "metadata": {
+    "boundary_policy": "published/available exactly at cutoff is included",
+    "calendar_version": "synthetic_exchange_calendar_r10d_v1",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "clock_version": "synthetic_session_clocks_r10d_v1",
+    "decision_clocks": [
+      "SESSION_PRE_OPEN",
+      "SESSION_OPEN",
+      "SESSION_CLOSE",
+      "POST_CLOSE_AVAILABLE",
+      "NEXT_EXECUTABLE_SESSION_OPEN",
+      "INTRADAY_WITH_EXPLICIT_TIME"
+    ],
+    "settlement_version": "synthetic_settlement_rules_r10d_v1",
+    "timezone": "Asia/Kolkata"
+  },
+  "run_version": "synthetic_session_clock_run_r10d_v1",
+  "settlement_rules": [
+    {
+      "effective_from": "2019-01-01 00:00:00+00:00",
+      "effective_to": "2020-03-01 00:00:00+00:00",
+      "lag_sessions": 2,
+      "leg": "DEFAULT",
+      "rule_id": "SYN_T_PLUS_2",
+      "version": "synthetic_settlement_rules_r10d_v1"
+    },
+    {
+      "effective_from": "2020-03-01 00:00:00+00:00",
+      "effective_to": null,
+      "lag_sessions": 1,
+      "leg": "DEFAULT",
+      "rule_id": "SYN_T_PLUS_1",
+      "version": "synthetic_settlement_rules_r10d_v1"
+    },
+    {
+      "effective_from": "2019-01-01 00:00:00+00:00",
+      "effective_to": null,
+      "lag_sessions": 2,
+      "leg": "CASH",
+      "rule_id": "SYN_CA_CASH_T2",
+      "version": "synthetic_settlement_rules_r10d_v1"
+    },
+    {
+      "effective_from": "2019-01-01 00:00:00+00:00",
+      "effective_to": null,
+      "lag_sessions": 3,
+      "leg": "SHARES",
+      "rule_id": "SYN_CA_SHARE_T3",
+      "version": "synthetic_settlement_rules_r10d_v1"
+    }
+  ]
+}

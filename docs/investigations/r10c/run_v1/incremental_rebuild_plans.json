@@ -1,0 +1,882 @@
+{
+  "announcement": {
+    "impact": {
+      "availability_time": "2020-01-10T12:00:00+00:00",
+      "change_id": "announcement",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-01-10T12:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "cancellation": {
+    "impact": {
+      "availability_time": "2020-01-20T12:00:00+00:00",
+      "change_id": "cancellation",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-01-07T10:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "conflict_resolution": {
+    "impact": {
+      "availability_time": "2020-01-20T12:00:00+00:00",
+      "change_id": "conflict_resolution",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-01-07T10:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "conflicting_evidence": {
+    "impact": {
+      "availability_time": "2020-01-20T12:00:00+00:00",
+      "change_id": "conflicting_evidence",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-01-07T10:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "correction": {
+    "impact": {
+      "availability_time": "2020-01-20T12:00:00+00:00",
+      "change_id": "correction",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-01-07T10:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "effective_event": {
+    "impact": {
+      "availability_time": "2020-02-03T03:45:00+00:00",
+      "change_id": "effective_event",
+      "earliest_affected_downstream_time": "2020-02-10T12:30:00+00:00",
+      "earliest_economic_time": "2020-02-03T03:45:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-02-03T03:45:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-02-03T03:45:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "terminal_consideration": {
+    "impact": {
+      "availability_time": "2020-02-12T12:00:00+00:00",
+      "change_id": "terminal_consideration",
+      "earliest_affected_downstream_time": "2020-02-20T12:30:00+00:00",
+      "earliest_economic_time": "2020-02-07T10:00:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "economic": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "ticker_reuse": {
+    "impact": {
+      "availability_time": "2020-12-20T12:00:00+00:00",
+      "change_id": "ticker_reuse",
+      "earliest_affected_downstream_time": "2021-01-05T12:30:00+00:00",
+      "earliest_economic_time": "2021-01-04T03:45:00+00:00"
+    },
+    "nodes": {
+      "adjusted_feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "event_knowledge_2019": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_price_history": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "ticker_reuse_identity": {
+        "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-12-20T12:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  }
+}

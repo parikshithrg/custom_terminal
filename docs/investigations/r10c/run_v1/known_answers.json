@@ -1,0 +1,28 @@
+{
+  "bonus_price_factor": 0.6666666666666666,
+  "cancel_after": "CANCELLED",
+  "cancel_before": "ACTIVE",
+  "cash_delisting_proceeds": 7500.0,
+  "demerger_cash": 10.0,
+  "demerger_proceeds": 1990.0,
+  "demerger_quantity": 33.0,
+  "disappearance_status": "UNRESOLVED_TERMINAL",
+  "mixed_merger_proceeds": 4000.0,
+  "outcome_counts_after": {
+    "RESOLVED_TERMINAL": 1,
+    "RIGHT_CENSORED": 1,
+    "UNRESOLVED_TERMINAL": 1
+  },
+  "outcome_counts_before": {
+    "MISSING_EXIT": 2,
+    "RIGHT_CENSORED": 1
+  },
+  "raw_price_hash_after": "1d1dcba3c546a7261530ca01b6c2525ef1ece8ee95bd39c407b154c6b75ae136",
+  "raw_price_hash_before": "1d1dcba3c546a7261530ca01b6c2525ef1ece8ee95bd39c407b154c6b75ae136",
+  "rename_instrument_after": "SYN_C_I001",
+  "rename_instrument_before": "SYN_C_I001",
+  "share_merger_proceeds": 2000.0,
+  "share_merger_quantity": 40.0,
+  "split_price_factor": 0.5,
+  "ticker_reuse_instrument": "SYN_C_I013"
+}

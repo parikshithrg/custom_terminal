@@ -1,0 +1,17 @@
+{
+  "byte_size": 3659,
+  "content_hash": "ad2cd8e31628fe9adcca2d0102f4f75cfec8fae75872374e50da2b5dde06f148",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "terminal_outcomes",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "synthetic_security_event_parser_v1",
+  "provider": "synthetic_security_event_provider",
+  "raw_schema_version": "synthetic_security_event_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieved_at": "2021-01-04T00:00:00Z",
+  "source_identity": "r10c:terminal_economics",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

@@ -1,0 +1,49 @@
+{
+  "adjustment_version": "derived_adjustment_factors_r10c_v1",
+  "event_dataset_version": "synthetic_security_events_r10c_v1",
+  "event_optional_fields": [
+    "adjustment_denominator",
+    "adjustment_numerator",
+    "cash_consideration_per_share",
+    "fractional_cash_price",
+    "fractional_share_policy",
+    "predecessor_instrument_id",
+    "ratio_orientation",
+    "settlement_at",
+    "share_denominator",
+    "share_numerator",
+    "successor_instrument_id",
+    "successor_listing_id",
+    "target_instrument_id",
+    "volume_treatment",
+    "zero_recovery_declared"
+  ],
+  "event_required_fields": [
+    "available_at",
+    "confidence",
+    "conflict_state",
+    "currency",
+    "dataset_version",
+    "effective_at",
+    "event_id",
+    "event_status",
+    "event_type",
+    "issuer_id",
+    "parser_version",
+    "published_at",
+    "quality_flags",
+    "raw_payload_hash",
+    "revision_number",
+    "source_id",
+    "source_instrument_id",
+    "source_record_id",
+    "supersedes_record_id",
+    "verification_status"
+  ],
+  "identity_dataset_version": "synthetic_identity_assertions_r10c_v1",
+  "ratio_orientations": [
+    "NEW_SHARES_PER_OLD_SHARES",
+    "SUCCESSOR_SHARES_PER_SOURCE_SHARES"
+  ],
+  "terminal_policy_version": "terminal_economics_r10c_v1"
+}

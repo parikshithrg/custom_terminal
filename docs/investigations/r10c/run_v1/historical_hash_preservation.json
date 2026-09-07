@@ -1,0 +1,10 @@
+{
+  "announcement": true,
+  "cancellation": true,
+  "conflict_resolution": true,
+  "conflicting_evidence": true,
+  "correction": true,
+  "effective_event": true,
+  "terminal_consideration": true,
+  "ticker_reuse": true
+}

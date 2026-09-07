@@ -1,0 +1,114 @@
+[
+  {
+    "cash_amount": NaN,
+    "currency": "INR",
+    "event_id": "EV_SHARE_MERGER",
+    "evidence_hashes": [
+      "542c68fe5e3a607b9d0b1ec1987e18b02be6beaa442d5dd7eafd1117d7cff8f0"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "RESOLVED_SUCCESSOR",
+    "settlement_at": "2020-04-02 03:45:00+00:00",
+    "source_instrument_id": "SYN_C_I005",
+    "successor_instrument_id": "SYN_C_I105",
+    "successor_price": 50.0,
+    "successor_quantity": 40.0,
+    "total_proceeds": 2000.0
+  },
+  {
+    "cash_amount": 12000.0,
+    "currency": "INR",
+    "event_id": "EV_CASH_MERGER",
+    "evidence_hashes": [
+      "10514317f1b2e37fe3c4e43d6c0b96a1e76b412701bae448130cec6b279de752"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "RESOLVED_MIXED",
+    "settlement_at": "2020-04-03 03:45:00+00:00",
+    "source_instrument_id": "SYN_C_I006",
+    "successor_instrument_id": "nan",
+    "successor_price": NaN,
+    "successor_quantity": NaN,
+    "total_proceeds": 12000.0
+  },
+  {
+    "cash_amount": 2000.0,
+    "currency": "INR",
+    "event_id": "EV_MIXED_MERGER",
+    "evidence_hashes": [
+      "0c936cd4dccb0d6087df8fbbe1611dec40347c33014b2de3bae0e3ba42dddc9c"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "RESOLVED_MIXED",
+    "settlement_at": "2020-04-06 03:45:00+00:00",
+    "source_instrument_id": "SYN_C_I007",
+    "successor_instrument_id": "SYN_C_I107",
+    "successor_price": 80.0,
+    "successor_quantity": 25.0,
+    "total_proceeds": 4000.0
+  },
+  {
+    "cash_amount": 10.0,
+    "currency": "INR",
+    "event_id": "EV_DEMERGER",
+    "evidence_hashes": [
+      "b15973ceb90aedda2486dc4f2498a1d90b59c82325a103251424ee5b7547644a"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "RESOLVED_MIXED",
+    "settlement_at": "2020-04-07 03:45:00+00:00",
+    "source_instrument_id": "SYN_C_I008",
+    "successor_instrument_id": "SYN_C_I108",
+    "successor_price": 60.0,
+    "successor_quantity": 33.0,
+    "total_proceeds": 1990.0
+  },
+  {
+    "cash_amount": 7500.0,
+    "currency": "INR",
+    "event_id": "EV_DELIST",
+    "evidence_hashes": [
+      "80b76e55e3f634e956a4bf44ed5f18207b62205d6d96d8852fef1f2583b46ec8"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "RESOLVED_MIXED",
+    "settlement_at": "2020-04-16 03:45:00+00:00",
+    "source_instrument_id": "SYN_C_I009",
+    "successor_instrument_id": "nan",
+    "successor_price": NaN,
+    "successor_quantity": NaN,
+    "total_proceeds": 7500.0
+  },
+  {
+    "cash_amount": NaN,
+    "currency": "INR",
+    "event_id": "EV_DISAPPEAR",
+    "evidence_hashes": [
+      "a03a490bbff4b68d5ff08f938180a2281c91502b1c3845de8bd22c152079cbf3"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "UNRESOLVED_TERMINAL",
+    "settlement_at": "NaT",
+    "source_instrument_id": "SYN_C_I011",
+    "successor_instrument_id": NaN,
+    "successor_price": NaN,
+    "successor_quantity": NaN,
+    "total_proceeds": NaN
+  },
+  {
+    "cash_amount": NaN,
+    "currency": "INR",
+    "event_id": "EV_RIGHTS",
+    "evidence_hashes": [
+      "60b4121d8603bb0b88cc2a412cb82e9f1008c52575d188c0d050db9c00a5c827"
+    ],
+    "policy_version": "terminal_economics_r10c_v1",
+    "resolution_status": "UNRESOLVED_TERMINAL",
+    "settlement_at": "NaT",
+    "source_instrument_id": "SYN_C_I004",
+    "successor_instrument_id": NaN,
+    "successor_price": NaN,
+    "successor_quantity": NaN,
+    "total_proceeds": NaN
+  }
+]

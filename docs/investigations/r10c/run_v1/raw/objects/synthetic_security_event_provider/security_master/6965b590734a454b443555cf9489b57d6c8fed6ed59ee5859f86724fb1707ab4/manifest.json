@@ -1,0 +1,17 @@
+{
+  "byte_size": 15988,
+  "content_hash": "6965b590734a454b443555cf9489b57d6c8fed6ed59ee5859f86724fb1707ab4",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "security_master",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "synthetic_security_event_parser_v1",
+  "provider": "synthetic_security_event_provider",
+  "raw_schema_version": "synthetic_security_event_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieved_at": "2021-01-03T00:00:00Z",
+  "source_identity": "r10c:identity_assertions",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

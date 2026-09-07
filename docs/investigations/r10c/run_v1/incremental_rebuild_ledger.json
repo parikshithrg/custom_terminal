@@ -1,0 +1,1202 @@
+[
+  {
+    "change_id": "announcement",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "announcement",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-02-03T03:45:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-02-03T03:45:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "effective_event",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "correction",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "cancellation",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "adjusted_feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "economic",
+    "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "outcome_post",
+    "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "terminal_consideration",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflicting_evidence",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "adjusted_feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "ticker_reuse_identity",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "conflict_resolution",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "adjusted_feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "event_knowledge_2019",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "raw_price_history",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "ticker_reuse_identity",
+    "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-12-20T12:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "ticker_reuse",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  }
+]

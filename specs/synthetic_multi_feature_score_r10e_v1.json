@@ -1,0 +1,31 @@
+{
+  "specification_id": "synthetic_multi_feature_score_r10e_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "family_id": "synthetic_multi_feature_family_r10e",
+  "family_version": "synthetic_multi_feature_family_r10e_v1",
+  "calendar_version": "synthetic_exchange_calendar_r10d_v1",
+  "outcome_version": "next_open_21_venue_session_excess_v2",
+  "score": {
+    "version": "percentile_score_v1",
+    "meaning": "oriented percentile within the declared training calibration population",
+    "bounds": [0, 100],
+    "tie_policy": "AVERAGE_RANK",
+    "out_of_range_policy": "CLIP_TO_0_100",
+    "not_probability": true,
+    "not_expected_return": true,
+    "not_confidence": true,
+    "not_recommendation": true
+  },
+  "confidence": {
+    "version": "categorical_confidence_v1",
+    "values": ["LOW", "MODERATE", "HIGH"],
+    "numeric_confidence_score": false
+  },
+  "lifecycle_ceiling": "SYNTHETIC_VALIDATED_NONCANONICAL",
+  "decision": "NO_DECISION",
+  "holdout": {
+    "id": "disposable_r10e_holdout_v1",
+    "one_use": true,
+    "r10a_holdout_must_remain": "UNCONSUMED_SYNTHETIC_HOLDOUT"
+  }
+}

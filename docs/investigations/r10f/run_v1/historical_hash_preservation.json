@@ -1,0 +1,9 @@
+{
+  "calendar_version": true,
+  "calibration_version": true,
+  "confidence_policy": true,
+  "lifecycle": true,
+  "presentation_schema": true,
+  "publication_policy": true,
+  "source_observation": true
+}

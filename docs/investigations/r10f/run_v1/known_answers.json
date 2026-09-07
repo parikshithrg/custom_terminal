@@ -1,0 +1,56 @@
+{
+  "bundle_count": 6,
+  "decision": {
+    "decision": "NO_DECISION",
+    "reason": "SYNTHETIC_NONCANONICAL_EVIDENCE"
+  },
+  "freshness": {
+    "at_boundary": {
+      "evaluation_instant": "2020-02-14T01:00:00+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "WITHIN_CURRENT_BOUNDARY",
+      "status": "CURRENT"
+    },
+    "before_publication": {
+      "evaluation_instant": "2020-02-13T23:00:00+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "EVALUATION_BEFORE_PUBLICATION",
+      "status": "NOT_YET_AVAILABLE"
+    },
+    "calendar_unknown": {
+      "evaluation_instant": "2020-02-14T00:30:00+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "CALENDAR_VERSION_UNAVAILABLE",
+      "status": "CALENDAR_UNKNOWN"
+    },
+    "correction": {
+      "evaluation_instant": "2020-02-14T00:30:00+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "LATER_CORRECTION_AVAILABLE",
+      "status": "STALE"
+    },
+    "one_beyond": {
+      "evaluation_instant": "2020-02-14T01:00:01+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "BEYOND_CURRENT_BOUNDARY",
+      "status": "AGING"
+    },
+    "superseded": {
+      "evaluation_instant": "2020-02-14T00:30:00+00:00",
+      "policy_version": "synthetic_freshness_policy_r10f_v1",
+      "reason": "EXPLICIT_SUPERSESSION",
+      "status": "SUPERSEDED"
+    }
+  },
+  "history_order": [
+    "SYN-PUB-006",
+    "SYN-PUB-005",
+    "SYN-PUB-004",
+    "SYN-PUB-003",
+    "SYN-PUB-002",
+    "SYN-PUB-001"
+  ],
+  "idempotent_hash": "ca421fda7e675aafe708e3af544845ef28ca378775486c7dd12831bb4b09b12c",
+  "initial_bundle_hash": "ca421fda7e675aafe708e3af544845ef28ca378775486c7dd12831bb4b09b12c",
+  "latest_snapshot_id": "SYN-PUB-003"
+}

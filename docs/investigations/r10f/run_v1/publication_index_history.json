@@ -1,0 +1,128 @@
+[
+  {
+    "bundle": {
+      "bundle_hash": "ca421fda7e675aafe708e3af544845ef28ca378775486c7dd12831bb4b09b12c",
+      "manifest_hash": "0950ecfbc10b972d497d54466a84eb7c50fc1fa622a760dbd5aa0524e37ccab8",
+      "relative_path": "bundles/ca421fda7e675aafe708e3af544845ef28ca378775486c7dd12831bb4b09b12c",
+      "snapshot_id": "SYN-PUB-001",
+      "snapshot_version": "v1"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T00:00:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+    "snapshot_id": "SYN-PUB-001",
+    "snapshot_version": "v1",
+    "supersedes_snapshot_id": null,
+    "valid": true
+  },
+  {
+    "bundle": {
+      "bundle_hash": "0f745fe91345f8417156a436659fcf22d7637bb6430e00739ef2795bcdfef399",
+      "manifest_hash": "3f5dfb95c3d6b053b92545c232d22bd1ecdff18d7fd142e0dd6996a14f10a9d6",
+      "relative_path": "bundles/0f745fe91345f8417156a436659fcf22d7637bb6430e00739ef2795bcdfef399",
+      "snapshot_id": "SYN-PUB-002",
+      "snapshot_version": "v1"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T00:30:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+    "snapshot_id": "SYN-PUB-002",
+    "snapshot_version": "v1",
+    "supersedes_snapshot_id": "SYN-PUB-001",
+    "valid": true
+  },
+  {
+    "bundle": {
+      "bundle_hash": "a3c8949533ba2c563e51a11d41849f37476fb50954e19cec0a6f5e0b5894db10",
+      "manifest_hash": "e24de686079bde9e723eeacb6d67993d04a55735485ba3b159961edd1d736546",
+      "relative_path": "bundles/a3c8949533ba2c563e51a11d41849f37476fb50954e19cec0a6f5e0b5894db10",
+      "snapshot_id": "SYN-PUB-003",
+      "snapshot_version": "v2"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T01:00:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+    "snapshot_id": "SYN-PUB-003",
+    "snapshot_version": "v2",
+    "supersedes_snapshot_id": "SYN-PUB-002",
+    "valid": true
+  },
+  {
+    "bundle": {
+      "bundle_hash": "aab694b6d68040148f8871d841759077c1c8b6d09ea318d48a83310d4fa0fb1d",
+      "manifest_hash": "544f7b74ce9dfcc6514d2ff64be900eb43c47fc1558c318211e3b08170cd725a",
+      "relative_path": "bundles/aab694b6d68040148f8871d841759077c1c8b6d09ea318d48a83310d4fa0fb1d",
+      "snapshot_id": "SYN-PUB-004",
+      "snapshot_version": "v1"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T01:30:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "STALE",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+    "snapshot_id": "SYN-PUB-004",
+    "snapshot_version": "v1",
+    "supersedes_snapshot_id": "SYN-PUB-003",
+    "valid": true
+  },
+  {
+    "bundle": {
+      "bundle_hash": "b7e63a15b86de267dfb7e964c0fa23670a831e32a5bed6300cfff1daa1e94b26",
+      "manifest_hash": "7aa3527895de12f1076031d01904224d7c8bbfb4d40d973205d037082587fde0",
+      "relative_path": "bundles/b7e63a15b86de267dfb7e964c0fa23670a831e32a5bed6300cfff1daa1e94b26",
+      "snapshot_id": "SYN-PUB-005",
+      "snapshot_version": "v1"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T02:00:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SUSPENDED",
+    "snapshot_id": "SYN-PUB-005",
+    "snapshot_version": "v1",
+    "supersedes_snapshot_id": "SYN-PUB-004",
+    "valid": true
+  },
+  {
+    "bundle": {
+      "bundle_hash": "0b191a34501b1227940965e707f6db4a2565261a17ec931e01b2f708afe01ca7",
+      "manifest_hash": "9d32ea9f94d5267df1b532c76eb12c49f0185de1cef2bf2da03204b9c8745e7c",
+      "relative_path": "bundles/0b191a34501b1227940965e707f6db4a2565261a17ec931e01b2f708afe01ca7",
+      "snapshot_id": "SYN-PUB-006",
+      "snapshot_version": "v1"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14T02:30:00Z",
+    "edge_family_version": "synthetic_multi_feature_family_r10e_v1",
+    "freshness": "CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "RETIRED",
+    "snapshot_id": "SYN-PUB-006",
+    "snapshot_version": "v1",
+    "supersedes_snapshot_id": "SYN-PUB-005",
+    "valid": true
+  }
+]

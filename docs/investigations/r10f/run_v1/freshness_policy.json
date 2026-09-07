@@ -1,0 +1,5 @@
+{
+  "aging_minutes": 180,
+  "current_minutes": 60,
+  "version": "synthetic_freshness_policy_r10f_v1"
+}

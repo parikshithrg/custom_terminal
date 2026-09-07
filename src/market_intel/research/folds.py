@@ -7,6 +7,8 @@ from typing import Iterable
 
 import pandas as pd
 
+from market_intel.foundation.exchange_calendar import executable_sessions
+
 
 @dataclass(frozen=True)
 class WalkForwardFold:
@@ -97,4 +99,42 @@ def validate_fold_provenance(
         "fit_scope": "NO_FITTED_PARAMETERS" if fitted_through is None else "TRAINING_ONLY",
         "fitted_through": None if fitted_through is None else pd.Timestamp(fitted_through),
         "input_snapshot_hash": input_snapshot_hash,
+    }
+
+
+def session_ordinal_fold_boundaries(
+    calendar_view: pd.DataFrame,
+    *,
+    validation_boundary_session_id: str,
+    validation_end_session_id: str,
+    holding_sessions: int,
+    next_open_sessions: int = 1,
+    embargo_sessions: int | None = None,
+) -> dict[str, object]:
+    """Derive purge/embargo from venue-session ordinals, never calendar days."""
+    sessions = executable_sessions(calendar_view)
+    positions = {sid: position for position, sid in enumerate(sessions.session_id)}
+    if validation_boundary_session_id not in positions or validation_end_session_id not in positions:
+        raise ValueError("FOLD_BOUNDARY_NOT_IN_CALENDAR")
+    window = holding_sessions + next_open_sessions
+    embargo = window if embargo_sessions is None else embargo_sessions
+    if embargo < window:
+        raise ValueError("PURGE_EMBARGO_SHORTER_THAN_OUTCOME_WINDOW")
+    raw_validation_pos = positions[validation_boundary_session_id]
+    validation_start_pos = raw_validation_pos + embargo
+    train_end_pos = raw_validation_pos - window - 1
+    if train_end_pos < 0 or validation_start_pos >= len(sessions):
+        raise ValueError("INSUFFICIENT_SESSIONS_FOR_FOLD")
+    if positions[validation_end_session_id] < validation_start_pos:
+        raise ValueError("VALIDATION_END_BEFORE_EMBARGO")
+    return {
+        "calendar_version": str(sessions.iloc[0].calendar_version),
+        "purge_sessions": window,
+        "embargo_sessions": embargo,
+        "train_end_session_id": str(sessions.iloc[train_end_pos].session_id),
+        "validation_boundary_session_id": validation_boundary_session_id,
+        "validation_start_session_id": str(sessions.iloc[validation_start_pos].session_id),
+        "validation_end_session_id": validation_end_session_id,
+        "train_end_ordinal": train_end_pos,
+        "validation_start_ordinal": validation_start_pos,
     }

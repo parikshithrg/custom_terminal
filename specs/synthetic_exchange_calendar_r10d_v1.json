@@ -1,0 +1,47 @@
+{
+  "specification_id": "synthetic_exchange_calendar_r10d_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "venue": "SYNX",
+  "timezone": "Asia/Kolkata",
+  "date_range": {
+    "start": "2019-11-27",
+    "end": "2020-05-13",
+    "starts_midweek": true,
+    "ends_midweek": true
+  },
+  "calendar_cases": [
+    "normal_session",
+    "weekend",
+    "full_day_holiday",
+    "special_weekend_session",
+    "shortened_session",
+    "delayed_open",
+    "unexpected_closure",
+    "advance_announced_holiday",
+    "future_revision",
+    "late_correction",
+    "consecutive_holidays",
+    "non_session_month_end",
+    "year_end_boundary",
+    "leap_day"
+  ],
+  "outcome": {
+    "version": "next_open_21_venue_session_excess_v2",
+    "entry": "next executable venue-session open",
+    "holding_sessions": 21,
+    "compatibility": "next_open_21_session_excess_v1 remains unchanged"
+  },
+  "settlement": {
+    "version": "synthetic_settlement_rules_r10d_v1",
+    "examples": ["T+2", "T+1", "settlement holiday", "distinct cash/share legs"]
+  },
+  "prohibitions": [
+    "official exchange compatibility claim",
+    "weekday fallback in session-aware paths",
+    "instrument-row calendar",
+    "real or private data",
+    "market analysis",
+    "score publication",
+    "trading"
+  ]
+}

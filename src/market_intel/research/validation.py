@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from market_intel.foundation.exchange_calendar import CalendarError, DecisionReference
+
 
 class ResearchValidationError(RuntimeError):
     def __init__(self, reason: str):
@@ -48,3 +50,23 @@ def verify_artifact_hashes(root: Path, hashes: dict[str, str]) -> None:
         path = root / name
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ResearchValidationError("ARTIFACT_HASH_MISMATCH")
+
+
+def require_shared_decision_clock(decisions: pd.DataFrame, calendar_view: pd.DataFrame) -> None:
+    """Require one exact session/cutoff for every cross-sectional decision group."""
+    required = {"decision_time", "calendar_version", "venue", "session_id", "decision_clock"}
+    missing = required - set(decisions)
+    if missing:
+        raise ResearchValidationError("MISSING_CALENDAR_DECISION_BINDING")
+    for decision_time, group in decisions.groupby("decision_time", sort=False):
+        bindings = group[["calendar_version", "venue", "session_id", "decision_clock"]].drop_duplicates()
+        if len(bindings) != 1:
+            raise ResearchValidationError("CROSS_SECTIONAL_CLOCK_MISMATCH")
+        binding = bindings.iloc[0]
+        try:
+            DecisionReference(
+                str(binding.calendar_version), str(binding.venue), str(binding.session_id),
+                binding.decision_clock, pd.Timestamp(decision_time),
+            ).validate(calendar_view)
+        except (CalendarError, ValueError) as exc:
+            raise ResearchValidationError(f"INVALID_DECISION_CLOCK_BINDING:{exc}") from exc

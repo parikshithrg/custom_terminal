@@ -7,6 +7,9 @@ from dataclasses import asdict, dataclass
 import numpy as np
 import pandas as pd
 
+from market_intel.foundation.exchange_calendar import (
+    DecisionClock, ResolutionStatus, executable_sessions, resolve_session,
+)
 from market_intel.simulation.costs import DeliveryCostDefinition, round_trip_cost
 
 
@@ -115,3 +118,92 @@ def materialize_outcomes(
         elif row["outcome_status"] in ("UNRESOLVED_DELISTING", "RIGHT_CENSORED"):
             busy_until[instrument] = pd.Timestamp.max
     return result
+
+
+@dataclass(frozen=True)
+class SessionAwareOutcomeDefinition:
+    """Explicit v2 semantics; v1 remains untouched for golden compatibility."""
+
+    outcome_id: str = "next_open_21_venue_session_excess"
+    version: str = "next_open_21_venue_session_excess_v2"
+    calendar_version: str = "synthetic_exchange_calendar_r10d_v1"
+    decision_clock: str = "SESSION_CLOSE"
+    entry_clock: str = "NEXT_EXECUTABLE_SESSION_OPEN"
+    holding_sessions: int = 21
+
+
+def materialize_session_aware_outcomes(
+    ranked: pd.DataFrame,
+    open_by_session: pd.DataFrame,
+    benchmark_open_by_session: pd.Series,
+    calendar_view: pd.DataFrame,
+    definition: SessionAwareOutcomeDefinition,
+    *,
+    instrument_states: dict[tuple[str, str], str] | None = None,
+) -> pd.DataFrame:
+    """Schedule every row on one venue calendar, never on instrument observations."""
+    sessions = executable_sessions(calendar_view)
+    positions = {sid: pos for pos, sid in enumerate(sessions.session_id)}
+    instrument_states = instrument_states or {}
+    rows: list[dict] = []
+    for record in ranked.to_dict("records"):
+        base = dict(record)
+        decision_id = str(record["decision_session_id"])
+        decision_rows = sessions[sessions.session_id == decision_id]
+        if decision_rows.empty:
+            rows.append({**base, "outcome_status": "DECISION_SESSION_NOT_FOUND",
+                         "entry_session_id": None, "exit_session_id": None})
+            continue
+        decision_instant = pd.Timestamp(decision_rows.iloc[0].scheduled_close)
+        entry = resolve_session(sessions, after=decision_instant, ordinal=1,
+                                clock=DecisionClock.SESSION_OPEN)
+        if entry.status != ResolutionStatus.RESOLVED:
+            rows.append({**base, "outcome_status": entry.status.value,
+                         "entry_session_id": None, "exit_session_id": None})
+            continue
+        entry_pos = positions[entry.session_id]
+        exit_pos = entry_pos + definition.holding_sessions
+        if exit_pos >= len(sessions):
+            rows.append({**base, "outcome_status": "RIGHT_CENSORED",
+                         "entry_session_id": entry.session_id, "entry_time": entry.instant,
+                         "exit_session_id": None, "exit_time": pd.NaT})
+            continue
+        exit_row = sessions.iloc[exit_pos]
+        exit_id = str(exit_row.session_id)
+        instrument = str(record["instrument_id"])
+        entry_state = instrument_states.get((instrument, entry.session_id), "ACTIVE")
+        state_status = {
+            "SUSPENDED": "INSTRUMENT_SUSPENDED",
+            "NOT_LISTED": "LISTING_NOT_EFFECTIVE",
+            "TERMINATED": "TERMINATED_BEFORE_ENTRY",
+        }.get(entry_state)
+        if state_status:
+            rows.append({**base, "outcome_status": state_status,
+                         "entry_session_id": entry.session_id, "entry_time": entry.instant,
+                         "exit_session_id": exit_id,
+                         "exit_time": clock_instant_compat(exit_row)})
+            continue
+        entry_price = open_by_session.at[entry.session_id, instrument] \
+            if entry.session_id in open_by_session.index and instrument in open_by_session else np.nan
+        exit_price = open_by_session.at[exit_id, instrument] \
+            if exit_id in open_by_session.index and instrument in open_by_session else np.nan
+        benchmark_entry = benchmark_open_by_session.get(entry.session_id, np.nan)
+        benchmark_exit = benchmark_open_by_session.get(exit_id, np.nan)
+        status = "RESOLVED"
+        if pd.isna(entry_price) or entry_price <= 0:
+            status = "MISSING_ENTRY_PRICE"
+        elif pd.isna(exit_price) or exit_price <= 0:
+            status = "MISSING_EXIT_PRICE"
+        elif pd.isna(benchmark_entry) or pd.isna(benchmark_exit):
+            status = "MISSING_BENCHMARK_PRICE"
+        rows.append({**base, "outcome_status": status,
+                     "entry_session_id": entry.session_id, "entry_time": entry.instant,
+                     "exit_session_id": exit_id, "exit_time": clock_instant_compat(exit_row),
+                     "entry_price": entry_price, "exit_price": exit_price,
+                     "benchmark_entry": benchmark_entry, "benchmark_exit": benchmark_exit})
+    return pd.DataFrame(rows)
+
+
+def clock_instant_compat(session: pd.Series) -> pd.Timestamp:
+    """Small local helper avoids changing legacy outcome clock imports."""
+    return pd.Timestamp(session.scheduled_open)

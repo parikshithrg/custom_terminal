@@ -1,0 +1,98 @@
+[
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "coercion_policy": "STRICT",
+    "dataset": "benchmark_history",
+    "optional_fields": {},
+    "output_schema_version": "synthetic_benchmark_v1",
+    "parser_implementation_hash": "b0d28f2f2c5d93dccb978d32902e4e057cdf337baeef8265c4cf5af382938a31",
+    "quality_policy": "QUARANTINE_INVALID_ROWS",
+    "raw_schema_version": "synthetic_benchmark_raw_v1",
+    "required_fields": {
+      "close": "number",
+      "event_time": "timestamp",
+      "index_id": "string",
+      "published_at": "timestamp"
+    },
+    "unknown_field_policy": "REJECT"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "coercion_policy": "STRICT",
+    "dataset": "daily_equity",
+    "optional_fields": {},
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quality_policy": "QUARANTINE_INVALID_ROWS",
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "required_fields": {
+      "available_at": "timestamp",
+      "close": "number",
+      "event_time": "timestamp",
+      "instrument_id": "string",
+      "published_at": "timestamp",
+      "revision_number": "integer",
+      "source_record_id": "string",
+      "supersedes_record_id": "string",
+      "turnover": "number"
+    },
+    "unknown_field_policy": "REJECT"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "coercion_policy": "STRICT",
+    "dataset": "daily_equity",
+    "optional_fields": {
+      "trade_count": "integer"
+    },
+    "output_schema_version": "synthetic_incremental_bar_v2",
+    "parser_implementation_hash": "2bcf8d62843ee84fde1ded114b8e5d44e13e3010ef60b80ed112e85ff2c26404",
+    "quality_policy": "QUARANTINE_INVALID_ROWS",
+    "raw_schema_version": "synthetic_bar_raw_v1_1",
+    "required_fields": {
+      "available_at": "timestamp",
+      "close": "number",
+      "event_time": "timestamp",
+      "instrument_id": "string",
+      "published_at": "timestamp",
+      "revision_number": "integer",
+      "source_record_id": "string",
+      "supersedes_record_id": "string",
+      "turnover": "number"
+    },
+    "unknown_field_policy": "REJECT"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "coercion_policy": "STRICT",
+    "dataset": "security_master",
+    "optional_fields": {},
+    "output_schema_version": "synthetic_identity_v1",
+    "parser_implementation_hash": "65c85137069966c90f74d059dc5131433143f7b83c6da926a0a19430b08bd70c",
+    "quality_policy": "QUARANTINE_INVALID_ROWS",
+    "raw_schema_version": "synthetic_identity_raw_v1",
+    "required_fields": {
+      "effective_from": "timestamp",
+      "instrument_id": "string",
+      "listing_id": "string",
+      "symbol": "string"
+    },
+    "unknown_field_policy": "REJECT"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "coercion_policy": "STRICT",
+    "dataset": "terminal_outcomes",
+    "optional_fields": {},
+    "output_schema_version": "synthetic_terminal_v1",
+    "parser_implementation_hash": "c2b5c2b8305263f36ec266deb84ff4c558698b9b338097a5b30edca635faa53c",
+    "quality_policy": "QUARANTINE_INVALID_ROWS",
+    "raw_schema_version": "synthetic_terminal_raw_v1",
+    "required_fields": {
+      "event_time": "timestamp",
+      "instrument_id": "string",
+      "resolution_status": "string"
+    },
+    "unknown_field_policy": "REJECT"
+  }
+]

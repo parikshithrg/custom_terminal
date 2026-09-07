@@ -1,0 +1,17 @@
+{
+  "byte_size": 247,
+  "content_hash": "a1c989a23656f5005697d1c1ce0163bdede5ad6dd304e787681d462689fe1d3c",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "benchmark_history",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "synthetic_incremental_router_v1",
+  "provider": "synthetic_incremental_provider",
+  "raw_schema_version": "synthetic_benchmark_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieved_at": "2020-03-11T00:00:00Z",
+  "source_identity": "r10b:benchmark_correction",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

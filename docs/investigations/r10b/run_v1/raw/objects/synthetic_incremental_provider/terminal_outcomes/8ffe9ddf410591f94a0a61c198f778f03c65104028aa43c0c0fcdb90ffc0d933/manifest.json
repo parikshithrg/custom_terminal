@@ -1,0 +1,17 @@
+{
+  "byte_size": 217,
+  "content_hash": "8ffe9ddf410591f94a0a61c198f778f03c65104028aa43c0c0fcdb90ffc0d933",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "terminal_outcomes",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "synthetic_incremental_router_v1",
+  "provider": "synthetic_incremental_provider",
+  "raw_schema_version": "synthetic_terminal_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieved_at": "2020-03-10T00:00:00Z",
+  "source_identity": "r10b:terminal_update",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

@@ -1,0 +1,46 @@
+{
+  "additive_schema": {
+    "hashes_preserved": true,
+    "unaffected_count": 10
+  },
+  "benchmark_correction": {
+    "hashes_preserved": true,
+    "unaffected_count": 16
+  },
+  "feature_correction": {
+    "hashes_preserved": true,
+    "unaffected_count": 14
+  },
+  "late_session": {
+    "hashes_preserved": true,
+    "unaffected_count": 8
+  },
+  "new_listing": {
+    "hashes_preserved": true,
+    "unaffected_count": 12
+  },
+  "new_session": {
+    "hashes_preserved": true,
+    "unaffected_count": 10
+  },
+  "old_price_correction": {
+    "hashes_preserved": true,
+    "unaffected_count": 10
+  },
+  "outcome_correction": {
+    "hashes_preserved": true,
+    "unaffected_count": 16
+  },
+  "rename": {
+    "hashes_preserved": true,
+    "unaffected_count": 12
+  },
+  "terminal_update": {
+    "hashes_preserved": true,
+    "unaffected_count": 16
+  },
+  "universe_correction": {
+    "hashes_preserved": true,
+    "unaffected_count": 13
+  }
+}

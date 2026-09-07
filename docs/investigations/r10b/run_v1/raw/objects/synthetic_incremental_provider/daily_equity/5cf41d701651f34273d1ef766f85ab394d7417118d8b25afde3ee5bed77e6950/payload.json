@@ -1,0 +1,16 @@
+{
+  "raw_schema_version": "synthetic_bar_raw_v1",
+  "records": [
+    {
+      "available_at": "2020-01-20T12:00:00Z",
+      "close": 104,
+      "event_time": "2020-01-07T10:00:00Z",
+      "instrument_id": "SYN_I001",
+      "published_at": "2020-01-20T12:00:00Z",
+      "revision_number": 1,
+      "source_record_id": "i1-20200107-r1",
+      "supersedes_record_id": null,
+      "turnover": 1000
+    }
+  ]
+}

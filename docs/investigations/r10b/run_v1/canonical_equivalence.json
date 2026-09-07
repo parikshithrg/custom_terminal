@@ -1,0 +1,13 @@
+{
+  "additive_schema": true,
+  "benchmark_correction": true,
+  "feature_correction": true,
+  "late_session": true,
+  "new_listing": true,
+  "new_session": true,
+  "old_price_correction": true,
+  "outcome_correction": true,
+  "rename": true,
+  "terminal_update": true,
+  "universe_correction": true
+}

@@ -1,0 +1,10 @@
+{
+  "raw_schema_version": "synthetic_terminal_raw_v1",
+  "records": [
+    {
+      "event_time": "2020-02-07T10:00:00Z",
+      "instrument_id": "SYN_I002",
+      "resolution_status": "UNRESOLVED"
+    }
+  ]
+}

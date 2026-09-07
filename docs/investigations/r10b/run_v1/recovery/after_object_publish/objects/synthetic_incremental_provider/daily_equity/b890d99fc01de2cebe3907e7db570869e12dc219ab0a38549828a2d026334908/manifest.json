@@ -1,0 +1,17 @@
+{
+  "byte_size": 33,
+  "content_hash": "b890d99fc01de2cebe3907e7db570869e12dc219ab0a38549828a2d026334908",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "daily_equity",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "v1",
+  "provider": "synthetic_incremental_provider",
+  "raw_schema_version": "synthetic_bar_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "UNSPECIFIED",
+  "retrieved_at": "2020-03-22T00:00:00Z",
+  "source_identity": "r10b:recovery:after_object_publish",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

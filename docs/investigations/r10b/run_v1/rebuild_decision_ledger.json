@@ -1,0 +1,1388 @@
+[
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-13T12:00:00+00:00",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-13T12:00:00+00:00",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-13T12:00:00+00:00",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-13T12:00:00+00:00",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-13T12:00:00+00:00",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-15T12:00:00+00:00",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "late_session",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "late_session",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "old_price_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "old_price_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_liquidity_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "universe_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "universe_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "feature_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "feature_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "outcome_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "outcome_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "DIRECT_outcome_input_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "stage_id": "outcome_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "outcome_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "outcome_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "outcome_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-01-20T12:00:00+00:00",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "new_listing",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "new_listing",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-01-24T12:00:00+00:00",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_identity_CHANGE_AVAILABLE_2020-01-24T12:00:00+00:00",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "rename",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "rename",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "stage_id": "terminal_update",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "terminal_update",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "stage_id": "terminal_update",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "terminal_update",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "terminal_update",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "terminal_update",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "DIRECT_benchmark_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "stage_id": "benchmark_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "benchmark_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "DIRECT_benchmark_CHANGE_AVAILABLE_2020-02-12T12:00:00+00:00",
+    "stage_id": "benchmark_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "benchmark_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "benchmark_correction",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "benchmark_correction",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "normalized_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "outcome_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "raw_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "snapshot_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "universe_post",
+    "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-03T12:00:00+00:00",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "stage_id": "additive_schema",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "stage_id": "additive_schema",
+    "state": "REBUILT_INPUT_CHANGED"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "byte_size": 240,
+  "content_hash": "5889e80bee76c264501a7940e9ee46692c9e167e4a99f475f7a3d3388b5138ff",
+  "data_classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "dataset": "security_master",
+  "expected_event_date": null,
+  "manifest_version": "incremental_raw_object_v1",
+  "parser_version": "synthetic_incremental_router_v1",
+  "provider": "synthetic_incremental_provider",
+  "raw_schema_version": "synthetic_identity_raw_v1",
+  "request_parameters": {},
+  "retention_classification": "GENERATED_SYNTHETIC_RETAINABLE",
+  "retrieved_at": "2020-03-09T00:00:00Z",
+  "source_identity": "r10b:rename",
+  "state": "SUCCEEDED",
+  "stored_payload": "payload.json"
+}

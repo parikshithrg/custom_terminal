@@ -1,0 +1,618 @@
+[
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "0ea4875abe13f910d55a926e488cac6b174e1ce4b78f693e5e77a203e273977d"
+    ],
+    "downstream": [
+      "portfolio",
+      "validation"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "4b50366272d13eadd25a49616a833b07dd4cdaa0df0bc0543fc827a1df3c38f3",
+      "aea9e2adc6cb478601f996dfbc277a9312156fc6fd470458532847340b3f1ac2"
+    ],
+    "node_id": "economic",
+    "node_type": "ECONOMIC_EVIDENCE",
+    "output_hash": "64b9d5b04b59064a0d36f9029a077cafa2e7a64ed3091a4c2c87be3d2641d679",
+    "parameters_hash": "34a991d1d1a8c746a8707e3d1a77df567ceb7185793663de79c877c306173ea4",
+    "parents": [
+      "fold_pre",
+      "fold_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "benchmark,terminal",
+      "knowledge_cutoff": "2020-02-20T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "72b991ba32d3fee7c472dfd17fe7291c5c40d1d3bba44688e6ede5a4e7fb4b92"
+    ],
+    "downstream": [
+      "prediction_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "bf5206b59257976c3d0e47a476971203701898c335f7d79a2b430aad6d7c19c6",
+      "d8faf91203fff47c57cbeb5196912f946f7969857c9ad4a98ac01e1e632005ee"
+    ],
+    "node_id": "feature_post",
+    "node_type": "FEATURE",
+    "output_hash": "f65422fc4e345ca270cf7b73c4fbba400e984b757b0ab73b1d0b6b3bdb73b6d7",
+    "parameters_hash": "d0dbdef464a1e40d4386aed3d4e0f3b4282a4195703281397525d25ee777c01e",
+    "parents": [
+      "snapshot_post",
+      "universe_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,feature_input",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2019-02-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "72b991ba32d3fee7c472dfd17fe7291c5c40d1d3bba44688e6ede5a4e7fb4b92"
+    ],
+    "downstream": [
+      "prediction_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "49433a8d24289754b3614ce2537c4e6c9deff831288b93c6145c43639d1a36a2",
+      "59e7529bd7c4fe58feaf26a0e939dfcecd2e8a9184c1dea204cf7743b26a0ae4"
+    ],
+    "node_id": "feature_pre",
+    "node_type": "FEATURE",
+    "output_hash": "e6c5d1b1efa5e6c63c0d5208374d53a3ed602b1da339d7d862d29232411480bb",
+    "parameters_hash": "d4779c95ac6e08dfa32cc458af34b923920d3a7a00ad588bad1248b776024f98",
+    "parents": [
+      "snapshot_pre",
+      "universe_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,feature_input",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2019-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "c7497fbba63a2ac562ac2bdea3f8ce90fd0764fa2c7b27455825ccbcfd5745a8"
+    ],
+    "downstream": [
+      "economic",
+      "validation"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "56e6f49076b629c8b893c780cc3f56e19785b9897353885b849702f1566b3227",
+      "45a3598bf264c97ff6c32f098bca6579d8db18c2a4c849ee95ff9d246f8becb1"
+    ],
+    "node_id": "fold_post",
+    "node_type": "FOLD_OOS_EVIDENCE",
+    "output_hash": "aea9e2adc6cb478601f996dfbc277a9312156fc6fd470458532847340b3f1ac2",
+    "parameters_hash": "abf675a11066bb268e6729af56ccc7a9071994fa90de3305c4a7389560f765ab",
+    "parents": [
+      "prediction_post",
+      "outcome_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-02-20T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "c7497fbba63a2ac562ac2bdea3f8ce90fd0764fa2c7b27455825ccbcfd5745a8"
+    ],
+    "downstream": [
+      "economic",
+      "validation"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "bd6bcd019a430fc6d60f62892d72c896fd1bf0b5bbd133c59dbb74d513203d8f",
+      "5f6814456282e6311e7c4308f7610970c70b1f0631644fce8171963ae0bf75f0"
+    ],
+    "node_id": "fold_pre",
+    "node_type": "FOLD_OOS_EVIDENCE",
+    "output_hash": "4b50366272d13eadd25a49616a833b07dd4cdaa0df0bc0543fc827a1df3c38f3",
+    "parameters_hash": "49df46bc69d70c1affa5fd903abdbfaf7e3f860d9912c4e4325fbe88bb1b6f81",
+    "parents": [
+      "prediction_pre",
+      "outcome_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-01-20T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "273dba2ca9df843eb8967bd40469e9ed7afd385b639b49104a1988e758c7b37e"
+    ],
+    "downstream": [
+      "universe_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [],
+    "node_id": "identity_post",
+    "node_type": "IDENTITY_ALIAS_SNAPSHOT",
+    "output_hash": "452f1b823dbbd296f482ce4e0f595c2ce7291b201f043f45f02eb3277d0b4a9a",
+    "parameters_hash": "5454379178618de06a28f5ac018ae1d76deda3fe86c3ef2f0e6e36785deb48a5",
+    "parents": [],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "identity",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "273dba2ca9df843eb8967bd40469e9ed7afd385b639b49104a1988e758c7b37e"
+    ],
+    "downstream": [
+      "universe_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [],
+    "node_id": "identity_pre",
+    "node_type": "IDENTITY_ALIAS_SNAPSHOT",
+    "output_hash": "01493322b9bcf9c7b88da007a0676e79419c1db5afc82f6756fff037e54291bc",
+    "parameters_hash": "ca5f7fc73ce34a0e04629d23884bc07404af8a237c56624a4696bc64e9c6fdf8",
+    "parents": [],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "identity",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "befcf1713dbd2968b63d09db558ac98f68039ef2828639fb001bad5e2fba6fb9"
+    ],
+    "downstream": [
+      "snapshot_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "675f4f8892e49b6cbbfdf78af14d12ee75c644066f9cd31a91904331e6433a6c"
+    ],
+    "node_id": "normalized_post",
+    "node_type": "NORMALIZED_PARTITION",
+    "output_hash": "3b443473d59e2734a0a9979f93e4831b635b7567e1d8b7d5bca3e062257131c6",
+    "parameters_hash": "bf38800b4b533d743957df23a577a5b62ee2f4c7f8404ca81b44020684e2fbc9",
+    "parents": [
+      "raw_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "befcf1713dbd2968b63d09db558ac98f68039ef2828639fb001bad5e2fba6fb9"
+    ],
+    "downstream": [
+      "snapshot_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "ab539f823aea4bf0b2d16140993727e89323731a4df262330c59229426de3292"
+    ],
+    "node_id": "normalized_pre",
+    "node_type": "NORMALIZED_PARTITION",
+    "output_hash": "79dc675ab63695b9ee7a128e1f14cdfecf5b0296e2234dca8ef391d9814c7d78",
+    "parameters_hash": "fd6503f618b84881bb3116ca70c3e9f89caa0f3de951aa8b24edaee7d256308b",
+    "parents": [
+      "raw_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "26591c8bc7e6686cbd6bc5b437b5e782626fd2e4cf8c6115ab9a8bc6a79638e4"
+    ],
+    "downstream": [
+      "fold_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "56e6f49076b629c8b893c780cc3f56e19785b9897353885b849702f1566b3227",
+      "bf5206b59257976c3d0e47a476971203701898c335f7d79a2b430aad6d7c19c6"
+    ],
+    "node_id": "outcome_post",
+    "node_type": "OUTCOME",
+    "output_hash": "45a3598bf264c97ff6c32f098bca6579d8db18c2a4c849ee95ff9d246f8becb1",
+    "parameters_hash": "074bf3c30cff7a175ca2532d89baefe7077459fb2323fc495acc98eb1adc4baa",
+    "parents": [
+      "prediction_post",
+      "snapshot_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,outcome_input,benchmark,terminal",
+      "knowledge_cutoff": "2020-02-20T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2020-02-03"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "26591c8bc7e6686cbd6bc5b437b5e782626fd2e4cf8c6115ab9a8bc6a79638e4"
+    ],
+    "downstream": [
+      "fold_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "bd6bcd019a430fc6d60f62892d72c896fd1bf0b5bbd133c59dbb74d513203d8f",
+      "49433a8d24289754b3614ce2537c4e6c9deff831288b93c6145c43639d1a36a2"
+    ],
+    "node_id": "outcome_pre",
+    "node_type": "OUTCOME",
+    "output_hash": "5f6814456282e6311e7c4308f7610970c70b1f0631644fce8171963ae0bf75f0",
+    "parameters_hash": "6abc1fe98e17ddef1c6a973d0f05ffbfcd07630fda72088187fca606efffa9f2",
+    "parents": [
+      "prediction_pre",
+      "snapshot_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,outcome_input,benchmark,terminal",
+      "knowledge_cutoff": "2020-01-20T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2020-01-03"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "eb9ecd38c9cf21bb5058b8847094ba7703daa185ec2a0010baeabbed063dc1fb"
+    ],
+    "downstream": [
+      "validation"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "64b9d5b04b59064a0d36f9029a077cafa2e7a64ed3091a4c2c87be3d2641d679"
+    ],
+    "node_id": "portfolio",
+    "node_type": "PORTFOLIO_EVIDENCE",
+    "output_hash": "b3a6f6184798daad049b57367369ade472f9e5709615a44051de2cf994fbccbf",
+    "parameters_hash": "5841037f37b652eb6c0bb4f35a2e5d7ad28a43bd9de10e929976062f82f43989",
+    "parents": [
+      "economic"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-02-20T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "c8044e929e06f4728ff7e71001a0563f906a89b538a348c3c027880e176864ec"
+    ],
+    "downstream": [
+      "outcome_post",
+      "fold_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "f65422fc4e345ca270cf7b73c4fbba400e984b757b0ab73b1d0b6b3bdb73b6d7",
+      "d8faf91203fff47c57cbeb5196912f946f7969857c9ad4a98ac01e1e632005ee"
+    ],
+    "node_id": "prediction_post",
+    "node_type": "PREDICTION",
+    "output_hash": "56e6f49076b629c8b893c780cc3f56e19785b9897353885b849702f1566b3227",
+    "parameters_hash": "2dbb1da16b50182ae77e6f7d0055b4264a31cae0920b66718529e22d1a0d605a",
+    "parents": [
+      "feature_post",
+      "universe_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "c8044e929e06f4728ff7e71001a0563f906a89b538a348c3c027880e176864ec"
+    ],
+    "downstream": [
+      "outcome_pre",
+      "fold_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "e6c5d1b1efa5e6c63c0d5208374d53a3ed602b1da339d7d862d29232411480bb",
+      "59e7529bd7c4fe58feaf26a0e939dfcecd2e8a9184c1dea204cf7743b26a0ae4"
+    ],
+    "node_id": "prediction_pre",
+    "node_type": "PREDICTION",
+    "output_hash": "bd6bcd019a430fc6d60f62892d72c896fd1bf0b5bbd133c59dbb74d513203d8f",
+    "parameters_hash": "0834c66f847f4f4d50faaa7819e3a6c5dab0ecfe30d875259deb9b798cfed284",
+    "parents": [
+      "feature_pre",
+      "universe_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "8832b7223b61d00160706e541349196ce619094845f159bf299e7f34fac8f037"
+    ],
+    "downstream": [
+      "normalized_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [],
+    "node_id": "raw_post",
+    "node_type": "RAW_OBJECT_SET",
+    "output_hash": "675f4f8892e49b6cbbfdf78af14d12ee75c644066f9cd31a91904331e6433a6c",
+    "parameters_hash": "e54625cf9d5b6984a562472f42bd0fec5437e4462fd3ccde3067e91e84946315",
+    "parents": [],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "8832b7223b61d00160706e541349196ce619094845f159bf299e7f34fac8f037"
+    ],
+    "downstream": [
+      "normalized_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [],
+    "node_id": "raw_pre",
+    "node_type": "RAW_OBJECT_SET",
+    "output_hash": "ab539f823aea4bf0b2d16140993727e89323731a4df262330c59229426de3292",
+    "parameters_hash": "1dec031f787461318d17ab899468aae9e8ca2e49f9445f7eca0419ae3917a296",
+    "parents": [],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "28f0673ef78cda89cc3e69e7da500ca0ffbd85317e61d38710f35eaeae4e2ee4"
+    ],
+    "downstream": [
+      "universe_post",
+      "feature_post",
+      "outcome_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "3b443473d59e2734a0a9979f93e4831b635b7567e1d8b7d5bca3e062257131c6"
+    ],
+    "node_id": "snapshot_post",
+    "node_type": "POINT_IN_TIME_SNAPSHOT",
+    "output_hash": "bf5206b59257976c3d0e47a476971203701898c335f7d79a2b430aad6d7c19c6",
+    "parameters_hash": "88708812d2248a821d303b67e4217e1517cbd9cb6bb1e65f2fa83c45c664f10f",
+    "parents": [
+      "normalized_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "28f0673ef78cda89cc3e69e7da500ca0ffbd85317e61d38710f35eaeae4e2ee4"
+    ],
+    "downstream": [
+      "universe_pre",
+      "feature_pre",
+      "outcome_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "79dc675ab63695b9ee7a128e1f14cdfecf5b0296e2234dca8ef391d9814c7d78"
+    ],
+    "node_id": "snapshot_pre",
+    "node_type": "POINT_IN_TIME_SNAPSHOT",
+    "output_hash": "49433a8d24289754b3614ce2537c4e6c9deff831288b93c6145c43639d1a36a2",
+    "parameters_hash": "b5c36138b12039cba9d45883914dc795891244f7e973e0013b619cf8b8771678",
+    "parents": [
+      "normalized_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2020-01-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "956848ddb1c397cf3fb58f32e405c89652e818845f5a2fb725180551262a13f9"
+    ],
+    "downstream": [
+      "feature_post",
+      "prediction_post"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "bf5206b59257976c3d0e47a476971203701898c335f7d79a2b430aad6d7c19c6",
+      "452f1b823dbbd296f482ce4e0f595c2ce7291b201f043f45f02eb3277d0b4a9a"
+    ],
+    "node_id": "universe_post",
+    "node_type": "HISTORICAL_UNIVERSE",
+    "output_hash": "d8faf91203fff47c57cbeb5196912f946f7969857c9ad4a98ac01e1e632005ee",
+    "parameters_hash": "76668f054e0f6dc3f2bcb9790ec1b5a01a7fb8349662071ae481fbc4a6d3dade",
+    "parents": [
+      "snapshot_post",
+      "identity_post"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,liquidity,identity",
+      "knowledge_cutoff": "2020-02-10T12:30:00Z",
+      "window_end": "2020-02-10",
+      "window_start": "2019-11-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "956848ddb1c397cf3fb58f32e405c89652e818845f5a2fb725180551262a13f9"
+    ],
+    "downstream": [
+      "feature_pre",
+      "prediction_pre"
+    ],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "49433a8d24289754b3614ce2537c4e6c9deff831288b93c6145c43639d1a36a2",
+      "01493322b9bcf9c7b88da007a0676e79419c1db5afc82f6756fff037e54291bc"
+    ],
+    "node_id": "universe_pre",
+    "node_type": "HISTORICAL_UNIVERSE",
+    "output_hash": "59e7529bd7c4fe58feaf26a0e939dfcecd2e8a9184c1dea204cf7743b26a0ae4",
+    "parameters_hash": "8cc9cb7f2e644cdf9eff954c4a98997ff1ee03a56514a4318d901e91507e8f91",
+    "parents": [
+      "snapshot_pre",
+      "identity_pre"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "price,liquidity,identity",
+      "knowledge_cutoff": "2020-01-10T12:30:00Z",
+      "window_end": "2020-01-10",
+      "window_start": "2019-10-01"
+    },
+    "version": "v1"
+  },
+  {
+    "availability_policy": "PUBLISHED_AND_AVAILABLE_BY_CUTOFF",
+    "build_state": "UNAFFECTED",
+    "definition_hashes": [
+      "7972f1023b0e6d387ec401d22e29dc7f6deff2d55c77549b205c85cc7961731b"
+    ],
+    "downstream": [],
+    "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+    "input_hashes": [
+      "4b50366272d13eadd25a49616a833b07dd4cdaa0df0bc0543fc827a1df3c38f3",
+      "aea9e2adc6cb478601f996dfbc277a9312156fc6fd470458532847340b3f1ac2",
+      "64b9d5b04b59064a0d36f9029a077cafa2e7a64ed3091a4c2c87be3d2641d679",
+      "b3a6f6184798daad049b57367369ade472f9e5709615a44051de2cf994fbccbf"
+    ],
+    "node_id": "validation",
+    "node_type": "VALIDATION_SUMMARY",
+    "output_hash": "7ff6fce4f742079e0d64cf8ee4e51a4ac16e7030b2e10f0a0f5a942372abbd76",
+    "parameters_hash": "f100fea8181ff003fdfa5545f931254fa3b99dfb1b40c5eaf741cbf996f5293b",
+    "parents": [
+      "fold_pre",
+      "fold_post",
+      "economic",
+      "portfolio"
+    ],
+    "schema_version": "synthetic_incremental_contract_v1",
+    "scope": {
+      "depends_on": "",
+      "knowledge_cutoff": "2020-02-20T12:30:00Z"
+    },
+    "version": "v1"
+  }
+]

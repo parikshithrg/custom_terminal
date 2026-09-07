@@ -1,0 +1,11 @@
+{
+  "raw_schema_version": "synthetic_identity_raw_v1",
+  "records": [
+    {
+      "effective_from": "2020-01-22T03:45:00Z",
+      "instrument_id": "SYN_I003",
+      "listing_id": "SYN_L003",
+      "symbol": "NEWCO"
+    }
+  ]
+}

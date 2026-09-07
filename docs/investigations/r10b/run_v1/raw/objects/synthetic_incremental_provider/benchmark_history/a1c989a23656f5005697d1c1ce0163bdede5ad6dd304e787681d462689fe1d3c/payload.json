@@ -1,0 +1,11 @@
+{
+  "raw_schema_version": "synthetic_benchmark_raw_v1",
+  "records": [
+    {
+      "close": 1001.5,
+      "event_time": "2020-02-05T10:00:00Z",
+      "index_id": "SYN_BENCHMARK",
+      "published_at": "2020-02-12T12:00:00Z"
+    }
+  ]
+}

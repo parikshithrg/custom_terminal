@@ -1,0 +1,114 @@
+[
+  {
+    "accepted": 2,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "initial"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "new_session"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "late_session"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "old_price_correction"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "universe_correction"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "feature_correction"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "outcome_correction"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_identity_v1",
+    "parser_implementation_hash": "65c85137069966c90f74d059dc5131433143f7b83c6da926a0a19430b08bd70c",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_identity_raw_v1",
+    "stage_id": "new_listing"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_identity_v1",
+    "parser_implementation_hash": "65c85137069966c90f74d059dc5131433143f7b83c6da926a0a19430b08bd70c",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_identity_raw_v1",
+    "stage_id": "rename"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_terminal_v1",
+    "parser_implementation_hash": "c2b5c2b8305263f36ec266deb84ff4c558698b9b338097a5b30edca635faa53c",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_terminal_raw_v1",
+    "stage_id": "terminal_update"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_benchmark_v1",
+    "parser_implementation_hash": "b0d28f2f2c5d93dccb978d32902e4e057cdf337baeef8265c4cf5af382938a31",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_benchmark_raw_v1",
+    "stage_id": "benchmark_correction"
+  },
+  {
+    "accepted": 1,
+    "output_schema_version": "synthetic_incremental_bar_v2",
+    "parser_implementation_hash": "2bcf8d62843ee84fde1ded114b8e5d44e13e3010ef60b80ed112e85ff2c26404",
+    "quarantined": 0,
+    "raw_schema_version": "synthetic_bar_raw_v1_1",
+    "stage_id": "additive_schema"
+  },
+  {
+    "accepted": 0,
+    "output_schema_version": "synthetic_incremental_bar_v1",
+    "parser_implementation_hash": "7384274265197ae23b132b527957deecce222ab334c4e271d907155f7462128b",
+    "quarantined": 1,
+    "raw_schema_version": "synthetic_bar_raw_v1",
+    "stage_id": "malformed"
+  },
+  {
+    "accepted": 0,
+    "error": "UNKNOWN_SCHEMA_VERSION",
+    "output_schema_version": null,
+    "quarantined": 1,
+    "raw_schema_version": "synthetic_bar_raw_v9",
+    "stage_id": "breaking_schema"
+  }
+]

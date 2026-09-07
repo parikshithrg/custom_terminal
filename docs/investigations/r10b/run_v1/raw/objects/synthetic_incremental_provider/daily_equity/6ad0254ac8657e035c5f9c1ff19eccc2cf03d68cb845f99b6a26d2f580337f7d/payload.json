@@ -1,0 +1,9 @@
+{
+  "raw_schema_version": "synthetic_bar_raw_v9",
+  "records": [
+    {
+      "instrument_id": "SYN_I001",
+      "settle": 106
+    }
+  ]
+}

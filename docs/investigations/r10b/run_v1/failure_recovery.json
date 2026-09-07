@@ -1,0 +1,29 @@
+[
+  {
+    "result": "REUSED_IDENTICAL_BYTES",
+    "scenario": "duplicate_retrieval"
+  },
+  {
+    "result": "IMMUTABLE_SOURCE_IDENTITY_CONFLICT",
+    "scenario": "identity_conflict"
+  },
+  {
+    "result": "UNKNOWN_SCHEMA_VERSION",
+    "scenario": "breaking_schema"
+  },
+  {
+    "injected": "INJECTED_AFTER_PAYLOAD",
+    "restart": "INGESTED",
+    "scenario": "after_payload"
+  },
+  {
+    "injected": "INJECTED_AFTER_MANIFEST_STAGE",
+    "restart": "INGESTED",
+    "scenario": "after_manifest_stage"
+  },
+  {
+    "injected": "INJECTED_AFTER_OBJECT_PUBLISH",
+    "restart": "REUSED_IDENTICAL_BYTES",
+    "scenario": "after_object_publish"
+  }
+]

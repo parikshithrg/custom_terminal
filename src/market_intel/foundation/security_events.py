@@ -446,7 +446,7 @@ def resolve_terminal_economics(event: Mapping[str, object], *, quantity: float,
                                               successor_instrument_id=str(successor), successor_price=None,
                                               total_proceeds=None,
                                               resolution_status=TerminalResolution.UNRESOLVED_TERMINAL)
-            fractional_cash = fraction * float(price or 0)
+            fractional_cash = round(fraction * float(price or 0), 12)
             share_quantity = whole
         if settlement is None or successor_prices is None:
             return TerminalEconomicResult(**base, cash_amount=cash, successor_quantity=share_quantity,

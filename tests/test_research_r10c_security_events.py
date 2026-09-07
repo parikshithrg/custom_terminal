@@ -217,7 +217,7 @@ def test_terminal_economic_known_answers(events):
     assert mixed.total_proceeds == 4000 and mixed.resolution_status == TerminalResolution.RESOLVED_MIXED
     demerger = results["EV_DEMERGER"]
     assert demerger.successor_quantity == 33
-    assert demerger.cash_amount == pytest.approx(10) and demerger.total_proceeds == pytest.approx(1990)
+    assert demerger.cash_amount == 10.0 and demerger.total_proceeds == 1990.0
     assert results["EV_DELIST"].total_proceeds == 7500
     assert results["EV_DISAPPEAR"].resolution_status == TerminalResolution.UNRESOLVED_TERMINAL
     assert results["EV_RIGHTS"].resolution_status == TerminalResolution.UNRESOLVED_TERMINAL

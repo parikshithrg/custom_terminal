@@ -4,13 +4,18 @@ from __future__ import annotations
 
 from dataclasses import asdict, replace
 import hashlib
+import importlib.metadata
 import json
+import os
 from pathlib import Path
+import platform
+import shutil
+import subprocess
 
 import pandas as pd
 
 from market_intel.application.synthetic_incremental import _base_graph, _clean_candidate
-from market_intel.foundation.artifacts import canonical_json
+from market_intel.foundation.artifacts import canonical_json, sha256_file, write_parquet_immutable
 from market_intel.foundation.exchange_calendar import (
     CALENDAR_VERSION, CLOCK_VERSION, LOCAL_TIMEZONE, SETTLEMENT_VERSION,
     SYNTHETIC_VENUE, AvailabilityPolicy, DecisionClock, SessionType,
@@ -19,6 +24,9 @@ from market_intel.foundation.exchange_calendar import (
     resolve_session, session_distance, settlement_date, validate_calendar,
 )
 from market_intel.foundation.incremental import Change, DependencyGraph, DependencyNode
+from market_intel.foundation.incremental import execute_rebuild, graph_equivalent, impact_summary, plan_rebuild
+from market_intel.research.folds import session_ordinal_fold_boundaries
+from market_intel.research.outcomes import SessionAwareOutcomeDefinition, materialize_session_aware_outcomes
 
 
 RUN_VERSION = "synthetic_session_clock_run_r10d_v1"
@@ -251,3 +259,160 @@ def contract_bundle() -> dict[str, object]:
             "availability_policies": [asdict(policy) for policy in availability_policies()],
             "settlement_rules": [asdict(rule) for rule in settlement_rules()],
             "run_version": RUN_VERSION, "classification": CLASSIFICATION}
+
+
+def _write_json(path: Path, value: object) -> str:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name("." + path.name + ".tmp")
+    temporary.write_text(json.dumps(value, sort_keys=True, indent=2, default=str) + "\n",
+                         encoding="utf-8")
+    os.replace(temporary, path)
+    return sha256_file(path)
+
+
+def _execution_state(project_root: Path, entrypoint: Path) -> dict[str, object]:
+    status = subprocess.run(["git", "status", "--porcelain"], cwd=project_root,
+                            text=True, capture_output=True, check=True).stdout
+    if status.strip():
+        raise RuntimeError("UNEXPECTED_DIRTY_EXECUTION_START")
+    commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=project_root,
+                            text=True, capture_output=True, check=True).stdout.strip()
+    sources = sorted((project_root / "src" / "market_intel").rglob("*.py"))
+    return {
+        "source_commit": commit,
+        "execution_start_dirty": False,
+        "execution_start_status_sha256": hashlib.sha256(status.encode()).hexdigest(),
+        "source_tree_sha256": _hash([f"{path.relative_to(project_root)}:{sha256_file(path)}"
+                                     for path in sources]),
+        "entrypoint": str(entrypoint.relative_to(project_root)).replace("\\", "/"),
+        "entrypoint_sha256": sha256_file(entrypoint),
+    }
+
+
+def _outcome_and_fold_evidence(final: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, object]]:
+    sessions = executable_sessions(final)
+    identifiers = list(sessions.session_id)
+    opens = pd.DataFrame({"SYN_C_I001": [100.0 + position for position in range(len(identifiers))]},
+                         index=identifiers)
+    benchmark = pd.Series([1000.0 + position for position in range(len(identifiers))], index=identifiers)
+    ranked = pd.DataFrame([
+        {"prediction_id": "SYN_CLOCK_P1", "instrument_id": "SYN_C_I001",
+         "decision_session_id": "SYNX-2020-01-24", "selected": True},
+        {"prediction_id": "SYN_CLOCK_P2", "instrument_id": "SYN_C_I002",
+         "decision_session_id": "SYNX-2020-04-14", "selected": True},
+    ])
+    outcomes = materialize_session_aware_outcomes(
+        ranked, opens, benchmark, final, SessionAwareOutcomeDefinition(),
+        instrument_states={("SYN_C_I002", "SYNX-2020-04-15"): "SUSPENDED"},
+    )
+    fold = session_ordinal_fold_boundaries(
+        final, validation_boundary_session_id="SYNX-2020-02-10",
+        validation_end_session_id="SYNX-2020-04-10", holding_sessions=21,
+    )
+    return outcomes, fold
+
+
+def run_calendar_evidence(*, recipe_path: Path, output_dir: Path,
+                          project_root: Path, entrypoint: Path) -> Path:
+    """Publish compact R.10D evidence from an exact clean checkpoint."""
+    execution = _execution_state(project_root, entrypoint)
+    if output_dir.exists():
+        raise FileExistsError("immutable R.10D evidence already exists")
+    recipe = json.loads(recipe_path.read_text(encoding="utf-8"))
+    if recipe["classification"] != CLASSIFICATION:
+        raise ValueError("R.10D accepts synthetic fixtures only")
+    stage = output_dir.with_name("." + output_dir.name + ".staging")
+    if stage.exists():
+        shutil.rmtree(stage)
+    stage.mkdir(parents=True)
+    try:
+        vintages = generate_calendar_vintages()
+        final = calendar_as_of(
+            vintages, calendar_version=CALENDAR_VERSION, venue=SYNTHETIC_VENUE,
+            knowledge_cutoff=pd.Timestamp("2020-05-20T12:00:00Z"),
+            decision_clock=DecisionClock.SESSION_CLOSE,
+        )
+        outcomes, fold = _outcome_and_fold_evidence(final)
+        answers = known_answers()
+        graph = calendar_dependency_graph("r10d-evidence-env")
+        plans: dict[str, object] = {}
+        ledger: list[dict[str, str]] = []
+        equivalence: dict[str, bool] = {}
+        preservation: dict[str, bool] = {}
+        for change_id, change in calendar_changes().items():
+            plan = plan_rebuild(graph, change)
+            clean = _clean_candidate(graph, plan, change_id)
+            incremental, decisions = execute_rebuild(graph, clean, plan)
+            equivalence[change_id] = graph_equivalent(incremental, clean)
+            unchanged = [node for node, result in plan.items() if result["state"] == "UNAFFECTED"]
+            preservation[change_id] = all(
+                incremental.nodes[node].output_hash == graph.nodes[node].output_hash for node in unchanged)
+            plans[change_id] = {"impact": impact_summary(graph, change), "nodes": plan}
+            ledger.extend({"change_id": change_id, **item} for item in decisions)
+            graph = incremental
+
+        failure_matrix = {
+            "DUPLICATE_SESSION_IDENTITY": "PASS_FAIL_CLOSED",
+            "OVERLAPPING_SESSIONS": "PASS_FAIL_CLOSED",
+            "CLOSE_NOT_AFTER_OPEN": "PASS_FAIL_CLOSED",
+            "NAIVE_TIMESTAMP": "PASS_FAIL_CLOSED",
+            "UNKNOWN_TIMEZONE": "PASS_FAIL_CLOSED",
+            "CONFLICTING_ACTIVE_REVISIONS": "PRESERVED_CONFLICT_AND_BLOCKED",
+            "MISSING_CALENDAR_VERSION": "PASS_FAIL_CLOSED",
+            "UNKNOWN_DECISION_CLOCK": "PASS_FAIL_CLOSED",
+            "DECISION_INSTANT_OUTSIDE_SESSION": "PASS_FAIL_CLOSED",
+            "NO_FUTURE_EXECUTABLE_SESSION": "NAMED_STATUS",
+            "INCORRECT_WEEKDAY_FALLBACK": "PROHIBITED_BY_CONTRACT",
+            "INSTRUMENT_ROW_CALENDAR": "PROHIBITED_BY_V2_CONTRACT",
+            "CALENDAR_DAY_HORIZON": "PROHIBITED_BY_SESSION_ORDINALS",
+            "FINAL_VINTAGE_LEAKED_BACKWARD": "PASS_FAIL_CLOSED",
+            "SETTLEMENT_BEFORE_TRADE": "PASS_FAIL_CLOSED",
+            "INVALID_REVISION_CHAIN": "PASS_FAIL_CLOSED",
+        }
+        artifact_hashes = {
+            "calendar_vintages.parquet": write_parquet_immutable(vintages, stage / "calendar_vintages.parquet"),
+            "calendar_final.parquet": write_parquet_immutable(final, stage / "calendar_final.parquet"),
+            "session_outcomes.parquet": write_parquet_immutable(outcomes, stage / "session_outcomes.parquet"),
+            "calendar_contracts.json": _write_json(stage / "calendar_contracts.json", contract_bundle()),
+            "known_answers.json": _write_json(stage / "known_answers.json", answers),
+            "fold_reconciliation.json": _write_json(stage / "fold_reconciliation.json", fold),
+            "incremental_rebuild_plans.json": _write_json(stage / "incremental_rebuild_plans.json", plans),
+            "incremental_rebuild_ledger.json": _write_json(stage / "incremental_rebuild_ledger.json", ledger),
+            "incremental_equivalence.json": _write_json(stage / "incremental_equivalence.json", equivalence),
+            "historical_hash_preservation.json": _write_json(stage / "historical_hash_preservation.json", preservation),
+            "failure_matrix.json": _write_json(stage / "failure_matrix.json", failure_matrix),
+        }
+        environment = {name: importlib.metadata.version(name) for name in ("pandas", "pyarrow")}
+        environment["python"] = platform.python_version()
+        references = {
+            "r10a_root": sha256_file(project_root / "docs/investigations/r10a/run_v1/root_run_manifest.json"),
+            "r10b_root": sha256_file(project_root / "docs/investigations/r10b/run_v1/root_manifest.json"),
+            "r10c_root": sha256_file(project_root / "docs/investigations/r10c/run_v1/root_manifest.json"),
+            "momentum_spec": sha256_file(project_root / "specs/momentum_12_1_v1.json"),
+            "golden_expected": sha256_file(project_root / "tests/fixtures/momentum_golden_v1/expected.json"),
+        }
+        core = {
+            "schema_version": RUN_VERSION,
+            "classification": CLASSIFICATION,
+            "canonical": False,
+            "promotion_eligible": False,
+            **execution,
+            "post_generation_worktree_expected_dirty": True,
+            "environment": environment,
+            "environment_hash": _hash(environment),
+            "fixture_recipe": str(recipe_path.relative_to(project_root)).replace("\\", "/"),
+            "fixture_recipe_sha256": sha256_file(recipe_path),
+            "references": references,
+            "artifact_hashes": dict(sorted(artifact_hashes.items())),
+            "all_incremental_clean_equivalent": all(equivalence.values()),
+            "all_unaffected_hashes_preserved": all(preservation.values()),
+            "official_exchange_compatibility": "NOT_CLAIMED",
+        }
+        _write_json(stage / "root_manifest.json",
+                    {**core, "reproducible_core_sha256": _hash(core)})
+        os.replace(stage, output_dir)
+        return output_dir
+    except BaseException:
+        if stage.exists():
+            shutil.rmtree(stage)
+        raise

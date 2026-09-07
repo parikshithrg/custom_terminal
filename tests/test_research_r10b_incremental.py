@@ -201,6 +201,14 @@ def test_artifact_set_publication_is_atomic_and_restartable(tmp_path, fail_at):
         publish_artifact_set(target, {"x": b"changed"}, b"{}\n")
 
 
+def test_generator_source_staging_is_never_part_of_published_evidence():
+    source = (ROOT / "src" / "market_intel" / "application" /
+              "synthetic_incremental.py").read_text(encoding="utf-8")
+    cleanup = source.index("if source_stage.exists():", source.index("root = {**manifest_core"))
+    publication = source.index("os.replace(output_dir, final_output_dir)")
+    assert cleanup < publication
+
+
 def test_reuse_requires_all_contract_bindings_and_blocks_stale_path_reuse():
     graph = _base_graph("env")
     node = graph.nodes["feature_pre"]

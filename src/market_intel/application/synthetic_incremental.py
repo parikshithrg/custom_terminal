@@ -403,6 +403,10 @@ def run_incremental_evidence(*, recipe_path: Path, output_dir: Path,
         }
         root = {**manifest_core, "reproducible_core_sha256": _hash(manifest_core)}
         _json_write(output_dir / "root_manifest.json", root)
+        # Generator inputs are ephemeral. Remove them before the atomic directory
+        # publication so only immutable store objects and evidence are exposed.
+        if source_stage.exists():
+            shutil.rmtree(source_stage)
         os.replace(output_dir, final_output_dir)
         return final_output_dir
     except BaseException:

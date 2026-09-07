@@ -1,0 +1,43 @@
+[
+  {
+    "accounting_version": "decimal_weighted_average_r10g_v1",
+    "base_currency": "SYN",
+    "cash": {
+      "currency": "SYN",
+      "settled": "8990.00",
+      "unsettled_payable": "0.00",
+      "unsettled_receivable": "0.00"
+    },
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "entitlements": [],
+    "evidence_snapshot_references": [
+      "SYN_EVIDENCE_REF"
+    ],
+    "holdings": [
+      {
+        "acquired_at": null,
+        "cost_basis_total": "1010.00",
+        "instrument_id": "SYN_E_00",
+        "lifecycle": "ACTIVE",
+        "listing_id": "SYN_LISTING_00",
+        "market_price": "120.00",
+        "price_artifact_hash": "4444444444444444444444444444444444444444444444444444444444444444",
+        "price_instant": "2020-02-14 10:00:00+00:00",
+        "quantity": "10.000000",
+        "sector": "SYN_TECH"
+      }
+    ],
+    "knowledge_cutoff": "2020-02-14 09:59:00+00:00",
+    "mandate_id": "SYN_TRADING_21",
+    "pending_transactions": [],
+    "portfolio_id": "SYN_PORT_01",
+    "price_snapshot_references": [
+      "SYN_PRICE_REF"
+    ],
+    "provenance_hashes": [
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "schema_version": "synthetic_portfolio_snapshot_r10g_v1",
+    "valuation_instant": "2020-02-14 10:00:00+00:00"
+  }
+]

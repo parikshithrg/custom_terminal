@@ -1,0 +1,890 @@
+{
+  "allocation": {
+    "binding_constraints": [
+      "HORIZON_COMPATIBILITY",
+      "POSITION_LIMIT",
+      "REBALANCE_CADENCE"
+    ],
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "constraints": [
+      {
+        "constraint_id": "IDENTITY",
+        "limit": null,
+        "observed": "SYN_LISTING_00",
+        "reason": "IDENTITY_MATCH",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TIMING",
+        "limit": "2020-02-14 10:00:00+00:00",
+        "observed": "2020-02-14 00:00:00+00:00",
+        "reason": "POINT_IN_TIME_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "HORIZON_COMPATIBILITY",
+        "limit": "[126, 252]",
+        "observed": "21",
+        "reason": "EVIDENCE_MANDATE_HORIZON_MISMATCH",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "LIFECYCLE",
+        "limit": "['SYNTHETIC_VALIDATED_NONCANONICAL']",
+        "observed": "SYNTHETIC_VALIDATED_NONCANONICAL",
+        "reason": "LIFECYCLE_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "FRESHNESS",
+        "limit": "BLOCK",
+        "observed": "CURRENT",
+        "reason": "FRESHNESS_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CONFIDENCE",
+        "limit": "MODERATE",
+        "observed": "HIGH",
+        "reason": "CONFIDENCE_MEETS_POLICY",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "DATA_QUALITY",
+        "limit": "PASS",
+        "observed": "PASS",
+        "reason": "DATA_QUALITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CALIBRATION",
+        "limit": null,
+        "observed": "neighbor_calibration_v1",
+        "reason": "CALIBRATION_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNIVERSE",
+        "limit": null,
+        "observed": "SYN_E_00",
+        "reason": "UNIVERSE_ELIGIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "POSITION_LIMIT",
+        "limit": "0.10",
+        "observed": "0.15",
+        "reason": "POSITION_ALREADY_ABOVE_LIMIT",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "GROSS_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "GROSS_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "NET_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "NET_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MAXIMUM_NAMES",
+        "limit": "4",
+        "observed": "1",
+        "reason": "MAXIMUM_NAMES_EVALUATED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SECTOR_LIMIT",
+        "limit": "0.40",
+        "observed": "0.117763",
+        "reason": "SECTOR_LIMIT_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CASH_BUFFER",
+        "limit": "0.05",
+        "observed": "0.882237",
+        "reason": "CASH_BUFFER_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TURNOVER",
+        "limit": "0.10",
+        "observed": "0.10",
+        "reason": "TURNOVER_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIQUIDITY",
+        "limit": "100000",
+        "observed": "500000",
+        "reason": "LIQUIDITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SETTLEMENT_AVAILABILITY",
+        "limit": "True",
+        "observed": "True",
+        "reason": "SETTLEMENT_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MISSING_VALUATION",
+        "limit": "COMPLETE",
+        "observed": "COMPLETE",
+        "reason": "VALUATION_COMPLETE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNRESOLVED_TERMINAL_ECONOMICS",
+        "limit": "True",
+        "observed": "True",
+        "reason": "TERMINAL_ECONOMICS_RESOLVED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "REBALANCE_CADENCE",
+        "limit": "21",
+        "observed": "9",
+        "reason": "REBALANCE_NOT_DUE",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "PROVENANCE",
+        "limit": "True",
+        "observed": "True",
+        "reason": "PROVENANCE_VALID",
+        "required": true,
+        "status": "PASS"
+      }
+    ],
+    "eligible": false,
+    "evidence_snapshot_id": "SYN-PUB-001",
+    "explanation_codes": [
+      "IDENTITY_MATCH",
+      "POINT_IN_TIME_COMPATIBLE",
+      "EVIDENCE_MANDATE_HORIZON_MISMATCH",
+      "LIFECYCLE_PERMITTED",
+      "FRESHNESS_PERMITTED",
+      "CONFIDENCE_MEETS_POLICY",
+      "DATA_QUALITY_OK",
+      "CALIBRATION_AVAILABLE",
+      "UNIVERSE_ELIGIBLE",
+      "POSITION_ALREADY_ABOVE_LIMIT",
+      "GROSS_EXPOSURE_WITHIN_LIMIT",
+      "NET_EXPOSURE_WITHIN_LIMIT",
+      "MAXIMUM_NAMES_EVALUATED",
+      "SECTOR_LIMIT_OK",
+      "CASH_BUFFER_OK",
+      "TURNOVER_WITHIN_LIMIT",
+      "LIQUIDITY_OK",
+      "SETTLEMENT_AVAILABLE",
+      "VALUATION_COMPLETE",
+      "TERMINAL_ECONOMICS_RESOLVED",
+      "REBALANCE_NOT_DUE",
+      "PROVENANCE_VALID"
+    ],
+    "external_decision": {
+      "decision": "NO_DECISION",
+      "reason": "SYNTHETIC_NONCANONICAL_EVIDENCE"
+    },
+    "internal_synthetic_intent": "DECREASE_SYNTHETIC_EXPOSURE",
+    "mandate_id": "SYN_ALLOCATION_126",
+    "policy_version": "deterministic_mandate_policy_r10g_v1",
+    "portfolio_id": "SYN_PORT_01",
+    "rejected_alternatives": [
+      "SCORE_ONLY_ACTION_PROHIBITED"
+    ],
+    "target_exposure": null
+  },
+  "at_position_limit": {
+    "binding_constraints": [],
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "constraints": [
+      {
+        "constraint_id": "IDENTITY",
+        "limit": null,
+        "observed": "SYN_LISTING_00",
+        "reason": "IDENTITY_MATCH",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TIMING",
+        "limit": "2020-02-14 10:00:00+00:00",
+        "observed": "2020-02-14 00:00:00+00:00",
+        "reason": "POINT_IN_TIME_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "HORIZON_COMPATIBILITY",
+        "limit": "[21]",
+        "observed": "21",
+        "reason": "HORIZON_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIFECYCLE",
+        "limit": "['SYNTHETIC_VALIDATED_NONCANONICAL']",
+        "observed": "SYNTHETIC_VALIDATED_NONCANONICAL",
+        "reason": "LIFECYCLE_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "FRESHNESS",
+        "limit": "BLOCK",
+        "observed": "CURRENT",
+        "reason": "FRESHNESS_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CONFIDENCE",
+        "limit": "MODERATE",
+        "observed": "HIGH",
+        "reason": "CONFIDENCE_MEETS_POLICY",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "DATA_QUALITY",
+        "limit": "PASS",
+        "observed": "PASS",
+        "reason": "DATA_QUALITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CALIBRATION",
+        "limit": null,
+        "observed": "neighbor_calibration_v1",
+        "reason": "CALIBRATION_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNIVERSE",
+        "limit": null,
+        "observed": "SYN_E_00",
+        "reason": "UNIVERSE_ELIGIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "POSITION_LIMIT",
+        "limit": "0.20",
+        "observed": "0.20",
+        "reason": "POSITION_LIMIT_EVALUATED",
+        "required": true,
+        "status": "BINDING"
+      },
+      {
+        "constraint_id": "GROSS_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "GROSS_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "NET_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "NET_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MAXIMUM_NAMES",
+        "limit": "4",
+        "observed": "1",
+        "reason": "MAXIMUM_NAMES_EVALUATED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SECTOR_LIMIT",
+        "limit": "0.40",
+        "observed": "0.117763",
+        "reason": "SECTOR_LIMIT_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CASH_BUFFER",
+        "limit": "0.05",
+        "observed": "0.882237",
+        "reason": "CASH_BUFFER_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TURNOVER",
+        "limit": "0.30",
+        "observed": "0.10",
+        "reason": "TURNOVER_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIQUIDITY",
+        "limit": "100000",
+        "observed": "500000",
+        "reason": "LIQUIDITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SETTLEMENT_AVAILABILITY",
+        "limit": "True",
+        "observed": "True",
+        "reason": "SETTLEMENT_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MISSING_VALUATION",
+        "limit": "COMPLETE",
+        "observed": "COMPLETE",
+        "reason": "VALUATION_COMPLETE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNRESOLVED_TERMINAL_ECONOMICS",
+        "limit": "True",
+        "observed": "True",
+        "reason": "TERMINAL_ECONOMICS_RESOLVED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "REBALANCE_CADENCE",
+        "limit": "5",
+        "observed": "9",
+        "reason": "REBALANCE_DUE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "PROVENANCE",
+        "limit": "True",
+        "observed": "True",
+        "reason": "PROVENANCE_VALID",
+        "required": true,
+        "status": "PASS"
+      }
+    ],
+    "eligible": true,
+    "evidence_snapshot_id": "SYN-PUB-001",
+    "explanation_codes": [
+      "IDENTITY_MATCH",
+      "POINT_IN_TIME_COMPATIBLE",
+      "HORIZON_COMPATIBLE",
+      "LIFECYCLE_PERMITTED",
+      "FRESHNESS_PERMITTED",
+      "CONFIDENCE_MEETS_POLICY",
+      "DATA_QUALITY_OK",
+      "CALIBRATION_AVAILABLE",
+      "UNIVERSE_ELIGIBLE",
+      "POSITION_LIMIT_EVALUATED",
+      "GROSS_EXPOSURE_WITHIN_LIMIT",
+      "NET_EXPOSURE_WITHIN_LIMIT",
+      "MAXIMUM_NAMES_EVALUATED",
+      "SECTOR_LIMIT_OK",
+      "CASH_BUFFER_OK",
+      "TURNOVER_WITHIN_LIMIT",
+      "LIQUIDITY_OK",
+      "SETTLEMENT_AVAILABLE",
+      "VALUATION_COMPLETE",
+      "TERMINAL_ECONOMICS_RESOLVED",
+      "REBALANCE_DUE",
+      "PROVENANCE_VALID"
+    ],
+    "external_decision": {
+      "decision": "NO_DECISION",
+      "reason": "SYNTHETIC_NONCANONICAL_EVIDENCE"
+    },
+    "internal_synthetic_intent": "INCREASE_SYNTHETIC_EXPOSURE",
+    "mandate_id": "SYN_TRADING_21",
+    "policy_version": "deterministic_mandate_policy_r10g_v1",
+    "portfolio_id": "SYN_PORT_01",
+    "rejected_alternatives": [
+      "SCORE_ONLY_ACTION_PROHIBITED"
+    ],
+    "target_exposure": "0.20"
+  },
+  "insufficient_cash": {
+    "binding_constraints": [
+      "POSITION_LIMIT",
+      "SECTOR_LIMIT",
+      "CASH_BUFFER"
+    ],
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "constraints": [
+      {
+        "constraint_id": "IDENTITY",
+        "limit": null,
+        "observed": "SYN_LISTING_00",
+        "reason": "IDENTITY_MATCH",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TIMING",
+        "limit": "2020-02-14 10:00:00+00:00",
+        "observed": "2020-02-14 00:00:00+00:00",
+        "reason": "POINT_IN_TIME_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "HORIZON_COMPATIBILITY",
+        "limit": "[21]",
+        "observed": "21",
+        "reason": "HORIZON_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIFECYCLE",
+        "limit": "['SYNTHETIC_VALIDATED_NONCANONICAL']",
+        "observed": "SYNTHETIC_VALIDATED_NONCANONICAL",
+        "reason": "LIFECYCLE_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "FRESHNESS",
+        "limit": "BLOCK",
+        "observed": "CURRENT",
+        "reason": "FRESHNESS_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CONFIDENCE",
+        "limit": "MODERATE",
+        "observed": "HIGH",
+        "reason": "CONFIDENCE_MEETS_POLICY",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "DATA_QUALITY",
+        "limit": "PASS",
+        "observed": "PASS",
+        "reason": "DATA_QUALITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CALIBRATION",
+        "limit": null,
+        "observed": "neighbor_calibration_v1",
+        "reason": "CALIBRATION_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNIVERSE",
+        "limit": null,
+        "observed": "SYN_E_00",
+        "reason": "UNIVERSE_ELIGIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "POSITION_LIMIT",
+        "limit": "0.20",
+        "observed": "0.15",
+        "reason": "POSITION_ALREADY_ABOVE_LIMIT",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "GROSS_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "GROSS_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "NET_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "NET_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MAXIMUM_NAMES",
+        "limit": "4",
+        "observed": "1",
+        "reason": "MAXIMUM_NAMES_EVALUATED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SECTOR_LIMIT",
+        "limit": "0.40",
+        "observed": "1.000000",
+        "reason": "SECTOR_LIMIT_EXCEEDED",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "CASH_BUFFER",
+        "limit": "0.05",
+        "observed": "0.000000",
+        "reason": "INSUFFICIENT_CASH_BUFFER",
+        "required": true,
+        "status": "BLOCK"
+      },
+      {
+        "constraint_id": "TURNOVER",
+        "limit": "0.30",
+        "observed": "0.10",
+        "reason": "TURNOVER_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIQUIDITY",
+        "limit": "100000",
+        "observed": "500000",
+        "reason": "LIQUIDITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SETTLEMENT_AVAILABILITY",
+        "limit": "True",
+        "observed": "True",
+        "reason": "SETTLEMENT_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MISSING_VALUATION",
+        "limit": "COMPLETE",
+        "observed": "COMPLETE",
+        "reason": "VALUATION_COMPLETE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNRESOLVED_TERMINAL_ECONOMICS",
+        "limit": "True",
+        "observed": "True",
+        "reason": "TERMINAL_ECONOMICS_RESOLVED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "REBALANCE_CADENCE",
+        "limit": "5",
+        "observed": "9",
+        "reason": "REBALANCE_DUE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "PROVENANCE",
+        "limit": "True",
+        "observed": "True",
+        "reason": "PROVENANCE_VALID",
+        "required": true,
+        "status": "PASS"
+      }
+    ],
+    "eligible": false,
+    "evidence_snapshot_id": "SYN-PUB-001",
+    "explanation_codes": [
+      "IDENTITY_MATCH",
+      "POINT_IN_TIME_COMPATIBLE",
+      "HORIZON_COMPATIBLE",
+      "LIFECYCLE_PERMITTED",
+      "FRESHNESS_PERMITTED",
+      "CONFIDENCE_MEETS_POLICY",
+      "DATA_QUALITY_OK",
+      "CALIBRATION_AVAILABLE",
+      "UNIVERSE_ELIGIBLE",
+      "POSITION_ALREADY_ABOVE_LIMIT",
+      "GROSS_EXPOSURE_WITHIN_LIMIT",
+      "NET_EXPOSURE_WITHIN_LIMIT",
+      "MAXIMUM_NAMES_EVALUATED",
+      "SECTOR_LIMIT_EXCEEDED",
+      "INSUFFICIENT_CASH_BUFFER",
+      "TURNOVER_WITHIN_LIMIT",
+      "LIQUIDITY_OK",
+      "SETTLEMENT_AVAILABLE",
+      "VALUATION_COMPLETE",
+      "TERMINAL_ECONOMICS_RESOLVED",
+      "REBALANCE_DUE",
+      "PROVENANCE_VALID"
+    ],
+    "external_decision": {
+      "decision": "NO_DECISION",
+      "reason": "SYNTHETIC_NONCANONICAL_EVIDENCE"
+    },
+    "internal_synthetic_intent": "DECREASE_SYNTHETIC_EXPOSURE",
+    "mandate_id": "SYN_TRADING_21",
+    "policy_version": "deterministic_mandate_policy_r10g_v1",
+    "portfolio_id": "SYN_PORT_NO_CASH",
+    "rejected_alternatives": [
+      "SCORE_ONLY_ACTION_PROHIBITED"
+    ],
+    "target_exposure": null
+  },
+  "trading": {
+    "binding_constraints": [],
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "constraints": [
+      {
+        "constraint_id": "IDENTITY",
+        "limit": null,
+        "observed": "SYN_LISTING_00",
+        "reason": "IDENTITY_MATCH",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TIMING",
+        "limit": "2020-02-14 10:00:00+00:00",
+        "observed": "2020-02-14 00:00:00+00:00",
+        "reason": "POINT_IN_TIME_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "HORIZON_COMPATIBILITY",
+        "limit": "[21]",
+        "observed": "21",
+        "reason": "HORIZON_COMPATIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIFECYCLE",
+        "limit": "['SYNTHETIC_VALIDATED_NONCANONICAL']",
+        "observed": "SYNTHETIC_VALIDATED_NONCANONICAL",
+        "reason": "LIFECYCLE_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "FRESHNESS",
+        "limit": "BLOCK",
+        "observed": "CURRENT",
+        "reason": "FRESHNESS_PERMITTED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CONFIDENCE",
+        "limit": "MODERATE",
+        "observed": "HIGH",
+        "reason": "CONFIDENCE_MEETS_POLICY",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "DATA_QUALITY",
+        "limit": "PASS",
+        "observed": "PASS",
+        "reason": "DATA_QUALITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CALIBRATION",
+        "limit": null,
+        "observed": "neighbor_calibration_v1",
+        "reason": "CALIBRATION_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNIVERSE",
+        "limit": null,
+        "observed": "SYN_E_00",
+        "reason": "UNIVERSE_ELIGIBLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "POSITION_LIMIT",
+        "limit": "0.20",
+        "observed": "0.15",
+        "reason": "POSITION_LIMIT_EVALUATED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "GROSS_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "GROSS_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "NET_EXPOSURE",
+        "limit": "1.00",
+        "observed": "1200.00",
+        "reason": "NET_EXPOSURE_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MAXIMUM_NAMES",
+        "limit": "4",
+        "observed": "1",
+        "reason": "MAXIMUM_NAMES_EVALUATED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SECTOR_LIMIT",
+        "limit": "0.40",
+        "observed": "0.117763",
+        "reason": "SECTOR_LIMIT_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "CASH_BUFFER",
+        "limit": "0.05",
+        "observed": "0.882237",
+        "reason": "CASH_BUFFER_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "TURNOVER",
+        "limit": "0.30",
+        "observed": "0.10",
+        "reason": "TURNOVER_WITHIN_LIMIT",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "LIQUIDITY",
+        "limit": "100000",
+        "observed": "500000",
+        "reason": "LIQUIDITY_OK",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "SETTLEMENT_AVAILABILITY",
+        "limit": "True",
+        "observed": "True",
+        "reason": "SETTLEMENT_AVAILABLE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "MISSING_VALUATION",
+        "limit": "COMPLETE",
+        "observed": "COMPLETE",
+        "reason": "VALUATION_COMPLETE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "UNRESOLVED_TERMINAL_ECONOMICS",
+        "limit": "True",
+        "observed": "True",
+        "reason": "TERMINAL_ECONOMICS_RESOLVED",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "REBALANCE_CADENCE",
+        "limit": "5",
+        "observed": "9",
+        "reason": "REBALANCE_DUE",
+        "required": true,
+        "status": "PASS"
+      },
+      {
+        "constraint_id": "PROVENANCE",
+        "limit": "True",
+        "observed": "True",
+        "reason": "PROVENANCE_VALID",
+        "required": true,
+        "status": "PASS"
+      }
+    ],
+    "eligible": true,
+    "evidence_snapshot_id": "SYN-PUB-001",
+    "explanation_codes": [
+      "IDENTITY_MATCH",
+      "POINT_IN_TIME_COMPATIBLE",
+      "HORIZON_COMPATIBLE",
+      "LIFECYCLE_PERMITTED",
+      "FRESHNESS_PERMITTED",
+      "CONFIDENCE_MEETS_POLICY",
+      "DATA_QUALITY_OK",
+      "CALIBRATION_AVAILABLE",
+      "UNIVERSE_ELIGIBLE",
+      "POSITION_LIMIT_EVALUATED",
+      "GROSS_EXPOSURE_WITHIN_LIMIT",
+      "NET_EXPOSURE_WITHIN_LIMIT",
+      "MAXIMUM_NAMES_EVALUATED",
+      "SECTOR_LIMIT_OK",
+      "CASH_BUFFER_OK",
+      "TURNOVER_WITHIN_LIMIT",
+      "LIQUIDITY_OK",
+      "SETTLEMENT_AVAILABLE",
+      "VALUATION_COMPLETE",
+      "TERMINAL_ECONOMICS_RESOLVED",
+      "REBALANCE_DUE",
+      "PROVENANCE_VALID"
+    ],
+    "external_decision": {
+      "decision": "NO_DECISION",
+      "reason": "SYNTHETIC_NONCANONICAL_EVIDENCE"
+    },
+    "internal_synthetic_intent": "INCREASE_SYNTHETIC_EXPOSURE",
+    "mandate_id": "SYN_TRADING_21",
+    "policy_version": "deterministic_mandate_policy_r10g_v1",
+    "portfolio_id": "SYN_PORT_01",
+    "rejected_alternatives": [
+      "SCORE_ONLY_ACTION_PROHIBITED"
+    ],
+    "target_exposure": "0.15"
+  }
+}

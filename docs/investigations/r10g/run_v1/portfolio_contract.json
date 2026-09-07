@@ -1,0 +1,5 @@
+{
+  "accounting_version": "decimal_weighted_average_r10g_v1",
+  "monetary_semantics": "Decimal; currency rounded half-even to 0.01; quantity to 0.000001",
+  "schema_version": "synthetic_portfolio_snapshot_r10g_v1"
+}

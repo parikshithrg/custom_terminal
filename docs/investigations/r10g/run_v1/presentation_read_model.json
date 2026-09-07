@@ -1,0 +1,13 @@
+{
+  "banner": "SYNTHETIC ENGINEERING ONLY \u2014 NOT A RECOMMENDATION",
+  "external_decision": "NO_DECISION",
+  "external_reason": "SYNTHETIC_NONCANONICAL_EVIDENCE",
+  "internal_policy_label": "ENGINEERING_ONLY",
+  "internal_synthetic_intent": "INCREASE_SYNTHETIC_EXPOSURE",
+  "mandate_compatibility": true,
+  "provenance_ids": [
+    "R10F",
+    "R10G"
+  ],
+  "valuation_status": "COMPLETE"
+}

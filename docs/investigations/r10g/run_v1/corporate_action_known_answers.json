@@ -1,0 +1,45 @@
+{
+  "demerger": {
+    "child_cost": "200.00",
+    "child_quantity": "2.500000",
+    "source_cost": "800.00"
+  },
+  "dividend_cash": "20.00",
+  "merger": {
+    "cash": "20.00",
+    "source_removed": true,
+    "successor_quantity": "5.000000"
+  },
+  "relisting_auto_connected": false,
+  "split_bonus": {
+    "cost_basis": "1000.00",
+    "quantity": "30.000000"
+  },
+  "terminal": {
+    "cash": "800.00",
+    "realized_pnl": "-200.00",
+    "source_removed": true
+  },
+  "unresolved": {
+    "benchmark_relative_return": null,
+    "concentration": null,
+    "constraint_utilization": {},
+    "drawdown": null,
+    "external_flow_adjusted_return": null,
+    "gross_exposure": null,
+    "net_exposure": null,
+    "partial_total_value": "0.00",
+    "position_weights": {},
+    "realized_pnl": "0.00",
+    "settled_cash": "0.00",
+    "settled_market_value": "0.00",
+    "total_return": null,
+    "turnover": "0.00",
+    "unrealized_pnl": null,
+    "unresolved_value_amount": null,
+    "unresolved_value_count": 1,
+    "unsettled_payable": "0.00",
+    "unsettled_receivable": "0.00",
+    "valuation_status": "INCOMPLETE_UNRESOLVED_VALUATION"
+  }
+}

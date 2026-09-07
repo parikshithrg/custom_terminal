@@ -1,0 +1,107 @@
+[
+  {
+    "case": "CASH_ONLY",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-01"
+  },
+  {
+    "case": "EXISTING_LONG",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-02"
+  },
+  {
+    "case": "MULTIPLE_POSITIONS",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-03"
+  },
+  {
+    "case": "INSUFFICIENT_CASH",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-04"
+  },
+  {
+    "case": "CONCENTRATED_HOLDING",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-05"
+  },
+  {
+    "case": "ABOVE_POSITION_LIMIT",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-06"
+  },
+  {
+    "case": "PENDING_PURCHASE_AND_SALE",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-07"
+  },
+  {
+    "case": "UNSETTLED_CASH",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-08"
+  },
+  {
+    "case": "PARTIAL_FILL",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-09"
+  },
+  {
+    "case": "REJECTED_FILL",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-10"
+  },
+  {
+    "case": "MISSING_VALUATION_PRICE",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-11"
+  },
+  {
+    "case": "SUSPENDED_INSTRUMENT",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-12"
+  },
+  {
+    "case": "DELISTED_KNOWN_TERMINAL",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-13"
+  },
+  {
+    "case": "UNRESOLVED_DISAPPEARANCE",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-14"
+  },
+  {
+    "case": "SPLIT_AND_BONUS",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-15"
+  },
+  {
+    "case": "CASH_SHARE_MERGER",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-16"
+  },
+  {
+    "case": "DEMERGER_ENTITLEMENT",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-17"
+  },
+  {
+    "case": "FRACTIONAL_SHARE_CASH",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-18"
+  },
+  {
+    "case": "RELISTED_DISTINCT_SUCCESSOR",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-19"
+  },
+  {
+    "case": "BENCHMARK_SERIES",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-20"
+  },
+  {
+    "case": "EXTERNAL_DEPOSIT_WITHDRAWAL",
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "scenario_id": "SYN-21"
+  }
+]

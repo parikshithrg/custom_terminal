@@ -1,0 +1,49 @@
+{
+  "all_incremental_clean_equivalent": true,
+  "all_unaffected_hashes_preserved": true,
+  "artifact_hashes": {
+    "accounting_known_answers.json": "6a8b163326dce2346123d23e6d14df41efd204c90382a0ddf5e84bc82b3c23d1",
+    "corporate_action_known_answers.json": "af26a3bdcf99c4cbe91c59dd694d2793be44a259ca7896fb39ae1ac3e7dc4320",
+    "failure_matrix.json": "9a978487159c8b6ec2dcc5510490dc68ce41fec3ea99f0ea13065da407670a15",
+    "historical_hash_preservation.json": "3b1d597186eef5bad8f88b282606d3e8e6bd661400be07cef2f632fb81176b07",
+    "incremental_equivalence.json": "3b1d597186eef5bad8f88b282606d3e8e6bd661400be07cef2f632fb81176b07",
+    "incremental_rebuild_ledger.json": "70dd5a5cfcca6363b23e6c1544de52050d4cd22c40d3782ba5c53d9f718e5e00",
+    "incremental_rebuild_plans.json": "0ca8dc41f7631ed0474d5164655b1dfba6cae9a1d49ab066d165541e6953f6ad",
+    "mandates.json": "692a2714401c4ceb4a0de04ba81e478a63554df87bf5a0aff8ec947147947586",
+    "policy_known_answers.json": "c477d938ef04100a174d7e26f91f83fb3f9798e26519a797102c46cdd5f5175a",
+    "portfolio_contract.json": "41afc55e600dedd14139ccf25f61da5c01b7b1279d70b146ca59c202a2696aec",
+    "portfolio_snapshots.json": "decf25247e99602ec5107aec147f3c0e3980d980c54c115433dc7bc09afdadf7",
+    "presentation_read_model.json": "05a1aa46df06574aba02077097a72aa349c07b1d503f112effd5f82502c75469",
+    "scenario_catalog.json": "3f9ebf7e887b4df8350c72cf583b4cb42b9043b8326602a08f91c2aa00aeb71a",
+    "settlement_known_answers.json": "e16e13fbaaa23fdb7de9f95804b1685b4df1beed9c1bd793d1946c274ddf549c"
+  },
+  "canonical": false,
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "entrypoint": "tools/r10g_generate_evidence.py",
+  "entrypoint_sha256": "7102005eecd00da0256e218c57b53f89d2cf6af0008cae990a192a42537187bb",
+  "environment": {
+    "pandas": "3.0.3",
+    "python": "3.14.6"
+  },
+  "environment_hash": "1609270214fea964b6499cefbc900bb5f86d37dc561622d833b2a94d60ce9309",
+  "execution_start_dirty": false,
+  "external_decision": "NO_DECISION",
+  "external_decision_reason": "SYNTHETIC_NONCANONICAL_EVIDENCE",
+  "post_generation_worktree_expected_dirty": true,
+  "promotion_eligible": false,
+  "r10a_holdout_state": "UNCONSUMED_SYNTHETIC_HOLDOUT",
+  "references": {
+    "golden": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+    "momentum": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+    "r10a": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+    "r10b": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+    "r10c": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+    "r10d": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+    "r10e": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+    "r10f": "7eba19c2a2cbd16bd6ff66f7435813135bcb4cb3ae287117c78187d6ac4b1955"
+  },
+  "reproducible_core_sha256": "c1879d3862472146e303514c8fbdbdd72911a9f98ccc679f4fee1be207eda1cb",
+  "schema_version": "synthetic_mandate_portfolio_r10g_v1",
+  "source_commit": "803029792cfae66f59ec090b97586cd29f842963",
+  "source_tree_sha256": "c5bb5fe7b89a764cfcacf05831fd7152f21f051ee998a96a7fb694c4d5123409"
+}

@@ -1,0 +1,14 @@
+{
+  "calendar": true,
+  "constraint_policy": true,
+  "corporate_action": true,
+  "cost_version": true,
+  "evidence_bundle": true,
+  "holding": true,
+  "mandate_version": true,
+  "presentation_schema": true,
+  "price": true,
+  "settlement_rule": true,
+  "terminal_outcome": true,
+  "transaction": true
+}

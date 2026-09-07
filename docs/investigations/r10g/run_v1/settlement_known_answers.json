@@ -1,0 +1,26 @@
+{
+  "mixed_merger_cash_leg": {
+    "instant": "2020-03-04 11:30:00+00:00",
+    "reason": "SYN_CA_CASH_T2:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-04",
+    "status": "RESOLVED"
+  },
+  "mixed_merger_share_leg": {
+    "instant": "2020-03-05 11:30:00+00:00",
+    "reason": "SYN_CA_SHARE_T3:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-05",
+    "status": "RESOLVED"
+  },
+  "t_plus_1": {
+    "instant": "2020-03-03 11:30:00+00:00",
+    "reason": "SYN_T_PLUS_1:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-03-03",
+    "status": "RESOLVED"
+  },
+  "t_plus_2_with_holidays": {
+    "instant": "2020-02-06 11:30:00+00:00",
+    "reason": "SYN_T_PLUS_2:synthetic_settlement_rules_r10d_v1",
+    "session_id": "SYNX-2020-02-06",
+    "status": "RESOLVED"
+  }
+}

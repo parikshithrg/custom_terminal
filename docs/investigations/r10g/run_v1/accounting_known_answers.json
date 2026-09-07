@@ -1,0 +1,252 @@
+{
+  "accounting_journal": [
+    {
+      "event_id": "SYN-DEP-001",
+      "event_type": "DEPOSIT",
+      "evidence_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "lines": [
+        {
+          "account": "CASH",
+          "credit": "0",
+          "debit": "10000.00"
+        },
+        {
+          "account": "EXTERNAL_CAPITAL",
+          "credit": "10000.00",
+          "debit": "0"
+        }
+      ],
+      "occurred_at": "2020-01-02 05:00:00+00:00"
+    },
+    {
+      "event_id": "SYN-TXN-BUY",
+      "event_type": "BUY_EXECUTION",
+      "evidence_hash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "lines": [
+        {
+          "account": "UNSETTLED_SECURITIES",
+          "credit": "0",
+          "debit": "1010.00"
+        },
+        {
+          "account": "UNSETTLED_PAYABLE",
+          "credit": "1010.00",
+          "debit": "0"
+        }
+      ],
+      "occurred_at": "2020-01-30 03:45:00+00:00"
+    },
+    {
+      "event_id": "SYN-TXN-BUY:SETTLE",
+      "event_type": "BUY_SETTLEMENT",
+      "evidence_hash": "3333333333333333333333333333333333333333333333333333333333333333",
+      "lines": [
+        {
+          "account": "POSITION_COST",
+          "credit": "0",
+          "debit": "1010.00"
+        },
+        {
+          "account": "CASH",
+          "credit": "1010.00",
+          "debit": "0"
+        },
+        {
+          "account": "UNSETTLED_PAYABLE",
+          "credit": "0",
+          "debit": "1010.00"
+        },
+        {
+          "account": "UNSETTLED_SECURITIES",
+          "credit": "1010.00",
+          "debit": "0"
+        }
+      ],
+      "occurred_at": "2020-02-06 11:30:00+00:00"
+    },
+    {
+      "event_id": "SYN-TXN-SELL",
+      "event_type": "SELL_EXECUTION",
+      "evidence_hash": "5555555555555555555555555555555555555555555555555555555555555555",
+      "lines": [
+        {
+          "account": "UNSETTLED_RECEIVABLE",
+          "credit": "0",
+          "debit": "515.00"
+        },
+        {
+          "account": "SECURITIES_PENDING_DELIVERY",
+          "credit": "515.00",
+          "debit": "0"
+        }
+      ],
+      "occurred_at": "2020-03-02 04:45:00+00:00"
+    },
+    {
+      "event_id": "SYN-TXN-SELL:SETTLE",
+      "event_type": "SELL_SETTLEMENT",
+      "evidence_hash": "6666666666666666666666666666666666666666666666666666666666666666",
+      "lines": [
+        {
+          "account": "CASH",
+          "credit": "0",
+          "debit": "515.00"
+        },
+        {
+          "account": "POSITION_COST",
+          "credit": "404.00",
+          "debit": "0"
+        },
+        {
+          "account": "REALIZED_PNL",
+          "credit": "111.00",
+          "debit": "0"
+        },
+        {
+          "account": "SECURITIES_PENDING_DELIVERY",
+          "credit": "0",
+          "debit": "515.00"
+        },
+        {
+          "account": "UNSETTLED_RECEIVABLE",
+          "credit": "515.00",
+          "debit": "0"
+        }
+      ],
+      "occurred_at": "2020-03-03 11:30:00+00:00"
+    }
+  ],
+  "buy": {
+    "cash": "8990.00",
+    "cost_basis": "1010.00",
+    "quantity": "10.000000",
+    "unrealized_pnl": "190.00"
+  },
+  "external_flows": {
+    "cash": "9000.00",
+    "journal": [
+      {
+        "event_id": "FLOW-DEP",
+        "event_type": "DEPOSIT",
+        "evidence_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "lines": [
+          {
+            "account": "CASH",
+            "credit": "0",
+            "debit": "10000.00"
+          },
+          {
+            "account": "EXTERNAL_CAPITAL",
+            "credit": "10000.00",
+            "debit": "0"
+          }
+        ],
+        "occurred_at": "2020-01-02 05:00:00+00:00"
+      },
+      {
+        "event_id": "FLOW-WD",
+        "event_type": "WITHDRAWAL",
+        "evidence_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "lines": [
+          {
+            "account": "EXTERNAL_CAPITAL",
+            "credit": "0",
+            "debit": "1000.00"
+          },
+          {
+            "account": "CASH",
+            "credit": "1000.00",
+            "debit": "0"
+          }
+        ],
+        "occurred_at": "2020-01-03 05:00:00+00:00"
+      }
+    ],
+    "net_external_flow": "9000.00"
+  },
+  "fill_data": {
+    "fill": {
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "cost_version": "synthetic_cost_schedule_r10g_v1",
+      "fee": "10.00",
+      "fill_state": "FULL_FILL",
+      "filled_quantity": "10.000000",
+      "instrument_id": "SYN_E_00",
+      "intended_quantity": "10.000000",
+      "proposal_id": "SYN-PROP-BUY",
+      "reason": "FULL_FILL",
+      "settlement_at": "2020-02-06 11:30:00+00:00",
+      "settlement_session_id": "SYNX-2020-02-06",
+      "side": "BUY",
+      "simulated_fill_price": "100.00",
+      "unfilled_quantity": "0.000000"
+    },
+    "pending_cash_available": "8990.00",
+    "proposal": {
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "execution_at": "2020-01-30 03:45:00+00:00",
+      "execution_session_id": "SYNX-2020-01-30",
+      "instrument_id": "SYN_E_00",
+      "intended_quantity": "10.000000",
+      "limit_price": null,
+      "listing_id": "SYN_LISTING_00",
+      "proposal_id": "SYN-PROP-BUY",
+      "reference_price": "100.00",
+      "reference_price_source": "SYN_NEXT_OPEN",
+      "schema_version": "synthetic_simulation_fill_r10g_v1",
+      "side": "BUY"
+    },
+    "settlement_session": "SYNX-2020-02-06"
+  },
+  "journal_balanced": true,
+  "metrics": {
+    "benchmark_relative_return": "0.012500",
+    "concentration": "0.070416",
+    "constraint_utilization": {
+      "gross": "720.000000",
+      "net": "720.000000",
+      "turnover": "0.510000"
+    },
+    "drawdown": "-0.038835",
+    "external_flow_adjusted_return": "0.022500",
+    "gross_exposure": "720.00",
+    "net_exposure": "720.00",
+    "partial_total_value": "10225.00",
+    "position_weights": {
+      "SYN_E_00": "0.070416"
+    },
+    "realized_pnl": "111.00",
+    "settled_cash": "9505.00",
+    "settled_market_value": "720.00",
+    "total_return": "0.022500",
+    "turnover": "1530.00",
+    "unrealized_pnl": "114.00",
+    "unresolved_value_amount": null,
+    "unresolved_value_count": 0,
+    "unsettled_payable": "0.00",
+    "unsettled_receivable": "0.00",
+    "valuation_status": "COMPLETE"
+  },
+  "partial_fill": {
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "cost_version": "synthetic_cost_schedule_r10g_v1",
+    "fee": "0.52",
+    "fill_state": "PARTIAL_FILL",
+    "filled_quantity": "4.000000",
+    "instrument_id": "SYN_E_00",
+    "intended_quantity": "10.000000",
+    "proposal_id": "SYN-PROP-PARTIAL",
+    "reason": "PARTIAL_FILL",
+    "settlement_at": "2020-03-03 11:30:00+00:00",
+    "settlement_session_id": "SYNX-2020-03-03",
+    "side": "SELL",
+    "simulated_fill_price": "130.00",
+    "unfilled_quantity": "6.000000"
+  },
+  "sell": {
+    "cash": "9505.00",
+    "cost_basis": "606.00",
+    "quantity": "6.000000",
+    "realized_pnl": "111.00"
+  }
+}

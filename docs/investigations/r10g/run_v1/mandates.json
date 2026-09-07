@@ -1,0 +1,74 @@
+[
+  {
+    "base_currency": "SYN",
+    "decision_horizon_sessions": 21,
+    "eligible_instruments": "frozenset({'SYN_E_02', 'SYN_E_01', 'SYN_SUCCESSOR', 'SYN_CHILD', 'SYN_E_00'})",
+    "fractional_share_policy": "CASH_IN_LIEU",
+    "implementation_hash": "c49da7b8337a55aa17ffb4360c132e579760686373aa494f379e4e1c2cb6fccb",
+    "leverage_allowed": false,
+    "mandate_id": "SYN_TRADING_21",
+    "maximum_gross_exposure": "1.00",
+    "maximum_names": 4,
+    "maximum_net_exposure": "1.00",
+    "maximum_position_weight": "0.20",
+    "minimum_cash_buffer": "0.05",
+    "minimum_confidence": "MODERATE",
+    "minimum_liquidity": "100000",
+    "objective": "Fictional 21-session directional policy engineering",
+    "permitted_evidence_horizons": "frozenset({21})",
+    "permitted_lifecycle_states": "frozenset({'SYNTHETIC_VALIDATED_NONCANONICAL'})",
+    "rebalance_cadence_sessions": 5,
+    "risk_overrides": [
+      "UNRESOLVED_TERMINAL",
+      "MISSING_PRICE"
+    ],
+    "schema_version": "synthetic_mandate_r10g_v1",
+    "sector_limits": {
+      "SYN_FIN": "0.35",
+      "SYN_TECH": "0.40"
+    },
+    "shorting_allowed": false,
+    "stale_evidence_policy": "BLOCK",
+    "tax_treatment": "SYNTHETIC_NOT_MODELLED",
+    "transaction_cost_version": "synthetic_cost_schedule_r10g_v1",
+    "turnover_limit": "0.30",
+    "unresolved_terminal_policy": "BLOCK",
+    "version": "v1"
+  },
+  {
+    "base_currency": "SYN",
+    "decision_horizon_sessions": 126,
+    "eligible_instruments": "frozenset({'SYN_E_02', 'SYN_E_01', 'SYN_SUCCESSOR', 'SYN_CHILD', 'SYN_E_00'})",
+    "fractional_share_policy": "REJECT",
+    "implementation_hash": "8c58451b40270696d2c3eae38f62a00075136900f1fc65139c6d91c13e07fa33",
+    "leverage_allowed": false,
+    "mandate_id": "SYN_ALLOCATION_126",
+    "maximum_gross_exposure": "1.00",
+    "maximum_names": 4,
+    "maximum_net_exposure": "1.00",
+    "maximum_position_weight": "0.10",
+    "minimum_cash_buffer": "0.05",
+    "minimum_confidence": "MODERATE",
+    "minimum_liquidity": "100000",
+    "objective": "Fictional long-horizon allocation policy engineering",
+    "permitted_evidence_horizons": "frozenset({252, 126})",
+    "permitted_lifecycle_states": "frozenset({'SYNTHETIC_VALIDATED_NONCANONICAL'})",
+    "rebalance_cadence_sessions": 21,
+    "risk_overrides": [
+      "UNRESOLVED_TERMINAL",
+      "MISSING_PRICE"
+    ],
+    "schema_version": "synthetic_mandate_r10g_v1",
+    "sector_limits": {
+      "SYN_FIN": "0.35",
+      "SYN_TECH": "0.40"
+    },
+    "shorting_allowed": false,
+    "stale_evidence_policy": "BLOCK",
+    "tax_treatment": "SYNTHETIC_NOT_MODELLED",
+    "transaction_cost_version": "synthetic_cost_schedule_r10g_v1",
+    "turnover_limit": "0.10",
+    "unresolved_terminal_policy": "BLOCK",
+    "version": "v1"
+  }
+]

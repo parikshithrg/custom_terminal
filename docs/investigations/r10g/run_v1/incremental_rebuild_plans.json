@@ -1,0 +1,2234 @@
+{
+  "calendar": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "calendar",
+      "earliest_affected_downstream_time": "2020-02-07T00:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "combination": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "component_metrics": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "confidence": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "constraint_evaluation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "publication_bundle": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "publication_index": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "session_folds": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "session_outcomes": {
+        "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "constraint_policy": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "constraint_policy",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_constraint_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "DIRECT_constraint_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "DIRECT_constraint_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_inputs": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "corporate_action": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "corporate_action",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_corporate_action_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_corporate_action_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "cost_version": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "cost_version",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_cost_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_cost_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_cost_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "evidence_bundle": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "evidence_bundle",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_evidence_bundle_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "DIRECT_evidence_bundle_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "DIRECT_evidence_bundle_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_inputs": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "holding": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "holding",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_holding_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_holding_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_holding_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "mandate_version": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "mandate_version",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_mandate_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "DIRECT_mandate_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "DIRECT_mandate_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_inputs": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "presentation_schema": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "presentation_schema",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_inputs": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_read_model": {
+        "reason": "DIRECT_presentation_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "price": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "price",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_price_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "settlement_rule": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "settlement_rule",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_settlement_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_settlement_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_settlement_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "DIRECT_settlement_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  },
+  "terminal_outcome": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "terminal_outcome",
+      "earliest_affected_downstream_time": "2020-02-20T12:30:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_terminal_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      }
+    }
+  },
+  "transaction": {
+    "impact": {
+      "availability_time": "2020-02-14T00:00:00+00:00",
+      "change_id": "transaction",
+      "earliest_affected_downstream_time": "2020-03-05T10:00:00+00:00",
+      "earliest_economic_time": "2020-02-14T00:00:00+00:00"
+    },
+    "nodes": {
+      "calendar_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calendar_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "calibration": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "combination": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "component_metrics": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "confidence": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "constraint_evaluation": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "economic": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "evidence_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "external_decision": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "family_ledger": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_matrix": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "feature_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "fold_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "identity_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "internal_policy": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "lifecycle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "normalized_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "outcome_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "portfolio_accounting": {
+        "reason": "DIRECT_transaction_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_inputs": {
+        "reason": "DIRECT_transaction_CHANGE_AVAILABLE_2020-02-14T00:00:00+00:00",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "portfolio_read_model": {
+        "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+        "state": "REBUILT_INPUT_CHANGED"
+      },
+      "prediction_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "prediction_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "presentation_read_model": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_bundle": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "publication_index": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "raw_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "score_snapshot": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_folds": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "session_outcomes": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "settlement": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "snapshot_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_post": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "universe_pre": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      },
+      "validation": {
+        "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+        "state": "UNAFFECTED"
+      }
+    }
+  }
+}

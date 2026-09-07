@@ -48,6 +48,22 @@ class PresentationSafeSnapshot:
     provenance_artifact_ids: tuple
 
 
+@dataclass(frozen=True)
+class PortfolioPresentationSafe:
+    warning_banner: str
+    portfolio_id: str
+    mandate_id: str
+    valuation_status: str
+    mandate_compatible: bool
+    constraint_results: tuple
+    internal_policy_label: str
+    internal_synthetic_intent: str
+    external_decision: str
+    external_reason: str
+    unresolved_exposures: tuple
+    provenance_artifact_ids: tuple
+
+
 class EvidenceReadFacade:
     """No calculation, fitting, lifecycle mutation, provider or write methods."""
 
@@ -113,6 +129,33 @@ class EvidenceReadFacade:
             raw["confidence"], tuple(raw["confidence_limiting_factors"]), raw["lifecycle"],
             freshness["status"], components, "NO_DECISION", reason,
             tuple(reference["artifact_id"] for reference in raw["artifact_references"]),
+        )
+
+    def present_portfolio_result(self, result: dict) -> PortfolioPresentationSafe:
+        """Map an already-computed synthetic result; no accounting or policy is run here."""
+        required = {
+            "classification", "portfolio_id", "mandate_id", "valuation_status",
+            "mandate_compatible", "constraint_results", "internal_policy_label",
+            "internal_synthetic_intent", "external_decision", "external_reason",
+            "unresolved_exposures", "provenance_artifact_ids",
+        }
+        if set(result) != required:
+            raise PublicationError("PORTFOLIO_READ_MODEL_SCHEMA_MISMATCH")
+        if result["classification"] != SYNTHETIC_CLASSIFICATION:
+            raise PublicationError("PORTFOLIO_READ_MODEL_CLASSIFICATION_MISMATCH")
+        if result["external_decision"] != "NO_DECISION" or result["external_reason"] != "SYNTHETIC_NONCANONICAL_EVIDENCE":
+            raise PublicationError("SYNTHETIC_POLICY_EXPOSED_AS_RECOMMENDATION")
+        if result["internal_policy_label"] != "ENGINEERING_ONLY":
+            raise PublicationError("INTERNAL_POLICY_LABEL_MISSING")
+        constraints = tuple(MappingProxyType(dict(item)) for item in result["constraint_results"])
+        return PortfolioPresentationSafe(
+            "SYNTHETIC ENGINEERING ONLY — NOT LIVE, NOT A RECOMMENDATION",
+            validate_identifier(result["portfolio_id"], "portfolio_id"),
+            validate_identifier(result["mandate_id"], "mandate_id"),
+            str(result["valuation_status"]), bool(result["mandate_compatible"]), constraints,
+            "ENGINEERING_ONLY", str(result["internal_synthetic_intent"]), "NO_DECISION",
+            "SYNTHETIC_NONCANONICAL_EVIDENCE", tuple(result["unresolved_exposures"]),
+            tuple(result["provenance_artifact_ids"]),
         )
 
     def query_sql(self, *_: object, **__: object) -> None:

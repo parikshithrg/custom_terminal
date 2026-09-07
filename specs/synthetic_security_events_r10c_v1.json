@@ -1,0 +1,35 @@
+{
+  "fixture_id": "synthetic_security_events_r10c_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "official_format_status": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "versions": {
+    "event_dataset": "synthetic_security_events_r10c_v1",
+    "identity_dataset": "synthetic_identity_assertions_r10c_v1",
+    "adjustments": "derived_adjustment_factors_r10c_v1",
+    "terminal_policy": "terminal_economics_r10c_v1"
+  },
+  "cases": {
+    "rename": {"instrument_id": "SYN_C_I001", "old_symbol": "ORBIT_OLD", "new_symbol": "ORBIT_NEW", "effective_at": "2020-03-02T03:45:00Z"},
+    "split": {"event_id": "EV_SPLIT", "new_shares": 2, "old_shares": 1, "price_factor": 0.5},
+    "bonus": {"event_id": "EV_BONUS", "new_shares": 3, "old_shares": 2, "price_factor": 0.6666666666666666},
+    "cash_dividend": {"event_id": "EV_DIVIDEND", "cash_per_share": 5.0, "price_adjustment": "NOT_APPLIED"},
+    "rights": {"event_id": "EV_RIGHTS", "economics": "UNRESOLVED"},
+    "share_merger": {"event_id": "EV_SHARE_MERGER", "source_quantity": 100, "successor_numerator": 2, "source_denominator": 5, "successor_price": 50, "expected_quantity": 40, "expected_proceeds": 2000},
+    "cash_merger": {"event_id": "EV_CASH_MERGER", "source_quantity": 100, "cash_per_share": 120, "expected_proceeds": 12000},
+    "mixed_merger": {"event_id": "EV_MIXED_MERGER", "source_quantity": 100, "cash_per_share": 20, "successor_numerator": 1, "source_denominator": 4, "successor_price": 80, "expected_proceeds": 4000},
+    "demerger": {"event_id": "EV_DEMERGER", "source_quantity": 100, "child_numerator": 1, "parent_denominator": 3, "fractional_cash_price": 30, "child_price": 60, "expected_child_quantity": 33, "expected_cash": 10, "expected_proceeds": 1990},
+    "cash_delisting": {"event_id": "EV_DELIST", "source_quantity": 100, "cash_per_share": 75, "expected_proceeds": 7500},
+    "disappearance": {"event_id": "EV_DISAPPEAR", "terminal_status": "UNRESOLVED_TERMINAL"},
+    "suspension": {"instrument_id": "SYN_C_I010", "suspended_at": "2020-04-01T03:45:00Z", "resumed_at": "2020-04-15T03:45:00Z"},
+    "relisting": {"old_instrument_id": "SYN_C_I011", "new_instrument_id": "SYN_C_I012", "new_listing_id": "SYN_C_L012"},
+    "ticker_reuse": {"symbol": "ORBIT_OLD", "old_instrument_id": "SYN_C_I001", "new_instrument_id": "SYN_C_I013", "reuse_from": "2021-01-04T03:45:00Z"},
+    "cancellation": {"event_id": "EV_CANCEL", "cancel_published_at": "2020-05-10T12:00:00Z"},
+    "correction": {"event_id": "EV_CORRECT", "original_ratio": 2, "corrected_ratio": 3, "correction_published_at": "2020-06-10T12:00:00Z"},
+    "conflict": {"event_id": "EV_CONFLICT", "source_a_ratio": 2, "source_b_ratio": 3},
+    "late_publication": {"event_id": "EV_LATE", "effective_at": "2020-07-01T03:45:00Z", "published_at": "2020-07-10T12:00:00Z"}
+  },
+  "references": {
+    "r10a_root_manifest": "docs/investigations/r10a/run_v1/root_run_manifest.json",
+    "r10b_root_manifest": "docs/investigations/r10b/run_v1/root_manifest.json"
+  }
+}

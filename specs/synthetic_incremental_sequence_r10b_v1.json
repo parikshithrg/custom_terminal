@@ -1,0 +1,51 @@
+{
+  "fixture_id": "synthetic_incremental_sequence_r10b_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "official_format_status": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "base_evidence": {
+    "r10a_root_manifest": "docs/investigations/r10a/run_v1/root_run_manifest.json",
+    "r10a_source_commit": "d9d3922677ba024b9524c94309942aa205bd81f6"
+  },
+  "schemas": {
+    "synthetic_bar_raw_v1": {
+      "output": "synthetic_incremental_bar_v1",
+      "optional": []
+    },
+    "synthetic_bar_raw_v1_1": {
+      "output": "synthetic_incremental_bar_v2",
+      "optional": ["trade_count"]
+    }
+  },
+  "cutoffs": [
+    "2020-01-10T12:30:00Z",
+    "2020-01-20T12:30:00Z",
+    "2020-02-10T12:30:00Z"
+  ],
+  "stages": [
+    {"id": "initial", "kind": "INITIAL_HISTORY", "state": "SUPPORTED"},
+    {"id": "new_session", "kind": "APPEND_SESSION", "state": "SUPPORTED"},
+    {"id": "late_session", "kind": "LATE_ARRIVAL", "state": "SUPPORTED"},
+    {"id": "old_price_correction", "kind": "PRICE_CORRECTION", "state": "SUPPORTED"},
+    {"id": "universe_correction", "kind": "UNIVERSE_INPUT_CORRECTION", "state": "SUPPORTED"},
+    {"id": "feature_correction", "kind": "FEATURE_INPUT_CORRECTION", "state": "SUPPORTED"},
+    {"id": "outcome_correction", "kind": "OUTCOME_INPUT_CORRECTION", "state": "SUPPORTED"},
+    {"id": "new_listing", "kind": "IDENTITY_NEW_LISTING", "state": "SUPPORTED"},
+    {"id": "rename", "kind": "IDENTITY_ALIAS_UPDATE", "state": "SUPPORTED"},
+    {"id": "terminal_update", "kind": "TERMINAL_UPDATE", "state": "SUPPORTED"},
+    {"id": "benchmark_correction", "kind": "BENCHMARK_CORRECTION", "state": "SUPPORTED"},
+    {"id": "duplicate_retrieval", "kind": "IDENTICAL_RETRIEVAL", "state": "IDEMPOTENT"},
+    {"id": "identity_conflict", "kind": "SOURCE_IDENTITY_CONFLICT", "state": "BLOCKED"},
+    {"id": "malformed", "kind": "MALFORMED_OBJECT", "state": "QUARANTINED"},
+    {"id": "additive_schema", "kind": "ADDITIVE_SCHEMA_CHANGE", "state": "SUPPORTED"},
+    {"id": "breaking_schema", "kind": "BREAKING_SCHEMA_CHANGE", "state": "QUARANTINED"}
+  ],
+  "expected": {
+    "supported_stage_count": 11,
+    "idempotent_stage_count": 1,
+    "blocked_stage_count": 1,
+    "quarantined_stage_count": 2,
+    "incremental_clean_equivalence": true,
+    "pre_availability_snapshot_preserved": true,
+    "r10a_evidence_preserved": true
+  }
+}

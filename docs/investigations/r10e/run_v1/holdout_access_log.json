@@ -1,0 +1,7 @@
+[
+  {
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "holdout_id": "disposable_r10e_holdout_v1",
+    "purpose": "DECLARED_SYNTHETIC_TEST_PATH"
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "above_range_score": 100.0,
+  "below_range_score": 0.0,
+  "coefficients": [
+    1.0810810810810805,
+    0.7589101673204326,
+    0.6461363363243615,
+    0.05981696010208773
+  ],
+  "combination_validation_mse": 6.47150979912999e-31,
+  "confidence": {
+    "confidence": "LOW",
+    "effective_sample_size": 25,
+    "limiting_factors": [
+      "SMALL_EFFECTIVE_SAMPLE",
+      "WIDE_UNCERTAINTY_INTERVAL",
+      "NARROW_SYNTHETIC_COVERAGE",
+      "MULTIPLE_TESTING_BURDEN"
+    ],
+    "uncertainty_interval_width": 1.4
+  },
+  "dropped_redundant": [
+    "momentum_redundant"
+  ],
+  "expected_outcome": {
+    "calibration_method": "neighbor_calibration_v1",
+    "effective_sample_size": 5,
+    "expected_outcome": 1.8,
+    "expected_outcome_band": [
+      1.4129310139006228,
+      2.1870689860993773
+    ],
+    "expected_outcome_units": "SYNTHETIC_OUTCOME_UNITS",
+    "positive_outcome_probability": 1.0,
+    "probability_definition": "P(SYNTHETIC_OUTCOME>0)_TRAINING_NEIGHBORS",
+    "sample_size": 5,
+    "state": "AVAILABLE"
+  },
+  "holm": {
+    "borderline": {
+      "method": "HOLM_V1",
+      "p_value": 0.02,
+      "reject": true,
+      "threshold": 0.025
+    },
+    "null": {
+      "method": "HOLM_V1",
+      "p_value": 0.5,
+      "reject": false,
+      "threshold": 0.05
+    },
+    "strong": {
+      "method": "HOLM_V1",
+      "p_value": 0.005,
+      "reject": true,
+      "threshold": 0.016666666666666666
+    }
+  },
+  "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+  "mean_reversion_orientation": -2.55,
+  "naive_validation_mse": 14.811391300000002,
+  "retained_components": [
+    "momentum_12_1",
+    "short_trend",
+    "mean_reversion",
+    "deterministic_noise"
+  ],
+  "snapshot": {
+    "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+    "component_evidence": [
+      {
+        "effective_sample_size": 79,
+        "feature_id": "momentum_12_1",
+        "mean_synthetic_outcome": 1.649367088607595,
+        "missing_or_unresolved": 1,
+        "rank_ic": 0.9993122969663214,
+        "sample_size": 79
+      },
+      {
+        "effective_sample_size": 79,
+        "feature_id": "deterministic_noise",
+        "mean_synthetic_outcome": 1.649367088607595,
+        "missing_or_unresolved": 1,
+        "rank_ic": 0.01224679776741074,
+        "sample_size": 79
+      }
+    ],
+    "confidence": "LOW",
+    "decision": "NO_DECISION",
+    "decision_instant": "2020-02-14 00:00:00+00:00",
+    "expected_outcome": 1.8,
+    "expected_outcome_band": [
+      1.4129310139006228,
+      2.1870689860993773
+    ],
+    "freshness": "SYNTHETIC_CURRENT",
+    "horizon_sessions": 21,
+    "instrument_id": "SYN_E_00",
+    "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+    "limiting_factors": [
+      "SMALL_EFFECTIVE_SAMPLE",
+      "WIDE_UNCERTAINTY_INTERVAL",
+      "NARROW_SYNTHETIC_COVERAGE",
+      "MULTIPLE_TESTING_BURDEN"
+    ],
+    "positive_outcome_probability": 1.0,
+    "provenance": [
+      "synthetic_multi_feature_family_r10e_v1"
+    ],
+    "raw_prediction": -2.96,
+    "risks": [
+      "ENGINEERING_ORACLE",
+      "NO_MARKET_INTERPRETATION"
+    ],
+    "sample_size": 5,
+    "score_0_100": 15.0,
+    "score_definition": "Training-population oriented percentile; not probability, return, confidence or recommendation"
+  },
+  "tie_score_for_2": 40.0
+}

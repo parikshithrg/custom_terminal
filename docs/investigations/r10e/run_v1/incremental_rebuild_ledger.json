@@ -1,0 +1,1472 @@
+[
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "calibration",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "combination",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "component_metrics",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "economic",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "feature_matrix",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "feature_post",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "feature_pre",
+    "reason": "DIRECT_feature_input_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "fold_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "fold_pre",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "outcome_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "outcome_pre",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "portfolio",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "prediction_post",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "prediction_pre",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "score_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "historical_feature_input",
+    "node_id": "validation",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "calibration",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "combination",
+    "reason": "DIRECT_feature_definition_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "component_metrics",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "feature_matrix",
+    "reason": "DIRECT_feature_definition_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "score_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "feature_definition",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "calibration",
+    "reason": "DIRECT_calibration_population_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "combination",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "component_metrics",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "feature_matrix",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "score_snapshot",
+    "reason": "DIRECT_calibration_population_CHANGE_AVAILABLE_2020-01-10T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calibration_population",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "calibration",
+    "reason": "DIRECT_outcome_CHANGE_AVAILABLE_2020-01-24T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "combination",
+    "reason": "DIRECT_outcome_CHANGE_AVAILABLE_2020-01-24T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "component_metrics",
+    "reason": "DIRECT_outcome_CHANGE_AVAILABLE_2020-01-24T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "feature_matrix",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "score_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "outcome_correction",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "calibration",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "combination",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "component_metrics",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "family_ledger",
+    "reason": "DIRECT_multiple_testing_family_CHANGE_AVAILABLE_2020-02-01T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "feature_matrix",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "lifecycle",
+    "reason": "DIRECT_multiple_testing_family_CHANGE_AVAILABLE_2020-02-01T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "score_snapshot",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "multiple_testing_family",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "calendar_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "calibration",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "combination",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "component_metrics",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "confidence",
+    "reason": "DIRECT_confidence_policy_CHANGE_AVAILABLE_2020-02-01T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "evidence_snapshot",
+    "reason": "DIRECT_confidence_policy_CHANGE_AVAILABLE_2020-02-01T00:00:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "feature_matrix",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "score_snapshot",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "session_folds",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "session_outcomes",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "confidence_policy",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "calendar_post",
+    "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-01-10T04:30:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "calendar_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "calibration",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "combination",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "component_metrics",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "confidence",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "economic",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "evidence_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "family_ledger",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "feature_matrix",
+    "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-01-10T04:30:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "feature_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "feature_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "fold_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "fold_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "identity_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "identity_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "lifecycle",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "normalized_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "normalized_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "outcome_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "outcome_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "portfolio",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "prediction_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "prediction_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "raw_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "raw_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "score_snapshot",
+    "reason": "UPSTREAM_DEPENDENCY_CHANGED",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "session_folds",
+    "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-01-10T04:30:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "session_outcomes",
+    "reason": "DIRECT_calendar_CHANGE_AVAILABLE_2020-01-10T04:30:00+00:00",
+    "state": "REBUILT_INPUT_CHANGED"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "settlement",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "snapshot_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "snapshot_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "universe_post",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "universe_pre",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  },
+  {
+    "change_id": "calendar_revision",
+    "node_id": "validation",
+    "reason": "NO_CAUSAL_DEPENDENCY_INTERSECTION",
+    "state": "REUSED_HASH_IDENTICAL"
+  }
+]

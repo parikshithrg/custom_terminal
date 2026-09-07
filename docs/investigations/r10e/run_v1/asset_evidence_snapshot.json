@@ -1,0 +1,51 @@
+{
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "component_evidence": [
+    {
+      "effective_sample_size": 79,
+      "feature_id": "momentum_12_1",
+      "mean_synthetic_outcome": 1.649367088607595,
+      "missing_or_unresolved": 1,
+      "rank_ic": 0.9993122969663214,
+      "sample_size": 79
+    },
+    {
+      "effective_sample_size": 79,
+      "feature_id": "deterministic_noise",
+      "mean_synthetic_outcome": 1.649367088607595,
+      "missing_or_unresolved": 1,
+      "rank_ic": 0.01224679776741074,
+      "sample_size": 79
+    }
+  ],
+  "confidence": "LOW",
+  "decision": "NO_DECISION",
+  "decision_instant": "2020-02-14 00:00:00+00:00",
+  "expected_outcome": 1.8,
+  "expected_outcome_band": [
+    1.4129310139006228,
+    2.1870689860993773
+  ],
+  "freshness": "SYNTHETIC_CURRENT",
+  "horizon_sessions": 21,
+  "instrument_id": "SYN_E_00",
+  "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+  "limiting_factors": [
+    "SMALL_EFFECTIVE_SAMPLE",
+    "WIDE_UNCERTAINTY_INTERVAL",
+    "NARROW_SYNTHETIC_COVERAGE",
+    "MULTIPLE_TESTING_BURDEN"
+  ],
+  "positive_outcome_probability": 1.0,
+  "provenance": [
+    "synthetic_multi_feature_family_r10e_v1"
+  ],
+  "raw_prediction": -2.96,
+  "risks": [
+    "ENGINEERING_ORACLE",
+    "NO_MARKET_INTERPRETATION"
+  ],
+  "sample_size": 5,
+  "score_0_100": 15.0,
+  "score_definition": "Training-population oriented percentile; not probability, return, confidence or recommendation"
+}

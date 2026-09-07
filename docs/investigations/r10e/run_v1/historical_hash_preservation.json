@@ -1,0 +1,9 @@
+{
+  "calendar_revision": true,
+  "calibration_population": true,
+  "confidence_policy": true,
+  "feature_definition": true,
+  "historical_feature_input": true,
+  "multiple_testing_family": true,
+  "outcome_correction": true
+}

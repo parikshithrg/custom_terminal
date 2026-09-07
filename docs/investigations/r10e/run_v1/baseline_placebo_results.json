@@ -1,0 +1,9 @@
+{
+  "combination_mse": 6.47150979912999e-31,
+  "constant_mse": 36.3413,
+  "fixed_permutation_correlation": -0.19661181120947707,
+  "naive_equal_weight_mse": 14.811391300000002,
+  "seed": 42,
+  "sign_reversed_rank_correlation": -0.9954887218045112,
+  "strongest_component_rank_correlation": 0.9954887218045112
+}

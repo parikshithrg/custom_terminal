@@ -1,0 +1,29 @@
+{
+  "coefficients": [
+    1.0810810810810805,
+    0.7589101673204326,
+    0.6461363363243615,
+    0.05981696010208773
+  ],
+  "component_ids": [
+    "momentum_12_1",
+    "short_trend",
+    "mean_reversion",
+    "deterministic_noise",
+    "momentum_redundant"
+  ],
+  "dropped_redundant": [
+    "momentum_redundant"
+  ],
+  "intercept": -5.443393024822989e-16,
+  "missing_policy": "REJECT_ROW",
+  "retained_ids": [
+    "momentum_12_1",
+    "short_trend",
+    "mean_reversion",
+    "deterministic_noise"
+  ],
+  "training_cutoff": "2020-02-07 00:00:00+00:00",
+  "training_hash": "cc44a12fdf7ce33f5b7cab83284a976a1ec1e9deee55c08cc9f13f94daa487d8",
+  "version": "synthetic_linear_combination_v1"
+}

@@ -1,0 +1,10 @@
+{
+  "fitted_through": "2020-02-07 00:00:00+00:00",
+  "lower": -39.0,
+  "mean": 6.072083333333333,
+  "scale": 28.229702181267438,
+  "training_hash": "e9ee0c6274064b2f8f63d5bf119679af6436b028b160b62685314dabd29e7003",
+  "training_row_count": 60,
+  "transform_version": "winsor_zscore_training_only_v1",
+  "upper": 48.274999999999984
+}

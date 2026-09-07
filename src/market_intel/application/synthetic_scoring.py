@@ -286,7 +286,8 @@ def scoring_changes() -> dict[str, Change]:
 def _write_json(path: Path, value: object) -> str:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name("." + path.name + ".tmp")
-    temporary.write_text(json.dumps(value, sort_keys=True, indent=2, default=str) + "\n", encoding="utf-8")
+    temporary.write_text(json.dumps(value, sort_keys=True, indent=2, default=str,
+                                    allow_nan=False) + "\n", encoding="utf-8")
     os.replace(temporary, path)
     return sha256_file(path)
 
@@ -350,7 +351,9 @@ def run_scoring_evidence(*, recipe_path: Path, output_dir: Path,
         validation = oracle[oracle.is_validation].copy()
         baseline = {
             "constant_mse": float(np.mean((validation.synthetic_outcome - oracle.loc[train, "synthetic_outcome"].mean()) ** 2)),
-            "fixed_permutation_correlation": float(pd.Series(rng.permutation(validation.momentum_12_1)).corr(validation.synthetic_outcome)),
+            "fixed_permutation_correlation": float(np.corrcoef(
+                rng.permutation(validation.momentum_12_1.to_numpy()),
+                validation.synthetic_outcome.to_numpy())[0, 1]),
             "sign_reversed_rank_correlation": float((-validation.momentum_12_1).corr(validation.synthetic_outcome, method="spearman")),
             "strongest_component_rank_correlation": float(validation.momentum_12_1.corr(validation.synthetic_outcome, method="spearman")),
             "naive_equal_weight_mse": answers["naive_validation_mse"],

@@ -365,6 +365,11 @@ def run_incremental_evidence(*, recipe_path: Path, output_dir: Path,
             ledger.extend({"stage_id": stage_id, **item} for item in decisions)
             graph = incremental
 
+        # Empty staging parents are operational debris, not evidence.
+        store.cleanup_staging()
+        for staging_path in sorted(output_dir.rglob(".staging"), reverse=True):
+            if staging_path.is_dir():
+                shutil.rmtree(staging_path)
         schema_contracts = [asdict(contract) for contract in registry.contracts()]
         graph_json = lambda value: [asdict(value.nodes[key]) for key in sorted(value.nodes)]
         artifact_hashes = {

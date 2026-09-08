@@ -1606,7 +1606,7 @@
       "permitted_operating_mode": "EXISTING_GOVERNANCE_CLASSIFICATION_ONLY",
       "real_or_private_data_eligibility": "AS_GOVERNED_BY_EXISTING_CLASSIFICATION",
       "research_computation": "SYNTHETIC_ENGINEERING_ONLY",
-      "source_sha256": "4d0df4098d46d38a470e4512d3cedc1ab1c2b6eaf396e7d7b248ffad159ca551",
+      "source_sha256": "20130ddceec5f66180afe8c7a5b6f7f760455dc9f615ba83338f631802a1d04d",
       "sqlite_capability": "YES"
     },
     {

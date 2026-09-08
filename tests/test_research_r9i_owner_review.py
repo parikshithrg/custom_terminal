@@ -32,10 +32,13 @@ def test_review_gate_is_scope_limited_and_never_execution_permission(scope):
         'external_repository_bindings')}
     reference.update(review_record_path=record['record_path'], covered_scope=scope)
     pre = {'proposed_research_scope': scope, 'pre_research_review': reference}
-    if scope == 'PRODUCTION_AUDIT':
-        with pytest.raises(PreResearchReviewError):
-            validate_review_record(record, preregistration=pre, repository_root=ROOT, policy=policy)
-    else:
-        result = validate_review_record(record, preregistration=pre, repository_root=ROOT, policy=policy)
-        assert result['report_gate_satisfied'] is True
-        assert result['research_execution_authorized'] is False
+    # An authentic historical review is not current authority for either its
+    # former synthetic scope or a newly proposed production scope.
+    with pytest.raises(PreResearchReviewError):
+        validate_review_record(record, preregistration=pre, repository_root=ROOT, policy=policy)
+    checkpoint = json.loads((ROOT / 'docs/project_status/research_fingerprint_reconciliation_r10i_v1.json').read_text())
+    row = next(x for x in checkpoint['historical_reviews'] if x['record_path'].endswith('review_record_v5.json'))
+    assert row['reviewed_fingerprint'] == record['research_state_fingerprint']
+    assert row['review_scope'] == record['covered_future_scope']
+    assert row['current_scope_status'] == 'HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE'
+    assert checkpoint['authority']['historical_scope_expansion'] is False

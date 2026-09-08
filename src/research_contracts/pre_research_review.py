@@ -90,6 +90,35 @@ def research_state_inventory(
 def compute_research_state_fingerprint(
     repository_root: str | Path, policy: Mapping[str, Any]
 ) -> dict[str, Any]:
+    root = Path(repository_root).resolve()
+    # Policy v1 is a historical review policy.  Once the explicit v2 forward
+    # policy exists, root-level v1 calls resolve to its sealed reviewed-era
+    # checkpoint rather than pretending later scope was part of that review.
+    # Temporary/legacy repositories without v2 retain the original calculation.
+    if policy.get("policy_version") == PRE_RESEARCH_POLICY_VERSION:
+        forward_path = root / "specs" / "pre_research_review_policy_v2.json"
+        if forward_path.is_file():
+            forward = _load_object(forward_path, "forward pre-research policy")
+            base = forward.get("base_policy", {})
+            projection = forward.get("legacy_v1_projection", {})
+            policy_path = root / "specs" / "pre_research_review_policy_v1.json"
+            if (
+                base.get("path") == "specs/pre_research_review_policy_v1.json"
+                and policy_path.is_file()
+                and base.get("sha256") == sha256_file(policy_path)
+                and projection.get("sha256")
+                and projection.get("file_count")
+            ):
+                return {
+                    "algorithm": "sealed_historical_checkpoint_reference_v1",
+                    "sha256": projection["sha256"],
+                    "file_count": projection["file_count"],
+                    "inventory": [],
+                    "inventory_available": False,
+                    "scope_status": "HISTORICAL_POLICY_PROJECTION",
+                    "current_policy_required": "pre_research_review_policy_v2",
+                    "evidence_bindings": projection.get("evidence_bindings", []),
+                }
     inventory = research_state_inventory(repository_root, policy)
     return {
         "algorithm": "sha256_canonical_inventory_v1",
@@ -133,6 +162,10 @@ def validate_review_record(
             raise PreResearchReviewError(f"{label} hash mismatch or missing file")
 
     current = compute_research_state_fingerprint(root, policy)
+    if current.get("scope_status") == "HISTORICAL_POLICY_PROJECTION":
+        raise PreResearchReviewError(
+            "historical fingerprint policy cannot authorize current repository scope"
+        )
     if record.get("research_state_fingerprint") != current["sha256"]:
         raise PreResearchReviewError("research-state fingerprint changed; report is stale")
 

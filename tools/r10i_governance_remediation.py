@@ -125,6 +125,17 @@ def build_policy_v2(root: Path) -> dict[str, Any]:
         "statuses": ["CURRENT_FOR_DECLARED_SCOPE", "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE", "INVALID"],
         "rule": "Historical authenticity and present-scope currency are separate; no historical scope expands implicitly.",
     }
+    policy["legacy_v1_projection"] = {
+        "sha256": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+        "file_count": 252,
+        "inventory_available": False,
+        "reason": "Sealed reviewed-era compatibility projection; current scope must use policy v2.",
+        "evidence_bindings": [
+            {"path": "docs/project_status/pre_research_generation_manifest_v5.json", "sha256": "8f4b1da6cec5db38001e71f988c52809c6968d8f3a934592b637d98110209dd5"},
+            {"path": "docs/project_status/pre_research_generation_manifest_v6.json", "sha256": "941e74bd0df3f46833b395a32aaa2702fd92ce406ea2697cb57e87212ad89dd7"},
+            {"path": "docs/project_status/pre_research_generation_manifest_v7.json", "sha256": "8651a76f94ec1fbbb1fa53149d4ca70d9375d80e0fa7d0ea47e0de975952d430"},
+        ],
+    }
     return policy
 
 

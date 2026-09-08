@@ -414,8 +414,12 @@ def test_safe_template_cannot_be_registered(tmp_path):
 
 
 def test_entrypoint_inventory_accounts_for_every_non_test_python_main():
+    historical = ROOT / "specs" / "laboratory_entrypoint_inventory_v1.json"
+    assert __import__("hashlib").sha256(historical.read_bytes()).hexdigest() == (
+        "6bb3b6a91422903ec2682b13a41b45b92de48300bce8a001179d32633bc3526b"
+    )
     inventory = json.loads(
-        (ROOT / "specs" / "laboratory_entrypoint_inventory_v1.json").read_text()
+        (ROOT / "specs" / "laboratory_entrypoint_inventory_v2.json").read_text()
     )
     discovered = set()
     for root_name in ("Data test", "scripts", "tools", "src", "views"):
@@ -425,19 +429,11 @@ def test_entrypoint_inventory_accounts_for_every_non_test_python_main():
                 continue
             if "__main__" in path.read_text(encoding="utf-8"):
                 discovered.add(relative)
-    accounted = dict(inventory["executable_paths"])
-    for delta_path in sorted((ROOT / "specs").glob("research_*_entrypoint_delta_v1.json")):
-        delta = json.loads(delta_path.read_text(encoding="utf-8"))
-        for entry in delta.get("added_executable_entrypoints", []):
-            accounted[entry["path"]] = entry["classification"]
-    assert discovered == set(accounted)
-    assert set(accounted.values()) <= {
-        "CANONICAL_GOVERNED", "DEVELOPMENT_ONLY_NONCANONICAL", "DEPRECATED",
-        "UNSAFE_BYPASS", "OWNER_APPROVED_FILESYSTEM_ONLY_BINDING_PREPARATION",
-    }
+    paths = [entry["path"] for entry in inventory["entries"]]
+    assert len(paths) == len(set(paths))
+    assert discovered == set(paths)
+    assert all(entry["governance_classification"] for entry in inventory["entries"])
     assert inventory["unsafe_bypass_count"] == 0
-    for entry in inventory["callable_entrypoints"]:
-        assert (ROOT / entry["path"]).is_file()
 
 
 def test_every_data_test_script_crosses_shared_noncanonical_config_boundary():

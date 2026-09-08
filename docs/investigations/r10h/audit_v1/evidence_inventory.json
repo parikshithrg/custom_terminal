@@ -1,0 +1,369 @@
+{
+  "chain_reconciliation": [
+    {
+      "classification_preserved": true,
+      "milestone": "R.10A",
+      "predecessors": [],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10B",
+      "predecessors": [],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10C",
+      "predecessors": [],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10D",
+      "predecessors": [],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10E",
+      "predecessors": [],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10F",
+      "predecessors": [
+        {
+          "expected_root_byte_sha256": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+          "predecessor": "R.10A",
+          "referenced_sha256": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+          "predecessor": "R.10B",
+          "referenced_sha256": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+          "predecessor": "R.10C",
+          "referenced_sha256": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+          "predecessor": "R.10D",
+          "referenced_sha256": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+          "predecessor": "R.10E",
+          "referenced_sha256": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+          "status": "PASS"
+        }
+      ],
+      "promotion_remains_false": true
+    },
+    {
+      "classification_preserved": true,
+      "milestone": "R.10G",
+      "predecessors": [
+        {
+          "expected_root_byte_sha256": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+          "predecessor": "R.10A",
+          "referenced_sha256": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+          "predecessor": "R.10B",
+          "referenced_sha256": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+          "predecessor": "R.10C",
+          "referenced_sha256": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+          "predecessor": "R.10D",
+          "referenced_sha256": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+          "predecessor": "R.10E",
+          "referenced_sha256": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+          "status": "PASS"
+        },
+        {
+          "expected_root_byte_sha256": "7eba19c2a2cbd16bd6ff66f7435813135bcb4cb3ae287117c78187d6ac4b1955",
+          "predecessor": "R.10F",
+          "referenced_sha256": "7eba19c2a2cbd16bd6ff66f7435813135bcb4cb3ae287117c78187d6ac4b1955",
+          "status": "PASS"
+        }
+      ],
+      "promotion_remains_false": true
+    }
+  ],
+  "classification": "AUDIT_ONLY_NO_REAL_DATA",
+  "hash_semantics": {
+    "byte_hash": "SHA-256 of exact stored bytes",
+    "logical_table_hash": "Canonical data/schema identity independent of Parquet container bytes",
+    "reproducible_core_hash": "Deterministic manifest core excluding its self-derived field",
+    "research_state_fingerprint": "Governance inventory identity; not an evidence-root or artifact byte hash",
+    "source_tree_hash": "Declared source-file set identity at implementation checkpoint"
+  },
+  "milestones": [
+    {
+      "artifact_count": 27,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "R.10A predates the clean-start protocol and records a dirty worktree fingerprint",
+      "clean_execution_start": false,
+      "entrypoint": null,
+      "entrypoint_sha256": null,
+      "entrypoint_verification": "NOT_RECORDED_IN_R10A_ROOT",
+      "environment_hash": "60db0d4ac175ce4d02d54af7b7b9e25241b5a7c1062c0f96ff393206ebd3f19d",
+      "environment_hash_kind": "ENVIRONMENT_LOCK_BYTE_HASH",
+      "evidence_commit": "d9d3922677ba024b9524c94309942aa205bd81f6",
+      "fixture_recipe": "specs/synthetic_research_fixture_r10a_v1.json",
+      "implementation_checkpoint": "17f317187b00b489e3eda52ddcfe4ac48cdef2cd",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness",
+        "Dirty-start evidence is bound but is weaker than later clean-checkpoint evidence",
+        "Root manifest has no entrypoint hash"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10A",
+      "promotion_eligible": false,
+      "references": {},
+      "reproducible_core_sha256": "a6ceb6c41fde01e0173be3b0484380eec8801fa27d6100339de1df39f35ef3e1",
+      "root_manifest": "docs/investigations/r10a/run_v1/root_run_manifest.json",
+      "root_manifest_byte_sha256": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+      "source_tree_sha256": "3bd567230e3c339adce8e4c41490e329c4dea7ee8fc7621c7a213aaa968eaeb9",
+      "source_tree_verification": "BOUND_DIRTY_STATE_NOT_RECONSTRUCTIBLE_FROM_COMMIT"
+    },
+    {
+      "artifact_count": 61,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10b_generate_evidence.py",
+      "entrypoint_sha256": "68d023fbb2c2ca95e9d70f4839093e3623c03a9fded8860459f7c2820bca54de",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "add9e307cbc22281edd349036fcf08b55ad314ea",
+      "fixture_recipe": "specs/synthetic_incremental_sequence_r10b_v1.json",
+      "implementation_checkpoint": "2ccbc4844e4c2156595c5097dde6c80ecb7c42b0",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10B",
+      "promotion_eligible": false,
+      "references": {},
+      "reproducible_core_sha256": "396a0cd0c14fe3c0c5bdf6b19e99d94a12d635e8982565541ae7cef69aa20ad0",
+      "root_manifest": "docs/investigations/r10b/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+      "source_tree_sha256": "5e1d99c7dc976073841c3fcdeef2502b44e52d64db9c785e82cafd0af850692e",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    },
+    {
+      "artifact_count": 27,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10c_generate_evidence.py",
+      "entrypoint_sha256": "68f8ebf024ada46bc4b243929707845129c47911f836cc18d5b8311c8ce1dc63",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "eeb7d90695a4d44d4ad6ec23152b84f071f27c90",
+      "fixture_recipe": "specs/synthetic_security_events_r10c_v1.json",
+      "implementation_checkpoint": "9737868493649b9c1484f460ebe32ab32dc6158d",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10C",
+      "promotion_eligible": false,
+      "references": {
+        "r10a_root_manifest": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+        "r10b_root_manifest": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2"
+      },
+      "reproducible_core_sha256": "2f64ff756ab04c9e9c167e71f0961a5483d79f65f2b756685b307c8c70e62f30",
+      "root_manifest": "docs/investigations/r10c/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+      "source_tree_sha256": "8182392279fc5ef3f6f57b4f09e531157d6fb1d837ffebf04225ac6c3a900386",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    },
+    {
+      "artifact_count": 11,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10d_generate_evidence.py",
+      "entrypoint_sha256": "4c4fdcf36b60c6a6d49b533dab68346ce6f8bcb47077ad6c60a53f670c52c952",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "3410586f7cf3dc0e9b4270f7c01127fc2c4822f5e1f814a402f6da6d077a261d",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "1968b3369bc6630026a77918139a3c4b75790b98",
+      "fixture_recipe": "specs/synthetic_exchange_calendar_r10d_v1.json",
+      "implementation_checkpoint": "447bf403fd4eb19b5d72b1cc2db9a7b1c7aa6698",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10D",
+      "promotion_eligible": false,
+      "references": {
+        "golden_expected": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+        "momentum_spec": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+        "r10a_root": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+        "r10b_root": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+        "r10c_root": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6"
+      },
+      "reproducible_core_sha256": "464d0bc5495396db08f21593d084a3bb9a4acbeb23cfc9722e34e6ad985494f3",
+      "root_manifest": "docs/investigations/r10d/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+      "source_tree_sha256": "72805365ac6377b5112cec0b41f8ba04dc9b5cafecc5f172fce544ae8f0db9d6",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    },
+    {
+      "artifact_count": 20,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10e_generate_evidence.py",
+      "entrypoint_sha256": "4e15b8c38c1b8eedd16c21283b1387634aadb80283615e2aef6c256e8fcc38dc",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "c4124431df2370f43a8d3aa4f51578cb0742aa042adb91b06c145afe93ba7484",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "b1e784deba7a3b066e61c2023dda95c6bcb53889",
+      "fixture_recipe": "specs/synthetic_multi_feature_score_r10e_v1.json",
+      "implementation_checkpoint": "5febba77436ea577db5bc53ecd21fe0c742a134d",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10E",
+      "promotion_eligible": false,
+      "references": {
+        "golden_expected": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+        "momentum_spec": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+        "r10a_root": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+        "r10b_root": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+        "r10c_root": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+        "r10d_root": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75"
+      },
+      "reproducible_core_sha256": "fc316b5b4039cb16c141c2e3f4193119b0b93440eb91292d394dfaa2b8bb7cab",
+      "root_manifest": "docs/investigations/r10e/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+      "source_tree_sha256": "2ee02f3253062e26ff19d97c21b4b5b5ad6e9ea8648df9375ebdb22ed50c6902",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    },
+    {
+      "artifact_count": 48,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10f_generate_evidence.py",
+      "entrypoint_sha256": "17152b80131532e1b062b2953dfe029befbf044c12c8f972824de22c619fb370",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "034e47abb3959f7abd66d7fe8a0fafb9bb7daea1c73405a03d7658f1d1b3db95",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "72da23cf4b9f14df8007e9967ea64171bf85261e",
+      "fixture_recipe": "SOURCE_DEFINED_FIXTURE_NO_SEPARATE_RECIPE",
+      "implementation_checkpoint": "42a938c50ea013dcb1d3971e4f61162fc5148ac9",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness",
+        "No separate fixture recipe; construction is source-defined"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10F",
+      "promotion_eligible": false,
+      "references": {
+        "golden": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+        "momentum": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+        "r10a": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+        "r10b": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+        "r10c": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+        "r10d": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+        "r10e": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3"
+      },
+      "reproducible_core_sha256": "0f5faaa2137eb4b90fe11867fa1241e5ef601766648d545850ffb09625a8bb62",
+      "root_manifest": "docs/investigations/r10f/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "7eba19c2a2cbd16bd6ff66f7435813135bcb4cb3ae287117c78187d6ac4b1955",
+      "source_tree_sha256": "10b66d118aa13407dd445bbd9d22d9d0ab39c5cc3188ee79f083038ae3bf666e",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    },
+    {
+      "artifact_count": 14,
+      "artifact_hash_verification": "PASS",
+      "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+      "clean_execution_note": "Exact clean implementation checkpoint recorded",
+      "clean_execution_start": true,
+      "entrypoint": "tools/r10g_generate_evidence.py",
+      "entrypoint_sha256": "7102005eecd00da0256e218c57b53f89d2cf6af0008cae990a192a42537187bb",
+      "entrypoint_verification": "PASS_HISTORICAL_COMMIT_BLOB",
+      "environment_hash": "1609270214fea964b6499cefbc900bb5f86d37dc561622d833b2a94d60ce9309",
+      "environment_hash_kind": "CANONICAL_ENVIRONMENT_HASH",
+      "evidence_commit": "5bca5b7fb39f09a7edcc6af96b945ba8b88d33f2",
+      "fixture_recipe": "SOURCE_DEFINED_FIXTURE_NO_SEPARATE_RECIPE",
+      "implementation_checkpoint": "803029792cfae66f59ec090b97586cd29f842963",
+      "known_limitations": [
+        "Synthetic/noncanonical evidence does not establish real-data or economic fitness",
+        "No separate fixture recipe; construction is source-defined"
+      ],
+      "lifecycle": "SYNTHETIC_VALIDATED_NONCANONICAL",
+      "milestone": "R.10G",
+      "promotion_eligible": false,
+      "references": {
+        "golden": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+        "momentum": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+        "r10a": "ec24fe04c895255e07433dde3068c7685b36a225a547fc749ce126d890f35580",
+        "r10b": "316ced19c3d196aea0b0a404e51dbad3f3b0f732704cbd8d9813166244efabb2",
+        "r10c": "bf5722abab22ca1920186a7ff2572c8095d1cb75fbd442ed00e5f8dbd0893ce6",
+        "r10d": "2f9ca92b086625d10904475254f17fe2cae135d7488d99e40738a05b618fca75",
+        "r10e": "a48915801d99c8eca7559079c597d9157e3b3699d5a5cf0759f6a4e01aabd7b3",
+        "r10f": "7eba19c2a2cbd16bd6ff66f7435813135bcb4cb3ae287117c78187d6ac4b1955"
+      },
+      "reproducible_core_sha256": "c1879d3862472146e303514c8fbdbdd72911a9f98ccc679f4fee1be207eda1cb",
+      "root_manifest": "docs/investigations/r10g/run_v1/root_manifest.json",
+      "root_manifest_byte_sha256": "97694fea900ab206a7963866c43a70961ef1f9df182023951985d5cb41ec0854",
+      "source_tree_sha256": "c5bb5fe7b89a764cfcacf05831fd7152f21f051ee998a96a7fb694c4d5123409",
+      "source_tree_verification": "PASS_HISTORICAL_COMMIT_RECALCULATION"
+    }
+  ],
+  "protected_inputs": {
+    "external_decision": "NO_DECISION",
+    "golden_expected": {
+      "path": "tests/fixtures/momentum_golden_v1/expected.json",
+      "sha256": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f"
+    },
+    "holdout": "UNCONSUMED_SYNTHETIC_HOLDOUT",
+    "momentum_spec": {
+      "path": "specs/momentum_12_1_v1.json",
+      "sha256": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5"
+    }
+  },
+  "schema_version": "r10h_evidence_inventory_v1",
+  "verification": {
+    "artifact_hashes_failed": 0,
+    "artifact_hashes_passed": 208,
+    "parquet_objects_readable": 34,
+    "predecessor_mismatches": 0
+  }
+}

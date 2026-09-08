@@ -1,0 +1,125 @@
+{
+  "requirements": [
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "src/market_intel",
+      "finding": "R.10A-G exercise shared packages; portfolio/evidence contracts have limited sibling coupling",
+      "requirement": "local_modular_monolith"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "src/market_intel/application/synthetic_*.py",
+      "finding": "Foundation has no application dependency; portfolio policy imports evidence DTOs",
+      "requirement": "dependency_direction"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/investigations/r10a/run_v1",
+      "finding": "Typed Parquet facts and dataset-specific contracts",
+      "requirement": "typed_dataset_storage"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "src/market_intel/foundation/contracts.py",
+      "finding": "As-of requests, publication and availability times are tested",
+      "requirement": "temporal_provenance_envelope"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "docs/investigations/r10c/run_v1",
+      "finding": "Synthetic aliases/events prove mechanics; authoritative real identity coverage is blocked",
+      "requirement": "stable_security_identity"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "tests/test_research_r10a_evidence.py",
+      "finding": "Later vintages and cutoff leakage are challenged",
+      "requirement": "point_in_time_availability"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/investigations/r10a/run_v1",
+      "finding": "Definitions and dataset versions are manifest-bound",
+      "requirement": "versioned_universe_feature_outcome"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "docs/investigations/r10d/run_v1",
+      "finding": "Known-answer synthetic calendar, not official exchange history",
+      "requirement": "calendar_aware_execution"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "src/market_intel/research/folds.py",
+      "finding": "Overlap and embargo constraints have deterministic tests",
+      "requirement": "purge_and_embargo"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/investigations/r10a/run_v1",
+      "finding": "Prediction, economic and portfolio evidence are separated",
+      "requirement": "three_result_layers"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "docs/investigations/r10e/run_v1",
+      "finding": "Training-only transforms/calibration demonstrated on a formulaic oracle",
+      "requirement": "score_semantics"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "docs/investigations/r10e/run_v1",
+      "finding": "Confidence is separate and synthetic only",
+      "requirement": "confidence_semantics"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/investigations/r10e/run_v1",
+      "finding": "Attempt ledger and multiplicity correction are explicit",
+      "requirement": "multiple_testing_ledger"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/investigations/r10f/run_v1",
+      "finding": "Manifest-bound immutable bundle and read model",
+      "requirement": "immutable_publication"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "src/market_intel/application/synthetic_publication.py",
+      "finding": "Facade maps evidence without score recalculation; no production UI integration",
+      "requirement": "thin_read_only_application"
+    },
+    {
+      "classification": "DEMONSTRATED_WITH_LIMITATIONS",
+      "evidence": "docs/investigations/r10g/run_v1",
+      "finding": "Policy and accounting mechanics are bounded prototypes",
+      "requirement": "portfolio_mandate_separation"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "evidence": "ARCHITECTURE_REFINEMENT.md",
+      "finding": "No AI research assistant is implemented",
+      "requirement": "ai_interpretation_boundary"
+    },
+    {
+      "classification": "DEMONSTRATED",
+      "evidence": "docs/project_status/SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md",
+      "finding": "Synthetic results remain NO_DECISION and are not wired to product UI",
+      "requirement": "ui_prohibition_boundary"
+    },
+    {
+      "classification": "OUT_OF_SCOPE",
+      "evidence": "src/market_intel",
+      "finding": "No broker mutation or execution path is part of R.10A-G",
+      "requirement": "trade_execution"
+    },
+    {
+      "classification": "BLOCKED_ON_REAL_DATA",
+      "evidence": "reports/DATASET_TRUST_REPORT.md",
+      "finding": "Synthetic mechanics cannot prove historical population or source fitness",
+      "requirement": "real_data_completeness"
+    }
+  ],
+  "schema_version": "r10h_architecture_conformance_v1"
+}

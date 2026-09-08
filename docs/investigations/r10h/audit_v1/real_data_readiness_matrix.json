@@ -1,0 +1,126 @@
+{
+  "routes": [
+    {
+      "dimensions": {
+        "access_authorization": "BLOCKED",
+        "benchmark_identity": "BLOCKED",
+        "calendar_sessions": "PARTIALLY_READY",
+        "corporate_actions": "PARTIALLY_READY",
+        "dependency_decision": "BLOCKED",
+        "historical_costs": "BLOCKED",
+        "historical_population": "NOT_APPLICABLE",
+        "inactive_delisted": "NOT_APPLICABLE",
+        "official_schema": "BLOCKED",
+        "owner_approval": "BLOCKED",
+        "point_in_time_timestamps": "PARTIALLY_READY",
+        "raw_immutability": "READY",
+        "revision_behavior": "PARTIALLY_READY",
+        "scale_performance": "PARTIALLY_READY",
+        "stable_identity": "PARTIALLY_READY",
+        "terminal_economics": "BLOCKED",
+        "terms_retention": "PARTIALLY_READY"
+      },
+      "finding": "LOCATED_AND_SAMPLED_NOT_QUALIFIED; APSW candidate isolated, interlock active, quiescence and official schema pending",
+      "overall": "READY_FOR_BOUNDED_QUALIFICATION_ONLY",
+      "route": "LOCAL_FNO_DATABASE"
+    },
+    {
+      "dimensions": {
+        "access_authorization": "BLOCKED",
+        "benchmark_identity": "PARTIALLY_READY",
+        "calendar_sessions": "PARTIALLY_READY",
+        "corporate_actions": "PARTIALLY_READY",
+        "dependency_decision": "NOT_APPLICABLE",
+        "historical_costs": "BLOCKED",
+        "historical_population": "BLOCKED",
+        "inactive_delisted": "BLOCKED",
+        "official_schema": "PARTIALLY_READY",
+        "owner_approval": "BLOCKED",
+        "point_in_time_timestamps": "BLOCKED",
+        "raw_immutability": "READY",
+        "revision_behavior": "BLOCKED",
+        "scale_performance": "BLOCKED",
+        "stable_identity": "PARTIALLY_READY",
+        "terminal_economics": "BLOCKED",
+        "terms_retention": "BLOCKED"
+      },
+      "finding": "Historical population is incomplete and written access/retention clarification remains unresolved",
+      "overall": "BLOCKED",
+      "route": "OFFICIAL_FREE_NSE"
+    },
+    {
+      "dimensions": {
+        "access_authorization": "PARTIALLY_READY",
+        "benchmark_identity": "PARTIALLY_READY",
+        "calendar_sessions": "READY",
+        "corporate_actions": "NOT_APPLICABLE",
+        "dependency_decision": "NOT_APPLICABLE",
+        "historical_costs": "NOT_APPLICABLE",
+        "historical_population": "NOT_APPLICABLE",
+        "inactive_delisted": "NOT_APPLICABLE",
+        "official_schema": "PARTIALLY_READY",
+        "owner_approval": "PARTIALLY_READY",
+        "point_in_time_timestamps": "READY",
+        "raw_immutability": "NOT_APPLICABLE",
+        "revision_behavior": "NOT_APPLICABLE",
+        "scale_performance": "PARTIALLY_READY",
+        "stable_identity": "PARTIALLY_READY",
+        "terminal_economics": "NOT_APPLICABLE",
+        "terms_retention": "PARTIALLY_READY"
+      },
+      "finding": "Read-only current snapshots only; never a historical universe or research qualification route",
+      "overall": "READY_FOR_BOUNDED_QUALIFICATION_ONLY",
+      "route": "KITE_CURRENT_DATA_API"
+    },
+    {
+      "dimensions": {
+        "access_authorization": "PARTIALLY_READY",
+        "benchmark_identity": "NOT_APPLICABLE",
+        "calendar_sessions": "NOT_APPLICABLE",
+        "corporate_actions": "PARTIALLY_READY",
+        "dependency_decision": "NOT_APPLICABLE",
+        "historical_costs": "PARTIALLY_READY",
+        "historical_population": "BLOCKED",
+        "inactive_delisted": "BLOCKED",
+        "official_schema": "PARTIALLY_READY",
+        "owner_approval": "BLOCKED",
+        "point_in_time_timestamps": "PARTIALLY_READY",
+        "raw_immutability": "READY",
+        "revision_behavior": "BLOCKED",
+        "scale_performance": "BLOCKED",
+        "stable_identity": "PARTIALLY_READY",
+        "terminal_economics": "PARTIALLY_READY",
+        "terms_retention": "PARTIALLY_READY"
+      },
+      "finding": "Useful event/circular evidence, not a complete NSE security population",
+      "overall": "PARTIALLY_READY",
+      "route": "SEBI_BSE_OFFICIAL_SUPPLEMENT"
+    },
+    {
+      "dimensions": {
+        "access_authorization": "NOT_APPLICABLE",
+        "benchmark_identity": "NOT_APPLICABLE",
+        "calendar_sessions": "NOT_APPLICABLE",
+        "corporate_actions": "NOT_APPLICABLE",
+        "dependency_decision": "NOT_APPLICABLE",
+        "historical_costs": "NOT_APPLICABLE",
+        "historical_population": "NOT_APPLICABLE",
+        "inactive_delisted": "NOT_APPLICABLE",
+        "official_schema": "NOT_APPLICABLE",
+        "owner_approval": "NOT_APPLICABLE",
+        "point_in_time_timestamps": "NOT_APPLICABLE",
+        "raw_immutability": "NOT_APPLICABLE",
+        "revision_behavior": "NOT_APPLICABLE",
+        "scale_performance": "NOT_APPLICABLE",
+        "stable_identity": "NOT_APPLICABLE",
+        "terminal_economics": "NOT_APPLICABLE",
+        "terms_retention": "NOT_APPLICABLE"
+      },
+      "finding": "Mutual-fund source; not evidence for equity survivorship or identity",
+      "overall": "NOT_APPLICABLE",
+      "route": "AMFI"
+    }
+  ],
+  "schema_version": "r10h_real_data_readiness_v1",
+  "smallest_lawful_candidate": "A manually supplied, terms-cleared, dated official NSE security snapshot and matching bhavcopy for one locked A.8 date, with explicit provenance and retention review; do not acquire until permission is resolved"
+}

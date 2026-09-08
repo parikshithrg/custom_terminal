@@ -1,0 +1,181 @@
+{
+  "risks": [
+    {
+      "blocking_scope": "historical equity research",
+      "description": "Historical population incomplete",
+      "detection": "Population acceptance harness",
+      "evidence": "A.8 obtained only 3/12 pairs",
+      "impact": "CRITICAL",
+      "likelihood": "HIGH",
+      "mitigation": "Obtain permitted dated official snapshots",
+      "owner_decision_required": true,
+      "risk_id": "R10H-01"
+    },
+    {
+      "blocking_scope": "F&O/equity qualification",
+      "description": "Official schema evidence missing",
+      "detection": "Schema reconciliation",
+      "evidence": "R.9 and A.8 reports",
+      "impact": "HIGH",
+      "likelihood": "HIGH",
+      "mitigation": "Bind official schemas before qualification",
+      "owner_decision_required": true,
+      "risk_id": "R10H-02"
+    },
+    {
+      "blocking_scope": "official-source acquisition",
+      "description": "Retention/licensing uncertain",
+      "detection": "Permission matrix",
+      "evidence": "A.8-A.10 correspondence gate",
+      "impact": "CRITICAL",
+      "likelihood": "HIGH",
+      "mitigation": "Written clarification or legal review",
+      "owner_decision_required": true,
+      "risk_id": "R10H-03"
+    },
+    {
+      "blocking_scope": "survivorship-safe research",
+      "description": "Terminal outcomes incomplete",
+      "detection": "Terminal-state reconciliation",
+      "evidence": "DATASET_TRUST_REPORT",
+      "impact": "HIGH",
+      "likelihood": "HIGH",
+      "mitigation": "Source authoritative economic outcomes",
+      "owner_decision_required": false,
+      "risk_id": "R10H-04"
+    },
+    {
+      "blocking_scope": "adjusted returns/identity",
+      "description": "Corporate-action coverage incomplete",
+      "detection": "Continuity checks",
+      "evidence": "A.7/A.8",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Complete official event evidence",
+      "owner_decision_required": false,
+      "risk_id": "R10H-05"
+    },
+    {
+      "blocking_scope": "execution clocks",
+      "description": "Calendar history not authoritative",
+      "detection": "Calendar known answers",
+      "evidence": "R.10D is synthetic",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Qualify official exchange calendar",
+      "owner_decision_required": false,
+      "risk_id": "R10H-06"
+    },
+    {
+      "blocking_scope": "net economic results",
+      "description": "Historical cost gaps",
+      "detection": "Date-effective coverage check",
+      "evidence": "A.7 cost qualification",
+      "impact": "HIGH",
+      "likelihood": "HIGH",
+      "mitigation": "Collect official circular-backed schedules",
+      "owner_decision_required": false,
+      "risk_id": "R10H-07"
+    },
+    {
+      "blocking_scope": "relative performance",
+      "description": "Benchmark identity ambiguity",
+      "detection": "PRI/TRI guard",
+      "evidence": "A.7 benchmark qualification",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Qualify official PRI/TRI series",
+      "owner_decision_required": false,
+      "risk_id": "R10H-08"
+    },
+    {
+      "blocking_scope": "local F&O audit",
+      "description": "APSW supply-chain decision pending",
+      "detection": "Dependency inventory",
+      "evidence": "R.9M-P",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Separate owner decision before production adoption",
+      "owner_decision_required": true,
+      "risk_id": "R10H-09"
+    },
+    {
+      "blocking_scope": "local F&O audit",
+      "description": "SQLite namespace/quiescence limits",
+      "detection": "Restricted adversarial checks",
+      "evidence": "R.9N-P",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Prove directory quiescence and boundary",
+      "owner_decision_required": true,
+      "risk_id": "R10H-10"
+    },
+    {
+      "blocking_scope": "all research",
+      "description": "Synthetic-to-real distribution shift",
+      "detection": "Bounded real qualification",
+      "evidence": "All R.10 evidence is synthetic",
+      "impact": "CRITICAL",
+      "likelihood": "HIGH",
+      "mitigation": "Qualify data before any real hypothesis",
+      "owner_decision_required": true,
+      "risk_id": "R10H-11"
+    },
+    {
+      "blocking_scope": "synthetic assurance",
+      "description": "Test-oracle coupling",
+      "detection": "Independent known-answer review",
+      "evidence": "R.10 tests share fixture/build helpers",
+      "impact": "HIGH",
+      "likelihood": "MEDIUM",
+      "mitigation": "Add independently derived/adversarial oracles",
+      "owner_decision_required": false,
+      "risk_id": "R10H-12"
+    },
+    {
+      "blocking_scope": "operational readiness",
+      "description": "Scale/performance unknown",
+      "detection": "Resource telemetry",
+      "evidence": "No representative-scale run",
+      "impact": "MEDIUM",
+      "likelihood": "HIGH",
+      "mitigation": "Bounded scale test after data approval",
+      "owner_decision_required": false,
+      "risk_id": "R10H-13"
+    },
+    {
+      "blocking_scope": "owner-review PDF",
+      "description": "Stale governance fingerprint/inventory",
+      "detection": "Standard root suite",
+      "evidence": "Nine root-suite failures",
+      "impact": "HIGH",
+      "likelihood": "HIGH",
+      "mitigation": "Versioned forward contracts, preserve history",
+      "owner_decision_required": true,
+      "risk_id": "R10H-14"
+    },
+    {
+      "blocking_scope": "product decisions",
+      "description": "Accidental synthetic score exposure",
+      "detection": "NO_DECISION/promotion tests",
+      "evidence": "R.10E-G use fictional scores",
+      "impact": "CRITICAL",
+      "likelihood": "LOW",
+      "mitigation": "Retain canonical-import and UI barriers",
+      "owner_decision_required": false,
+      "risk_id": "R10H-15"
+    },
+    {
+      "blocking_scope": "trading safety",
+      "description": "Broker-boundary regression",
+      "detection": "Static imports and endpoint tests",
+      "evidence": "No mutation path currently present",
+      "impact": "CRITICAL",
+      "likelihood": "LOW",
+      "mitigation": "Keep broker mutation prohibited",
+      "owner_decision_required": true,
+      "risk_id": "R10H-16"
+    }
+  ],
+  "schema_version": "r10h_risk_register_v1"
+}

@@ -1,0 +1,87 @@
+{
+  "diagnostics": [
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9e_pdf_v3.py::test_v3_preserves_the_exact_r9d_binding_but_is_stale_after_r9f"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9g_owner_review.py::test_v4_review_preserves_research_fingerprint_and_prior_pdf_bytes"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9g_pdf_v4.py::test_v4_binds_exact_r9f_evidence_and_research_state"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9h_boundary_proposal.py::test_research_fingerprint_and_pdf_v4_staleness_reconcile"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9i_owner_review.py::test_review_gate_is_scope_limited_and_never_execution_permission[BOUNDED_SYNTHETIC_BOUNDARY_DESIGN_INVESTIGATION_ONLY]"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9i_pdf_v5.py::test_no_research_state_or_previous_review_mutation"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9l_pdf_v6.py::test_freshness_uses_explicit_evidence_not_changed_exclusions"
+    },
+    {
+      "category": "INTENDED_HISTORICAL_GATE_NOW_STALE",
+      "current_fingerprint": "bc79740103a5bdbe96d70d77395dadacfc081b021bd9fc3dd7dcbaa02aba5421",
+      "expected_fingerprint": "1b56c28...",
+      "operating_model_effect": "Synthetic work no longer needs repeated approval, but prior owner records remain immutable",
+      "smallest_safe_remediation": "Create a new forward review/fingerprint contract distinguishing reviewed-then from current-now; preserve every historical record and exclusion",
+      "test": "tests/test_research_r9o_pdf_v7.py::test_fingerprint_unchanged_but_direct_bindings_fresh"
+    },
+    {
+      "category": "GENUINE_FORWARD_INVENTORY_REGRESSION",
+      "missing_count": 14,
+      "smallest_safe_remediation": "Add a new cumulative/versioned entrypoint inventory or delta covering R.9J-R.10G; do not edit the historical v1 inventory",
+      "test": "tests/test_research_r4_approval.py::test_entrypoint_inventory_accounts_for_every_non_test_python_main"
+    }
+  ],
+  "do_not_do": [
+    "Do not disable or broadly exclude tests",
+    "Do not alter fingerprint exclusions to manufacture green",
+    "Do not rewrite historical reviews"
+  ],
+  "forward_remediation_required_before_pdf": true,
+  "root_suite": {
+    "failed": 9,
+    "passed": 704,
+    "skipped": 4,
+    "warnings": 2
+  },
+  "schema_version": "r10h_governance_diagnostics_v1"
+}

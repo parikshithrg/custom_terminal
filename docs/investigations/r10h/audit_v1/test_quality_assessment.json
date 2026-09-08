@@ -1,0 +1,41 @@
+{
+  "assessment": "MEANINGFUL_SYNTHETIC_KNOWN_ANSWERS_WITH_ORACLE_AND_PLATFORM_LIMITATIONS",
+  "limitations": [
+    "Several oracle formulas and evidence builders share implementation helpers, increasing false-positive risk",
+    "Some scenario-catalog assertions prove declared coverage more strongly than independent behavior",
+    "Synthetic calendar is not an authoritative exchange calendar",
+    "No representative concurrency, scale, disk-corruption or real distribution-shift exercise",
+    "Four Windows symlink/reparse tests skipped because privilege or link creation was unavailable",
+    "R.10A's perfect synthetic relationship is engineering evidence, not economic evidence"
+  ],
+  "schema_version": "r10h_test_quality_v1",
+  "strengths": [
+    "Deterministic fixtures with exact known answers",
+    "Point-in-time leakage and later-vintage challenges",
+    "Mutation and failure injection",
+    "Incremental/clean equivalence and unaffected-hash preservation",
+    "Lifecycle, promotion, publication and broker boundaries"
+  ],
+  "verified_runs": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest -q",
+      "failed": 9,
+      "passed": 704,
+      "seconds": 412.57,
+      "skipped": 4,
+      "warnings": 2
+    },
+    {
+      "command": "$env:PYTHONPATH=(Resolve-Path 'Data test').Path; .venv/Scripts/python.exe -m pytest 'Data test/tests' -q --basetemp='.pytest_tmp/data_test_r10h'",
+      "failed": 0,
+      "passed": 289,
+      "skipped": 0
+    },
+    {
+      "command": "focused R.10A-G, R.9P, R.9D and R.3 preservation/boundary suite",
+      "failed": 0,
+      "passed": 114,
+      "skipped": 0
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "consolidated_pre_real_data_status_v1",
+  "document_control": {
+    "title": "Consolidated Pre-Real-Data Owner Status",
+    "milestone": "R.10J",
+    "document_version": "1.0",
+    "generation_date": "2026-09-08",
+    "repository": "https://github.com/parikshithrg/custom_terminal.git",
+    "branch": "main",
+    "source_commit": "b7c6124c6e6a353b61078a950652b763db3467bf",
+    "synchronization": {
+      "status": "VERIFIED_SYNCHRONIZED",
+      "verified_at": "2026-09-08T13:04:37.9191004+05:30",
+      "local_main": "b7c6124c6e6a353b61078a950652b763db3467bf",
+      "origin_main_after_fetch": "b7c6124c6e6a353b61078a950652b763db3467bf",
+      "remote_ref_from_ls_remote": "b7c6124c6e6a353b61078a950652b763db3467bf",
+      "ahead": 0,
+      "behind": 0,
+      "fetch_head_permission_issue": "RESOLVED_NOT_REPRODUCED",
+      "pushed_commits": [
+        "2d485c15941321afe3af11256e3ffdda02ac7876",
+        "d033cd060cd0d9f6ac2fcf42498522671069676b",
+        "b7c6124c6e6a353b61078a950652b763db3467bf"
+      ]
+    },
+    "evidence_classification": "OWNER_STATUS_REPORT_NON_EXECUTION_EVIDENCE",
+    "owner_review_status": "NOT_RECORDED",
+    "next_task_approval_status": "NOT_RECORDED",
+    "warning": "NO ANALYSIS, BACKTESTING, SCORING, RECOMMENDATION OR TRADING AUTHORIZED"
+  },
+  "objective": "Build an analysis-only Indian-market decision-support system whose data, features, outcomes, experiments, scores and confidence are point-in-time correct, deterministic, reproducible and evidence-backed.",
+  "current_readiness": {
+    "architecture": "DEFINED",
+    "synthetic_infrastructure": "MECHANICALLY_VALIDATED_NONCANONICAL",
+    "historical_market_data": "NOT_QUALIFIED",
+    "historical_population": "FAIL_3_OF_12_PAIRS",
+    "real_data_research": "NOT_AUTHORIZED",
+    "economic_edges": "NONE_VALIDATED",
+    "market_sentiment_score": "PLANNING_ONLY_HIDDEN",
+    "stock_scores": "PLANNING_ONLY_HIDDEN",
+    "trade_execution": "PERMANENTLY_PROHIBITED"
+  },
+  "standing_owner_decisions": [
+    "Project objective accepted.",
+    "Current development order accepted unless evidence requires a change.",
+    "Paid market-data providers will not be used.",
+    "Prefer free official NSE, SEBI and BSE sources; use AMFI only where mutual funds are relevant.",
+    "Kite Connect may supplement current data but is not historical-survivorship evidence.",
+    "version2.0 remains a separate comparison project and is not canonical.",
+    "Future visible outputs may include market-sentiment and individual-stock scores.",
+    "Scores remain hidden until sufficient evidence exists; untested outputs are non-actionable.",
+    "Live broker-related code may remain only when it cannot corrupt or override canonical data.",
+    "The project is analysis-only and must never execute trades.",
+    "The local F&O database may be audited later for trustworthiness.",
+    "Portfolio construction and some later presentation choices remain deferred.",
+    "Every analysis or backtest requires a current owner-review PDF gate and separate exact authorization."
+  ],
+  "milestones": [
+    {"id": "Architecture", "status": "DEFINED", "result": "Local-first modular monolith with typed Parquet facts, DuckDB analytics, SQLite workflow state and immutable evidence manifests."},
+    {"id": "Vertical Slice A", "status": "INFRASTRUCTURE_PROOF", "result": "Momentum v1 mechanics reproduced on a golden fixture and walk-forward machinery implemented; no actionable score."},
+    {"id": "A.5", "status": "DATASET_NOT_TRUSTED", "result": "Broad local equity directory is survivor-selected and insufficient for cross-sectional edge approval."},
+    {"id": "A.6-A.10", "status": "PUBLIC_ROUTE_INCOMPLETE", "result": "Provider-neutral ingestion exists; official sample produced 12 bhavcopies but only 3 dated population pairs; NSE permission response remains absent."},
+    {"id": "A.11-A.12", "status": "CURRENT_ONLY_READY", "result": "Kite supports bounded read-only current instruments, quotes and ephemeral health; no historical use or order endpoints."},
+    {"id": "R.1-R.9", "status": "GOVERNANCE_FOUNDATION", "result": "Shared research contracts, promotion gates, evidence manifests, split access, owner-review gates and F&O audit safety plans were established."},
+    {"id": "R.10A", "status": "SYNTHETIC_NONCANONICAL", "result": "Point-in-time pipeline, feature, outcome, walk-forward, economic and portfolio evidence mechanics validated on fictional data; holdout left unconsumed."},
+    {"id": "R.10B", "status": "SYNTHETIC_NONCANONICAL", "result": "Incremental ingestion, schema drift, dependency rebuilding, immutable reuse and recovery validated."},
+    {"id": "R.10C", "status": "SYNTHETIC_NONCANONICAL", "result": "Security events, causal identity, non-destructive adjustments and terminal-economics mechanics validated."},
+    {"id": "R.10D", "status": "SYNTHETIC_NONCANONICAL", "result": "Exchange-calendar, decision-clock, execution-session, purge and embargo mechanics validated."},
+    {"id": "R.10E", "status": "SYNTHETIC_NONCANONICAL", "result": "Multi-feature evidence, calibration, confidence, multiplicity and lifecycle semantics validated; no external decision."},
+    {"id": "R.10F", "status": "SYNTHETIC_NONCANONICAL", "result": "Immutable evidence publication, freshness, supersession and read-only facade validated; outputs remain NO_DECISION."},
+    {"id": "R.10G", "status": "SYNTHETIC_NONCANONICAL", "result": "Mandate, portfolio accounting and internal decision-policy mechanics validated; external result remains NO_DECISION."},
+    {"id": "R.10H", "status": "REMEDIATION_REQUIRED_THEN_COMPLETED", "result": "Readiness audit found stale fingerprint assumptions and 14 missing executable entries; no engine defect or economic readiness."},
+    {"id": "R.10I", "status": "GOVERNANCE_REMEDIATED", "result": "Historical review semantics and cumulative 77-entrypoint inventory corrected forward-only."},
+    {"id": "R.10I.1", "status": "COHERENCE_CONFIRMED", "result": "Conflicting working-tree hashes reconciled; authoritative 280-file Git-object fingerprint is 19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6."}
+  ],
+  "data_sources": [
+    {"source": "Existing equity price directory", "cost": "Existing local/free files", "purpose": "Historical cash-equity prices", "availability": "430 symbol files; nominal 2000-2026 history", "historical_depth": "Long but survivor-selected", "survivorship": "FAIL", "corporate_actions": "UNKNOWN", "terminal_states": "FAIL", "access_and_retention": "Upstream provenance incomplete", "qualification": "NOT QUALIFIED", "approved_use": "Compatibility and bounded diagnostics only", "prohibited_or_unproven": "Cross-sectional edge approval, complete historical universe"},
+    {"source": "Local F&O database", "cost": "Already local; source cost unverified", "purpose": "Potential futures/options history", "availability": "Located and sampled, not qualified", "historical_depth": "Not yet audited", "survivorship": "NOT APPLICABLE/UNKNOWN contract coverage", "corporate_actions": "Underlying continuity unqualified", "terminal_states": "Contract expiry handling unqualified", "access_and_retention": "Provenance and rights unresolved", "qualification": "LOCATED_AND_SAMPLED_NOT_QUALIFIED", "approved_use": "Future separately authorized read-only qualification", "prohibited_or_unproven": "Research, strategy, scores, unrestricted scans, writes"},
+    {"source": "NSE official public", "cost": "Free public surfaces; paid routes prohibited", "purpose": "Bhavcopy, security snapshots, corporate filings", "availability": "12/12 sampled bhavcopies; only 3/12 dated security snapshots", "historical_depth": "Price files partial; population history incomplete", "survivorship": "UNKNOWN/FAIL reconstruction", "corporate_actions": "Selected case evidence only", "terminal_states": "Economic outcomes incomplete", "access_and_retention": "Automation prohibited by observed terms; retention requires review", "qualification": "PUBLIC ROUTE INCOMPLETE", "approved_use": "Retained qualified evidence and planning only", "prohibited_or_unproven": "New acquisition, full historical population, production research"},
+    {"source": "SEBI official", "cost": "Free official publications", "purpose": "Regulations, orders, event and cost evidence", "availability": "Selected repositories identified", "historical_depth": "Varies by document series", "survivorship": "Not a population source", "corporate_actions": "Supplementary event evidence", "terminal_states": "Case evidence possible, not complete", "access_and_retention": "Document-specific review required", "qualification": "PARTIAL/SUPPLEMENTARY", "approved_use": "Source evaluation and retained qualified documents", "prohibited_or_unproven": "Substitute for exchange population"},
+    {"source": "BSE official", "cost": "Free official public surfaces", "purpose": "Independent listing and lifecycle reconciliation", "availability": "Interfaces identified; sample incomplete", "historical_depth": "Unqualified", "survivorship": "UNKNOWN", "corporate_actions": "UNKNOWN", "terminal_states": "UNKNOWN", "access_and_retention": "Requires bounded source review", "qualification": "NOT QUALIFIED", "approved_use": "Planning; keep BSE listings distinct", "prohibited_or_unproven": "Ticker/name-based stitching to NSE"},
+    {"source": "AMFI", "cost": "Free official mutual-fund source", "purpose": "Possible future mutual-fund research only", "availability": "Not evaluated for this equity scope", "historical_depth": "NOT APPLICABLE", "survivorship": "NOT APPLICABLE TO EQUITIES", "corporate_actions": "NOT APPLICABLE", "terminal_states": "NOT APPLICABLE", "access_and_retention": "Would require separate qualification", "qualification": "NOT APPLICABLE", "approved_use": "Mutual-fund planning only", "prohibited_or_unproven": "Equity identity or survivorship evidence"},
+    {"source": "Kite Connect", "cost": "User account/API application required; not an archive source", "purpose": "Current instrument discovery and bounded quotes", "availability": "Read-only live smoke test passed", "historical_depth": "CURRENT_TRADABLE_ONLY", "survivorship": "FAIL as historical solution", "corporate_actions": "Not qualified", "terminal_states": "Inactive/delisted instruments may be absent", "access_and_retention": "Credentials and snapshots memory-only in this application", "qualification": "CURRENT READ-ONLY READY", "approved_use": "Manual current health and quotes", "prohibited_or_unproven": "Historical universe, canonical research, orders"},
+    {"source": "NSE Indices", "cost": "Official public reports", "purpose": "NIFTY 50 PRI/TRI benchmark evidence", "availability": "Separate PRI/TRI surfaces identified; no qualified object", "historical_depth": "UNKNOWN", "survivorship": "Benchmark methodology only", "corporate_actions": "Dividend treatment documented conceptually", "terminal_states": "NOT APPLICABLE", "access_and_retention": "Permission and revisions unqualified", "qualification": "NOT QUALIFIED", "approved_use": "Methodology planning", "prohibited_or_unproven": "TRI claims from PRI, benchmark publication"},
+    {"source": "Government/SEBI/NSE cost circulars", "cost": "Free official publications", "purpose": "Dated statutory trading-cost schedules", "availability": "Source categories identified", "historical_depth": "Incomplete", "survivorship": "NOT APPLICABLE", "corporate_actions": "NOT APPLICABLE", "terminal_states": "NOT APPLICABLE", "access_and_retention": "Manual schedule compilation needed", "qualification": "NOT QUALIFIED", "approved_use": "Planning and existing citations", "prohibited_or_unproven": "Backfilling old periods with current rates"}
+  ],
+  "blocked_or_unknown": [
+    "Complete historical NSE listed population, including non-trading and later inactive securities.",
+    "Complete suspension, delisting and authoritative economic terminal outcomes.",
+    "Stable instrument/listing/ISIN/dated-alias identity across the research interval.",
+    "Complete point-in-time corporate-action ledger and adjustment evidence.",
+    "Historical exchange turnover at production scale where the universe requires it.",
+    "Local F&O database schema, coverage, provenance, corrections, retention and point-in-time fitness.",
+    "Provider permission for immutable retention and reproducible normalized research tables.",
+    "Real-data research authorization and any defensible historical research start date.",
+    "Economic validity of Momentum v1 or any other edge.",
+    "Validated market-sentiment and individual-stock scores.",
+    "Portfolio construction rules and final presentation choices."
+  ],
+  "validation": {
+    "root_suite": "742 passed, 4 expected Windows symlink skips, 2 established development warnings, 0 failed",
+    "data_test_suite": "289 passed, 0 failed",
+    "artifact_hashes": "R10A-R10G 208 of 208 validated at R10I; chained roots unchanged",
+    "parquet": "34 of 34 synthetic evidence objects readable at R10I",
+    "momentum_spec_sha256": "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5",
+    "momentum_golden_sha256": "d3f72849464c176c81da036e01db7242672d0c7504ce817400242fd228a0779f",
+    "r10a_holdout": "UNCONSUMED_SYNTHETIC_HOLDOUT",
+    "entrypoint_inventory": 77,
+    "r10i_authoritative_git_fingerprint": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+    "r10i_fingerprint_file_count": 280,
+    "fingerprint_contradiction": "RESOLVED_BY_R10I_1_FORWARD_AMENDMENT"
+  },
+  "safety_boundaries": {
+    "analysis_only_product": true,
+    "trade_execution_authorized": false,
+    "broker_orders_authorized": false,
+    "unsupported_score_publication_authorized": false,
+    "private_or_paid_data_authorized": false,
+    "r10a_holdout_consumption_authorized": false,
+    "real_data_research_authorized": false,
+    "status_report_approval_grants_research_authority": false
+  },
+  "proposed_next_milestone": {
+    "id": "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1",
+    "recommendation": "RECOMMENDED_SEPARATE_OWNER_DECISION",
+    "reason": "It is the narrowest bounded step that can replace assumptions about an already-local candidate source with evidence, without running a strategy or acquiring external data.",
+    "scope": [
+      "Bind the exact owner-approved local database through the existing private locator without publishing its path.",
+      "Prove read-only opening and preserve a versioned database identity.",
+      "Inspect schema, tables, columns, indexes and metadata under bounded timeouts.",
+      "Measure bounded date, symbol, contract, expiry and field coverage.",
+      "Check bounded duplicates, missingness, OHLC/volume/OI validity and continuity patterns.",
+      "Assess provenance, raw-source lineage, corrections, retained vintages and permitted use.",
+      "Produce a qualification verdict for possible later futures/options research."
+    ],
+    "exclusions": [
+      "No strategy, feature, return, backtest, simulation, score or recommendation.",
+      "No database write, repair, export, sidecar, unrestricted scan or external acquisition.",
+      "No trading or broker action.",
+      "Abort if read-only safety, bounded queries, provenance or access conditions cannot be established."
+    ],
+    "authorization": "NOT_AUTHORIZED_UNTIL_SEPARATELY_APPROVED_AFTER_REPORT_REVIEW"
+  },
+  "owner_review": {
+    "report_accuracy_approval": "UNRECORDED",
+    "next_milestone_approval": "UNRECORDED",
+    "corrections": [],
+    "pause_requested": false,
+    "required_choices": [
+      "Approve this report as an accurate status summary.",
+      "Separately approve LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1.",
+      "Request corrections and identify the affected section.",
+      "Pause development."
+    ]
+  },
+  "completion_state": "CONSOLIDATED_PRE_REAL_DATA_STATUS_PDF_READY_FOR_OWNER_REVIEW"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "research_r10j_completion_v1",
+  "milestone": "R.10J",
+  "source_commit": "b7c6124c6e6a353b61078a950652b763db3467bf",
+  "source_checkpoint_synchronization": {
+    "status": "VERIFIED_SYNCHRONIZED",
+    "local_main": "b7c6124c6e6a353b61078a950652b763db3467bf",
+    "origin_main_after_fetch": "b7c6124c6e6a353b61078a950652b763db3467bf",
+    "remote_ref_from_ls_remote": "b7c6124c6e6a353b61078a950652b763db3467bf",
+    "ahead": 0,
+    "behind": 0
+  },
+  "evidence_classification": "OWNER_STATUS_REPORT_NON_EXECUTION_EVIDENCE",
+  "owner_review_status": "NOT_RECORDED",
+  "next_task_approval_status": "NOT_RECORDED",
+  "proposed_next_milestone": "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1",
+  "proposed_next_milestone_authority": "NOT_AUTHORIZED_UNTIL_SEPARATELY_APPROVED_AFTER_REPORT_REVIEW",
+  "pdf_verification": {
+    "page_count": 15,
+    "byte_size": 35011,
+    "pdf_sha256": "76f5344109f701355e45d9e8243321fbb7b40d45cc52c9d20c9ac309c32fe278",
+    "source_document_sha256": "a5d31141295725e7e86a9094df3bc67f6c3ce8e60b3c6ce8080f225239173a7b",
+    "structured_status_sha256": "edbe39597123af16068ec7b16ba500cc8e346e003514d2eb05583f0858ea1609",
+    "repeat_render_sha256": "76f5344109f701355e45d9e8243321fbb7b40d45cc52c9d20c9ac309c32fe278",
+    "deterministic_repeat_render": "PASS_IDENTICAL_BYTES",
+    "visual_inspection": "PASS_15_PAGES_NO_MATERIAL_DEFECTS",
+    "text_extraction": "PASS_REQUIRED_SECTIONS_AND_WARNINGS_PRESENT",
+    "toc_and_page_numbers": "PASS"
+  },
+  "validation": {
+    "focused_r10j": "9_PASS",
+    "governance_and_preservation": "PASS",
+    "root_suite": "751_PASS_4_SKIP_7_WARN_0_FAIL",
+    "data_test_suite": "NOT_RERUN_NO_SHARED_CONTRACT_CHANGE_LATEST_289_PASS",
+    "json_validation": "PASS",
+    "manifest_and_artifact_hashes": "PASS",
+    "git_whitespace": "PASS",
+    "secret_and_private_path_scan": "PASS",
+    "protected_research_artifacts": "UNCHANGED"
+  },
+  "authority": {
+    "real_or_private_data_access": false,
+    "network_or_provider_access": false,
+    "database_inspection": false,
+    "research_or_backtesting": false,
+    "simulation": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "next_milestone": false
+  },
+  "completion_state": "CONSOLIDATED_PRE_REAL_DATA_STATUS_PDF_READY_FOR_OWNER_REVIEW"
+}

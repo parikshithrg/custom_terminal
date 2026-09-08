@@ -1,0 +1,50 @@
+{
+  "schema_version": "research_r10j_manifest_v1",
+  "milestone": "R.10J",
+  "classification": "CONSOLIDATED_OWNER_STATUS_NON_EXECUTION_EVIDENCE",
+  "source_commit": "b7c6124c6e6a353b61078a950652b763db3467bf",
+  "hash_design": {
+    "payload": "SHA-256 of canonical JSON for this manifest after removing payload_sha256 and root_sha256.",
+    "root": "SHA-256 of canonical JSON containing manifest_payload_sha256 and the complete outputs map.",
+    "self_hash_claimed": false
+  },
+  "bound_inputs": {
+    "ARCHITECTURE_REFINEMENT.md": "b168e6b2e2d2e797789a5e78a30c9863adcae36812e3b2f20d5789918a71c3ff",
+    "reports/RESEARCH_R10I_GOVERNANCE_REMEDIATION.md": "771ca172b5cacbfd3efe83817b0e55a308964f279ccf7f558fd2eebd69b6a17f",
+    "reports/RESEARCH_R10I_FINGERPRINT_COHERENCE_AMENDMENT.md": "6e531f07c11fd5e38e214735ee659f127be3fe4d0150139471f213febec71b45",
+    "docs/investigations/r10i/remediation_v1/completion.json": "d86197653adb30356b1376ba780c9fb1034abb906a27f771b2f86f5e41d1130d",
+    "docs/investigations/r10i/amendment_v2/completion.json": "439386f648c510e94336b075cae6d26c8f1c479d71bdc1e1938f6cab3491c469",
+    "docs/investigations/r10i/amendment_v2/manifest.json": "ec90683ea4b902fe684a97a29f3ceb840801fa86243a0cd515ca2a0034f2b607"
+  },
+  "rendering_inputs": {
+    "tools/r10j_consolidated_status.py": "c315d1bed46259482827fb7c4ca8a4ed7b700c6ac7e586334aa9a976db934706",
+    "tools/generate_project_status_pdf.py": "fa3f68a85d0a6a2f8548492d4df387b50937e0f621f05cec8c3a1d43bb3ecb83"
+  },
+  "outputs": {
+    "docs/project_status/consolidated_pre_real_data_status_v1.json": "edbe39597123af16068ec7b16ba500cc8e346e003514d2eb05583f0858ea1609",
+    "reports/CONSOLIDATED_PRE_REAL_DATA_STATUS.md": "a5d31141295725e7e86a9094df3bc67f6c3ce8e60b3c6ce8080f225239173a7b",
+    "output/pdf/CONSOLIDATED_PRE_REAL_DATA_STATUS_V1.pdf": "76f5344109f701355e45d9e8243321fbb7b40d45cc52c9d20c9ac309c32fe278",
+    "docs/investigations/r10j/status_pdf_v1/completion.json": "f7842e21c1ff0196525291fc2394daafd3c16caa0551099e19aac1e1fb5dc8d5"
+  },
+  "validation": {
+    "focused_r10j": "9_PASS",
+    "root_suite": "751_PASS_4_SKIP_7_WARN_0_FAIL",
+    "data_test_suite": "NOT_RERUN_NO_SHARED_CONTRACT_CHANGE_LATEST_289_PASS",
+    "pdf_visual_and_text": "PASS",
+    "repeat_render": "PASS_IDENTICAL_BYTES",
+    "json_validation": "PASS",
+    "secret_and_private_path_scan": "PASS"
+  },
+  "authority": {
+    "data_access": false,
+    "database_inspection": false,
+    "research_or_backtesting": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "next_milestone": false
+  },
+  "completion_state": "CONSOLIDATED_PRE_REAL_DATA_STATUS_PDF_READY_FOR_OWNER_REVIEW",
+  "payload_sha256": "f188c36f7d59f92ec358f664e0b38c062c6fc0d80ab607c11f3ad925d82df207",
+  "root_sha256": "164f374c02ea83a0731cfa220610f3dead0d5d708e876a19f6753bc3733e6383"
+}

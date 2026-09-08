@@ -1,0 +1,38 @@
+{
+  "schema_version": "research_r10k_root_manifest_v1",
+  "milestone": "R.10K",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "classification": "SANITIZED_PRE_ACCESS_ABORT_EVIDENCE",
+  "source_commit": "998801c4b4b1dcd1277826061bbe2256139085b7",
+  "hash_design": {
+    "payload": "SHA-256 of canonical JSON for this manifest after removing payload_sha256.",
+    "self_hash_claimed": false
+  },
+  "artifact_hashes": {
+    "docs/investigations/r10k/stage1_attempt_v1/approval_consumption_record.json": "282189bb4ce31d5fca7f016a289dc5618d4a655f3ed3e7849d98c0b7799b3fcc",
+    "docs/investigations/r10k/stage1_attempt_v1/approval_gate.json": "dec226ea0aee1e81088d5dde4db9c9091b7adf7360787df2e50b5c2f6f22e1a6",
+    "docs/investigations/r10k/stage1_attempt_v1/attempt_registration.json": "bd82045d9d25093f32c5ba708ac519f639dd7d3aead66ea38e55c74508a9f0fa",
+    "docs/investigations/r10k/stage1_attempt_v1/capability_matrix.json": "a5c9771df93140751e84aa174c3c7392e0e51f05ea7f05c9ac0d524f7e297f69",
+    "docs/investigations/r10k/stage1_attempt_v1/completion.json": "a013395c3cda36f5b1a7a984c3b5f5d7697e7ef4c5114b874655bfdba877212c",
+    "docs/investigations/r10k/stage1_attempt_v1/database_access_result.json": "cd1944bf32c065dbd6b2c72aca7d4a9403673dcf60e0c9283973f1eced59bc17",
+    "docs/investigations/r10k/stage1_attempt_v1/lifecycle_events.jsonl": "e092e52202d528f96a411ad079b7776282cedd282e7c24e96318c3263bb2b3f1",
+    "docs/investigations/r10k/stage1_attempt_v1/qualification_verdict.json": "a96a544c5e4420e261619bcd07b9229edb3afc9f2562273da10a0e22a5573fa8",
+    "docs/investigations/r10k/stage1_attempt_v1/resource_ledger.json": "4653b001b4ad4e93542ce82428410a20b972637330719b07dc8c8df76ef437f0",
+    "reports/LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1.md": "86cc2738698cf9d9f2cabc1d8719500663361f76607ebf1031c4ced526606184",
+    "tests/test_research_r10k_fno_preaccess_abort.py": "f765ed2f07e19c8509aea7d855ffdd6c7d0a508f477744aa9cff4e02adcf0688",
+    "tools/r10k_preaccess_gate.py": "87a5d3ff7f0975bf5cd3bc89ccd362b2d9eed0466ebf79ff744fa9dac2b99d99"
+  },
+  "authority": {
+    "database_access": false,
+    "external_data_access": false,
+    "research_or_backtesting": false,
+    "simulation": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "next_milestone": false
+  },
+  "overall_verdict": "AUDIT_ABORTED_SAFETY_BOUNDARY",
+  "completion_state": "AUDIT_ABORTED_PRE_ACCESS_SAFETY_BOUNDARY",
+  "payload_sha256": "090cb4777113269f53b4089bc75becf78ddb29674f51d4ce7d7281cc5833986f"
+}

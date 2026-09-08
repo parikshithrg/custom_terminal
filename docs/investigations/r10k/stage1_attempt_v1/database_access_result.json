@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10k_database_access_result_v1",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "sanitized_alias": "PRIVATE_FNO_DATABASE_V1",
+  "locator_resolved": false,
+  "target_path_read": false,
+  "database_file_opened": false,
+  "sqlite_connection_opened": false,
+  "sqlite_statements_attempted": 0,
+  "market_rows_read": 0,
+  "current_identity": "NOT_TESTED_SAFETY_BOUNDARY",
+  "before_after_identity": "NOT_TESTED_SAFETY_BOUNDARY",
+  "current_sidecar_state": "NOT_TESTED_SAFETY_BOUNDARY",
+  "sidecar_created_by_attempt": false,
+  "database_changed_by_attempt": false,
+  "database_unchanged_claim": "NOT_MADE_TARGET_NOT_ACCESSED",
+  "result": "ABORTED_BEFORE_LOCATOR_RESOLUTION"
+}

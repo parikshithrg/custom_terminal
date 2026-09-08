@@ -1,0 +1,11 @@
+{
+  "schema_version": "r10k_approval_consumption_v1",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "owner_scope_approval_present": true,
+  "exact_production_one_use_approval_present": false,
+  "durable_production_registration_present": false,
+  "attempt_id_bound_in_approval": false,
+  "consumed": false,
+  "connection_after_consumption": false,
+  "decision": "NOT_CONSUMED_ABORTED_BEFORE_ACCESS"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10k_qualification_verdict_v1",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "overall_verdict": "AUDIT_ABORTED_SAFETY_BOUNDARY",
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "descriptive_use_authorized": false,
+  "hypothesis_research_authorized": false,
+  "backtesting_authorized": false,
+  "scoring_authorized": false,
+  "recommendations_authorized": false,
+  "broker_or_trading_authorized": false,
+  "recommended_next_milestone": "FNO_PRODUCTION_BOUNDARY_REMEDIATION_AND_REAUTHORIZATION_PLAN",
+  "next_milestone_authorized": false
+}

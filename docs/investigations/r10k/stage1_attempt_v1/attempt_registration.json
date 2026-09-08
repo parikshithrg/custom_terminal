@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10k_attempt_registration_v1",
+  "milestone": "R.10K",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "recorded_at": "2026-09-08T09:04:34.4865828Z",
+  "source_commit": "998801c4b4b1dcd1277826061bbe2256139085b7",
+  "working_tree_at_start": "CLEAN",
+  "approved_scope": "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1",
+  "r10j_review_confirmed_before_attempt": true,
+  "attempt_id_prior_occurrence_count": 0,
+  "database_alias": "PRIVATE_FNO_DATABASE_V1",
+  "absolute_path_permitted_in_evidence": false,
+  "locator_resolution_authorized_by_owner": true,
+  "locator_resolution_performed": false,
+  "database_opened": false,
+  "terminal_state": "ABORTED_PRE_ACCESS_SAFETY_BOUNDARY"
+}

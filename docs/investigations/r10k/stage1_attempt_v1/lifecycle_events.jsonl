@@ -1,0 +1,4 @@
+{"attempt_id":"r10k-stage1-20260908T090434Z-7610d646abe4","event":"ATTEMPT_REGISTERED","sequence":1,"source_commit":"998801c4b4b1dcd1277826061bbe2256139085b7"}
+{"attempt_id":"r10k-stage1-20260908T090434Z-7610d646abe4","event":"OWNER_SCOPE_VALIDATED","sequence":2,"scope":"LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1"}
+{"attempt_id":"r10k-stage1-20260908T090434Z-7610d646abe4","event":"PRE_ACCESS_GATE_FAILED","sequence":3,"reason_count":7}
+{"attempt_id":"r10k-stage1-20260908T090434Z-7610d646abe4","event":"AUDIT_ABORTED","sequence":4,"state":"AUDIT_ABORTED_SAFETY_BOUNDARY"}

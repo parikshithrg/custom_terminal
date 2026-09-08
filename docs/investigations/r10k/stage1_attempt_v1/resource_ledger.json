@@ -1,0 +1,26 @@
+{
+  "schema_version": "r10k_resource_envelope_v1",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "limits": {
+    "maximum_target_connections": 1,
+    "maximum_attempted_statements": 50,
+    "maximum_statement_seconds": 5,
+    "maximum_attempt_seconds": 1200,
+    "maximum_result_rows": 25000,
+    "maximum_target_logical_bytes_read": 268435456,
+    "maximum_output_bytes": 26214400,
+    "maximum_provenance_files": 500,
+    "maximum_provenance_bytes": 536870912
+  },
+  "actual": {
+    "locator_resolutions": 0,
+    "target_files_opened": 0,
+    "target_bytes_read": 0,
+    "database_connections": 0,
+    "statements_attempted": 0,
+    "rows_accepted": 0,
+    "market_rows_read": 0,
+    "external_requests": 0
+  },
+  "limit_enforcement_decision": "ABORT_BEFORE_ACCESS_TARGET_READ_BUDGET_UNAVAILABLE"
+}

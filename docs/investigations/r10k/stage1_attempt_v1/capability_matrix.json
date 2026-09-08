@@ -1,0 +1,29 @@
+{
+  "schema_version": "r10k_capability_matrix_v1",
+  "attempt_id": "r10k-stage1-20260908T090434Z-7610d646abe4",
+  "results": {
+    "file_identity_stability": "NOT_TESTED_SAFETY_BOUNDARY",
+    "read_only_safety": "FAIL",
+    "schema_intelligibility": "NOT_TESTED_SAFETY_BOUNDARY",
+    "date_coverage": "NOT_TESTED_SAFETY_BOUNDARY",
+    "symbol_underlying_coverage": "NOT_TESTED_SAFETY_BOUNDARY",
+    "futures_coverage": "NOT_TESTED_SAFETY_BOUNDARY",
+    "options_coverage": "NOT_TESTED_SAFETY_BOUNDARY",
+    "expiry_and_strike_integrity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "ohlc_validity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "volume_validity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "open_interest_validity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "duplicate_key_safety": "NOT_TESTED_SAFETY_BOUNDARY",
+    "continuity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "contract_identity": "NOT_TESTED_SAFETY_BOUNDARY",
+    "ingestion_lineage": "NOT_TESTED_SAFETY_BOUNDARY",
+    "correction_vintage_handling": "NOT_TESTED_SAFETY_BOUNDARY",
+    "point_in_time_reconstructibility": "NOT_TESTED_SAFETY_BOUNDARY",
+    "permitted_use_and_retention": "UNKNOWN",
+    "reproducibility": "NOT_TESTED_SAFETY_BOUNDARY",
+    "suitability_for_later_descriptive_analysis": "NOT_TESTED_SAFETY_BOUNDARY",
+    "suitability_for_later_hypothesis_research": "NOT_TESTED_SAFETY_BOUNDARY",
+    "suitability_for_backtesting": "NOT_TESTED_SAFETY_BOUNDARY"
+  },
+  "interpretation": "No database capability was inferred from an audit that stopped before locator resolution."
+}

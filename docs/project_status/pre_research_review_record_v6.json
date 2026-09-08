@@ -1,0 +1,67 @@
+{
+  "schema_version": "pre_research_review_record_v1",
+  "record_path": "docs/project_status/pre_research_review_record_v6.json",
+  "report_id": "consolidated_pre_real_data_owner_status",
+  "report_version": "v1",
+  "report_milestone": "R.10J",
+  "pdf_path": "output/pdf/CONSOLIDATED_PRE_REAL_DATA_STATUS_V1.pdf",
+  "pdf_sha256": "76f5344109f701355e45d9e8243321fbb7b40d45cc52c9d20c9ac309c32fe278",
+  "source_path": "reports/CONSOLIDATED_PRE_REAL_DATA_STATUS.md",
+  "source_sha256": "a5d31141295725e7e86a9094df3bc67f6c3ce8e60b3c6ce8080f225239173a7b",
+  "structured_status_path": "docs/project_status/consolidated_pre_real_data_status_v1.json",
+  "structured_status_sha256": "edbe39597123af16068ec7b16ba500cc8e346e003514d2eb05583f0858ea1609",
+  "completion_path": "docs/investigations/r10j/status_pdf_v1/completion.json",
+  "completion_sha256": "f7842e21c1ff0196525291fc2394daafd3c16caa0551099e19aac1e1fb5dc8d5",
+  "manifest_path": "docs/investigations/r10j/status_pdf_v1/manifest.json",
+  "manifest_sha256": "8cfbeb26b364bfb00f06e74bd600f0c2c7c02f84cc8fb24c86fb0865d5471d39",
+  "summarized_source_commit": "b7c6124c6e6a353b61078a950652b763db3467bf",
+  "report_delivery_commit": "b874c3ffc6f8a892be06d7f1e22d7c9abca76276",
+  "reviewed_at": "2026-09-08T14:16:52.6409222+05:30",
+  "review_status": "REPORT_REVIEWED_CONFIRMED_ACCURATE",
+  "report_current_at_review": true,
+  "reviewer_approval": {
+    "approval_kind": "EXPLICIT_POST_REPORT_SEPARATE_DECISIONS",
+    "reviewer_classification": "PROJECT_OWNER",
+    "approval_statement": "The owner separately confirmed the R.10J report and approved LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1. The approval is limited to the bounded read-only qualification scope printed in the reviewed PDF. It does not authorize research, strategies, features, returns, backtesting, simulation, scoring, recommendations, database mutation, external acquisition, broker actions or trading."
+  },
+  "reviewer_questions": [
+    {
+      "question": 1,
+      "prompt": "Confirm whether the report accurately represents the project's current status.",
+      "answer": "confirmed",
+      "decision": "REPORT_ACCURACY_CONFIRMED"
+    },
+    {
+      "question": 2,
+      "prompt": "Separately approve or reject LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1.",
+      "answer": "approved",
+      "decision": "NEXT_MILESTONE_SEPARATELY_APPROVED"
+    }
+  ],
+  "authorized_scope": {
+    "id": "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1",
+    "status": "AUTHORIZED_NOT_STARTED",
+    "exact_database_binding_through_private_locator": true,
+    "read_only_database_open": true,
+    "bounded_schema_and_metadata_inspection": true,
+    "bounded_date_symbol_contract_expiry_and_field_coverage": true,
+    "bounded_duplicate_missingness_ohlc_volume_oi_and_continuity_checks": true,
+    "provenance_lineage_correction_vintage_and_permitted_use_assessment": true,
+    "qualification_verdict": true,
+    "abort_if_read_only_or_bounded_safety_unproven": true
+  },
+  "prohibited_actions_authorized": {
+    "database_write_repair_or_sidecar": false,
+    "database_export": false,
+    "unrestricted_scan": false,
+    "external_data_acquisition": false,
+    "strategy_or_feature_research": false,
+    "return_calculation": false,
+    "backtesting_or_simulation": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_action": false,
+    "trading": false
+  },
+  "statement": "R.10J report accuracy and the next-stage decision were answered separately. Only LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1 is authorized, and it has not started. The reviewed PDF and its original UNRECORDED machine state remain immutable historical evidence; this forward review record carries the later owner decisions."
+}

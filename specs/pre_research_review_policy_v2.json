@@ -1,0 +1,119 @@
+{
+  "approval_rule": "Explicit review must be recorded after PDF generation and cover the exact proposed scope. Silence and generic conversational approval are invalid.",
+  "base_policy": {
+    "path": "specs/pre_research_review_policy_v1.json",
+    "sha256": "dfd4c848ff6e73d8ecb63c069e8421dda848271c42c4b4900db9f5919d3ab5d4"
+  },
+  "external_repository_bindings": [
+    {
+      "branch": "main",
+      "commit": "1a082bdad1667410c95931c4482971c133de918a",
+      "repository": "custom_terminal",
+      "role": "AUTHORITATIVE_GOVERNANCE_EVIDENCE_AND_RESEARCH_CONTROL",
+      "url": "https://github.com/parikshithrg/custom_terminal.git"
+    },
+    {
+      "branch": "master",
+      "commit": "f9a6eaec2cab1dd9e85d284e48b9863cae0b1298",
+      "repository": "version2.0",
+      "role": "PRODUCT_DASHBOARD_CURRENT_DISPLAYS_EXPLORATORY_NONCANONICAL_TOOLS",
+      "tree": "ad3c21fb2244f0acd7680bd0bdc4958d2516b16f",
+      "url": "https://github.com/parikshithrg/version2.0.git"
+    }
+  ],
+  "fingerprint_reconciliation": {
+    "current_checkpoint_path": "docs/project_status/research_fingerprint_reconciliation_r10i_v1.json",
+    "rule": "Historical authenticity and present-scope currency are separate; no historical scope expands implicitly.",
+    "schema_version": "research_fingerprint_reconciliation_v1",
+    "statuses": [
+      "CURRENT_FOR_DECLARED_SCOPE",
+      "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE",
+      "INVALID"
+    ]
+  },
+  "historical_canary_rule": "The completed infrastructure canary remains valid historical evidence and is not retroactively subject to this market-research report gate.",
+  "market_research_rule": "All families except explicitly classified INFRASTRUCTURE_CANARY or SYNTHETIC_TEST require this gate before lock, preflight readiness, or gateway execution.",
+  "policy_version": "pre_research_review_policy_v2",
+  "purpose": "Require an owner-reviewed current status PDF before any future market-research preregistration can become execution-ready.",
+  "research_state": {
+    "algorithm": "sha256_canonical_inventory_v1",
+    "exclude_globs": [
+      "**/__pycache__/**",
+      "docs/project_status/**",
+      "reports/RESEARCH_R7_REPORT.md",
+      "output/pdf/**",
+      "tmp/**",
+      "tests/**",
+      "README.md"
+    ],
+    "excluded_categories": [
+      "generated PDF and its presentation source",
+      "PDF review record and mechanical hash inventory",
+      "R.7 completion report containing output hashes",
+      "tests and caches",
+      "README and documentation-only presentation changes"
+    ],
+    "include_globs": [
+      "src/**/*.py",
+      "Data test/dtest/**/*.py",
+      "Data test/scripts/**/*.py",
+      "specs/**/*.json",
+      "proposals/**/*",
+      "evidence/**/*.json",
+      "evidence/**/*.jsonl",
+      "evidence/**/*.csv",
+      "ARCHITECTURE_REFINEMENT.md",
+      "reports/DATASET_TRUST_REPORT.md",
+      "reports/HISTORICAL_DATA_REQUIREMENTS.md",
+      "reports/HISTORICAL_POPULATION_QUALIFICATION.md",
+      "reports/POPULATION_CAPABILITY_RECONCILIATION.md",
+      "reports/RESEARCH_SCOPE_DECISION.md",
+      "reports/RESEARCH_PROMOTION_POLICY.md",
+      "reports/FUTURE_RUN_GOVERNANCE.md",
+      "reports/GOVERNED_EXECUTION_OPERATIONS.md",
+      "reports/RESEARCH_R6_REPORT.md"
+    ],
+    "included_categories": [
+      "research and simulation source code",
+      "research contracts and specifications",
+      "data-trust declarations",
+      "proposal definitions",
+      "governance policies",
+      "tracked evidence anchors",
+      "architecture source of truth",
+      "milestone reports that determine scientific scope"
+    ]
+  },
+  "review_record_required_fields": [
+    "schema_version",
+    "record_path",
+    "report_id",
+    "report_version",
+    "pdf_path",
+    "pdf_sha256",
+    "source_path",
+    "source_sha256",
+    "summarized_source_commit",
+    "research_state_fingerprint",
+    "generation_timestamp",
+    "rendered_page_count",
+    "visual_verification_result",
+    "covered_future_scope",
+    "review_status",
+    "report_current",
+    "superseded_by",
+    "reviewer_approval",
+    "research_execution_status",
+    "external_repository_bindings"
+  ],
+  "separation_rule": "Passing this report gate does not authorize execution. A locked preregistration, valid input declaration, split access where applicable, and separate exact one-use run approval remain mandatory.",
+  "staleness_rule": "Any change to an included byte changes the fingerprint and makes the report stale. Excluded documentation-only changes do not.",
+  "states": [
+    "REPORT_REQUIRED",
+    "REPORT_GENERATED_PENDING_REVIEW",
+    "REPORT_CHANGES_REQUESTED",
+    "REPORT_REVIEWED_APPROVED",
+    "REPORT_STALE",
+    "RESEARCH_EXECUTION_PERMITTED_BY_REPORT_GATE"
+  ]
+}

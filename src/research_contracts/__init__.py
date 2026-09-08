@@ -90,6 +90,13 @@ from .pre_research_review import (
     validate_review_record,
     validate_review_record_path,
 )
+from .fingerprint_reconciliation import (
+    CURRENT_FOR_DECLARED_SCOPE,
+    HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE,
+    FingerprintReconciliationError,
+    create_fingerprint_reconciliation,
+    validate_fingerprint_reconciliation,
+)
 
 __all__ = [
     "CapabilityStatus", "CorporateActionEvidence", "EvidenceStage",
@@ -122,6 +129,10 @@ __all__ = [
     "APPROVED_REVIEW_STATE", "PRE_RESEARCH_POLICY_VERSION",
     "PRE_RESEARCH_RECORD_VERSION", "REPORT_GATE_PASS_STATE",
     "PreResearchReviewError", "compute_research_state_fingerprint",
+    "CURRENT_FOR_DECLARED_SCOPE",
+    "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE",
+    "FingerprintReconciliationError", "create_fingerprint_reconciliation",
+    "validate_fingerprint_reconciliation",
     "is_market_research_family", "research_state_inventory",
     "validate_review_record", "validate_review_record_path",
 ]

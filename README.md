@@ -1,5 +1,9 @@
 # Local Terminal
 
+> Current owner development sequence: [`OWNER_DEVELOPMENT_SEQUENCE_V1.md`](docs/project_status/OWNER_DEVELOPMENT_SEQUENCE_V1.md).
+> It includes the mandatory mock-data website skeleton and data-requirements
+> freeze before controlled real-market-data work.
+
 > Synthetic pipeline, backtesting and walk-forward engine development now uses
 > the standing operating policy in
 > [`SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md`](docs/project_status/SYNTHETIC_RESEARCH_OPERATING_MODEL_V1.md),

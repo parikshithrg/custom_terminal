@@ -1,0 +1,74 @@
+{
+  "schema_version": "owner_development_sequence_v1",
+  "recorded_date": "2026-09-08",
+  "starting_commit": "d39df04",
+  "authority": {
+    "planning_record_only": true,
+    "real_data_access_authorized": false,
+    "research_authorized": false,
+    "backtesting_authorized": false,
+    "scoring_authorized": false,
+    "recommendations_authorized": false,
+    "broker_or_trading_authorized": false
+  },
+  "estimated_milestones_before_first_controlled_real_data_inspection": 3,
+  "estimate_conditions": [
+    "Production read-only mechanism satisfies the safety contract.",
+    "Synthetic and adversarial boundary tests pass.",
+    "The owner separately approves the exact real-data attempt."
+  ],
+  "mandatory_pre_real_data_product_gate": {
+    "required": true,
+    "position": "AFTER_SYNTHETIC_PIPELINE_READINESS_BEFORE_REAL_DATA_INGESTION_OR_INSPECTION",
+    "deliverable": "INTERACTIVE_APP_OR_WEBSITE_SKELETON",
+    "data": "CLEARLY_LABELLED_MOCK_OR_SYNTHETIC_ONLY",
+    "live_data_dependency": false,
+    "purpose": "Finalize the product information architecture and determine the exact data the website needs."
+  },
+  "skeleton_review_scope": [
+    "pages_and_navigation",
+    "market_overview",
+    "market_sentiment_presentation",
+    "individual_stock_pages_and_scores",
+    "confidence_evidence_risks_and_limitations",
+    "charts_and_comparisons",
+    "optional_portfolio_views",
+    "freshness_and_missing_data_warnings",
+    "research_status_and_methodology",
+    "hidden_information",
+    "features_to_remove_or_defer"
+  ],
+  "data_requirement_mapping": [
+    "exact_fields",
+    "free_source",
+    "history_required",
+    "update_frequency",
+    "point_in_time_and_quality_requirements",
+    "fallback_and_missing_data_behavior",
+    "licensing_access_and_retention",
+    "display_evidence_gate",
+    "hidden_until_validated"
+  ],
+  "sequence": [
+    "FNO_PRODUCTION_BOUNDARY_REMEDIATION_AND_REAUTHORIZATION_PLAN",
+    "IMPLEMENT_AND_SYNTHETICALLY_VALIDATE_SELECTED_BOUNDARY",
+    "PIPELINE_READINESS_AND_OWNER_REVIEW",
+    "BUILD_INTERACTIVE_PRODUCT_SKELETON_WITH_MOCK_DATA",
+    "OWNER_INTERFACE_AND_DATA_REQUIREMENTS_FREEZE",
+    "UPDATED_PRE_REAL_DATA_OWNER_REVIEW_REPORT",
+    "SEPARATELY_AUTHORIZED_CONTROLLED_REAL_DATA_QUALIFICATION",
+    "DATA_SOURCE_REMEDIATION_OR_QUALIFICATION",
+    "BOUNDED_HYPOTHESIS_REGISTRATION",
+    "FIRST_CONTROLLED_REAL_DATA_ANALYSIS_OR_BACKTEST"
+  ],
+  "standing_constraints": {
+    "paid_market_data": false,
+    "preferred_sources": ["NSE", "SEBI", "BSE", "AMFI_WHERE_RELEVANT"],
+    "kite_role": "CURRENT_DATA_SUPPLEMENT_NOT_HISTORICAL_POPULATION",
+    "version2_repository_role": "SEPARATE_COMPARISON_ONLY",
+    "local_fno_database_status": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+    "scores_hidden_until_evidence": true,
+    "trade_execution": "PERMANENTLY_PROHIBITED"
+  },
+  "statement": "No recorded milestone automatically authorizes the next milestone."
+}

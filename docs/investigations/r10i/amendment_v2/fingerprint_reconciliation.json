@@ -1,0 +1,103 @@
+{
+  "schema_version": "research_fingerprint_coherence_amendment_v2",
+  "milestone": "R.10I.1",
+  "classification": "FORWARD_ONLY_EVIDENCE_INTEGRITY_AMENDMENT",
+  "baseline_commit": "886cf5687b094f648f960373fedeec3219dca67f",
+  "amendment_contract_commit": "d033cd060cd0d9f6ac2fcf42498522671069676b",
+  "fingerprint_policy_version": "pre_research_review_policy_v2",
+  "fingerprint_policy_sha256": "dd81d4ba4764421dd54836895d2da607b8019a832b09339fee785472161aa5d7",
+  "fingerprint_algorithm": "sha256_canonical_inventory_v1",
+  "state_references": {
+    "implementation_source": {
+      "reference_kind": "IMMUTABLE_GIT_COMMIT",
+      "commit": "89ba5b77708ac867688e0f4b9381d3bf47e31263",
+      "sha256": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+      "file_count": 280,
+      "fingerprint_input_inventory_hash": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+      "working_tree_clean": null,
+      "meaning": "Exact Git blob bytes at the declared R10I implementation checkpoint."
+    },
+    "evidence": {
+      "reference_kind": "IMMUTABLE_GIT_COMMIT",
+      "commit": "886cf5687b094f648f960373fedeec3219dca67f",
+      "sha256": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+      "file_count": 280,
+      "fingerprint_input_inventory_hash": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+      "working_tree_clean": null,
+      "meaning": "Exact Git blob bytes after R10I evidence was committed; evidence paths and tests are outside the policy inventory."
+    },
+    "recorded_checkpoint_working_tree": {
+      "reference_kind": "WORKING_TREE_SNAPSHOT",
+      "source_commit": "89ba5b77708ac867688e0f4b9381d3bf47e31263",
+      "sha256": "236fddae8660e373eccdc6bb34a67a0dc0baaf7e91ff6203f4d24a43193a172f",
+      "file_count": 280,
+      "fingerprint_input_inventory_hash": "236fddae8660e373eccdc6bb34a67a0dc0baaf7e91ff6203f4d24a43193a172f",
+      "working_tree_clean": true,
+      "reproduction": "Reproduced from the clean baseline checkout inventory with the two amendment-contract source files restored to their 886cf56 Git blob bytes.",
+      "meaning": "Valid working-tree byte fingerprint, but not an immutable commit fingerprint."
+    },
+    "stale_pre_refresh_working_tree": {
+      "reference_kind": "WORKING_TREE_SNAPSHOT_RECONSTRUCTION",
+      "source_commit": "e07b616365517886620e88eb212c4f45562733d5",
+      "sha256": "e0870bd050c2906f1aa81ead3ffe66871031db106e5ee39c046c5a011184759c",
+      "file_count": 280,
+      "fingerprint_input_inventory_hash": "e0870bd050c2906f1aa81ead3ffe66871031db106e5ee39c046c5a011184759c",
+      "working_tree_clean": "NOT_INDEPENDENTLY_RECORDED",
+      "reproduction": "Starting with the reproduced 236fddae inventory, restore specs/laboratory_entrypoint_inventory_v2.json and specs/pre_research_review_policy_v2.json to their e07b616 Git blob bytes.",
+      "meaning": "Pre-refresh working-tree fingerprint copied into later human evidence after the two specifications changed."
+    }
+  },
+  "conflicting_claims": {
+    "report_and_completion": "e0870bd050c2906f1aa81ead3ffe66871031db106e5ee39c046c5a011184759c",
+    "structured_checkpoint": "236fddae8660e373eccdc6bb34a67a0dc0baaf7e91ff6203f4d24a43193a172f",
+    "classification": "STALE_PRE_REFRESH_WORKING_TREE_VALUE_AND_UNLABELED_WORKING_TREE_SEMANTICS",
+    "same_declared_state": true,
+    "authoritative_commit_fingerprint": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6"
+  },
+  "changed_inventory_rows_between_conflicting_values": [
+    {
+      "path": "specs/laboratory_entrypoint_inventory_v2.json",
+      "pre_refresh_sha256": "a78a6b4cde321a5281d9195a6633040041a543643c37933c846d0bee35c79a37",
+      "post_refresh_sha256": "f97899b50dc280824bb17bb82d3d1ccdb8124e68b1f33d61c04240d5076ac282",
+      "byte_size": 93244
+    },
+    {
+      "path": "specs/pre_research_review_policy_v2.json",
+      "pre_refresh_sha256": "92d5d0a6854873dfb9190ff955a6ed8d1b1306ad592d7fde9c0feb8b2f6485f7",
+      "post_refresh_sha256": "dd81d4ba4764421dd54836895d2da607b8019a832b09339fee785472161aa5d7",
+      "byte_size": 5585
+    }
+  ],
+  "root_cause": "R10I computed and copied working-tree fingerprints at different generation stages, labeled them as one current commit state, and validated each artifact independently. No test compared the report/completion value with the checkpoint or reproduced a commit-attributed value from Git blobs.",
+  "recursive_input_assessment": {
+    "generated_evidence_entered_fingerprint": false,
+    "reason": "docs/investigations/** and the R10I report are not selected by policy-v2 include globs; docs/project_status/** and tests/** are explicitly excluded.",
+    "file_count_before_and_after_evidence_commit": 280
+  },
+  "supersession": {
+    "supersedes_only": "The v1 assertion that e0870bd is the current policy-v2 fingerprint of commit 89ba5b7.",
+    "does_not_rewrite": "Any R10I v1 artifact, historical review, authority boundary, or earlier evidence hash."
+  },
+  "preserved_v1_artifact_hashes": {
+    "reports/RESEARCH_R10I_GOVERNANCE_REMEDIATION.md": "771ca172b5cacbfd3efe83817b0e55a308964f279ccf7f558fd2eebd69b6a17f",
+    "docs/investigations/r10i/remediation_v1/completion.json": "d86197653adb30356b1376ba780c9fb1034abb906a27f771b2f86f5e41d1130d",
+    "docs/investigations/r10i/remediation_v1/manifest.json": "d17d4421842d7b9801282185976eb17cc145038a23082c629e7fc068f3d8bac4",
+    "docs/project_status/research_fingerprint_reconciliation_r10i_v1.json": "91132c5c3a4b5c4a8a21f17c3d6f924c167587d4e9ec24f772f6edaa4d3ea824"
+  },
+  "original_completion_decision_remains_valid": true,
+  "decision_rationale": "The defect was a cross-artifact state-labeling error. The immutable implementation and evidence commits reproduce the same 280-file policy-v2 Git fingerprint, and the amendment grants no authority.",
+  "authority": {
+    "historical_review_scope_expansion": false,
+    "real_or_private_data_access": false,
+    "network_or_provider_access": false,
+    "research_or_backtesting": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "pdf_generation": false
+  },
+  "completion_decision": "R10I_FINGERPRINT_COHERENCE_CONFIRMED_READY_FOR_CONSOLIDATED_PDF",
+  "next_milestone": "CONSOLIDATED_PRE_REAL_REQ_DATA_STATUS_PDF",
+  "coherence_binding_sha256": "d2ef2f2d003e4f563d2d45a9f24bfb374078ebda7dc7669ae8181fa94dc0a382",
+  "payload_sha256": "01ca5d530039945407f5d43946ac1823673cd4fdf51aca047974c9ad954b3c12"
+}

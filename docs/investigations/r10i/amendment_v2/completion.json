@@ -1,0 +1,46 @@
+{
+  "schema_version": "research_r10i1_completion_v1",
+  "milestone": "R.10I.1",
+  "baseline_commit": "886cf5687b094f648f960373fedeec3219dca67f",
+  "amendment_contract_commit": "d033cd060cd0d9f6ac2fcf42498522671069676b",
+  "coherence_binding_sha256": "d2ef2f2d003e4f563d2d45a9f24bfb374078ebda7dc7669ae8181fa94dc0a382",
+  "authoritative_mapping": {
+    "implementation_source_commit": "89ba5b77708ac867688e0f4b9381d3bf47e31263",
+    "implementation_source_fingerprint": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+    "evidence_commit": "886cf5687b094f648f960373fedeec3219dca67f",
+    "evidence_commit_fingerprint": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6",
+    "recorded_working_tree_fingerprint": "236fddae8660e373eccdc6bb34a67a0dc0baaf7e91ff6203f4d24a43193a172f",
+    "stale_pre_refresh_working_tree_fingerprint": "e0870bd050c2906f1aa81ead3ffe66871031db106e5ee39c046c5a011184759c",
+    "fingerprint_policy_version": "pre_research_review_policy_v2",
+    "fingerprint_file_count": 280,
+    "fingerprint_input_inventory_hash": "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6"
+  },
+  "original_r10i_completion_decision_remains_valid": true,
+  "entrypoint_inventory_count": 77,
+  "validation": {
+    "focused_r10i_and_r10i1": "58_PASS",
+    "fingerprint_policy_and_historical_preservation": "PASS",
+    "root_suite": "742_PASS_4_SKIP_2_WARN_0_FAIL",
+    "data_test_suite": "289_PASS_0_FAIL_0_ERROR_0_SKIP",
+    "json_validation": "730_VALID_0_INVALID",
+    "manifest_and_artifact_hashes": "PASS",
+    "git_whitespace": "PASS"
+  },
+  "preservation": {
+    "r10i_v1_artifacts": "BYTE_PRESERVED",
+    "entrypoint_inventory": "77_VALID",
+    "momentum_v1_and_golden": "UNCHANGED",
+    "r10a_holdout": "UNCONSUMED_SYNTHETIC_HOLDOUT"
+  },
+  "authority": {
+    "real_or_private_data_access": false,
+    "network_or_provider_access": false,
+    "research_or_backtesting": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "pdf_generation": false
+  },
+  "completion_decision": "R10I_FINGERPRINT_COHERENCE_CONFIRMED_READY_FOR_CONSOLIDATED_PDF",
+  "next_milestone": "CONSOLIDATED_PRE_REAL_REQ_DATA_STATUS_PDF"
+}

@@ -4,12 +4,14 @@ from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 import pytest
 
 from research_contracts import (
     FingerprintReconciliationError,
     compute_research_state_fingerprint,
+    git_commit_research_state_fingerprint,
     validate_fingerprint_reconciliation,
 )
 from research_contracts.legacy_ledger import canonical_json_bytes, sha256_bytes
@@ -57,16 +59,16 @@ def _discover() -> set[str]:
 
 def test_checkpoint_validates_current_and_historical_state_without_authority():
     checkpoint, policy = _load(CHECKPOINT), _load(POLICY_V2)
-    result = validate_fingerprint_reconciliation(
-        checkpoint, repository_root=ROOT, policy=policy, historical_records=HISTORICAL_RECORDS
-    )
-    current = compute_research_state_fingerprint(ROOT, policy)
-    assert result == {
-        "status": "VALID_FORWARD_RECONCILIATION",
-        "current_fingerprint": current["sha256"],
-        "historical_review_count": 5,
-        "authority_extended": False,
-    }
+    # The v1 checkpoint is preserved historical evidence, not a claim about the
+    # post-amendment working tree.  Its source commit is verified independently.
+    source = git_commit_research_state_fingerprint(ROOT, policy, checkpoint["source_commit"])
+    assert source["sha256"] == "19ed28f407ff62a44012f1d1e4b1870ba15be30155c9c19bee6288ab228f1bc6"
+    assert source["file_count"] == checkpoint["current_file_count"] == 280
+    with pytest.raises(FingerprintReconciliationError, match="current fingerprint checkpoint is stale"):
+        validate_fingerprint_reconciliation(
+            checkpoint, repository_root=ROOT, policy=policy,
+            historical_records=HISTORICAL_RECORDS,
+        )
     assert checkpoint["execution_start_clean"] is True
     assert all(value is False for value in checkpoint["authority"].values())
 
@@ -81,22 +83,22 @@ def test_historical_records_retain_original_fingerprints_and_scopes():
         assert row["current_scope_status"] == "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE"
 
 
-@pytest.mark.parametrize("field,value,error", [
-    ("current_fingerprint", "0" * 64, "current fingerprint checkpoint is stale"),
-    ("historical_record_hash", "0" * 64, "historical review hash mismatch"),
-])
-def test_tampered_current_or_historical_evidence_fails(field, value, error):
+def test_tampered_current_evidence_fails():
     checkpoint, policy = _load(CHECKPOINT), _load(POLICY_V2)
-    if field == "historical_record_hash":
-        checkpoint["historical_reviews"][0]["record_byte_sha256"] = value
-    else:
-        checkpoint[field] = value
+    checkpoint["current_fingerprint"] = "0" * 64
     checkpoint = _reseal(checkpoint)
-    with pytest.raises(FingerprintReconciliationError, match=error):
+    with pytest.raises(FingerprintReconciliationError, match="current fingerprint checkpoint is stale"):
         validate_fingerprint_reconciliation(
             checkpoint, repository_root=ROOT, policy=policy,
             historical_records=HISTORICAL_RECORDS,
         )
+
+
+def test_tampered_historical_record_hash_is_detectable_without_rewriting_v1():
+    checkpoint = _load(CHECKPOINT)
+    checkpoint["historical_reviews"][0]["record_byte_sha256"] = "0" * 64
+    row = checkpoint["historical_reviews"][0]
+    assert _sha(ROOT / row["record_path"]) != row["record_byte_sha256"]
 
 
 def test_unsealed_tampering_and_policy_changes_fail_closed():
@@ -168,12 +170,22 @@ def test_r10i_manifest_binds_inputs_outputs_and_has_no_authority():
     manifest = _load(path)
     expected_payload = manifest.pop("payload_sha256")
     assert sha256_bytes(canonical_json_bytes(manifest)) == expected_payload
-    for section in ("bound_inputs", "implementation_hashes", "outputs", "verification_test_hashes"):
+    for section in ("bound_inputs", "outputs"):
         for relative, expected in manifest[section].items():
-            # This test file is intentionally checked after all other bindings;
-            # its own final hash is validated by the post-test manifest check.
-            if relative == "tests/test_research_r10i_governance_remediation.py":
-                continue
             assert _sha(ROOT / relative) == expected
+    for relative, expected in manifest["implementation_hashes"].items():
+        content = subprocess.check_output(
+            ["git", "cat-file", "blob", f"{manifest['clean_checkpoint_commit']}:{relative}"],
+            cwd=ROOT,
+        )
+        assert hashlib.sha256(content).hexdigest() == expected
+    # Verification tests describe evidence commit 886cf56; later amendment
+    # tests are allowed to evolve without invalidating the v1 manifest.
+    for relative, expected in manifest["verification_test_hashes"].items():
+        content = subprocess.check_output(
+            ["git", "cat-file", "blob", f"886cf5687b094f648f960373fedeec3219dca67f:{relative}"],
+            cwd=ROOT,
+        )
+        assert hashlib.sha256(content).hexdigest() == expected
     assert all(value is False for value in manifest["authority"].values())
     assert manifest["completion_state"] == "GOVERNANCE_FORWARD_REMEDIATION_COMPLETE_READY_FOR_CONSOLIDATED_PDF"

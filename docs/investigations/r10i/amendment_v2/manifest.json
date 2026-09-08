@@ -1,0 +1,52 @@
+{
+  "schema_version": "research_r10i1_manifest_v1",
+  "milestone": "R.10I.1",
+  "classification": "FORWARD_ONLY_EVIDENCE_INTEGRITY_AMENDMENT",
+  "baseline_commit": "886cf5687b094f648f960373fedeec3219dca67f",
+  "amendment_contract_commit": "d033cd060cd0d9f6ac2fcf42498522671069676b",
+  "coherence_binding_sha256": "d2ef2f2d003e4f563d2d45a9f24bfb374078ebda7dc7669ae8181fa94dc0a382",
+  "hash_design": {
+    "payload": "SHA-256 of canonical JSON for this manifest after removing payload_sha256 and root_sha256.",
+    "root": "SHA-256 of canonical JSON containing manifest_payload_sha256 and the complete outputs map.",
+    "self_hash_claimed": false,
+    "reason": "A file cannot contain its own byte hash without recursion; the tested payload/root construction binds all metadata and output hashes instead."
+  },
+  "bound_historical_inputs": {
+    "reports/RESEARCH_R10I_GOVERNANCE_REMEDIATION.md": "771ca172b5cacbfd3efe83817b0e55a308964f279ccf7f558fd2eebd69b6a17f",
+    "docs/investigations/r10i/remediation_v1/completion.json": "d86197653adb30356b1376ba780c9fb1034abb906a27f771b2f86f5e41d1130d",
+    "docs/investigations/r10i/remediation_v1/manifest.json": "d17d4421842d7b9801282185976eb17cc145038a23082c629e7fc068f3d8bac4",
+    "docs/project_status/research_fingerprint_reconciliation_r10i_v1.json": "91132c5c3a4b5c4a8a21f17c3d6f924c167587d4e9ec24f772f6edaa4d3ea824"
+  },
+  "contract_git_blob_hashes": {
+    "src/research_contracts/__init__.py": "a80c7e30bf9d56661b1a79ed911d3552adcd18c6e21253818ecd5ca434f2800a",
+    "src/research_contracts/fingerprint_reconciliation.py": "daa2368130738d2998cb5b75a717392456f771e45256621cea74a1f84609a0be",
+    "tests/test_research_r10i1_fingerprint_coherence.py": "d13f75c016affe66416b98aa63a9150eeb16fa706c24c8ee7654c2a0609e29de"
+  },
+  "outputs": {
+    "docs/investigations/r10i/amendment_v2/fingerprint_reconciliation.json": "4b0a76b786a18874955a0e8ae2c68518139c2acd2764549b94d1f636a6ff94d8",
+    "docs/investigations/r10i/amendment_v2/completion.json": "439386f648c510e94336b075cae6d26c8f1c479d71bdc1e1938f6cab3491c469",
+    "reports/RESEARCH_R10I_FINGERPRINT_COHERENCE_AMENDMENT.md": "6e531f07c11fd5e38e214735ee659f127be3fe4d0150139471f213febec71b45"
+  },
+  "validation": {
+    "focused_r10i_and_r10i1": "58_PASS",
+    "fingerprint_policy_and_historical_preservation": "PASS",
+    "root_suite": "742_PASS_4_SKIP_2_WARN_0_FAIL",
+    "data_test_suite": "289_PASS_0_FAIL_0_ERROR_0_SKIP",
+    "json_validation": "730_VALID_0_INVALID",
+    "manifest_and_artifact_hashes": "PASS",
+    "git_whitespace": "PASS"
+  },
+  "authority": {
+    "real_or_private_data_access": false,
+    "network_or_provider_access": false,
+    "research_or_backtesting": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "pdf_generation": false
+  },
+  "completion_decision": "R10I_FINGERPRINT_COHERENCE_CONFIRMED_READY_FOR_CONSOLIDATED_PDF",
+  "next_milestone": "CONSOLIDATED_PRE_REAL_REQ_DATA_STATUS_PDF",
+  "payload_sha256": "3b411992022865982c2d86047d4355011fc4e77b7fd0dff2230a80681da383bc",
+  "root_sha256": "10015f50972a31b56a51f69af9085f48325565b09f48fd0caa9772f1c52558f9"
+}

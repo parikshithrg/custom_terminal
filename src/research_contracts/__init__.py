@@ -91,10 +91,15 @@ from .pre_research_review import (
     validate_review_record_path,
 )
 from .fingerprint_reconciliation import (
+    COHERENCE_AMENDMENT_SCHEMA_VERSION,
     CURRENT_FOR_DECLARED_SCOPE,
     HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE,
     FingerprintReconciliationError,
+    coherence_binding_hash,
     create_fingerprint_reconciliation,
+    git_commit_research_state_fingerprint,
+    validate_fingerprint_coherence_amendment,
+    validate_fingerprint_coherence_bundle,
     validate_fingerprint_reconciliation,
 )
 
@@ -130,8 +135,12 @@ __all__ = [
     "PRE_RESEARCH_RECORD_VERSION", "REPORT_GATE_PASS_STATE",
     "PreResearchReviewError", "compute_research_state_fingerprint",
     "CURRENT_FOR_DECLARED_SCOPE",
+    "COHERENCE_AMENDMENT_SCHEMA_VERSION",
     "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE",
     "FingerprintReconciliationError", "create_fingerprint_reconciliation",
+    "coherence_binding_hash",
+    "git_commit_research_state_fingerprint", "validate_fingerprint_coherence_amendment",
+    "validate_fingerprint_coherence_bundle",
     "validate_fingerprint_reconciliation",
     "is_market_research_family", "research_state_inventory",
     "validate_review_record", "validate_review_record_path",

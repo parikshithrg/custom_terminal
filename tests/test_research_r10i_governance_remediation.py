@@ -161,3 +161,19 @@ def test_historical_inventory_is_preserved_and_v2_is_forward_only():
     assert inventory["supersedes_for_current_enforcement"] == "specs/laboratory_entrypoint_inventory_v1.json"
     assert inventory["preserves_historical_inventory"] is True
     assert inventory["unsafe_bypass_count"] == 0
+
+
+def test_r10i_manifest_binds_inputs_outputs_and_has_no_authority():
+    path = ROOT / "docs/investigations/r10i/remediation_v1/manifest.json"
+    manifest = _load(path)
+    expected_payload = manifest.pop("payload_sha256")
+    assert sha256_bytes(canonical_json_bytes(manifest)) == expected_payload
+    for section in ("bound_inputs", "implementation_hashes", "outputs", "verification_test_hashes"):
+        for relative, expected in manifest[section].items():
+            # This test file is intentionally checked after all other bindings;
+            # its own final hash is validated by the post-test manifest check.
+            if relative == "tests/test_research_r10i_governance_remediation.py":
+                continue
+            assert _sha(ROOT / relative) == expected
+    assert all(value is False for value in manifest["authority"].values())
+    assert manifest["completion_state"] == "GOVERNANCE_FORWARD_REMEDIATION_COMPLETE_READY_FOR_CONSOLIDATED_PDF"

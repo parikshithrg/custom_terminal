@@ -1,0 +1,52 @@
+{
+  "schema_version": "research_r10i_completion_v1",
+  "milestone": "R.10I",
+  "starting_commit": "e7c437504eb4e971a5b5fb9fe38fa7a05da17801",
+  "implementation_checkpoint": "89ba5b77708ac867688e0f4b9381d3bf47e31263",
+  "starting_state_clean": true,
+  "reproduced_failures": {
+    "historical_fingerprint_diagnostics": 8,
+    "entrypoint_inventory_diagnostics": 1,
+    "total": 9
+  },
+  "fingerprints": {
+    "historical_v1_projection": "1b56c28fabed28672d140cf76ba8b242f00e0b4965ab682ebc7704bb38742fef",
+    "historical_v1_file_count": 252,
+    "current_v2": "e0870bd050c2906f1aa81ead3ffe66871031db106e5ee39c046c5a011184759c",
+    "current_v2_file_count": 280,
+    "relationship": "HISTORICALLY_VALID_NOT_CURRENT_FOR_EXPANDED_SCOPE"
+  },
+  "entrypoints": {
+    "previously_accounted": 63,
+    "previously_missing": 14,
+    "current_cumulative": 77,
+    "duplicates": 0,
+    "stale_source_hashes": 0,
+    "unsafe_bypasses": 0
+  },
+  "validation": {
+    "focused_reconciliation_and_inventory": "18_PASS",
+    "focused_historical_policy_rejection": "13_PASS",
+    "root_suite": "730_PASS_4_SKIP_2_WARN_0_FAIL",
+    "data_test_suite": "289_PASS",
+    "manifest_artifact_hashes": "208_OF_208_PASS",
+    "root_manifest_hashes": "7_OF_7_UNCHANGED",
+    "parquet_schemas": "34_OF_34_READABLE",
+    "historical_records_and_pdfs": "BYTE_PRESERVED",
+    "momentum_v1_and_golden": "UNCHANGED",
+    "r10a_holdout": "UNCONSUMED_SYNTHETIC_HOLDOUT"
+  },
+  "authority": {
+    "real_or_private_data_access": false,
+    "research": false,
+    "simulation": false,
+    "backtesting": false,
+    "scoring": false,
+    "recommendation": false,
+    "broker_or_trading": false,
+    "apsw_production_adoption": false,
+    "pdf_generation": false
+  },
+  "completion_state": "GOVERNANCE_FORWARD_REMEDIATION_COMPLETE_READY_FOR_CONSOLIDATED_PDF",
+  "next_milestone": "CONSOLIDATED_PRE_REAL_DATA_STATUS_PDF"
+}

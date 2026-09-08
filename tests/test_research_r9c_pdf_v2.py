@@ -119,15 +119,15 @@ def test_pdf_approval_cannot_authorize_audit_execution():
     record["research_state_fingerprint"] = compute_research_state_fingerprint(
         ROOT, policy
     )["sha256"]
-    result = validate_review_record(
-        record,
-        preregistration=_v2_preregistration(record),
-        repository_root=ROOT,
-        policy=policy,
-    )
-    assert result["report_gate_satisfied"] is True
-    assert result["research_execution_authorized"] is False
-    assert result["separate_run_approval_required"] is True
+    # Policy v1 is now an explicitly sealed historical projection.  Even a
+    # caller-mutated copy cannot turn that old review into current authority.
+    with pytest.raises(PreResearchReviewError, match="historical fingerprint policy"):
+        validate_review_record(
+            record,
+            preregistration=_v2_preregistration(record),
+            repository_root=ROOT,
+            policy=policy,
+        )
     assert audit.AUDIT_APPROVAL_TYPE == "LOCAL_DATA_AUDIT_STAGE_1_3_APPROVAL_V1"
 
 

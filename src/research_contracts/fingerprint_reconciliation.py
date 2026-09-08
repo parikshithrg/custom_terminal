@@ -133,7 +133,9 @@ def validate_fingerprint_coherence_amendment(
     """Validate the forward amendment and its state-specific fingerprint claims."""
     if amendment.get("schema_version") != COHERENCE_AMENDMENT_SCHEMA_VERSION:
         raise FingerprintReconciliationError("unsupported coherence amendment schema")
-    if amendment.get("payload_sha256") != _payload_hash(amendment):
+    amendment_payload = dict(amendment)
+    amendment_payload.pop("payload_sha256", None)
+    if amendment.get("payload_sha256") != sha256_bytes(canonical_json_bytes(amendment_payload)):
         raise FingerprintReconciliationError("coherence amendment payload hash mismatch")
     if amendment.get("fingerprint_policy_version") != policy.get("policy_version"):
         raise FingerprintReconciliationError("coherence amendment policy mismatch")

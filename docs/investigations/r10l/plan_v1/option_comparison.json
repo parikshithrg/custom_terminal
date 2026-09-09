@@ -1,0 +1,74 @@
+{
+  "schema_version": "r10l_option_comparison_v1",
+  "milestone": "R.10L",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "grants_authority": false,
+  "acceptance_criteria": [
+    "exact target identity and private locator binding",
+    "atomic exact one-use approval before target connection",
+    "one read-only main-file open",
+    "logical and delegated file-read accounting before I/O",
+    "zero supported sidecar, mapping and temporary-file paths",
+    "exact SQL templates and authorizer enforcement",
+    "cumulative row, output, memory, time and statement limits",
+    "crash-safe terminal reconciliation",
+    "sanitized deterministic evidence for every terminal path",
+    "synthetic adversarial acceptance before any real-data proposal"
+  ],
+  "options": [
+    {
+      "id": "A_RESTRICTED_APSW_VFS",
+      "decision": "RECOMMENDED_CONDITIONALLY_NOT_ADOPTED",
+      "evidence": [
+        "R9M demonstrated VFS xRead interception on generated fixtures",
+        "R9N demonstrated cumulative read, row, output and deadline failure paths",
+        "R9P passed ten integrated synthetic acceptance criteria across three page sizes"
+      ],
+      "remaining_gaps": [
+        "production-isolated implementation does not exist",
+        "dependency policy and reproducible installation are not approved",
+        "aggregate job-memory enforcement requires synthetic proof",
+        "continuous namespace quiescence cannot be proven",
+        "native sidecar-path coverage remains bounded rather than universal",
+        "official F&O schema and real-data fitness remain unqualified"
+      ],
+      "effort": "MEDIUM_TO_HIGH_BOUNDED_IMPLEMENTATION_AND_ADVERSARIAL_VALIDATION",
+      "safety_limit": "COOPERATIVE_FIXED_CODE_BOUNDARY_NOT_HOSTILE_SAME_USER_SANDBOX"
+    },
+    {
+      "id": "B_STANDARD_LIBRARY_SQLITE3",
+      "decision": "REJECTED_FOR_CURRENT_BOUNDARY",
+      "evidence": [
+        "mode=ro, query_only, authorizer and progress callbacks are available",
+        "R9K established that Python sqlite3 exposes no public target VFS read interceptor"
+      ],
+      "failed_criteria": [
+        "target-specific logical read-byte enforcement",
+        "one-main-file-open enforcement at SQLite VFS boundary",
+        "complete no-sidecar and no-temp-open enforcement",
+        "fetch-lifetime deadline in the existing wrapper"
+      ],
+      "effort": "LOW_ONLY_IF_CONTROLS_ARE_WEAKENED_WHICH_IS_NOT_ACCEPTED",
+      "safety_limit": "APPLICATION_ESTIMATES_CANNOT_REPLACE_ENFORCED_IO_CONTROLS"
+    },
+    {
+      "id": "C_ABANDON_LOCAL_DATABASE",
+      "decision": "FALLBACK_IF_OPTION_A_ACCEPTANCE_FAILS",
+      "benefits": [
+        "avoids native dependency and private-database safety surface",
+        "removes uncertain local provenance and retention route",
+        "reduces maintenance and supply-chain burden"
+      ],
+      "costs": [
+        "defers or omits historical futures and options features",
+        "requires later free official-source acquisition and normalization",
+        "public archives may not provide complete point-in-time F&O coverage"
+      ],
+      "product_effect": "FNO_VIEWS_REMAIN_HIDDEN_OR_MOCK_ONLY_UNTIL_ANOTHER_SOURCE_QUALIFIES"
+    }
+  ],
+  "recommended_option": "A_RESTRICTED_APSW_VFS",
+  "fallback_option": "C_ABANDON_LOCAL_DATABASE",
+  "implementation_authorized": false,
+  "database_access_authorized": false
+}

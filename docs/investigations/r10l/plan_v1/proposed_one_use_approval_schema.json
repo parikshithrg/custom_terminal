@@ -1,0 +1,45 @@
+{
+  "schema_version": "r10l_proposed_exact_one_use_approval_v1",
+  "classification": "NON_EXECUTABLE_SCHEMA_ONLY",
+  "template_only": true,
+  "usable": false,
+  "grants_authority": false,
+  "required_bindings": {
+    "owner_reviewed_plan_path": "REQUIRED",
+    "owner_reviewed_plan_sha256": "REQUIRED",
+    "owner_review_record_sha256": "REQUIRED_POST_PLAN_REVIEW",
+    "database_alias": "PRIVATE_FNO_DATABASE_V1",
+    "locator_binding_id": "REQUIRED",
+    "expected_database_identity": "REQUIRED_EXACT_BINDING",
+    "attempt_id": "REQUIRED_PREDECLARED_UNIQUE",
+    "executable_path": "REQUIRED_FIXED_ENTRYPOINT",
+    "source_commit": "REQUIRED_CLEAN_REVIEWED_COMMIT",
+    "driver": "APSW_RESTRICTED_VFS_CANDIDATE_IF_APPROVED",
+    "driver_version": "REQUIRED_PIN",
+    "wheel_sha256": "REQUIRED",
+    "sqlite_runtime_version": "REQUIRED",
+    "approved_stages": [1, 2, 3],
+    "resource_envelope_sha256": "REQUIRED",
+    "sidecar_policy_sha256": "REQUIRED",
+    "output_contract_sha256": "REQUIRED",
+    "issued_at": "REQUIRED_UTC",
+    "expires_at": "REQUIRED_SHORT_UTC_EXPIRY"
+  },
+  "lifecycle_states": [
+    "ISSUED",
+    "REGISTERED_UNUSED",
+    "CONSUMED_BEFORE_TARGET_CONNECTION",
+    "COMPLETED",
+    "ABORTED",
+    "FAILED"
+  ],
+  "atomic_consumption": {
+    "transaction": "BEGIN_IMMEDIATE_WITH_UNIQUE_APPROVAL_AND_ATTEMPT_KEYS",
+    "must_commit_before_target_connection": true,
+    "replay_rejected": true,
+    "consumed_authority_never_restored": true,
+    "crash_without_terminal_event_reconciles_to": "INCOMPLETE_CONSUMED_ATTEMPT_REQUIRES_TERMINAL_RECONCILIATION"
+  },
+  "approval_payload_sha256": "NOT_SEALED",
+  "approval_id": "NOT_ISSUED"
+}

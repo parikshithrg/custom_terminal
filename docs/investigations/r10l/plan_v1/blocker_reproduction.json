@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10l_static_blocker_reproduction_v1",
+  "classification": "TRACKED_STATIC_EVIDENCE_ONLY",
+  "source_commit": "523da75a80e77b8e254ec97b2d74eb6726918d45",
+  "locator_resolved": false,
+  "database_opened": false,
+  "checks": [
+    {"blocker":"PRODUCTION_LOCATOR_CONTRACT_TEMPLATE_ONLY_UNUSABLE","result":"CONFIRMED","evidence":"specs/fno_production_locator_contract_v1.json template_only=true usable=false locator_resolution_implemented=false"},
+    {"blocker":"EXACT_REGISTERED_ONE_USE_PRODUCTION_APPROVAL_ABSENT","result":"CONFIRMED","evidence":"proposal approval is template_only=true usable=false; production registry not initialized"},
+    {"blocker":"R10K_ATTEMPT_ID_NOT_BOUND_BY_PRODUCTION_APPROVAL","result":"CONFIRMED","evidence":"R10K approval consumption record reports exact production approval absent and consumed=false"},
+    {"blocker":"PRODUCTION_ACTIVATION_TEMPLATE_ONLY_UNUSABLE","result":"CONFIRMED","evidence":"specs/fno_production_activation_template_v1.json template_only=true usable=false"},
+    {"blocker":"R9D_EXACT_PRODUCTION_ACTIVATION_IMPOSSIBLE","result":"CONFIRMED","evidence":"evaluate_production_interlocks always returns permitted=false and production source retains deliberate interlock"},
+    {"blocker":"TARGET_SPECIFIC_LOGICAL_READ_BYTE_CAP_NOT_ENFORCED_BY_APPROVED_STACK","result":"CONFIRMED","evidence":"R9K reports NOT_FEASIBLE_WITH_CURRENT_APPROVED_STACK; standard sqlite3 has no public VFS interceptor"},
+    {"blocker":"SIDECAR_CONSISTENCY_POLICY_UNRESOLVED","result":"CONFIRMED","evidence":"current read-only contract records wal_shm_journal_policy=UNRESOLVED_IMPLEMENTATION_BLOCKER"}
+  ],
+  "all_r10k_blockers_reproduced": true,
+  "database_access_authorized": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "research_r10l_root_manifest_v1",
+  "milestone": "R.10L",
+  "classification": "NON_EXECUTABLE_PLAN_EVIDENCE",
+  "source_commit": "523da75a80e77b8e254ec97b2d74eb6726918d45",
+  "hash_design": {
+    "payload": "SHA-256 of canonical JSON after removing payload_sha256",
+    "self_hash_claimed": false
+  },
+  "bound_inputs": {
+    "reports/LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1.md": "86cc2738698cf9d9f2cabc1d8719500663361f76607e7251d3e642d709078036",
+    "docs/investigations/r10k/stage1_attempt_v1/root_manifest.json": "61b2477503d862997911f96f95148ecad727b219b1245ebf660fba3c12b1bc75",
+    "docs/project_status/pre_research_review_record_v6.json": "db6443cba67b5a240dd62b15d07eaf8d06fccaad6659b5b3defff28e97daa83d",
+    "docs/project_status/OWNER_DEVELOPMENT_SEQUENCE_V1.md": "743dbc02e13784164b8907d84ac0edbb763c7d14be8c5f844575f03b4576a654",
+    "docs/project_status/owner_development_sequence_v1.json": "0082660d8b1bd72f8cd39cfa52c69959c83021121fcbbb4daf7dd51c0e57aaaa",
+    "docs/investigations/r9p/manifest_v1.json": "f0f7b7e8842783c1df2c6ade2dea2ad8cd0c496958361b1cce134e9de0cd0e56",
+    "docs/investigations/r9p/results_v1.json": "67ef77317f418e402bd5853b10648617971bebf8c3df81482d9e63a99e32a2d2",
+    "src/market_intel/foundation/fno_production_boundary.py": "dcde3cbf1cd2cb1d5e70527cacb7066daf50e9cf6e48eb6fe44df45af8fc11ea",
+    "pyproject.toml": "a6fcded2b042f3ab65769a158f84ba44a3b646c1390fc2667e07c556c5265664",
+    "tests/test_research_r9l_pdf_v6.py": "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5"
+  },
+  "artifact_hashes": {
+    "docs/investigations/r10l/plan_v1/blocker_reproduction.json": "25e985cb7ec682e474e9f639c31262717144f16809410836e5d9595fbeca0c39",
+    "docs/investigations/r10l/plan_v1/completion.json": "6147114a9e124bd5425a567dfdb46c0ae3a59714bd2509c1895c6c90435a3819",
+    "docs/investigations/r10l/plan_v1/dependency_adoption_decision.json": "029f8df65646eeb06e48d7261627172653f7fc22c197ca16cc3a6f2be50573d7",
+    "docs/investigations/r10l/plan_v1/evidence_privacy_contract.json": "2bc8ddc932781252e2c37fc1f4695ee399d64386bead889055151e12b1e36bcc",
+    "docs/investigations/r10l/plan_v1/implementation_acceptance_matrix.json": "2daa4237dfe340886de5629ba00496444f6b50474bc393bd92fe76293ae229ad",
+    "docs/investigations/r10l/plan_v1/option_comparison.json": "15e38a4dde9675cb1f2b1033db12bf47424034fc9b7751cbfad45bdf26f75464",
+    "docs/investigations/r10l/plan_v1/proposed_locator_contract.json": "3cb1084db82f74b0996522084788aa97dd713bae518d976ad902b71f4bdbcbba",
+    "docs/investigations/r10l/plan_v1/proposed_one_use_approval_schema.json": "0e0ef9675dc11b7b3437c9517c977cb289aea8d77a34b7b052927ae689b398e1",
+    "docs/investigations/r10l/plan_v1/proposed_production_activation_contract.json": "b43c2a47fa957c9d10444795c4a6e8674551a1d7364f2213d81ea08233a8df6c",
+    "docs/investigations/r10l/plan_v1/r9l_v6_test_reconciliation.json": "40c03b8927a7ee168f2f1d6bf3ca8f655d82f72b958e4981c574b0edc60c5df8",
+    "docs/investigations/r10l/plan_v1/resource_envelope_contract.json": "30ff811e0875387f35b9b6dde92116bc5188170eec12841fdb5262cab52761cd",
+    "docs/investigations/r10l/plan_v1/sidecar_decision_policy.json": "21e69d96417fdfb4528481cebd575daa1f9a17f6cd2c0bdd9819e526df978993",
+    "docs/investigations/r10l/plan_v1/threat_failure_matrix.json": "81e80c532cd7bbdd7ebf6d65e9a0046bba353e61892626ca337ee7bbff46130d",
+    "reports/FNO_PRODUCTION_BOUNDARY_REMEDIATION_AND_REAUTHORIZATION_PLAN.md": "38f58dc909e93ae4e76b3fc7d377d5b818c29de7cf768439696204902da32cba",
+    "tests/conftest.py": "4cf5a770ce45db6eb4177ad59f962127c2719cc86b99a6b0e388094c45abcd3a",
+    "tests/test_research_r10l_remediation_plan.py": "cc475e1ac47bc78928f9c91180626536350c78f89989df30e444f2c4f9e73490"
+  },
+  "authority": {
+    "locator_resolution": false,
+    "database_access": false,
+    "dependency_installation_or_adoption": false,
+    "implementation": false,
+    "research_or_backtesting": false,
+    "holdout_consumption": false,
+    "score_or_recommendation": false,
+    "broker_or_trading": false,
+    "next_milestone": false
+  },
+  "completion_state": "FNO_PRODUCTION_BOUNDARY_PLAN_READY_FOR_OWNER_REVIEW",
+  "payload_sha256": "cb386fa7ea94e053fa71c96c9cff43982d7462896c580c92b87bd77cd935de00"
+}

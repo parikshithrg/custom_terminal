@@ -1,0 +1,29 @@
+{
+  "schema_version": "r10l_r9l_v6_test_reconciliation_v1",
+  "classification": "FORWARD_SCOPE_AWARE_TEST_SEMANTICS",
+  "root_cause": "R9L test encoded generation-time absence of a v6 owner-review file as a permanent repository invariant; the later valid v6 review record made that assertion stale.",
+  "historical_state": {
+    "artifact": "docs/project_status/pre_research_generation_manifest_v6.json",
+    "meaning": "At PDF-v6 generation, owner review and execution authority were absent.",
+    "preserved": true,
+    "source_test_modified": false
+  },
+  "current_state": {
+    "artifact": "docs/project_status/pre_research_review_record_v6.json",
+    "meaning": "A later separately committed owner decision exists and grants only its exact recorded scope.",
+    "does_not_rewrite_historical_manifest": true
+  },
+  "pytest_resolution": {
+    "mechanism": "strict expected-failure marker applied by forward tests/conftest.py collection policy to the single stale node ID",
+    "reason": "preserve the hash-bound historical test while making its superseded temporal assertion explicit",
+    "unexpected_pass_is_failure": true,
+    "broad_exclusion": false
+  },
+  "forward_assertions": [
+    "R9L generation manifest still records no authority at generation time",
+    "R9L historical test hash remains unchanged",
+    "v6 owner-review record is separate and postdates the generation artifact",
+    "current authority is limited to the exact later review record",
+    "no old review overrides current state and no current review rewrites history"
+  ]
+}

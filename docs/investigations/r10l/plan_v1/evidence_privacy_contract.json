@@ -1,0 +1,46 @@
+{
+  "schema_version": "r10l_proposed_evidence_privacy_contract_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "usable": false,
+  "identity": {
+    "attempt_id": "SANITIZED_PREDECLARED_IDENTIFIER_ONLY",
+    "database_reference": "PRIVATE_FNO_DATABASE_V1",
+    "absolute_path": "PROHIBITED",
+    "user_identity": "PROHIBITED"
+  },
+  "allowed_evidence": [
+    "categorical gate results",
+    "sanitized schema names and declared types where separately approved",
+    "aggregate counts and bounded coverage metrics",
+    "query-template hashes and resource counters",
+    "sampled file-identity roots and non-path metadata",
+    "before-and-after identity comparison result",
+    "hash-chained lifecycle events",
+    "sanitized terminal errors"
+  ],
+  "prohibited_evidence": [
+    "raw market rows",
+    "absolute or relative private locator value",
+    "credentials tokens usernames or home directories",
+    "unbounded SQL definitions containing private values",
+    "database copies exports journals WAL SHM or temporary files"
+  ],
+  "publication_controls": {
+    "deterministic_canonical_json": true,
+    "immutable_attempt_directory": true,
+    "root_manifest_sha256": true,
+    "aggregate_output_byte_cap": 26214400,
+    "path_and_secret_scan_before_publication": true,
+    "unexpected_output_rejected": true,
+    "success_output_after_any_failure": false
+  },
+  "identity_checkpoints": [
+    "before approval consumption",
+    "immediately before target open",
+    "after each approved stage",
+    "after connection close",
+    "before evidence publication"
+  ],
+  "crash_recovery": "reconcile every consumed approval to one terminal state without restoring authority",
+  "abort_evidence_required": true
+}

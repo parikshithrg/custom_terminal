@@ -1,0 +1,82 @@
+{
+  "schema_version": "r10l_proposed_resource_envelope_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "usable": false,
+  "limits": {
+    "target_filesystem_bytes_delegated": {
+      "maximum": 268435456,
+      "unit": "bytes",
+      "enforced_by": "restricted VFS plus bounded preflight reader",
+      "admission": "reserve before underlying file read",
+      "failure": "READ_BUDGET_ABORT_NO_SUCCESS_OUTPUT",
+      "interpretation": "filesystem requests delegated to the target handle, not physical device traffic"
+    },
+    "logical_sqlite_bytes_requested": {
+      "maximum": 268435456,
+      "unit": "bytes",
+      "enforced_by": "restricted VFS cumulative xRead meter",
+      "admission": "charge the complete request before delegation with no refund",
+      "failure": "READ_BUDGET_ABORT_NO_SUCCESS_OUTPUT",
+      "mmap_policy": "PROHIBITED"
+    },
+    "statements": {
+      "maximum": 50,
+      "enforced_by": "fixed facade counter before prepare or execute",
+      "failure": "STATEMENT_LIMIT_ABORT"
+    },
+    "returned_rows": {
+      "maximum": 25000,
+      "enforced_by": "cumulative cursor iterator before row acceptance",
+      "failure": "ROW_LIMIT_DISCARD_BUFFER"
+    },
+    "serialized_output": {
+      "maximum": 26214400,
+      "unit": "bytes",
+      "enforced_by": "deterministic serializer cumulative byte counter",
+      "failure": "OUTPUT_LIMIT_DISCARD_BUFFER"
+    },
+    "process_committed_memory": {
+      "maximum": 536870912,
+      "unit": "bytes",
+      "enforced_by": "Windows Job Object per-process committed-memory limit",
+      "failure": "OS_ALLOCATION_DENIAL_OR_SUPERVISOR_ABORT"
+    },
+    "aggregate_job_committed_memory": {
+      "maximum": 805306368,
+      "unit": "bytes",
+      "enforced_by": "Windows Job Object aggregate committed-memory limit",
+      "failure": "OS_ALLOCATION_DENIAL_OR_SUPERVISOR_ABORT",
+      "acceptance_status": "MUST_BE_PROVEN_SYNTHETICALLY_BEFORE_ADOPTION"
+    },
+    "attempt_elapsed_time": {
+      "maximum": 1200,
+      "unit": "seconds",
+      "enforced_by": "external supervisor monotonic deadline and TerminateJobObject",
+      "maximum_cancellation_latency": 2,
+      "failure": "SUPERVISOR_TIMEOUT_TERMINAL_RECONCILIATION"
+    },
+    "statement_elapsed_time": {
+      "maximum": 5,
+      "unit": "seconds",
+      "enforced_by": "deadline retained across execute and fetch plus external supervisor",
+      "failure": "DEADLINE_DISCARD_BUFFER"
+    },
+    "query_plan_complexity": {
+      "maximum": 8,
+      "maximum_templates": 8,
+      "maximum_vm_progress_callbacks": 1000000,
+      "enforced_by": "hash-bound exact template facade authorizer and progress counter",
+      "failure": "TEMPLATE_OR_COMPLEXITY_ABORT"
+    },
+    "temporary_storage": {
+      "maximum": 0,
+      "unit": "bytes",
+      "enforced_by": "VFS refusal of every non-main open and fixed worker with no file-output API",
+      "failure": "OPEN_FORBIDDEN_ABORT",
+      "scope_limit": "not an OS sandbox against hostile same-user code"
+    }
+  },
+  "cumulative_across_attempt": true,
+  "limit_redefinition_requires_owner_review": true,
+  "application_estimates_count_as_enforcement": false
+}

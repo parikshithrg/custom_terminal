@@ -1,0 +1,39 @@
+{
+  "schema_version": "r10l_proposed_private_locator_contract_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "template_only": true,
+  "usable": false,
+  "grants_locator_resolution": false,
+  "sanitized_alias": "PRIVATE_FNO_DATABASE_V1",
+  "private_storage_requirements": {
+    "outside_git": true,
+    "single_configuration_record": true,
+    "absolute_path_never_emitted": true,
+    "credentials_prohibited": true
+  },
+  "resolution_requirements": {
+    "exactly_one_target": true,
+    "regular_file": true,
+    "directory_rejected": true,
+    "symlink_rejected": true,
+    "junction_rejected": true,
+    "reparse_point_rejected": true,
+    "device_rejected": true,
+    "network_resource_rejected_unless_separately_reviewed": true,
+    "parent_and_target_handles_pinned_during_attempt": true
+  },
+  "identity_binding": {
+    "binding_id": "REQUIRED_AFTER_SEPARATE_AUTHORIZED_IDENTITY_CEREMONY",
+    "configuration_content_sha256": "REQUIRED_PRIVATE_COMPARISON_ONLY",
+    "expected_size_bytes": "REQUIRED",
+    "sqlite_header_sha256": "REQUIRED",
+    "sampled_identity_algorithm": "ORDERED_64_POSITION_SAMPLED_IDENTITY_V1",
+    "sampled_identity_root": "REQUIRED",
+    "full_file_sha256": "OPTIONAL_ONLY_WHEN_SEPARATELY_BOUNDED",
+    "sidecar_state": "REQUIRED_EXACT_ENUMERATION",
+    "fail_on_any_material_change": true,
+    "silent_refresh_prohibited": true
+  },
+  "failure_result": "ABORT_NEW_BINDING_AND_SEPARATE_REAUTHORIZATION_REQUIRED",
+  "production_interlock_removed": false
+}

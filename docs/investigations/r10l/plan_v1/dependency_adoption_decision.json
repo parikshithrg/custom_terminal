@@ -1,0 +1,41 @@
+{
+  "schema_version": "r10l_dependency_adoption_decision_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "candidate": "APSW",
+  "recommendation": "CONDITIONALLY_ADOPT_FOR_DEDICATED_PRODUCTION_BOUNDARY_ONLY",
+  "adopted_now": false,
+  "installation_authorized": false,
+  "production_use_authorized": false,
+  "evaluated_pin": {
+    "package": "apsw",
+    "version": "3.53.4.0",
+    "python_abi": "cp314",
+    "platform": "win_amd64",
+    "wheel_sha256": "13bd0c01cada861ce9cd4a09ff36c5a245185477c5fe6ce52d266c46e69f76e5",
+    "bundled_sqlite": "3.53.4",
+    "license_evidence": "PACKAGE_METADATA_ANY_OSI_ONLY_REQUIRES_OWNER_REVIEW"
+  },
+  "required_before_adoption": [
+    "separate owner approval of this option and implementation scope",
+    "lock-file and wheel-hash verification from an approved package source",
+    "license and redistribution review",
+    "Python 3.14 and Windows regression matrix",
+    "SQLite runtime-difference tests against current application assumptions",
+    "software-composition and vulnerability review",
+    "synthetic R10L acceptance matrix passes in a clean reproducible environment",
+    "root environment remains unchanged until the approved implementation commit"
+  ],
+  "maintenance_policy": {
+    "exact_pin_required": true,
+    "automatic_upgrade": false,
+    "upgrade_requires_full_boundary_regression": true,
+    "wheel_or_runtime_hash_change_invalidates_activation": true,
+    "fallback_on_unavailable_or_unmaintained_dependency": "ABANDON_LOCAL_DATABASE_ROUTE"
+  },
+  "supply_chain_risks": [
+    "native binary wheel",
+    "bundled SQLite differs from standard-library runtime",
+    "VFS behavior may change across APSW or SQLite releases",
+    "published wheel digest does not prove reproducible build from tagged source"
+  ]
+}

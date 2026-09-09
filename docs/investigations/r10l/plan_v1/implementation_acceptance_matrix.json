@@ -1,0 +1,28 @@
+{
+  "schema_version": "r10l_implementation_acceptance_matrix_v1",
+  "classification": "NON_EXECUTABLE_FUTURE_TEST_PLAN",
+  "implementation_authorized": false,
+  "all_required": true,
+  "criteria": [
+    {"id":"A01","requirement":"dependency pin version wheel hash license and SQLite runtime validate","evidence":"clean-environment offline installation from approved cached wheel plus metadata review","failure":"BLOCK_IMPLEMENTATION"},
+    {"id":"A02","requirement":"public entrypoint accepts no path SQL or approval overrides","evidence":"source test CLI fuzz and entrypoint inventory","failure":"BLOCK_IMPLEMENTATION"},
+    {"id":"A03","requirement":"private locator resolves one regular non-reparse local file without disclosure","evidence":"synthetic directories files links junctions devices and redaction tests","failure":"BLOCK_ACTIVATION"},
+    {"id":"A04","requirement":"exact identity mismatch and binding refresh fail closed","evidence":"replacement truncation metadata and sampled-content mutation tests","failure":"BLOCK_ACTIVATION"},
+    {"id":"A05","requirement":"exact approval binds attempt executable commit dependency stages limits sidecars outputs and expiry","evidence":"field mutation malformed expiry mismatch and missing-field matrix","failure":"BLOCK_ACTIVATION"},
+    {"id":"A06","requirement":"one consumer wins and consumption commits before target connection","evidence":"multi-process race replay and connection trap tests","failure":"BLOCK_ACTIVATION"},
+    {"id":"A07","requirement":"one read-only main-file open and every other xOpen class is denied","evidence":"native APSW VFS open matrix including WAL SHM journal temp read-write create reopen","failure":"BLOCK_ACTIVATION"},
+    {"id":"A08","requirement":"logical requested and delegated bytes are cumulatively capped before I/O","evidence":"zero exact one-below repeated-offset multi-statement short-read and underlying-error tests across page sizes","failure":"BLOCK_ACTIVATION"},
+    {"id":"A09","requirement":"mmap shared memory extensions attach writes and unsafe pragmas are unavailable","evidence":"native authorizer VFS and direct challenge matrix","failure":"BLOCK_ACTIVATION"},
+    {"id":"A10","requirement":"rows output statements query complexity execute fetch and attempt time are cumulative","evidence":"boundary and one-over tests with zero success publication","failure":"BLOCK_ACTIVATION"},
+    {"id":"A11","requirement":"process and aggregate Job Object memory limits and descendant cleanup work","evidence":"safe bounded allocation controls timeout close supervisor-death and injected setup failures","failure":"BLOCK_ACTIVATION"},
+    {"id":"A12","requirement":"no-sidecar policy detects preexisting late transient and changed states","evidence":"native writer fixtures plus checkpoint fault injection","failure":"BLOCK_ACTIVATION"},
+    {"id":"A13","requirement":"every success abort failure and crash has one terminal reconciliation","evidence":"crash before consumption after consumption before open after open and during publication","failure":"BLOCK_ACTIVATION"},
+    {"id":"A14","requirement":"evidence is aggregate-only deterministic immutable bounded and path-secret safe","evidence":"known-answer hashes replacement refusal output cap and privacy scans","failure":"BLOCK_ACTIVATION"},
+    {"id":"A15","requirement":"R9D remains closed until exact reviewed activation object passes all gates","evidence":"all-fields-minus-one matrix connection trap and source assertions","failure":"BLOCK_ACTIVATION"},
+    {"id":"A16","requirement":"production code has no network research scoring broker or trading dependency","evidence":"import graph entrypoint and static capability inventory","failure":"BLOCK_ACTIVATION"},
+    {"id":"A17","requirement":"R10K R9L momentum golden and R10A holdout evidence remain byte-exact","evidence":"manifest hash regression","failure":"BLOCK_PUBLICATION"}
+  ],
+  "pass_result": "BOUNDARY_IMPLEMENTATION_SYNTHETICALLY_VALIDATED_AWAITING_SEPARATE_REAL_DATA_REVIEW",
+  "any_failure_result": "IMPLEMENTATION_NOT_ACCEPTED",
+  "real_database_access_after_pass": false
+}

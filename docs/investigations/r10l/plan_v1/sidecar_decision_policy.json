@@ -1,0 +1,51 @@
+{
+  "schema_version": "r10l_proposed_sidecar_decision_policy_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "usable": false,
+  "database_modification_permitted": false,
+  "rules": [
+    {
+      "state": "NO_SIDECARS_AND_MAIN_FILE_STABLE",
+      "decision": "PROCEED_ONLY_AFTER_ALL_OTHER_GATES_PASS",
+      "additional_check": "pin main-file handle and repeat namespace and identity checks at every checkpoint"
+    },
+    {
+      "state": "ROLLBACK_JOURNAL_PRESENT",
+      "decision": "ABORT",
+      "reason": "journal activity or stale state cannot be repaired or interpreted safely"
+    },
+    {
+      "state": "WAL_OR_SHM_PRESENT",
+      "decision": "ABORT",
+      "reason": "restricted candidate deliberately does not support WAL shared-memory semantics"
+    },
+    {
+      "state": "ACTIVE_WRITER_OR_MAIN_FILE_CHANGING",
+      "decision": "ABORT",
+      "reason": "read-only access does not establish a stable evidentiary snapshot"
+    },
+    {
+      "state": "STALE_SIDECAR_UNCERTAIN",
+      "decision": "ABORT_OR_REQUEST_SEPARATELY_APPROVED_IMMUTABLE_SNAPSHOT",
+      "reason": "absence of an active writer does not prove a sidecar is safe to ignore"
+    },
+    {
+      "state": "SIDECAR_OR_TEMP_OPEN_ATTEMPTED_BY_SQLITE",
+      "decision": "DENY_IN_VFS_AND_ABORT",
+      "reason": "the selected boundary supports one read-only main-file open only"
+    },
+    {
+      "state": "SIDECAR_APPEARS_DISAPPEARS_OR_CHANGES_DURING_ATTEMPT",
+      "decision": "ABORT_DISCARD_SUCCESS_OUTPUT_AND_RECONCILE_TERMINAL_STATE",
+      "reason": "discrete checks detected namespace instability"
+    }
+  ],
+  "prohibited_remediation": [
+    "delete sidecar",
+    "checkpoint WAL",
+    "copy database",
+    "repair database",
+    "retry under consumed approval"
+  ],
+  "continuous_quiescence_claimed": false
+}

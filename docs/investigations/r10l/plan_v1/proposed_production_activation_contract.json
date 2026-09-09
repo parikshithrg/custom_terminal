@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10l_proposed_production_activation_contract_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "template_only": true,
+  "usable": false,
+  "activation_authorized": false,
+  "r9d_interlock_state": "REMAINS_ACTIVE",
+  "all_required_conditions": [
+    "owner separately approves Option A implementation after reviewing R10L",
+    "restricted APSW/VFS implementation is committed and synthetically validated",
+    "dependency source version wheel hash license and runtime compatibility are reviewed",
+    "current clean source commit and executable hash match",
+    "proposed locator contract becomes an exact separately authorized private binding",
+    "exact one-use approval is sealed registered unused unexpired and binds the attempt ID",
+    "resource envelope sidecar policy exact templates and output contract hashes match",
+    "target identity matches before approval consumption",
+    "approval consumption commits before first target connection",
+    "protected evidence and R10A holdout remain unchanged"
+  ],
+  "replacement_rule": "R9D rejection may be replaced only by a reviewed commit whose tests prove every condition fails closed",
+  "mismatch_result": "ABORT_BEFORE_LOCATOR_OR_TARGET_ACCESS",
+  "partial_match_is_authority": false,
+  "current_artifact_can_activate": false
+}

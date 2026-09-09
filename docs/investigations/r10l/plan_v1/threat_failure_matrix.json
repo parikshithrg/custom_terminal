@@ -1,0 +1,21 @@
+{
+  "schema_version": "r10l_threat_failure_matrix_v1",
+  "classification": "NON_EXECUTABLE_PLAN_ONLY",
+  "threat_model": "ACCIDENT_AND_COMPONENT_FAILURE_WITH_FIXED_REVIEWED_CODE_NOT_HOSTILE_SAME_USER",
+  "rows": [
+    {"threat":"wrong or replaced target","prevent":"exact private binding plus pinned handles","detect":"pre-consumption and checkpoint identity","failure":"abort before connection or discard output","residual":"namespace race cannot be mathematically eliminated"},
+    {"threat":"symlink junction reparse or device escape","prevent":"handle-based regular-file and reparse checks","detect":"resolved handle identity and volume/path class","failure":"abort before content read","residual":"Windows privilege-limited native symlink test must be covered in approved CI"},
+    {"threat":"writer or changing database","prevent":"main-file share guard and no-sidecar policy","detect":"sidecar namespace and identity checkpoints","failure":"abort without repair","residual":"discrete sibling checks do not prove continuous directory quiescence"},
+    {"threat":"SQLite creates journal WAL SHM or temp file","prevent":"restricted VFS accepts exactly one read-only main open","detect":"xOpen refusal and namespace comparison","failure":"sticky failure and no success artifact","residual":"future native runtime paths require regression"},
+    {"threat":"read budget exceeded","prevent":"reserve requested and delegated bytes before xRead","detect":"cumulative meters","failure":"deny delegation discard buffer terminate attempt","residual":"not a measure of device-level physical reads"},
+    {"threat":"unbounded query or output","prevent":"hash-bound templates and cumulative limits","detect":"authorizer progress row and serializer counters","failure":"cancel and discard buffer","residual":"cancellation is cooperative until supervisor termination"},
+    {"threat":"memory or process-tree runaway","prevent":"suspended start then Job Object assignment","detect":"Job limits and supervisor deadline","failure":"TerminateJobObject and reconcile terminal state","residual":"aggregate memory limit still needs synthetic proof"},
+    {"threat":"approval replay or mismatch","prevent":"sealed attempt ID and unique durable registry","detect":"payload hashes uniqueness expiry and state transaction","failure":"reject before target connection","residual":"registry itself requires separately reviewed production location and backup policy"},
+    {"threat":"crash after consumption","prevent":"none; authority is intentionally consumed","detect":"incomplete attempt and event-ledger reconciliation","failure":"record ABORTED or FAILED without restoring permission","residual":"crash-time evidence may be partial"},
+    {"threat":"private path or raw-row disclosure","prevent":"sanitized alias and aggregate-only output contract","detect":"schema validator path and secret scans","failure":"reject publication and retain diagnostic only","residual":"pattern scans cannot prove universal absence of sensitive semantics"},
+    {"threat":"dependency substitution","prevent":"exact package version wheel hash and runtime binding","detect":"startup hash/version checks","failure":"abort before locator resolution","residual":"binary provenance remains dependent on approved distribution source"},
+    {"threat":"unauthorized research scope expansion","prevent":"catalog-only exact templates and authority booleans false","detect":"entrypoint inventory and output schema","failure":"reject command or artifact","residual":"later stages always require new owner review"}
+  ],
+  "database_opened": false,
+  "production_code_changed": false
+}

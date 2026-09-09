@@ -1,0 +1,42 @@
+{
+  "schema_version": "r10m_root_manifest_v1",
+  "milestone": "R.10M",
+  "classification": "SOURCE_CAPABILITY_GOVERNANCE_AND_DESIGN_EVIDENCE",
+  "source_commit": "09cf0cb",
+  "historical_bindings": {
+    "r9l_generation_commit": "d0102dc",
+    "r9l_historical_test_sha256": "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5",
+    "r10l_sealed_commit": "09cf0cb",
+    "r10k_and_r10l_artifacts_modified": false
+  },
+  "deleted_paths": ["tests/conftest.py"],
+  "artifact_hashes": {
+    "docs/investigations/r10m/source_route_v1/official_source_inventory.json": "d9170c56ffe6f3b9a9ad6bdec55387c5ebc732e4ef335fcfd37ac87bf24ad3bd",
+    "docs/investigations/r10m/source_route_v1/source_capability_matrix.json": "391bdb0f61333ae1463b42090f7df8089d05e54be0029e9326f1e06e7c1d14a5",
+    "docs/investigations/r10m/source_route_v1/free_vs_paid_boundary.json": "99b3556413d7c80b951ea2b890d0b8715246e61dc9da1d7f0167c25914deb9aa",
+    "docs/investigations/r10m/source_route_v1/stable_snapshot_decision.json": "756944d0fc5da91c981a887682ad1aec90d83d30aecb2ad30d13c1b88c81a14d",
+    "docs/investigations/r10m/source_route_v1/synthetic_resource_calibration.json": "cc95e3e0fbbe867268cd5d74a354d7a98eaf36beeaf93961913a1d10ceccd786",
+    "docs/investigations/r10m/source_route_v1/apsw_dependency_review.json": "c087129e58a198e6a0e70204c77554e5bc2fc90c686a87ea4b0061e29656c48c",
+    "docs/investigations/r10m/source_route_v1/local_route_timebox_decision.json": "e6a180bffa5e62899ffbd35a7b7e9345220abb71c79d2136ad1bba516fd1b3b5",
+    "docs/investigations/r10m/source_route_v1/website_feature_source_mapping.json": "4f267e933cbbfc8c67f03605256d9929875796bd3265ac1da6bd9c7dd31f718a",
+    "docs/investigations/r10m/source_route_v1/r9l_v6_reconciliation.json": "d04cf91de628b5b1b07d77404fd7562644c9c9a86c0c780fd5cb9837bc189ce1",
+    "docs/investigations/r10m/source_route_v1/completion.json": "d79f866e03af40f77cbc3e087b8b87c1a07096a6cdd182fadb6ef3bb5eb95dd0",
+    "reports/FNO_SOURCE_ROUTE_REASSESSMENT.md": "851cb6fff10d8bfd66d216830e826abff3a9425dc6b46dbc21e4f3d33dd724e2",
+    "reports/R10L_GOVERNANCE_REMEDIATION.md": "0bb0a760f5dc417f7a452e261b15f1c3b462987ff066c9713eb357f75403c21e",
+    "tests/test_research_r9l_pdf_v6.py": "c5208190b4f3dd3bd9724c45fc8deafcf3e7fc523abeff95425b3f19d28f166a",
+    "tests/test_research_r10l_remediation_plan.py": "7ac03a16fd6ac0cce15dfe06f8c9506a9a91f4730bc94ab2196a441efa851db6",
+    "tests/test_research_r10m_source_route.py": "ef03743414e0ce41da654ac45ed25155f4dc33b683287fc6405550ff48ea74f2"
+  },
+  "authority": {
+    "local_database_access": false,
+    "bulk_external_acquisition": false,
+    "apsw_installation_or_adoption": false,
+    "research_or_backtesting": false,
+    "scores_or_recommendations": false,
+    "holdout_consumption": false,
+    "broker_or_trading": false,
+    "next_milestone": false
+  },
+  "completion_decision": "HYBRID_FNO_ROUTE_RECOMMENDED",
+  "payload_sha256": "0cb17e1bbdc3643a0401a94409005012a1132d2022d729509ddf6ebdeafefd3e"
+}

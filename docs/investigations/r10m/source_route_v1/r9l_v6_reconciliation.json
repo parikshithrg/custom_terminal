@@ -1,0 +1,15 @@
+{
+  "schema_version": "r10m_r9l_v6_reconciliation_v1",
+  "forward_correction": true,
+  "global_pytest_collection_hook_removed": true,
+  "xfail_workaround_removed": true,
+  "historical_generation_commit": "d0102dc",
+  "historical_test_sha256": "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5",
+  "review_record_absent_in_historical_tree": true,
+  "later_review_record": "docs/project_status/pre_research_review_record_v6.json",
+  "later_review_postdates_generation": true,
+  "later_authorized_scope": "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1",
+  "new_scope_authorized_by_old_review": false,
+  "historical_state_rewritten": false,
+  "validation_model": "historical claims resolve against sealed Git tree; current authority resolves against current explicit review records"
+}

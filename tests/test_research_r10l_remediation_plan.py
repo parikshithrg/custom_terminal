@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 from market_intel.foundation.fno_production_boundary import (
@@ -17,6 +18,13 @@ from market_intel.foundation.fno_production_boundary import (
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "docs/investigations/r10l/plan_v1"
 REPORT = ROOT / "reports/FNO_PRODUCTION_BOUNDARY_REMEDIATION_AND_REAUTHORIZATION_PLAN.md"
+R10L_COMMIT = "09cf0cb"
+
+
+def git_bytes(commit: str, path: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{commit}:{path}"], cwd=ROOT, check=True, capture_output=True
+    ).stdout
 
 
 def load(name: str) -> dict:
@@ -146,7 +154,9 @@ def test_r9l_historical_bytes_and_forward_v6_authority_coexist() -> None:
     reconciliation = load("r9l_v6_test_reconciliation.json")
     generation = json.loads((ROOT / "docs/project_status/pre_research_generation_manifest_v6.json").read_text())
     review = json.loads((ROOT / "docs/project_status/pre_research_review_record_v6.json").read_text())
-    assert sha(ROOT / "tests/test_research_r9l_pdf_v6.py") == "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5"
+    assert hashlib.sha256(git_bytes(
+        "d0102dc", "tests/test_research_r9l_pdf_v6.py"
+    )).hexdigest() == "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5"
     assert generation["owner_review_recorded"] is False
     assert all(value is False for value in generation["execution_authority"].values())
     assert review["review_status"] == "REPORT_REVIEWED_CONFIRMED_ACCURATE"
@@ -175,7 +185,9 @@ def test_completion_and_manifest_validate() -> None:
     assert completion["completion_state"] == "FNO_PRODUCTION_BOUNDARY_PLAN_READY_FOR_OWNER_REVIEW"
     assert completion["database_opened"] is False
     for relative, expected in manifest["artifact_hashes"].items():
-        assert sha(ROOT / relative) == expected
+        # R10L is immutable historical evidence.  Forward corrections are
+        # checked against the sealed R10L commit, not today's mutable paths.
+        assert hashlib.sha256(git_bytes(R10L_COMMIT, relative)).hexdigest() == expected
     body = dict(manifest)
     expected_payload = body.pop("payload_sha256")
     canonical = json.dumps(body, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n"

@@ -1,0 +1,72 @@
+{
+  "schema_version": "r10m_source_capability_matrix_v1",
+  "status_vocabulary": ["PASS", "PARTIAL", "FAIL", "UNKNOWN", "NOT_APPLICABLE", "REQUIRES_SEPARATE_AUTHORIZATION"],
+  "routes": [
+    {
+      "id": "NSE_OFFICIAL_FREE_REPORTS",
+      "evidence_ids": ["NSE_ALL_REPORTS_DERIVATIVES", "NSE_UDIFF_FORMATS", "NSE_RESEARCH_DATA_LIST"],
+      "capabilities": {
+        "acquisition_cost": "PARTIAL", "official_status": "PASS", "legal_retention_status": "REQUIRES_SEPARATE_AUTHORIZATION", "historical_depth": "UNKNOWN",
+        "daily_ohlc": "PASS", "intraday_ohlc": "UNKNOWN", "settlement_price": "PASS", "volume": "PASS", "open_interest": "PASS",
+        "futures": "PASS", "options": "PASS", "expired_contracts": "PARTIAL", "contract_master": "PASS", "underlying_mapping": "PARTIAL",
+        "expiry": "PASS", "strike_option_type": "PASS", "lot_size": "PASS", "correction_history": "UNKNOWN", "point_in_time_availability": "PARTIAL",
+        "reproducibility": "PARTIAL", "survivorship_expiry_completeness": "UNKNOWN", "operational_complexity": "PARTIAL", "current_qualification_status": "PARTIAL"
+      },
+      "website_features_supported": ["daily futures history", "open-interest changes", "participant positioning", "rollover", "put-call measures"],
+      "critical_gaps": ["date ranges and archive completeness not yet qualified", "retention and unattended retrieval require review", "legacy and UDiFF schemas differ"]
+    },
+    {
+      "id": "BSE_OFFICIAL_DERIVATIVES",
+      "evidence_ids": ["BSE_EQUITY_DERIVATIVES_FORMAT", "BSE_UDIFF_GUIDANCE"],
+      "capabilities": {
+        "acquisition_cost": "UNKNOWN", "official_status": "PASS", "legal_retention_status": "UNKNOWN", "historical_depth": "UNKNOWN",
+        "daily_ohlc": "PASS", "intraday_ohlc": "UNKNOWN", "settlement_price": "PASS", "volume": "PASS", "open_interest": "PASS",
+        "futures": "PASS", "options": "PASS", "expired_contracts": "UNKNOWN", "contract_master": "PARTIAL", "underlying_mapping": "PARTIAL",
+        "expiry": "PASS", "strike_option_type": "PASS", "lot_size": "PARTIAL", "correction_history": "UNKNOWN", "point_in_time_availability": "UNKNOWN",
+        "reproducibility": "UNKNOWN", "survivorship_expiry_completeness": "UNKNOWN", "operational_complexity": "PARTIAL", "current_qualification_status": "PARTIAL"
+      },
+      "website_features_supported": ["BSE-only daily derivatives facts"],
+      "critical_gaps": ["documented formats do not prove archive depth", "historical liquidity and useful coverage not qualified", "NSE and BSE contracts must remain distinct"]
+    },
+    {
+      "id": "SEBI_STATISTICS",
+      "evidence_ids": ["SEBI_FPI_DERIVATIVE_TRADES"],
+      "capabilities": {
+        "acquisition_cost": "PASS", "official_status": "PASS", "legal_retention_status": "UNKNOWN", "historical_depth": "PARTIAL",
+        "daily_ohlc": "NOT_APPLICABLE", "intraday_ohlc": "NOT_APPLICABLE", "settlement_price": "NOT_APPLICABLE", "volume": "PARTIAL", "open_interest": "PARTIAL",
+        "futures": "PARTIAL", "options": "PARTIAL", "expired_contracts": "NOT_APPLICABLE", "contract_master": "NOT_APPLICABLE", "underlying_mapping": "NOT_APPLICABLE",
+        "expiry": "NOT_APPLICABLE", "strike_option_type": "NOT_APPLICABLE", "lot_size": "NOT_APPLICABLE", "correction_history": "UNKNOWN", "point_in_time_availability": "PARTIAL",
+        "reproducibility": "PARTIAL", "survivorship_expiry_completeness": "NOT_APPLICABLE", "operational_complexity": "PASS", "current_qualification_status": "PARTIAL"
+      },
+      "website_features_supported": ["participant positioning", "regulatory context"],
+      "critical_gaps": ["aggregate/regulatory evidence only", "not contract-level history"]
+    },
+    {
+      "id": "KITE_CONNECT",
+      "evidence_ids": ["KITE_INSTRUMENTS", "KITE_HISTORICAL"],
+      "capabilities": {
+        "acquisition_cost": "REQUIRES_SEPARATE_AUTHORIZATION", "official_status": "FAIL", "legal_retention_status": "UNKNOWN", "historical_depth": "PARTIAL",
+        "daily_ohlc": "PASS", "intraday_ohlc": "PARTIAL", "settlement_price": "UNKNOWN", "volume": "PASS", "open_interest": "PARTIAL",
+        "futures": "PASS", "options": "PARTIAL", "expired_contracts": "PARTIAL", "contract_master": "PARTIAL", "underlying_mapping": "PARTIAL",
+        "expiry": "PASS", "strike_option_type": "PASS", "lot_size": "PASS", "correction_history": "UNKNOWN", "point_in_time_availability": "PARTIAL",
+        "reproducibility": "PARTIAL", "survivorship_expiry_completeness": "FAIL", "operational_complexity": "PARTIAL", "current_qualification_status": "PARTIAL"
+      },
+      "website_features_supported": ["current option chain", "current futures curve", "limited continuous daily futures"],
+      "critical_gaps": ["account and API application required", "current dump omits expired instruments", "continuous history does not supply expired options", "daily instrument snapshots would need retention review"]
+    },
+    {
+      "id": "EXISTING_LOCAL_FNO_DATABASE",
+      "evidence_ids": [],
+      "capabilities": {
+        "acquisition_cost": "UNKNOWN", "official_status": "UNKNOWN", "legal_retention_status": "UNKNOWN", "historical_depth": "UNKNOWN",
+        "daily_ohlc": "UNKNOWN", "intraday_ohlc": "UNKNOWN", "settlement_price": "UNKNOWN", "volume": "UNKNOWN", "open_interest": "UNKNOWN",
+        "futures": "UNKNOWN", "options": "UNKNOWN", "expired_contracts": "UNKNOWN", "contract_master": "UNKNOWN", "underlying_mapping": "UNKNOWN",
+        "expiry": "UNKNOWN", "strike_option_type": "UNKNOWN", "lot_size": "UNKNOWN", "correction_history": "UNKNOWN", "point_in_time_availability": "UNKNOWN",
+        "reproducibility": "UNKNOWN", "survivorship_expiry_completeness": "UNKNOWN", "operational_complexity": "FAIL", "current_qualification_status": "FAIL"
+      },
+      "website_features_supported": [],
+      "critical_gaps": ["unopened during R10M", "provenance and schema unqualified", "no defensible stable snapshot", "resource envelope not applicable to the real layout"]
+    }
+  ],
+  "decision": "HYBRID_FNO_ROUTE_RECOMMENDED"
+}

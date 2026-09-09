@@ -1,0 +1,19 @@
+{
+  "schema_version": "r10m_website_feature_source_mapping_v1",
+  "rule": "BUILD_INTERACTIVE_SKELETON_WITH_MOCK_DATA_BEFORE_REAL_INGESTION",
+  "features": [
+    {"feature": "current option chain", "state": "supportable", "sources": ["KITE_CONNECT"], "condition": "current session and entitlement only"},
+    {"feature": "futures curve", "state": "supportable", "sources": ["KITE_CONNECT", "NSE_OFFICIAL_FREE_REPORTS"], "condition": "current contracts; do not imply history"},
+    {"feature": "daily futures history", "state": "partially supportable", "sources": ["NSE_OFFICIAL_FREE_REPORTS", "KITE_CONNECT"], "condition": "qualify archive range, correction and retention first"},
+    {"feature": "daily expired-option history", "state": "hidden pending evidence", "sources": ["NSE_OFFICIAL_FREE_REPORTS"], "condition": "requires complete historical contracts and daily facts"},
+    {"feature": "intraday derivative history", "state": "remove/defer", "sources": [], "condition": "no qualified free historical route"},
+    {"feature": "open-interest changes", "state": "partially supportable", "sources": ["NSE_OFFICIAL_FREE_REPORTS", "KITE_CONNECT"], "condition": "daily official archive qualification required"},
+    {"feature": "participant positioning", "state": "partially supportable", "sources": ["NSE_OFFICIAL_FREE_REPORTS", "SEBI_STATISTICS"], "condition": "aggregate interpretation only"},
+    {"feature": "derivatives breadth or sentiment", "state": "mock-only", "sources": ["NSE_OFFICIAL_FREE_REPORTS"], "condition": "definition and research validation deferred"},
+    {"feature": "rollover", "state": "hidden pending evidence", "sources": ["NSE_OFFICIAL_FREE_REPORTS"], "condition": "contract continuity and expiry coverage required"},
+    {"feature": "implied volatility", "state": "hidden pending evidence", "sources": ["NSE_OFFICIAL_FREE_REPORTS", "KITE_CONNECT"], "condition": "needs qualified option, underlying, rate and contract inputs"},
+    {"feature": "put-call measures", "state": "hidden pending evidence", "sources": ["NSE_OFFICIAL_FREE_REPORTS"], "condition": "needs complete strike/expiry/OI population"},
+    {"feature": "historical option-chain replay", "state": "remove/defer", "sources": [], "condition": "no qualified complete expired-options snapshot route"}
+  ],
+  "calculations_performed": false
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "r10m_free_vs_paid_boundary_v1",
+  "policy": ["Prefer freely published official exchange reports", "Use regulator aggregates as supplements", "Use already-authorized Kite only within its current-data scope", "Exclude paid exchange EOD, order and trade products"],
+  "free_published_reports": ["NSE All Reports derivatives files", "BSE published derivatives reports and formats", "SEBI published statistics"],
+  "not_assumed_free_or_permitted": ["NSE research-data products or archives whose terms require agreement", "unattended archive retrieval", "retention or redistribution not expressly addressed"],
+  "paid_excluded": true,
+  "permission_is_not_data_quality_evidence": true
+}

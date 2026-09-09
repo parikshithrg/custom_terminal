@@ -2,12 +2,32 @@
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 from research_contracts.pre_research_review import compute_research_state_fingerprint
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "docs/project_status/pre_research_generation_manifest_v6.json"
+R9L_GENERATION_COMMIT = "d0102dc"
+R9L_TEST_SHA256 = "11433b539d098cd7a057175ff26393ca45e50718fe8cd4459392a69c4582f3a5"
+
+
+def git_bytes(commit: str, path: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{commit}:{path}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    ).stdout
+
+
+def git_path_exists(commit: str, path: str) -> bool:
+    return subprocess.run(
+        ["git", "cat-file", "-e", f"{commit}:{path}"],
+        cwd=ROOT,
+        capture_output=True,
+    ).returncode == 0
 
 
 def load():
@@ -26,7 +46,12 @@ def test_exact_hashes_and_complete_investigation_bindings():
     for row in rows:
         path = Path(row["path"])
         assert not path.is_absolute() and ".." not in path.parts
-        assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == row["sha256"]
+        payload = (
+            git_bytes(R9L_GENERATION_COMMIT, row["path"])
+            if row["path"] == "tests/test_research_r9l_pdf_v6.py"
+            else (ROOT / path).read_bytes()
+        )
+        assert hashlib.sha256(payload).hexdigest() == row["sha256"]
     paths = {r["path"] for r in m["evidence_inputs"]}
     for milestone, assessment in (("r9j", "assessment"), ("r9k", "feasibility")):
         for name in ("manifest", "results", assessment):
@@ -44,7 +69,31 @@ def test_nonapproval_generation_has_no_new_authority():
     assert m["recommendation_status"] == "PROPOSED_NOT_APPROVED"
     assert m["owner_review_recorded"] is False
     assert m["execution_authority"] and all(v is False for v in m["execution_authority"].values())
-    assert not (ROOT / "docs/project_status/pre_research_review_record_v6.json").exists()
+    # The claim is point-in-time evidence.  Test it against the R.9L tree,
+    # rather than pretending that a valid later review can never be added.
+    assert hashlib.sha256(git_bytes(
+        R9L_GENERATION_COMMIT, "tests/test_research_r9l_pdf_v6.py"
+    )).hexdigest() == R9L_TEST_SHA256
+    assert not git_path_exists(
+        R9L_GENERATION_COMMIT,
+        "docs/project_status/pre_research_review_record_v6.json",
+    )
+
+
+def test_later_v6_review_is_forward_limited_authority():
+    generation = load()
+    review = json.loads(
+        (ROOT / "docs/project_status/pre_research_review_record_v6.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert review["reviewed_at"] > generation["generation_timestamp"]
+    assert review["review_status"] == "REPORT_REVIEWED_CONFIRMED_ACCURATE"
+    assert review["authorized_scope"]["id"] == "LOCAL_FNO_DATABASE_READ_ONLY_QUALIFICATION_STAGE_1"
+    assert all(value is False for value in review["prohibited_actions_authorized"].values())
+    assert generation["owner_review_recorded"] is False
+    assert all(value is False for value in generation["execution_authority"].values())
+    assert "R10M" not in json.dumps(review)
 
 
 def test_pdf_complete_and_visually_verified():

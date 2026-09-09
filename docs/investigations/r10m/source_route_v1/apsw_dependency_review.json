@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10m_apsw_dependency_review_v1",
+  "review_type": "NON_INSTALLING",
+  "installed_or_adopted": false,
+  "candidate": {"package": "apsw", "version": "3.53.4.0", "wheel": "apsw-3.53.4.0-cp314-cp314-win_amd64.whl", "sha256": "13bd0c01cada861ce9cd4a09ff36c5a245185477c5fe6ce52d266c46e69f76e5", "python_abi": "cp314", "platform": "win_amd64", "bundled_sqlite": "3.53.4"},
+  "authoritative_sources": ["https://pypi.org/project/apsw/3.53.4.0/", "https://github.com/rogerbinns/apsw/tree/3.53.4.0", "https://raw.githubusercontent.com/rogerbinns/apsw/3.53.4.0/LICENSE", "https://github.com/rogerbinns/apsw/security"],
+  "license": "At the user's option, any OSI-approved license; exact upstream LICENSE text remains the authority.",
+  "release_provenance": "PyPI Trusted Publishing and upstream tagged release are documented; the retained candidate wheel hash remains the exact binding.",
+  "signature_integrity": "PyPI supplies digests and publish attestations; no separately retained detached wheel signature was found in this review.",
+  "known_vulnerability_review": "Upstream security page showed no published repository advisories at review time; this is not a guarantee, and bundled SQLite/CPython advisories must also be monitored.",
+  "previously_demonstrated": ["synthetic VFS xRead metering", "one-main-file open enforcement", "cumulative row/output/deadline failures", "exact-template and authorizer rejection"],
+  "documentation_claims": ["full SQLite C API exposure", "custom VFS support", "different DB-API behavior from Python sqlite3"],
+  "unverified_production_assumptions": ["stable external snapshot", "behavior on the unopened 45 GB layout", "real schema/index fitness", "reproducible rebuild of the published wheel", "complete future vulnerability status"],
+  "behavioral_differences_from_sqlite3": ["APSW exposes SQLite semantics and VFS APIs directly", "APSW is not intended to be DB-API interchangeable", "exception, transaction and callback behavior requires dedicated regression tests"],
+  "maintenance_policy": {"exact_pin": true, "automatic_upgrade": false, "upgrade_requires_full_synthetic_boundary_regression": true, "wheel_or_sqlite_change_invalidates_prior_activation": true},
+  "review_result": "CONDITIONALLY_ACCEPTABLE_DEPENDENCY_BUT_ROUTE_PREREQUISITES_FAIL"
+}

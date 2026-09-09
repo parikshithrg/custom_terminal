@@ -1,0 +1,36 @@
+{
+  "schema_version": "r10m_synthetic_resource_calibration_v1",
+  "classification": "SYNTHETIC_ONLY_NONCANONICAL",
+  "source_evidence": "docs/investigations/r9p/results_v1.json",
+  "observations": [
+    {"page_size": 512, "fixture_bytes": 36352, "logical_read_bytes": 36484, "returned_rows": 37},
+    {"page_size": 1024, "fixture_bytes": 49152, "logical_read_bytes": 25732, "returned_rows": 37},
+    {"page_size": 4096, "fixture_bytes": 159744, "logical_read_bytes": 28804, "returned_rows": 37}
+  ],
+  "questions": [
+    {"id": "database_header", "template": "READ_FIXED_SQLITE_HEADER", "index_requirement": "NONE", "bounded_without_real_schema": true},
+    {"id": "catalog", "template": "SELECT type,name,tbl_name,rootpage,sql FROM sqlite_schema ORDER BY type,name", "index_requirement": "INTERNAL_SCHEMA", "bounded_without_real_schema": false},
+    {"id": "table_columns", "template": "PRAGMA table_xinfo(BOUND_CATALOG_NAME)", "index_requirement": "NONE", "bounded_without_real_schema": false},
+    {"id": "indexes", "template": "PRAGMA index_list(BOUND_CATALOG_NAME) plus PRAGMA index_xinfo(BOUND_INDEX_NAME)", "index_requirement": "NONE", "bounded_without_real_schema": false},
+    {"id": "foreign_keys", "template": "PRAGMA foreign_key_list(BOUND_CATALOG_NAME)", "index_requirement": "NONE", "bounded_without_real_schema": false},
+    {"id": "database_versions", "template": "PRAGMA page_size,page_count,schema_version,user_version,application_id", "index_requirement": "NONE", "bounded_without_real_schema": true},
+    {"id": "coverage_min_max", "template": "SELECT min(date),max(date),count(*) FROM BOUND_TABLE", "index_requirement": "DATE_LEADING_INDEX_REQUIRED", "bounded_without_real_schema": false},
+    {"id": "field_nullability_sample", "template": "BOUNDED_INDEX_RANGE_AGGREGATES_ONLY", "index_requirement": "DATE_AND_CONTRACT_INDEX_REQUIRED", "bounded_without_real_schema": false}
+  ],
+  "proposed_metadata_only_limits": {
+    "minimum_useful_logical_read_bytes": 1048576,
+    "maximum_safe_logical_read_bytes": 16777216,
+    "maximum_returned_rows": 1000,
+    "maximum_serialized_output_bytes": 2097152,
+    "maximum_statements": 20,
+    "maximum_attempt_seconds": 120,
+    "maximum_statement_seconds": 5,
+    "maximum_templates": 8,
+    "temporary_storage_bytes": 0
+  },
+  "derivation": "R9P measured at most 36,484 logical bytes for 37-row synthetic catalogs across three page sizes. One MiB is a conservative minimum-useful floor and 16 MiB a metadata-only fail-closed ceiling; row, output, statement and time caps are deliberately bounded diagnostic limits, not proof for a 45 GB schema.",
+  "replaces_r10l_limits": false,
+  "real_target_applicability": "UNKNOWN_UNTIL_SCHEMA_AND_INDEXES_ARE_KNOWN",
+  "unbounded_checks": ["full coverage counts without suitable indexes", "duplicate scans", "missingness scans", "contract continuity scans", "market-row quality scans"],
+  "calibration_conclusion": "DOES_NOT_SUPPORT_USEFUL_BOUNDED_REAL_QUALIFICATION"
+}

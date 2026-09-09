@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10m_stable_snapshot_decision_v1",
+  "database_opened": false,
+  "decision": "NO_DEFENSIBLE_CURRENT_STABLE_SNAPSHOT_MECHANISM",
+  "candidates": [
+    {"mechanism": "exclusive Windows main-file sharing", "status": "PARTIAL", "finding": "Can deny competing opens of the main handle but does not prove the producer is quiescent or bind the complete directory/sidecar namespace."},
+    {"mechanism": "producer-supplied verified quiescence", "status": "UNKNOWN", "finding": "No producer attestation or documented offline state is retained."},
+    {"mechanism": "owner-supplied immutable external snapshot", "status": "REQUIRES_SEPARATE_AUTHORIZATION", "finding": "Could provide a defensible input if created outside this project under a later approved workflow; none exists for this milestone."},
+    {"mechanism": "before-and-after identity checks", "status": "FAIL", "finding": "Discrete checks cannot exclude an inconsistent read between checkpoints."}
+  ],
+  "same_user_mutation_protection": "UNKNOWN",
+  "sidecar_namespace_stability": "UNKNOWN",
+  "local_route_viability": "UNSUITABLE_UNTIL_EXTERNAL_IMMUTABLE_SNAPSHOT_EXISTS"
+}

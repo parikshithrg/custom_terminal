@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10m_local_route_timebox_decision_v1",
+  "database_state": "LOCATED_AND_SAMPLED_NOT_QUALIFIED",
+  "database_opened": false,
+  "conditions": {
+    "defensible_stable_snapshot": false,
+    "apsw_review_passes": true,
+    "synthetic_calibration_supports_useful_bounded_queries": false,
+    "material_unique_capability_proven": false
+  },
+  "all_conditions_required": true,
+  "decision": "DEFER_OR_ABANDON_LOCAL_FNO_DATABASE_ROUTE",
+  "remaining_synthetic_implementation_milestones": 0,
+  "reconsider_only_if": ["owner supplies a separately approved immutable snapshot", "provenance and permitted use are evidenced", "official route qualification exposes a material unmet capability", "a new bounded design is separately reviewed"],
+  "sunk_cost_used_as_decision_factor": false
+}

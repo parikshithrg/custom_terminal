@@ -1,0 +1,87 @@
+{
+  "schema_version": "r10m_official_source_inventory_v1",
+  "recorded_at": "2026-09-09",
+  "method": "DOCUMENTATION_ONLY_NO_LIVE_DATA_CALLS_OR_BULK_ACQUISITION",
+  "sources": [
+    {
+      "id": "NSE_ALL_REPORTS_DERIVATIVES",
+      "organization": "NSE",
+      "url": "https://www.nseindia.com/all-reports-derivatives",
+      "evidence": "Lists F&O UDiFF Common Bhavcopy Final, legacy bhavcopies, MII contract files, settlement, open-interest, participant, ban and activity reports; legacy bhavcopy discontinuation is stated.",
+      "access": "PARTIAL",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "NSE_UDIFF_FORMATS",
+      "organization": "NSE",
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "evidence": "Publishes UDiFF formats and test-file references across FO and other segments.",
+      "access": "PASS",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "NSE_RESEARCH_DATA_LIST",
+      "organization": "NSE",
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/Data%20list%20under%20NSE%20Data%20Sharing%20Policy%20for%20Research%20and%20Analysis_20250728.pdf",
+      "evidence": "Identifies archives of daily/monthly derivatives reports as research-data products; it is not itself a grant of retrieval, retention or redistribution rights.",
+      "access": "PARTIAL",
+      "retention": "REQUIRES_SEPARATE_AUTHORIZATION"
+    },
+    {
+      "id": "BSE_EQUITY_DERIVATIVES_FORMAT",
+      "organization": "BSE",
+      "url": "https://www.bseindia.com/downloads1/File_Format_Equity_Derivatives.pdf",
+      "evidence": "Documents equity-derivatives report fields including price, settlement, volume and open interest.",
+      "access": "PASS",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "BSE_UDIFF_GUIDANCE",
+      "organization": "BSE",
+      "url": "https://www.bseindia.com/downloads1/Annexure_A_SEBI_guidance_document_having_the_UDiFF_Standards_for_Generation_and_Implementation.pdf",
+      "evidence": "Documents UDiFF standards; does not prove archive depth or traded liquidity.",
+      "access": "PASS",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "SEBI_FPI_DERIVATIVE_TRADES",
+      "organization": "SEBI",
+      "url": "https://www.sebi.gov.in/statistics/fpi-investment/derivative-trades.html",
+      "evidence": "Publishes FPI derivative-trade statistics and dated archive entries; aggregate evidence only.",
+      "access": "PASS",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "KITE_INSTRUMENTS",
+      "organization": "Zerodha Kite Connect",
+      "url": "https://kite.trade/docs/connect/v3/market-quotes/",
+      "evidence": "Documents the current instrument dump and quote interfaces; current tradable instruments are not a historical contract master.",
+      "access": "REQUIRES_SEPARATE_AUTHORIZATION",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "KITE_HISTORICAL",
+      "organization": "Zerodha Kite Connect",
+      "url": "https://kite.trade/docs/connect/v3/historical/",
+      "evidence": "Documents candles, optional OI and continuous daily futures; continuous mode is not expired-options coverage.",
+      "access": "REQUIRES_SEPARATE_AUTHORIZATION",
+      "retention": "UNKNOWN"
+    },
+    {
+      "id": "APSW_PYPI_3_53_4_0",
+      "organization": "Python Package Index",
+      "url": "https://pypi.org/project/apsw/3.53.4.0/",
+      "evidence": "Official release metadata, wheel hashes and publishing provenance.",
+      "access": "PASS",
+      "retention": "NOT_APPLICABLE"
+    },
+    {
+      "id": "APSW_SOURCE_TAG",
+      "organization": "APSW upstream",
+      "url": "https://github.com/rogerbinns/apsw/tree/3.53.4.0",
+      "evidence": "Tagged source, license, changelog and security policy.",
+      "access": "PASS",
+      "retention": "NOT_APPLICABLE"
+    }
+  ]
+}

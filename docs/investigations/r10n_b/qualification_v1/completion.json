@@ -1,0 +1,32 @@
+{
+  "apsw_used": false,
+  "completion_decision": "SINGLE_DATE_PACKAGE_TECHNICALLY_QUALIFIED",
+  "files_qualified": 2,
+  "holdout_accessed": false,
+  "kite_used": false,
+  "local_fno_database_accessed": false,
+  "milestone": "R.10N-B",
+  "post_confirmation_acquisition_performed": false,
+  "qualified_preexisting_hash_bound_package": true,
+  "raw_rows_retained_in_evidence": false,
+  "reproducibility_limitations": [
+    "Source payloads remain local and ignored by Git.",
+    "One date cannot establish historical schema stability or correction behavior.",
+    "Permission is limited to the owner's stated non-commercial technical qualification scope."
+  ],
+  "research_backtest_scoring_recommendation_or_trading": false,
+  "schema_version": "r10nb_completion_v1",
+  "single_date_only": true,
+  "validation": {
+    "focused_r10nb_downloader_r10na": "46_PASS",
+    "r10nb_related_root_failures": 0,
+    "relevant_fno_governance": "41_PASS",
+    "root_final": "833_PASS_1_FAIL_4_SKIP_7_WARN",
+    "root_final_failure": "PRE_EXISTING_R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC",
+    "root_pre_entrypoint_correction": "830_PASS_4_FAIL_4_SKIP_7_WARN",
+    "root_pre_entrypoint_failures": [
+      "TWO_NEW_ENTRYPOINT_INVENTORY_DIAGNOSTICS_CORRECTED_WITHOUT_CHANGING_INVENTORY",
+      "TWO_PRE_EXISTING_R9K_NATIVE_SLEEP_NEGATIVE_0_003_SECOND_DIAGNOSTICS"
+    ]
+  }
+}

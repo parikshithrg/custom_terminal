@@ -1,0 +1,114 @@
+{
+  "bounded_sanitized_examples": [],
+  "contract_field_states": {
+    "expiry": {
+      "PRESENT": 78603
+    },
+    "id": {
+      "PRESENT": 78603
+    },
+    "lot": {
+      "PRESENT": 78603
+    },
+    "option": {
+      "NOT_APPLICABLE": 665,
+      "PRESENT": 77938
+    },
+    "strike": {
+      "NOT_APPLICABLE": 665,
+      "PRESENT": 77938
+    }
+  },
+  "contract_identity": {
+    "duplicate_keys": 0,
+    "malformed_rows": 0,
+    "unique_ids": 78603
+  },
+  "correction_finality": {
+    "filename_marks_final": true,
+    "single_observation_can_establish_later_corrections": false
+  },
+  "fact_field_states": {
+    "ClsPric": {
+      "PRESENT": 33250
+    },
+    "HghPric": {
+      "PRESENT": 33250
+    },
+    "LwPric": {
+      "PRESENT": 33250
+    },
+    "OpnIntrst": {
+      "PRESENT": 33250
+    },
+    "OpnPric": {
+      "PRESENT": 33250
+    },
+    "SttlmPric": {
+      "PRESENT": 33250
+    },
+    "TtlTradgVol": {
+      "PRESENT": 33250
+    },
+    "expiry": {
+      "PRESENT": 33250
+    },
+    "id": {
+      "PRESENT": 33250
+    },
+    "lot_size": {
+      "PRESENT": 33250
+    },
+    "option_type": {
+      "NOT_APPLICABLE": 647,
+      "PRESENT": 32603
+    },
+    "strike": {
+      "NOT_APPLICABLE": 647,
+      "PRESENT": 32603
+    },
+    "trade_date": {
+      "PRESENT": 33250
+    }
+  },
+  "fact_value_coverage": {
+    "OpnIntrst": {
+      "nonzero": 16659,
+      "zero": 16591
+    },
+    "SttlmPric": {
+      "nonzero": 33161,
+      "zero": 89
+    },
+    "TtlTradgVol": {
+      "nonzero": 11476,
+      "zero": 21774
+    }
+  },
+  "identity_join": {
+    "ambiguous": 0,
+    "matched": 33250,
+    "missing_key": 0,
+    "rate": 1.0,
+    "unresolved": 0
+  },
+  "instrument_counts": {
+    "futures": 647,
+    "options": 32603,
+    "other": 0
+  },
+  "malformed_fact_rows": 0,
+  "normalized_rows": {
+    "mii": 78603,
+    "udiff": 33250
+  },
+  "ohlc_inconsistent_rows": 0,
+  "schema_version": "r10nb_quality_metrics_v1",
+  "source_rows": {
+    "mii": 78603,
+    "udiff": 33250
+  },
+  "trade_date_counts": {
+    "2026-09-09": 33250
+  }
+}

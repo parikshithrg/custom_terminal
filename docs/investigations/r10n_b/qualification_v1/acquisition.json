@@ -1,0 +1,31 @@
+{
+  "acquisition_mode": "EXACT_ONE_DATE_NO_RETRY_NO_ENUMERATION",
+  "bulk_acquisition_authorized": false,
+  "files": [
+    {
+      "byte_length": 1028737,
+      "filename": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "official_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "sha256": "50826bed50da889b90b208c9b6368d3768c0eabb416178b176f064d3f93de3f5"
+    },
+    {
+      "byte_length": 1725381,
+      "filename": "NSE_FO_contract_09092026.csv.gz",
+      "official_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_09092026.csv.gz",
+      "sha256": "a58c75d36a5100506c005961af181cd6ca8ed597289ffc5fdc3107920e4850cf"
+    }
+  ],
+  "manifest_terms_acknowledged_by_operator": true,
+  "milestone": "R.10N-B",
+  "owner_confirmation_received_in_r10nb_chat": true,
+  "owner_scope": "NON_COMMERCIAL_INTERNAL_TECHNICAL_QUALIFICATION_ONLY",
+  "post_confirmation_acquisition_performed": false,
+  "post_confirmation_downloader_outcome": "REFUSED_EXISTING_PACKAGE_BEFORE_NETWORK",
+  "post_confirmation_network_requests": 0,
+  "qualification_input": "PREEXISTING_HASH_BOUND_PACKAGE",
+  "redistribution_authorized": false,
+  "research_or_production_authorized": false,
+  "schema_version": "r10nb_acquisition_v1",
+  "trading_authorized": false,
+  "trading_date": "2026-09-09"
+}

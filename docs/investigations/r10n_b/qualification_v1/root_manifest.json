@@ -1,0 +1,40 @@
+{
+  "artifacts": [
+    {
+      "byte_length": 1345,
+      "path": "acquisition.json",
+      "sha256": "3615351a498c94e385d680e0c01960bd556bf57ddaae7284ade3fc016c38a7ab"
+    },
+    {
+      "byte_length": 1371,
+      "path": "completion.json",
+      "sha256": "6e972b6371b98263c87469902bc2040013bd661fb334074a9a41e453cc6b9ba9"
+    },
+    {
+      "byte_length": 4199,
+      "path": "observed_schema.json",
+      "sha256": "3096b49031d726b1908cd6f25ab8377bb60ac8daf47cb80727d8b84e667bf0ef"
+    },
+    {
+      "byte_length": 2034,
+      "path": "quality_metrics.json",
+      "sha256": "dbe05ac7f2557c9f392799838a416bf25dd4cb5608d4d85c20add27f9cdd259d"
+    }
+  ],
+  "milestone": "R.10N-B",
+  "schema_version": "r10nb_root_manifest_v1",
+  "source_bindings": [
+    {
+      "byte_length": 1028737,
+      "filename": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "official_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "sha256": "50826bed50da889b90b208c9b6368d3768c0eabb416178b176f064d3f93de3f5"
+    },
+    {
+      "byte_length": 1725381,
+      "filename": "NSE_FO_contract_09092026.csv.gz",
+      "official_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_09092026.csv.gz",
+      "sha256": "a58c75d36a5100506c005961af181cd6ca8ed597289ffc5fdc3107920e4850cf"
+    }
+  ]
+}

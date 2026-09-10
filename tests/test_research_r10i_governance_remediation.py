@@ -134,7 +134,7 @@ def test_cumulative_inventory_is_complete_unique_and_hash_current():
     inventory = _load(INVENTORY_V2)
     entries = inventory["entries"]
     paths = [entry["path"] for entry in entries]
-    assert inventory["entrypoint_count"] == len(paths) == 77
+    assert inventory["entrypoint_count"] == len(paths) == 78
     assert len(paths) == len(set(paths))
     assert set(paths) == _discover()
     for entry in entries:

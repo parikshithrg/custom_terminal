@@ -1344,6 +1344,31 @@
     },
     {
       "applicable_interlocks": [
+        "OWNER_RETENTION_ACKNOWLEDGEMENT_REQUIRED",
+        "EXACT_ONE_DATE_NO_RETRY_NO_ENUMERATION",
+        "NO_PRODUCTION_OR_BULK_AUTHORITY"
+      ],
+      "apsw_capability": "NO",
+      "arbitrary_filesystem_or_private_config": "BOUNDED_OUTPUT_ROOT_ONLY",
+      "broker_connectivity": "NO",
+      "decision_output": "NO_EXTERNAL_DECISION",
+      "entrypoint_mechanism": "PYTHON_MAIN_GUARD",
+      "evidence_publication": "SANITIZED_LOCAL_MANIFEST_ONLY",
+      "external_mutation": "OWNER_ACKNOWLEDGED_SINGLE_DATE_PACKAGE_ONLY",
+      "governance_classification": "OWNER_ACKNOWLEDGED_SINGLE_DATE_OFFICIAL_ACQUISITION",
+      "intended_purpose": "Prepare or download one exact-date NSE F&O report pair after explicit operator acknowledgement.",
+      "introduction_milestone": "R.10N-A",
+      "lifecycle_promotion": "NO",
+      "network_or_provider_access": "YES_ONLY_AFTER_ACKNOWLEDGEMENT",
+      "path": "tools/download_nse_fno_reports.py",
+      "permitted_operating_mode": "DRY_RUN_OR_OWNER_ACKNOWLEDGED_EXACT_ONE_DATE_ONLY",
+      "real_or_private_data_eligibility": "OFFICIAL_PUBLIC_TWO_FILE_PACKAGE_ONLY",
+      "research_computation": "NO",
+      "source_sha256": "6d5132aedea3640310852e31290b899aaa6226f7c6d7415f380363c6c9de1073",
+      "sqlite_capability": "NO"
+    },
+    {
+      "applicable_interlocks": [
         "OWNER_APPROVED_FILESYSTEM_ONLY_BINDING_PREPARATION"
       ],
       "apsw_capability": "NO",
@@ -1808,7 +1833,7 @@
       "sqlite_capability": "NO"
     }
   ],
-  "entrypoint_count": 77,
+  "entrypoint_count": 78,
   "inventory_kind": "CUMULATIVE_CURRENT_FORWARD_INVENTORY",
   "preserves_historical_inventory": true,
   "schema_version": "laboratory_entrypoint_inventory_v2",

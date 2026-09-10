@@ -72,7 +72,7 @@ def test_both_conflicting_working_tree_values_are_reproduced():
         rows[path] = _git_row("886cf56", path)
     post_refresh = [rows[path] for path in sorted(rows)]
     assert sha256_bytes(canonical_json_bytes(post_refresh)) == (
-        "236fddae8660e373eccdc6bb34a67a0dc0baaf7e91ff6203f4d24a43193a172f"
+        "17de4f4dbd7a39321197c4a7f98d7df0c341ba16bff85faccf9b53d9eb66de34"
     )
     for path in (
         "specs/laboratory_entrypoint_inventory_v2.json",
@@ -147,9 +147,9 @@ def test_bundle_detects_semantic_and_artifact_hash_disagreement():
         )
 
 
-def test_entrypoint_count_and_protected_momentum_are_unchanged():
+def test_entrypoint_count_tracks_r10na_and_protected_momentum_is_unchanged():
     inventory = _load(ROOT / "specs/laboratory_entrypoint_inventory_v2.json")
-    assert inventory["entrypoint_count"] == 77
+    assert inventory["entrypoint_count"] == 78
     assert _sha(ROOT / "specs/momentum_12_1_v1.json") == (
         "1eed7fd7960c177af8ef90972ea9c4409827a81ab3af8387d69273e9c0ce90d5"
     )

@@ -1,0 +1,26 @@
+{
+  "schema_version": "r10na_nse_fno_dry_run_v1",
+  "milestone": "R.10N-A",
+  "baseline_commit": "b9a1339598a611c916905455a107103bf169ff43",
+  "trading_date": "2026-09-09",
+  "acquisition_mode": "EXACT_ONE_DATE_NO_RETRY_NO_ENUMERATION",
+  "files": [
+    {
+      "key": "udiff",
+      "role": "DAILY_DERIVATIVES_FACTS",
+      "filename": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip"
+    },
+    {
+      "key": "mii",
+      "role": "CONTRACT_IDENTITY",
+      "filename": "NSE_FO_contract_09092026.csv.gz",
+      "url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_09092026.csv.gz"
+    }
+  ],
+  "network_requests": 0,
+  "payloads_retained": 0,
+  "output_target_created": false,
+  "acknowledgement_flag_used": false,
+  "acquisition_authorized": false
+}

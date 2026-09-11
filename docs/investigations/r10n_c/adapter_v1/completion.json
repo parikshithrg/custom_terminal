@@ -1,0 +1,43 @@
+{
+  "schema_version": "r10nc_completion_v1",
+  "milestone": "R.10N-C",
+  "baseline_commit": "d6d42bb3c75796cfc456b2b7fa8c8fc7154963e7",
+  "lifecycle_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "date_agnostic": true,
+  "synthetic_dates_tested": 2,
+  "real_multi_date_schema_stability_established": false,
+  "r10nb_evidence_reconciled_byte_identical": true,
+  "sealed_r10nb_evidence_modified": false,
+  "nse_network_requests": 0,
+  "report_payloads_downloaded": 0,
+  "local_fno_database_accessed": false,
+  "apsw_installed_or_used": false,
+  "kite_used": false,
+  "holdout_accessed": false,
+  "production_provider_registered": false,
+  "research_backtest_scoring_recommendation_or_trading": false,
+  "validation": {
+    "candidate_adapter": "20_PASS",
+    "focused_adapter_r10nb_downloader_r10na": "63_PASS",
+    "all_r10nc_focused_and_evidence": "73_PASS",
+    "relevant_governance": "51_PASS",
+    "root_suite": "858_PASS_2_FAIL_4_SKIP_7_WARN",
+    "root_failures": [
+      "EXPECTED_FAIL_CLOSED_RESEARCH_STATE_FINGERPRINT_STALE_AFTER_NEW_INCLUDED_FOUNDATION_SOURCE",
+      "PRE_EXISTING_R9K_JOB_TIMEOUT_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10nc_functional_failures": 0,
+    "compilation": "PASS",
+    "json_manifest_and_privacy": "PASS"
+  },
+  "remaining_unauthorized": [
+    "ANOTHER_NSE_DOWNLOAD_OR_URL_ACCESS",
+    "ARCHIVE_ENUMERATION_OR_BULK_ACQUISITION",
+    "PRODUCTION_ACTIVATION_OR_SCHEDULING",
+    "RESEARCH_BACKTESTS_SIGNALS_SCORES_RECOMMENDATIONS_OR_PORTFOLIO_LOGIC",
+    "REDISTRIBUTION_OR_TRADING",
+    "LOCAL_FNO_DATABASE_APSW_KITE_OR_HOLDOUT_ACCESS"
+  ],
+  "recommended_next_milestone": "SEPARATELY_APPROVED_BOUNDED_MULTI_DATE_SCHEMA_STABILITY_AND_CORRECTION_BEHAVIOR_DECISION",
+  "completion_decision": "DATE_AGNOSTIC_CANDIDATE_ADAPTER_SYNTHETICALLY_VALIDATED"
+}

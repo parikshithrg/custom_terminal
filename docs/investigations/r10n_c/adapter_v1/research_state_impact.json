@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10nc_research_state_impact_v1",
+  "policy": "pre_research_review_policy_v2",
+  "baseline_commit": "d6d42bb3c75796cfc456b2b7fa8c8fc7154963e7",
+  "baseline": {
+    "file_count": 280,
+    "sha256": "5dec06efda39c94ef0d933d18b442af0014ecf07d6365f09b773c24b5209c901"
+  },
+  "candidate_working_tree": {
+    "file_count": 281,
+    "sha256": "24e8a5ee822584cf1983f8c4d29930d126d3a04de52d9970a3b31ba14947a9c1"
+  },
+  "changed_reason": "POLICY_V2_INCLUDES_NEW_FOUNDATION_SOURCE_FILE",
+  "review_state": "STALE_FAIL_CLOSED",
+  "research_authorized": false,
+  "historical_policy_or_evidence_modified": false
+}

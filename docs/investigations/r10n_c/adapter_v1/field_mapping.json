@@ -1,0 +1,33 @@
+{
+  "schema_version": "r10nc_field_mapping_v1",
+  "source_family": "NSE_FO_PAIRED_REPORTS",
+  "source_version": "UDIFF_V1_MII_CONTRACT_V1",
+  "numeric_policy": "DECIMAL_FOR_PRICES_AND_STRIKES_INTEGER_FOR_COUNTS_NO_BINARY_FLOAT",
+  "date_semantics": {
+    "udiff": "ISO_EXCHANGE_CALENDAR_DATE_WITHOUT_TIMEZONE",
+    "mii_expiry": "UNIX_SECONDS_INTERPRETED_IN_UTC_THEN_CALENDAR_DATE"
+  },
+  "fields": [
+    {"normalized": "trading_date", "source": "UDIFF.TradDt", "type": "date", "required": true},
+    {"normalized": "financial_instrument_id", "source": "UDIFF.FinInstrmId", "type": "digit_string", "required": true},
+    {"normalized": "instrument_type", "source": "UDIFF.FinInstrmTp", "type": "enum_STF_IDF_STO_IDO", "required": true},
+    {"normalized": "ticker", "source": "UDIFF.TckrSymb", "type": "stateful_string", "required": false},
+    {"normalized": "underlying_financial_instrument_id", "source": "MII.UndrlygFinInstrmId", "type": "stateful_digit_string", "required": false},
+    {"normalized": "expiry", "source": "UDIFF.XpryDt", "type": "date", "required": true},
+    {"normalized": "strike", "source": "UDIFF.StrkPric", "type": "stateful_decimal", "required_for": "OPTIONS"},
+    {"normalized": "option_type", "source": "UDIFF.OptnTp", "type": "stateful_enum_CE_PE", "required_for": "OPTIONS"},
+    {"normalized": "lot_size", "source": "UDIFF.NewBrdLotQty", "type": "integer", "required": true},
+    {"normalized": "open", "source": "UDIFF.OpnPric", "type": "decimal", "required": true},
+    {"normalized": "high", "source": "UDIFF.HghPric", "type": "decimal", "required": true},
+    {"normalized": "low", "source": "UDIFF.LwPric", "type": "decimal", "required": true},
+    {"normalized": "close", "source": "UDIFF.ClsPric", "type": "decimal", "required": true},
+    {"normalized": "settlement_price", "source": "UDIFF.SttlmPric", "type": "decimal", "required": true},
+    {"normalized": "volume", "source": "UDIFF.TtlTradgVol", "type": "integer", "required": true},
+    {"normalized": "open_interest", "source": "UDIFF.OpnIntrst", "type": "integer", "required": true},
+    {"normalized": "source_family", "source": "ADAPTER_CONSTANT", "type": "string", "required": true},
+    {"normalized": "source_version", "source": "ADAPTER_CONSTANT", "type": "string", "required": true},
+    {"normalized": "provenance", "source": "SANITIZED_MANIFEST_BINDING", "type": "filenames_sizes_sha256_schema_version", "required": true}
+  ],
+  "value_states": ["PRESENT", "MISSING", "NOT_APPLICABLE", "MALFORMED"],
+  "identity_join_key": ["FinInstrmId"]
+}

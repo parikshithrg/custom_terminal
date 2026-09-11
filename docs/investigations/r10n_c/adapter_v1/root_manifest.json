@@ -1,0 +1,23 @@
+{
+  "schema_version": "r10nc_root_manifest_v1",
+  "milestone": "R.10N-C",
+  "baseline_commit": "d6d42bb3c75796cfc456b2b7fa8c8fc7154963e7",
+  "artifacts": [
+    {"path": "adapter_contract.json", "byte_length": 1274, "sha256": "eaab5f8d6c68a88fe1ad343a9d19a34fdd707d6a549ec791497a1d679be3662c"},
+    {"path": "completion.json", "byte_length": 1803, "sha256": "52b911e1cf88aa2ce831f60773ebc2c50ca9dd0be5a415dd3780c8942441e774"},
+    {"path": "failure_matrix.json", "byte_length": 2042, "sha256": "483fe7c6b2aa3decdde5e416bf47bdcc1fcfc390819b5a82e27018b3917196f6"},
+    {"path": "field_mapping.json", "byte_length": 2550, "sha256": "acb7a20d3e8bef1f0d2828b03cfa1a75feb3636183036d10015207d63bc9222e"},
+    {"path": "lifecycle_state.json", "byte_length": 618, "sha256": "9c613697fb3f463438abede3c61765e7c34a333736ad6978782a27165658f8c6"},
+    {"path": "r10nb_reconciliation.json", "byte_length": 818, "sha256": "10d049cec66d8bdf3c82e7025d5dbdf78df22201f8b68cb9bc13ff9f60fe3559"},
+    {"path": "research_state_impact.json", "byte_length": 622, "sha256": "06e99c2a5159bfa4740f8b871db9329d6ee780f07551836a344eadef6590d03c"},
+    {"path": "synthetic_test_coverage.json", "byte_length": 933, "sha256": "d6baaa1e5426e82a55423502de5938b7e0fc23aa232d0f53cf5fb924ff1b3f1b"}
+  ],
+  "historical_bindings": {
+    "r10nb_root_manifest": "7341f1fe97ac1f25858600f0ef9dcbb1f77d29245afe6c0c891a04129104f2f5"
+  },
+  "report_binding": {
+    "path": "reports/NSE_FNO_DATE_AGNOSTIC_CANDIDATE_ADAPTER.md",
+    "byte_length": 4207,
+    "sha256": "3e3f405442dbce15438a2a3e244e8cd1f3b1f341fa60831ecdd377e249040a5c"
+  }
+}

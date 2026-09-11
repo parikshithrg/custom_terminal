@@ -1,0 +1,27 @@
+{
+  "schema_version": "r10nc_failure_matrix_v1",
+  "policy": "FAIL_CLOSED_NO_PARTIAL_NORMALIZED_RESULT",
+  "failures": [
+    {"condition": "descriptor absent", "code": "DESCRIPTOR_REQUIRED"},
+    {"condition": "date non-ISO or non-canonical", "code": "INVALID_TRADING_DATE"},
+    {"condition": "manifest contains secrets or private paths", "code": "UNSANITIZED_MANIFEST"},
+    {"condition": "manifest date differs", "code": "MANIFEST_DATE_MISMATCH"},
+    {"condition": "manifest schema unsupported", "code": "MANIFEST_SCHEMA_UNSUPPORTED"},
+    {"condition": "manifest does not bind exactly two expected files", "code": "MANIFEST_FILE_SET_MISMATCH"},
+    {"condition": "filename differs from date-derived name", "code": "FILENAME_DATE_MISMATCH"},
+    {"condition": "URL is not the exact official HTTPS URL", "code": "MANIFEST_URL_MISMATCH"},
+    {"condition": "manifest size or hash invalid", "code": "MANIFEST_SIZE_INVALID_OR_HASH_INVALID"},
+    {"condition": "file size or hash differs", "code": "PACKAGE_SIZE_MISMATCH_OR_HASH_MISMATCH"},
+    {"condition": "unsafe, corrupt, unexpected, or excessive archive", "code": "ARCHIVE_VALIDATION_FAILURE"},
+    {"condition": "legacy bhavcopy", "code": "LEGACY_SCHEMA_REJECTED"},
+    {"condition": "required column absent or duplicated", "code": "MISSING_REQUIRED_COLUMNS_OR_DUPLICATE_COLUMNS"},
+    {"condition": "row width differs", "code": "ROW_WIDTH_MISMATCH"},
+    {"condition": "numeric, date, option, identifier, or lot malformed", "code": "MALFORMED_VALUE"},
+    {"condition": "MII identifier duplicated identically", "code": "DUPLICATE_IDENTITY"},
+    {"condition": "MII identifier maps to conflicting identity", "code": "AMBIGUOUS_IDENTITY"},
+    {"condition": "UDiFF identifier duplicated", "code": "DUPLICATE_FACT_IDENTITY"},
+    {"condition": "UDiFF identifier absent from MII", "code": "UNRESOLVED_IDENTITY"},
+    {"condition": "fact date differs from explicit date", "code": "FACT_DATE_MISMATCH"},
+    {"condition": "traded-row OHLC bounds invalid", "code": "OHLC_INCONSISTENT"}
+  ]
+}

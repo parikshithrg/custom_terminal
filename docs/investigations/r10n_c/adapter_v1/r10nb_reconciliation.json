@@ -1,0 +1,15 @@
+{
+  "schema_version": "r10nc_r10nb_reconciliation_v1",
+  "baseline_commit": "d6d42bb3c75796cfc456b2b7fa8c8fc7154963e7",
+  "method": "RUN_REFACTORED_R10NB_QUALIFIER_OFFLINE_AGAINST_RETAINED_HASH_BOUND_PACKAGE",
+  "result": "BYTE_IDENTICAL",
+  "artifacts": {
+    "acquisition.json": "3615351a498c94e385d680e0c01960bd556bf57ddaae7284ade3fc016c38a7ab",
+    "completion.json": "6e972b6371b98263c87469902bc2040013bd661fb334074a9a41e453cc6b9ba9",
+    "observed_schema.json": "3096b49031d726b1908cd6f25ab8377bb60ac8daf47cb80727d8b84e667bf0ef",
+    "quality_metrics.json": "dbe05ac7f2557c9f392799838a416bf25dd4cb5608d4d85c20add27f9cdd259d",
+    "root_manifest.json": "7341f1fe97ac1f25858600f0ef9dcbb1f77d29245afe6c0c891a04129104f2f5"
+  },
+  "sealed_r10nb_files_modified": false,
+  "real_multi_date_stability_inferred": false
+}

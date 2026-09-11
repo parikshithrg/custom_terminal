@@ -1,0 +1,39 @@
+{
+  "schema_version": "r10nc_adapter_contract_v1",
+  "milestone": "R.10N-C",
+  "adapter": "market_intel.foundation.nse_fno_candidate",
+  "lifecycle_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "inputs": {
+    "package_directory": "EXPLICIT_CALLER_SUPPLIED_PATH",
+    "trading_date": "EXPLICIT_CANONICAL_ISO_YYYY_MM_DD",
+    "acquisition_manifest": "EXPLICIT_CALLER_SUPPLIED_SANITIZED_MAPPING",
+    "implicit_manifest_reading": false,
+    "implicit_archive_discovery": false
+  },
+  "boundaries": [
+    "CALLER_CONTROLLED_ACQUISITION",
+    "MANIFEST_AND_PACKAGE_VERIFICATION",
+    "BOUNDED_ARCHIVE_VALIDATION",
+    "SEPARATE_UDIFF_AND_MII_PARSING",
+    "FININSTRMID_ONLY_IDENTITY_JOIN",
+    "EXACT_NORMALIZATION",
+    "DETERMINISTIC_QUALITY_RESULT"
+  ],
+  "verification": [
+    "EXPECTED_DATE_DERIVED_FILENAMES",
+    "EXACT_OFFICIAL_HTTPS_URLS",
+    "MANIFEST_BYTE_LENGTHS",
+    "MANIFEST_SHA256_HASHES",
+    "ZIP_GZIP_STRUCTURE_AND_EXPANSION_LIMITS",
+    "REQUIRED_SCHEMA_COLUMNS",
+    "FACT_ROW_TRADING_DATE"
+  ],
+  "outputs": [
+    "IMMUTABLE_NORMALIZED_RECORDS",
+    "DETERMINISTIC_QUALITY_RESULTS",
+    "SOURCE_AND_PROVENANCE_BINDINGS"
+  ],
+  "network_capability": false,
+  "research_or_application_calculations": false,
+  "production_provider_registration": false
+}

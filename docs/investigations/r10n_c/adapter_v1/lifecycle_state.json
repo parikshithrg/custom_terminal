@@ -1,0 +1,19 @@
+{
+  "schema_version": "r10nc_lifecycle_state_v1",
+  "milestone": "R.10N-C",
+  "state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "active_provider": false,
+  "source_registry_entry_added": false,
+  "ui_exposure": false,
+  "production_runner_exposure": false,
+  "scheduled_job_exposure": false,
+  "research_pipeline_exposure": false,
+  "network_access": false,
+  "nse_downloads": 0,
+  "local_fno_database_accessed": false,
+  "apsw_used": false,
+  "kite_used": false,
+  "holdout_accessed": false,
+  "research_backtest_scoring_recommendation_or_trading": false,
+  "activation_requires_separate_owner_authorization": true
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "r10nd_correction_behavior_evidence_plan_v1",
+  "milestone": "R.10N-D",
+  "distinctions": {
+    "report_finality": "F_FILENAME_VARIANT_AND_OFFICIAL_REPORT_LABEL_AT_APPROVED_RETRIEVAL",
+    "later_replacement": "SAME_DATE_SAME_FILENAME_OBSERVED_AT_A_LATER_SEPARATELY_APPROVED_RETRIEVAL_WITH_CHANGED_CONTENT_OR_TRANSPORT_VALIDATOR",
+    "ordinary_cross_date_change": "DIFFERENT_TRADING_DATE_AND_FILENAME_WITH_EXPECTED_POPULATION_OR_VALUE_CHANGES"
+  },
+  "capture_per_approved_retrieval": [
+    "SHA256",
+    "BYTE_LENGTH",
+    "SANITIZED_ETAG_IF_SUPPLIED",
+    "SANITIZED_LAST_MODIFIED_IF_SUPPLIED",
+    "EXACT_FILENAME",
+    "UTC_RETRIEVAL_TIMESTAMP"
+  ],
+  "replacement_evidence_rule": "COMPARE_ONLY_SAME_DATE_SAME_FILENAME_OBSERVATIONS_AND_REQUIRE_A_NEW_OWNER_APPROVAL_FOR_ANY_LATER_RETRIEVAL",
+  "cross_date_rule": "NEVER_TREAT_DIFFERENT_DATE_HASH_OR_POPULATION_CHANGE_AS_CORRECTION_EVIDENCE",
+  "recurring_monitor": false,
+  "repeated_retrieval_authorized": false,
+  "bounded_plan_can_establish_correction_behavior": false,
+  "limitation": "ONE_RETRIEVAL_PER_NEW_DATE_CANNOT_OBSERVE_LATER_REPLACEMENT_CORRECTION_BEHAVIOR"
+}

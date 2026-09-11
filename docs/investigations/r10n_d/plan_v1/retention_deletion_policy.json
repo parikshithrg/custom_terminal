@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10nd_retention_deletion_policy_v1",
+  "milestone": "R.10N-D",
+  "existing_anchor": "REMAINS_UNDER_ITS_EXISTING_OWNER_APPROVAL_AND_IS_NOT_REACQUIRED",
+  "new_raw_packages": {
+    "git_status": "IGNORED_AND_NEVER_COMMITTED",
+    "destination": "OWNER_MUST_APPROVE_EXACT_RELATIVE_ARTIFACT_DIRECTORY_PER_DATE",
+    "retention_purpose": "NON_COMMERCIAL_INTERNAL_TECHNICAL_QUALIFICATION_ONLY",
+    "retention_deadline": "OWNER_MUST_SUPPLY_AN_EXACT_DATE_BEFORE_ACQUISITION",
+    "delete_trigger": "EARLIER_OF_OWNER_DEADLINE_OR_OWNER_ACCEPTANCE_OF_HASH_BOUND_AGGREGATE_QUALIFICATION_EVIDENCE",
+    "deletion_method": "DELETE_ONLY_THE_EXACT_APPROVED_DATE_PACKAGE_AFTER_HASH_AND_PATH_VERIFICATION",
+    "deletion_record": "SANITIZED_DATE_PATH_ROLE_HASH_AND_UTC_DELETION_TIMESTAMP_WITHOUT_RAW_ROWS"
+  },
+  "tracked_evidence": "SANITIZED_AGGREGATES_SCHEMA_METADATA_DECISIONS_AND_SHA256_BINDINGS_ONLY",
+  "redistribution": false,
+  "indefinite_raw_retention": false
+}

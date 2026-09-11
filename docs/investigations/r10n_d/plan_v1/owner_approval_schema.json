@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nd_owner_approval_schema_v1",
+  "milestone": "R.10N-D",
+  "approval_state": "NOT_APPROVED",
+  "owner_must_decide": {
+    "policy_pages_reviewed_currently": null,
+    "bounded_external_pair_confirmation_authorized": null,
+    "dates": ["2026-09-10", "2025-07-08"],
+    "exact_four_filenames_and_urls_approved": null,
+    "destination_per_date_approved": null,
+    "purpose_non_commercial_internal_technical_qualification_approved": null,
+    "retention_deadline_per_date": null,
+    "deletion_policy_approved": null,
+    "zero_retry_zero_redirect_zero_fallback_protocol_approved": null,
+    "acknowledgement_flag_will_be_supplied_personally": null
+  },
+  "pair_confirmation_required_per_date": true,
+  "approval_is_atomic_per_exact_date_pair": true,
+  "partial_or_blank_decision_authorizes_requests": false,
+  "approval_authorizes_research": false,
+  "approval_authorizes_production": false,
+  "approval_authorizes_trading": false,
+  "approval_authorizes_redistribution": false
+}

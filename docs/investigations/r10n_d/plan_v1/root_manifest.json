@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nd_root_manifest_v1",
+  "milestone": "R.10N-D",
+  "artifacts": [
+    {"path": "acquisition_protocol.json", "byte_length": 1463, "sha256": "44c2e8f09511c62b3114027d83af4b19e10041cf4cb7820e6d0021465a133d48"},
+    {"path": "completion.json", "byte_length": 1490, "sha256": "da5498bb2bc2bc68d3c0a68559b138617d5eade78394b23925bfd4b5094c23a4"},
+    {"path": "correction_behavior_evidence_plan.json", "byte_length": 1149, "sha256": "de89e2a9876d68734de8c236f3fa165e65b366f80cfd0746645ef05eb320b94c"},
+    {"path": "date_selection_policy.json", "byte_length": 889, "sha256": "c07b299e08e517bcf52e7bef35daaa3211d425d57a44265429e4048348999d5b"},
+    {"path": "failure_stop_matrix.json", "byte_length": 1373, "sha256": "e4fa212c40d5aa89326cbf833db44e81e8abefa3ac7b889ab9e05a6b792b2e44"},
+    {"path": "historical_evidence_bindings.json", "byte_length": 1558, "sha256": "a69875fcd125f74a793f22370bf7337b726872d0abeeea371b5332dccf570a8f"},
+    {"path": "non_authorization_record.json", "byte_length": 824, "sha256": "cdb69b7762535c78a78476aba79b7144b43b7a94e7d1389c4228381a9d163315"},
+    {"path": "owner_approval_schema.json", "byte_length": 1005, "sha256": "ace3f333f777cdeafe95c3d437cd68dc043b22491b560ec84dccd546b19d5d66"},
+    {"path": "proposed_sample_design.json", "byte_length": 2434, "sha256": "f60d9922f221a26ec00c00130b46bc762115453ed9a8f31aaa681b82166775b0"},
+    {"path": "request_payload_budget.json", "byte_length": 637, "sha256": "1ccc417e001a954f59abb1f4ed746d4c96223c74136159b21bbfeaab714076f9"},
+    {"path": "retention_deletion_policy.json", "byte_length": 979, "sha256": "b814adab743078f6fba4b858db21936072c06b20be3cce3dca1f945742dfe469"},
+    {"path": "schema_stability_acceptance_matrix.json", "byte_length": 2949, "sha256": "2bc9fb06c07779b4af3f6a759d1338260596c904449362eb707d65e12c790de0"}
+  ],
+  "report_binding": {
+    "path": "reports/NSE_FNO_BOUNDED_MULTI_DATE_DECISION.md",
+    "byte_length": 5997,
+    "sha256": "2dc186b224596af38bac2970a3b383082b1166e79374cb3e8675c07d43c3bad5"
+  },
+  "raw_payloads_in_manifest": false
+}

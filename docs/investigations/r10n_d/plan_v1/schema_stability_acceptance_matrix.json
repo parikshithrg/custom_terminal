@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nd_schema_stability_acceptance_matrix_v1",
+  "milestone": "R.10N-D",
+  "policy": "EVERY_DATE_MUST_PASS_INDEPENDENTLY_AND_ONE_UNEXPECTED_REQUIRED_OR_IDENTITY_CHANGE_FAILS_CLOSED",
+  "criteria": [
+    {"question": "required columns", "threshold": "100_PERCENT_PRESENT_UNIQUE_PER_FAMILY", "failure": "STOP_SCHEMA_REMOVAL_OR_DUPLICATE_COLUMN"},
+    {"question": "column additions", "threshold": "ALLOWED_ONLY_IF_RECORDED_AND_NON_COLLIDING", "failure": "STOP_IF_ADDITION_ALTERS_REQUIRED_FIELD_SEMANTICS"},
+    {"question": "column order", "threshold": "ORDER_INDEPENDENT_WITH_IDENTICAL_NORMALIZATION", "failure": "STOP_IF_ORDER_CHANGES_RESULT"},
+    {"question": "required type drift", "threshold": "ZERO_MALFORMED_REQUIRED_VALUES", "failure": "STOP_ON_FIRST_MALFORMED_REQUIRED_VALUE"},
+    {"question": "filename and embedded dates", "threshold": "EXACT_APPROVED_FILENAME_AND_100_PERCENT_DATE_AGREEMENT", "failure": "STOP_ON_ANY_MISMATCH"},
+    {"question": "archive structure", "threshold": "ONE_EXPECTED_UDIFF_MEMBER_AND_ONE_BOUNDED_MII_GZIP_STREAM", "failure": "STOP_ON_MEMBER_PATH_COUNT_CRC_SIZE_RATIO_OR_CORRUPTION_CHANGE"},
+    {"question": "MII FinInstrmId uniqueness", "threshold": "100_PERCENT_UNIQUE", "failure": "STOP_ON_FIRST_DUPLICATE_OR_AMBIGUOUS_IDENTITY"},
+    {"question": "UDiFF to MII join", "threshold": "100_PERCENT_MATCHED", "failure": "STOP_ON_FIRST_MISSING_OR_UNRESOLVED_IDENTITY"},
+    {"question": "futures and options classification", "threshold": "BOTH_POPULATIONS_PRESENT_AND_EVERY_ROW_IN_KNOWN_CLASS", "failure": "QUALIFICATION_INSUFFICIENT_IF_A_CLASS_IS_ABSENT_STOP_ON_UNKNOWN_CLASS"},
+    {"question": "expiry and lot size", "threshold": "100_PERCENT_PRESENT_VALID_AND_CROSS_FILE_AGREEMENT", "failure": "STOP_ON_FIRST_MISSING_MALFORMED_OR_CONFLICTING_VALUE"},
+    {"question": "strike and option type", "threshold": "100_PERCENT_PRESENT_VALID_FOR_OPTIONS_AND_NOT_APPLICABLE_FOR_FUTURES", "failure": "STOP_ON_FIRST_STATE_OR_VALUE_VIOLATION"},
+    {"question": "OHLC", "threshold": "100_PERCENT_REQUIRED_AND_ZERO_INVALID_TRADED_ROW_RANGES", "failure": "STOP_ON_FIRST_MALFORMED_OR_INVALID_TRADED_ROW"},
+    {"question": "settlement volume and open interest", "threshold": "100_PERCENT_REQUIRED_PARSEABLE_WITH_ZERO_DISTINCT_FROM_MISSING", "failure": "STOP_ON_FIRST_MISSING_OR_MALFORMED_VALUE"},
+    {"question": "contract population changes", "threshold": "RECORD_COUNTS_ADDITIONS_REMOVALS_AND_INTERSECTION_WITHOUT_EQUAL_COUNT_REQUIREMENT", "failure": "STOP_IF_CHANGE_IS_MISCLASSIFIED_AS_CORRECTION_OR_UNEXPLAINED_SCHEMA_DRIFT"},
+    {"question": "report finality", "threshold": "APPROVED_FILENAME_MUST_RETAIN_FINAL_F_MARKER_AND_PROVENANCE", "failure": "STOP_ON_PROVISIONAL_CORRECTED_OR_DIFFERENT_VARIANT"}
+  ],
+  "threshold_rationale": "THRESHOLDS_PROTECT_THE_REQUIRED_FIELD_AND_FININSTRMID_IDENTITY_CONTRACT_NOT_PRIOR_SUCCESS_COUNTS",
+  "silent_acceptance_of_required_or_identity_change": false
+}

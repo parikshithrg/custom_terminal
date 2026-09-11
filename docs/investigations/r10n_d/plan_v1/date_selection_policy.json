@@ -1,0 +1,19 @@
+{
+  "schema_version": "r10nd_date_selection_policy_v1",
+  "milestone": "R.10N-D",
+  "existing_anchor": "2026-09-09",
+  "selection_rules": [
+    "REUSE_EXISTING_ANCHOR_WITHOUT_REACQUISITION",
+    "SELECT_ONE_RECENT_COMPLETED_WEEKDAY_DISTINCT_FROM_ANCHOR",
+    "SELECT_ONE_OLDER_WEEKDAY_STRICTLY_AFTER_2024_07_08_UDIFF_TRANSITION",
+    "EXCLUDE_ANY_DATE_KNOWN_TO_BE_A_HOLIDAY_OR_NON_TRADING_DATE",
+    "REQUIRE_EXACT_UDIFF_FINAL_AND_MATCHING_NSE_EXCLUSIVE_MII_PAIR_CONFIRMATION",
+    "REQUIRE_EXACT_DATE_FILENAME_URL_DESTINATION_PURPOSE_AND_RETENTION_OWNER_APPROVAL"
+  ],
+  "candidate_dates": ["2026-09-10", "2025-07-08"],
+  "candidate_status": "PROPOSED_OFFLINE_AVAILABILITY_AND_TRADING_STATUS_UNCONFIRMED",
+  "if_either_pair_is_unavailable": "STOP_NO_FALLBACK_NEW_DATE_REQUIRES_NEW_OWNER_DECISION",
+  "automatic_fallback": false,
+  "date_enumeration": false,
+  "archive_crawling": false
+}

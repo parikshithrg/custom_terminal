@@ -1,0 +1,40 @@
+{
+  "schema_version": "r10nd_completion_v1",
+  "milestone": "R.10N-D",
+  "baseline_commit": "9796d83dc55d26cad48ca9c24cf022864ece6de4",
+  "completion_decision": "READY_FOR_OWNER_MULTI_DATE_DECISION",
+  "plan_only": true,
+  "external_access_authorized": false,
+  "network_requests": 0,
+  "nse_url_checks": 0,
+  "payloads_downloaded": 0,
+  "proposed_new_dates": 2,
+  "proposed_new_payloads_maximum": 4,
+  "existing_anchor_reacquired": false,
+  "real_multi_date_qualification_completed": false,
+  "correction_behavior_established": false,
+  "production_authorized": false,
+  "research_authorized": false,
+  "research_fingerprint": "STALE_FAIL_CLOSED_UNCHANGED",
+  "historical_r10nb_r10nc_evidence": "BYTE_IDENTICAL",
+  "validation": {
+    "r10nd_governance": "12_PASS",
+    "r10nc_adapter_and_evidence": "30_PASS",
+    "r10nb_r10na_downloader": "43_PASS",
+    "combined_focused": "85_PASS",
+    "relevant_governance": "63_PASS",
+    "root_suite": "871_PASS_2_FAIL_4_SKIP_7_WARN",
+    "root_failures": [
+      "UNCHANGED_FAIL_CLOSED_RESEARCH_FINGERPRINT_ASSERTION",
+      "UNCHANGED_SEALED_R9K_JOB_TIMEOUT_NEGATIVE_0_003_TIMING_DIAGNOSTIC"
+    ],
+    "r10nd_functional_failures": 0,
+    "compilation": "PASS",
+    "json_manifest_privacy": "PASS"
+  },
+  "known_root_diagnostics_expected_unchanged": [
+    "FAIL_CLOSED_STALE_RESEARCH_FINGERPRINT",
+    "SEALED_R9K_NATIVE_TIMING_DIAGNOSTIC_IF_REPRODUCED"
+  ],
+  "recommended_next_milestone": "SEPARATELY_OWNER_APPROVED_R10N_E_BOUNDED_EXECUTION"
+}

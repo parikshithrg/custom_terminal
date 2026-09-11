@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nd_historical_evidence_bindings_v1",
+  "milestone": "R.10N-D",
+  "r10n_b": {
+    "acquisition.json": "3615351a498c94e385d680e0c01960bd556bf57ddaae7284ade3fc016c38a7ab",
+    "completion.json": "6e972b6371b98263c87469902bc2040013bd661fb334074a9a41e453cc6b9ba9",
+    "observed_schema.json": "3096b49031d726b1908cd6f25ab8377bb60ac8daf47cb80727d8b84e667bf0ef",
+    "quality_metrics.json": "dbe05ac7f2557c9f392799838a416bf25dd4cb5608d4d85c20add27f9cdd259d",
+    "root_manifest.json": "7341f1fe97ac1f25858600f0ef9dcbb1f77d29245afe6c0c891a04129104f2f5"
+  },
+  "r10n_c": {
+    "adapter_contract.json": "eaab5f8d6c68a88fe1ad343a9d19a34fdd707d6a549ec791497a1d679be3662c",
+    "completion.json": "52b911e1cf88aa2ce831f60773ebc2c50ca9dd0be5a415dd3780c8942441e774",
+    "failure_matrix.json": "483fe7c6b2aa3decdde5e416bf47bdcc1fcfc390819b5a82e27018b3917196f6",
+    "field_mapping.json": "acb7a20d3e8bef1f0d2828b03cfa1a75feb3636183036d10015207d63bc9222e",
+    "lifecycle_state.json": "9c613697fb3f463438abede3c61765e7c34a333736ad6978782a27165658f8c6",
+    "r10nb_reconciliation.json": "10d049cec66d8bdf3c82e7025d5dbdf78df22201f8b68cb9bc13ff9f60fe3559",
+    "research_state_impact.json": "06e99c2a5159bfa4740f8b871db9329d6ee780f07551836a344eadef6590d03c",
+    "root_manifest.json": "29c7fbd392a31a27d80ae9d154f053ec2349e8543e6d79be17b302a4c216362c",
+    "synthetic_test_coverage.json": "d6baaa1e5426e82a55423502de5938b7e0fc23aa232d0f53cf5fb924ff1b3f1b"
+  },
+  "result": "BYTE_IDENTICAL_AT_R10N_D_VALIDATION",
+  "historical_files_modified": false
+}

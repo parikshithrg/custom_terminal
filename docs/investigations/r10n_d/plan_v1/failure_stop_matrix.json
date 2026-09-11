@@ -1,0 +1,22 @@
+{
+  "schema_version": "r10nd_failure_stop_matrix_v1",
+  "milestone": "R.10N-D",
+  "default_action": "STOP_RETAIN_NO_PARTIAL_PACKAGE_AND_REQUIRE_NEW_OWNER_DECISION_WHEN_SCOPE_CHANGES",
+  "conditions": [
+    {"condition": "baseline or governing evidence changed", "action": "STOP_R10N_D"},
+    {"condition": "candidate date is holiday or non-trading", "action": "STOP_NO_FALLBACK_DATE"},
+    {"condition": "either exact paired file cannot be confirmed", "action": "STOP_NO_PARTIAL_PAIR"},
+    {"condition": "owner approval incomplete or acknowledgement absent", "action": "ZERO_REQUESTS"},
+    {"condition": "access control or non-200 response", "action": "STOP_NO_BYPASS_NO_RETRY"},
+    {"condition": "redirect response", "action": "STOP_DO_NOT_FOLLOW"},
+    {"condition": "archive validation or hash failure", "action": "STOP_TRANSACTIONAL_CLEANUP"},
+    {"condition": "unexpected required column type or identity contract", "action": "STOP_NO_SILENT_ACCEPTANCE"},
+    {"condition": "legacy bhavcopy encountered", "action": "STOP_SEPARATE_FUTURE_LEGACY_ADAPTER_APPROVAL"},
+    {"condition": "new date desired", "action": "STOP_REQUIRE_NEW_EXACT_OWNER_APPROVAL"},
+    {"condition": "research or production use proposed", "action": "STOP_REQUIRE_SEPARATE_GATE"}
+  ],
+  "automatic_retry": false,
+  "enumeration": false,
+  "fallback": false,
+  "access_control_bypass": false
+}

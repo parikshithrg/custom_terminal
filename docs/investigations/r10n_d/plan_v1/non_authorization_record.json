@@ -1,0 +1,22 @@
+{
+  "schema_version": "r10nd_non_authorization_record_v1",
+  "milestone": "R.10N-D",
+  "lifecycle_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "network_requests": 0,
+  "nse_url_checks": 0,
+  "payloads_downloaded": 0,
+  "archive_or_date_enumeration": false,
+  "production_activation": false,
+  "provider_registration": false,
+  "scheduled_monitor": false,
+  "research_authorized": false,
+  "research_fingerprint_state": "STALE_FAIL_CLOSED_UNCHANGED",
+  "research_fingerprint_remediated": false,
+  "local_fno_database_accessed": false,
+  "kite_used": false,
+  "apsw_used_or_installed": false,
+  "legacy_adapter_authorized": false,
+  "bse_or_paid_data_used": false,
+  "backtest_scoring_recommendation_portfolio_or_trading": false,
+  "gate_separation": "SOURCE_QUALIFICATION_AND_RESEARCH_AUTHORIZATION_ARE_SEPARATE_GATES"
+}

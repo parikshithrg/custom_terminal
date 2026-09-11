@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10nd_request_payload_budget_v1",
+  "milestone": "R.10N-D",
+  "manual_invocations_maximum": 2,
+  "new_dates_maximum": 2,
+  "files_per_date": 2,
+  "new_payloads_maximum": 4,
+  "authorized_initial_http_gets_maximum": 4,
+  "authorized_redirect_hops": 0,
+  "authorized_http_responses_maximum": 4,
+  "retries_per_request": 0,
+  "availability_enumeration_requests": 0,
+  "fallback_date_requests": 0,
+  "existing_anchor_retrieval_requests": 0,
+  "rule": "ONE_MANUAL_INVOCATION_AND_EXACTLY_TWO_DIRECT_200_RESPONSES_PER_APPROVED_DATE_OR_STOP",
+  "current_milestone_network_requests": 0,
+  "current_milestone_payloads": 0
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "r10nd_proposed_sample_design_v1",
+  "milestone": "R.10N-D",
+  "purpose": "BOUNDED_REAL_SCHEMA_STABILITY_QUALIFICATION_PLANNING_ONLY",
+  "existing_anchor": {
+    "trading_date": "2026-09-09",
+    "disposition": "REUSE_ALREADY_QUALIFIED_PACKAGE_WITHOUT_REACQUISITION",
+    "payloads": 2
+  },
+  "proposed_new_dates": [
+    {
+      "trading_date": "2026-09-10",
+      "role": "RECENT_COMPLETED_DATE_CANDIDATE",
+      "offline_basis": "NEXT_WEEKDAY_AFTER_EXISTING_ANCHOR_AND_COMPLETED_BEFORE_R10N_D",
+      "material_evidence": "TESTS_IMMEDIATE_SCHEMA_AND_CONTRACT_POPULATION_STABILITY_ACROSS_ADJACENT_COMPLETED_DATES",
+      "calendar_status": "WEEKDAY_NOT_KNOWN_BY_REPOSITORY_TO_BE_NON_TRADING",
+      "availability": "UNCONFIRMED_NO_EXTERNAL_CHECK_AUTHORIZED",
+      "files": [
+        {
+          "role": "UDIFF_FINAL_FO_BHAVCOPY",
+          "filename": "BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip",
+          "proposed_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip"
+        },
+        {
+          "role": "NSE_EXCLUSIVE_MII_CONTRACT",
+          "filename": "NSE_FO_contract_10092026.csv.gz",
+          "proposed_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_10092026.csv.gz"
+        }
+      ]
+    },
+    {
+      "trading_date": "2025-07-08",
+      "role": "OLDER_POST_UDIFF_TRANSITION_DATE_CANDIDATE",
+      "offline_basis": "TUESDAY_ONE_YEAR_AFTER_REPOSITORY_RECORDED_2024_07_08_UDIFF_TRANSITION",
+      "material_evidence": "TESTS_SCHEMA_AND_IDENTITY_CONTRACT_ACROSS_A_FOURTEEN_MONTH_INTERVAL_INSTEAD_OF_ADDING_ONLY_ADJACENT_ROWS",
+      "calendar_status": "WEEKDAY_NOT_KNOWN_BY_REPOSITORY_TO_BE_NON_TRADING",
+      "availability": "UNCONFIRMED_NO_EXTERNAL_CHECK_AUTHORIZED",
+      "files": [
+        {
+          "role": "UDIFF_FINAL_FO_BHAVCOPY",
+          "filename": "BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip",
+          "proposed_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip"
+        },
+        {
+          "role": "NSE_EXCLUSIVE_MII_CONTRACT",
+          "filename": "NSE_FO_contract_08072025.csv.gz",
+          "proposed_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_08072025.csv.gz"
+        }
+      ]
+    }
+  ],
+  "new_date_ceiling": 2,
+  "new_payload_ceiling": 4,
+  "availability_claimed": false,
+  "selection_is_acquisition_authorization": false
+}

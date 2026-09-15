@@ -1,0 +1,25 @@
+{
+  "schema_version": "r10nf_completion_v1",
+  "milestone": "R.10N-F",
+  "source_integrity_gate": "PASS",
+  "adapter_failure_reproduced": true,
+  "three_date_bounded_diagnostic_scan_completed": true,
+  "predicate_trigger_identified": "HIGH_BELOW_CLOSE_ONLY",
+  "adapter_modified": false,
+  "source_qualified": false,
+  "completion_decision": "ADAPTER_OHLC_RULE_SEMANTICS_REQUIRE_REMEDIATION",
+  "validation": {
+    "r10nf_diagnostic_and_evidence": "44_PASS",
+    "unchanged_r10na_through_r10ne": "166_PASS",
+    "relevant_governance": "103_PASS_1_FAIL_5_WARN",
+    "relevant_governance_failure": "PRESERVED_STALE_RESEARCH_FINGERPRINT_ASSERTION",
+    "full_root": "975_PASS_3_FAIL_4_SKIP_7_WARN",
+    "full_root_failures": [
+      "PRESERVED_STALE_RESEARCH_FINGERPRINT_ASSERTION",
+      "PRE_EXISTING_R9K_JOB_TIMEOUT_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC",
+      "PRE_EXISTING_R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10nf_related_failures": 0,
+    "compilation_json_manifest_and_privacy_scans": "PASS"
+  }
+}

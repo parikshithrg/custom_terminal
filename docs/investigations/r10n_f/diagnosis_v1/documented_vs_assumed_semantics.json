@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10nf_documented_vs_assumed_semantics_v1",
+  "milestone": "R.10N-F",
+  "official_evidence_state": "PENDING_OFFICIAL_FORMAT_EVIDENCE",
+  "official_evidence_classification": "INCONCLUSIVE",
+  "local_official_document_sha256": null,
+  "fields": [
+    {"field": "OpnPric", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "OPEN_MUST_NOT_EXCEED_HIGH_OR_FALL_BELOW_LOW_WHEN_VOLUME_IS_NONZERO", "semantic_status": "UNRESOLVED"},
+    {"field": "HghPric", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "HIGH_MUST_BE_AT_LEAST_OPEN_CLOSE_AND_LOW_WHEN_VOLUME_IS_NONZERO", "semantic_status": "UNRESOLVED"},
+    {"field": "LwPric", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "LOW_MUST_BE_AT_MOST_OPEN_CLOSE_AND_HIGH_WHEN_VOLUME_IS_NONZERO", "semantic_status": "UNRESOLVED"},
+    {"field": "ClsPric", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "CLOSE_MUST_LIE_WITHIN_LOW_HIGH_WHEN_VOLUME_IS_NONZERO", "semantic_status": "UNRESOLVED"},
+    {"field": "SttlmPric", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "PARSED_SEPARATELY_WITH_NO_RANGE_RULE", "semantic_status": "UNRESOLVED"},
+    {"field": "TtlTradgVol", "explicitly_documented_locally": "OFFICIAL_REPORT_COLUMN_NAME_ONLY", "adapter_assumption": "VALUE_GREATER_THAN_ZERO_MEANS_OHLC_RANGE_RULE_IS_APPLICABLE", "semantic_status": "UNRESOLVED"}
+  ],
+  "authoritative_local_statement_that_close_must_be_within_high_low": false,
+  "authoritative_local_special_state_definition": false,
+  "familiar_ohlc_convention_treated_as_exchange_contract": false
+}

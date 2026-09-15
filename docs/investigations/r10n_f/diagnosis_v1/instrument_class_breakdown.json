@@ -1,0 +1,13 @@
+{
+  "schema_version": "r10nf_instrument_class_breakdown_v1",
+  "milestone": "R.10N-F",
+  "dates": [
+    {"trading_date": "2026-09-09", "futures": 647, "options": 32603, "STF": 629, "IDF": 18, "STO": 27567, "IDO": 5036, "nonzero_ohlc_violations": 0},
+    {"trading_date": "2026-09-10", "futures": 647, "options": 33082, "STF": 629, "IDF": 18, "STO": 27956, "IDO": 5126, "nonzero_ohlc_violations": 2},
+    {"trading_date": "2025-07-08", "futures": 659, "options": 31388, "STF": 644, "IDF": 15, "STO": 27050, "IDO": 4338, "nonzero_ohlc_violations": 0}
+  ],
+  "nonzero_violation_instrument_class": "FUTURES",
+  "nonzero_violation_instrument_type": "STF",
+  "nonzero_violation_pattern_repetition": "REPEATED_TWICE_ON_ONE_DATE",
+  "unknown_instrument_classes": 0
+}

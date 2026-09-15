@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10nf_lifecycle_non_authorization_v1",
+  "milestone": "R.10N-F",
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "source_state": "MULTI_DATE_SOURCE_NOT_QUALIFIED",
+  "diagnostic_only": true,
+  "network_accessed": false,
+  "download_or_retrieval_performed": false,
+  "retained_packages_deleted": false,
+  "adapter_remediation_performed": false,
+  "production_research_scoring_recommendations_or_trading_authorized": false,
+  "raw_rows_committed": false,
+  "existing_retention_and_deletion_obligations_preserved": true,
+  "sealed_r10na_through_r10ne_evidence_modified": false,
+  "stale_research_fingerprint_preserved": true,
+  "r9k_timing_assertions_preserved": true
+}

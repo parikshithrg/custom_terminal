@@ -1,0 +1,59 @@
+{
+  "schema_version": "r10nf_predicate_aggregate_counts_v1",
+  "milestone": "R.10N-F",
+  "dates": [
+    {
+      "trading_date": "2026-09-09",
+      "total_rows": 33250,
+      "zero_volume_rows": 21774,
+      "nonzero_volume_rows": 11476,
+      "high_below_open": 0,
+      "high_below_close": 21774,
+      "high_below_low": 0,
+      "low_above_open": 0,
+      "low_above_close": 0,
+      "violating_zero_volume_rows": 21774,
+      "violating_nonzero_volume_rows": 0,
+      "ohlc_zero_while_another_price_nonzero": 21774,
+      "close_outside_low_high": 21774,
+      "open_outside_low_high": 0,
+      "settlement_outside_low_high": 24303
+    },
+    {
+      "trading_date": "2026-09-10",
+      "total_rows": 33729,
+      "zero_volume_rows": 22201,
+      "nonzero_volume_rows": 11528,
+      "high_below_open": 0,
+      "high_below_close": 22203,
+      "high_below_low": 0,
+      "low_above_open": 0,
+      "low_above_close": 0,
+      "violating_zero_volume_rows": 22201,
+      "violating_nonzero_volume_rows": 2,
+      "ohlc_zero_while_another_price_nonzero": 22202,
+      "close_outside_low_high": 22203,
+      "open_outside_low_high": 0,
+      "settlement_outside_low_high": 24820
+    },
+    {
+      "trading_date": "2025-07-08",
+      "total_rows": 32047,
+      "zero_volume_rows": 19662,
+      "nonzero_volume_rows": 12385,
+      "high_below_open": 0,
+      "high_below_close": 19662,
+      "high_below_low": 0,
+      "low_above_open": 0,
+      "low_above_close": 0,
+      "violating_zero_volume_rows": 19662,
+      "violating_nonzero_volume_rows": 0,
+      "ohlc_zero_while_another_price_nonzero": 19662,
+      "close_outside_low_high": 19662,
+      "open_outside_low_high": 0,
+      "settlement_outside_low_high": 21897
+    }
+  ],
+  "nonzero_violation_pattern": "TWO_ROWS_ON_2026-09-10_BOTH_HIGH_BELOW_CLOSE_ONLY",
+  "rounding_scale_explanation_supported": false
+}

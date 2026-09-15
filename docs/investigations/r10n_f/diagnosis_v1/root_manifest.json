@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10nf_root_manifest_v1",
+  "milestone": "R.10N-F",
+  "artifacts": [
+    {"path": "adapter_change_decision.json", "byte_length": 567, "sha256": "d9f165f687ead11352936e9170df3a5408ffe740559a43ff85d898084a80236d"},
+    {"path": "completion.json", "byte_length": 1037, "sha256": "97e35e86b6338d0668ad89279e9390c1ec057dfbbb7616df3bb068b9e54c9855"},
+    {"path": "documented_vs_assumed_semantics.json", "byte_length": 1740, "sha256": "1e46223dfd8aabbd5568b6409310d4be75c9e814155aa7b2b51e574a8853431e"},
+    {"path": "failure_reproduction.json", "byte_length": 727, "sha256": "d673863eac60fd79ede5901bbcbe68f22b2684eb2e2b5b51ff7786988895d155"},
+    {"path": "hypothesis_assessment.json", "byte_length": 1843, "sha256": "45351a6970f33ec87b9206631053b5df46a0e80c18fdce28b5302e3991fab4c8"},
+    {"path": "instrument_class_breakdown.json", "byte_length": 759, "sha256": "82534de14c7dc15a282ce76f0733ef2fbaf3ab943344c264e6d0d166aefbed1b"},
+    {"path": "lifecycle_non_authorization.json", "byte_length": 702, "sha256": "9a0bde876711a77eb0169cda22bfafe4166f71676963bcfb3b5d638416be69d8"},
+    {"path": "predicate_aggregate_counts.json", "byte_length": 1867, "sha256": "65e2dbaa752a2f6d3703ce784756593ecaeda08cb847140705105ba536d2684d"},
+    {"path": "sanitized_bounded_examples.json", "byte_length": 2525, "sha256": "775b43a6382b086f5fa463ea59f308a61990f6988d12eb654a66b46f68bfddcf"},
+    {"path": "source_integrity_reconciliation.json", "byte_length": 1611, "sha256": "b0756e7753c0921f1cc57a577bda2dec74cbc37309cc9d738bc41c8e7eb7699b"}
+  ],
+  "raw_rows_or_inventories_in_manifest": false,
+  "completion_decision": "ADAPTER_OHLC_RULE_SEMANTICS_REQUIRE_REMEDIATION"
+}

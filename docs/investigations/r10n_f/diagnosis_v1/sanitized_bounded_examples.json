@@ -1,0 +1,39 @@
+{
+  "schema_version": "r10nf_sanitized_bounded_examples_v1",
+  "milestone": "R.10N-F",
+  "sanitization": {
+    "identifier_method": "SHA256_OF_ASCII_R10N-F_PIPE_FinInstrmId_PIPE_RAW_ID",
+    "ticker_retained": false,
+    "raw_identifier_retained": false,
+    "full_row_retained": false,
+    "unrelated_values_retained": false,
+    "example_limit": 8,
+    "examples_retained": 2
+  },
+  "examples": [
+    {
+      "trading_date": "2026-09-10",
+      "csv_row_number": 4724,
+      "financial_instrument_id_sha256": "c262b9e8c2e6e590643101b918104a08eaf4f8240431d0b6d09af69450fd92f4",
+      "instrument_class": "FUTURES",
+      "instrument_type_group": "STF",
+      "failed_predicates": ["high_below_close"],
+      "value_states": {"open": "PRESENT_EXACT_DECIMAL", "high": "PRESENT_EXACT_DECIMAL", "low": "PRESENT_EXACT_DECIMAL", "close": "PRESENT_EXACT_DECIMAL", "settlement_price": "PRESENT_EXACT_DECIMAL", "volume": "PRESENT_EXACT_INTEGER"},
+      "exact_differences": {"high_minus_open": "0.00", "high_minus_close": "-3534.20", "high_minus_low": "0.00", "low_minus_open": "0.00", "low_minus_close": "-3534.20", "close_minus_settlement": "-10.14"},
+      "volume_state": "NONZERO",
+      "identity_assessment": {"resolved_unique": true, "duplicate": false, "conflicting": false, "expiry_agrees_under_current_interpretation": false, "lot_size_agrees": true, "strike_semantics_agree": true, "option_type_agrees": true, "contributed_to_ohlc_predicate": false}
+    },
+    {
+      "trading_date": "2026-09-10",
+      "csv_row_number": 4786,
+      "financial_instrument_id_sha256": "1f61c651ddf187f1a42fcb037cec89fa8151de5b06cb8eb78500bd7da0e22458",
+      "instrument_class": "FUTURES",
+      "instrument_type_group": "STF",
+      "failed_predicates": ["high_below_close"],
+      "value_states": {"open": "PRESENT_EXACT_DECIMAL", "high": "PRESENT_EXACT_DECIMAL", "low": "PRESENT_EXACT_DECIMAL", "close": "PRESENT_EXACT_DECIMAL", "settlement_price": "PRESENT_EXACT_DECIMAL", "volume": "PRESENT_EXACT_INTEGER"},
+      "exact_differences": {"high_minus_open": "0.00", "high_minus_close": "-28.80", "high_minus_low": "17.10", "low_minus_open": "-17.10", "low_minus_close": "-45.90", "close_minus_settlement": "0.00"},
+      "volume_state": "NONZERO",
+      "identity_assessment": {"resolved_unique": true, "duplicate": false, "conflicting": false, "expiry_agrees_under_current_interpretation": false, "lot_size_agrees": true, "strike_semantics_agree": true, "option_type_agrees": true, "contributed_to_ohlc_predicate": false}
+    }
+  ]
+}

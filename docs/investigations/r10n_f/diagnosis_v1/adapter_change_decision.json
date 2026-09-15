@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10nf_adapter_change_decision_v1",
+  "milestone": "R.10N-F",
+  "decision": "ADAPTER_OHLC_RULE_SEMANTICS_REQUIRE_REMEDIATION",
+  "adapter_modified": false,
+  "threshold_relaxed": false,
+  "r10ng_required_before_any_remediation": true,
+  "r10ng_requirements": [
+    "AUTHORITATIVE_OR_EXPLICITLY_APPROVED_OHLC_AND_TRADE_STATE_SEMANTICS",
+    "VERSIONED_RULE_CONTRACT",
+    "REGRESSION_TESTS_FOR_ZERO_AND_NONZERO_VOLUME_SPECIAL_STATES",
+    "OWNER_REVIEW"
+  ],
+  "multi_date_source_qualified": false,
+  "production_or_research_authorized": false
+}

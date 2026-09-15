@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10nf_failure_reproduction_v1",
+  "milestone": "R.10N-F",
+  "trading_date": "2026-09-10",
+  "unchanged_adapter_sha256": "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af",
+  "adapter_lifecycle": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "result": "REPRODUCED",
+  "error_code": "OHLC_INCONSISTENT",
+  "csv_row_number": 4724,
+  "combined_rule_branch": "HIGH_BELOW_MAX_OF_OPEN_CLOSE_LOW",
+  "individual_trigger": "HIGH_BELOW_CLOSE_ONLY",
+  "high_below_open": false,
+  "high_below_close": true,
+  "high_below_low": false,
+  "low_above_open": false,
+  "low_above_close": false,
+  "exact_high_minus_close": "-3534.20",
+  "rounding_or_precision_explanation": false,
+  "volume_state": "NONZERO"
+}

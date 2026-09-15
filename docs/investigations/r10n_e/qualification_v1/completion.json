@@ -1,0 +1,26 @@
+{
+  "schema_version": "r10ne_completion_v1",
+  "milestone": "R.10N-E",
+  "owner_gate": "COMPLETE",
+  "amended_request_budget_respected": true,
+  "approved_packages_acquired": 2,
+  "approved_files_acquired": 4,
+  "qualification_stopped_on_first_deviation": true,
+  "partial_acceptance_produced": false,
+  "cross_date_comparison_completed": false,
+  "raw_payloads_committed": false,
+  "completion_decision": "MULTI_DATE_SOURCE_NOT_QUALIFIED",
+  "validation": {
+    "focused_r10na_through_r10ne": "166_PASS",
+    "relevant_governance": "103_PASS_1_FAIL_5_WARN",
+    "relevant_governance_failure": "PRESERVED_STALE_RESEARCH_FINGERPRINT_ASSERTION",
+    "full_root": "951_PASS_3_FAIL_4_SKIP_7_WARN",
+    "full_root_failures": [
+      "PRESERVED_STALE_RESEARCH_FINGERPRINT_ASSERTION",
+      "PRE_EXISTING_R9K_JOB_TIMEOUT_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC",
+      "PRE_EXISTING_R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10ne_related_failures": 0,
+    "compilation_json_manifest_and_privacy_scans": "PASS"
+  }
+}

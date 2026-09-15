@@ -1,0 +1,33 @@
+{
+  "schema_version": "r10ne_per_date_qualification_v1",
+  "milestone": "R.10N-E",
+  "adapter": "R10N_C_CANDIDATE_ADAPTER",
+  "dates": [
+    {
+      "trading_date": "2026-09-09",
+      "role": "PREEXISTING_ANCHOR",
+      "state": "QUALIFIED_BY_ADAPTER",
+      "udiff_rows": 33250,
+      "mii_rows": 78603,
+      "futures": 647,
+      "options": 32603,
+      "identity_join_rate": 1.0
+    },
+    {
+      "trading_date": "2026-09-10",
+      "role": "NEW_APPROVED_DATE",
+      "state": "FAILED_CLOSED",
+      "failure_code": "OHLC_INCONSISTENT",
+      "failure_location": "UDIFF_ROW_4724",
+      "failure_summary": "TRADED_ROW_HIGH_OUTSIDE_ADAPTER_RANGE_RULE",
+      "partial_acceptance": false
+    },
+    {
+      "trading_date": "2025-07-08",
+      "role": "NEW_APPROVED_DATE",
+      "state": "NOT_EVALUATED_AFTER_FIRST_DEVIATION",
+      "reason": "MILESTONE_STOP_ON_FIRST_DEVIATION",
+      "partial_acceptance": false
+    }
+  ]
+}

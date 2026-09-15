@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10ne_stop_failure_ledger_v1",
+  "milestone": "R.10N-E",
+  "entries": [
+    {
+      "phase": "OFFLINE_QUALIFICATION",
+      "trading_date": "2026-09-10",
+      "component": "R10N_C_CANDIDATE_ADAPTER",
+      "failure_code": "OHLC_INCONSISTENT",
+      "sanitized_detail": "UDIFF_ROW_4724_HIGH_OUTSIDE_RANGE",
+      "action": "STOP_ENTIRE_MILESTONE_NO_PARTIAL_ACCEPTANCE"
+    }
+  ],
+  "substitution_attempted": false,
+  "threshold_relaxed": false,
+  "additional_network_after_failure": false,
+  "second_new_date_offline_qualification_after_failure": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "r10ne_acquisition_outcomes_v1",
+  "milestone": "R.10N-E",
+  "protocol": "EXACT_TWO_DATES_TWO_FILES_PER_DATE_ZERO_REDIRECTS_ZERO_RETRIES",
+  "pair_confirmation": {
+    "state": "ALL_PAIRS_CONFIRMED_BEFORE_ANY_GET",
+    "method": "FOUR_DIRECT_HEAD_REQUESTS",
+    "direct_http_200": 4,
+    "redirects": 0
+  },
+  "packages": [
+    {
+      "trading_date": "2026-09-10",
+      "destination": "artifacts/nse_fno_reports/2026-09-10/",
+      "state": "TRANSACTIONALLY_PUBLISHED",
+      "file_gets": 2,
+      "direct_http_200": 2
+    },
+    {
+      "trading_date": "2025-07-08",
+      "destination": "artifacts/nse_fno_reports/2025-07-08/",
+      "state": "TRANSACTIONALLY_PUBLISHED",
+      "file_gets": 2,
+      "direct_http_200": 2
+    }
+  ],
+  "raw_packages_git_ignored": true,
+  "raw_payloads_committed": false,
+  "existing_anchor_reacquired": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10ne_lifecycle_non_authorization_v1",
+  "milestone": "R.10N-E",
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "multi_date_source_state": "NOT_QUALIFIED",
+  "production_authorized": false,
+  "research_authorized": false,
+  "backtesting_authorized": false,
+  "signals_scores_or_recommendations_authorized": false,
+  "portfolio_logic_authorized": false,
+  "redistribution_authorized": false,
+  "trading_authorized": false,
+  "legacy_adapter_used": false,
+  "bse_used": false,
+  "kite_used": false,
+  "apsw_used": false,
+  "local_fno_database_accessed": false,
+  "holdouts_accessed": false,
+  "recurring_correction_monitor_created": false
+}

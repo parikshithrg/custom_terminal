@@ -1,0 +1,13 @@
+{
+  "schema_version": "r10ne_retention_deletion_obligations_v1",
+  "milestone": "R.10N-E",
+  "packages": [
+    {"trading_date": "2026-09-10", "relative_path": "artifacts/nse_fno_reports/2026-09-10/", "retention_deadline": "2026-12-31"},
+    {"trading_date": "2025-07-08", "relative_path": "artifacts/nse_fno_reports/2025-07-08/", "retention_deadline": "2026-12-31"}
+  ],
+  "delete_trigger": "EARLIER_OF_OWNER_DEADLINE_OR_OWNER_ACCEPTANCE_OF_HASH_BOUND_AGGREGATE_QUALIFICATION_EVIDENCE",
+  "deletion_scope": "ONLY_THE_EXACT_VERIFIED_DATE_PACKAGE",
+  "future_retention_date_default": "DECEMBER_31_OF_THE_CURRENT_YEAR",
+  "future_default_is_access_authorization": false,
+  "indefinite_retention_authorized": false
+}

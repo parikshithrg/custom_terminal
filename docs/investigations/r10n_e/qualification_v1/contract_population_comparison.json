@@ -1,0 +1,13 @@
+{
+  "schema_version": "r10ne_contract_population_comparison_v1",
+  "milestone": "R.10N-E",
+  "state": "NOT_COMPLETED",
+  "reason": "STOPPED_ON_FIRST_QUALIFICATION_DEVIATION",
+  "anchor_contract_count": 78603,
+  "new_date_additions": "NOT_EVALUATED",
+  "new_date_removals": "NOT_EVALUATED",
+  "new_date_intersection": "NOT_EVALUATED",
+  "full_contract_inventories_persisted": false,
+  "correction_behavior_established": false,
+  "limitation": "ONE_RETRIEVAL_PER_DATE_CANNOT_ESTABLISH_LATER_REPLACEMENT_OR_CORRECTION_BEHAVIOR"
+}

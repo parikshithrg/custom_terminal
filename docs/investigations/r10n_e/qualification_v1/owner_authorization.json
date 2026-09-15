@@ -1,0 +1,27 @@
+{
+  "schema_version": "r10ne_owner_authorization_v1",
+  "milestone": "R.10N-E",
+  "authorization_state": "COMPLETE_FOR_EXACT_AMENDED_SCOPE",
+  "current_nse_terms_copyright_and_data_policy_personally_reviewed": true,
+  "direct_head_confirmation_requests_approved": 4,
+  "direct_get_acquisition_requests_approved": 4,
+  "total_request_and_direct_response_ceiling": 8,
+  "all_four_head_confirmations_required_before_any_get": true,
+  "dates": ["2026-09-10", "2025-07-08"],
+  "destinations": [
+    "artifacts/nse_fno_reports/2026-09-10/",
+    "artifacts/nse_fno_reports/2025-07-08/"
+  ],
+  "exact_filenames_and_urls_approved": true,
+  "purpose": "PERSONAL_NON_COMMERCIAL_INTERNAL_TECHNICAL_QUALIFICATION_ONLY",
+  "retention_deadlines": {
+    "2026-09-10": "2026-12-31",
+    "2025-07-08": "2026-12-31"
+  },
+  "deletion_at_deadline_approved": true,
+  "zero_redirects_retries_fallbacks_and_enumeration": true,
+  "personal_acknowledgement_flag_authorization": true,
+  "future_retention_date_default": "DECEMBER_31_OF_THE_CURRENT_YEAR",
+  "future_default_authorizes_access_or_acquisition": false,
+  "production_research_redistribution_or_trading_authorized": false
+}

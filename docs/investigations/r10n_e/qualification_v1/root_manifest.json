@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10ne_root_manifest_v1",
+  "milestone": "R.10N-E",
+  "artifacts": [
+    {"path": "acceptance_matrix_results.json", "byte_length": 592, "sha256": "a2cbab421f54ed433b5f4b727d414cac0500a5f93cb2c59b80e35b7dcdebd22f"},
+    {"path": "acquisition_outcomes.json", "byte_length": 869, "sha256": "650cdbf97351b5fd395c6eaaac406f8af3ebd706fa79b6906258fc2f0d38e1a3"},
+    {"path": "completion.json", "byte_length": 1035, "sha256": "1f4e9c51773c52c780a4b2817816cb235d7cb8725ff4b44c061e69b246599238"},
+    {"path": "contract_population_comparison.json", "byte_length": 527, "sha256": "759fc14f72e4f8804c7f9b582ce0b97ff7046a43a5695af125c1d7887579ef6c"},
+    {"path": "cross_date_schema_comparison.json", "byte_length": 562, "sha256": "8ccb5b2ef0a36c7cb5d87fc5f13c80ca393e14c55455727596765f661ad2b13d"},
+    {"path": "lifecycle_non_authorization.json", "byte_length": 675, "sha256": "a3632fb880a9c85787e8e8cbbad0a098ca70b143aee390639f6cf3be9e785f26"},
+    {"path": "owner_authorization.json", "byte_length": 1158, "sha256": "51b1fcb49a4777cca33b249c7466bb315e945cea91b7b246f24660a80edb9805"},
+    {"path": "per_date_qualification.json", "byte_length": 929, "sha256": "a8b06f5932a182e391b8e401e0425b7e83965e19d4293ae028f1808702949feb"},
+    {"path": "request_budget_ledger.json", "byte_length": 429, "sha256": "f9488afdfda2c3144a50553a210e30b0a521e7764d0c55e5e05d773f5406bada"},
+    {"path": "retention_deletion_obligations.json", "byte_length": 713, "sha256": "43484902cc0f08f57b3508a17b6ba97d4b45d9e4dfc4b1927d6f31d44b7c1e03"},
+    {"path": "source_bindings.json", "byte_length": 1818, "sha256": "2822cd495c97b4a8db203f6a52bf56c152b0defeae783072cdb8294c83b30cd7"},
+    {"path": "stop_failure_ledger.json", "byte_length": 578, "sha256": "511cf87bfbf8c867791948bd7af97167ce4c9c0284b703eec48a2fbd2d752df3"}
+  ],
+  "raw_payloads_in_manifest": false,
+  "completion_decision": "MULTI_DATE_SOURCE_NOT_QUALIFIED"
+}

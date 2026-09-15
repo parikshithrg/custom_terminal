@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10ne_acceptance_matrix_results_v1",
+  "milestone": "R.10N-E",
+  "policy": "EVERY_DATE_MUST_PASS_INDEPENDENTLY_WITH_NO_PARTIAL_ACCEPTANCE",
+  "overall": "FAIL_CLOSED",
+  "decisive_criterion": {
+    "question": "OHLC",
+    "threshold": "100_PERCENT_REQUIRED_AND_ZERO_INVALID_TRADED_ROW_RANGES",
+    "result": "FAIL",
+    "failure_code": "OHLC_INCONSISTENT",
+    "trading_date": "2026-09-10"
+  },
+  "remaining_criteria": "NOT_ACCEPTED_AFTER_FIRST_DEVIATION",
+  "silent_acceptance_of_required_or_identity_change": false,
+  "multi_date_schema_stability_qualified": false
+}

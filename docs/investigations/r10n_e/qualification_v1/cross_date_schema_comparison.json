@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10ne_cross_date_schema_comparison_v1",
+  "milestone": "R.10N-E",
+  "state": "NOT_COMPLETED",
+  "reason": "2026-09-10_FAILED_CLOSED_BEFORE_CROSS_DATE_ACCEPTANCE",
+  "anchor_schema_observed": {
+    "trading_date": "2026-09-09",
+    "udiff_column_count": 34,
+    "mii_column_count": 150
+  },
+  "new_date_schema_stability_accepted": false,
+  "added_non_required_columns": "NOT_EVALUATED",
+  "removed_non_required_columns": "NOT_EVALUATED",
+  "type_stability": "NOT_EVALUATED",
+  "ordinary_population_change_classified_as_correction": false
+}

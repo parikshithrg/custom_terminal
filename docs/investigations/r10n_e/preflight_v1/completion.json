@@ -1,0 +1,23 @@
+{
+  "schema_version": "r10ne_preflight_completion_v1",
+  "milestone": "R.10N-E",
+  "baseline_commit": "e642f819734d895e28178d1bc39f53879566f888",
+  "phase_1_offline_work_completed": true,
+  "phase_2_entered": false,
+  "phase_3_entered": false,
+  "network_requests": 0,
+  "payloads_downloaded": 0,
+  "owner_authorization_recorded": false,
+  "completion_decision": "EXECUTION_PLAN_AMENDMENT_REQUIRED",
+  "next_action": "OWNER_REVIEWS_AND_EXPLICITLY_APPROVES_OR_REJECTS_R10N_D_AMENDMENT_V1",
+  "validation": {
+    "strict_downloader": "71_PASS",
+    "preflight_governance": "10_PASS",
+    "r10nd_governance": "12_PASS",
+    "combined_focused": "139_PASS",
+    "relevant_governance": "73_PASS",
+    "root_suite": "924_PASS_3_FAIL_4_SKIP_7_WARN",
+    "new_functional_failures": 0,
+    "compilation_json_manifest_privacy": "PASS"
+  }
+}

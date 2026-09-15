@@ -1,0 +1,9 @@
+{
+  "schema_version": "r10ne_owner_authorization_state_v1",
+  "milestone": "R.10N-E",
+  "state": "NOT_REQUESTED_PENDING_PLAN_AMENDMENT",
+  "sanitized_owner_authorization_recorded": false,
+  "acknowledgement_flag_authorized": false,
+  "requests_authorized": 0,
+  "reason": "R10N_D_REQUEST_BUDGET_CANNOT_FUND_REQUIRED_PAIR_CONFIRMATION"
+}

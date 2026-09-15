@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10nd_amended_request_budget_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "approval_state": "PROPOSED_NOT_APPROVED",
+  "candidate_dates": 2,
+  "exact_files": 4,
+  "direct_head_confirmation_requests_maximum": 4,
+  "direct_get_acquisition_requests_maximum": 4,
+  "total_http_requests_maximum": 8,
+  "accepted_direct_http_200_responses_maximum": 8,
+  "redirect_hops": 0,
+  "retries": 0,
+  "landing_page_requests": 0,
+  "enumeration_requests": 0,
+  "fallback_requests": 0,
+  "anchor_requests": 0,
+  "ordering": "ALL_FOUR_EXACT_HEAD_CONFIRMATIONS_MUST_RETURN_DIRECT_200_BEFORE_ANY_GET",
+  "head_limitation": "HEAD_CONFIRMATION_DOES_NOT_VALIDATE_PAYLOAD_CONTENT_AND_ANY_UNSUPPORTED_OR_AMBIGUOUS_HEAD_RESPONSE_STOPS_EXECUTION",
+  "budget_expansion_requires_owner_approval": true
+}

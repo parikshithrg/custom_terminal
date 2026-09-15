@@ -1,0 +1,13 @@
+{
+  "schema_version": "r10ne_request_budget_ledger_v1",
+  "milestone": "R.10N-E",
+  "nse_head_requests": 0,
+  "nse_get_requests": 0,
+  "redirects_followed": 0,
+  "retries": 0,
+  "fallback_dates": 0,
+  "archive_enumeration_requests": 0,
+  "payloads_retained": 0,
+  "anchor_requests": 0,
+  "ledger_state": "STOPPED_OFFLINE_BEFORE_OWNER_GATE"
+}

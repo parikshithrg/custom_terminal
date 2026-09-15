@@ -1,0 +1,12 @@
+{
+  "schema_version": "r10ne_stop_ledger_v1",
+  "milestone": "R.10N-E",
+  "stop_phase": "PHASE_1_OFFLINE_EXECUTION_PREFLIGHT",
+  "trigger": "EXACT_PAIR_CONFIRMATION_REQUIRES_REQUESTS_NOT_PRESENT_IN_R10N_D_BUDGET",
+  "action": "CREATED_VERSIONED_R10N_D_AMENDMENT_FOR_OWNER_REVIEW",
+  "external_access_attempted": false,
+  "owner_gate_presented_as_EXECUTABLE": false,
+  "phase_2_entered": false,
+  "phase_3_entered": false,
+  "partial_acceptance": false
+}

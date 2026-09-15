@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10nd_amendment_non_authorization_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "owner_approval_received": false,
+  "nse_requests": 0,
+  "availability_checks": 0,
+  "payloads_downloaded": 0,
+  "acknowledgement_flag_used": false,
+  "anchor_reacquired": false,
+  "production_authorized": false,
+  "research_authorized": false,
+  "lifecycle_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "research_fingerprint": "STALE_FAIL_CLOSED_UNCHANGED"
+}

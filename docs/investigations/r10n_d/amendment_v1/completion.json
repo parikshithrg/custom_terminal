@@ -1,0 +1,29 @@
+{
+  "schema_version": "r10nd_amendment_completion_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "baseline_commit": "e642f819734d895e28178d1bc39f53879566f888",
+  "offline_preflight_completed": true,
+  "zero_redirect_downloader_hardened": true,
+  "original_plan_internally_consistent": false,
+  "amended_request_ceiling": 8,
+  "owner_amendment_approval_received": false,
+  "network_requests": 0,
+  "payloads_downloaded": 0,
+  "completion_decision": "EXECUTION_PLAN_AMENDMENT_REQUIRED",
+  "validation": {
+    "strict_downloader": "71_PASS",
+    "r10ne_preflight": "10_PASS",
+    "r10nd_governance": "12_PASS",
+    "combined_focused": "139_PASS",
+    "relevant_governance": "73_PASS",
+    "historical_entrypoint_inventory": "PASS_WITH_ORIGINAL_DOWNLOADER_BYTE_IDENTICAL",
+    "root_suite": "924_PASS_3_FAIL_4_SKIP_7_WARN",
+    "root_failures": [
+      "UNCHANGED_FAIL_CLOSED_RESEARCH_FINGERPRINT_ASSERTION",
+      "UNCHANGED_SEALED_R9K_JOB_TIMEOUT_NEGATIVE_0_003_TIMING_DIAGNOSTIC",
+      "UNCHANGED_SEALED_R9K_JOB_CLOSE_NEGATIVE_0_003_TIMING_DIAGNOSTIC"
+    ],
+    "r10ne_functional_failures": 0,
+    "compilation_json_manifest_privacy": "PASS"
+  }
+}

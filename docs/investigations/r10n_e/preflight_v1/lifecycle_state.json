@@ -1,0 +1,12 @@
+{
+  "schema_version": "r10ne_lifecycle_state_v1",
+  "milestone": "R.10N-E",
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "production_provider_registered": false,
+  "production_or_research_authorized": false,
+  "legacy_adapter_authorized": false,
+  "bse_paid_kite_apsw_local_database_or_holdout_used": false,
+  "recurring_monitor_created": false,
+  "backtest_signal_score_recommendation_portfolio_redistribution_or_trading": false,
+  "research_fingerprint": "STALE_FAIL_CLOSED_UNCHANGED"
+}

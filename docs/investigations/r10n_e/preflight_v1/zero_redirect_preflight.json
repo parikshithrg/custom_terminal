@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10ne_zero_redirect_preflight_v1",
+  "milestone": "R.10N-E",
+  "implementation": "tools/download_nse_fno_reports_r10ne.py",
+  "implementation_byte_length": 4539,
+  "implementation_sha256": "49bd1374b5ae0493d8f1ade02deb6823a3f6794d7dde2889438a2a8c13d33934",
+  "strict_mode_api": "download_package_zero_redirects",
+  "request_setting": "allow_redirects=False",
+  "rejected_status_range": "300_THROUGH_399",
+  "location_header_interpreted_in_strict_mode": false,
+  "hidden_redirect_history_rejected": true,
+  "changed_final_url_rejected": true,
+  "automatic_retry": false,
+  "date_enumeration": false,
+  "fallback_selection": false,
+  "maximum_files_per_invocation": 2,
+  "historical_downloader_byte_preserved": true,
+  "legacy_allowlisted_redirect_mode_preserved": true,
+  "offline_test_result": "71_PASS"
+}

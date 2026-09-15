@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nd_amended_acquisition_protocol_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "approval_state": "PROPOSED_NOT_APPROVED",
+  "sequence": [
+    "OWNER_APPROVES_AMENDMENT_EXACT_SCOPE_AND_RETENTION_DEADLINES",
+    "ISSUE_ONE_NO_REDIRECT_HEAD_TO_EACH_OF_THE_FOUR_EXACT_URLS",
+    "REQUIRE_ALL_FOUR_HEAD_RESPONSES_TO_BE_DIRECT_HTTP_200",
+    "STOP_WITH_ZERO_GETS_IF_ANY_HEAD_IS_NON_200_REDIRECTED_UNSUPPORTED_OR_AMBIGUOUS",
+    "RUN_ONE_STRICT_ZERO_REDIRECT_DOWNLOADER_INVOCATION_PER_DATE",
+    "ALLOW_EXACTLY_TWO_GETS_PER_DATE_AND_AT_MOST_FOUR_GETS_TOTAL",
+    "STOP_ENTIRE_MILESTONE_ON_FIRST_DEVIATION",
+    "QUALIFY_COMPLETE_PUBLISHED_PAIRS_OFFLINE"
+  ],
+  "confirmation_method": "DIRECT_HEAD_EXACT_URL_NO_BODY_RETENTION",
+  "confirmation_is_payload_validation": false,
+  "all_pairs_confirmed_before_any_acquisition": true,
+  "automatic_retry": false,
+  "redirect_following": false,
+  "alternative_date_or_url": false,
+  "archive_enumeration": false,
+  "partial_pair_publication": false,
+  "current_milestone_execution_authorized": false
+}

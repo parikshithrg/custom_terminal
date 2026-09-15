@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10nd_execution_plan_inconsistency_audit_v1",
+  "milestone": "R.10N-E_OFFLINE_PREFLIGHT",
+  "governing_plan": "docs/investigations/r10n_d/plan_v1",
+  "governing_root_manifest_sha256": "1d65b267c4e194d4df836c448fc41e5cd6e6c7425e6b4ca55a760984b7a8c85a",
+  "requirements": {
+    "confirm_complete_pair_before_acquiring_either_file": true,
+    "candidate_dates": 2,
+    "files_per_date": 2,
+    "payload_gets": 4,
+    "original_total_request_ceiling": 4,
+    "original_confirmation_request_budget": 0
+  },
+  "finding": "INTERNALLY_INCONSISTENT_REQUEST_BUDGET",
+  "reason": "FOUR_PAYLOAD_GETS_CONSUME_THE_FULL_FOUR_REQUEST_CEILING_LEAVING_ZERO_REQUESTS_TO_CONFIRM_EACH_COMPLETE_PAIR_BEFORE_ACQUISITION",
+  "rejected_interpretation": "TREATING_A_PAYLOAD_GET_AS_PRIOR_AVAILABILITY_CONFIRMATION",
+  "rejected_because": "THE_FIRST_FILE_WOULD_BE_ACQUIRED_BEFORE_THE_SECOND_FILE_IN_ITS_PAIR_WAS_CONFIRMED",
+  "network_access_during_audit": 0,
+  "action": "STOP_BEFORE_EXTERNAL_ACCESS_AND_REQUIRE_EXPLICIT_OWNER_APPROVAL_OF_AMENDED_BUDGET"
+}

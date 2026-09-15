@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10nd_amendment_root_manifest_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "artifacts": [
+    {"path": "amended_acquisition_protocol.json", "byte_length": 1061, "sha256": "231d3d081ed408fef02588c5f4fcdd466f4c374b61367d43d3061a8be2f40beb"},
+    {"path": "amended_request_budget.json", "byte_length": 797, "sha256": "bd8c840be0d8ec22ecfececa2abe5884f63f60c513d31b422fc13a294e4af6fd"},
+    {"path": "completion.json", "byte_length": 1147, "sha256": "085efe530592b92c516222f3eb7c5b88829131b8821cc66dd4c7b08982597b6e"},
+    {"path": "inconsistency_audit.json", "byte_length": 1053, "sha256": "f8d85e4cc8febe2300ed2f75f81769f5d244251ba8c50252008efd2575afb765"},
+    {"path": "non_authorization_record.json", "byte_length": 465, "sha256": "c469a9d05bc074f9e42da6da9f99dbbfdbde4cb0b5c7d52209a0500ef82d9911"},
+    {"path": "owner_amendment_decision_schema.json", "byte_length": 1030, "sha256": "677611ac30ea0f3bfdd43e73344a18d7cef4892698f0ce7f71cd2216e38aff05"}
+  ],
+  "report_binding": {
+    "path": "reports/NSE_FNO_R10ND_EXECUTION_PLAN_AMENDMENT.md",
+    "byte_length": 4008,
+    "sha256": "6ad0d07b03a438bcfade5554a58cee1e6a1f2c7c1788b79ffe9620abc3142993"
+  },
+  "raw_payloads_bound": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "r10nd_owner_amendment_decision_v1",
+  "amendment": "R10N_D_AMENDMENT_V1",
+  "decision_state": "OWNER_REVIEW_REQUIRED",
+  "owner_must_explicitly_confirm": {
+    "current_nse_terms_copyright_and_data_policy_personally_reviewed": null,
+    "four_direct_head_confirmation_requests_approved": null,
+    "four_direct_get_acquisition_requests_approved": null,
+    "eight_total_request_and_direct_200_response_ceiling_approved": null,
+    "all_four_head_confirmations_before_any_get_approved": null,
+    "two_dates_four_filenames_urls_and_destinations_approved": null,
+    "non_commercial_internal_technical_qualification_only": null,
+    "retention_deadline_2026_09_10": null,
+    "retention_deadline_2025_07_08": null,
+    "deletion_at_each_deadline_approved": null,
+    "zero_redirect_retry_fallback_enumeration_approved": null,
+    "personal_acknowledgement_flag_authorization": null
+  },
+  "partial_blank_assumed_or_indirect_approval_authorizes_requests": false,
+  "production_or_research_authorized": false
+}

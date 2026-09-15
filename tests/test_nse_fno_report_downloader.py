@@ -11,6 +11,7 @@ from pathlib import Path
 import pytest
 
 import tools.download_nse_fno_reports as downloader
+import tools.download_nse_fno_reports_r10ne as strict_downloader
 from tools.download_nse_fno_reports import (
     ArchiveLimits,
     DownloadError,
@@ -103,6 +104,7 @@ def test_parser_has_no_date_range_retry_or_bulk_option() -> None:
     assert not {"--from", "--to", "--start-date", "--end-date", "--all", "--retry"} & option_strings
     with pytest.raises(SystemExit):
         parser.parse_args(["--from", "2026-09-01", "--to", "2026-09-09"])
+    assert len(build_plan(date(2026, 9, 9), "both")) == 2
 
 
 def test_date_parser_rejects_bad_and_future_dates() -> None:
@@ -234,6 +236,97 @@ def test_valid_same_domain_redirect_chain_is_accepted(tmp_path: Path) -> None:
     download_package(trading_date=date(2026, 9, 9), report="udiff", output_root=tmp_path,
                      acknowledge_nse_terms=True, session=Session([final]))
     assert (tmp_path / "2026-09-09" / spec.filename).exists()
+
+
+@pytest.mark.parametrize("status", [300, 301, 302, 303, 304, 305, 306, 307, 308, 399])
+@pytest.mark.parametrize("location", [
+    "https://archives.nseindia.com/content/fo/other.zip",
+    "http://nsearchives.nseindia.com/downgrade.zip",
+    "https://example.test/off-domain.zip",
+    "not a URL",
+])
+def test_strict_mode_rejects_every_3xx_class_and_misleading_location(
+    tmp_path: Path, status: int, location: str,
+) -> None:
+    spec = build_plan(date(2026, 9, 9), "udiff")[0]
+    response = Response(b"redirect body", url=spec.url, status=status,
+                        headers={"Location": location})
+    session = Session([response])
+    with pytest.raises(DownloadError, match="zero-redirect"):
+        strict_downloader.download_package_zero_redirects(
+            trading_date=date(2026, 9, 9), report="udiff", output_root=tmp_path,
+            acknowledge_nse_terms=True, session=session,
+        )
+    assert len(session.calls) == 1
+    assert session.calls[0][1]["allow_redirects"] is False
+    assert response.closed
+    assert_no_package_or_stage(tmp_path)
+
+
+def test_strict_mode_rejects_hidden_redirect_history_and_changed_final_url(tmp_path: Path) -> None:
+    spec = build_plan(date(2026, 9, 9), "udiff")[0]
+    hop = Response(b"", url=spec.url, status=302, headers={"Location": spec.url})
+    hidden_history = Response(zip_bytes(), url=spec.url, history=[hop])
+    changed_url = Response(zip_bytes(), url=spec.url + "/changed")
+    for index, response in enumerate((hidden_history, changed_url)):
+        root = tmp_path / str(index)
+        with pytest.raises(DownloadError, match="zero-redirect"):
+            strict_downloader.download_package_zero_redirects(
+                trading_date=date(2026, 9, 9), report="udiff", output_root=root,
+                acknowledge_nse_terms=True, session=Session([response]),
+            )
+        assert_no_package_or_stage(root)
+
+
+def test_strict_mode_is_zero_retry_and_transactional_for_second_file_failure(tmp_path: Path) -> None:
+    plan = build_plan(date(2026, 9, 9), "both")
+    responses = pair_responses()
+    responses[1] = Response(b"redirect", url=plan[1].url, status=307,
+                            headers={"Location": plan[1].url})
+    session = Session(responses + pair_responses())
+    with pytest.raises(DownloadError, match="zero-redirect"):
+        strict_downloader.download_package_zero_redirects(
+            trading_date=date(2026, 9, 9), report="both", output_root=tmp_path,
+            acknowledge_nse_terms=True, session=session,
+        )
+    assert len(session.calls) == 2
+    assert len(session.responses) == 2
+    assert all(call[1]["allow_redirects"] is False for call in session.calls)
+    assert_no_package_or_stage(tmp_path)
+
+
+def test_strict_mode_preserves_session_ownership(tmp_path: Path, monkeypatch) -> None:
+    internal = Session(pair_responses())
+    monkeypatch.setattr(strict_downloader.requests, "Session", lambda: internal)
+    strict_downloader.download_package_zero_redirects(
+        trading_date=date(2026, 9, 9), report="both", output_root=tmp_path / "internal",
+        acknowledge_nse_terms=True,
+    )
+    assert internal.closed
+    assert all(call[1]["allow_redirects"] is False for call in internal.calls)
+
+    injected = Session(pair_responses())
+    strict_downloader.download_package_zero_redirects(
+        trading_date=date(2026, 9, 9), report="both", output_root=tmp_path / "injected",
+        acknowledge_nse_terms=True, session=injected,
+    )
+    assert not injected.closed
+
+
+def test_strict_mode_does_not_retry_non_redirect_failure(tmp_path: Path) -> None:
+    spec = build_plan(date(2026, 9, 9), "udiff")[0]
+    session = Session([
+        Response(b"unavailable", url=spec.url, status=503),
+        Response(zip_bytes(), url=spec.url, content_type="application/zip"),
+    ])
+    with pytest.raises(DownloadError, match="503"):
+        strict_downloader.download_package_zero_redirects(
+            trading_date=date(2026, 9, 9), report="udiff", output_root=tmp_path,
+            acknowledge_nse_terms=True, session=session,
+        )
+    assert len(session.calls) == 1
+    assert len(session.responses) == 1
+    assert_no_package_or_stage(tmp_path)
 
 
 def test_initial_url_and_redirect_source_are_independently_validated(tmp_path: Path) -> None:

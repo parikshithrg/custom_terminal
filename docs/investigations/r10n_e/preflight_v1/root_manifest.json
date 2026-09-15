@@ -1,0 +1,18 @@
+{
+  "schema_version": "r10ne_preflight_root_manifest_v1",
+  "milestone": "R.10N-E",
+  "artifacts": [
+    {"path": "completion.json", "byte_length": 830, "sha256": "62dd7b7a656ff983d8e114341d5f78fba811f50874dc1c3a55ee1b94132826d8"},
+    {"path": "lifecycle_state.json", "byte_length": 504, "sha256": "d8aa1f72f8fc7f71b440eb600741dfdbdb56611aedd5838e1c26b3b59cc41e60"},
+    {"path": "owner_authorization_state.json", "byte_length": 337, "sha256": "7d8fbb538ac315528da9b2393e1b79e5d631f3a04c4ecde479fe9aa14906b668"},
+    {"path": "request_budget_ledger.json", "byte_length": 342, "sha256": "3bc7fa3499163589b770fedeb707c681bb9ff797a5f7481edac950c60b51ec14"},
+    {"path": "stop_ledger.json", "byte_length": 454, "sha256": "9a9c76c2e6c5aa9839e74d5c1ee35ffc4246ce5303bc0b26069628372dc5fc29"},
+    {"path": "zero_redirect_preflight.json", "byte_length": 829, "sha256": "fcadb402fba09ef0decaaae64ca172d9812da9bffa9a1ff1b23b8818dba3b49f"}
+  ],
+  "amendment_binding": {
+    "path": "docs/investigations/r10n_d/amendment_v1/root_manifest.json",
+    "byte_length": 1211,
+    "sha256": "caf08a20b58c3689e77994a651e4a142eb4031d6f6b725785628704ecdb5fb72"
+  },
+  "raw_payloads_bound": false
+}

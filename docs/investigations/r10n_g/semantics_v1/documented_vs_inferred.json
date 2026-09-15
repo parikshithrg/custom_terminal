@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10ng_documented_vs_inferred_v1",
+  "milestone": "R.10N-G",
+  "distinctions": [
+    {"claim": "High and low are the day's high and low fields", "classification": "DOCUMENTED", "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master rows 348-349"]},
+    {"claim": "Close is the day's closing-price field", "classification": "DOCUMENTED", "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 350"]},
+    {"claim": "Liquid equity-derivative futures closing price uses a last-half-hour weighted average", "classification": "DOCUMENTED", "citations": ["NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103:daily settlement table"]},
+    {"claim": "Illiquid unexpired futures can have a theoretical settlement price", "classification": "DOCUMENTED", "citations": ["NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103:illiquid futures row"]},
+    {"claim": "ClsPric must always lie inside LwPric and HghPric when TtlTradgVol is nonzero", "classification": "UNRESOLVED_NOT_DOCUMENTED", "citations": []},
+    {"claim": "All trade states contributing to total volume also contribute identically to high, low, open, and close", "classification": "UNRESOLVED_NOT_DOCUMENTED", "citations": []},
+    {"claim": "Zero-volume bhavcopy prices are carry-forward values", "classification": "UNRESOLVED_NOT_DOCUMENTED", "citations": []},
+    {"claim": "The MII XpryDt numeric value uses the Unix epoch", "classification": "REFUTED_AS_CURRENT_ADAPTER_ASSUMPTION_BY_BOUNDED_OBSERVATION; AUTHORITATIVE_ENCODING_UNRESOLVED", "citations": []}
+  ],
+  "familiar_market_convention_used_as_authority": false,
+  "search_result_snippets_used_as_authority": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "r10ng_root_manifest_v1",
+  "milestone": "R.10N-G",
+  "artifacts": [
+    {"path": "candidate_invariant_comparison.json", "byte_length": 2099, "sha256": "a6dbf6bbb0b99ddfa0fa8d864367583140fb31bf8ff0ef15c1c0d3169168523f"},
+    {"path": "completion.json", "byte_length": 1033, "sha256": "eadf524b01f0c02592792361591df85fac8961324e97d702701d91085612862a"},
+    {"path": "documented_vs_inferred.json", "byte_length": 1664, "sha256": "8557a58765349d115423de3797c52670b7c8a62a9505c3888151102cf8abaee4"},
+    {"path": "expiry_side_finding.json", "byte_length": 1132, "sha256": "2e8f123b724d9c46fbb6098e3e96c7c87bbc309c91f8f556dd81ea2edb11012f"},
+    {"path": "field_semantics_matrix.json", "byte_length": 4854, "sha256": "5fe8ef230c736544bed3dc19b49e72e781666e56f6f42721c704d8382faded59"},
+    {"path": "lifecycle_non_authorization.json", "byte_length": 675, "sha256": "6eb4c39e3a740fdb7ade327e49c3a02671a95372d3ad67ed6de627a04420b054"},
+    {"path": "official_evidence_inventory.json", "byte_length": 4252, "sha256": "7631d2d949c1e9bb4bba46ee9cfdaa1430da786debb84c87d37a356db79d8f66"},
+    {"path": "owner_decision_schema.json", "byte_length": 2353, "sha256": "0e2b2c467c9a0191deb40643393cbeb092255e0a3cba37e4cff715162b8cf2e6"},
+    {"path": "proposed_ohlc_rule_contract.json", "byte_length": 1593, "sha256": "5a390a9f5cb54a9d22ede15fe2e5c38dcc739984d105e68a058ef2961cec29b6"},
+    {"path": "r10nf_reconciliation.json", "byte_length": 1089, "sha256": "ffda4e39e7e0f8d7f57869a421fd86f959de5ccb8e0f98d7cdc3321e39348224"},
+    {"path": "remediation_risk_matrix.json", "byte_length": 1181, "sha256": "7098d48ff5ad9495f18e46091376f429819746e18470dde15ac649d0ea4bcce4"},
+    {"path": "trade_state_applicability_matrix.json", "byte_length": 2042, "sha256": "106cb21a1173df0a9bfa743dcb3dcd3745575e3cf67640c09c328012088285b0"}
+  ],
+  "full_documents_or_market_payloads_in_manifest": false,
+  "completion_decision": "AUTHORITATIVE_SEMANTICS_SUPPORT_VERSIONED_REMEDIATION"
+}

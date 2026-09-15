@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10ng_trade_state_applicability_matrix_v1",
+  "milestone": "R.10N-G",
+  "states": [
+    {"state": "ORIGINAL_TRADE_OR", "documented": true, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": "NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List row 25"},
+    {"state": "MODIFIED_TRADE_MD", "documented": true, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": "NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List row 26"},
+    {"state": "CANCELLED_TRADE_CN", "documented": true, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": "NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List row 27"},
+    {"state": "REJECTED_TRADE_RJ", "documented": true, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": "NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List row 28"},
+    {"state": "CUSTODIAN_CONFIRMED_CF", "documented": true, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": "NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List row 29"},
+    {"state": "ZERO_TOTAL_TRADED_QUANTITY", "documented": false, "bhavcopy_ohlc_inclusion": "NO_TRADE_RANGE_INFERENCE_PERMITTED", "price_population": "UNRESOLVED", "citation": null},
+    {"state": "NONZERO_VOLUME_NO_QUALIFYING_REGULAR_TRADE", "documented": false, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "price_population": "UNRESOLVED", "citation": null},
+    {"state": "NEGOTIATED_BLOCK_AUCTION_OR_SPECIAL", "documented": false, "bhavcopy_ohlc_inclusion": "UNRESOLVED", "volume_inclusion": "UNRESOLVED", "citation": null},
+    {"state": "ILLIQUID_UNEXPIRED_FUTURES", "documented": true, "settlement_basis": "THEORETICAL_PRICE", "bhavcopy_close_population": "UNRESOLVED", "citation": "NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103:illiquid futures row"}
+  ],
+  "aggregate_bhavcopy_has_trade_state_attribution": false,
+  "policy": "UNRESOLVED_STATES_MUST_REMAIN_VISIBLE_AND_QUALIFICATION_BLOCKING"
+}

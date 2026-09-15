@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10ng_candidate_invariant_comparison_v1",
+  "milestone": "R.10N-G",
+  "invariants": [
+    {"invariant": "high >= low", "current_behavior": "FATAL_WHEN_NONZERO_VOLUME_AS_PART_OF_COMBINED_RULE", "proposed_behavior": "ALWAYS_FATAL_FOR_PRESENT_NUMERIC_HIGH_AND_LOW", "authority_or_policy": "CONSERVATIVE_STRUCTURAL_POLICY", "visibility": "HIGH_BELOW_LOW"},
+    {"invariant": "open inside low/high", "current_behavior": "FATAL_WHEN_NONZERO_VOLUME", "proposed_behavior": "FATAL_ONLY_WHEN_QUALIFYING_TRADE_COVERAGE_IS_AUTHORITATIVELY_ESTABLISHED; OTHERWISE_QUALIFICATION_BLOCKING_DIAGNOSTIC", "authority_or_policy": "OPENING_PRICE_DOCUMENTED; TRADE_UNIVERSE_UNRESOLVED", "visibility": "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS"},
+    {"invariant": "close inside low/high", "current_behavior": "FATAL_WHEN_NONZERO_VOLUME", "proposed_behavior": "NONFATAL_PARSE_DIAGNOSTIC_BUT_QUALIFICATION_BLOCKING_UNTIL_EXCEPTION_IS_RESOLVED", "authority_or_policy": "NO_AUTHORITATIVE_CONTAINMENT_RULE_FOUND", "visibility": "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS"},
+    {"invariant": "settlement inside low/high", "current_behavior": "NOT_ASSERTED", "proposed_behavior": "DO_NOT_ASSERT; RECORD_SEPARATE_BASIS_DIAGNOSTIC", "authority_or_policy": "THEORETICAL_AND_FINAL_SETTLEMENT_BASES_DOCUMENTED", "visibility": "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS"},
+    {"invariant": "zero-volume OHLC containment", "current_behavior": "SKIPPED", "proposed_behavior": "DO_NOT_ASSERT; CLASSIFY_EXACT_ZERO_AND_NONZERO_PRICE_STATES", "authority_or_policy": "NO_TRADE_RANGE_CAN_BE_INFERRED; POPULATION_RULE_UNRESOLVED", "visibility": "ZERO_VOLUME_PRICE_STATE"},
+    {"invariant": "special-state consistency", "current_behavior": "NOT_MODELLED", "proposed_behavior": "QUALIFICATION_BLOCKING_DIAGNOSTIC_WHEN_ATTRIBUTION_REQUIRED_BUT_UNAVAILABLE", "authority_or_policy": "TRADE_STATUSES_DOCUMENTED_BUT_AGGREGATION_EFFECT_UNRESOLVED", "visibility": "TRADE_STATE_ATTRIBUTION_UNAVAILABLE"}
+  ],
+  "prices_manufactured_or_replaced": false,
+  "raw_exact_values_preserved_in_proposed_internal_contract": true
+}

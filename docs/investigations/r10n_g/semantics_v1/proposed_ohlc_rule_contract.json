@@ -1,0 +1,28 @@
+{
+  "schema_version": "nse_fno_ohlc_semantics_v1",
+  "milestone": "R.10N-G",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "implementation_requires": "SEPARATELY_APPROVED_R10N_H",
+  "fatal_conditions": [
+    "MISSING_OR_MALFORMED_REQUIRED_NUMERIC_VALUE",
+    "NEGATIVE_TOTAL_TRADED_QUANTITY",
+    "HIGH_BELOW_LOW",
+    "OPEN_OUTSIDE_DAILY_RANGE_WHEN_QUALIFYING_TRADE_COVERAGE_IS_AUTHORITATIVELY_ESTABLISHED",
+    "IDENTITY_OR_SOURCE_INTEGRITY_FAILURE"
+  ],
+  "diagnostic_conditions": [
+    {"code": "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS", "parse_fatal": false, "source_qualification_blocking": true},
+    {"code": "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS", "parse_fatal": false, "source_qualification_blocking": true},
+    {"code": "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS", "parse_fatal": false, "source_qualification_blocking": false},
+    {"code": "ZERO_VOLUME_PRICE_STATE", "parse_fatal": false, "source_qualification_blocking": false},
+    {"code": "TRADE_STATE_ATTRIBUTION_UNAVAILABLE", "parse_fatal": false, "source_qualification_blocking": true},
+    {"code": "MII_EXPIRY_ENCODING_UNRESOLVED", "parse_fatal": true, "source_qualification_blocking": true}
+  ],
+  "settlement_handling": "PARSE_AND_PRESERVE_SEPARATELY_FROM_TRADED_OHLC",
+  "zero_volume_handling": "PRESERVE_EXACT_VALUES_AND_EXPLICITLY_CLASSIFY; DO_NOT_INFER_A_TRADE_RANGE",
+  "special_state_handling": "NO_SILENT_ASSUMPTION_THAT_VOLUME_AND_OHLC_SHARE_AN_IDENTICAL_TRADE_UNIVERSE",
+  "price_mutation": "FORBIDDEN",
+  "silent_qualification": "FORBIDDEN",
+  "adapter_modified": false,
+  "source_qualified": false
+}

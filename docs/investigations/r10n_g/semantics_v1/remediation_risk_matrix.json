@@ -1,0 +1,11 @@
+{
+  "schema_version": "r10ng_remediation_risk_matrix_v1",
+  "milestone": "R.10N-G",
+  "risks": [
+    {"choice": "KEEP_COMBINED_RULE", "false_rejection": "HIGH_TWO_OBSERVED_NONZERO_ROWS_AND_ALL_ZERO_VOLUME_STATES", "false_acceptance": "LOW_FOR_RANGE_ANOMALIES", "mitigation": "NOT_RECOMMENDED_WITHOUT_CONTAINMENT_AUTHORITY"},
+    {"choice": "REMOVE_ALL_OHLC_VALIDATION", "false_rejection": "LOW", "false_acceptance": "UNACCEPTABLY_HIGH_INCLUDING_HIGH_BELOW_LOW_OR_MALFORMED_RELATIONSHIPS", "mitigation": "REJECTED"},
+    {"choice": "VERSIONED_SPLIT_RULE", "false_rejection": "LOWER_WHILE_PRESERVING_PARSEABILITY", "false_acceptance": "CONTROLLED_BY_FATAL_HIGH_BELOW_LOW_AND_QUALIFICATION_BLOCKING_DIAGNOSTICS", "mitigation": "RECOMMENDED_FOR_SEPARATE_R10N_H_OWNER_REVIEW"},
+    {"choice": "TREAT_SETTLEMENT_AS_TRADED_OHLC", "false_rejection": "HIGH_BECAUSE_THEORETICAL_OR_FINAL_BASIS_CAN_DIFFER", "false_acceptance": "NOT_APPLICABLE", "mitigation": "REJECTED_BY_SEPARATE_SETTLEMENT_SEMANTICS"},
+    {"choice": "IGNORE_EXPIRY_SIDE_FINDING", "false_rejection": "UNKNOWN", "false_acceptance": "HIGH_IDENTITY_CORRUPTION_RISK", "mitigation": "REJECTED; SEPARATE_FAIL_CLOSED_GATE"}
+  ]
+}

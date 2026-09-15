@@ -1,0 +1,25 @@
+{
+  "schema_version": "r10ng_completion_v1",
+  "milestone": "R.10N-G",
+  "official_documentation_access": "PASS",
+  "authoritative_close_within_range_requirement_found": false,
+  "versioned_split_rule_supported": true,
+  "adapter_modified": false,
+  "source_qualified": false,
+  "expiry_side_finding": "MII_EXPIRY_ENCODING_UNRESOLVED_SEPARATE_FAIL_CLOSED_GATE",
+  "completion_decision": "AUTHORITATIVE_SEMANTICS_SUPPORT_VERSIONED_REMEDIATION",
+  "validation": {
+    "r10ng_r10nf_and_candidate_focused": "54_PASS",
+    "r10na_through_r10ne": "166_PASS",
+    "broad_relevant_governance": "200_PASS",
+    "focused_stale_research_fingerprint": "11_PASS_1_EXPECTED_FAIL_CLOSED",
+    "full_root": "985_PASS_3_FAIL_4_SKIP_7_WARN",
+    "full_root_preserved_failures": [
+      "STALE_RESEARCH_FINGERPRINT_ASSERTION",
+      "R9K_JOB_TIMEOUT_NEGATIVE_0_004_SECOND_TIMING_DIAGNOSTIC",
+      "R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10ng_related_failures": 0,
+    "json_manifest_compilation_and_privacy": "PASS"
+  }
+}

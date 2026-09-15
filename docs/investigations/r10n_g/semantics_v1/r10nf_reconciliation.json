@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10ng_r10nf_reconciliation_v1",
+  "milestone": "R.10N-G",
+  "source": "docs/investigations/r10n_f/diagnosis_v1",
+  "source_integrity": "PASS_UNCHANGED",
+  "dates": [
+    {"trading_date": "2026-09-09", "nonzero_volume_ohlc_violations": 0, "zero_volume_close_outside_range": 21774, "high_below_open": 0, "high_below_low": 0, "low_above_open": 0, "low_above_close": 0},
+    {"trading_date": "2026-09-10", "nonzero_volume_ohlc_violations": 2, "nonzero_pattern": "STF_HIGH_BELOW_CLOSE_ONLY", "zero_volume_close_outside_range": 22201, "high_below_open": 0, "high_below_low": 0, "low_above_open": 0, "low_above_close": 0},
+    {"trading_date": "2025-07-08", "nonzero_volume_ohlc_violations": 0, "zero_volume_close_outside_range": 19662, "high_below_open": 0, "high_below_low": 0, "low_above_open": 0, "low_above_close": 0}
+  ],
+  "interpretation": "THE_TWO_NONZERO_OBSERVATIONS_CONFLICT_WITH_THE_CURRENT_COMBINED_ADAPTER_ASSERTION_BUT_OFFICIAL_DOCUMENTS_DO_NOT_DEFINE_THEM_AS_INVALID_SOURCE_ROWS",
+  "source_qualified": false,
+  "raw_rows_or_identifiers_retained": false
+}

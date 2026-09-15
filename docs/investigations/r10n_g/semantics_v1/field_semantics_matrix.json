@@ -1,0 +1,80 @@
+{
+  "schema_version": "r10ng_field_semantics_matrix_v1",
+  "milestone": "R.10N-G",
+  "fields": [
+    {
+      "field": "OpnPric",
+      "documented_definition": "Opening Price",
+      "unit_precision": "PRICE_AMOUNT; NUMERIC(25,6); FO values documented at 2 decimal precision; general UDiFF monetary guidance is INR",
+      "basis": "OPENING_PRICE_FOR_DAY; WHETHER_FIRST_QUALIFYING_REGULAR_TRADE_UNRESOLVED",
+      "zero_volume_behavior": "UNRESOLVED",
+      "special_state_behavior": "UNRESOLVED",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 347", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 16", "SEBI_UDIFF_GUIDANCE_V2023_10:amount guidance"]
+    },
+    {
+      "field": "HghPric",
+      "documented_definition": "High Price for the Day",
+      "unit_precision": "PRICE_AMOUNT; NUMERIC(25,6); FO values documented at 2 decimal precision",
+      "basis": "DAILY_HIGH; INCLUDED_TRADE_UNIVERSE_UNRESOLVED",
+      "zero_volume_behavior": "UNRESOLVED",
+      "special_state_behavior": "UNRESOLVED",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 348", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 17"]
+    },
+    {
+      "field": "LwPric",
+      "documented_definition": "Low Price for the Day",
+      "unit_precision": "PRICE_AMOUNT; NUMERIC(25,6); FO values documented at 2 decimal precision",
+      "basis": "DAILY_LOW; INCLUDED_TRADE_UNIVERSE_UNRESOLVED",
+      "zero_volume_behavior": "UNRESOLVED",
+      "special_state_behavior": "UNRESOLVED",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 349", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 18"]
+    },
+    {
+      "field": "ClsPric",
+      "documented_definition": "Closing Price for the Day",
+      "unit_precision": "PRICE_AMOUNT; NUMERIC(25,6); FO values documented at 2 decimal precision",
+      "basis": "FOR_FUTURES_NSE_DOCUMENTS_CLOSING_PRICE_AS_LAST_HALF_HOUR_WEIGHTED_AVERAGE; EXACT_BHAVCOPY_MAPPING_AND_EXCEPTION_UNIVERSE_UNRESOLVED",
+      "zero_volume_behavior": "UNRESOLVED",
+      "nonzero_without_qualifying_regular_trade": "UNRESOLVED",
+      "special_state_behavior": "UNRESOLVED",
+      "must_be_inside_low_high": "NOT_STATED_BY_AUTHORITY",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 350", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 19", "NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103:daily settlement table"]
+    },
+    {
+      "field": "SttlmPric",
+      "documented_definition": "Settlement Price",
+      "unit_precision": "PRICE_AMOUNT; NUMERIC(25,6); required-conditional; FO values documented at 2 decimal precision",
+      "basis": "SEPARATE_SETTLEMENT_BASIS; THEORETICAL_FOR_UNEXPIRED_ILLIQUID_FUTURES",
+      "zero_volume_behavior": "THEORETICAL_SETTLEMENT_MAY_APPLY_TO_ILLIQUID_FUTURES; EXACT_BHAVCOPY_POPULATION_RULE_UNRESOLVED",
+      "outside_traded_range": "POSSIBLE_ON_SEPARATE_THEORETICAL_OR_FINAL_SETTLEMENT_BASIS; NO_RANGE_INVARIANT_DOCUMENTED",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 354", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 23", "NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103:settlement table"]
+    },
+    {
+      "field": "TtlTradgVol",
+      "documented_definition": "Total Traded Qty",
+      "unit_precision": "QUANTITY; Numeric(25); integer",
+      "basis": "AGGREGATE_TRADED_QUANTITY; INCLUDED_TRADE_STATE_UNIVERSE_UNRESOLVED",
+      "zero_volume_behavior": "ZERO_MEANS_REPORTED_TOTAL_QUANTITY_ZERO; PRICE_POPULATION_CONSEQUENCES_UNRESOLVED",
+      "nonzero_behavior": "NONZERO_DOES_NOT_BY_ITSELF_DOCUMENT_WHICH_TRADE_STATES_SET_OHLC",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 357", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 26"]
+    },
+    {
+      "field": "RptdTxSts",
+      "documented_definition": "Trade Status with standard values OR original, MD modified, CN cancelled, RJ rejected, CF confirmed by custodian",
+      "unit_precision": "VARCHAR_OR_CHAR_5",
+      "basis": "TRADE_FILE_STATE_NOT_A_BHAVCOPY_ROW_FIELD",
+      "aggregate_ohlc_effect": "UNRESOLVED",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Standard Value List rows 25-29", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Trade File Format row 31"]
+    },
+    {
+      "field": "XpryDt",
+      "documented_definition": "Instrument Original Expiry Date in YYYY-MM-DD for UDiFF Bhavcopy",
+      "unit_precision": "DATE_YYYY-MM-DD",
+      "basis": "CONTRACT_DATE",
+      "mii_numeric_encoding": "UNRESOLVED_BY_REVIEWED_OFFICIAL_DOCUMENTS",
+      "citations": ["NSE_UDIFF_CATALOGUE_V4_20260630:Field Master row 342", "NSE_UDIFF_TRADE_BHAVCOPY_20260630:Bhavcopy File Format row 11"]
+    }
+  ],
+  "authoritative_close_within_high_low_rule_found": false,
+  "authoritative_bhavcopy_special_trade_inclusion_rule_found": false
+}

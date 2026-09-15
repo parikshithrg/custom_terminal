@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10ng_expiry_side_finding_v1",
+  "milestone": "R.10N-G",
+  "finding": "MII_EXPIRY_ENCODING_UNRESOLVED",
+  "examples": [
+    {"csv_row_number": 4724, "financial_instrument_id_sha256": "c262b9e8c2e6e590643101b918104a08eaf4f8240431d0b6d09af69450fd92f4", "udiff_expiry": "2026-11-23", "mii_under_unix_utc": "2016-11-23T14:30:00Z", "mii_under_asia_kolkata_date": "2016-11-23", "calendar_day_delta": 3652},
+    {"csv_row_number": 4786, "financial_instrument_id_sha256": "1f61c651ddf187f1a42fcb037cec89fa8151de5b06cb8eb78500bd7da0e22458", "udiff_expiry": "2026-10-27", "mii_under_unix_utc": "2016-10-27T14:30:00Z", "mii_under_asia_kolkata_date": "2016-10-27", "calendar_day_delta": 3652}
+  ],
+  "timezone_boundary_explains_disagreement": false,
+  "ten_year_offset_observed": true,
+  "alternate_epoch_or_encoding": "PLAUSIBLE_BUT_NOT_AUTHORITATIVELY_DOCUMENTED",
+  "genuine_contract_mismatch": "NOT_EXCLUDED",
+  "relationship_to_ohlc": "SEPARATE_AND_NON_CAUSAL",
+  "adapter_behavior_modified": false,
+  "recommended_gate": "KEEP_EXPIRY_IDENTITY_FAIL_CLOSED_AND_REQUIRE_OFFICIAL_MII_ENCODING_EVIDENCE_BEFORE_R10N_H"
+}

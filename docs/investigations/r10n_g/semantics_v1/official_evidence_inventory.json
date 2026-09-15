@@ -1,0 +1,81 @@
+{
+  "schema_version": "r10ng_official_evidence_inventory_v1",
+  "milestone": "R.10N-G",
+  "review_scope": "BOUNDED_DOCUMENTATION_ONLY_OFFICIAL_NSE_SEBI",
+  "retrieved_at_utc": "2026-09-15T12:29:20Z",
+  "sources": [
+    {
+      "source_id": "NSE_FORMS_FORMATS_20260630",
+      "authority": "OFFICIAL_NSE",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Forms & Formats - UDiFF file formats",
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "publication_or_effective_date": "2026-06-30",
+      "locally_retained": false,
+      "sha256": null,
+      "supports": ["CURRENT_UDIFF_CATALOGUE_AND_TRADE_BHAVCOPY_FORMAT_LINKAGE"]
+    },
+    {
+      "source_id": "SEBI_UDIFF_GUIDANCE_V2023_10",
+      "authority": "OFFICIAL_SEBI_DOCUMENT_PUBLISHED_BY_NSE",
+      "publisher": "Securities and Exchange Board of India, Department of Economic and Policy Analysis",
+      "title": "UDiFF Guidance Note V2023.10",
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "publication_or_effective_date": "UNRESOLVED_DOCUMENT_VERSION_2023.10",
+      "locally_retained": "TEMPORARY_REVIEW_COPY_NOT_COMMITTED",
+      "byte_length": 143959,
+      "sha256": "2d805109d6ba3b03cb4784907b308c200fef479ea8f785aad89563db1524079d",
+      "supports": ["CSV_AND_ISO_HEADER_CONVENTIONS", "MANDATORY_UNLESS_NOT_APPLICABLE", "RUPEE_AND_SIX_DECIMAL_GENERAL_GUIDANCE", "PROVISIONAL_FINAL_REPORT_NOMENCLATURE"]
+    },
+    {
+      "source_id": "NSE_UDIFF_CATALOGUE_V4_20260630",
+      "authority": "OFFICIAL_NSE",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Annexure B - UDiFF Catalogue Version 4.0",
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "publication_or_effective_date": "2026-06-30",
+      "locally_retained": "TEMPORARY_REVIEW_COPY_NOT_COMMITTED",
+      "byte_length": 113932,
+      "sha256": "83adfec3c0a99288eb54d11291e605d5c32748a93a6825ddeb574ae13ecfed69",
+      "supports": ["BHAVCOPY_FIELD_DEFINITIONS", "TRADE_STATUS_STANDARD_VALUES", "EXPIRY_DATE_DEFINITIONS"]
+    },
+    {
+      "source_id": "NSE_UDIFF_TRADE_BHAVCOPY_20260630",
+      "authority": "OFFICIAL_NSE",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "UDiFF Trade and Bhavcopy File Formats",
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "publication_or_effective_date": "2026-06-30",
+      "locally_retained": "TEMPORARY_REVIEW_COPY_NOT_COMMITTED",
+      "byte_length": 35556,
+      "sha256": "b9f2fa369af20381374cdb40c3ebc96c43029401e057225599cfe63b288ba3e8",
+      "supports": ["FO_FIELD_APPLICABILITY", "FIELD_REQUIREDNESS", "FIELD_PRECISION", "TRADE_STATUS_VALUES"]
+    },
+    {
+      "source_id": "NSE_EQUITY_DERIVATIVES_SETTLEMENT_PRICE_20230103",
+      "authority": "OFFICIAL_NSE",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Equity Derivatives - Settlement Price",
+      "url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "publication_or_effective_date": "2023-01-03",
+      "locally_retained": false,
+      "sha256": null,
+      "supports": ["FUTURES_CLOSE_WEIGHTED_AVERAGE_METHOD", "ILLIQUID_FUTURES_THEORETICAL_SETTLEMENT", "FINAL_SETTLEMENT_BASIS"]
+    },
+    {
+      "source_id": "NSE_MII_DISSEMINATION_60315_20240119",
+      "authority": "OFFICIAL_NSE",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Dissemination of MII security and contract master files on website",
+      "url": "https://nsearchives.nseindia.com/content/circulars/MSD60315.pdf",
+      "publication_or_effective_date": "2024-01-19_EFFECTIVE_2024-02-05",
+      "locally_retained": false,
+      "sha256": null,
+      "supports": ["NSE_FO_CONTRACT_FILE_IDENTITY_AND_DAILY_DISSEMINATION"]
+    }
+  ],
+  "authority_restriction": "ONLY_OFFICIAL_NSE_OR_SEBI_SOURCES_CLASSIFIED_AUTHORITATIVE",
+  "market_report_urls_accessed": 0,
+  "market_report_payloads_downloaded": 0,
+  "full_document_copies_committed": 0
+}

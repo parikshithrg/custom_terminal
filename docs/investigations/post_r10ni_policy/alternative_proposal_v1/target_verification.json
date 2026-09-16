@@ -1,0 +1,17 @@
+{
+  "schema_version": "alternative_target_verification_v1",
+  "status": "PASS_READ_ONLY_TWO_CONTRACT_DATES",
+  "target_count": 2,
+  "database_sha256": "7653af84fe8b3fcdda0695c1eeef83c4b84cffa8575730a91d84157127fb5093",
+  "database_hash_before_after_match": true,
+  "database_integrity": "PASS",
+  "protocol_and_source_provenance": "PASS",
+  "date_restriction_preserved": true,
+  "private_target_reference": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/experiment-r8s6810q/alternative-proposal-3pp1c22u/private_targets.json",
+  "private_target_sha256": "91422a29c58dc3b3f39a288b7e9f0f3b17d67f362a23f15dc1f16a506a700886",
+  "identities_tracked": false,
+  "network_transactions": 0,
+  "acquisition": false,
+  "comparison_execution": false,
+  "retention_deadline": "2026-12-31"
+}

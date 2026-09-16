@@ -1,0 +1,75 @@
+{
+  "schema_version": "alternative_evidence_candidates_v1",
+  "status": "EXISTING_EVIDENCE_ONLY_NO_FEASIBILITY_ACCESS",
+  "evidence_basis": [
+    "reports/FNO_SOURCE_ROUTE_REASSESSMENT.md",
+    "reports/KITE_CURRENT_DATA_SCOPE.md",
+    "reports/KITE_CURRENT_COVERAGE_HEALTH.md",
+    "docs/investigations/r10m/source_route_v1/source_capability_matrix.json",
+    "reports/NSE_FNO_POST_R10NI_INVESTIGATION_CLOSEOUT.md",
+    "reports/NSE_FNO_QUARANTINE_EXECUTION.md"
+  ],
+  "common_matching_requirements": [
+    "exchange=NSE; BSE is not interchangeable",
+    "instrument_class=exact stock futures contract, not underlying equity or continuous future",
+    "underlying and provider contract identifier crosswalk verified without symbol-only matching",
+    "expiry; option_type and strike explicitly NOT_APPLICABLE when documented, never missing-as-equal",
+    "trading_date=2026-09-10 and documented final daily session/cutoff/timezone/revision",
+    "quantity units and contract multiplier; price currency and scale",
+    "adjustment convention unadjusted exact contract; no split-adjusted equity or stitched series"
+  ],
+  "common_field_semantics": "Require field-by-field effective-date definitions of open/high/low/close eligible trade universe, window, exchange coverage and fallback; quantity trade-status inclusion and units; settlement separate from close. Unknown comparability is INDETERMINATE, not agreement/disagreement.",
+  "candidates": [
+    {
+      "id": "KITE_CONNECT",
+      "historical_target_availability": "UNVERIFIED_FOR_THE_TWO_EXACT_CONTRACT_DATES",
+      "known_capabilities": "Retained R10M evidence describes historical OHLCV and limited continuous daily futures. Existing application scope is current-only and excludes historical endpoints; current quote health is not target-date evidence.",
+      "field_semantics": "Exact close basis, quantity inclusion, settlement availability and target-date applicability UNVERIFIED.",
+      "independence": "NOT_ESTABLISHED; exchange feed versus independent candle aggregation lineage must be documented.",
+      "permission_retention": "Current-session memory-only credential rules do not authorize historical response retention. Account/API entitlement and provider retention/minimal-paraphrase permission require explicit review.",
+      "credentials": "Account/API application needed per retained evidence; do not inspect existing secrets or login. Any later credentials memory-only, separately scoped.",
+      "selection": "NOT_EXECUTABLE_NO_VERIFIED_CONTRACT_CROSSWALK_OR_RETENTION_PERMISSION"
+    },
+    {
+      "id": "YFINANCE_YAHOO",
+      "historical_target_availability": "UNVERIFIED",
+      "known_capabilities": "No retained project evidence establishes the two exact NSE stock-futures contracts on the target date. Underlying equity history or a continuous futures symbol would not be comparable.",
+      "field_semantics": "OHLC adjustment/close calculation, quantity units and settlement support UNVERIFIED.",
+      "independence": "NOT_ESTABLISHED; do not assume a second website implies an independent feed.",
+      "permission_retention": "Licensing, personal-use entitlement, automation and retention/reuse permission UNVERIFIED; no blanket personal-use inference.",
+      "credentials": "Requirement UNVERIFIED; none accessed or presumed available.",
+      "selection": "NOT_EXECUTABLE_NO_KNOWN_TARGET_OR_FIELD_COVERAGE"
+    },
+    {
+      "id": "INVESTING_COM",
+      "historical_target_availability": "UNVERIFIED",
+      "known_capabilities": "No retained authorized exact-contract historical snapshot, export interface or fixed endpoint established.",
+      "field_semantics": "Individual contract versus stitched series, adjustment, settlement and quantity basis UNVERIFIED.",
+      "independence": "NOT_ESTABLISHED; redistribution and calculation lineage unknown.",
+      "permission_retention": "Access, automation, export, retention and sanitized reuse permission UNVERIFIED. No access-control bypass proposed.",
+      "credentials": "Requirement UNVERIFIED; no account/subscription authorization assumed.",
+      "selection": "NOT_EXECUTABLE_FEASIBILITY_AND_PERMISSION_UNKNOWN"
+    },
+    {
+      "id": "MONEYCONTROL_COM",
+      "historical_target_availability": "UNVERIFIED",
+      "known_capabilities": "No retained authorized target-date exact-contract export or fixed endpoint established.",
+      "field_semantics": "Historical session/contract expiry/close and settlement basis, quantity units and adjustments UNVERIFIED.",
+      "independence": "NOT_ESTABLISHED; source-feed lineage unknown.",
+      "permission_retention": "Access/export/automation and retention/reuse permission UNVERIFIED; public display alone is not permission.",
+      "credentials": "Requirement UNVERIFIED; none used.",
+      "selection": "NOT_EXECUTABLE_FEASIBILITY_AND_PERMISSION_UNKNOWN"
+    },
+    {
+      "id": "OTHER_LICENSED_OWNER_SUPPLIED_EXPORT",
+      "historical_target_availability": "UNVERIFIED_NO_FILE_REGISTERED",
+      "known_capabilities": "Conditional offline option only: an already legally retained, provider-attributed two-target export could avoid agent network access, but existence and content are not established.",
+      "field_semantics": "All identities and field definitions must be supplied, including effective date, adjustment convention and settlement separation.",
+      "independence": "NOT_ESTABLISHED pending collection and redistribution lineage.",
+      "permission_retention": "Owner must identify publisher and provide retention/minimal-paraphrase permission through 2026-12-31; owner approval is not publisher evidence.",
+      "credentials": "None for a later separately approved local-file review; any prior provider access is outside this proposal.",
+      "selection": "CONDITIONAL_REVIEW_TEMPLATE_ONLY_NO_SELECTED_SOURCE"
+    }
+  ],
+  "agreement_limit": "Numerical agreement could corroborate reported values under compatible definitions, but cannot establish original NSE semantics or date-wide trade coverage. Disagreement identifies a reconciliation need, not which provider is correct. Duplicate NSE-feed reports are dependent evidence."
+}

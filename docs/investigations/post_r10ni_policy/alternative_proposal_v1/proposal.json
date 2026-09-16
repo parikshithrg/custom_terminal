@@ -1,0 +1,75 @@
+{
+  "schema_version": "bounded_alternative_evidence_proposal_v1",
+  "status": "DEFER_NO_DEFENSIBLE_EXECUTABLE_ROUTE_FROM_EXISTING_EVIDENCE",
+  "selected_external_source": null,
+  "external_urls": [],
+  "provider_query": null,
+  "network_authorized": false,
+  "acquisition_authorized": false,
+  "comparison_execution_authorized": false,
+  "target_count": 2,
+  "target_date": "2026-09-10",
+  "private_target_reference": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/experiment-r8s6810q/alternative-proposal-3pp1c22u/private_targets.json",
+  "private_target_sha256": "91422a29c58dc3b3f39a288b7e9f0f3b17d67f362a23f15dc1f16a506a700886",
+  "recommendation": "Keep route unqualified and defer external acquisition until exact target availability, identity crosswalk, comparable field semantics and permission are established. Do not invent endpoints or use current/continuous quotes as substitutes.",
+  "conditional_local_review": {
+    "status": "PROPOSED_NOT_SELECTED_NOT_AUTHORIZED",
+    "source": "OWNER_SUPPLIED_ALREADY_RETAINED_PROVIDER_EXPORT_WITH_PROVENANCE",
+    "incoming_file_path": null,
+    "incoming_file_sha256": null,
+    "publisher": null,
+    "template": "One owner-supplied UTF-8 JSON envelope containing precisely the two locally hash-bound contract-dates and requested field records plus publisher/lineage/permission/effective-date/semantic metadata. Exact target descriptors are private; no outward query is authorized.",
+    "fields": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "quantity",
+      "settlement"
+    ],
+    "limits": {
+      "agent_http_transactions": 0,
+      "agent_messages": 0,
+      "new_provider_downloads": 0,
+      "payload_files": 1,
+      "max_file_bytes": 65536,
+      "max_contract_date_records": 2,
+      "redirects": 0,
+      "retries": 0,
+      "offline_review_timeout_seconds": 10,
+      "session_minutes": 10,
+      "archive_processing": false,
+      "enumeration": false
+    },
+    "output_location": "New uniquely isolated ignored output beside the existing private target descriptor; never overwrite experimental facts or open unrelated databases.",
+    "retention_permission": "PENDING_PROVIDER_SPECIFIC_REVIEW; proposed incoming evidence deadline 2026-12-31, no retention applied before permission and execution approval.",
+    "existing_retention_deadline": "2026-12-31",
+    "credentials": "NONE_FOR_LOCAL_REVIEW",
+    "stopping_conditions": [
+      "NO_REGISTERED_EXACT_FILE_HASH_OR_PUBLISHER",
+      "PROVIDER_PERMISSION_UNVERIFIED",
+      "BUDGET_OR_TIME_EXCEEDED",
+      "EXTRA_TARGET_DATE_INSTRUMENT_OR_DUPLICATE",
+      "IDENTITY_UNIT_SESSION_ADJUSTMENT_OR_SEMANTICS_UNKNOWN",
+      "ARCHIVE_LINK_OR_NEW_QUERY_REQUIRED",
+      "CONTRADICTORY_PROVENANCE_OR_REVISION",
+      "UNRESOLVED_FIELD_COMPARABILITY"
+    ]
+  },
+  "missing_feasibility": [
+    "Provider and exact two-contract historical availability",
+    "Exact target crosswalk or already retained export hash",
+    "Effective-date per-field definitions, units, session and adjustment convention",
+    "Collection/redistribution lineage and provider-specific retention/reuse permission"
+  ],
+  "execution_approval_question": {
+    "status": "NOT_REQUESTABLE_UNTIL_SOURCE_AND_INPUT_BINDINGS_COMPLETE",
+    "question_template": "After all feasibility fields are filled and hash-bound: do you approve isolated offline review of the single selected provider export, exact input SHA-256 and two private target bindings, only the six named fields under the frozen comparison rules, one file/64 KiB/two records/no network/no retries/10-second review/10-minute session, with confirmed provider permission and retention through 2026-12-31, without repair, waiver, research or activation?",
+    "rule": "A generic approval now cannot fill missing provider, file/query or permission fields. Any network acquisition instead requires a new explicit proposal with fixed provider URLs/query templates, exact targets, redirect rules, budgets and permission."
+  },
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "date_attribution_remains_restricting_whole_date": true,
+  "original_acceptance_unchanged": true,
+  "retention_amended": false,
+  "deletion": false
+}

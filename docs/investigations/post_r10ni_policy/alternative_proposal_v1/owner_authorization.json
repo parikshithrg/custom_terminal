@@ -1,0 +1,15 @@
+{
+  "schema_version": "alternative_proposal_preparation_authorization_v1",
+  "baseline": "873299e67f05c63d0ac0b4ba05b9e12e1a22da58",
+  "owner_answer": "I authorize preparing this bounded proposal, including read-only verification of the two quarantined identities, with no network access, acquisition, research or production activation",
+  "preparation": true,
+  "read_only_quarantined_identity_verification": true,
+  "network": false,
+  "acquisition": false,
+  "comparison_execution": false,
+  "research": false,
+  "production_activation": false,
+  "qualification": false,
+  "deletion": false,
+  "retention_deadline": "2026-12-31"
+}

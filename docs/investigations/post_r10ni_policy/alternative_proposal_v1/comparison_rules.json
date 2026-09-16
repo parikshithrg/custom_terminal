@@ -1,0 +1,51 @@
+{
+  "schema_version": "alternative_comparison_rules_v1",
+  "status": "FROZEN_DESIGN_ONLY_COMPARISON_NOT_EXECUTED",
+  "matching_keys": [
+    "exchange",
+    "instrument_class",
+    "underlying",
+    "expiry",
+    "option_type",
+    "strike",
+    "trading_date",
+    "session",
+    "units",
+    "adjustment_convention"
+  ],
+  "matching_rule": "Require exact documented contract identity and per-field semantics effective on 2026-09-10; explicit documented NOT_APPLICABLE is distinct from missing. Unknown session/trade universe remains INDETERMINATE.",
+  "fields": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "quantity",
+    "settlement"
+  ],
+  "source_precision": "Retained H/I evidence reports two decimal places; this is not a proven contract tick-size or tolerance.",
+  "price_comparison": "Exact Decimal numeric comparison without rounding, rescaling unless documented, or binary float. No unjustified tolerance.",
+  "price_tolerance": "0",
+  "quantity_comparison": "Exact integers after documented units/multiplier alignment only; no guessed conversion.",
+  "classifications": {
+    "AGREEMENT": "All required identity/permission/provenance gates pass and the field semantics align, with exact numerical equality. Report lineage separately; numerical consistency is not semantic proof.",
+    "DISAGREEMENT": "Same gates and comparable definitions, but unequal values. Preserve both reported values in ignored evidence only; neither source is presumed correct.",
+    "INDETERMINATE": "Missing/unmatched/duplicate/adjusted/incompatible/ambiguous evidence or unresolved original field universe; no equality claim from similarly named fields.",
+    "NOT_EVALUATED": "No authorized input or no applicable field. Missing settlement never replaced by close."
+  },
+  "feed_lineage": "DIRECT_COLLECTION, NSE_REDISTRIBUTION or UNKNOWN only if evidenced; unknown independence stays NOT_ESTABLISHED. Duplicate feeds cannot establish independence.",
+  "permitted_conclusions": "Two-target field consistency only, never whole-date attribution, source qualification, consumer promotion or strategy sensitivity.",
+  "prohibited": [
+    "price_repair",
+    "source_substitution",
+    "diagnostic_waiver",
+    "further_filtering",
+    "zero_loss_threshold_revision",
+    "historical_result_rewrite",
+    "research",
+    "backtest",
+    "fingerprint_refresh",
+    "production_activation",
+    "deletion"
+  ],
+  "rule_amendment": "Any later tolerance, identity, source, field, timing or scope change requires a new version approved before access; no tuning to pass observed results."
+}

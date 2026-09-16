@@ -1,0 +1,117 @@
+{
+  "schema_version": "post_r10ni_source_policy_decision_v1",
+  "baseline": "76bcbc5780e91bdcfa063960f47ae1f010b18770",
+  "task_type": "DECISION_PREPARATION_ONLY",
+  "established": {
+    "integrity": "PASS_ALL_THREE",
+    "schemas_stable": true,
+    "joined_and_expiry_matched": 99026,
+    "exact_prices_unchanged": true,
+    "accepted_dates": [
+      "2026-09-09",
+      "2025-07-08"
+    ],
+    "failed_date": "2026-09-10",
+    "blocking_codes": {
+      "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2,
+      "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1
+    },
+    "trade_state_diagnostic_unit": "ONE_DATE_LEVEL_COVERAGE_DIAGNOSTIC_NOT_A_THIRD_ANOMALOUS_ROW",
+    "all_dates_policy": "EVERY_APPROVED_DATE_MUST_PASS; NO_PARTIAL_SOURCE_QUALIFICATION",
+    "overall": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED"
+  },
+  "distinctions": [
+    {
+      "classification": "DOCUMENTED_EXCHANGE_SEMANTICS",
+      "claim": "UDiFF names daily opening/high/low/closing fields and separate total quantity and settlement fields. NSE documents last-half-hour weighted-average futures closing and theoretical settlement for illiquid unexpired futures.",
+      "evidence": [
+        "r10n_g/semantics_v1/field_semantics_matrix.json",
+        "r10n_g/semantics_v1/documented_vs_inferred.json"
+      ],
+      "limitation": "These definitions do not establish the exact UDiFF close mapping, applicable exception universe, or common trade-state contribution rule for the retained observations."
+    },
+    {
+      "classification": "OBSERVED_SOURCE_VALUES",
+      "claim": "Two nonzero-volume futures rows on 2026-09-10 have close above high; integrity, identities, expiry agreement and exact price preservation pass.",
+      "evidence": [
+        "r10n_f/diagnosis_v1/predicate_aggregate_counts.json",
+        "r10n_i/requalification_v1/per_date_qualification_results.json"
+      ],
+      "limitation": "Integrity proves binding to retained bytes, not economic correctness or validity of an exception."
+    },
+    {
+      "classification": "CONSERVATIVE_PROJECT_POLICY",
+      "claim": "R10N-H makes unresolved close-range basis and date-level missing trade attribution qualification-blocking; R10N-I requires every approved date to pass.",
+      "evidence": [
+        "r10n_h/implementation_v1/implemented_rule_contract.json",
+        "r10n_h/implementation_v1/diagnostic_schema.json",
+        "r10n_i/requalification_v1/acceptance_matrix_results.json"
+      ],
+      "limitation": "Policy is not an exchange rule. Absence of an official containment rule is not proof that these exceptions are valid."
+    }
+  ],
+  "resolved_not_reopened": [
+    "MII_EXPIRY_ENCODING_RESOLVED_BY_R10N_H",
+    "100_PERCENT_EXPIRY_AGREEMENT_CONFIRMED_BY_R10N_I"
+  ],
+  "options": [
+    {
+      "id": "DEFER_UNQUALIFIED",
+      "benefit": "Avoids unsupported acceptance and external retention burden.",
+      "cost": "No new resolving evidence; terminal source integration remains blocked.",
+      "status": "AVAILABLE_OWNER_ROUTE_SELECTION_NOT_EXECUTION_AUTHORITY"
+    },
+    {
+      "id": "BOUNDED_OFFICIAL_EVIDENCE_INVESTIGATION",
+      "benefit": "Targets the two unresolved semantic questions with authoritative documentation.",
+      "cost": "Authority may remain silent or insufficient for the observed cases.",
+      "status": "RECOMMENDED_PROPOSED_SEPARATE_AUTHORIZATION_REQUIRED"
+    },
+    {
+      "id": "VERSIONED_EXCEPTION_POLICY_DESIGN",
+      "benefit": "Can specify explicit uncertainty and fail-closed consumer contracts for review.",
+      "cost": "Risk of masking source error; owner preference cannot establish source semantics or row validity.",
+      "status": "ALTERNATIVE_DESIGN_ONLY_NOT_IMPLEMENTED_OR_APPLIED"
+    }
+  ],
+  "recommended_route": "BOUNDED_OFFICIAL_EVIDENCE_INVESTIGATION",
+  "recommendation_reason": "Resolve the information deficit before considering any exception design; no evidence presently justifies a waiver or source success.",
+  "authorized_work": [
+    "READ_EXISTING_TRACKED_SANITIZED_EVIDENCE",
+    "PREPARE_DECISION_ARTIFACTS_REPORT_AND_GOVERNANCE_TESTS",
+    "LOCAL_COMMIT"
+  ],
+  "prohibited_work": [
+    "NETWORK",
+    "DOWNLOAD",
+    "RETAINED_PACKAGE_ROW_ACCESS",
+    "ADAPTER_CHANGE",
+    "THRESHOLD_CHANGE",
+    "REQUALIFICATION",
+    "SOURCE_QUALIFICATION",
+    "INGESTION",
+    "RESEARCH",
+    "PRODUCTION_ACTIVATION",
+    "FINGERPRINT_REFRESH",
+    "DELETION",
+    "DEADLINE_CHANGE"
+  ],
+  "effects": {
+    "network_requests": 0,
+    "downloads": 0,
+    "package_rows_read": 0,
+    "adapter_changed": false,
+    "diagnostics_waived": false,
+    "failed_date_dropped": false,
+    "prices_changed": false,
+    "trade_states_inferred": false,
+    "source_qualified": false,
+    "production_activated": false,
+    "ingestion": false,
+    "research": false,
+    "fingerprint_refreshed": false,
+    "deleted_packages": 0,
+    "deadlines_changed": false
+  },
+  "later_execution_authorized": false
+}

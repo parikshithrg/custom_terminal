@@ -1,0 +1,56 @@
+{
+  "schema_version": "post_r10ni_independent_owner_decisions_v1",
+  "all_answers": "PENDING_NO_OWNER_DECISIONS_INFERRED",
+  "r10ni_evidence_root": {
+    "path": "docs/investigations/r10n_i/requalification_v1/root_manifest.json",
+    "sha256": "1b729c0ebb7f8d94ed346ffd7bd367797b26143158e8da6a68c738714233ab8f"
+  },
+  "decisions": [
+    {
+      "id": "R10NI_EVIDENCE_ACCEPTANCE",
+      "question": "Do you accept or decline the hash-bound R10N-I aggregate evidence as an accurate record, including its unqualified overall result?",
+      "answer": "PENDING",
+      "effects": "Acceptance acknowledges evidence, not source qualification; it can make the earlier owner-acceptance deletion trigger applicable but is not deletion authorization."
+    },
+    {
+      "id": "NEXT_SOURCE_POLICY_ROUTE",
+      "question": "Select defer/unqualified, bounded official-evidence investigation, or versioned exception-policy design for later review.",
+      "answer": "PENDING",
+      "effects": "Route selection is not execution authorization. A separate precise scope must be approved before any proposed investigation, implementation or requalification."
+    },
+    {
+      "id": "ANCHOR_RETENTION_CLARIFICATION",
+      "question": "Specify an explicit YYYY-MM-DD retention deadline and intended closeout trigger for the 2026-09-09 anchor, or decline to approve further retention pending clarification.",
+      "answer": "PENDING",
+      "effects": "No R10N-E deadline is recorded for the anchor. The earlier general year-end preference is context, not a silently applied clarification. No deadline is changed or inferred here."
+    },
+    {
+      "id": "PACKAGE_DELETION",
+      "question": "Separately authorize or decline deletion for each named package by trading date and exact verified path. Do not treat evidence acceptance as permission to delete.",
+      "answer": "PENDING",
+      "effects": "Requires fresh exact absolute path verification within the approved package directory, sealed binding check, and explicit per-package authorization in a separate execution task. No deletion now."
+    }
+  ],
+  "retention": [
+    {
+      "date": "2026-09-09",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-09/",
+      "recorded_deadline": "NO_R10NE_DEADLINE_RECORDED",
+      "clarification": "PENDING"
+    },
+    {
+      "date": "2026-09-10",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-10/",
+      "recorded_deadline": "2026-12-31"
+    },
+    {
+      "date": "2025-07-08",
+      "relative_path": "artifacts/nse_fno_reports/2025-07-08/",
+      "recorded_deadline": "2026-12-31"
+    }
+  ],
+  "recorded_earlier_trigger": "EARLIER_OF_OWNER_DEADLINE_OR_OWNER_ACCEPTANCE_OF_HASH_BOUND_AGGREGATE_QUALIFICATION_EVIDENCE",
+  "trigger_now": "OWNER_ACCEPTANCE_PENDING; NO_NEW_TRIGGER_DETERMINATION_OR_DELETION_AUTHORIZATION",
+  "deadline_changes": 0,
+  "deletions": 0
+}

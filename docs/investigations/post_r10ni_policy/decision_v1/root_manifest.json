@@ -1,0 +1,41 @@
+{
+  "schema_version": "post_r10ni_policy_root_manifest_v1",
+  "path_base": "REPOSITORY_ROOT",
+  "artifacts": [
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/decision.json",
+      "byte_length": 4917,
+      "sha256": "d66c9ec8c7a4b59775a44239eefe42084ad16b2079d198e42fb70324bb9b6a91"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/exception_policy_proposal.json",
+      "byte_length": 2635,
+      "sha256": "84a571cc89795df06c40f08483aa9c69cf8ccc7ca0af5f4ba7c60b4e8a4e2c4f"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/historical_bindings.json",
+      "byte_length": 20126,
+      "sha256": "42367722cb1cb6cfef131bb56baa04441720c7f3ca701578cc4dd093cf87a314"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/investigation_proposal.json",
+      "byte_length": 4531,
+      "sha256": "a790f565c9641043b8aa3efc6f549859faaa4fe47d546cc2ce518831826ef903"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/owner_decisions.json",
+      "byte_length": 2876,
+      "sha256": "15a7f720d18a9ff149e9162057c9a619e45cad78ea2911ee349705ec85068b20"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/validation.json",
+      "byte_length": 971,
+      "sha256": "46f539b6b4ca66a97ca9ad23c6b4a77c615631a68a4f1fbac1d5776b1948a251"
+    },
+    {
+      "path": "reports/NSE_FNO_POST_R10NI_SOURCE_POLICY_DECISION.md",
+      "byte_length": 5507,
+      "sha256": "f82512350c08d87d50afa62c2421317f08c024df57e8e891a71f8408df626e5b"
+    }
+  ]
+}

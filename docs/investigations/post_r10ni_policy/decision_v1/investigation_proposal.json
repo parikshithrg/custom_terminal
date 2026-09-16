@@ -1,0 +1,78 @@
+{
+  "schema_version": "post_r10ni_investigation_proposal_v1",
+  "status": "PROPOSED_NOT_AUTHORIZED_NOT_EXECUTED",
+  "purpose": "Documentation-only close-basis and trade-state investigation; not market-data acquisition or source qualification.",
+  "questions": [
+    {
+      "id": "CLOSE_BASIS",
+      "question": "For the F&O UDiFF final bhavcopy applicable on 2026-09-10, what rule populates ClsPric versus daily high/low for nonzero-volume futures, including illiquid or missing qualifying-trade cases?",
+      "required_answer": "Authoritative field mapping, eligible price/trade universe, fallback conditions and effective dates; a general settlement methodology alone is insufficient."
+    },
+    {
+      "id": "TRADE_STATE_ATTRIBUTION",
+      "question": "Which original, modified, cancelled, rejected, custodian-confirmed or special trades contribute to total quantity and to each OHLC field, and is this attribution recoverable from the aggregate bhavcopy?",
+      "required_answer": "Official contribution matrix and aggregate-file limitations; status-code definitions alone do not resolve inclusion."
+    },
+    {
+      "id": "APPLICABILITY",
+      "question": "Does any documented rule actually establish an explanation for the two retained close-range observations without inferring a trade state or manufacturing values?",
+      "required_answer": "Separate general rule applicability from case-specific proof. If aggregate evidence cannot establish case applicability, record unresolved and remain unqualified."
+    }
+  ],
+  "authoritative_sources_sought": [
+    "https://www.nseindia.com/static/resources/forms-formats-members",
+    "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+    "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+    "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+    "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price"
+  ],
+  "source_selection_rule": "Five fixed official NSE-published documentation URLs from sealed R10N-G inventory only. A revised link, additional circular, SEBI document or written NSE clarification requires an explicit scope amendment before access. No contact or message is proposed as automatically authorized.",
+  "limits": {
+    "http_transactions_total_including_redirect_hops": 8,
+    "redirect_hops_per_initial_url": 2,
+    "retries": 0,
+    "max_response_bytes": 4194304,
+    "max_total_response_bytes": 8388608,
+    "request_timeout_seconds": 10,
+    "session_minutes": 30,
+    "methods": [
+      "GET"
+    ],
+    "head_requests": 0,
+    "report_payloads": 0,
+    "date_enumeration": false,
+    "allowed_hosts": [
+      "www.nseindia.com",
+      "nsearchives.nseindia.com"
+    ],
+    "https_only": true,
+    "exact_url_allowlist": true,
+    "content_types": [
+      "text/html",
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ],
+    "xlsx_max_members": 128,
+    "xlsx_max_declared_and_actual_expansion_bytes": 33554432,
+    "xlsx_max_expansion_ratio": 100
+  },
+  "controls": [
+    "OWNER_MUST_REVIEW_DOCUMENT_RETENTION_PERMISSION_BEFORE_ACCESS",
+    "NO_ACKNOWLEDGEMENT_OF_TERMS_ON_OWNER_BEHALF",
+    "NO_COOKIES_CREDENTIALS_PRIVATE_PATHS_RESPONSE_HEADERS_OR_FULL_DOCUMENTS_IN_GIT",
+    "ISOLATED_REVIEW_COPIES_ONLY_IF_SEPARATELY_APPROVED",
+    "SANITIZED_TITLE_PUBLISHER_URL_VERSION_EFFECTIVE_DATE_SECTION_SHA256_AND_MINIMAL_PARAPHRASE_PROVENANCE",
+    "NO_RAW_REPORT_ROWS_TICKERS_IDENTIFIERS_OR_TRADE_FILES",
+    "REVIEW_COPY_RETENTION_PROPOSAL_EARLIER_OF_OWNER_CLOSEOUT_OR_2026_12_31_NOT_APPLIED_TO_EXISTING_PACKAGES",
+    "ANY_REVIEW_COPY_DELETION_REQUIRES_SEPARATE_EXACT_PATH_AUTHORIZATION"
+  ],
+  "stopping_conditions": [
+    "ANSWERED_OR_BUDGET_OR_TIME_EXHAUSTED",
+    "OFF_ALLOWLIST_REDIRECT_OR_HTTP_DOWNGRADE",
+    "ACCESS_CONTROL_OR_AUTHENTICATION_OR_TERMS_AMBIGUITY",
+    "UNEXPECTED_CONTENT_EMPTY_TRUNCATED_CORRUPT_OR_EXPANSION_LIMIT",
+    "DOCUMENT_VERSION_NOT_APPLICABLE_OR_CONTRADICTORY_AUTHORITY",
+    "AUTHORITY_SILENT_OR_CASE_APPLICABILITY_UNPROVEN"
+  ],
+  "closeout": "Record answered/unanswered questions and evidence limitations. No retry, bypass, crawl, adapter change, row attribution, waiver, price mutation, qualification, ingestion or activation. Implementation and all-date requalification require later separate authorization."
+}

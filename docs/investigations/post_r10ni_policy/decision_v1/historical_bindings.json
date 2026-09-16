@@ -1,0 +1,487 @@
+{
+  "schema_version": "post_r10ni_historical_bindings_v1",
+  "baseline": "76bcbc5780e91bdcfa063960f47ae1f010b18770",
+  "comparison": "GIT_CLEAN_FILTER_BLOB_WITH_HISTORICAL_SHA256_MANIFEST_VALIDATION",
+  "protected": [
+    {
+      "path": "docs/investigations/r10n_a/hardening_v1/completion.json",
+      "baseline_git_blob": "e988fde45976b7fce0d53a418c8e0d08bda459af"
+    },
+    {
+      "path": "docs/investigations/r10n_a/hardening_v1/dry_run_plan.json",
+      "baseline_git_blob": "ab8857a53befdeeb26f09de346ee7cf598802566"
+    },
+    {
+      "path": "docs/investigations/r10n_b/qualification_v1/acquisition.json",
+      "baseline_git_blob": "3e82f1f0e6711624692a52714afd5ddf5495aaaa"
+    },
+    {
+      "path": "docs/investigations/r10n_b/qualification_v1/completion.json",
+      "baseline_git_blob": "8bd1a5756b792b578e57cb2980d191eccb5d8dab"
+    },
+    {
+      "path": "docs/investigations/r10n_b/qualification_v1/observed_schema.json",
+      "baseline_git_blob": "f3764b9343a4681a98252ae2da15cb131559ff3f"
+    },
+    {
+      "path": "docs/investigations/r10n_b/qualification_v1/quality_metrics.json",
+      "baseline_git_blob": "915dc306adce12dd4f8c2cf84f4093207cbfaebb"
+    },
+    {
+      "path": "docs/investigations/r10n_b/qualification_v1/root_manifest.json",
+      "baseline_git_blob": "ae3f6bf11ba4b3e2c517bf65d008ffe9a9b916b5"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/adapter_contract.json",
+      "baseline_git_blob": "b73b2af6e11361fc594fa57ffb13757dcfe33cbb"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/completion.json",
+      "baseline_git_blob": "9f1a2980b8ee918711bc79f43f52af65251428f2"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/failure_matrix.json",
+      "baseline_git_blob": "e28d679ef2486548497c20f49a4a92e7817c99f3"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/field_mapping.json",
+      "baseline_git_blob": "415b22099c77af0268994894c80b5afa6b99d62e"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/lifecycle_state.json",
+      "baseline_git_blob": "9019332ec4666e46e8382cae7085f5e5ecad89bf"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/r10nb_reconciliation.json",
+      "baseline_git_blob": "bbef8e510e03b33a724affbe560af7deb1c4dfe8"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/research_state_impact.json",
+      "baseline_git_blob": "af123c2e1bae4292a28c6bc8c260228944eb0dd5"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/root_manifest.json",
+      "baseline_git_blob": "c4ad2221ba57fd2e23a2545c081094b4f6d58e5d"
+    },
+    {
+      "path": "docs/investigations/r10n_c/adapter_v1/synthetic_test_coverage.json",
+      "baseline_git_blob": "6e5cb963d02b6642f63374a85fbe2d856656d50b"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/amended_acquisition_protocol.json",
+      "baseline_git_blob": "bb8679db3b1e2a4c54cae8cfbf3381e932e4f4dd"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/amended_request_budget.json",
+      "baseline_git_blob": "f574480dc934199d0d311a57c69f760fd8ae334a"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/completion.json",
+      "baseline_git_blob": "3fb37d69e91c32d605b00c250121939d8aeb9b10"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/inconsistency_audit.json",
+      "baseline_git_blob": "600f0a43baee7ff322d6bed7bda50b95999e4e5f"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/non_authorization_record.json",
+      "baseline_git_blob": "932fecb9f3192c8cfac126ec57f28aa14f5c54d0"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/owner_amendment_decision_schema.json",
+      "baseline_git_blob": "362b01a5da144e06b69ee4c081ac575772592b41"
+    },
+    {
+      "path": "docs/investigations/r10n_d/amendment_v1/root_manifest.json",
+      "baseline_git_blob": "0d0daab784ca3852a4359c6e2c8d7c4c64e013da"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/acquisition_protocol.json",
+      "baseline_git_blob": "9828935c24bb00223ed00af1f21b87b784fe2c1e"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/completion.json",
+      "baseline_git_blob": "40c105c0df387a2c5ff5ef3e40a15168e0ff9e45"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/correction_behavior_evidence_plan.json",
+      "baseline_git_blob": "264b5eabe03658c62d77a502389dfe66b66dc268"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/date_selection_policy.json",
+      "baseline_git_blob": "c6723d5e9591111ea5a6ecdbcaf2252bc5e28eb9"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/failure_stop_matrix.json",
+      "baseline_git_blob": "661de61bcaef2bb74eb4d15f7ca3398be5a606ae"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/historical_evidence_bindings.json",
+      "baseline_git_blob": "fed944c47a5886e629568101ae38de4a37efacf2"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/non_authorization_record.json",
+      "baseline_git_blob": "a54a7058a0081bcbbc5b25e3a327e6028930761e"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/owner_approval_schema.json",
+      "baseline_git_blob": "e3a0960a03d9b0bfd2a1b9e5cd45d2a651e83592"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/proposed_sample_design.json",
+      "baseline_git_blob": "305a5478aeaa9c157f8e9e1d219f19bd2302229b"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/request_payload_budget.json",
+      "baseline_git_blob": "7c3a1464de909be02edb9b5222371ae0c6d6428e"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/retention_deletion_policy.json",
+      "baseline_git_blob": "b81158dd2067007fab6a8492b617c7b488ea9bc4"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/root_manifest.json",
+      "baseline_git_blob": "591cd3b58d2822100a99e55831f99c10897d1b3e"
+    },
+    {
+      "path": "docs/investigations/r10n_d/plan_v1/schema_stability_acceptance_matrix.json",
+      "baseline_git_blob": "962ee5f57f125b6f2ced5e9501c5181d3eec442a"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/completion.json",
+      "baseline_git_blob": "ebb4275795aa3cbe082793bde20ab16c22217b16"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/lifecycle_state.json",
+      "baseline_git_blob": "8b8bf1aeb57adf312300b127e9745c8af334c426"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/owner_authorization_state.json",
+      "baseline_git_blob": "4ad76be61aa6cb25bf046ec1b7696ad7008af457"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/request_budget_ledger.json",
+      "baseline_git_blob": "e563065a93b1e50c193874fdf51196a8fbec77ab"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/root_manifest.json",
+      "baseline_git_blob": "0617ca87de3560caedd9c10f0aa60fb0c1451083"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/stop_ledger.json",
+      "baseline_git_blob": "0638c15026773edf1f6909cf53f328fcd3355673"
+    },
+    {
+      "path": "docs/investigations/r10n_e/preflight_v1/zero_redirect_preflight.json",
+      "baseline_git_blob": "2378d5857641d3965cc137a2447f280ebf7ccb24"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/acceptance_matrix_results.json",
+      "baseline_git_blob": "06092e8ffbd503b5dc95af76d7300faeca4689bc"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/acquisition_outcomes.json",
+      "baseline_git_blob": "ef07f39948efff5fc91ca1a0f2c384b696857477"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/completion.json",
+      "baseline_git_blob": "24a3f336054c18d0197a6eab3893b138e375a52a"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/contract_population_comparison.json",
+      "baseline_git_blob": "22e2f02352dcb9ff3f5977cf637a45869483906a"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/cross_date_schema_comparison.json",
+      "baseline_git_blob": "b21c45c1a02a08f663286af73e694e7b76fad1e9"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/lifecycle_non_authorization.json",
+      "baseline_git_blob": "bb13de363e6fe9b1331e2e1f633811ff300d66dd"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/owner_authorization.json",
+      "baseline_git_blob": "5a92eeaea6b9446e7c620703dc5f2297fa8c66c8"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/per_date_qualification.json",
+      "baseline_git_blob": "66cf572827d45d7e889e2e2b14aba666d812910b"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/request_budget_ledger.json",
+      "baseline_git_blob": "2ffa971b554f20c722b5e017a7bb02816b778aad"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/retention_deletion_obligations.json",
+      "baseline_git_blob": "3c01f2ec9f3b4166e51ecd0570ea6fcb8de0eb1c"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/root_manifest.json",
+      "baseline_git_blob": "38ba5be15037d52c8317e177bf7707ca59467090"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/source_bindings.json",
+      "baseline_git_blob": "e82968ec6faeffa1f315b56eb627fbc7909e3890"
+    },
+    {
+      "path": "docs/investigations/r10n_e/qualification_v1/stop_failure_ledger.json",
+      "baseline_git_blob": "62dd2ff059ac0c3c38f444369c0d65e2d1a0ea4b"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/adapter_change_decision.json",
+      "baseline_git_blob": "0de9277d525e459a81320078681e76e9d8529470"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/completion.json",
+      "baseline_git_blob": "4fdf197eb4e5a79811880ad722b1aa72e7b26436"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/documented_vs_assumed_semantics.json",
+      "baseline_git_blob": "735af4ce25dc716386ec61402bb6dfe7e6ebb234"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/failure_reproduction.json",
+      "baseline_git_blob": "41fcfbb23aaab9d1ee2d4eba7da152812bbf226d"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/hypothesis_assessment.json",
+      "baseline_git_blob": "4d60eeb54db81f04a90b2667afc060f60b56e7f2"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/instrument_class_breakdown.json",
+      "baseline_git_blob": "a5bc1a8d63e9ab5422d19e5ed717dc081cd6b437"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/lifecycle_non_authorization.json",
+      "baseline_git_blob": "74b02addf9a80f6f19f0a74095c4d851c51562e3"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/predicate_aggregate_counts.json",
+      "baseline_git_blob": "77117d74c849d1d3bb505d9143aa181ff40833ad"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/root_manifest.json",
+      "baseline_git_blob": "5b6de87a4fc598e8c2828b9e43c469ee0bba6295"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/sanitized_bounded_examples.json",
+      "baseline_git_blob": "ed576576706d6cfd503e0461fbde0efbe7e4d133"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/source_integrity_reconciliation.json",
+      "baseline_git_blob": "419eb43ba8263dd66af0be0805f009b94a524de7"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/candidate_invariant_comparison.json",
+      "baseline_git_blob": "8265b33c11f1e1b84ee16e02c9685fcfe6ef1f03"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/completion.json",
+      "baseline_git_blob": "855a0e36aa296761c6ac4c1b2a28f626483abd5b"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/documented_vs_inferred.json",
+      "baseline_git_blob": "9dca01899a32b795963276149a7475ee181083f4"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/expiry_side_finding.json",
+      "baseline_git_blob": "006f7c919a404a0ef4266cdcbd3741dcd15dc3f1"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/field_semantics_matrix.json",
+      "baseline_git_blob": "d42a6a428cfd2004169788a8ab3a7b008137efd5"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/lifecycle_non_authorization.json",
+      "baseline_git_blob": "a97916ed62879d59e7b80f58951a382cb0c1ddc7"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/official_evidence_inventory.json",
+      "baseline_git_blob": "a56ed116da16b4f20264e0d8df6999fc49215c44"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/owner_decision_schema.json",
+      "baseline_git_blob": "9495e05432b63ca3c64847906cc0a7588f27458c"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/proposed_ohlc_rule_contract.json",
+      "baseline_git_blob": "b6e805c889b0eba486cad792365200d3020546d7"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/r10nf_reconciliation.json",
+      "baseline_git_blob": "29bde7ab1178ed76d6dac253239f906ca74030a4"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/remediation_risk_matrix.json",
+      "baseline_git_blob": "42fdc000b9435bc7c9a1c09cf5e12ebfb5dbe7d0"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/root_manifest.json",
+      "baseline_git_blob": "7fd8391c6605fc2d2ca16cf81d3ce9e5359d16d3"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/trade_state_applicability_matrix.json",
+      "baseline_git_blob": "1096400127467bc4c9bf432dc46d1d7cef612a5f"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/completion.json",
+      "baseline_git_blob": "59e0f68754bce7d2754c506de024763b4ea41209"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/diagnostic_schema.json",
+      "baseline_git_blob": "08b487c9ec909e25db78f2a11f358e1630e5d46b"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/expiry_encoding_decision.json",
+      "baseline_git_blob": "c05c14b029a412b89e24dab010c5eb5189ce18d1"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/fatal_diagnostic_behavior_matrix.json",
+      "baseline_git_blob": "a1108ed83767876a4ec4b72ee8f585d6ed18c781"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/implemented_rule_contract.json",
+      "baseline_git_blob": "ad82d845b8bbc2a7afaee63dd5256633853b982b"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/lifecycle_non_authorization.json",
+      "baseline_git_blob": "e084efcfdf022ebf0a0bdbf1a0c7aa04b0833a63"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/official_expiry_evidence_inventory.json",
+      "baseline_git_blob": "ba23ff4442a7d1976044564eff87b49c4161a26d"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/owner_authorization.json",
+      "baseline_git_blob": "d0bde140b4344b23f2cdf5b25f4fffca702fc4df"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/price_immutability_reconciliation.json",
+      "baseline_git_blob": "1eb7d13185e54d85898b27bc290933a4f95bc6a9"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/r10ng_contract_reconciliation.json",
+      "baseline_git_blob": "3c291bc63799158de54fab0767555047eb4338e2"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/root_manifest.json",
+      "baseline_git_blob": "09e644d1e9b3d4ee57785ed4f7e605735b056d86"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/three_package_regression_results.json",
+      "baseline_git_blob": "0f5447a19d56ac89ae883a5379ee50f22f1ba3a4"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/acceptance_matrix_results.json",
+      "baseline_git_blob": "028c72078aa34a877b51ff34589284ee0a05d8aa"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/completion.json",
+      "baseline_git_blob": "ddf7cf05c96dbdf13d44a2d84aabceb1b41d2f34"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/contract_population_comparison.json",
+      "baseline_git_blob": "c94b05752a98291f525b1d0fcf74989dd326931c"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/cross_date_schema_comparison.json",
+      "baseline_git_blob": "8378b1af10c8022cb1f801eb7cb1c5d4942d1a5a"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/expiry_agreement_results.json",
+      "baseline_git_blob": "27be893147b4a72a06dde9680bddc9422d77cac3"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/fatal_diagnostic_counts.json",
+      "baseline_git_blob": "e5bbd097e3efea77b83a1ece7ad325411585e697"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/owner_authorization.json",
+      "baseline_git_blob": "74dd8f169ca500d8409fc0e303d643aeb8e6c042"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/owner_closeout_decision.json",
+      "baseline_git_blob": "dd70bbce47439f031868ef749a22f5c4ce038302"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/per_date_qualification_results.json",
+      "baseline_git_blob": "2cd46ab85f26293a8477fb57cfe898749c34a0ac"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/price_immutability_results.json",
+      "baseline_git_blob": "8d0d930e6bc7a476ce2e4842c6162a33fb30f72f"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/research_production_non_authorization.json",
+      "baseline_git_blob": "0aab528940a004ba6aa4ffd551dc37c4b7ac368c"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/retention_deletion_status.json",
+      "baseline_git_blob": "986facbb5e2dca85b4e7838d7b02f9177d922d01"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/root_manifest.json",
+      "baseline_git_blob": "664b205ce131bb31d68ae9c7872c4f19f902d953"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/source_integrity_preflight.json",
+      "baseline_git_blob": "bd03a7eb9f0e7cae4810eec2fd45cdd448b6c6cd"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/source_lifecycle_decision.json",
+      "baseline_git_blob": "ad196b645498c751ff7caeb67a6de8476cf63089"
+    },
+    {
+      "path": "docs/investigations/r9k/EXPERIMENT_PLAN.md",
+      "baseline_git_blob": "89460831f3d6a0f8e0cfe85678ffbc004a387e4a"
+    },
+    {
+      "path": "docs/investigations/r9k/feasibility_v1.json",
+      "baseline_git_blob": "c9f2e6962cca24c00dab9380a71b96f95b0d7b83"
+    },
+    {
+      "path": "docs/investigations/r9k/manifest_v1.json",
+      "baseline_git_blob": "bb302057a0764ff44c15b6e786c0d30649aca453"
+    },
+    {
+      "path": "docs/investigations/r9k/results_v1.json",
+      "baseline_git_blob": "3cae51fa99826c1ac57381baab23af89a680e605"
+    },
+    {
+      "path": "reports/NSE_FNO_R10NF_OHLC_SEMANTIC_DIAGNOSIS.md",
+      "baseline_git_blob": "b94c95d5206ddc08345a92300a8e502f4231f462"
+    },
+    {
+      "path": "reports/NSE_FNO_R10NG_AUTHORITATIVE_SEMANTICS_DECISION.md",
+      "baseline_git_blob": "87f85db53850eeb5bb10a4b2a02f8540391ec72d"
+    },
+    {
+      "path": "reports/NSE_FNO_R10NH_IMPLEMENTATION.md",
+      "baseline_git_blob": "a2e8005f073a4712160d8d4413073f8c8c135f23"
+    },
+    {
+      "path": "reports/NSE_FNO_R10NI_OFFLINE_REQUALIFICATION.md",
+      "baseline_git_blob": "33ce4c74804645ae989f48f6aeedfe2287c9a9fc"
+    },
+    {
+      "path": "src/market_intel/foundation/nse_fno_candidate.py",
+      "baseline_git_blob": "f3c27206b933df657722ce8ce6834f60c01fc778"
+    },
+    {
+      "path": "tests/test_research_r10n_h_implementation.py",
+      "baseline_git_blob": "34ac92435ed872e4c6ad9c2e0fe37b1ca1ff2246"
+    },
+    {
+      "path": "tests/test_research_r10n_i_requalification.py",
+      "baseline_git_blob": "37784eb29a2bc47cb7b81d91cdba803821d5a3dc"
+    },
+    {
+      "path": "tools/requalify_nse_fno_r10ni.py",
+      "baseline_git_blob": "d8c0842003862780d2e7835bf23a07c487e00a8c"
+    },
+    {
+      "path": "tools/validate_nse_fno_r10nh.py",
+      "baseline_git_blob": "6c7ce30e63add1df9eba396855f388cb032406ce"
+    }
+  ]
+}

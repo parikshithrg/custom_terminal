@@ -1,0 +1,54 @@
+{
+  "schema_version": "post_r10ni_exception_policy_proposal_v1",
+  "proposed_version": "nse_fno_exception_policy_design_v1",
+  "status": "PROPOSED_DESIGN_ONLY_NOT_APPROVED_IMPLEMENTED_OR_APPLIED",
+  "scope": "Only the existing close-range and date-level trade-attribution uncertainties for the three retained dates. No blanket range waiver, new dates, passing-date-only route or suppression of diagnostics.",
+  "evidence_requirements": [
+    "AUTHORITATIVE_FIELD_AND_TRADE_UNIVERSE_RULE_WITH_EFFECTIVE_DATE_AND_FORMAT_APPLICABILITY",
+    "CASE_APPLICABILITY_MUST_BE_PROVEN_NOT_ASSUMED",
+    "IF_AUTHORITY_DOES_NOT_RESOLVE_CASES_UNCERTAINTY_REMAINS_EXPLICIT",
+    "OWNER_APPROVAL_IS_PROJECT_POLICY_PERMISSION_NOT_AUTHORITATIVE_SOURCE_EVIDENCE"
+  ],
+  "unresolved_state_handling": "Retain source values and deterministic existing codes/counts as unresolved and qualification-blocking. An uncertainty-aware display/design review is not source acceptance. No alternative success result is proposed.",
+  "provenance": [
+    "SEALED_PACKAGE_AND_R10N_I_EVIDENCE_HASH_BINDINGS",
+    "NAMED_RULE_VERSION",
+    "AUTHORITATIVE_DOCUMENT_HASH_VERSION_SECTION_EFFECTIVE_DATE",
+    "EVIDENCE_CLASS_DOCUMENTED_OBSERVED_OR_POLICY",
+    "STATE_RESOLVED_OR_UNRESOLVED_AND_REASON",
+    "OWNER_DECISION_SEPARATE_FROM_AUTHORITY"
+  ],
+  "consumer_restrictions": [
+    "NO_PRODUCTION_PROVIDER_REGISTRATION",
+    "NO_HISTORICAL_INGESTION",
+    "NO_RESEARCH_BACKTEST_SCORING_RECOMMENDATIONS_OR_TRADING",
+    "NO_IMPUTED_CLOSE_OR_TRADE_STATE",
+    "NO_COMPARABLE_TRADE_RANGE_OR_EXECUTABLE_PRICE_CLAIMS",
+    "NO_DOWNSTREAM_USE_UNLESS_SEPARATELY_REVIEWED_AND_AUTHORIZED",
+    "NO_PARTIAL_SOURCE_QUALIFICATION"
+  ],
+  "invalidation_conditions": [
+    "SOURCE_HASH_OR_MANIFEST_CHANGE",
+    "SCHEMA_CONTRACT_OR_DIAGNOSTIC_CHANGE",
+    "OFFICIAL_REVISION_OR_CONTRADICTION",
+    "EFFECTIVE_DATE_OR_INSTRUMENT_SCOPE_MISMATCH",
+    "NEW_UNCOVERED_PATTERN_OR_DATE",
+    "LOSS_OF_CASE_APPLICABILITY_OR_PROVENANCE",
+    "RETENTION_PERMISSION_OR_DEADLINE_EXPIRY"
+  ],
+  "required_tests": [
+    "VERSION_AND_SCOPE_GATES",
+    "AUTHORITATIVE_VS_OWNER_POLICY_DISTINCTION",
+    "UNKNOWN_STATE_STAYS_BLOCKING",
+    "NO_PRICE_MUTATION_OR_STATE_INFERENCE",
+    "EXACT_DIAGNOSTIC_COUNTS_AND_NO_SUPPRESSION",
+    "ALL_APPROVED_DATES_REQUIRED_NO_PARTIAL_SUCCESS",
+    "PROVENANCE_AND_EFFECTIVE_DATE_BINDINGS",
+    "FAIL_CLOSED_INVALIDATION",
+    "CONSUMER_DENIAL_AND_NO_ACTIVATION",
+    "SEPARATELY_AUTHORIZED_ALL_THREE_DATE_OFFLINE_REQUALIFICATION_BEFORE_ANY_NEW_RESULT"
+  ],
+  "implementation_authorized": false,
+  "requalification_authorized": false,
+  "source_qualified": false
+}

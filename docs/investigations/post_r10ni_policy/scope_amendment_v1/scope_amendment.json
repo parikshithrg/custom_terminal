@@ -1,0 +1,72 @@
+{
+  "schema_version": "post_r10ni_scope_amendment_v1",
+  "status": "PREPARED_EXECUTION_NOT_AUTHORIZED",
+  "preparation_authorization": "Owner: go ahead with next step; interpreted as the previously proposed scope-amendment preparation only.",
+  "source_qualified": false,
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "blocking_codes": {
+    "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2,
+    "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1
+  },
+  "every_approved_date_must_pass": true,
+  "partial_source_qualification_permitted": false,
+  "proposed_route": "OWNER_MEDIATED_WRITTEN_NSE_CLARIFICATION",
+  "rationale": "The fixed documents did not answer exact mapping or case applicability. Draft one clarification instead of repeating downloads or searching broadly.",
+  "recipient": {
+    "status": "UNVERIFIED_NOT_SELECTED",
+    "address": null,
+    "required": "Owner must supply and verify an official NSE documentation/F&O support recipient. No address is guessed; no contact-directory access is authorized."
+  },
+  "exact_message": "Subject: Technical clarification of NSE F&O UDiFF aggregate field semantics applicable on 2026-09-10\n\nFor non-commercial personal technical qualification, please clarify the final F&O UDiFF bhavcopy rules effective on 2026-09-10:\n1. What precisely populates ClsPric, versus SttlmPric, HghPric, LwPric and TtlTradgVol? Please identify the eligible trade universe, exchange coverage, calculation windows and fallback conditions for each. Does the across-exchange individual-security futures daily settlement methodology map to ClsPric, SttlmPric, both or neither?\n2. For each OHLC, settlement and total-quantity field, which original, modified, cancelled, rejected, custodian-confirmed and special trades contribute? Please distinguish exchange aggregate computation from clearing-obligation computation.\n3. Can aggregate bhavcopy alone establish why a nonzero-volume stock-futures closing price lies outside the reported daily high/low? If not, what minimum authoritative evidence is required? No individual contract or row is supplied, so we are not requesting verification of any specific observation.\nPlease identify authoritative circular/document title, version, effective dates and relevant sections, including applicability on the target date. General calculation methodology or status definitions alone do not establish case-specific applicability.\nPlease also confirm whether your response may be retained privately for this purpose until 2026-12-31 and whether minimal sanitized paraphrases may be recorded in a private project evidence record. No market report files, trade files, customer data or contract inventory are requested.\nThank you.",
+  "limits": {
+    "agent_http_transactions": 0,
+    "agent_messages": 0,
+    "owner_proposed_messages": 1,
+    "followups": 0,
+    "retries": 0,
+    "outbound_attachments": 0,
+    "report_payloads": 0,
+    "raw_package_reacquisition": false,
+    "date_enumeration": false,
+    "response_review_max_bytes": 1048576,
+    "response_review_max_items": 1,
+    "allowed_response_format": "UTF-8 plain text only; no embedded images, attachments or archive processing"
+  },
+  "execution_gate": "No message is sent by this task. Before the owner sends the draft, confirm exact verified recipient and unchanged wording. Any agent sending requires a separate explicit authorization binding recipient, channel, message and budgets.",
+  "incoming_gate": "A reply is untrusted until publisher/channel provenance is verified. Owner must separately authorize offline review and confirm retention/reuse permission before it is ingested into evidence.",
+  "retention": {
+    "new_copy_created": false,
+    "proposed_deadline": "2026-12-31",
+    "trigger": "EARLIER_OF_OWNER_CLOSEOUT_OR_DEADLINE",
+    "permission_pending": true,
+    "isolated_ignored_copy_only": true,
+    "full_reply_in_git": false,
+    "deletion_requires_separate_exact_path_authorization": true,
+    "existing_review_copy_retention_unchanged": true
+  },
+  "stopping_conditions": [
+    "NO_VERIFIED_RECIPIENT",
+    "PERMISSION_OR_PROVENANCE_AMBIGUITY",
+    "RESPONSE_EXCEEDS_LIMIT_OR_NOT_PLAIN_TEXT",
+    "ATTACHMENTS_OR_NEW_URLS_REQUIRE_SEPARATE_SCOPE",
+    "NO_REPLY_OR_AUTHORITY_SILENT",
+    "RULE_EFFECTIVE_DATE_UNPROVEN",
+    "CASE_APPLICABILITY_UNPROVEN"
+  ],
+  "acceptance": "Record authoritative statements separately from inference and policy. A clarification may establish general semantics, never automatically verify the deleted rows. Same-universe weighted averages cannot exceed extrema. No manufactured trade attribution.",
+  "prohibited": [
+    "network",
+    "messages",
+    "deletion",
+    "adapter_changes",
+    "diagnostic_waivers",
+    "price_mutation",
+    "ingestion",
+    "research",
+    "fingerprint_refresh",
+    "production_activation",
+    "requalification",
+    "expiry_reopening"
+  ],
+  "later_gates": "Implementation, reacquisition and all-date requalification each need independent explicit authorization. Owner approval is not authoritative source evidence."
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "scope_amendment_manifest_v1",
+  "path_base": "REPOSITORY_ROOT",
+  "files": [
+    {
+      "path": "docs/investigations/post_r10ni_policy/scope_amendment_v1/scope_amendment.json",
+      "sha256": "d877c44f331342e11690169b0a2dfad6697ec268b97b77032aeda369e32930d6"
+    },
+    {
+      "path": "reports/NSE_FNO_SCOPE_AMENDMENT_PROPOSAL.md",
+      "sha256": "f0bf96115eeb59004515c9396420de1c81a78419ce944b16a43e3c00297abe7b"
+    },
+    {
+      "path": "tests/test_post_r10ni_scope_amendment.py",
+      "sha256": "f0167a488d7dca5f0eaa96acdd37235be117f640a04dff41bfdbbfaa1ea910eb"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/decision.json",
+      "sha256": "d66c9ec8c7a4b59775a44239eefe42084ad16b2079d198e42fb70324bb9b6a91"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/exception_policy_proposal.json",
+      "sha256": "84a571cc89795df06c40f08483aa9c69cf8ccc7ca0af5f4ba7c60b4e8a4e2c4f"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/historical_bindings.json",
+      "sha256": "42367722cb1cb6cfef131bb56baa04441720c7f3ca701578cc4dd093cf87a314"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/investigation_proposal.json",
+      "sha256": "a790f565c9641043b8aa3efc6f549859faaa4fe47d546cc2ce518831826ef903"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/owner_decisions.json",
+      "sha256": "15a7f720d18a9ff149e9162057c9a619e45cad78ea2911ee349705ec85068b20"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/root_manifest.json",
+      "sha256": "5518967ebf03fc2e9ae25eee818bafa92cd2d89cbb33dca1c5843ea7d4ee2995"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/decision_v1/validation.json",
+      "sha256": "46f539b6b4ca66a97ca9ad23c6b4a77c615631a68a4f1fbac1d5776b1948a251"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/deletion_v1/deletion_receipt.json",
+      "sha256": "ed2a84dee8845c56e1699f6a24f8f3296909123ccb622acb1e1f5b462ef230ff"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/deletion_v1/root_manifest.json",
+      "sha256": "c37918dce6e8f5107d926f9cd6988ebfcd315f7f4325d8430d75ec2466e3f3e4"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/applicability_assessment.json",
+      "sha256": "f1cad531b5064fd8e5c9157644accfa08bc04487625d2f785b3969ae6f484510"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/completion.json",
+      "sha256": "caf4255e8b356e6a6fc4c41dd1d26d256f11f198ae05d5d4363fc7417cfa048b"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/document_inventory.json",
+      "sha256": "012422a74f5fd09b9010598304f3d4c3cacc9f529ff66f785d3a2a9dfe5d7ddc"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/lifecycle_and_next_step.json",
+      "sha256": "4560a7b51519b634a0c7356a1bf594ecc4860f2390709c2e0b2dc3f1e4bd4463"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/owner_authorization.json",
+      "sha256": "4a7143b3c99bf62a6b6c57070fb30acf03d73bd69c18f49acfdea3bd8cc1a308"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/question_results.json",
+      "sha256": "66483ad995adb225406b249fc6a3c0716a9668c444fc96ad3f8b66de35629e4a"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/request_ledger.json",
+      "sha256": "06a29cfa240042a8b451de399981523ab8251b68864a0423dfe5da4b128c00bf"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/review_copy_retention.json",
+      "sha256": "90ad37fb18087adf1833d0b7792c855ad4f8cc5a9e95601c37c5877095b852ec"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/root_manifest.json",
+      "sha256": "53e77d2e38d63621bd2b26aa2bb26fa26167cccb2de49aed853905cb996d1170"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/stopping_conditions.json",
+      "sha256": "c9bff35b8c62296a7fb144906113de408f801e4a43a92e1d5d0360d700ac9b54"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/owner_response_v1/owner_response.json",
+      "sha256": "5c8885aadc700399c0c89d1e8e68cd3f89408f634df2d688bb602277f188cae0"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/owner_response_v1/root_manifest.json",
+      "sha256": "6a3a750962fd1d605ab3752c61759e328b9a2d098595234f3aca05bcd38177d2"
+    }
+  ],
+  "status": "PREPARED_EXECUTION_NOT_AUTHORIZED",
+  "baseline": "fa3300cd8c910fe723acd0690057aca6f254ed1b"
+}

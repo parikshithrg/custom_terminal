@@ -86,8 +86,9 @@ def test_r10nf_counts_reconcile_and_source_remains_unqualified() -> None:
     assert reconciliation["source_qualified"] is False
 
 
-def test_adapter_and_prior_sealed_evidence_are_byte_identical() -> None:
-    assert hashlib.sha256(ADAPTER.read_bytes()).hexdigest() == "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af"
+def test_prior_sealed_evidence_is_byte_identical_after_authorized_adapter_change() -> None:
+    historical = json.loads((PRIOR[-1] / "failure_reproduction.json").read_text(encoding="utf-8"))
+    assert historical["unchanged_adapter_sha256"] == "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af"
     for name, (size, digest) in R10NA_BINDINGS.items():
         payload = (R10NA / name).read_bytes()
         assert len(payload) == size

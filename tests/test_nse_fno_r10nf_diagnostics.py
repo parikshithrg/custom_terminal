@@ -9,7 +9,7 @@ import io
 import json
 import socket
 import zipfile
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 
 import pytest
@@ -47,7 +47,7 @@ def _fact(**updates) -> dict[str, str]:
 
 
 def _contract(**updates) -> dict[str, str]:
-    expiry = int(datetime(2026, 9, 24, tzinfo=timezone.utc).timestamp())
+    expiry = int((datetime(2026, 9, 24) - datetime(1980, 1, 1)).total_seconds())
     row = {
         "FinInstrmId": "987654321", "XpryDt": str(expiry), "NewBrdLotQty": "25",
         "MinLot": "25", "StrkPric": "", "OptnTp": "XX", "FinInstrmTp": "",
@@ -187,16 +187,20 @@ def _adapter_package(root: Path, fact: dict[str, str]):
     return build_package_descriptor(root, trading_date=DAY, manifest=manifest)
 
 
-def test_unchanged_adapter_still_fails_nonzero_volume_and_skips_zero_volume(tmp_path: Path) -> None:
+def test_r10nh_adapter_classifies_range_anomalies_without_price_mutation(tmp_path: Path) -> None:
     invalid = _fact(OpnPric="11", HghPric="10", LwPric="9", ClsPric="9.5")
-    with pytest.raises(CandidateAdapterError, match="OHLC_INCONSISTENT"):
-        adapt_package(_adapter_package(tmp_path / "nonzero", invalid))
+    result = adapt_package(_adapter_package(tmp_path / "nonzero", invalid))
+    assert result.quality["diagnostic_counts"] == {
+        "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 1,
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 1,
+        "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1,
+    }
+    assert str(result.records[0].open) == "11" and str(result.records[0].high) == "10"
     invalid["TtlTradgVol"] = "0"
-    assert len(adapt_package(_adapter_package(tmp_path / "zero", invalid)).records) == 1
+    result = adapt_package(_adapter_package(tmp_path / "zero", invalid))
+    assert result.quality["diagnostic_counts"] == {"ZERO_VOLUME_PRICE_STATE": 1}
 
 
-def test_candidate_adapter_source_is_unchanged() -> None:
-    source = Path(__file__).resolve().parents[1] / "src" / "market_intel" / "foundation" / "nse_fno_candidate.py"
-    assert hashlib.sha256(source.read_bytes()).hexdigest() == (
-        "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af"
-    )
+def test_r10nf_historical_adapter_hash_remains_bound_in_sealed_evidence() -> None:
+    evidence = Path(__file__).resolve().parents[1] / "docs" / "investigations" / "r10n_f" / "diagnosis_v1" / "failure_reproduction.json"
+    assert "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af" in evidence.read_text()

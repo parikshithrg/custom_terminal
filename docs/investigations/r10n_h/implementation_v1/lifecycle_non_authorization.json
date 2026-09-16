@@ -1,0 +1,12 @@
+{
+  "schema_version": "r10nh_lifecycle_non_authorization_v1",
+  "milestone": "R.10N-H",
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "source_state": "MULTI_DATE_SOURCE_NOT_QUALIFIED",
+  "production_provider_registered": false,
+  "ui_runner_schedule_or_research_pipeline_exposure": false,
+  "research_fingerprint_refreshed": false,
+  "research_fingerprint_expected_state": "STALE_FAIL_CLOSED",
+  "new_market_report_downloads": 0,
+  "source_qualification_requires": "SEPARATELY_APPROVED_R10N_I"
+}

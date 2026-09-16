@@ -6,8 +6,9 @@ It performs no discovery or network access and is not a production provider.
 Date semantics:
 * UDiFF trading and expiry dates are exchange-calendar dates without a time
   zone. They are represented as :class:`datetime.date`.
-* MII expiry values are Unix seconds and are interpreted as UTC before taking
-  the calendar date, matching the qualified R10N-B sample convention.
+* MII F&O expiry values are elapsed seconds from midnight 01-Jan-1980, as
+  defined by NSE's F&O master-data specification.  Decoding uses exact,
+  timezone-free calendar arithmetic; it is not a Unix timestamp conversion.
 
 Market prices and strikes use :class:`decimal.Decimal`; volume, open interest,
 and lot size are exact integers. Binary floating point is never introduced.
@@ -26,7 +27,7 @@ import zlib
 from collections import Counter, defaultdict
 from contextlib import contextmanager
 from dataclasses import dataclass
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta
 from decimal import Decimal, InvalidOperation
 from enum import StrEnum
 from pathlib import Path, PurePosixPath
@@ -38,6 +39,31 @@ from urllib.parse import urlparse
 LIFECYCLE_STATE = "CANDIDATE_NOT_PRODUCTION_AUTHORIZED"
 SOURCE_FAMILY = "NSE_FO_PAIRED_REPORTS"
 SOURCE_VERSION = "UDIFF_V1_MII_CONTRACT_V1"
+OHLC_SEMANTICS_VERSION = "nse_fno_ohlc_semantics_v1"
+MII_EXPIRY_ENCODING = "nse_fo_elapsed_seconds_from_1980_01_01_v1"
+MII_EXPIRY_ORIGIN = datetime(1980, 1, 1)
+DIAGNOSTIC_ORDER = (
+    "ZERO_VOLUME_PRICE_STATE",
+    "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+    "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+    "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS",
+    "TRADE_STATE_ATTRIBUTION_UNAVAILABLE",
+)
+OHLC_SEMANTICS_CONTRACT = MappingProxyType({
+    "version": OHLC_SEMANTICS_VERSION,
+    "fatal_conditions": (
+        "MISSING_OR_MALFORMED_REQUIRED_NUMERIC",
+        "NEGATIVE_TOTAL_TRADED_QUANTITY",
+        "HIGH_BELOW_LOW",
+        "SOURCE_MANIFEST_ARCHIVE_OR_IDENTITY_INTEGRITY_FAILURE",
+        "OPEN_OUTSIDE_RANGE_WHEN_QUALIFYING_TRADE_COVERAGE_ESTABLISHED",
+        "MII_EXPIRY_ENCODING_OR_AGREEMENT_FAILURE",
+    ),
+    "diagnostic_order": DIAGNOSTIC_ORDER,
+    "qualifying_trade_coverage_authoritatively_established": False,
+    "price_mutation_or_imputation": False,
+    "zero_volume_defines_traded_range": False,
+})
 ARCHIVE_ROOT = "https://nsearchives.nseindia.com/content/fo"
 ALLOWED_HOSTS = frozenset({"nsearchives.nseindia.com", "archives.nseindia.com"})
 MAX_ARCHIVE_MEMBERS = 8
@@ -67,6 +93,9 @@ _SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 class CandidateAdapterError(RuntimeError):
     """A candidate package failed a closed adapter boundary."""
+
+    parse_status = "FATAL_FAILURE"
+    qualification_blocking = True
 
     def __init__(self, code: str, message: str):
         super().__init__(f"{code}: {message}")
@@ -199,6 +228,22 @@ class AdapterResult:
 
     def deterministic_quality(self) -> dict[str, Any]:
         return _deterministic_value(self.quality)
+
+
+@dataclass(frozen=True)
+class AdapterDiagnostic:
+    code: str
+    row_number: int | None
+    qualification_blocking: bool
+    values: Mapping[str, str]
+
+    def deterministic(self) -> dict[str, Any]:
+        return {
+            "code": self.code,
+            "row_number": self.row_number,
+            "qualification_blocking": self.qualification_blocking,
+            "values": dict(sorted(self.values.items())),
+        }
 
 
 def _error(code: str, message: str) -> CandidateAdapterError:
@@ -473,13 +518,8 @@ def _value(raw: str | None, kind: str, *, required: bool = False,
             if parsed.isoformat() != text:
                 raise ValueError
             return FieldValue(ValueState.PRESENT, parsed)
-        if kind == "epoch_date":
-            if not text.isdigit() or len(text) not in {9, 10}:
-                raise ValueError
-            parsed = datetime.fromtimestamp(int(text), timezone.utc).date()
-            if not date(1990, 1, 1) <= parsed <= date(2100, 12, 31):
-                raise ValueError
-            return FieldValue(ValueState.PRESENT, parsed)
+        if kind == "mii_expiry":
+            return FieldValue(ValueState.PRESENT, decode_mii_expiry(text))
         if kind == "decimal":
             parsed = Decimal(text)
             if not parsed.is_finite():
@@ -497,6 +537,54 @@ def _value(raw: str | None, kind: str, *, required: bool = False,
     except (ValueError, InvalidOperation, OSError, OverflowError):
         return FieldValue(ValueState.MALFORMED)
     raise ValueError(f"unknown candidate parser kind: {kind}")
+
+
+def decode_mii_expiry(raw: str) -> date:
+    """Decode the NSE F&O master-data expiry representation without timezone conversion."""
+    if not isinstance(raw, str) or not raw or not raw.isascii() or not raw.isdigit():
+        raise ValueError("MII expiry must be unsigned ASCII decimal seconds")
+    seconds = int(raw)
+    if seconds <= 0:
+        raise ValueError("zero does not encode a supported F&O expiry")
+    try:
+        decoded = MII_EXPIRY_ORIGIN + timedelta(seconds=seconds)
+    except OverflowError as exc:
+        raise ValueError("MII expiry is outside the supported calendar") from exc
+    if not date(1990, 1, 1) <= decoded.date() <= date(2100, 12, 31):
+        raise ValueError("MII expiry is outside the bounded F&O calendar")
+    return decoded.date()
+
+
+def _evaluate_ohlc(values: Mapping[str, Any], row_number: int) -> tuple[list[AdapterDiagnostic], bool]:
+    """Apply the complete versioned OHLC contract to one parsed UDiFF row."""
+    if values["volume"] < 0:
+        raise _error(
+            "NEGATIVE_TOTAL_TRADED_QUANTITY",
+            f"UDIFF row {row_number} has negative volume",
+        )
+    if values["high"] < values["low"]:
+        raise _error("HIGH_BELOW_LOW", f"UDIFF row {row_number} high is below low")
+    exact = {name: format(values[name], "f") for name in
+             ("open", "high", "low", "close", "settlement_price")}
+    diagnostics: list[AdapterDiagnostic] = []
+    if values["volume"] == 0:
+        diagnostics.append(AdapterDiagnostic("ZERO_VOLUME_PRICE_STATE", row_number, False, exact))
+        return diagnostics, False
+    if not values["low"] <= values["open"] <= values["high"]:
+        if OHLC_SEMANTICS_CONTRACT["qualifying_trade_coverage_authoritatively_established"]:
+            raise _error("OPEN_OUTSIDE_DAILY_RANGE", f"UDIFF row {row_number} open is outside range")
+        diagnostics.append(AdapterDiagnostic(
+            "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS", row_number, True, exact,
+        ))
+    if not values["low"] <= values["close"] <= values["high"]:
+        diagnostics.append(AdapterDiagnostic(
+            "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS", row_number, True, exact,
+        ))
+    if not values["low"] <= values["settlement_price"] <= values["high"]:
+        diagnostics.append(AdapterDiagnostic(
+            "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS", row_number, False, exact,
+        ))
+    return diagnostics, any(item.qualification_blocking for item in diagnostics)
 
 
 def _require_present(value: FieldValue, *, field: str, row_number: int, family: str) -> Any:
@@ -517,7 +605,7 @@ def _parse_contracts(stream: TextIO) -> tuple[dict[str, ContractIdentity], tuple
         if None in row:
             raise _error("ROW_WIDTH_MISMATCH", f"MII row {row_number} exceeds schema width")
         fid = _value(row.get("FinInstrmId"), "id", required=True)
-        expiry = _value(row.get("XpryDt"), "epoch_date", required=True)
+        expiry = _value(row.get("XpryDt"), "mii_expiry", required=True)
         lot = _value(row.get("NewBrdLotQty") or row.get("MinLot"), "integer", required=True)
         raw_option = (row.get("OptnTp") or "").strip()
         if raw_option not in {"CE", "PE", "XX"}:
@@ -576,6 +664,8 @@ def _parse_facts(
     instrument_counts = Counter()
     coverage = {name: Counter() for name in ("volume", "settlement_price", "open_interest")}
     seen_fact_ids: set[str] = set()
+    diagnostics: list[AdapterDiagnostic] = []
+    trade_state_attribution_required = False
     for row_number, row in enumerate(reader, 2):
         if None in row:
             raise _error("ROW_WIDTH_MISMATCH", f"UDIFF row {row_number} exceeds schema width")
@@ -620,11 +710,11 @@ def _parse_facts(
         identity = identities.get(fid)
         if identity is None:
             raise _error("UNRESOLVED_IDENTITY", f"UDIFF identifier {fid} is absent from MII")
-        if values["volume"] > 0:
-            if values["high"] < max(values["open"], values["close"], values["low"]):
-                raise _error("OHLC_INCONSISTENT", f"UDIFF row {row_number} high is outside range")
-            if values["low"] > min(values["open"], values["close"], values["high"]):
-                raise _error("OHLC_INCONSISTENT", f"UDIFF row {row_number} low is outside range")
+        if identity.expiry != values["expiry"]:
+            raise _error("MII_EXPIRY_MISMATCH", f"UDIFF row {row_number} expiry differs from MII")
+        row_diagnostics, row_requires_attribution = _evaluate_ohlc(values, row_number)
+        diagnostics.extend(row_diagnostics)
+        trade_state_attribution_required |= row_requires_attribution
         for name in coverage:
             value = values[name]
             coverage[name]["zero" if value == 0 else "nonzero"] += 1
@@ -640,12 +730,23 @@ def _parse_facts(
         ))
     if not records:
         raise _error("EMPTY_SOURCE", "UDIFF contains no records")
+    if trade_state_attribution_required:
+        diagnostics.append(AdapterDiagnostic(
+            "TRADE_STATE_ATTRIBUTION_UNAVAILABLE", None, True,
+            {"coverage": "not_authoritatively_established"},
+        ))
     records.sort(key=lambda item: (int(item.financial_instrument_id), item.instrument_type))
+    diagnostic_counts = Counter(item.code for item in diagnostics)
+    blocking_count = sum(item.qualification_blocking for item in diagnostics)
     return tuple(records), fields, {
         "source_rows": len(records), "normalized_rows": len(records),
         "instrument_counts": {key: instrument_counts[key] for key in ("futures", "options")},
         "field_states": {key: dict(sorted(value.items())) for key, value in sorted(states.items())},
         "value_coverage": {key: dict(sorted(value.items())) for key, value in sorted(coverage.items())},
+        "diagnostics": tuple(item.deterministic() for item in diagnostics),
+        "diagnostic_counts": dict(sorted(diagnostic_counts.items())),
+        "qualification_blocking_diagnostic_count": blocking_count,
+        "informational_diagnostic_count": len(diagnostics) - blocking_count,
     }
 
 
@@ -681,5 +782,20 @@ def adapt_package(descriptor: PackageDescriptor) -> AdapterResult:
         "fact_value_coverage": facts_quality["value_coverage"],
         "schemas": {"udiff_columns": udiff_columns, "mii_columns": mii_columns},
         "archives": {"udiff": udiff_archive, "mii": mii_archive},
+        "semantics_contract": OHLC_SEMANTICS_CONTRACT,
+        "expiry_encoding": {
+            "version": MII_EXPIRY_ENCODING,
+            "origin": "1980-01-01T00:00:00",
+            "timezone_conversion": False,
+            "agreement": {"matched": len(records), "mismatched": 0, "rate": Decimal("1")},
+        },
+        "parse_status": "SUCCESS",
+        "diagnostics": facts_quality["diagnostics"],
+        "diagnostic_counts": facts_quality["diagnostic_counts"],
+        "qualification": {
+            "source_qualified": False,
+            "blocking_diagnostic_count": facts_quality["qualification_blocking_diagnostic_count"],
+            "informational_diagnostic_count": facts_quality["informational_diagnostic_count"],
+        },
     })
     return AdapterResult(LIFECYCLE_STATE, descriptor, records, quality)

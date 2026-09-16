@@ -1,0 +1,12 @@
+{
+  "schema_version": "r10nh_r10ng_contract_reconciliation_v1",
+  "milestone": "R.10N-H",
+  "r10ng_decision": "AUTHORITATIVE_SEMANTICS_SUPPORT_VERSIONED_REMEDIATION",
+  "implementation_version": "nse_fno_ohlc_semantics_v1",
+  "two_2026_09_10_close_cases": "PARSE_SUCCESS_WITH_EXPLICIT_QUALIFICATION_BLOCKING_DIAGNOSTICS",
+  "structural_high_below_low_remains_fatal": true,
+  "zero_volume_states_remain_visible": true,
+  "settlement_range_is_separate": true,
+  "sealed_r10n_a_through_r10n_g_evidence_modified": false,
+  "source_qualified": false
+}

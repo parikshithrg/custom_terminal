@@ -1,0 +1,16 @@
+{
+  "schema_version": "nse_fno_ohlc_semantics_v1",
+  "milestone": "R.10N-H",
+  "fatal_conditions": [
+    "MISSING_OR_MALFORMED_REQUIRED_NUMERIC",
+    "NEGATIVE_TOTAL_TRADED_QUANTITY",
+    "HIGH_BELOW_LOW",
+    "SOURCE_MANIFEST_ARCHIVE_OR_IDENTITY_INTEGRITY_FAILURE",
+    "OPEN_OUTSIDE_RANGE_WHEN_QUALIFYING_TRADE_COVERAGE_ESTABLISHED",
+    "MII_EXPIRY_ENCODING_OR_AGREEMENT_FAILURE"
+  ],
+  "qualifying_trade_coverage_authoritatively_established": false,
+  "price_mutation_or_imputation": false,
+  "zero_volume_defines_traded_range": false,
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED"
+}

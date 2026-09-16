@@ -1,0 +1,11 @@
+{
+  "schema_version": "r10nh_price_immutability_reconciliation_v1",
+  "milestone": "R.10N-H",
+  "method": "DOMAIN_SEPARATED_SHA256_OVER_SORTED_INTERNAL_ID_AND_EXACT_SOURCE_OR_NORMALIZED_PRICE_TUPLES",
+  "fields": ["OpnPric", "HghPric", "LwPric", "ClsPric", "SttlmPric"],
+  "dates_checked": 3,
+  "rows_checked": 99026,
+  "all_source_and_normalized_digests_match": true,
+  "manufactured_replaced_clamped_or_imputed_prices": 0,
+  "raw_values_or_identifiers_retained": false
+}

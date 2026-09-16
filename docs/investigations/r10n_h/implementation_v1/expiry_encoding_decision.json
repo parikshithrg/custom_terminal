@@ -1,0 +1,19 @@
+{
+  "schema_version": "r10nh_expiry_encoding_decision_v1",
+  "milestone": "R.10N-H",
+  "decision": "AUTHORITATIVE_ENCODING_FOUND_AND_IMPLEMENTED",
+  "decoder_version": "nse_fo_elapsed_seconds_from_1980_01_01_v1",
+  "field": "MII XpryDt / F&O Contract Expiry Date",
+  "origin": "1980-01-01T00:00:00",
+  "unit": "INTEGER_SECONDS_ELAPSED",
+  "timezone_rule": "TIMEZONE_FREE_CALENDAR_ARITHMETIC_NO_UTC_OR_LOCAL_CONVERSION",
+  "market_date_rule": "ADD_EXACT_INTEGER_SECONDS_TO_ORIGIN_AND_USE_RESULTING_CALENDAR_DATE",
+  "null_or_not_applicable_rule": "NOT_SPECIFIED_FOR_FO_EXPIRY_IN_REVIEWED_MASTER_SPEC; EMPTY_ZERO_SIGNED_NONINTEGER_AND_OUT_OF_BOUNDS_VALUES_FAIL_CLOSED",
+  "evidence_chain": [
+    "NSE v1.6 master-data specification directly defines the F&O contract Expiry Date representation.",
+    "NSE circulars identify the standardized daily NSE_FO_contract_ddmmyyyy.csv.gz artifact as the FO MII Contract File.",
+    "The decoder choice was made from those official definitions, not from the previously observed offset."
+  ],
+  "required_cross_source_agreement": "100_PERCENT_OR_FATAL_MII_EXPIRY_MISMATCH",
+  "three_package_result": {"matched": 99026, "mismatched": 0, "rate": "1"}
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": "r10nh_owner_authorization_v1",
+  "milestone": "R.10N-H",
+  "question": "Authorize R10N-H implementation of `nse_fno_ohlc_semantics_v1`, without qualifying or activating the source?",
+  "owner_answer": "YES_SEPARATE_R10N_H",
+  "authorized": true,
+  "source_qualification_authorized": false,
+  "production_activation_authorized": false
+}

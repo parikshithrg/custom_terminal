@@ -9,17 +9,19 @@ import io
 import json
 import socket
 import zipfile
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 
 import pytest
 
 from market_intel.foundation.nse_fno_candidate import (
     LIFECYCLE_STATE,
+    OHLC_SEMANTICS_VERSION,
     CandidateAdapterError,
     ValueState,
     adapt_package,
     build_package_descriptor,
+    decode_mii_expiry,
     expected_package_files,
 )
 
@@ -45,7 +47,7 @@ def _csv(fields: list[str], rows: list[dict]) -> bytes:
 
 def _epoch(day: str) -> str:
     parsed = date.fromisoformat(day)
-    return str(int(datetime(parsed.year, parsed.month, parsed.day, tzinfo=timezone.utc).timestamp()))
+    return str(int((datetime(parsed.year, parsed.month, parsed.day) - datetime(1980, 1, 1)).total_seconds()))
 
 
 def _future(day: str, fid: str = "101", **updates) -> dict:
@@ -257,3 +259,112 @@ def test_normalized_records_are_deterministic_and_provenance_bound(tmp_path: Pat
     assert all(row["provenance"]["facts_sha256"] == descriptor.files[0].sha256 for row in left)
     assert adapt_package(descriptor).deterministic_quality() == adapt_package(descriptor).deterministic_quality()
     assert adapt_package(descriptor).deterministic_quality()["identity_join"]["rate"] == "1"
+
+
+def test_nse_1980_expiry_decoder_is_exact_timezone_free_and_leap_safe() -> None:
+    for expected in (date(2000, 2, 29), date(2026, 9, 24), date(2100, 12, 31)):
+        seconds = int((datetime.combine(expected, datetime.min.time()) - datetime(1980, 1, 1)).total_seconds())
+        assert decode_mii_expiry(str(seconds)) == expected
+        assert decode_mii_expiry(str(seconds + 86399)) == expected
+    for invalid in ("", "0", "-1", "+1", "1.0", "１２３", "999999999999999999999"):
+        with pytest.raises(ValueError):
+            decode_mii_expiry(invalid)
+
+
+def test_expiry_agreement_is_required_for_every_joined_record(tmp_path: Path) -> None:
+    day = "2026-09-09"
+    with pytest.raises(CandidateAdapterError) as caught:
+        adapt_package(_package(
+            tmp_path / "mismatch", day, facts=[_future(day)],
+            contracts=[_contract("2026-09-10")],
+        )[0])
+    assert caught.value.code == "MII_EXPIRY_MISMATCH"
+
+
+def test_versioned_ohlc_diagnostics_are_countable_and_do_not_mutate_prices(tmp_path: Path) -> None:
+    day = "2026-09-09"
+    fact = _future(day, OpnPric="13.00", HghPric="12.00", LwPric="9.00",
+                   ClsPric="8.00", SttlmPric="14.00", TtlTradgVol="7")
+    result = adapt_package(_package(
+        tmp_path / "diagnostics", day, facts=[fact], contracts=[_contract(day)],
+    )[0])
+    assert result.quality["semantics_contract"]["version"] == OHLC_SEMANTICS_VERSION
+    assert result.quality["diagnostic_counts"] == {
+        "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 1,
+        "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 1,
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 1,
+        "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1,
+    }
+    assert result.quality["qualification"] == {
+        "source_qualified": False,
+        "blocking_diagnostic_count": 3,
+        "informational_diagnostic_count": 1,
+    }
+    record = result.records[0]
+    assert tuple(map(str, (record.open, record.high, record.low, record.close, record.settlement_price))) == (
+        "13.00", "12.00", "9.00", "8.00", "14.00",
+    )
+
+
+@pytest.mark.parametrize(("updates", "code"), [
+    ({"HghPric": "8", "LwPric": "9"}, "HIGH_BELOW_LOW"),
+    ({"TtlTradgVol": "-1"}, "NEGATIVE_TOTAL_TRADED_QUANTITY"),
+])
+def test_structural_price_and_volume_errors_remain_fatal(
+    tmp_path: Path, updates: dict, code: str,
+) -> None:
+    day = "2026-09-09"
+    with pytest.raises(CandidateAdapterError) as caught:
+        adapt_package(_package(
+            tmp_path / code, day, facts=[_future(day, **updates)], contracts=[_contract(day)],
+        )[0])
+    assert caught.value.code == code
+
+
+@pytest.mark.parametrize("close", ["13.00", "8.00"])
+def test_close_above_high_and_below_low_are_blocking_diagnostics(tmp_path: Path, close: str) -> None:
+    day = "2026-09-09"
+    result = adapt_package(_package(
+        tmp_path / close, day,
+        facts=[_future(day, ClsPric=close, SttlmPric="10", TtlTradgVol="1")],
+        contracts=[_contract(day)],
+    )[0])
+    assert result.quality["diagnostic_counts"]["CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS"] == 1
+    assert result.quality["qualification"]["blocking_diagnostic_count"] == 2
+
+
+@pytest.mark.parametrize(("open_price", "high", "low", "close", "settlement"), [
+    ("0", "0", "0", "0", "0"),
+    ("0", "0", "0", "7.25", "7.25"),
+    ("8", "12", "7", "11", "10"),
+])
+def test_zero_volume_is_one_visible_state_not_a_traded_range(
+    tmp_path: Path, open_price: str, high: str, low: str, close: str, settlement: str,
+) -> None:
+    day = "2026-09-09"
+    result = adapt_package(_package(
+        tmp_path / f"zero-{close}", day,
+        facts=[_future(day, OpnPric=open_price, HghPric=high, LwPric=low, ClsPric=close,
+                       SttlmPric=settlement, TtlTradgVol="0")],
+        contracts=[_contract(day)],
+    )[0])
+    assert result.quality["diagnostic_counts"] == {"ZERO_VOLUME_PRICE_STATE": 1}
+    assert result.quality["qualification"]["blocking_diagnostic_count"] == 0
+
+
+def test_diagnostic_order_is_exact_and_deterministic(tmp_path: Path) -> None:
+    day = "2026-09-09"
+    descriptor, _ = _package(
+        tmp_path / "ordered", day,
+        facts=[_future(day, OpnPric="13", HghPric="12", LwPric="9", ClsPric="8",
+                       SttlmPric="14", TtlTradgVol="1")],
+        contracts=[_contract(day)],
+    )
+    expected = [
+        "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+        "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS",
+        "TRADE_STATE_ATTRIBUTION_UNAVAILABLE",
+    ]
+    assert [item["code"] for item in adapt_package(descriptor).quality["diagnostics"]] == expected
+    assert adapt_package(descriptor).deterministic_quality() == adapt_package(descriptor).deterministic_quality()

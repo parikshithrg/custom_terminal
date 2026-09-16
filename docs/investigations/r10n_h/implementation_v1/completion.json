@@ -1,0 +1,24 @@
+{
+  "schema_version": "r10nh_completion_v1",
+  "milestone": "R.10N-H",
+  "owner_authorization": "YES_SEPARATE_R10N_H",
+  "ohlc_contract": "nse_fno_ohlc_semantics_v1",
+  "expiry_decoder": "nse_fo_elapsed_seconds_from_1980_01_01_v1",
+  "three_package_offline_regression": "PASS",
+  "expiry_agreement": {"matched": 99026, "mismatched": 0, "rate": "1"},
+  "price_immutability": "PASS",
+  "validation": {
+    "focused_adapter_r10nf_r10ng": "57_PASS",
+    "focused_post_compatibility_fixes": "72_PASS",
+    "compilation": "PASS",
+    "full_root": "1000_PASS_6_EXPECTED_FAIL_4_SKIP_7_WARN",
+    "preserved_failures": [
+      "4_STALE_RESEARCH_FINGERPRINT_ASSERTIONS",
+      "R9K_JOB_TIMEOUT_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC",
+      "R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10nh_related_failures": 0
+  },
+  "source_qualified": false,
+  "completion_decision": "R10N_H_IMPLEMENTED_READY_FOR_OFFLINE_REQUALIFICATION"
+}

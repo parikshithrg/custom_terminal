@@ -16,14 +16,13 @@ def _load(name: str) -> dict:
     return json.loads((EVIDENCE / name).read_text(encoding="utf-8"))
 
 
-def test_failure_is_exactly_reproduced_without_adapter_change() -> None:
+def test_historical_failure_is_exactly_bound_to_the_pre_r10nh_adapter() -> None:
     failure = _load("failure_reproduction.json")
-    source = ROOT / "src" / "market_intel" / "foundation" / "nse_fno_candidate.py"
     assert failure["result"] == "REPRODUCED"
     assert failure["error_code"] == "OHLC_INCONSISTENT"
     assert failure["csv_row_number"] == 4724
     assert failure["individual_trigger"] == "HIGH_BELOW_CLOSE_ONLY"
-    assert hashlib.sha256(source.read_bytes()).hexdigest() == failure["unchanged_adapter_sha256"]
+    assert failure["unchanged_adapter_sha256"] == "93780824f87bd80b67269636fe22b7c11fa2379fbda85537d07565f942e0a6af"
 
 
 def test_source_integrity_and_offline_boundary_are_recorded() -> None:

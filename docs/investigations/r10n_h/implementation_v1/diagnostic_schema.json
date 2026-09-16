@@ -1,0 +1,16 @@
+{
+  "schema_version": "r10nh_diagnostic_schema_v1",
+  "milestone": "R.10N-H",
+  "fields": ["code", "row_number", "qualification_blocking", "values"],
+  "order": [
+    "ZERO_VOLUME_PRICE_STATE",
+    "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+    "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS",
+    "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS",
+    "TRADE_STATE_ATTRIBUTION_UNAVAILABLE"
+  ],
+  "exact_values_preserved_in_memory": true,
+  "raw_rows_or_identifiers_retained_in_evidence": false,
+  "deterministic_and_countable": true,
+  "silent_normalization_drop_allowed": false
+}

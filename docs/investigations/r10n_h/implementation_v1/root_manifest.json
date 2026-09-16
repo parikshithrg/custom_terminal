@@ -1,0 +1,19 @@
+{
+  "schema_version": "r10nh_root_manifest_v1",
+  "milestone": "R.10N-H",
+  "artifacts": [
+    {"path": "completion.json", "byte_length": 943, "sha256": "b22d34c9c09faddd43fc70041710e171378e0af0e867a2f25084b893baf475be"},
+    {"path": "diagnostic_schema.json", "byte_length": 580, "sha256": "0828b26cb0b1cab7fe042569fcd5aed0e3609363ffe95e0e283e1b995cb79269"},
+    {"path": "expiry_encoding_decision.json", "byte_length": 1188, "sha256": "6a01db5ff8f6aa53ab361ca433fd6cd796a993e7b7e59c3d55b5514c551ff01b"},
+    {"path": "fatal_diagnostic_behavior_matrix.json", "byte_length": 1153, "sha256": "bb6c26834e23226723b2974ffc1d86ae8cbbe4299ac4ab6a89ea38f29aecb75a"},
+    {"path": "implemented_rule_contract.json", "byte_length": 599, "sha256": "91d3bcc466a344ac7353e95119f432338459a3f946e3bbaf37a7af3b467178b5"},
+    {"path": "lifecycle_non_authorization.json", "byte_length": 510, "sha256": "d55c483871216da77324a628d8e17de2f87c3ad50efab4ff8e4bdd234f045f9c"},
+    {"path": "official_expiry_evidence_inventory.json", "byte_length": 1910, "sha256": "97941c1362fde71ee2b9b9f76f6ac6fd4ef730b45bb5cd3c010b0203d7a21350"},
+    {"path": "owner_authorization.json", "byte_length": 359, "sha256": "dd6313aea6832c4559cdc4dbdf5899ebd53728078e9816e779ddc2b119660190"},
+    {"path": "price_immutability_reconciliation.json", "byte_length": 473, "sha256": "6d893b11fd887cead55f450832c0ef489bf4e59ac192f68b03acb2588422b395"},
+    {"path": "r10ng_contract_reconciliation.json", "byte_length": 547, "sha256": "0db9cf48e8374d61e7d54118ded99eb106e6ee1384136059813138580a7545cf"},
+    {"path": "three_package_regression_results.json", "byte_length": 2354, "sha256": "b5fea67f2cd3539d601362f5403a3cc4a3cc64cd0c3b24bbc3deae5f3fb7a549"}
+  ],
+  "raw_rows_archives_or_identifiers_in_manifest": false,
+  "completion_decision": "R10N_H_IMPLEMENTED_READY_FOR_OFFLINE_REQUALIFICATION"
+}

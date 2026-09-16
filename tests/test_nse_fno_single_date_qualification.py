@@ -51,7 +51,7 @@ def _fact(**updates) -> dict:
 def _contract(**updates) -> dict:
     row = {
         "FinInstrmId": "101", "UndrlygFinInstrmId": "9001", "FinInstrmNm": "FUT",
-        "TckrSymb": "ABC", "XpryDt": "1789574400", "StrkPric": "", "OptnTp": "XX",
+        "TckrSymb": "ABC", "XpryDt": "1474675200", "StrkPric": "", "OptnTp": "XX",
         "MinLot": "25", "NewBrdLotQty": "25", "FinInstrmTp": "",
     }
     row.update(updates)
@@ -95,7 +95,7 @@ def test_archive_member_must_be_safe_and_exact(tmp_path: Path, member: str) -> N
 
 
 def test_identity_failures_are_closed(tmp_path: Path) -> None:
-    conflicting = [_contract(), _contract(XpryDt="1792195200")]
+    conflicting = [_contract(), _contract(XpryDt="1476662400")]
     with pytest.raises(QualificationError, match="AMBIGUOUS_IDENTITY"):
         qualify_package(_package(tmp_path / "duplicate", contracts=conflicting))
     with pytest.raises(QualificationError, match="MALFORMED_VALUE"):

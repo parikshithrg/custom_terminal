@@ -54,6 +54,7 @@ docs/investigations/r10n_f/diagnosis_v1/** -text
 tools/diagnose_nse_fno_ohlc_r10nf.py -text
 docs/investigations/r10n_g/semantics_v1/** -text
 reports/NSE_FNO_R10NG_AUTHORITATIVE_SEMANTICS_DECISION.md -text
+docs/investigations/r10n_h/implementation_v1/** -text
 docs/project_status/market_system_status_pre_research_review_v7.md -text
 docs/project_status/pre_research_generation_manifest_v7.json -text
 reports/RESEARCH_R9O_REPORT.md -text

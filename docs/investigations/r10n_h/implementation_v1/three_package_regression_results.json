@@ -1,0 +1,42 @@
+{
+  "schema_version": "r10nh_three_package_regression_v1",
+  "milestone": "R.10N-H",
+  "network_requests": 0,
+  "packages": [
+    {
+      "trading_date": "2026-09-09",
+      "manifest_and_archive_validation": "PASS",
+      "source_rows": {"mii": 78603, "udiff": 33250},
+      "normalized_rows": 33250,
+      "expiry_agreement": {"matched": 33250, "mismatched": 0, "rate": "1"},
+      "diagnostic_counts": {"SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2584, "ZERO_VOLUME_PRICE_STATE": 21774},
+      "qualification_blocking_diagnostic_count": 0,
+      "price_immutability": {"source_digest": "19e30d6c3b957ed0738a354c48c8e97a245fe58f674e5e9b012235cb622dddd7", "normalized_digest": "19e30d6c3b957ed0738a354c48c8e97a245fe58f674e5e9b012235cb622dddd7", "exact_match": true},
+      "source_qualified": false
+    },
+    {
+      "trading_date": "2026-09-10",
+      "manifest_and_archive_validation": "PASS",
+      "source_rows": {"mii": 78751, "udiff": 33729},
+      "normalized_rows": 33729,
+      "expiry_agreement": {"matched": 33729, "mismatched": 0, "rate": "1"},
+      "diagnostic_counts": {"CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2, "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2686, "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1, "ZERO_VOLUME_PRICE_STATE": 22201},
+      "qualification_blocking_diagnostic_count": 3,
+      "price_immutability": {"source_digest": "b5703cba1c7849ee79ce20249f989a4a998b0d6398553c3bdb092b906a264ce0", "normalized_digest": "b5703cba1c7849ee79ce20249f989a4a998b0d6398553c3bdb092b906a264ce0", "exact_match": true},
+      "source_qualified": false
+    },
+    {
+      "trading_date": "2025-07-08",
+      "manifest_and_archive_validation": "PASS",
+      "source_rows": {"mii": 76645, "udiff": 32047},
+      "normalized_rows": 32047,
+      "expiry_agreement": {"matched": 32047, "mismatched": 0, "rate": "1"},
+      "diagnostic_counts": {"SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2310, "ZERO_VOLUME_PRICE_STATE": 19662},
+      "qualification_blocking_diagnostic_count": 0,
+      "price_immutability": {"source_digest": "863b772817f9f60e6f95ebab23c57460e62cc8a80901b27f6be221e899437ff5", "normalized_digest": "863b772817f9f60e6f95ebab23c57460e62cc8a80901b27f6be221e899437ff5", "exact_match": true},
+      "source_qualified": false
+    }
+  ],
+  "retained_raw_rows_or_identifiers": false,
+  "source_qualified": false
+}

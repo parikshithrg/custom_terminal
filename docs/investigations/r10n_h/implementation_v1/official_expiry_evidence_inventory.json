@@ -1,0 +1,38 @@
+{
+  "schema_version": "r10nh_official_expiry_evidence_inventory_v1",
+  "milestone": "R.10N-H",
+  "authority_policy": "OFFICIAL_NSE_OR_SEBI_ONLY",
+  "market_report_urls_accessed": 0,
+  "new_market_report_payloads_downloaded": 0,
+  "sources": [
+    {
+      "title": "NSE - Masters Data, CM, F&O, CD and COM Segments, Master Data Specification v1.6",
+      "publisher": "NSE Data & Analytics Limited",
+      "effective_date": "2025-05-05",
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/NSE-Masters%20Data-v1.6.pdf",
+      "sha256": "a1e45b6de312ebf05298fac8a1c4fbe337b8339b7eb110ac75705925bd05487e",
+      "byte_length": 817499,
+      "relevance": "Section 3.2.1 defines F&O Contract Expiry Date as LONG numeric seconds elapsed from midnight 01-Jan-1980."
+    },
+    {
+      "title": "Dissemination of MII security and contract master files on website",
+      "publisher": "National Stock Exchange of India Limited",
+      "effective_date": "2024-02-05",
+      "url": "https://nsearchives.nseindia.com/content/circulars/MSD60315.pdf",
+      "sha256": "02d851cec85512d10440d47bf5c253545510711504cf53b35f67f3b134b02a35",
+      "byte_length": 74473,
+      "relevance": "Identifies NSE_FO_contract_ddmmyyyy.csv.gz as the FO MII Contract File."
+    },
+    {
+      "title": "Standardisation of file formats for MII-Member Interface - Files in compressed format",
+      "publisher": "National Stock Exchange of India Limited",
+      "effective_date": "2023-07-17",
+      "url": "https://nsearchives.nseindia.com/content/circulars/MSD57416.pdf",
+      "sha256": "8f093864546d00bc41c0a7a7ef56657f02af74bcdee94a99cc866d218a6e8037",
+      "byte_length": 62408,
+      "relevance": "Binds the standardized FO MII contract CSV to the NSE_FO_contract_ddmmyyyy.csv.gz nomenclature."
+    }
+  ],
+  "temporary_review_copies_committed": false,
+  "third_party_sources_used_as_authority": false
+}

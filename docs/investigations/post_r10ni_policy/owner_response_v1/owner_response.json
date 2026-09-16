@@ -1,0 +1,54 @@
+{
+  "schema_version": "post_r10ni_owner_response_v1",
+  "decision_package_commit": "cc28b2cd106d18ea6a19d9bd4fd8223aa24c2e2a",
+  "r10ni_evidence": {
+    "path": "docs/investigations/r10n_i/requalification_v1/root_manifest.json",
+    "sha256": "1b729c0ebb7f8d94ed346ffd7bd367797b26143158e8da6a68c738714233ab8f",
+    "owner_response": "accept the R10N-1 evidence",
+    "interpretation": "ACCEPT_R10N_I_AGGREGATE_EVIDENCE_NOT_SOURCE_QUALIFICATION"
+  },
+  "source_policy": {
+    "owner_response": "diagnose NSe route for data source",
+    "selected_route": "BOUNDED_OFFICIAL_EVIDENCE_INVESTIGATION",
+    "route_selected": true,
+    "execution_scope_approval": "PENDING_SEPARATE_EXPLICIT_APPROVAL",
+    "review_copy_retention_permission": "PENDING",
+    "network_requests": 0
+  },
+  "retention": {
+    "owner_response": "retention is end of year 31-12-2026",
+    "anchor_date": "2026-09-09",
+    "anchor_clarified_deadline": "2026-12-31",
+    "anchor_closeout_trigger": "NOT_SEPARATELY_CLARIFIED",
+    "other_deadlines": {
+      "2026-09-10": "2026-12-31",
+      "2025-07-08": "2026-12-31"
+    },
+    "existing_r10ne_deadlines_changed": false
+  },
+  "closeout": {
+    "r10ne_owner_acceptance_trigger_now_applies": true,
+    "trigger_is_not_deletion_permission": true
+  },
+  "deletion": {
+    "owner_response": "authorize package deletion",
+    "general_authorization_received": true,
+    "per_package_target_confirmation": "PENDING",
+    "exact_path_and_sealed_binding_verification": "NOT_PERFORMED",
+    "execution_ready": false,
+    "packages_deleted": 0,
+    "candidate_targets_for_owner_confirmation": [
+      "artifacts/nse_fno_reports/2026-09-09/",
+      "artifacts/nse_fno_reports/2026-09-10/",
+      "artifacts/nse_fno_reports/2025-07-08/"
+    ]
+  },
+  "historical_evidence_modified": false,
+  "source_qualified": false,
+  "production_activated": false,
+  "adapter_changed": false,
+  "requalification_performed": false,
+  "ingestion": false,
+  "research": false,
+  "fingerprint_refreshed": false
+}

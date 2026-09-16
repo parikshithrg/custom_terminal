@@ -1,0 +1,10 @@
+{
+  "schema_version": "post_r10ni_deletion_root_manifest_v1",
+  "artifacts": [
+    {
+      "path": "deletion_receipt.json",
+      "byte_length": 2952,
+      "sha256": "ed2a84dee8845c56e1699f6a24f8f3296909123ccb622acb1e1f5b462ef230ff"
+    }
+  ]
+}

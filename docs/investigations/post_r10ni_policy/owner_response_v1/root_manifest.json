@@ -1,0 +1,10 @@
+{
+  "schema_version": "post_r10ni_owner_response_root_manifest_v1",
+  "artifacts": [
+    {
+      "path": "owner_response.json",
+      "byte_length": 2001,
+      "sha256": "5c8885aadc700399c0c89d1e8e68cd3f89408f634df2d688bb602277f188cae0"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "post_r10ni_package_deletion_receipt_v1",
+  "authorization": {
+    "prior_owner_response": "authorize package deletion",
+    "target_confirmation": "authorization covers all three packages",
+    "explicit_scope": "ONLY_2026_09_09_2026_09_10_2025_07_08_PACKAGES"
+  },
+  "evidence_root": {
+    "path": "docs/investigations/r10n_i/requalification_v1/root_manifest.json",
+    "sha256": "1b729c0ebb7f8d94ed346ffd7bd367797b26143158e8da6a68c738714233ab8f"
+  },
+  "packages": [
+    {
+      "trading_date": "2026-09-09",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-09/",
+      "retention_deadline": "2026-12-31",
+      "preflight": {
+        "exact_path": "PASS",
+        "ancestor_and_target_reparse_checks": "PASS",
+        "exact_three_file_contents": "PASS",
+        "manifest_sha256": "MATCH_SEALED_R10NE",
+        "payload_sizes_and_sha256": "MATCH_SEALED_R10NE",
+        "official_urls": "MATCH_SEALED_R10NI"
+      },
+      "report_files_deleted": 2,
+      "acquisition_manifest_deleted": true,
+      "empty_directory_deleted": true,
+      "absence_verified": true
+    },
+    {
+      "trading_date": "2026-09-10",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-10/",
+      "retention_deadline": "2026-12-31",
+      "preflight": {
+        "exact_path": "PASS",
+        "ancestor_and_target_reparse_checks": "PASS",
+        "exact_three_file_contents": "PASS",
+        "manifest_sha256": "MATCH_SEALED_R10NE",
+        "payload_sizes_and_sha256": "MATCH_SEALED_R10NE",
+        "official_urls": "MATCH_SEALED_R10NI"
+      },
+      "report_files_deleted": 2,
+      "acquisition_manifest_deleted": true,
+      "empty_directory_deleted": true,
+      "absence_verified": true
+    },
+    {
+      "trading_date": "2025-07-08",
+      "relative_path": "artifacts/nse_fno_reports/2025-07-08/",
+      "retention_deadline": "2026-12-31",
+      "preflight": {
+        "exact_path": "PASS",
+        "ancestor_and_target_reparse_checks": "PASS",
+        "exact_three_file_contents": "PASS",
+        "manifest_sha256": "MATCH_SEALED_R10NE",
+        "payload_sizes_and_sha256": "MATCH_SEALED_R10NE",
+        "official_urls": "MATCH_SEALED_R10NI"
+      },
+      "report_files_deleted": 2,
+      "acquisition_manifest_deleted": true,
+      "empty_directory_deleted": true,
+      "absence_verified": true
+    }
+  ],
+  "deletion_method": "REMOVE_EXACT_VERIFIED_FILES_THEN_EMPTY_DIRECTORIES_NO_RECURSIVE_DELETE",
+  "packages_deleted": 3,
+  "report_files_deleted": 6,
+  "acquisition_manifests_deleted": 3,
+  "deletion_result": "COMPLETE",
+  "recycle_bin_used": false,
+  "onedrive_recovery": "NOT_VERIFIED",
+  "tracked_historical_evidence_deleted": false,
+  "source_qualified": false,
+  "production_activated": false,
+  "adapter_changed": false,
+  "requalification_performed": false,
+  "network_requests": 0,
+  "ingestion": false,
+  "research": false,
+  "fingerprint_refreshed": false,
+  "investigation_execution_authorized": false
+}

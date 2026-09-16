@@ -1,0 +1,11 @@
+{
+  "schema_version": "r10ni_owner_closeout_decision_v1",
+  "milestone": "R.10N-I",
+  "aggregate_evidence_state": "COMPLETE_AWAITING_OWNER_ACCEPTANCE",
+  "owner_acceptance": "PENDING",
+  "overall_source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "earlier_deletion_trigger_currently_applies": false,
+  "reason": "OWNER_HAS_NOT_ACCEPTED_THIS_AGGREGATE_EVIDENCE_AND_NO_DELETION_WAS_AUTHORIZED",
+  "owner_must_decide": ["ACCEPT_OR_DECLINE_AGGREGATE_EVIDENCE", "IF_TRIGGERED_AUTHORIZE_OR_DECLINE_EXACT_PACKAGE_DELETION"],
+  "this_record_authorizes_deletion": false
+}

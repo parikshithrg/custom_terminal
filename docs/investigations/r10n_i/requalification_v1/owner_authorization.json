@@ -1,0 +1,8 @@
+{
+  "schema_version": "r10ni_owner_authorization_v1",
+  "milestone": "R.10N-I",
+  "question": "Authorize R10N-I offline requalification of the three retained, hash-bound packages under the unchanged R10N-H contracts, without new external access, adapter changes, research, or production activation?",
+  "owner_answer": "YES_SEPARATE_R10N_I",
+  "authorized": true,
+  "network_adapter_research_or_production_authorized": false
+}

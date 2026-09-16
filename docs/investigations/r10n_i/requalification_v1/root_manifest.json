@@ -1,0 +1,27 @@
+{
+  "schema_version": "r10ni_root_manifest_v1",
+  "milestone": "R.10N-I",
+  "artifacts": [
+    {"path": "acceptance_matrix_results.json", "byte_length": 777, "sha256": "fabca85cfff36bb4b9a10c4f73497e6925f593d790a7e75e8d36387e6ed11760"},
+    {"path": "completion.json", "byte_length": 986, "sha256": "205038bc473ea774b5250363cd5006d8fbc3a9a73b18d2825a80a5add7b744d8"},
+    {"path": "contract_population_comparison.json", "byte_length": 1292, "sha256": "f99a1dead72a5abbb43cab5f11424ce8f21078ee2592f6b151bdc701365726d0"},
+    {"path": "cross_date_schema_comparison.json", "byte_length": 1569, "sha256": "829f31306f1c03096373b307ffb127fa5776805e4307b98921ff5d99eb34e18e"},
+    {"path": "expiry_agreement_results.json", "byte_length": 522, "sha256": "e0498088dc2f1fe47ee71c5cfc626258f7b38820bb223a96bb646a67ad89815e"},
+    {"path": "fatal_diagnostic_counts.json", "byte_length": 597, "sha256": "111254511e969dae26b0acce5f31121ed676a6072db6b1f86322bc958b88e1e3"},
+    {"path": "owner_authorization.json", "byte_length": 427, "sha256": "955457d430617f7a836fc4a84809b0ee8551566f8232994c0e254a2dd3d5ed2e"},
+    {"path": "owner_closeout_decision.json", "byte_length": 580, "sha256": "71402c7f56bd0a08fdedcb423d9050e1d05e8b5a484817f3284b4cbd8fc18c8f"},
+    {"path": "per_date_qualification_results.json", "byte_length": 2138, "sha256": "b16c153c1e74eda2caed1f760873a95eb5165ab3b5ff429f7cdbfa261c0e5377"},
+    {"path": "price_immutability_results.json", "byte_length": 818, "sha256": "e83fa3e6b5d7af2e1854e8ecc0adccaee59e975516e02381d557e655b2ed39ce"},
+    {"path": "research_production_non_authorization.json", "byte_length": 548, "sha256": "bc180db667388ab063e894bb14a67d4378ecfa7139aba8169d59de5da88d35f4"},
+    {"path": "retention_deletion_status.json", "byte_length": 849, "sha256": "6f605944fe441836f71dcbb0176ba0bf52ae2fff9516445f782d4932d6d57bb7"},
+    {"path": "source_integrity_preflight.json", "byte_length": 2720, "sha256": "1e1f62d1bf86175885675b8664abecfbffe31c4a229bf9fe47009c8235631853"},
+    {"path": "source_lifecycle_decision.json", "byte_length": 633, "sha256": "fc010c14e546aece3f357f7e13ef9b5a3b74e4cc6fc737809013216b4bc36da3"}
+  ],
+  "sanitization": {
+    "raw_rows_retained": false,
+    "raw_contract_identifiers_retained": false,
+    "private_absolute_paths_retained": false,
+    "credentials_or_response_bodies_retained": false
+  },
+  "completion_decision": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED"
+}

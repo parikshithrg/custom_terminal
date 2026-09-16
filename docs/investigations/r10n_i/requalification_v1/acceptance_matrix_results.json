@@ -1,0 +1,15 @@
+{
+  "schema_version": "r10ni_acceptance_matrix_results_v1",
+  "milestone": "R.10N-I",
+  "policy": "EVERY_APPROVED_DATE_MUST_PASS; NO_PARTIAL_SOURCE_QUALIFICATION",
+  "criteria": ["package_integrity", "required_schemas", "unique_identity_join", "expiry_agreement", "no_fatal_condition", "no_qualification_blocking_diagnostic", "price_immutability", "required_fields_explicit"],
+  "dates": [
+    {"trading_date": "2026-09-09", "all_criteria_pass": true},
+    {"trading_date": "2026-09-10", "all_criteria_pass": false, "failed_criteria": ["no_qualification_blocking_diagnostic"]},
+    {"trading_date": "2025-07-08", "all_criteria_pass": true}
+  ],
+  "all_dates_pass": false,
+  "schemas_stable": true,
+  "partial_source_qualification_produced": false,
+  "overall": "FAIL_CLOSED"
+}

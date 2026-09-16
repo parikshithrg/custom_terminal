@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10ni_price_immutability_results_v1",
+  "milestone": "R.10N-I",
+  "method": "DOMAIN_SEPARATED_SHA256_OVER_SORTED_INTERNAL_ID_AND_EXACT_PRICE_TUPLES",
+  "dates": [
+    {"trading_date": "2026-09-09", "source_and_normalized_digest": "19e30d6c3b957ed0738a354c48c8e97a245fe58f674e5e9b012235cb622dddd7", "exact_match": true},
+    {"trading_date": "2026-09-10", "source_and_normalized_digest": "b5703cba1c7849ee79ce20249f989a4a998b0d6398553c3bdb092b906a264ce0", "exact_match": true},
+    {"trading_date": "2025-07-08", "source_and_normalized_digest": "863b772817f9f60e6f95ebab23c57460e62cc8a80901b27f6be221e899437ff5", "exact_match": true}
+  ],
+  "rows_checked": 99026,
+  "all_dates_exact_match": true,
+  "prices_mutated_clamped_replaced_or_imputed": 0,
+  "raw_values_or_identifiers_retained": false
+}

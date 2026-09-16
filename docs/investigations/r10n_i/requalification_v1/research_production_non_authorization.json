@@ -1,0 +1,14 @@
+{
+  "schema_version": "r10ni_research_production_non_authorization_v1",
+  "milestone": "R.10N-I",
+  "adapter_changed": false,
+  "threshold_or_diagnostic_classification_changed": false,
+  "network_requests": 0,
+  "new_dates_or_payloads": 0,
+  "production_provider_registered_or_activated": false,
+  "historical_ingestion_performed": false,
+  "research_backtest_scoring_recommendation_or_trading_performed": false,
+  "research_fingerprint_refreshed": false,
+  "research_fingerprint_state": "STALE_FAIL_CLOSED",
+  "retained_packages_deleted": false
+}

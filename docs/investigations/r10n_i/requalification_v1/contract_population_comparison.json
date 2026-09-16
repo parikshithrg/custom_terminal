@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10ni_contract_population_comparison_v1",
+  "milestone": "R.10N-I",
+  "date_counts": {"2026-09-09": 78603, "2026-09-10": 78751, "2025-07-08": 76645},
+  "all_three_intersection_count": 54508,
+  "comparisons_to_anchor": [
+    {"anchor_date": "2026-09-09", "comparison_date": "2026-09-10", "anchor_count": 78603, "comparison_count": 78751, "intersection_count": 78603, "additions_count": 148, "removals_count": 0},
+    {"anchor_date": "2026-09-09", "comparison_date": "2025-07-08", "anchor_count": 78603, "comparison_count": 76645, "intersection_count": 54508, "additions_count": 22137, "removals_count": 24095}
+  ],
+  "lot_and_option_state_semantics": {
+    "2026-09-09": {"positive_lot_rows": 33250, "nonpositive_lot_rows": 0, "distinct_lot_sizes": 105, "valid_option_states": 32603, "valid_futures_states": 647},
+    "2026-09-10": {"positive_lot_rows": 33729, "nonpositive_lot_rows": 0, "distinct_lot_sizes": 105, "valid_option_states": 33082, "valid_futures_states": 647},
+    "2025-07-08": {"positive_lot_rows": 32047, "nonpositive_lot_rows": 0, "distinct_lot_sizes": 112, "valid_option_states": 31388, "valid_futures_states": 659}
+  },
+  "ordinary_contract_turnover_is_correction_evidence": false,
+  "full_contract_inventories_or_raw_identifiers_persisted": false
+}

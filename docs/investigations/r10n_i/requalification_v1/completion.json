@@ -1,0 +1,27 @@
+{
+  "schema_version": "r10ni_completion_v1",
+  "milestone": "R.10N-I",
+  "owner_authorization": "YES_SEPARATE_R10N_I",
+  "all_three_dates_evaluated": true,
+  "integrity_preflight": "PASS",
+  "schemas_stable": true,
+  "accepted_dates": ["2026-09-09", "2025-07-08"],
+  "not_accepted_dates": ["2026-09-10"],
+  "validation": {
+    "r10ni_focused": "12_PASS",
+    "r10na_through_r10ni_focused": "118_PASS_3_EXPECTED_STALE_FINGERPRINT_FAIL",
+    "compilation": "PASS",
+    "json_documents": "15_VALID",
+    "root_manifest_bindings": "14_PASS",
+    "privacy_secret_scan": "PASS",
+    "full_root": "1012_PASS_6_EXPECTED_FAIL_4_SKIP_7_WARN",
+    "preserved_failures": [
+      "4_STALE_RESEARCH_FINGERPRINT_ASSERTIONS",
+      "R9K_JOB_TIMEOUT_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC",
+      "R9K_JOB_CLOSE_NEGATIVE_0_003_SECOND_TIMING_DIAGNOSTIC"
+    ],
+    "r10ni_related_failures": 0
+  },
+  "source_qualified": false,
+  "completion_decision": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED"
+}

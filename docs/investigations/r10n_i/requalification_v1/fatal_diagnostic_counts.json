@@ -1,0 +1,11 @@
+{
+  "schema_version": "r10ni_fatal_diagnostic_counts_v1",
+  "milestone": "R.10N-I",
+  "dates": [
+    {"trading_date": "2026-09-09", "fatal": 0, "blocking": 0, "nonblocking": 24358},
+    {"trading_date": "2026-09-10", "fatal": 0, "blocking": 3, "nonblocking": 24887, "blocking_codes": {"CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2, "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1}},
+    {"trading_date": "2025-07-08", "fatal": 0, "blocking": 0, "nonblocking": 21972}
+  ],
+  "totals": {"fatal": 0, "blocking": 3, "nonblocking": 71217},
+  "diagnostics_suppressed_merged_reinterpreted_or_waived": false
+}

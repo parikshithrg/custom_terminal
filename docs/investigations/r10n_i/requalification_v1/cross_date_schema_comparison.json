@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10ni_cross_date_schema_comparison_v1",
+  "milestone": "R.10N-I",
+  "required_columns": {
+    "udiff": ["ClsPric", "FinInstrmId", "FinInstrmTp", "HghPric", "LwPric", "NewBrdLotQty", "OpnIntrst", "OpnPric", "OptnTp", "SttlmPric", "StrkPric", "TckrSymb", "TradDt", "TtlTradgVol", "XpryDt"],
+    "mii": ["FinInstrmId", "FinInstrmNm", "FinInstrmTp", "MinLot", "NewBrdLotQty", "OptnTp", "StrkPric", "TckrSymb", "UndrlygFinInstrmId", "XpryDt"]
+  },
+  "dates": [
+    {"trading_date": "2026-09-09", "udiff_column_count": 34, "mii_column_count": 150, "missing_required": [], "nonrequired_added_vs_anchor": [], "nonrequired_removed_vs_anchor": [], "decimal_scales": {"open": [2], "high": [2], "low": [2], "close": [2], "settlement_price": [2], "strike": [2]}},
+    {"trading_date": "2026-09-10", "udiff_column_count": 34, "mii_column_count": 150, "missing_required": [], "nonrequired_added_vs_anchor": [], "nonrequired_removed_vs_anchor": [], "decimal_scales": {"open": [2], "high": [2], "low": [2], "close": [2], "settlement_price": [2], "strike": [2]}},
+    {"trading_date": "2025-07-08", "udiff_column_count": 34, "mii_column_count": 150, "missing_required": [], "nonrequired_added_vs_anchor": [], "nonrequired_removed_vs_anchor": [], "decimal_scales": {"open": [2], "high": [2], "low": [2], "close": [2], "settlement_price": [2], "strike": [2]}}
+  ],
+  "strict_type_parse": "PASS_ALL_DATES",
+  "archive_member_structure": "ONE_EXPECTED_UDIFF_MEMBER_AND_ONE_MII_GZIP_STREAM_ALL_DATES",
+  "required_and_full_column_sets_stable": true,
+  "stable": true
+}

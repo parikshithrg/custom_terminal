@@ -1,0 +1,17 @@
+{
+  "schema_version": "r10ni_source_lifecycle_decision_v1",
+  "milestone": "R.10N-I",
+  "date_decisions": [
+    {"trading_date": "2026-09-09", "accepted": true},
+    {"trading_date": "2026-09-10", "accepted": false},
+    {"trading_date": "2025-07-08", "accepted": true}
+  ],
+  "all_dates_accepted": false,
+  "schemas_stable": true,
+  "partial_source_qualification_permitted": false,
+  "source_qualified": false,
+  "decision": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "next_step": "SEPARATE_EXPLICIT_SOURCE_POLICY_DECISION_NOT_HISTORICAL_INGESTION_DESIGN",
+  "production_activated": false,
+  "research_authorized": false
+}

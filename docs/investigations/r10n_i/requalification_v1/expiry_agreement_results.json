@@ -1,0 +1,12 @@
+{
+  "schema_version": "r10ni_expiry_agreement_results_v1",
+  "milestone": "R.10N-I",
+  "decoder": "nse_fo_elapsed_seconds_from_1980_01_01_v1",
+  "dates": [
+    {"trading_date": "2026-09-09", "matched": 33250, "mismatched": 0, "rate": "1"},
+    {"trading_date": "2026-09-10", "matched": 33729, "mismatched": 0, "rate": "1"},
+    {"trading_date": "2025-07-08", "matched": 32047, "mismatched": 0, "rate": "1"}
+  ],
+  "totals": {"matched": 99026, "mismatched": 0, "rate": "1"},
+  "requirement": "100_PERCENT_OR_FAIL_CLOSED"
+}

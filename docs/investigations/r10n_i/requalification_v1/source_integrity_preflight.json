@@ -1,0 +1,44 @@
+{
+  "schema_version": "r10ni_source_integrity_preflight_v1",
+  "milestone": "R.10N-I",
+  "verified_before_row_access": true,
+  "binding_source": "docs/investigations/r10n_e/qualification_v1/source_bindings.json",
+  "packages": [
+    {
+      "trading_date": "2026-09-09",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-09/",
+      "manifest_sha256": "4c6e9d8dc361f02c461613eec304c9ad5c2e04470174a3397ec8844e8c429c97",
+      "files": [
+        {"filename": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip", "byte_length": 1028737, "sha256": "50826bed50da889b90b208c9b6368d3768c0eabb416178b176f064d3f93de3f5"},
+        {"filename": "NSE_FO_contract_09092026.csv.gz", "byte_length": 1725381, "sha256": "a58c75d36a5100506c005961af181cd6ca8ed597289ffc5fdc3107920e4850cf"}
+      ],
+      "archive_validation": {"udiff_member": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv", "udiff_crc32": "24cbaf4b", "udiff_expanded_bytes": 6034961, "mii_expanded_bytes": 28581969, "expansion_bounds": "PASS"},
+      "state": "PASS"
+    },
+    {
+      "trading_date": "2026-09-10",
+      "relative_path": "artifacts/nse_fno_reports/2026-09-10/",
+      "manifest_sha256": "ecb3c92c7fd18bb29d1a453e86db789c1cc1fdf5bc433e7b7fe914f50420061d",
+      "files": [
+        {"filename": "BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip", "byte_length": 1037169, "sha256": "ef39a7fefc5e6de6ad76334bdd96020c7c96d507cd0be0ec479c5590d7d057b1"},
+        {"filename": "NSE_FO_contract_10092026.csv.gz", "byte_length": 1728107, "sha256": "0a4e32e0764693e8571ba82b85bceffb73b146c1548427649488531b079270f7"}
+      ],
+      "archive_validation": {"udiff_member": "BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv", "udiff_crc32": "e78eb53f", "udiff_expanded_bytes": 6115455, "mii_expanded_bytes": 28633280, "expansion_bounds": "PASS"},
+      "state": "PASS"
+    },
+    {
+      "trading_date": "2025-07-08",
+      "relative_path": "artifacts/nse_fno_reports/2025-07-08/",
+      "manifest_sha256": "d13107481cbc3519ab35d3b17b5fa324eb3bc9d793783f35cf3f206a554d8d0d",
+      "files": [
+        {"filename": "BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip", "byte_length": 999289, "sha256": "10e72772e36275e8be90e84abf432a242baee16dff5d6962f6a794c75b1992c9"},
+        {"filename": "NSE_FO_contract_08072025.csv.gz", "byte_length": 1713118, "sha256": "29993a92374ac34322021cf60c7c6d9136a86a39b870b8c740cc3cb3318187af"}
+      ],
+      "archive_validation": {"udiff_member": "BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv", "udiff_crc32": "78701312", "udiff_expanded_bytes": 5822358, "mii_expanded_bytes": 27860274, "expansion_bounds": "PASS"},
+      "state": "PASS"
+    }
+  ],
+  "embedded_trading_dates": "PASS_ALL_ROWS",
+  "integrity_state": "PASS",
+  "network_requests": 0
+}

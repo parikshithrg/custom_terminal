@@ -1,0 +1,30 @@
+{
+  "schema_version": "r10ni_per_date_qualification_results_v1",
+  "milestone": "R.10N-I",
+  "contracts": {"ohlc": "nse_fno_ohlc_semantics_v1", "expiry": "nse_fo_elapsed_seconds_from_1980_01_01_v1", "diagnostics": "r10nh_diagnostic_schema_v1"},
+  "dates": [
+    {
+      "trading_date": "2026-09-09", "source_rows": {"udiff": 33250, "mii": 78603}, "normalized_rows": 33250,
+      "instrument_counts": {"futures": 647, "options": 32603}, "identity_join_rate": "1", "expiry_agreement_rate": "1",
+      "fatal_count": 0, "blocking_diagnostic_count": 0, "nonblocking_diagnostic_count": 24358,
+      "diagnostic_counts": {"SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2584, "ZERO_VOLUME_PRICE_STATE": 21774},
+      "required_fields_explicit": true, "price_immutability": true, "accepted": true, "decision": "DATE_ACCEPTED"
+    },
+    {
+      "trading_date": "2026-09-10", "source_rows": {"udiff": 33729, "mii": 78751}, "normalized_rows": 33729,
+      "instrument_counts": {"futures": 647, "options": 33082}, "identity_join_rate": "1", "expiry_agreement_rate": "1",
+      "fatal_count": 0, "blocking_diagnostic_count": 3, "nonblocking_diagnostic_count": 24887,
+      "diagnostic_counts": {"CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2, "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2686, "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1, "ZERO_VOLUME_PRICE_STATE": 22201},
+      "required_fields_explicit": true, "price_immutability": true, "accepted": false, "decision": "DATE_NOT_ACCEPTED"
+    },
+    {
+      "trading_date": "2025-07-08", "source_rows": {"udiff": 32047, "mii": 76645}, "normalized_rows": 32047,
+      "instrument_counts": {"futures": 659, "options": 31388}, "identity_join_rate": "1", "expiry_agreement_rate": "1",
+      "fatal_count": 0, "blocking_diagnostic_count": 0, "nonblocking_diagnostic_count": 21972,
+      "diagnostic_counts": {"SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2310, "ZERO_VOLUME_PRICE_STATE": 19662},
+      "required_fields_explicit": true, "price_immutability": true, "accepted": true, "decision": "DATE_ACCEPTED"
+    }
+  ],
+  "all_dates_evaluated": true,
+  "partial_source_qualification": false
+}

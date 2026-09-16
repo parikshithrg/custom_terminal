@@ -1,0 +1,50 @@
+{
+  "path_base": "REPOSITORY_ROOT",
+  "files": [
+    {
+      "sha256": "30442dcd1e53410f3f354b89fa314196c6e634b436863361c49de4d72e5ed1f1",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/completion.json"
+    },
+    {
+      "sha256": "1178cceee77ad5e95ebc67e54466a4a8ceafbbddde2cdfede0e2b4b0098dd658",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/protocol.json"
+    },
+    {
+      "sha256": "c34538f0cc1bf1fc459a176d5e6f6f9e0502937a37ebc96ab83e72a4db7f9193",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/root_manifest.json"
+    },
+    {
+      "sha256": "05cb12e3578d379a07c70ae720598a0b2162907faff8d2cf55484af7c8e1a0b4",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/owner_authorization.json"
+    },
+    {
+      "sha256": "c0c061402776415f6f957e9b843016ff9cd2ea9d3d66628feeeda40f3ff9d247",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/input_manifest_bindings.json"
+    },
+    {
+      "sha256": "c44246fd80c39db288efa7a6551212145e25e4746bbcf5cec8dd669516109a2f",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/input_root_manifest.json"
+    },
+    {
+      "sha256": "53e77508c43cf9ac8082c2aec7fdd3c208b6eb0250af46e2cee6a84f45341798",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/measured_results.json"
+    },
+    {
+      "sha256": "82d601e40de402fa2d95e890ad1a0292835a2fc56443657989a3239066a29eb4",
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/completion.json"
+    },
+    {
+      "sha256": "2d4d57c516c56d2721efa8f0324447677e14107791017e99b752ae805085dbda",
+      "path": "reports/NSE_FNO_QUARANTINE_EXECUTION.md"
+    },
+    {
+      "sha256": "cd5108c657e13aa297509774fe6460cbf3b365ba4c24be8282fc51b2e2f7c8a4",
+      "path": "tools/run_isolated_nse_quarantine.py"
+    },
+    {
+      "sha256": "00ac4dbf2e556d0a274121dfa9920568500ead88867ecf969cb64fff4cdeb1eb",
+      "path": "tests/test_isolated_nse_quarantine.py"
+    }
+  ],
+  "schema_version": "quarantine_execution_root_manifest_v1"
+}

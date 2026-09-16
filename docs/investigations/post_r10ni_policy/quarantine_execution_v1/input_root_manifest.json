@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/owner_authorization.json",
+      "sha256": "05cb12e3578d379a07c70ae720598a0b2162907faff8d2cf55484af7c8e1a0b4"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/quarantine_execution_v1/input_manifest_bindings.json",
+      "sha256": "c0c061402776415f6f957e9b843016ff9cd2ea9d3d66628feeeda40f3ff9d247"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/root_manifest.json",
+      "sha256": "c34538f0cc1bf1fc459a176d5e6f6f9e0502937a37ebc96ab83e72a4db7f9193"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/isolated_comparison_v1/reacquisition_receipt.json",
+      "sha256": "0ce13260357770c66ca2122a2f989f3160687c3abe6eac99c97ef9051a01eff8"
+    },
+    {
+      "path": "tools/run_isolated_nse_quarantine.py",
+      "sha256": "cd5108c657e13aa297509774fe6460cbf3b365ba4c24be8282fc51b2e2f7c8a4"
+    }
+  ],
+  "schema_version": "quarantine_pre_evaluation_bindings_v1"
+}

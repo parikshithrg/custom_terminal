@@ -1,0 +1,21 @@
+{
+  "schema_version": "quarantine_execution_authorization_v1",
+  "owner_answer": "all 3 approved",
+  "protocol_path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/protocol.json",
+  "protocol_sha256": "1178cceee77ad5e95ebc67e54466a4a8ceafbbddde2cdfede0e2b4b0098dd658",
+  "experiment_implementation": true,
+  "consumer_scope": true,
+  "materiality_thresholds": true,
+  "consumers": [
+    "OFFLINE_COVERAGE_AUDIT",
+    "OFFLINE_CONTRACT_DATE_COMPLETENESS"
+  ],
+  "thresholds": "UNCHANGED_ZERO_LOSS_PROTOCOL_THRESHOLDS",
+  "network": false,
+  "alternative_source_access": false,
+  "research": false,
+  "production": false,
+  "qualification": false,
+  "deletion": false,
+  "retention_deadline": "2026-12-31"
+}

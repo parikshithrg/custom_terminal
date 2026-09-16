@@ -1,0 +1,2927 @@
+{
+  "schema_version": "isolated_quarantine_execution_results_v1",
+  "status": "COMPLETED_OFFLINE_AUDITS",
+  "protocol_sha256": "1178cceee77ad5e95ebc67e54466a4a8ceafbbddde2cdfede0e2b4b0098dd658",
+  "integrity": [
+    {
+      "trading_date": "2026-09-09",
+      "manifest_sha256": "463a3b39b985c2438fbd9b00458cee95fedc0fb8e65fdb7dc585a1d7981eb14b",
+      "payload_bindings": "MATCH_RECEIPT_AND_SEALED_EVIDENCE",
+      "archives": {
+        "udiff": {
+          "member_count": 1,
+          "declared_expanded_bytes": 6034961,
+          "validated_expanded_bytes": 6034961
+        },
+        "mii": {
+          "member_count": 1,
+          "validated_expanded_bytes": 28581969
+        }
+      }
+    },
+    {
+      "trading_date": "2026-09-10",
+      "manifest_sha256": "d5efd0165698e7e2ae9f62ec2004b5a2731ef9d0914b1e280429506ebc5af8d4",
+      "payload_bindings": "MATCH_RECEIPT_AND_SEALED_EVIDENCE",
+      "archives": {
+        "udiff": {
+          "member_count": 1,
+          "declared_expanded_bytes": 6115455,
+          "validated_expanded_bytes": 6115455
+        },
+        "mii": {
+          "member_count": 1,
+          "validated_expanded_bytes": 28633280
+        }
+      }
+    },
+    {
+      "trading_date": "2025-07-08",
+      "manifest_sha256": "284b7456a868666291bff5557e9293db4cf6e99afb7511e6646b928a72ccedc4",
+      "payload_bindings": "MATCH_RECEIPT_AND_SEALED_EVIDENCE",
+      "archives": {
+        "udiff": {
+          "member_count": 1,
+          "declared_expanded_bytes": 5822358,
+          "validated_expanded_bytes": 5822358
+        },
+        "mii": {
+          "member_count": 1,
+          "validated_expanded_bytes": 27860274
+        }
+      }
+    }
+  ],
+  "dates": [
+    {
+      "trading_date": "2026-09-09",
+      "audit": {
+        "baseline_contract_dates": 33250,
+        "filtered_contract_dates": 33250,
+        "quarantined_contract_dates": 0,
+        "missing_contract_dates": 0,
+        "row_coverage_loss_percent": "0",
+        "restricted_date_baseline_rows": 0,
+        "restricted_date_filtered_rows": 0,
+        "field_missingness": {
+          "open": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "high": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "low": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "close": {
+            "baseline_states": {
+              "PRESENT": 33250
+            },
+            "filtered_states": {
+              "PRESENT": 33250
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "settlement_price": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 89
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 89
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "volume": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 21774
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "open_interest": {
+            "baseline_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 16591
+            },
+            "filtered_states": {
+              "PRESENT": 33250,
+              "ZERO_VALUE": 16591
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "expiry": {
+            "baseline_states": {
+              "PRESENT": 33250
+            },
+            "filtered_states": {
+              "PRESENT": 33250
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "strike": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 32603
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 32603
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "option_type": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 32603
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 32603
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          },
+          "lot_size": {
+            "baseline_states": {
+              "PRESENT": 33250
+            },
+            "filtered_states": {
+              "PRESENT": 33250
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 33250,
+            "missingness_increase_percentage_points": "0"
+          }
+        },
+        "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+      },
+      "by_instrument_class": {
+        "IDF": {
+          "baseline_contract_dates": 18,
+          "filtered_contract_dates": 18,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 4
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 4
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "IDO": {
+          "baseline_contract_dates": 5036,
+          "filtered_contract_dates": 5036,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 5036
+              },
+              "filtered_states": {
+                "PRESENT": 5036
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 11
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 11
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3760
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3496
+              },
+              "filtered_states": {
+                "PRESENT": 5036,
+                "ZERO_VALUE": 3496
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 5036
+              },
+              "filtered_states": {
+                "PRESENT": 5036
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 5036
+              },
+              "filtered_states": {
+                "PRESENT": 5036
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 5036
+              },
+              "filtered_states": {
+                "PRESENT": 5036
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 5036
+              },
+              "filtered_states": {
+                "PRESENT": 5036
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5036,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "STF": {
+          "baseline_contract_dates": 629,
+          "filtered_contract_dates": 629,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "filtered_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "filtered_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "filtered_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "filtered_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 629
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "STO": {
+          "baseline_contract_dates": 27567,
+          "filtered_contract_dates": 27567,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 27567
+              },
+              "filtered_states": {
+                "PRESENT": 27567
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 78
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 78
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 17999
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 13091
+              },
+              "filtered_states": {
+                "PRESENT": 27567,
+                "ZERO_VALUE": 13091
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 27567
+              },
+              "filtered_states": {
+                "PRESENT": 27567
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 27567
+              },
+              "filtered_states": {
+                "PRESENT": 27567
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 27567
+              },
+              "filtered_states": {
+                "PRESENT": 27567
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 27567
+              },
+              "filtered_states": {
+                "PRESENT": 27567
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27567,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        }
+      },
+      "diagnostic_counts": {
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2584,
+        "ZERO_VOLUME_PRICE_STATE": 21774
+      },
+      "date_attribution_diagnostic_preserved": false,
+      "original_acceptance": "DATE_ACCEPTED",
+      "source_price_digest": "19e30d6c3b957ed0738a354c48c8e97a245fe58f674e5e9b012235cb622dddd7",
+      "normalized_price_digest": "19e30d6c3b957ed0738a354c48c8e97a245fe58f674e5e9b012235cb622dddd7",
+      "embedded_dates": "PASS_ALL_ROWS",
+      "identity_and_expiry": "PASS",
+      "consumer_tests": [
+        {
+          "id": "test_integrity_before_normalization",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_quarantine_count_reconciliation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_field_missingness_denominators",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_contract_date_unique_mapping",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_date_attribution_persists",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_no_fill_or_price_mutation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "contract_date_no_loss_threshold",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        }
+      ],
+      "unexpected_consumer_invariant_differences": 0
+    },
+    {
+      "trading_date": "2026-09-10",
+      "audit": {
+        "baseline_contract_dates": 33729,
+        "filtered_contract_dates": 33727,
+        "quarantined_contract_dates": 2,
+        "missing_contract_dates": 2,
+        "row_coverage_loss_percent": "0.005929615464437131252038305316",
+        "restricted_date_baseline_rows": 33729,
+        "restricted_date_filtered_rows": 33727,
+        "field_missingness": {
+          "open": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 22202
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 22201
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "high": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 22202
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 22201
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "low": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 22202
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 22201
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "close": {
+            "baseline_states": {
+              "PRESENT": 33729
+            },
+            "filtered_states": {
+              "PRESENT": 33727
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "settlement_price": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 97
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 97
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "volume": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 22201
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 22201
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "open_interest": {
+            "baseline_states": {
+              "PRESENT": 33729,
+              "ZERO_VALUE": 16653
+            },
+            "filtered_states": {
+              "PRESENT": 33727,
+              "ZERO_VALUE": 16653
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "expiry": {
+            "baseline_states": {
+              "PRESENT": 33729
+            },
+            "filtered_states": {
+              "PRESENT": 33727
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "strike": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 33082
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 645,
+              "PRESENT": 33082
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "option_type": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 647,
+              "PRESENT": 33082
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 645,
+              "PRESENT": 33082
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          },
+          "lot_size": {
+            "baseline_states": {
+              "PRESENT": 33729
+            },
+            "filtered_states": {
+              "PRESENT": 33727
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 2,
+            "quarantine_gaps": 2,
+            "denominator": 33729,
+            "missingness_increase_percentage_points": "0.005929615464437131252038305316"
+          }
+        },
+        "coverage_materiality": "MATERIAL_FOR_COVERAGE"
+      },
+      "by_instrument_class": {
+        "IDF": {
+          "baseline_contract_dates": 18,
+          "filtered_contract_dates": 18,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 18,
+          "restricted_date_filtered_rows": 18,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 5
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 4
+              },
+              "filtered_states": {
+                "PRESENT": 18,
+                "ZERO_VALUE": 4
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 18
+              },
+              "filtered_states": {
+                "PRESENT": 18
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 18,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "IDO": {
+          "baseline_contract_dates": 5126,
+          "filtered_contract_dates": 5126,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 5126,
+          "restricted_date_filtered_rows": 5126,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 5126
+              },
+              "filtered_states": {
+                "PRESENT": 5126
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 11
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 11
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3797
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3509
+              },
+              "filtered_states": {
+                "PRESENT": 5126,
+                "ZERO_VALUE": 3509
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 5126
+              },
+              "filtered_states": {
+                "PRESENT": 5126
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 5126
+              },
+              "filtered_states": {
+                "PRESENT": 5126
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 5126
+              },
+              "filtered_states": {
+                "PRESENT": 5126
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 5126
+              },
+              "filtered_states": {
+                "PRESENT": 5126
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 5126,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "STF": {
+          "baseline_contract_dates": 629,
+          "filtered_contract_dates": 627,
+          "quarantined_contract_dates": 2,
+          "missing_contract_dates": 2,
+          "row_coverage_loss_percent": "0.3179650238473767885532591415",
+          "restricted_date_baseline_rows": 629,
+          "restricted_date_filtered_rows": 627,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 11
+              },
+              "filtered_states": {
+                "PRESENT": 627,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 11
+              },
+              "filtered_states": {
+                "PRESENT": 627,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 11
+              },
+              "filtered_states": {
+                "PRESENT": 627,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 629,
+                "ZERO_VALUE": 10
+              },
+              "filtered_states": {
+                "PRESENT": 627,
+                "ZERO_VALUE": 10
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 629
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 629
+              },
+              "filtered_states": {
+                "PRESENT": 627
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 2,
+              "quarantine_gaps": 2,
+              "denominator": 629,
+              "missingness_increase_percentage_points": "0.3179650238473767885532591415"
+            }
+          },
+          "coverage_materiality": "MATERIAL_FOR_COVERAGE"
+        },
+        "STO": {
+          "baseline_contract_dates": 27956,
+          "filtered_contract_dates": 27956,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 27956,
+          "restricted_date_filtered_rows": 27956,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 27956
+              },
+              "filtered_states": {
+                "PRESENT": 27956
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 86
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 86
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 18389
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 13140
+              },
+              "filtered_states": {
+                "PRESENT": 27956,
+                "ZERO_VALUE": 13140
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 27956
+              },
+              "filtered_states": {
+                "PRESENT": 27956
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 27956
+              },
+              "filtered_states": {
+                "PRESENT": 27956
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 27956
+              },
+              "filtered_states": {
+                "PRESENT": 27956
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 27956
+              },
+              "filtered_states": {
+                "PRESENT": 27956
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27956,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        }
+      },
+      "diagnostic_counts": {
+        "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2,
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2686,
+        "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1,
+        "ZERO_VOLUME_PRICE_STATE": 22201
+      },
+      "date_attribution_diagnostic_preserved": true,
+      "original_acceptance": "DATE_NOT_ACCEPTED",
+      "source_price_digest": "b5703cba1c7849ee79ce20249f989a4a998b0d6398553c3bdb092b906a264ce0",
+      "normalized_price_digest": "b5703cba1c7849ee79ce20249f989a4a998b0d6398553c3bdb092b906a264ce0",
+      "embedded_dates": "PASS_ALL_ROWS",
+      "identity_and_expiry": "PASS",
+      "consumer_tests": [
+        {
+          "id": "test_integrity_before_normalization",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_quarantine_count_reconciliation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_field_missingness_denominators",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_contract_date_unique_mapping",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_date_attribution_persists",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_no_fill_or_price_mutation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "contract_date_no_loss_threshold",
+          "baseline": "PASS",
+          "experimental": "FAIL",
+          "expected_mask_difference": true
+        }
+      ],
+      "unexpected_consumer_invariant_differences": 0
+    },
+    {
+      "trading_date": "2025-07-08",
+      "audit": {
+        "baseline_contract_dates": 32047,
+        "filtered_contract_dates": 32047,
+        "quarantined_contract_dates": 0,
+        "missing_contract_dates": 0,
+        "row_coverage_loss_percent": "0",
+        "restricted_date_baseline_rows": 0,
+        "restricted_date_filtered_rows": 0,
+        "field_missingness": {
+          "open": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "high": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "low": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "close": {
+            "baseline_states": {
+              "PRESENT": 32047
+            },
+            "filtered_states": {
+              "PRESENT": 32047
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "settlement_price": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 88
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 88
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "volume": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 19662
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "open_interest": {
+            "baseline_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 15836
+            },
+            "filtered_states": {
+              "PRESENT": 32047,
+              "ZERO_VALUE": 15836
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "expiry": {
+            "baseline_states": {
+              "PRESENT": 32047
+            },
+            "filtered_states": {
+              "PRESENT": 32047
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "strike": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 659,
+              "PRESENT": 31388
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 659,
+              "PRESENT": 31388
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "option_type": {
+            "baseline_states": {
+              "NOT_APPLICABLE": 659,
+              "PRESENT": 31388
+            },
+            "filtered_states": {
+              "NOT_APPLICABLE": 659,
+              "PRESENT": 31388
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          },
+          "lot_size": {
+            "baseline_states": {
+              "PRESENT": 32047
+            },
+            "filtered_states": {
+              "PRESENT": 32047
+            },
+            "baseline_unavailable": 0,
+            "experimental_unavailable_including_gaps": 0,
+            "quarantine_gaps": 0,
+            "denominator": 32047,
+            "missingness_increase_percentage_points": "0"
+          }
+        },
+        "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+      },
+      "by_instrument_class": {
+        "IDF": {
+          "baseline_contract_dates": 15,
+          "filtered_contract_dates": 15,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "filtered_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "filtered_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "filtered_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 15
+              },
+              "filtered_states": {
+                "PRESENT": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 15
+              },
+              "filtered_states": {
+                "PRESENT": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "filtered_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "filtered_states": {
+                "PRESENT": 15,
+                "ZERO_VALUE": 2
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 15
+              },
+              "filtered_states": {
+                "PRESENT": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 15
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 15
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 15
+              },
+              "filtered_states": {
+                "PRESENT": 15
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 15,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "IDO": {
+          "baseline_contract_dates": 4338,
+          "filtered_contract_dates": 4338,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 4338
+              },
+              "filtered_states": {
+                "PRESENT": 4338
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 7
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 7
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2908
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2409
+              },
+              "filtered_states": {
+                "PRESENT": 4338,
+                "ZERO_VALUE": 2409
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 4338
+              },
+              "filtered_states": {
+                "PRESENT": 4338
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 4338
+              },
+              "filtered_states": {
+                "PRESENT": 4338
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 4338
+              },
+              "filtered_states": {
+                "PRESENT": 4338
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 4338
+              },
+              "filtered_states": {
+                "PRESENT": 4338
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 4338,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "STF": {
+          "baseline_contract_dates": 644,
+          "filtered_contract_dates": 644,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "filtered_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "filtered_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "filtered_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 644
+              },
+              "filtered_states": {
+                "PRESENT": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 644
+              },
+              "filtered_states": {
+                "PRESENT": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "filtered_states": {
+                "PRESENT": 644,
+                "ZERO_VALUE": 8
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 644
+              },
+              "filtered_states": {
+                "PRESENT": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 644
+              },
+              "filtered_states": {
+                "PRESENT": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 644
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "NOT_APPLICABLE": 644
+              },
+              "filtered_states": {
+                "NOT_APPLICABLE": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 644
+              },
+              "filtered_states": {
+                "PRESENT": 644
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 644,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        },
+        "STO": {
+          "baseline_contract_dates": 27050,
+          "filtered_contract_dates": 27050,
+          "quarantined_contract_dates": 0,
+          "missing_contract_dates": 0,
+          "row_coverage_loss_percent": "0",
+          "restricted_date_baseline_rows": 0,
+          "restricted_date_filtered_rows": 0,
+          "field_missingness": {
+            "open": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "high": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "low": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "close": {
+              "baseline_states": {
+                "PRESENT": 27050
+              },
+              "filtered_states": {
+                "PRESENT": 27050
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "settlement_price": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 81
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 81
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "volume": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 16744
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "open_interest": {
+              "baseline_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 13425
+              },
+              "filtered_states": {
+                "PRESENT": 27050,
+                "ZERO_VALUE": 13425
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "expiry": {
+              "baseline_states": {
+                "PRESENT": 27050
+              },
+              "filtered_states": {
+                "PRESENT": 27050
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "strike": {
+              "baseline_states": {
+                "PRESENT": 27050
+              },
+              "filtered_states": {
+                "PRESENT": 27050
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "option_type": {
+              "baseline_states": {
+                "PRESENT": 27050
+              },
+              "filtered_states": {
+                "PRESENT": 27050
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            },
+            "lot_size": {
+              "baseline_states": {
+                "PRESENT": 27050
+              },
+              "filtered_states": {
+                "PRESENT": 27050
+              },
+              "baseline_unavailable": 0,
+              "experimental_unavailable_including_gaps": 0,
+              "quarantine_gaps": 0,
+              "denominator": 27050,
+              "missingness_increase_percentage_points": "0"
+            }
+          },
+          "coverage_materiality": "ZERO_LOSS_NOT_SEMANTIC_ACCEPTANCE"
+        }
+      },
+      "diagnostic_counts": {
+        "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": 2310,
+        "ZERO_VOLUME_PRICE_STATE": 19662
+      },
+      "date_attribution_diagnostic_preserved": false,
+      "original_acceptance": "DATE_ACCEPTED",
+      "source_price_digest": "863b772817f9f60e6f95ebab23c57460e62cc8a80901b27f6be221e899437ff5",
+      "normalized_price_digest": "863b772817f9f60e6f95ebab23c57460e62cc8a80901b27f6be221e899437ff5",
+      "embedded_dates": "PASS_ALL_ROWS",
+      "identity_and_expiry": "PASS",
+      "consumer_tests": [
+        {
+          "id": "test_integrity_before_normalization",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_quarantine_count_reconciliation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_field_missingness_denominators",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_contract_date_unique_mapping",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_date_attribution_persists",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "test_no_fill_or_price_mutation",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        },
+        {
+          "id": "contract_date_no_loss_threshold",
+          "baseline": "PASS",
+          "experimental": "PASS",
+          "expected_mask_difference": false
+        }
+      ],
+      "unexpected_consumer_invariant_differences": 0
+    }
+  ],
+  "pooled": {
+    "baseline_contract_dates": 99026,
+    "filtered_contract_dates": 99024,
+    "quarantined_contract_dates": 2,
+    "missing_contract_dates": 2,
+    "row_coverage_loss_percent": "0.002019671601397612748167148022",
+    "restricted_date_baseline_rows": 33729,
+    "restricted_date_filtered_rows": 33727,
+    "field_missingness": {
+      "open": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 63638
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 63637
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "high": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 63638
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 63637
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "low": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 63638
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 63637
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "close": {
+        "baseline_states": {
+          "PRESENT": 99026
+        },
+        "filtered_states": {
+          "PRESENT": 99024
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "settlement_price": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 274
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 274
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "volume": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 63637
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 63637
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "open_interest": {
+        "baseline_states": {
+          "PRESENT": 99026,
+          "ZERO_VALUE": 49080
+        },
+        "filtered_states": {
+          "PRESENT": 99024,
+          "ZERO_VALUE": 49080
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "expiry": {
+        "baseline_states": {
+          "PRESENT": 99026
+        },
+        "filtered_states": {
+          "PRESENT": 99024
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "strike": {
+        "baseline_states": {
+          "NOT_APPLICABLE": 1953,
+          "PRESENT": 97073
+        },
+        "filtered_states": {
+          "NOT_APPLICABLE": 1951,
+          "PRESENT": 97073
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "option_type": {
+        "baseline_states": {
+          "NOT_APPLICABLE": 1953,
+          "PRESENT": 97073
+        },
+        "filtered_states": {
+          "NOT_APPLICABLE": 1951,
+          "PRESENT": 97073
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      },
+      "lot_size": {
+        "baseline_states": {
+          "PRESENT": 99026
+        },
+        "filtered_states": {
+          "PRESENT": 99024
+        },
+        "baseline_unavailable": 0,
+        "experimental_unavailable_including_gaps": 2,
+        "quarantine_gaps": 2,
+        "denominator": 99026,
+        "missingness_increase_percentage_points": "0.002019671601397612748167148022"
+      }
+    },
+    "coverage_materiality": "MATERIAL_FOR_COVERAGE"
+  },
+  "output_relative_path": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/experiment-r8s6810q/quarantine.sqlite",
+  "database_sha256": "7653af84fe8b3fcdda0695c1eeef83c4b84cffa8575730a91d84157127fb5093",
+  "output_status": "EXPERIMENTAL_UNAVAILABLE_TO_PRODUCTION_OR_RESEARCH",
+  "corroboration": {
+    "status": "NOT_EVALUATED_NO_AUTHORIZED_EVIDENCE",
+    "independence": "NOT_ESTABLISHED"
+  },
+  "materiality": "MATERIAL_FOR_COVERAGE_UNDER_APPROVED_ZERO_LOSS_THRESHOLDS",
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "source_qualified": false,
+  "production_exposed": false,
+  "network_requests": 0,
+  "price_substitution": false,
+  "fingerprint_refreshed": false,
+  "research": false,
+  "historical_acceptance_changed": false,
+  "retention_deadline": "2026-12-31",
+  "deletion": false
+}

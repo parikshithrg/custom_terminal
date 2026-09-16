@@ -1,0 +1,51 @@
+{
+  "schema_version": "quarantine_execution_completion_v1",
+  "status": "COMPLETED_OFFLINE_AUDITS_NOT_SOURCE_QUALIFICATION",
+  "authorization": "owner_authorization.json supersedes historical pending protocol preparation; protocol bytes and zero thresholds unchanged",
+  "protocol_sha256": "1178cceee77ad5e95ebc67e54466a4a8ceafbbddde2cdfede0e2b4b0098dd658",
+  "integrity": "PASS_ALL_THREE_PACKAGES_NEW_MANIFESTS_PAYLOAD_BINDINGS_ARCHIVE_STRUCTURE_AND_EMBEDDED_DATES",
+  "normalization": "UNCHANGED_H_I_DIAGNOSTICS_JOINS_EXPIRIES_AND_PRICE_DIGESTS_REPRODUCED",
+  "quarantine": {
+    "unit": "CONTRACT_DATE",
+    "rows": 2,
+    "date_attribution_diagnostics": 1,
+    "restricted_baseline_rows": 33729,
+    "restricted_filtered_rows": 33727,
+    "all_original_diagnostics_preserved": true,
+    "all_original_values_immutable": true
+  },
+  "consumer_results": {
+    "baseline_rows": 99026,
+    "experimental_rows": 99024,
+    "missing_contract_dates": 2,
+    "unexpected_invariant_differences": 0,
+    "threshold_failure": "CONTRACT_DATE_NO_LOSS_ON_2026_09_10"
+  },
+  "corroboration": {
+    "status": "NOT_EVALUATED_NO_AUTHORIZED_EVIDENCE",
+    "independence": "NOT_ESTABLISHED"
+  },
+  "materiality": "MATERIAL_FOR_COVERAGE_UNDER_APPROVED_ZERO_LOSS_THRESHOLDS",
+  "limitations": [
+    "Three sparse dates measure coverage only, not strategy sensitivity or return/drawdown impact.",
+    "Small pooled loss does not establish source semantics; stock-futures coverage loss is concentrated.",
+    "The entire affected date remains attribution-restricted. Filtered view is not safe for production or research.",
+    "No specifically authorized alternative-source evidence is available; no new source was accessed."
+  ],
+  "output_status": "EXPERIMENTAL_UNAVAILABLE_TO_PRODUCTION_OR_RESEARCH",
+  "retention_deadline": "2026-12-31",
+  "retention_amended": false,
+  "deletion": false,
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "source_qualified": false,
+  "production_exposed": false,
+  "research": false,
+  "fingerprint_refreshed": false,
+  "network_requests": 0,
+  "historical_acceptance_changed": false,
+  "recommended_next_decision": "Keep route unqualified and defer downstream use. If desired, separately authorize preparation of a tightly bounded exact-contract alternative-evidence scope using the two quarantined contract-date identities held only in ignored storage. No acquisition is authorized by this closeout.",
+  "validation_status": "PASS_139_FOCUSED_TESTS_COMPILATION_JSON_HASH_HISTORICAL_EVIDENCE_PRIVACY_AND_DIFF_CHECKS",
+  "pre_execution_tests": "57_PASSED_1_CLOSEOUT_PENDING_SKIP",
+  "final_tests": "139_PASSED_0_FAILED_0_SKIPPED",
+  "known_unrelated_failures": "Stale research-fingerprint and R9K timing failures preserved, not rerun; no full root suite run."
+}

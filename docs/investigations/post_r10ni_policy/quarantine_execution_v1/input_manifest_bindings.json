@@ -1,0 +1,20 @@
+{
+  "relative_root": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc",
+  "manifest_bindings": [
+    {
+      "sha256": "463a3b39b985c2438fbd9b00458cee95fedc0fb8e65fdb7dc585a1d7981eb14b",
+      "relative_path": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/2026-09-09/manifest.json",
+      "trading_date": "2026-09-09"
+    },
+    {
+      "sha256": "d5efd0165698e7e2ae9f62ec2004b5a2731ef9d0914b1e280429506ebc5af8d4",
+      "relative_path": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/2026-09-10/manifest.json",
+      "trading_date": "2026-09-10"
+    },
+    {
+      "sha256": "284b7456a868666291bff5557e9293db4cf6e99afb7511e6646b928a72ccedc4",
+      "relative_path": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc/2025-07-08/manifest.json",
+      "trading_date": "2025-07-08"
+    }
+  ]
+}

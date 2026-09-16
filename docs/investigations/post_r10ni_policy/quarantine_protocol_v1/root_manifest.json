@@ -1,0 +1,295 @@
+{
+  "schema_version": "quarantine_protocol_manifest_v1",
+  "files": [
+    {
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/protocol.json",
+      "sha256": "1178cceee77ad5e95ebc67e54466a4a8ceafbbddde2cdfede0e2b4b0098dd658"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/quarantine_protocol_v1/completion.json",
+      "sha256": "30442dcd1e53410f3f354b89fa314196c6e634b436863361c49de4d72e5ed1f1"
+    },
+    {
+      "path": "reports/NSE_FNO_QUARANTINE_PROTOCOL_PREPARATION.md",
+      "sha256": "e0c4bfbacb14322e4aae4daae1ccec253cb934ffe421866002426868923de2ff"
+    },
+    {
+      "path": "tests/test_quarantine_protocol_preparation.py",
+      "sha256": "965c885fe4baa59f62a4430b7338ef58746f2f821e5701a5979c23295f057bf5"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/deletion_v1/deletion_receipt.json",
+      "sha256": "ed2a84dee8845c56e1699f6a24f8f3296909123ccb622acb1e1f5b462ef230ff"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/deletion_v1/root_manifest.json",
+      "sha256": "c37918dce6e8f5107d926f9cd6988ebfcd315f7f4325d8430d75ec2466e3f3e4"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/applicability_assessment.json",
+      "sha256": "f1cad531b5064fd8e5c9157644accfa08bc04487625d2f785b3969ae6f484510"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/completion.json",
+      "sha256": "caf4255e8b356e6a6fc4c41dd1d26d256f11f198ae05d5d4363fc7417cfa048b"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/document_inventory.json",
+      "sha256": "012422a74f5fd09b9010598304f3d4c3cacc9f529ff66f785d3a2a9dfe5d7ddc"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/lifecycle_and_next_step.json",
+      "sha256": "4560a7b51519b634a0c7356a1bf594ecc4860f2390709c2e0b2dc3f1e4bd4463"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/owner_authorization.json",
+      "sha256": "4a7143b3c99bf62a6b6c57070fb30acf03d73bd69c18f49acfdea3bd8cc1a308"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/question_results.json",
+      "sha256": "66483ad995adb225406b249fc6a3c0716a9668c444fc96ad3f8b66de35629e4a"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/request_ledger.json",
+      "sha256": "06a29cfa240042a8b451de399981523ab8251b68864a0423dfe5da4b128c00bf"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/review_copy_retention.json",
+      "sha256": "90ad37fb18087adf1833d0b7792c855ad4f8cc5a9e95601c37c5877095b852ec"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/root_manifest.json",
+      "sha256": "53e77d2e38d63621bd2b26aa2bb26fa26167cccb2de49aed853905cb996d1170"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/stopping_conditions.json",
+      "sha256": "c9bff35b8c62296a7fb144906113de408f801e4a43a92e1d5d0360d700ac9b54"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/isolated_comparison_v1/reacquisition_receipt.json",
+      "sha256": "0ce13260357770c66ca2122a2f989f3160687c3abe6eac99c97ef9051a01eff8"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/isolated_comparison_v1/root_manifest.json",
+      "sha256": "3cbcef6f66874464421c9fb1cf169b21404c1c7d98843db6981a55f2acbbe70b"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/scope_amendment_v1/root_manifest.json",
+      "sha256": "9803e91915724117ce06efab9a48c5748cc6641bf659f4c0425f34fe8ff03d29"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/scope_amendment_v1/scope_amendment.json",
+      "sha256": "d877c44f331342e11690169b0a2dfad6697ec268b97b77032aeda369e32930d6"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/adapter_change_decision.json",
+      "sha256": "d9f165f687ead11352936e9170df3a5408ffe740559a43ff85d898084a80236d"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/completion.json",
+      "sha256": "97e35e86b6338d0668ad89279e9390c1ec057dfbbb7616df3bb068b9e54c9855"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/documented_vs_assumed_semantics.json",
+      "sha256": "1e46223dfd8aabbd5568b6409310d4be75c9e814155aa7b2b51e574a8853431e"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/failure_reproduction.json",
+      "sha256": "d673863eac60fd79ede5901bbcbe68f22b2684eb2e2b5b51ff7786988895d155"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/hypothesis_assessment.json",
+      "sha256": "45351a6970f33ec87b9206631053b5df46a0e80c18fdce28b5302e3991fab4c8"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/instrument_class_breakdown.json",
+      "sha256": "82534de14c7dc15a282ce76f0733ef2fbaf3ab943344c264e6d0d166aefbed1b"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/lifecycle_non_authorization.json",
+      "sha256": "9a0bde876711a77eb0169cda22bfafe4166f71676963bcfb3b5d638416be69d8"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/predicate_aggregate_counts.json",
+      "sha256": "65e2dbaa752a2f6d3703ce784756593ecaeda08cb847140705105ba536d2684d"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/root_manifest.json",
+      "sha256": "742a18126900d8f89f6c699be9b593719d588d3fab1cd3797923f1a498f9081d"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/sanitized_bounded_examples.json",
+      "sha256": "775b43a6382b086f5fa463ea59f308a61990f6988d12eb654a66b46f68bfddcf"
+    },
+    {
+      "path": "docs/investigations/r10n_f/diagnosis_v1/source_integrity_reconciliation.json",
+      "sha256": "b0756e7753c0921f1cc57a577bda2dec74cbc37309cc9d738bc41c8e7eb7699b"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/candidate_invariant_comparison.json",
+      "sha256": "a6dbf6bbb0b99ddfa0fa8d864367583140fb31bf8ff0ef15c1c0d3169168523f"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/completion.json",
+      "sha256": "eadf524b01f0c02592792361591df85fac8961324e97d702701d91085612862a"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/documented_vs_inferred.json",
+      "sha256": "8557a58765349d115423de3797c52670b7c8a62a9505c3888151102cf8abaee4"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/expiry_side_finding.json",
+      "sha256": "2e8f123b724d9c46fbb6098e3e96c7c87bbc309c91f8f556dd81ea2edb11012f"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/field_semantics_matrix.json",
+      "sha256": "5fe8ef230c736544bed3dc19b49e72e781666e56f6f42721c704d8382faded59"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/lifecycle_non_authorization.json",
+      "sha256": "6eb4c39e3a740fdb7ade327e49c3a02671a95372d3ad67ed6de627a04420b054"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/official_evidence_inventory.json",
+      "sha256": "7631d2d949c1e9bb4bba46ee9cfdaa1430da786debb84c87d37a356db79d8f66"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/owner_decision_schema.json",
+      "sha256": "0e2b2c467c9a0191deb40643393cbeb092255e0a3cba37e4cff715162b8cf2e6"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/proposed_ohlc_rule_contract.json",
+      "sha256": "5a390a9f5cb54a9d22ede15fe2e5c38dcc739984d105e68a058ef2961cec29b6"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/r10nf_reconciliation.json",
+      "sha256": "ffda4e39e7e0f8d7f57869a421fd86f959de5ccb8e0f98d7cdc3321e39348224"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/remediation_risk_matrix.json",
+      "sha256": "7098d48ff5ad9495f18e46091376f429819746e18470dde15ac649d0ea4bcce4"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/root_manifest.json",
+      "sha256": "ce282620c022ee5b2bb64db9c69e9b52543200b53437c424f72dfe1894158ce1"
+    },
+    {
+      "path": "docs/investigations/r10n_g/semantics_v1/trade_state_applicability_matrix.json",
+      "sha256": "106cb21a1173df0a9bfa743dcb3dcd3745575e3cf67640c09c328012088285b0"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/completion.json",
+      "sha256": "b22d34c9c09faddd43fc70041710e171378e0af0e867a2f25084b893baf475be"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/diagnostic_schema.json",
+      "sha256": "0828b26cb0b1cab7fe042569fcd5aed0e3609363ffe95e0e283e1b995cb79269"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/expiry_encoding_decision.json",
+      "sha256": "6a01db5ff8f6aa53ab361ca433fd6cd796a993e7b7e59c3d55b5514c551ff01b"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/fatal_diagnostic_behavior_matrix.json",
+      "sha256": "bb6c26834e23226723b2974ffc1d86ae8cbbe4299ac4ab6a89ea38f29aecb75a"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/implemented_rule_contract.json",
+      "sha256": "91d3bcc466a344ac7353e95119f432338459a3f946e3bbaf37a7af3b467178b5"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/lifecycle_non_authorization.json",
+      "sha256": "d55c483871216da77324a628d8e17de2f87c3ad50efab4ff8e4bdd234f045f9c"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/official_expiry_evidence_inventory.json",
+      "sha256": "97941c1362fde71ee2b9b9f76f6ac6fd4ef730b45bb5cd3c010b0203d7a21350"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/owner_authorization.json",
+      "sha256": "dd6313aea6832c4559cdc4dbdf5899ebd53728078e9816e779ddc2b119660190"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/price_immutability_reconciliation.json",
+      "sha256": "6d893b11fd887cead55f450832c0ef489bf4e59ac192f68b03acb2588422b395"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/r10ng_contract_reconciliation.json",
+      "sha256": "0db9cf48e8374d61e7d54118ded99eb106e6ee1384136059813138580a7545cf"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/root_manifest.json",
+      "sha256": "149dfc40dd88f0a621b26d345a258337388f255329a9c45971ffca57ff9ff629"
+    },
+    {
+      "path": "docs/investigations/r10n_h/implementation_v1/three_package_regression_results.json",
+      "sha256": "b5fea67f2cd3539d601362f5403a3cc4a3cc64cd0c3b24bbc3deae5f3fb7a549"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/acceptance_matrix_results.json",
+      "sha256": "fabca85cfff36bb4b9a10c4f73497e6925f593d790a7e75e8d36387e6ed11760"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/completion.json",
+      "sha256": "205038bc473ea774b5250363cd5006d8fbc3a9a73b18d2825a80a5add7b744d8"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/contract_population_comparison.json",
+      "sha256": "f99a1dead72a5abbb43cab5f11424ce8f21078ee2592f6b151bdc701365726d0"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/cross_date_schema_comparison.json",
+      "sha256": "829f31306f1c03096373b307ffb127fa5776805e4307b98921ff5d99eb34e18e"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/expiry_agreement_results.json",
+      "sha256": "e0498088dc2f1fe47ee71c5cfc626258f7b38820bb223a96bb646a67ad89815e"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/fatal_diagnostic_counts.json",
+      "sha256": "111254511e969dae26b0acce5f31121ed676a6072db6b1f86322bc958b88e1e3"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/owner_authorization.json",
+      "sha256": "955457d430617f7a836fc4a84809b0ee8551566f8232994c0e254a2dd3d5ed2e"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/owner_closeout_decision.json",
+      "sha256": "71402c7f56bd0a08fdedcb423d9050e1d05e8b5a484817f3284b4cbd8fc18c8f"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/per_date_qualification_results.json",
+      "sha256": "b16c153c1e74eda2caed1f760873a95eb5165ab3b5ff429f7cdbfa261c0e5377"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/price_immutability_results.json",
+      "sha256": "e83fa3e6b5d7af2e1854e8ecc0adccaee59e975516e02381d557e655b2ed39ce"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/research_production_non_authorization.json",
+      "sha256": "bc180db667388ab063e894bb14a67d4378ecfa7139aba8169d59de5da88d35f4"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/retention_deletion_status.json",
+      "sha256": "6f605944fe441836f71dcbb0176ba0bf52ae2fff9516445f782d4932d6d57bb7"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/root_manifest.json",
+      "sha256": "1b729c0ebb7f8d94ed346ffd7bd367797b26143158e8da6a68c738714233ab8f"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/source_integrity_preflight.json",
+      "sha256": "1e1f62d1bf86175885675b8664abecfbffe31c4a229bf9fe47009c8235631853"
+    },
+    {
+      "path": "docs/investigations/r10n_i/requalification_v1/source_lifecycle_decision.json",
+      "sha256": "fc010c14e546aece3f357f7e13ef9b5a3b74e4cc6fc737809013216b4bc36da3"
+    },
+    {
+      "path": "src/market_intel/foundation/nse_fno_candidate.py",
+      "sha256": "26540b1c79e60ab81645a22647d793f3b362ead85c98c0363ed2aadac30b0919"
+    }
+  ],
+  "baseline": "37963ca4f95afe39d21b309c21fd4d76c2bcc6fd",
+  "path_base": "REPOSITORY_ROOT"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "isolated_quarantine_preparation_completion_v1",
+  "status": "PENDING_EXPERIMENT_OWNER_DECISIONS",
+  "baseline": "37963ca4f95afe39d21b309c21fd4d76c2bcc6fd",
+  "approved_protocol_available": false,
+  "normalization_performed": false,
+  "exclusion_results_viewed": false,
+  "quarantine_created": false,
+  "integrity_reconciliation": {
+    "status": "RECORDED_REACQUISITION_HASH_MATCH_ONLY_NOT_FRESH_EXPERIMENT_PREFLIGHT",
+    "fresh_payload_or_embedded_date_verification": "NOT_RUN_APPROVAL_PENDING"
+  },
+  "diagnostic_reconciliation": {
+    "status": "NOT_EVALUATED",
+    "historical_reference_only": {
+      "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2,
+      "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1
+    },
+    "experimental_counts": null
+  },
+  "consumer_results": [
+    {
+      "id": "OFFLINE_COVERAGE_AUDIT",
+      "baseline": "NOT_EVALUATED",
+      "experimental": "NOT_EVALUATED",
+      "differences": null
+    },
+    {
+      "id": "OFFLINE_CONTRACT_DATE_COMPLETENESS",
+      "baseline": "NOT_EVALUATED",
+      "experimental": "NOT_EVALUATED",
+      "differences": null
+    }
+  ],
+  "corroboration_status": "NOT_EVALUATED_NO_REGISTERED_AUTHORIZED_EXACT_CONTRACT_EVIDENCE",
+  "materiality_result": "NOT_EVALUATED",
+  "network_transactions": 0,
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "source_qualified": false,
+  "production_exposed": false,
+  "research": false,
+  "fingerprint_refreshed": false,
+  "deletion": false,
+  "retention_deadline": "2026-12-31",
+  "validation_scope": "Preparation governance and existing affected offline tests only. Runtime experiment safeguards remain proposed, not implemented or tested against packages.",
+  "focused_test_results": "111_PASSED_0_FAILED",
+  "known_unrelated_failures": "Known stale research-fingerprint and R9K timing failures preserved; full root suite not rerun.",
+  "next_decisions": [
+    "Approve or decline offline experiment implementation and ignored immutable experimental storage",
+    "Approve named consumers and contract-date/date-level quarantine mapping",
+    "Approve proposed zero-loss thresholds or specify replacements before execution"
+  ]
+}

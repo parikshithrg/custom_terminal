@@ -1,0 +1,166 @@
+{
+  "schema_version": "isolated_quarantine_protocol_v1",
+  "version": "quarantine_coverage_v1",
+  "status": "PROPOSED_PENDING_OWNER_APPROVAL_NOT_EXECUTED",
+  "baseline": "37963ca4f95afe39d21b309c21fd4d76c2bcc6fd",
+  "exact_dates": [
+    "2026-09-09",
+    "2026-09-10",
+    "2025-07-08"
+  ],
+  "authorization": {
+    "preparation": true,
+    "reacquisition_previously_approved": true,
+    "experiment_implementation": false,
+    "consumer_scope": false,
+    "materiality_thresholds": false,
+    "alternative_source_access": false,
+    "network": false,
+    "strategy_research": false,
+    "waivers": false,
+    "qualification": false,
+    "production": false,
+    "deletion": false
+  },
+  "freeze_rule": "Owner must explicitly approve implementation, consumers, quarantine mapping and thresholds binding this protocol SHA-256 before any experiment execution, normalization or exclusion-result access. Later changes require a new version and approval; never tune against viewed results.",
+  "consumers": [
+    {
+      "id": "OFFLINE_COVERAGE_AUDIT",
+      "scope": "Sanitized per-date and pooled field-presence/count audit only; no application UI, strategy or production consumer.",
+      "future_test_ids": [
+        "test_integrity_before_normalization",
+        "test_quarantine_count_reconciliation",
+        "test_field_missingness_denominators"
+      ]
+    },
+    {
+      "id": "OFFLINE_CONTRACT_DATE_COMPLETENESS",
+      "scope": "Uniqueness and explicit missing contract-date count checks only; no continuous series, prices aggregated into returns, cross-date filling or research.",
+      "future_test_ids": [
+        "test_contract_date_unique_mapping",
+        "test_date_attribution_persists",
+        "test_no_fill_or_price_mutation"
+      ]
+    }
+  ],
+  "quarantine": {
+    "unit": "CONTRACT_DATE",
+    "row_mapping": "Map each row-level blocking range diagnostic to its uniquely joined exact contract and trading date, retaining original diagnostic codes, source row locator and package provenance in ignored local outputs. Duplicate/conflicting identities stop evaluation.",
+    "mapping": {
+      "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": "EXCLUDE_CONTRACT_DATE_FROM_ROW_FILTERED_VIEW",
+      "OPEN_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": "UNEXPECTED_DIAGNOSTIC_STOP_REQUIRES_NEW_PROTOCOL",
+      "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": "DATE_LEVEL_RESTRICTION_PERSISTS_DO_NOT_MAP_TO_THIRD_ROW",
+      "SETTLEMENT_OUTSIDE_DAILY_RANGE_SEPARATE_BASIS": "VISIBLE_NONBLOCKING_NO_AUTOMATIC_EXCLUSION",
+      "ZERO_VOLUME_PRICE_STATE": "VISIBLE_NONBLOCKING_NO_AUTOMATIC_EXCLUSION"
+    },
+    "views": [
+      "IMMUTABLE_BASELINE_FACTS",
+      "EXPERIMENTAL_ROW_FILTERED_VIEW_WITH_DATE_RESTRICTIONS",
+      "DATE_LEVEL_DIAGNOSTIC_REGISTER"
+    ],
+    "date_rule": "Row-filtered view is an audit artifact, not a safe subset. The entire date with unknown attribution remains restricted for OHLC comparisons and prohibited production/research use. Report restricted-date row count separately, never silently drop the date or clear diagnostic.",
+    "affected_fields": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "settlement_price",
+      "volume",
+      "open_interest",
+      "expiry",
+      "strike",
+      "option_type",
+      "lot_size"
+    ],
+    "storage": "If separately approved, create a new ignored SQLite experimental database in the existing isolated root; never open the existing local F&O database. Original facts append-once, view masks only; no destructive update, repair, archive extraction or original-path restoration."
+  },
+  "metrics": [
+    {
+      "id": "ROW_COVERAGE_LOSS",
+      "formula": "100 * quarantined_contract_dates / baseline_unique_contract_dates",
+      "denominators": "Report per date, pooled, and instrument class per date. Compute from baseline before exclusion; zero denominator is NOT_EVALUATED, never zero.",
+      "proposed_threshold_percent": "0",
+      "comparison": "Any positive value is MATERIAL_FOR_COVERAGE; zero does not establish semantic validity."
+    },
+    {
+      "id": "FIELD_MISSINGNESS_INCREASE",
+      "formula": "100 * (experimental_unavailable - baseline_unavailable) / baseline_contract_dates",
+      "denominators": "Per field, date and instrument class. Unavailable includes quarantine gaps; zero and not-applicable are distinguished from missing.",
+      "proposed_threshold_percentage_points": "0"
+    },
+    {
+      "id": "CONTRACT_DATE_COMPLETENESS",
+      "formula": "Number of baseline exact contract-date keys unavailable in filtered view",
+      "denominators": "Per date, pooled and instrument class; never global row percentage alone.",
+      "proposed_threshold_count": 0
+    },
+    {
+      "id": "CONSUMER_INVARIANT_DIFFERENCES",
+      "formula": "Number of approved offline consumer invariants failing beyond the explicitly expected mask/coverage differences",
+      "denominators": "List each planned test and baseline/experimental PASS, FAIL or NOT_EVALUATED; no percent of passing tests.",
+      "proposed_threshold_count": 0
+    },
+    {
+      "id": "DATE_ATTRIBUTION_RESTRICTION",
+      "formula": "Number of baseline rows on dates with unresolved date-level attribution",
+      "denominators": "Per restricted date and pooled; separate from quarantined row count.",
+      "threshold": "NO_ALLOWED_USE_REGARDLESS_OF_ROW_COVERAGE"
+    }
+  ],
+  "missing_data": "No forward-fill, interpolation, clamping, settlement substitution, continuous-contract fallback, alternate-price substitution or implicit date removal. Unknown remains unknown; exact Decimal source facts remain byte/digest bound.",
+  "integrity_plan": [
+    "Verify root containment, no reparse/symlink ancestors or files, exact date directories and expected two payloads plus new manifest; fail before row access on any mismatch.",
+    "Bind each new manifest hash in the fresh reconciliation, verify its selected date, roles, exact URLs, filenames, sizes, SHA-256 and no extra payloads against the reacquisition receipt.",
+    "Verify receipt and sealed historical manifest hashes; new timestamps imply new manifests and never replace historical bindings.",
+    "Use bounded ZIP/GZIP integrity validation without extraction before normalization; verify embedded TradDt for all UDiFF rows.",
+    "Invoke unchanged R10N-H candidate normalization for all dates offline, retain exact price-tuple digests, unique joins and decoded expiry agreement; compare aggregate diagnostics with sealed R10N-I.",
+    "Any mismatch, corrupt archive, changed schema, unexpected diagnostic or diagnostic-count disagreement stops before filtering."
+  ],
+  "corroboration": {
+    "status": "NOT_EVALUATED_NO_REGISTERED_AUTHORIZED_EXACT_CONTRACT_EVIDENCE",
+    "evidence_selection": "Only specifically recorded, already available alternative evidence with owner permission and publisher provenance; do not scan Dashboard databases, raw archives or unrelated folders to invent authorization.",
+    "matching_keys": [
+      "exchange",
+      "instrument_class",
+      "underlying",
+      "expiry",
+      "option_type",
+      "strike",
+      "trading_date",
+      "session",
+      "units",
+      "field_semantics"
+    ],
+    "rule": "Every key and semantics must agree exactly; unknown, missing, duplicate, adjusted prices, continuous series or ambiguous session fails closed. Symbol similarity is insufficient. Equal vendor values do not establish NSE field rules.",
+    "independence": "Record direct collection versus redistribution; unknown lineage is NOT_ESTABLISHED, never independent corroboration.",
+    "gated_next_scope": "Prepare an exact evidence request only after contract identities are available in approved ignored outputs. Bind provider, endpoint/query or local file hashes, exact two contract-date keys, requested fields, transaction/payload limits and retention permission; owner must separately approve before acquisition. No Kite credentials, yfinance calls, website scraping, contact messages or additional downloads now."
+  },
+  "stopping_conditions": [
+    "APPROVAL_ABSENT",
+    "RETENTION_EXPIRED",
+    "INTEGRITY_MISMATCH",
+    "UNEXPECTED_DIAGNOSTIC_OR_SCHEMA",
+    "PRICE_DIGEST_CHANGE",
+    "DUPLICATE_OR_UNMATCHED_IDENTITY",
+    "DATE_ATTRIBUTION_SUPPRESSED",
+    "NETWORK_OR_UNAPPROVED_CONSUMER_ATTEMPT",
+    "CORROBORATION_MATCH_OR_SEMANTICS_FAILURE",
+    "UNDEFINED_DENOMINATOR",
+    "THRESHOLD_CHANGE_AFTER_RESULT_ACCESS"
+  ],
+  "required_future_tests": [
+    "Integrity failure prevents normalization and exclusion",
+    "Deterministic immutable contract-date masking",
+    "Date diagnostic persists after row exclusion",
+    "Nonblocking zero-volume and settlement diagnostics remain visible",
+    "All matching keys and semantics fail closed on missing/mismatch",
+    "No network, substitution, fingerprint refresh or source activation",
+    "Experimental results never mutate historical acceptance"
+  ],
+  "permitted_conclusions": "Only bounded coverage/completeness effects for named offline consumers. No strategy-wide sensitivity from three sparse dates, no source qualification, no evidence deletion, no price correctness proof, and no acceptance-policy amendment. Nonmaterial findings require a separate owner policy decision; they do not auto-approve exclusion.",
+  "source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "every_approved_date_must_pass": true,
+  "partial_source_qualification": false,
+  "retention_deadline": "2026-12-31",
+  "retention_amended": false
+}

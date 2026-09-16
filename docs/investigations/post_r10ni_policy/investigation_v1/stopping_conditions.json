@@ -1,0 +1,21 @@
+{
+  "schema_version": "post_r10ni_stopping_results_v1",
+  "network_session_ended": "FIXED_URL_SET_COMPLETE_NO_FURTHER_REQUESTS",
+  "semantic_closeout_stop": "AUTHORITY_SILENT_OR_CASE_APPLICABILITY_UNPROVEN",
+  "results": {
+    "answered_or_budget_or_time_exhausted": "FIXED_SET_COMPLETE_WITHIN_BUDGET_QUESTIONS_NOT_FULLY_ANSWERED",
+    "off_allowlist_redirect_or_http_downgrade": "NOT_ENCOUNTERED",
+    "access_control_authentication_or_terms_ambiguity": "NOT_ENCOUNTERED_NO_TERMS_ACCEPTED_OR_AUTHENTICATION",
+    "unexpected_content_empty_truncated_corrupt_or_expansion_limit": "NOT_ENCOUNTERED_ALL_STRUCTURES_VALIDATED",
+    "document_version_not_applicable_or_contradictory_authority": "TARGET_DATE_EFFECTIVE_APPLICABILITY_NOT_ESTABLISHED_NO_CONTRADICTION_CLAIMED",
+    "authority_silent_or_case_applicability_unproven": "APPLIES_STOP_UNRESOLVED"
+  },
+  "transactions_used": 5,
+  "redirect_hops": 0,
+  "retries": 0,
+  "head_requests": 0,
+  "received_bytes": 961466,
+  "request_timeout_seconds": 10,
+  "session_elapsed_seconds": 1.125,
+  "budget_amendment_used": false
+}

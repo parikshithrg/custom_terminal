@@ -1,0 +1,28 @@
+{
+  "schema_version": "post_r10ni_documentation_completion_v1",
+  "baseline": "98643e8acde4ac24fa6dd2136f444ac8db25f881",
+  "execution_and_review_retention_owner_approved": true,
+  "documentation_session_completed": true,
+  "transaction_count": 5,
+  "total_received_bytes": 961466,
+  "documentation_review_completed": true,
+  "questions_fully_answered": false,
+  "case_applicability_established": false,
+  "raw_package_row_verification": "UNAVAILABLE_DELETED_AND_NOT_AUTHORIZED",
+  "source_qualified": false,
+  "outcome": "INVESTIGATION_UNRESOLVED_ROUTE_REMAINS_UNQUALIFIED",
+  "validation_status": "PASS",
+  "validation": {
+    "offline_preflight": "59_PASS",
+    "focused_scope_closeout_fgh_i_and_governance": "136_PASS_0_FAIL",
+    "historical_protected_files": "120_BASELINE_EXACT",
+    "historical_sha256_manifests": "PASS",
+    "review_copy_hashes_and_git_ignore": "5_PASS",
+    "json_and_sha256_manifest": "PASS",
+    "compilation": "PASS",
+    "privacy_and_diff_checks": "PASS",
+    "full_root_suite": "NOT_RERUN_PROPORTIONATE_FOCUSED_VALIDATION"
+  },
+  "known_unrelated_failures": "STALE_FINGERPRINT_ASSERTIONS_4_AND_R9K_NEGATIVE_TIMING_ASSERTIONS_2_PRESERVED_NOT_RERUN",
+  "next_execution_authorized": false
+}

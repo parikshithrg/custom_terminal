@@ -1,0 +1,66 @@
+{
+  "schema_version": "post_r10ni_investigation_root_manifest_v1",
+  "path_base": "REPOSITORY_ROOT",
+  "artifacts": [
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/applicability_assessment.json",
+      "byte_length": 1397,
+      "sha256": "f1cad531b5064fd8e5c9157644accfa08bc04487625d2f785b3969ae6f484510"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/completion.json",
+      "byte_length": 1220,
+      "sha256": "caf4255e8b356e6a6fc4c41dd1d26d256f11f198ae05d5d4363fc7417cfa048b"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/document_inventory.json",
+      "byte_length": 7854,
+      "sha256": "012422a74f5fd09b9010598304f3d4c3cacc9f529ff66f785d3a2a9dfe5d7ddc"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/lifecycle_and_next_step.json",
+      "byte_length": 1503,
+      "sha256": "4560a7b51519b634a0c7356a1bf594ecc4860f2390709c2e0b2dc3f1e4bd4463"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/owner_authorization.json",
+      "byte_length": 989,
+      "sha256": "4a7143b3c99bf62a6b6c57070fb30acf03d73bd69c18f49acfdea3bd8cc1a308"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/question_results.json",
+      "byte_length": 1984,
+      "sha256": "66483ad995adb225406b249fc6a3c0716a9668c444fc96ad3f8b66de35629e4a"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/request_ledger.json",
+      "byte_length": 6380,
+      "sha256": "06a29cfa240042a8b451de399981523ab8251b68864a0423dfe5da4b128c00bf"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/review_copy_retention.json",
+      "byte_length": 1823,
+      "sha256": "90ad37fb18087adf1833d0b7792c855ad4f8cc5a9e95601c37c5877095b852ec"
+    },
+    {
+      "path": "docs/investigations/post_r10ni_policy/investigation_v1/stopping_conditions.json",
+      "byte_length": 1073,
+      "sha256": "c9bff35b8c62296a7fb144906113de408f801e4a43a92e1d5d0360d700ac9b54"
+    },
+    {
+      "path": "reports/NSE_FNO_POST_R10NI_INVESTIGATION_CLOSEOUT.md",
+      "byte_length": 5833,
+      "sha256": "1a6bc1ae7f18d13af5b96efd805a7ae096b0e56d552031357adce07b4f29a826"
+    },
+    {
+      "path": "tests/support_nse_documentation_scope.py",
+      "byte_length": 14618,
+      "sha256": "7c14e1f9dccb87197f9966214fc0af2acbb32bc67725733dc4ec2e391fce80ba"
+    },
+    {
+      "path": "tests/test_post_r10ni_documentation_investigation.py",
+      "byte_length": 12728,
+      "sha256": "15cb10add1392107395d70635ec80b9851b3e8f9681e3426009751d998fd99ef"
+    }
+  ]
+}

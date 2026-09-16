@@ -1,0 +1,21 @@
+{
+  "schema_version": "post_r10ni_applicability_assessment_v1",
+  "target_date": "2026-09-10",
+  "authoritative_statement": "The reviewed daily-settlement methodology distinguishes an across-exchange weighted average for individual-security futures from an NSE-based weighted average for index futures.",
+  "project_policy": "All approved dates must pass; unresolved close-range basis and missing trade-state coverage remain blocking.",
+  "inference": "A different trade universe could in principle produce a close outside one exchange's reported range. This is a candidate hypothesis, not a verified exception.",
+  "mathematical_constraint": "A weighted average with nonnegative weights over the same trades cannot exceed their extrema. Calculated closing alone is not an explanation.",
+  "not_established": [
+    "EXACT_UDIFF_CLSPRICE_METHOD_MAPPING",
+    "EXACT_HIGH_LOW_AND_QUANTITY_TRADE_UNIVERSES",
+    "TARGET_DATE_EFFECTIVE_APPLICABILITY",
+    "CASE_SPECIFIC_CROSS_EXCHANGE_BASIS",
+    "CASE_SPECIFIC_TRADE_STATE_ATTRIBUTION"
+  ],
+  "raw_package_status": "ALL_THREE_DELETED_NO_REACQUISITION_OR_ROW_VERIFICATION",
+  "expiry_status": "RESOLVED_R10N_H_NOT_REOPENED",
+  "diagnostic_units": "TWO_ROW_LEVEL_CLOSE_DIAGNOSTICS_PLUS_ONE_DATE_LEVEL_COVERAGE_DIAGNOSTIC",
+  "source_qualified": false,
+  "exception_validity_proven": false,
+  "owner_approval_is_authoritative_source_evidence": false
+}

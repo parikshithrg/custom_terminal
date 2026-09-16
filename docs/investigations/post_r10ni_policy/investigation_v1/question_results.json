@@ -1,0 +1,37 @@
+{
+  "schema_version": "post_r10ni_question_results_v1",
+  "questions": [
+    {
+      "id": "CLOSE_BASIS",
+      "state": "PARTIAL_DOCUMENTED_CONTEXT_EXACT_MAPPING_UNANSWERED",
+      "authoritative_evidence": [
+        "DOC_3:Field Master rows 347-350 and 357",
+        "DOC_4:Bhavcopy File Format rows 16-19 and 26",
+        "DOC_5:Daily Settlement table"
+      ],
+      "established": "Separate daily fields; NSE documents different NSE/across-exchange futures closing calculation contexts.",
+      "missing": "Explicit ClsPric-to-settlement-method mapping, eligible trade universe for each daily field, fallback population conditions, and applicability on 2026-09-10."
+    },
+    {
+      "id": "TRADE_STATE_ATTRIBUTION",
+      "state": "UNANSWERED_CONTRIBUTION_MATRIX",
+      "authoritative_evidence": [
+        "DOC_3:Field Master rows 316 and 396; Standard Value List rows 25-29",
+        "DOC_4:Trade File Format row 31; full Bhavcopy field list"
+      ],
+      "established": "Status definitions and clearing-obligation treatment exist; aggregate bhavcopy has no row trade-status attribution field.",
+      "missing": "Authoritative inclusion/exclusion matrix for original, modified, cancelled, rejected, confirmed and special trades in each of open/high/low/close/total quantity. Clearing obligation status is not evidence of OHLC inclusion."
+    },
+    {
+      "id": "APPLICABILITY",
+      "state": "UNANSWERED_CASE_VERIFICATION_UNAVAILABLE",
+      "authoritative_evidence": [
+        "DOC_5:Daily Settlement table"
+      ],
+      "sealed_observations": "R10N-F/I record two nonzero-volume stock-futures close-range observations and one date-level unavailable-attribution diagnostic.",
+      "missing": "Proof that any general rule applies to those two cases. Raw packages were deleted; no row-level check, cross-exchange trade verification or trade-state reconstruction is available or authorized."
+    }
+  ],
+  "all_questions_resolved": false,
+  "source_qualified": false
+}

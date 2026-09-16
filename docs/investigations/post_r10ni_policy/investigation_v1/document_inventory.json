@@ -1,0 +1,132 @@
+{
+  "schema_version": "post_r10ni_document_inventory_v1",
+  "review_mode": "READ_ONLY_LOCAL_DOCUMENTATION_NO_LINK_FOLLOWING",
+  "copies_verified_against_request_ledger": true,
+  "sources": [
+    {
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "initial_url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_1.html",
+      "byte_length": 311722,
+      "sha256": "88cff5a135b1d4f96e5fc20b241d00d408bf06410261cd01356447f36acd81ca",
+      "content_type": "text/html",
+      "structure": {
+        "structure": "HTML_ENVELOPE_PASS_NOT_YET_SEMANTIC_REVIEWED"
+      },
+      "source_id": "DOC_1",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Forms & Formats - UDiFF file formats",
+      "version": "WEB_PAGE_UPDATED_2026_06_30",
+      "effective_date": "NOT_ESTABLISHED_BY_REVIEWED_DOCUMENT_FOR_TARGET_DATE_2026_09_10",
+      "publication_or_page_update_date": "2026-06-30",
+      "relevant_sections": [
+        "UDiFF section; Version 4.0 link; page update footer"
+      ],
+      "minimal_paraphrase": "Official documentation landing page links the approved formats and catalogue version; no report samples, revised links or contact channels were followed.",
+      "matches_prior_r10ng_document_hash": false
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "initial_url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_2.pdf",
+      "byte_length": 143959,
+      "sha256": "2d805109d6ba3b03cb4784907b308c200fef479ea8f785aad89563db1524079d",
+      "content_type": "application/pdf",
+      "structure": {
+        "pages": 16,
+        "structure": "PASS"
+      },
+      "source_id": "DOC_2",
+      "publisher": "Securities and Exchange Board of India, Department of Economic and Policy Analysis; official NSE publication",
+      "title": "UDiFF Guidance Note V2023.10",
+      "version": "V2023.10",
+      "effective_date": "NOT_ESTABLISHED_BY_REVIEWED_DOCUMENT_FOR_TARGET_DATE_2026_09_10",
+      "publication_or_page_update_date": "VERSION_LABEL_2023.10_NOT_A_VERIFIED_EFFECTIVE_DATE",
+      "relevant_sections": [
+        "Pages 4-6, sections 2.2-2.3: catalogue, applicability, numeric conventions",
+        "Pages 7-9, section 2.4: provisional/final nomenclature"
+      ],
+      "minimal_paraphrase": "General catalogue, precision and final/provisional naming conventions do not specify the needed close-field trade universe or aggregate trade-state contribution matrix.",
+      "matches_prior_r10ng_document_hash": true
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_3.xlsx",
+      "byte_length": 113932,
+      "sha256": "83adfec3c0a99288eb54d11291e605d5c32748a93a6825ddeb574ae13ecfed69",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "structure": {
+        "member_count": 42,
+        "declared_expanded_bytes": 641120,
+        "actual_expanded_bytes": 641120,
+        "crc_validation": "PASS"
+      },
+      "source_id": "DOC_3",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Annexure B - UDiFF Catalogue Version 4.0",
+      "version": "4.0_LINK_LABEL_AND_FILENAME",
+      "effective_date": "NOT_ESTABLISHED_BY_REVIEWED_DOCUMENT_FOR_TARGET_DATE_2026_09_10",
+      "publication_or_page_update_date": "2026-06-30_LINKED_FILENAME",
+      "relevant_sections": [
+        "Field Master rows 347-350, 354, 357: OHLC, settlement and quantity definitions",
+        "Field Master row 396: exchange trade-status field",
+        "Field Master row 316: clearing-corporation obligation/confirmation status distinction",
+        "Standard Value List rows 25-29, 41: trade codes and stock-futures instrument code"
+      ],
+      "minimal_paraphrase": "Daily high/low/close and total quantity are named separately. Exchange trade codes define statuses; clearing-corporation status remarks concern obligation computation, not bhavcopy OHLC inclusion.",
+      "matches_prior_r10ng_document_hash": true
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_4.xlsx",
+      "byte_length": 35556,
+      "sha256": "b9f2fa369af20381374cdb40c3ebc96c43029401e057225599cfe63b288ba3e8",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "structure": {
+        "member_count": 19,
+        "declared_expanded_bytes": 171856,
+        "actual_expanded_bytes": 171856,
+        "crc_validation": "PASS"
+      },
+      "source_id": "DOC_4",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "UDiFF Trade and Bhavcopy File Formats",
+      "version": "2026_06_30_LINKED_FILE_NO_INTERNAL_VERSION_VERIFIED",
+      "effective_date": "NOT_ESTABLISHED_BY_REVIEWED_DOCUMENT_FOR_TARGET_DATE_2026_09_10",
+      "publication_or_page_update_date": "2026-06-30_LINKED_FILENAME",
+      "relevant_sections": [
+        "Bhavcopy File Format rows 16-19, 23, 26: F&O field applicability/precision",
+        "Trade File Format row 31; Standard Value List_latest rows 25-29: trade status",
+        "Complete Bhavcopy File Format field list: no per-row trade-status field"
+      ],
+      "minimal_paraphrase": "F&O price fields have two-decimal guidance. Trade status is a trade-file field, not a bhavcopy row attribution field; aggregate inclusion rules are not supplied.",
+      "matches_prior_r10ng_document_hash": true
+    },
+    {
+      "url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "initial_url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_5.html",
+      "byte_length": 356297,
+      "sha256": "f4437ceedcce931fafe07ce31a598ea47509185154c61802287b3ae56e267166",
+      "content_type": "text/html",
+      "structure": {
+        "structure": "HTML_ENVELOPE_PASS_NOT_YET_SEMANTIC_REVIEWED"
+      },
+      "source_id": "DOC_5",
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Equity Derivatives - Settlement Price",
+      "version": "WEB_PAGE_UPDATED_2023_01_03",
+      "effective_date": "NOT_ESTABLISHED_BY_REVIEWED_DOCUMENT_FOR_TARGET_DATE_2026_09_10",
+      "publication_or_page_update_date": "2023-01-03",
+      "relevant_sections": [
+        "Daily Settlement table: Index/Global index versus Individual Security futures",
+        "Un-expired illiquid futures: separate theoretical settlement",
+        "Updated-on footer"
+      ],
+      "minimal_paraphrase": "Index futures use a last-half-hour weighted average on NSE; individual-security futures use an average across exchanges. Illiquid unexpired futures have a separate theoretical settlement basis. Exact UDiFF mapping and case applicability remain unproven.",
+      "matches_prior_r10ng_document_hash": false
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "post_r10ni_request_ledger_v1",
+  "started_at_utc": "2026-09-16T08:58:58.330125+00:00",
+  "proposal_sha256": "a790f565c9641043b8aa3efc6f549859faaa4fe47d546cc2ce518831826ef903",
+  "requests": [
+    {
+      "number": 1,
+      "initial_url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "method": "GET",
+      "redirect_hop": 0,
+      "status": 200,
+      "body_bytes_received": 311722,
+      "outcome": "VALIDATED_ISOLATED_REVIEW_COPY_RETAINED",
+      "content_type": "text/html"
+    },
+    {
+      "number": 2,
+      "initial_url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "method": "GET",
+      "redirect_hop": 0,
+      "status": 200,
+      "body_bytes_received": 143959,
+      "outcome": "VALIDATED_ISOLATED_REVIEW_COPY_RETAINED",
+      "content_type": "application/pdf"
+    },
+    {
+      "number": 3,
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "method": "GET",
+      "redirect_hop": 0,
+      "status": 200,
+      "body_bytes_received": 113932,
+      "outcome": "VALIDATED_ISOLATED_REVIEW_COPY_RETAINED",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "number": 4,
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "method": "GET",
+      "redirect_hop": 0,
+      "status": 200,
+      "body_bytes_received": 35556,
+      "outcome": "VALIDATED_ISOLATED_REVIEW_COPY_RETAINED",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+      "number": 5,
+      "initial_url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "method": "GET",
+      "redirect_hop": 0,
+      "status": 200,
+      "body_bytes_received": 356297,
+      "outcome": "VALIDATED_ISOLATED_REVIEW_COPY_RETAINED",
+      "content_type": "text/html"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "initial_url": "https://www.nseindia.com/static/resources/forms-formats-members",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_1.html",
+      "byte_length": 311722,
+      "sha256": "88cff5a135b1d4f96e5fc20b241d00d408bf06410261cd01356447f36acd81ca",
+      "content_type": "text/html",
+      "structure": {
+        "structure": "HTML_ENVELOPE_PASS_NOT_YET_SEMANTIC_REVIEWED"
+      }
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "initial_url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/UDiFF%20guidance%20document_Ver1.0.pdf",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_2.pdf",
+      "byte_length": 143959,
+      "sha256": "2d805109d6ba3b03cb4784907b308c200fef479ea8f785aad89563db1524079d",
+      "content_type": "application/pdf",
+      "structure": {
+        "pages": 16,
+        "structure": "PASS"
+      }
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/Annexure_B_UDiFF_Catalogue_Ver4.0.xlsx_20260630115645.xlsx",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_3.xlsx",
+      "byte_length": 113932,
+      "sha256": "83adfec3c0a99288eb54d11291e605d5c32748a93a6825ddeb574ae13ecfed69",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "structure": {
+        "member_count": 42,
+        "declared_expanded_bytes": 641120,
+        "actual_expanded_bytes": 641120,
+        "crc_validation": "PASS"
+      }
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "initial_url": "https://nsearchives.nseindia.com/web/mediaattachment/2026-06/UDiFF_trade_and_Bhavcopy_file_formats_20260630115803.xlsx",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_4.xlsx",
+      "byte_length": 35556,
+      "sha256": "b9f2fa369af20381374cdb40c3ebc96c43029401e057225599cfe63b288ba3e8",
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "structure": {
+        "member_count": 19,
+        "declared_expanded_bytes": 171856,
+        "actual_expanded_bytes": 171856,
+        "crc_validation": "PASS"
+      }
+    },
+    {
+      "url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "initial_url": "https://www.nseindia.com/static/products-services/equity-derivatives-settlement-price",
+      "review_copy_relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_5.html",
+      "byte_length": 356297,
+      "sha256": "f4437ceedcce931fafe07ce31a598ea47509185154c61802287b3ae56e267166",
+      "content_type": "text/html",
+      "structure": {
+        "structure": "HTML_ENVELOPE_PASS_NOT_YET_SEMANTIC_REVIEWED"
+      }
+    }
+  ],
+  "transactions_attempted": 5,
+  "total_body_bytes_received": 961466,
+  "stop_reason": "FIXED_URL_SET_COMPLETE_PENDING_SEMANTIC_REVIEW",
+  "source_qualified": false,
+  "review_directory_relative": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s",
+  "review_copies_deleted": 0,
+  "raw_packages_absent": true,
+  "unattempted_initial_urls": [],
+  "elapsed_seconds": 1.125
+}

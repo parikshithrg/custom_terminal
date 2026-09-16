@@ -1,0 +1,17 @@
+{
+  "schema_version": "post_r10ni_documentation_owner_authorization_v1",
+  "baseline": "98643e8acde4ac24fa6dd2136f444ac8db25f881",
+  "owner_statement": "I approve execution of this unchanged scope and isolated documentation review-copy retention under these controls, having reviewed the applicable retention permission",
+  "execution_approved": true,
+  "isolated_review_copy_retention_approved": true,
+  "owner_reviewed_permission": true,
+  "proposal_path": "docs/investigations/post_r10ni_policy/decision_v1/investigation_proposal.json",
+  "proposal_sha256": "a790f565c9641043b8aa3efc6f549859faaa4fe47d546cc2ce518831826ef903",
+  "retention": "EARLIER_OF_OWNER_CLOSEOUT_OR_2026_12_31; SEPARATE_EXACT_PATH_DELETION_AUTHORIZATION",
+  "authorized_work": "BOUNDED_DOCUMENTATION_ONLY_FIXED_FIVE_URLS",
+  "source_qualification_authorized": false,
+  "implementation_authorized": false,
+  "reacquisition_authorized": false,
+  "requalification_authorized": false,
+  "deletion_authorized": false
+}

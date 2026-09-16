@@ -1,0 +1,41 @@
+{
+  "schema_version": "post_r10ni_document_review_retention_v1",
+  "owner_permission_review_confirmed": true,
+  "approved_rule": "EARLIER_OF_OWNER_CLOSEOUT_OR_2026_12_31; SEPARATE_EXACT_PATH_DELETION_AUTHORIZATION",
+  "owner_closeout_confirmation": "PENDING",
+  "deadline": "2026-12-31",
+  "review_directory_relative": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s",
+  "copies": [
+    {
+      "relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_1.html",
+      "sha256": "88cff5a135b1d4f96e5fc20b241d00d408bf06410261cd01356447f36acd81ca",
+      "byte_length": 311722
+    },
+    {
+      "relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_2.pdf",
+      "sha256": "2d805109d6ba3b03cb4784907b308c200fef479ea8f785aad89563db1524079d",
+      "byte_length": 143959
+    },
+    {
+      "relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_3.xlsx",
+      "sha256": "83adfec3c0a99288eb54d11291e605d5c32748a93a6825ddeb574ae13ecfed69",
+      "byte_length": 113932
+    },
+    {
+      "relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_4.xlsx",
+      "sha256": "b9f2fa369af20381374cdb40c3ebc96c43029401e057225599cfe63b288ba3e8",
+      "byte_length": 35556
+    },
+    {
+      "relative_path": "artifacts/nse_documentation_reviews/post_r10ni_cxe2_60s/document_5.html",
+      "sha256": "f4437ceedcce931fafe07ce31a598ea47509185154c61802287b3ae56e267166",
+      "byte_length": 356297
+    }
+  ],
+  "retained_copies": 5,
+  "full_documents_tracked_in_git": 0,
+  "review_copies_deleted": 0,
+  "raw_packages_still_absent": true,
+  "copy_handling": "ISOLATED_IGNORED_ARTIFACTS_READ_ONLY_NO_WORKBOOK_EXPORT",
+  "deletion_permission": "NOT_GRANTED_BY_THIS_INVESTIGATION; SEPARATE_EXACT_PATH_AUTHORIZATION_REQUIRED"
+}

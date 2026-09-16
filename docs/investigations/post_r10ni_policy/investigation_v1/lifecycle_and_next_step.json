@@ -1,0 +1,28 @@
+{
+  "schema_version": "post_r10ni_investigation_lifecycle_v1",
+  "outcome": "INVESTIGATION_UNRESOLVED_ROUTE_REMAINS_UNQUALIFIED",
+  "recorded_source_result": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+  "blocking_codes": {
+    "CLOSE_OUTSIDE_DAILY_RANGE_UNRESOLVED_BASIS": 2,
+    "TRADE_STATE_ATTRIBUTION_UNAVAILABLE": 1
+  },
+  "every_approved_date_must_pass": true,
+  "partial_source_qualification_permitted": false,
+  "source_qualified": false,
+  "adapter_state": "CANDIDATE_NOT_PRODUCTION_AUTHORIZED",
+  "adapter_or_diagnostic_changes": false,
+  "diagnostic_waivers": false,
+  "price_mutation": false,
+  "trade_states_inferred": false,
+  "raw_package_reacquisition": false,
+  "requalification": false,
+  "ingestion": false,
+  "research": false,
+  "fingerprint_refreshed": false,
+  "production_activated": false,
+  "deletion": false,
+  "next_step": "OWNER_MAY_SELECT_DEFER_OR_SEPARATELY_APPROVE_PREPARATION_OF_AN_OFFICIAL_EVIDENCE_SCOPE_AMENDMENT",
+  "proposed_amendment_purpose": "Seek an authoritative NSE clarification or specifically applicable official circular defining UDiFF close mapping, field trade-state contribution rules, and target-date applicability.",
+  "amendment_limit": "No new URL, circular or contact message is approved here. Prepare proposed exact sources/contact wording, request/payload budgets and privacy/retention controls for owner review before any access or message.",
+  "implementation_reacquisition_and_requalification_require_independent_later_scopes": true
+}

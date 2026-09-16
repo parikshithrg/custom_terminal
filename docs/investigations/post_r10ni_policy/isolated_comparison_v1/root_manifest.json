@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "sha256": "0ce13260357770c66ca2122a2f989f3160687c3abe6eac99c97ef9051a01eff8",
+      "path": "docs/investigations/post_r10ni_policy/isolated_comparison_v1/reacquisition_receipt.json"
+    },
+    {
+      "sha256": "33dad851c3fe0202cd4f26978bc03899dafeb4fa895dc72b6d201a710df602c1",
+      "path": "reports/NSE_FNO_ISOLATED_REACQUISITION.md"
+    },
+    {
+      "sha256": "cc91df45daed700bf0a67b76ece80242dd6de7e649b9de2ceabe0574533c00c7",
+      "path": "tests/test_isolated_nse_reacquisition.py"
+    },
+    {
+      "sha256": "1e1f62d1bf86175885675b8664abecfbffe31c4a229bf9fe47009c8235631853",
+      "path": "docs/investigations/r10n_i/requalification_v1/source_integrity_preflight.json"
+    },
+    {
+      "sha256": "ed2a84dee8845c56e1699f6a24f8f3296909123ccb622acb1e1f5b462ef230ff",
+      "path": "docs/investigations/post_r10ni_policy/deletion_v1/deletion_receipt.json"
+    }
+  ],
+  "schema_version": "isolated_reacquisition_manifest_v1"
+}

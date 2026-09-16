@@ -1,0 +1,124 @@
+{
+  "schema_version": "isolated_reacquisition_v1",
+  "owner_authorization": "yes. i authorize reacquiring exactly the three previously tested packages solely for this isolated comparison, with retention through 2026-12-31 and no production activation",
+  "started_at": "2026-09-16T09:20:35.268532+00:00",
+  "retention_deadline": "2026-12-31",
+  "relative_root": "artifacts/nse_fno_isolated_comparison/reacquisition-6l5u4muc",
+  "exact_dates": [
+    "2026-09-09",
+    "2026-09-10",
+    "2025-07-08"
+  ],
+  "packages": [
+    {
+      "trading_date": "2026-09-09",
+      "files": [
+        {
+          "filename": "BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+          "sha256": "50826bed50da889b90b208c9b6368d3768c0eabb416178b176f064d3f93de3f5",
+          "byte_length": 1028737
+        },
+        {
+          "filename": "NSE_FO_contract_09092026.csv.gz",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_09092026.csv.gz",
+          "sha256": "a58c75d36a5100506c005961af181cd6ca8ed597289ffc5fdc3107920e4850cf",
+          "byte_length": 1725381
+        }
+      ],
+      "historical_payloads_match": true
+    },
+    {
+      "trading_date": "2026-09-10",
+      "files": [
+        {
+          "filename": "BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip",
+          "sha256": "ef39a7fefc5e6de6ad76334bdd96020c7c96d507cd0be0ec479c5590d7d057b1",
+          "byte_length": 1037169
+        },
+        {
+          "filename": "NSE_FO_contract_10092026.csv.gz",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_10092026.csv.gz",
+          "sha256": "0a4e32e0764693e8571ba82b85bceffb73b146c1548427649488531b079270f7",
+          "byte_length": 1728107
+        }
+      ],
+      "historical_payloads_match": true
+    },
+    {
+      "trading_date": "2025-07-08",
+      "files": [
+        {
+          "filename": "BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip",
+          "sha256": "10e72772e36275e8be90e84abf432a242baee16dff5d6962f6a794c75b1992c9",
+          "byte_length": 999289
+        },
+        {
+          "filename": "NSE_FO_contract_08072025.csv.gz",
+          "source_url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_08072025.csv.gz",
+          "sha256": "29993a92374ac34322021cf60c7c6d9136a86a39b870b8c740cc3cb3318187af",
+          "byte_length": 1713118
+        }
+      ],
+      "historical_payloads_match": true
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260909_F_0000.csv.zip",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_09092026.csv.gz",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20260910_F_0000.csv.zip",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_10092026.csv.gz",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20250708_F_0000.csv.zip",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "url": "https://nsearchives.nseindia.com/content/fo/NSE_FO_contract_08072025.csv.gz",
+      "method": "GET",
+      "status": 200
+    }
+  ],
+  "source_qualified": false,
+  "production_activated": false,
+  "historical_results_changed": false,
+  "quarantine_table_created": false,
+  "comparison_performed": false,
+  "new_manifest_expected_to_differ": true,
+  "limits": {
+    "requests": 6,
+    "redirects": 0,
+    "retries": 0,
+    "max_bytes_per_file": 8388608,
+    "expanded_bytes_per_archive": 67108864,
+    "archive_members": 8,
+    "expansion_ratio": 250
+  },
+  "result": "THREE_PACKAGES_REACQUIRED_HASH_IDENTICAL",
+  "finished_at": "2026-09-16T09:20:37.638681+00:00",
+  "validation": {
+    "offline_preflight": "72_PASSED",
+    "comparison_status": "NOT_RUN",
+    "automatic_exclusion": "NOT_AUTHORIZED_BY_MATERIALITY_RESULTS",
+    "raw_payloads_in_git": false,
+    "old_deleted_locations_restored": false
+  }
+}

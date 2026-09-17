@@ -171,6 +171,8 @@ with inventory_tab:
         st.warning(snapshot.warning)
 
 with quotes_tab:
+    from views._nifty50_manual_test import render as render_nifty50_test
+    render_nifty50_test(now=_now, manual_refresh=_manual_refresh, provider_error=_provider_error)
     snapshot = cash_inventory(st.session_state.get("kite_inventory"))
     client = st.session_state.get("kite_client")
     if not snapshot or not client:

@@ -1,7 +1,7 @@
 """Bounded owner-triggered current-equity operational test, not qualification."""
 import csv
-from dataclasses import dataclass
-from datetime import timezone, timedelta
+from dataclasses import dataclass, replace
+from datetime import date, timezone, timedelta
 import hashlib
 import io
 import math
@@ -17,6 +17,8 @@ class Constituents:
     payload_hash: str
     retrieved_at: object
     source_url: str = OFFICIAL_URL
+    acquisition_method: str = "DIRECT_OFFICIAL_GET"
+    owner_download_date: date | None = None
 
 
 def fetch_constituents(*, http, now):
@@ -67,6 +69,16 @@ def parse_constituents(payload, *, retrieved_at):
     return Constituents(tuple(sorted(symbols)), hashlib.sha256(payload).hexdigest(), retrieved_at)
 
 
+def accept_uploaded_constituents(payload, *, official_source_confirmed, download_date, uploaded_at):
+    """Validate an explicitly declared official copy; attestation is not authentication."""
+    if official_source_confirmed is not True or type(download_date) is not date:
+        raise ValueError("Official-source confirmation and download date required")
+    parsed = parse_constituents(payload, retrieved_at=uploaded_at)
+    if download_date != uploaded_at.astimezone(IST).date():
+        raise ValueError("Use a copy downloaded today; reuploading does not refresh its source date")
+    return replace(parsed, acquisition_method="OWNER_SUPPLIED_UPLOAD", owner_download_date=download_date)
+
+
 def plan_batches(constituents, inventory, *, as_of):
     if (type(constituents) is not Constituents or constituents.source_url != OFFICIAL_URL or
             len(constituents.symbols) != 50 or len(set(constituents.symbols)) != 50 or
@@ -74,6 +86,10 @@ def plan_batches(constituents, inventory, *, as_of):
         raise ValueError("Verified official constituent binding required")
     if as_of.tzinfo is None or as_of.utcoffset() is None:
         raise ValueError("Aware as-of required")
+    if (constituents.acquisition_method not in {"DIRECT_OFFICIAL_GET", "OWNER_SUPPLIED_UPLOAD"} or
+            (constituents.acquisition_method == "OWNER_SUPPLIED_UPLOAD" and
+             constituents.owner_download_date != as_of.astimezone(IST).date())):
+        raise ValueError("Current acquisition provenance required")
     if (constituents.retrieved_at > as_of or inventory.retrieved_at > as_of or
             constituents.retrieved_at.astimezone(IST).date() != as_of.astimezone(IST).date() or
             inventory.retrieved_at.astimezone(IST).date() != as_of.astimezone(IST).date()):

@@ -2,7 +2,7 @@
 from dataclasses import replace
 from datetime import datetime, timezone, timedelta
 import pytest
-from market_intel.nifty50_manual_test import parse_constituents, plan_batches, run_test, fetch_constituents, OFFICIAL_URL
+from market_intel.nifty50_manual_test import parse_constituents, plan_batches, run_test, fetch_constituents, OFFICIAL_URL, accept_uploaded_constituents
 from market_intel.foundation.current_market import CurrentInstrument, CurrentInstrumentSnapshot, CurrentQuote, CurrentQuoteSnapshot
 
 NOW = datetime(2026, 9, 17, 10, tzinfo=timezone.utc)
@@ -124,6 +124,35 @@ def test_panel_load_has_zero_requests(monkeypatch):
         raise AssertionError("Panel load must not request data")
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     from streamlit.testing.v1 import AppTest
-    app = AppTest.from_string("from views._nifty50_manual_test import render\nrender(now=lambda: None, manual_refresh=lambda action: True, provider_error=lambda exc: None)").run()
+    app = AppTest.from_string("from datetime import datetime, timezone\nfrom views._nifty50_manual_test import render\nrender(now=lambda: datetime(2026,9,17,10,tzinfo=timezone.utc), manual_refresh=lambda action: True, provider_error=lambda exc: None)").run()
     assert not app.exception
     assert next(button for button in app.button if button.label.startswith("Test all 50")).disabled
+
+
+def test_owner_upload_preserves_declared_lineage_and_no_network(monkeypatch):
+    import requests
+    def denied(*args, **kwargs):
+        raise AssertionError("Upload validation cannot request data")
+    monkeypatch.setattr(requests.sessions.Session, "request", denied)
+    members = accept_uploaded_constituents(payload(), official_source_confirmed=True,
+                                           download_date=NOW.date(), uploaded_at=NOW)
+    assert members.acquisition_method == "OWNER_SUPPLIED_UPLOAD"
+    assert members.owner_download_date == NOW.date() and members.source_url == OFFICIAL_URL
+    assert members.payload_hash == parse_constituents(payload(), retrieved_at=NOW).payload_hash
+    assert len(plan_batches(members, inventory(), as_of=NOW)) == 2
+
+
+@pytest.mark.parametrize("confirmed,day", [(False, NOW.date()), (True, None),
+    (True, (NOW-timedelta(days=1)).date()), (True, (NOW+timedelta(days=1)).date())])
+def test_upload_provenance_missing_old_or_future_refused(confirmed, day):
+    with pytest.raises(ValueError):
+        accept_uploaded_constituents(payload(), official_source_confirmed=confirmed,
+                                     download_date=day, uploaded_at=NOW)
+
+
+@pytest.mark.parametrize("data", [b' '*65537, b'<html>denied</html>', payload(49), payload(51)],
+                         ids=["oversized", "html", "too-few", "too-many"])
+def test_upload_reuses_strict_csv_boundary(data):
+    with pytest.raises(ValueError):
+        accept_uploaded_constituents(data, official_source_confirmed=True,
+                                     download_date=NOW.date(), uploaded_at=NOW)

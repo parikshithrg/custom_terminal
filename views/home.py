@@ -9,7 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 from views._registry import PAGES, SECTION_SUBTITLES, SECTIONS
-from views import _theme, _market_preview
+from views import _theme, _market_preview, _dashboard_kite_login
 
 # Arriving from another page's section tab (views/_topbar.py) via
 # ?section=<key> - jump to that section instead of landing at the top.
@@ -60,6 +60,7 @@ st.markdown(
 
 st.markdown("## Dashboard")
 st.caption("Interface preview · synthetic data only · no live market feed")
+_dashboard_kite_login.render()
 _market_preview.render(use_watchlist_contract=True)
 _market_preview.readiness()
 st.markdown("### Explore your workspace")

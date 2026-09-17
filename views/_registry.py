@@ -119,8 +119,13 @@ PAGES: list[PageMeta] = [
 
     # ============================= INVESTMENT DESK =============================
     PageMeta(
-        "views/inv_asset_allocation.py", "Asset Allocation & Rotation", "🧮", "investment_desk",
-        "Long-horizon rotation across equity, debt, gold, and cash.",
+        "views/inv_asset_allocation.py", "Asset Allocation & Protection", "🧮", "investment_desk",
+        "Asset rotation, risk exposure, and protection of long-term capital.",
+        subsections=(
+            ("Asset Allocation & Rotation", "Long-horizon rotation across equity, debt, gold, and cash."),
+            ("Risk Dashboard", "Concentration and correlation risk across the investment book."),
+            ("Capital Protection", "Drawdown triggers and de-risking rules for long-term capital."),
+        ),
     ),
     PageMeta(
         "views/inv_risk_protection.py", "Risk & Capital Protection", "🛡️", "investment_desk",
@@ -229,3 +234,14 @@ PAGES: list[PageMeta] = [
 ]
 
 PAGES_BY_FILE: dict[str, PageMeta] = {p.file: p for p in PAGES}
+
+# Temporary presentation choices: retain metadata and implementation files,
+# but exclude these entries from both home cards and registered navigation.
+ALL_PAGES = tuple(PAGES)
+HIDDEN_PAGE_FILES = frozenset({
+    "views/td_decision_helper.py",
+    "views/research_options_oi.py",
+    "views/td_trade_management.py",
+    "views/inv_risk_protection.py",  # folded into Asset Allocation & Protection
+})
+PAGES = [page for page in ALL_PAGES if page.file not in HIDDEN_PAGE_FILES]

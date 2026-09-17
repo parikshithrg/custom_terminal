@@ -5,7 +5,7 @@ the single source of truth."""
 from __future__ import annotations
 
 from views._registry import PAGES_BY_FILE
-from views._stub import render_stub
+from views._stub import render_stub_multi
 
 meta = PAGES_BY_FILE["views/inv_asset_allocation.py"]
-render_stub(meta.title, meta.icon, meta.section, meta.description, note=meta.note)
+render_stub_multi(meta.title, meta.icon, meta.section, meta.subsections)

@@ -1,7 +1,7 @@
 """Home - a grid of boxes, one per page, grouped by JOB (trading decisions,
 investment decisions, news/events) with the shared data foundation last.
-Explicitly NOT tabs and NOT a sidebar nav (ruled out when this was scoped
-2026-08-18) - every page is reachable from this one screen."""
+The original grid remains as a secondary directory; the owner-approved
+static-reference shell now provides persistent sidebar navigation."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 from views._registry import PAGES, SECTION_SUBTITLES, SECTIONS
+from views import _theme, _market_preview
 
 # Arriving from another page's section tab (views/_topbar.py) via
 # ?section=<key> - jump to that section instead of landing at the top.
@@ -32,7 +33,7 @@ st.markdown(
     /* Same value and same real testid market_gate uses
     (Dashboard/market_gate/theme.py) - `.block-container` (used here at
     first) doesn't reliably match this Streamlit version's actual DOM. */
-    div[data-testid="stMainBlockContainer"] { padding-top: 64px !important; }
+    div[data-testid="stMainBlockContainer"] { padding-top: 76px !important; }
     div[class*="st-key-card-"] {
         padding: 0.5rem 0.75rem !important;
         gap: 0.15rem !important;
@@ -57,12 +58,12 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown("## 🖥️ Local Terminal")
-st.caption(
-    "A complete information & analytics terminal for Indian and global "
-    "markets - deliberately no trade execution. Every box below is a page; "
-    "none are wired to real data yet."
-)
+st.markdown("## Dashboard")
+st.caption("Interface preview · synthetic data only · no live market feed")
+_market_preview.render()
+_market_preview.readiness()
+st.markdown("### Explore your workspace")
+st.caption(f"{len(PAGES)} pages · {len(SECTIONS)} workspaces · select a card to open a page")
 
 N_COLS = 5
 

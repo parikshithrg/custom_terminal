@@ -28,7 +28,32 @@
 A one-stop information & analytics terminal spanning trading decisions,
 long-term investment decisions, and event risk - **deliberately with no
 trade execution**. This is a pages-only scaffold: every page exists and
-is reachable, none are wired to real data yet.
+is reachable. The home and Market Gate previews use clearly labelled static
+synthetic fixtures; unwired analytical pages show explicit unavailable states.
+Existing separately scoped manual current-data controls remain on Data Coverage.
+
+## Interface preview
+
+With a compatible Python environment containing the UI requirements, run:
+
+```powershell
+python -m streamlit run app.py --server.port 8507
+```
+
+Open `http://127.0.0.1:8507`. The owner-approved visual baseline takes its
+white shell, slim header, grouped sidebar, compact tables and cyan accents
+from TradingQnA, with Version 2.0 Static as a secondary design reference.
+The home grid remains a secondary page directory. Equity/futures watchlist switching is presentation
+only: no provider requests, file ingestion or signals are generated. The
+quarantined NSE F&O database is not read by the preview. Its route remains
+unqualified and experimental outputs remain unavailable to production/research.
+No reference data, scripts, logos or remote fonts are loaded. Font names
+use local/system fallbacks. Visual refinement is paused while data issues
+are addressed; this UI baseline does not change source qualification.
+Trade Decision Helper, Options & Positioning and Trade Management are
+temporarily hidden with their code retained. Risk and capital protection
+are presented within Asset Allocation & Protection.
+After changing imported theme code, restart the preview to avoid stale styles.
 
 ## Current research-infrastructure status
 
@@ -129,9 +154,9 @@ pip install -e .
 streamlit run app.py
 ```
 
-Opens at `http://127.0.0.1:8501`. Home is a grid of boxes (not tabs, not
-a sidebar) - click any box to open that page. `runOnSave = true` is set,
-so editing a page updates the running app automatically.
+Opens at `http://127.0.0.1:8501` by default. Use the grouped sidebar or
+home directory cards to open a page. `runOnSave = true` is set; restart
+after edits to imported modules if the preview retains older styling.
 
 ## Kite Connect daily login
 

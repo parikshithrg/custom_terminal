@@ -22,14 +22,11 @@ from __future__ import annotations
 import streamlit as st
 
 from views._topbar import render_section_tabs
+from views._theme import empty_panel
 
 
 def _footer() -> None:
-    st.markdown(
-        "**Not yet wired to real data.** This page is a placeholder - the "
-        "backend for it (which local files, which API, which cache) hasn't "
-        "been decided yet."
-    )
+    st.caption("Interface preview only · no qualified data, generated signals, research execution or order placement.")
 
 
 def render_stub(title: str, icon: str, source: str, description: str,
@@ -40,6 +37,8 @@ def render_stub(title: str, icon: str, source: str, description: str,
     st.info(description)
     if note:
         st.warning(note)
+    with st.container(border=True):
+        empty_panel()
     _footer()
 
 
@@ -52,4 +51,6 @@ def render_stub_multi(title: str, icon: str, source: str,
     for tab, (_, desc) in zip(tabs, subsections):
         with tab:
             st.info(desc)
+            with st.container(border=True):
+                empty_panel()
     _footer()

@@ -39,6 +39,12 @@ F&O issues are deferred until the non-F&O site is functioning. Derivative
 previews/controls and the dependent legacy risk/report pages are temporarily
 hidden with code retained. This does not qualify any source or waive data gates.
 
+News & Calendar now loads an offline unavailable/readiness view; automatic RSS,
+NSE calendar fetches and headline scoring are disabled on that routed page.
+The legacy renderer is retained but is not routed/imported. See
+[non-F&O requirements and news gate](docs/project_status/NON_FNO_CONSUMER_REQUIREMENTS_V1.md).
+No live news source or reuse/retention permission is approved by this change.
+
 With a compatible Python environment containing the UI requirements, run:
 
 ```powershell

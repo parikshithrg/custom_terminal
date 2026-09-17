@@ -106,6 +106,7 @@ def test_fixed_official_request_no_redirect_and_exact_response_cleanup():
     assert len(fetch_constituents(http=http, now=lambda: NOW).symbols) == 50
     assert response.closed and len(http.calls) == 1
     assert http.calls[0][1]["allow_redirects"] is False
+    assert http.calls[0][1]["timeout"] == 30
     response.status_code = 302
     with pytest.raises(ValueError):
         fetch_constituents(http=http, now=lambda: NOW)

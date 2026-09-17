@@ -50,3 +50,14 @@ known unrelated fingerprint/R9K failures untouched. Server deliberately not
 restarted to preserve the owner's authenticated in-memory session.
 Live outcome remains NOT_TESTED_BY_AGENT until the owner runs the manual controls
 and reports aggregate returned/missing counts or a sanitized error.
+
+## Owner-approved timeout amendment — 2026-09-17
+
+One bounded diagnostic GET encountered ReadTimeout under the original ten-second
+limit; no payload was retained or quotes requested. Owner answered “yes” to
+increasing only the constituent-list request timeout to 30 seconds. The fixed
+URL, one GET, 64-KiB limit, no redirects/retries/fallback roster and all quote
+boundaries remain unchanged. The original ten-second scope above is historical;
+this explicit amendment supersedes only that timeout. Requests timeout is a
+connect/read timeout, not a total download wall-clock guarantee.
+Server restart and automatic refetch are not authorized by this amendment.

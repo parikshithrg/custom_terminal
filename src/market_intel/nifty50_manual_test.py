@@ -20,8 +20,8 @@ class Constituents:
 
 
 def fetch_constituents(*, http, now):
-    """One fixed GET, no redirects/retries, <=64 KiB decoded CSV, 10s timeout."""
-    response = http.get(OFFICIAL_URL, timeout=10, stream=True, allow_redirects=False)
+    """One fixed GET, no redirects/retries, <=64 KiB decoded CSV, 30s timeout."""
+    response = http.get(OFFICIAL_URL, timeout=30, stream=True, allow_redirects=False)
     try:
         if response.status_code != 200 or response.url != OFFICIAL_URL:
             raise ValueError("Official constituent list unavailable within approved route")

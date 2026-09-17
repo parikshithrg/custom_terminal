@@ -59,10 +59,11 @@ def test_requested_cards_hidden_without_deleting_metadata():
     assert HIDDEN_PAGE_FILES == frozenset({
         "views/td_decision_helper.py", "views/research_options_oi.py",
         "views/td_trade_management.py", "views/inv_risk_protection.py",
+        "views/news_event_risk.py", "views/lib_reports.py",
     })
     assert not HIDDEN_PAGE_FILES.intersection(p.file for p in PAGES)
     assert HIDDEN_PAGE_FILES.issubset(PAGES_BY_FILE)
-    assert len(PAGES) == len(ALL_PAGES) - 4
+    assert len(PAGES) == len(ALL_PAGES) - 6
     merged = PAGES_BY_FILE["views/inv_asset_allocation.py"]
     assert [name for name, _ in merged.subsections] == [
         "Asset Allocation & Rotation", "Risk Dashboard", "Capital Protection",
@@ -77,9 +78,8 @@ def test_home_streamlit_interactions():
     from streamlit.testing.v1 import AppTest
     app=AppTest.from_file(str(ROOT/"app.py"),default_timeout=15).run()
     assert not app.exception
-    assert app.radio[0].value=="Equities"
-    app.radio[0].set_value("Futures").run()
-    assert not app.exception
+    assert len(app.radio)==0
     rendered=" ".join(m.value for m in app.markdown)
-    assert "DEMO FUTURE A" in rendered
-    assert "unqualified / evidence deferred" in rendered
+    assert "DEMO EQUITY A" in rendered
+    assert "DEMO FUTURE A" not in rendered
+    assert "NSE F&O" not in rendered

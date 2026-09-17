@@ -20,6 +20,7 @@ from market_intel.foundation.kite_current_market import (
     KiteInvalidSessionError,
 )
 from views._topbar import render_section_tabs
+from views._cash_scope import cash_inventory, cash_quotes
 
 REFRESH_COOLDOWN_SECONDS = 5
 
@@ -72,6 +73,7 @@ if (_existing_session and _existing_client and
 
 render_section_tabs(active_section="data_library")
 st.markdown("## 🌐 Data Coverage")
+st.caption("Equity/index display only. Derivative features are deferred; the provider's current-only scope is unchanged.")
 st.error(
     "Kite current instruments are not a historical universe and cannot "
     "validate historical cross-sectional research."
@@ -146,33 +148,30 @@ with inventory_tab:
             except KiteCurrentDataError as exc:
                 _provider_error(exc)
                 st.rerun()
-    snapshot = st.session_state.get("kite_inventory")
+    snapshot = cash_inventory(st.session_state.get("kite_inventory"))
     if snapshot:
         diagnostics = inventory_diagnostics(snapshot, as_of=_now().astimezone(IST).date())
         st.caption(
             f"Provider: {snapshot.provider} · retrieved: {snapshot.retrieved_at.isoformat()} "
             f"· session date: {snapshot.session_date} · scope: {snapshot.scope}"
         )
-        total, equities, indices, futures, options = st.columns(5)
-        total.metric("Total", diagnostics.total_instruments)
+        total, equities, indices = st.columns(3)
+        total.metric("Displayed cash instruments", diagnostics.total_instruments)
         equities.metric("Equities", diagnostics.equities)
         indices.metric("Indices", diagnostics.indices)
-        futures.metric("Futures", diagnostics.futures)
-        options.metric("Options", diagnostics.options)
         st.write("By exchange", diagnostics.counts_by_exchange)
         with st.expander("Segment and integrity diagnostics"):
             st.write("By segment", diagnostics.counts_by_segment)
             st.write("By instrument type", diagnostics.counts_by_instrument_type)
             st.write({
                 "incomplete_rows": diagnostics.incomplete_rows,
-                "expired_derivatives": diagnostics.expired_derivatives,
                 "duplicate_provider_keys": diagnostics.duplicate_provider_keys,
                 "duplicate_exchange_symbols": diagnostics.duplicate_exchange_symbols,
             })
         st.warning(snapshot.warning)
 
 with quotes_tab:
-    snapshot = st.session_state.get("kite_inventory")
+    snapshot = cash_inventory(st.session_state.get("kite_inventory"))
     client = st.session_state.get("kite_client")
     if not snapshot or not client:
         st.info("Authenticate and load the current inventory first.")
@@ -206,6 +205,8 @@ with quotes_tab:
                      help="Manual, five-second cooldown"):
             if _manual_refresh("quotes"):
                 try:
+                    if not set(selected).issubset({item.provider_key for item in snapshot.instruments}):
+                        raise ValueError("Selection is outside the displayed cash inventory")
                     result = client.get_current_quotes(selected, mode=mode)
                     st.session_state["kite_last_quote_snapshot"] = result
                     st.session_state["kite_last_quote_mode"] = mode
@@ -215,7 +216,7 @@ with quotes_tab:
                 except (ValueError, KiteCurrentDataError) as exc:
                     _provider_error(exc)
                     st.rerun()
-        result = st.session_state.get("kite_last_quote_snapshot")
+        result = cash_quotes(st.session_state.get("kite_last_quote_snapshot"), snapshot)
         result_mode = st.session_state.get("kite_last_quote_mode", mode)
         if result:
             returned = sum(item.status == "AVAILABLE" for item in result.quotes)
@@ -226,7 +227,7 @@ with quotes_tab:
                 f"retrieved: {result.retrieved_at.isoformat()} · {result.cache_status}"
             )
             requested_col, returned_col, missing_col = st.columns(3)
-            requested_col.metric("Requested", st.session_state.get("kite_last_requested_count", 0))
+            requested_col.metric("Displayed requested", len(result.quotes))
             returned_col.metric("Returned", returned)
             missing_col.metric("Missing", missing)
             if not any(item.provider_timestamp for item in result.quotes):
@@ -239,13 +240,17 @@ with quotes_tab:
 
 with health_tab:
     now = _now()
+    displayed_quotes = cash_quotes(
+        st.session_state.get("kite_last_quote_snapshot"), st.session_state.get("kite_inventory")
+    )
+    st.caption("Health counts and export describe the displayed cash subset, not full provider coverage.")
     health = build_health(
         now=now,
         session_state=str(st.session_state.get("kite_connection_state", KiteSessionState.UNAUTHENTICATED)),
         validation_state=st.session_state.get("kite_validation_state", "NOT_VALIDATED"),
-        inventory=st.session_state.get("kite_inventory"),
-        quotes=st.session_state.get("kite_last_quote_snapshot"),
-        requested_count=st.session_state.get("kite_last_requested_count", 0),
+        inventory=cash_inventory(st.session_state.get("kite_inventory")),
+        quotes=displayed_quotes,
+        requested_count=len(displayed_quotes.quotes) if displayed_quotes else 0,
         last_error=st.session_state.get("kite_last_failure_category"),
         calendar=None,
     )

@@ -34,6 +34,11 @@ Existing separately scoped manual current-data controls remain on Data Coverage.
 
 ## Interface preview
 
+Current priority: [equity-first site](docs/project_status/EQUITY_FIRST_PRIORITY_V1.md).
+F&O issues are deferred until the non-F&O site is functioning. Derivative
+previews/controls and the dependent legacy risk/report pages are temporarily
+hidden with code retained. This does not qualify any source or waive data gates.
+
 With a compatible Python environment containing the UI requirements, run:
 
 ```powershell
@@ -43,8 +48,8 @@ python -m streamlit run app.py --server.port 8507
 Open `http://127.0.0.1:8507`. The owner-approved visual baseline takes its
 white shell, slim header, grouped sidebar, compact tables and cyan accents
 from TradingQnA, with Version 2.0 Static as a secondary design reference.
-The home grid remains a secondary page directory. Equity/futures watchlist switching is presentation
-only: no provider requests, file ingestion or signals are generated. The
+The home grid remains a secondary page directory. The equity-only watchlist is
+presentation-only: no provider requests, file ingestion or signals are generated. The
 quarantined NSE F&O database is not read by the preview. Its route remains
 unqualified and experimental outputs remain unavailable to production/research.
 No reference data, scripts, logos or remote fonts are loaded. Font names

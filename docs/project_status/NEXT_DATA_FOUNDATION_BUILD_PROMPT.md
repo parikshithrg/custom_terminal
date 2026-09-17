@@ -4,6 +4,9 @@ PROPOSED ONLY. This audit is not implementation authorization. Owner must
 explicitly approve the scope below before build work. Real-source activation,
 consumer wiring and subsequent research each remain separately gated.
 
+Owner priority amendment: `EQUITY_FIRST_PRIORITY_V1.md`. F&O work is last,
+after a functioning non-F&O site; this contract is now equity-only.
+
 ## Ready-to-use implementation prompt
 
 Continue from the committed data-readiness audit and preserve the approved UI.
@@ -29,7 +32,7 @@ Freeze these exact fields before implementation:
   and requirements approval. Do not alter existing UI fixtures/columns.
 
 Identity: synthetic namespace mandatory (`SYNTHETIC:`); exchange is explicitly
-`SIMULATED`, class is `DEMO_EQUITY` or `DEMO_FUTURE`, labels are not real
+`SIMULATED`, class is `DEMO_EQUITY` only; reject `DEMO_FUTURE`. Labels are not real
 contracts. Uniqueness is scoped to fixture version and synthetic instrument;
 reject duplicates. Do not reuse provider tokens as permanent identity. Retain
 the future requirement for effective-dated listing/contract crosswalks without

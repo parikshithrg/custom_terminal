@@ -243,5 +243,7 @@ HIDDEN_PAGE_FILES = frozenset({
     "views/research_options_oi.py",
     "views/td_trade_management.py",
     "views/inv_risk_protection.py",  # folded into Asset Allocation & Protection
+    "views/news_event_risk.py",  # legacy stress path uses futures-based gold input
+    "views/lib_reports.py",  # legacy report includes F&O/OI-dependent results
 })
 PAGES = [page for page in ALL_PAGES if page.file not in HIDDEN_PAGE_FILES]

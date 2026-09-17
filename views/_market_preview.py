@@ -34,18 +34,14 @@ def render():
     import streamlit as st
     st.caption("DEMONSTRATION ONLY — all prices and changes below are static synthetic fixtures, not current or historical market observations.")
     st.markdown(index_markup(),unsafe_allow_html=True)
-    segment = st.radio("Illustrative watchlist",["Equities","Futures"],horizontal=True,key="terminal-demo-segment")
-    st.markdown(table_markup(DEMO_ROWS if segment=="Equities" else DEMO_FUTURES),unsafe_allow_html=True)
+    st.markdown("Illustrative equity watchlist")
+    st.markdown(table_markup(DEMO_ROWS),unsafe_allow_html=True)
     st.caption("View selection changes presentation only. No data is fetched, refreshed, saved or used to calculate signals.")
 
 def readiness():
     import streamlit as st
     with st.container(border=True,key="terminal-readiness"):
         st.markdown("#### Data readiness")
-        left,right = st.columns(2)
-        with left:
-            st.markdown("**This preview · synthetic fixtures**")
-            st.caption("No real market source is connected to the preview. Existing manual current-data controls remain on Data Coverage.")
-        with right:
-            st.markdown("**NSE F&O · unqualified / evidence deferred**")
-            st.caption("Quarantined facts are not loaded here. Date-wide attribution remains unresolved; experimental outputs are unavailable to production and research.")
+        st.markdown("**This preview · synthetic fixtures**")
+        st.caption("No real market source is connected to the preview. Existing manual current-data controls remain on Data Coverage.")
+        st.caption("Deferred experimental outputs are unavailable to production and research.")

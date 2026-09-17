@@ -46,6 +46,47 @@ class KiteCurrentMarketClient:
         except KiteCurrentDataError: raise
         except Exception as exc: raise KiteCurrentDataError("Kite current-data request failed or timed out") from exc
     def validate_session(self)->str|None: return self._data(self._request("profile")).get("user_id")
+    def decode_exact_equity_response(self,response:Any,instrument_keys:tuple[str,...],*,as_of:datetime):
+        """Offline response-injection boundary; never requests data or changes caches.
+
+        Caller owns the supplied response. Existing manual/UI path is unchanged.
+        """
+        from .kite_equity_quote_v1 import MAX_BYTES, aware, decode
+        if (type(instrument_keys) is not tuple or not 1<=len(instrument_keys)<=25 or
+                len(set(instrument_keys))!=len(instrument_keys) or not aware(as_of) or self._inventory is None):
+            raise ValueError("Bounded current-equity targets, inventory and aware cutoff required")
+        inventory=self._inventory
+        if (inventory.provider!="kite_connect" or inventory.scope!="CURRENT_TRADABLE_ONLY" or
+                not aware(inventory.retrieved_at) or inventory.retrieved_at>as_of):
+            raise ValueError("Current inventory binding required")
+        targets=[]
+        for key in instrument_keys:
+            matches=[i for i in inventory.instruments if i.provider_key==key]
+            if (len(matches)!=1 or matches[0].exchange not in {"NSE","BSE"} or
+                    matches[0].segment!=matches[0].exchange or matches[0].instrument_type!="EQ" or
+                    matches[0].expiry or matches[0].quality_flags):
+                raise ValueError("Eligible unambiguous cash-equity inventory required")
+            targets.append((key,matches[0].provider_instrument_token))
+        try:
+            if (response.status_code!=200 or response.url!=API_ROOT+"/quote" or
+                    response.headers.get("Content-Type","").split(";")[0].strip().lower()!="application/json"):
+                raise ValueError("Incompatible quote response")
+            chunks=[]; size=0
+            for chunk in response.iter_content(chunk_size=4096):
+                if type(chunk) is not bytes: raise ValueError("Invalid response bytes")
+                size+=len(chunk)
+                if size>MAX_BYTES: raise ValueError("Quote size limit exceeded")
+                chunks.append(chunk)
+            completed=self._now()
+            if not aware(completed) or inventory.retrieved_at>completed:
+                raise ValueError("Invalid completion/inventory clock")
+            length=response.headers.get("Content-Length")
+            if length is not None and not response.headers.get("Content-Encoding") and int(length)!=size:
+                raise ValueError("Truncated quote response")
+            return decode(payload=b"".join(chunks),targets=tuple(targets),
+                          retrieval_completed_at=completed,as_of=as_of)
+        except Exception:
+            raise KiteCurrentDataError("Exact cash-equity response validation failed") from None
     def discover_current_instruments(self)->CurrentInstrumentSnapshot:
         response=self._request("instruments")
         try:

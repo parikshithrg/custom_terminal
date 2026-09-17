@@ -38,7 +38,7 @@ def test_static_reference_adaptation_is_visual_only():
 def test_preview_does_not_load_sources_or_experimental_facts():
     tree=ast.parse((ROOT/"views/_market_preview.py").read_text())
     imports=[n.module for n in ast.walk(tree) if isinstance(n,ast.ImportFrom)]
-    assert set(imports)=={"decimal","html"}
+    assert set(imports)=={"decimal","html","views._watchlist_contract_view"}
     assert not any(isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id in {"open","eval","exec"} for n in ast.walk(tree))
     text=(ROOT/"views/_market_preview.py").read_text()
     assert "experimental outputs are unavailable" in text
@@ -81,5 +81,9 @@ def test_home_streamlit_interactions():
     assert len(app.radio)==0
     rendered=" ".join(m.value for m in app.markdown)
     assert "DEMO EQUITY A" in rendered
+    assert "125.500000000000000001" in rendered
+    assert "Unavailable — MISSING_PRICE" in rendered
+    assert "+0.80%" not in rendered
+    assert any("Not market freshness" in item.value for item in app.caption)
     assert "DEMO FUTURE A" not in rendered
     assert "NSE F&O" not in rendered

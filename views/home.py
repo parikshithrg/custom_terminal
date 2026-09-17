@@ -60,7 +60,7 @@ st.markdown(
 
 st.markdown("## Dashboard")
 st.caption("Interface preview · synthetic data only · no live market feed")
-_market_preview.render()
+_market_preview.render(use_watchlist_contract=True)
 _market_preview.readiness()
 st.markdown("### Explore your workspace")
 st.caption(f"{len(PAGES)} pages · {len(SECTIONS)} workspaces · select a card to open a page")

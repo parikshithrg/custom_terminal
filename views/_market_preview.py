@@ -1,6 +1,7 @@
 """Static, explicitly synthetic UI fixtures; no provider or local data access."""
 from decimal import Decimal
 from html import escape
+from views._watchlist_contract_view import dashboard_presentation
 
 # Illustrative values, not captured exchange observations.
 DEMO_INDICES = (
@@ -30,12 +31,21 @@ def table_markup(rows):
     body = "".join("<tr>"+"".join(f"<td>{escape(str(v))}</td>" for v in row)+"</tr>" for row in rows)
     return '<div class="lt-table-wrap"><table class="lt-table"><caption>Illustrative watchlist — synthetic values, not live market data</caption><thead><tr><th scope="col">Instrument</th><th scope="col">Demo price</th><th scope="col">Demo change</th><th scope="col">Source status</th></tr></thead><tbody>'+body+'</tbody></table></div>'
 
-def render():
+def render(*, use_watchlist_contract=False):
     import streamlit as st
     st.caption("DEMONSTRATION ONLY — all prices and changes below are static synthetic fixtures, not current or historical market observations.")
     st.markdown(index_markup(),unsafe_allow_html=True)
     st.markdown("Illustrative equity watchlist")
-    st.markdown(table_markup(DEMO_ROWS),unsafe_allow_html=True)
+    if use_watchlist_contract:
+        try:
+            rows, provenance = dashboard_presentation()
+        except ValueError:
+            st.caption("Synthetic watchlist unavailable — contract validation failed. No fallback prices.")
+        else:
+            st.markdown(table_markup(rows),unsafe_allow_html=True)
+            st.caption(provenance)
+    else:
+        st.markdown(table_markup(DEMO_ROWS),unsafe_allow_html=True)
     st.caption("View selection changes presentation only. No data is fetched, refreshed, saved or used to calculate signals.")
 
 def readiness():

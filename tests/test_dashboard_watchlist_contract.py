@@ -172,7 +172,7 @@ def test_no_additional_fields_or_consumer_promotion():
         model.to_bytes()
 
 
-def test_imports_and_calls_are_pure_and_ui_not_wired():
+def test_imports_and_calls_are_pure_and_ui_wiring_is_bounded():
     allowed={"dataclasses","datetime","decimal","hashlib","json","re"}
     for filename in ("dashboard_watchlist_read_model_v1.py","dashboard_watchlist_fixtures_v1.py"):
         tree=ast.parse((ROOT/"src/market_intel"/filename).read_text(encoding="utf-8"))
@@ -185,4 +185,6 @@ def test_imports_and_calls_are_pure_and_ui_not_wired():
                 name=node.func.id if isinstance(node.func,ast.Name) else node.func.attr if isinstance(node.func,ast.Attribute) else ""
                 assert name not in {"open","read_text","write_text","connect","get","post","now","today","utcnow","eval","exec","__import__"}
     for page in (ROOT/"views").glob("*.py"):
+        if page.name == "_watchlist_contract_view.py":
+            continue  # Separately authorized synthetic Dashboard presentation boundary.
         assert "dashboard_watchlist_read_model_v1" not in page.read_text(encoding="utf-8")

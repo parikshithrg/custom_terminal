@@ -7,6 +7,11 @@ sections. Visual styling remains the accepted baseline.
 
 ## Ordered build sequence
 
+The owner-requested 2026-09-18 feature-planning extension is recorded in
+`MILESTONE_CHECKLIST_V2.md`: data-health reporting, sanitized ledgers and
+read-only quality diagnostics precede broad wiring. It adds planned work only,
+preserving this equity-first ordering, source gates and deferred F&O status.
+
 1. Freeze and implement the offline **equity-only** Dashboard watchlist contract
    proposed in `NEXT_DATA_FOUNDATION_BUILD_PROMPT.md`; no real provider activation.
 2. Separately scope legacy news execution/readiness gating and freeze retained

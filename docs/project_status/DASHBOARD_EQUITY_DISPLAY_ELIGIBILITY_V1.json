@@ -1,0 +1,166 @@
+{
+  "schema_version": "dashboard_equity_display_eligibility_v1",
+  "prepared_on": "2026-09-19",
+  "baseline": "141e1ba27458bd297639fa4a7a8b67190e1023d9",
+  "consumer": "dashboard_current_cash_equity_watchlist",
+  "candidate_source": "kite_current_equity_full_quote",
+  "decision": "NOT_ELIGIBLE_FOR_DASHBOARD_WIRING",
+  "implementation_authorized": false,
+  "display_authorized": false,
+  "provider_requests_authorized": false,
+  "source_qualified": false,
+  "acceptance_policy": {
+    "rule": "EVERY_GATE_MUST_PASS_INDEPENDENTLY_BEFORE_SEPARATE_WIRING_APPROVAL",
+    "threshold_revision_after_results": false,
+    "complete_coverage_overrides_other_gates": false,
+    "owner_approval_is_authoritative_source_evidence": false,
+    "synthetic_or_manual_results_can_promote_source": false
+  },
+  "consumer_contract": {
+    "universe": "at_most_25_explicitly_selected_current_NSE_or_BSE_EQ_targets",
+    "fields": [
+      "current_provider_identity",
+      "exact_last_traded_price",
+      "currency",
+      "provider_quote_time",
+      "last_trade_time",
+      "retrieval_completed_at",
+      "value_state",
+      "quality_reasons",
+      "source_and_parser_version"
+    ],
+    "price_display": "two_decimal_ROUND_HALF_UP_from_immutable_source_Decimal",
+    "change_percentage": "UNAVAILABLE_NO_APPROVED_PREVIOUS_CLOSE_SEMANTICS",
+    "missing_value": null,
+    "fallback_or_repair": false,
+    "history_research_or_trading": false
+  },
+  "gates": [
+    {
+      "gate_id": "PUBLIC_TERMS_PRIVATE_DISPLAY_SCOPE",
+      "state": "CONDITIONAL_SCOPE_REVIEWED_OWNER_ACCOUNT_CONFIRMATION_RECORDED",
+      "required_to_pass": "APPLICABLE_TERMS_AND_ACCOUNT_SPECIFIC_CONDITIONS_RECONCILED",
+      "evidence_class": "AUTHORITATIVE_PUBLIC_DOCUMENTATION_PLUS_PROJECT_INFERENCE",
+      "blocking": false
+    },
+    {
+      "gate_id": "OWNER_ACCOUNT_ENTITLEMENT_AND_PERMISSION",
+      "state": "OWNER_CONFIRMED_NOT_PUBLISHER_EVIDENCE",
+      "required_to_pass": "OWNER_CONFIRMS_APPLICABLE_ACCOUNT_APPLICATION_AND_AGREEMENTS",
+      "evidence_class": "PREREQUISITE_DECLARATION_NOT_PUBLISHER_EVIDENCE",
+      "blocking": false
+    },
+    {
+      "gate_id": "CONSUMER_DISPLAY_APPROVAL",
+      "state": "NOT_SEPARATELY_APPROVED",
+      "required_to_pass": "EXACT_DASHBOARD_CONSUMER_AND_FIELDS_APPROVED_AFTER_OTHER_GATES",
+      "evidence_class": "OWNER_DECISION",
+      "blocking": true
+    },
+    {
+      "gate_id": "CURRENT_IDENTITY_BINDING",
+      "state": "OFFLINE_CONTRACT_ONLY_LIVE_TARGET_BINDING_PENDING",
+      "required_to_pass": "CURRENT_UNIQUE_UNFLAGGED_EQ_CROSSWALK_BOUND_TO_EXACT_TARGETS",
+      "evidence_class": "PROJECT_CONTRACT_NOT_OPERATIONAL_EVIDENCE",
+      "blocking": true
+    },
+    {
+      "gate_id": "PRICE_FIELD_AND_CLOCK_SEMANTICS",
+      "state": "DOCUMENTED_BUT_NOT_OPERATIONALLY_VERIFIED",
+      "required_to_pass": "EXACT_DECODER_AND_SEPARATE_QUOTE_TRADE_RETRIEVAL_CLOCKS_VALIDATED_LIVE",
+      "evidence_class": "AUTHORITATIVE_DOCUMENTATION_PLUS_OFFLINE_TESTS",
+      "blocking": true
+    },
+    {
+      "gate_id": "CURRENCY_UNITS",
+      "state": "UNVERIFIED_FOR_BOUND_TARGETS",
+      "required_to_pass": "AUTHORITATIVE_INR_AND_PRICE_UNIT_BINDING",
+      "evidence_class": "NONE",
+      "blocking": true
+    },
+    {
+      "gate_id": "ADJUSTMENT_BASIS",
+      "state": "RESOLVED_CURRENT_LTP_ONLY_NO_HISTORY_OR_CHANGE_CLAIM",
+      "required_to_pass": "AUTHORITATIVE_CURRENT_LAST_PRICE_ADJUSTMENT_OR_NONADJUSTMENT_SEMANTICS",
+      "evidence_class": "AUTHORITATIVE_FIELD_DEFINITION_PLUS_CONSERVATIVE_PROJECT_SCOPE",
+      "blocking": false
+    },
+    {
+      "gate_id": "EXCHANGE_SESSION_POLICY",
+      "state": "AUTHORITATIVE_SOURCE_IDENTIFIED_MAINTAINED_CALENDAR_ABSENT",
+      "required_to_pass": "VERSIONED_TIMEZONE_AWARE_TRADING_AND_NONTRADING_SESSION_POLICY",
+      "evidence_class": "NONE",
+      "blocking": true
+    },
+    {
+      "gate_id": "FRESHNESS_AND_COMPLETENESS",
+      "state": "PROJECT_THRESHOLDS_PROPOSED_NOT_OPERATIONALLY_VALIDATED",
+      "required_to_pass": "BOUND_OPERATIONAL_TEST_PASSES_FROZEN_PER_RECORD_RULES",
+      "evidence_class": "PROPOSAL_AND_SYNTHETIC_TESTS_ONLY",
+      "blocking": true
+    },
+    {
+      "gate_id": "QUALITY_DIAGNOSTICS",
+      "state": "SYNTHETIC_ONLY",
+      "required_to_pass": "ELIGIBLE_LIVE_INPUT_PASSES_IMMUTABLE_DIAGNOSTICS",
+      "evidence_class": "SYNTHETIC_FIXTURE",
+      "blocking": true
+    },
+    {
+      "gate_id": "CACHE_RETENTION_AND_COMPLIANCE_RECORDS",
+      "state": "TRANSIENT_SCOPE_CONFIRMED_SANITIZED_RECORD_POLICY_PROPOSED_NOT_IMPLEMENTED",
+      "required_to_pass": "PRIVATE_MEMORY_CACHE_AND_SANITIZED_RECORD_POLICY_APPROVED",
+      "evidence_class": "AUTHORITATIVE_TERMS_PLUS_OWNER_CONFIRMATION_PLUS_PROJECT_PROPOSAL",
+      "blocking": true
+    },
+    {
+      "gate_id": "BOUNDED_OPERATIONAL_VALIDATION",
+      "state": "NOT_IMPLEMENTED_NOT_EXECUTED",
+      "required_to_pass": "SEPARATELY_APPROVED_HASH_BOUND_TWO_REQUEST_TEST_COMPLETED",
+      "evidence_class": "NONE",
+      "blocking": true
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "reports/KITE_DASHBOARD_DOCUMENTATION_REVIEW_V1.md",
+      "sha256": "53dbc98a17cfa9ea6fb944ec0717e277849ee77cc69ab4d3ab600b6ed6faa26a"
+    },
+    {
+      "path": "reports/KITE_DASHBOARD_PREREQUISITE_RESOLUTION_V1.md",
+      "sha256": "3525d93788b616018423e464b540126b5e0136884468466af2eed8e2b85e7607"
+    },
+    {
+      "path": "reports/DASHBOARD_CASH_SOURCE_FEASIBILITY_V1.md",
+      "sha256": "5161d124d885bf7be6dae7aab6235fee74201bdde4e22786c6980d2b6856cd5d"
+    },
+    {
+      "path": "docs/project_status/KITE_EXACT_LIVE_TEST_PROPOSAL_V1.md",
+      "sha256": "9c879e1dffbaff475f78b14af20c9193434bb44fbdd0282602d17f7e58fe48c4"
+    },
+    {
+      "path": "docs/project_status/KITE_EXACT_LIVE_TEST_SCOPE_V1.json",
+      "sha256": "a433ceeeff1371f3fc6ffd3a43dd46bdf403d83cfcd5dc497a7796ee221c18d1"
+    },
+    {
+      "path": "docs/project_status/KITE_EXACT_EQUITY_QUOTE_V1.md",
+      "sha256": "35436c6e27481f0c084f5fd067d5f970b0d51916d41c7d51511fb3864bb05c12"
+    },
+    {
+      "path": "docs/project_status/EQUITY_QUALITY_DIAGNOSTICS_V1.md",
+      "sha256": "77f13d76da94c682805d95749c939f817e959fa83ab82c1c0974caf4336f15c7"
+    }
+  ],
+  "unchanged_boundaries": {
+    "dashboard_values": "SYNTHETIC",
+    "watchlist_switching": "PRESENTATION_ONLY",
+    "fno_route": "MULTI_DATE_SCHEMAS_STABLE_SOURCE_NOT_QUALIFIED",
+    "external_access": false,
+    "ui_change": false,
+    "research": false,
+    "trading": false,
+    "persistence": false
+  },
+  "next_separately_authorized_scope": "OFFLINE_SESSION_POLICY_AND_SANITIZED_COMPLIANCE_LEDGER_DESIGN_THEN_RESOLVE_REST_CURRENCY_BINDING",
+  "completion_state": "DISPLAY_ELIGIBILITY_BLOCKED_PENDING_PREREQUISITES"
+}

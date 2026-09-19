@@ -1,0 +1,155 @@
+{
+  "schema_version": "dashboard_equity_prerequisite_review_v1",
+  "reviewed_on": "2026-09-19",
+  "baseline": "141e1ba27458bd297639fa4a7a8b67190e1023d9",
+  "status": "DOCUMENTATION_REVIEW_COMPLETE_IMPLEMENTATION_STILL_BLOCKED",
+  "owner_authorization": {
+    "account_permission_confirmation_recorded": true,
+    "private_local_cash_equity_display": true,
+    "transient_in_memory_processing": true,
+    "documentation_review_authorized": true,
+    "market_data_requests_authorized": false,
+    "ui_wiring_authorized": false,
+    "research_authorized": false,
+    "trading_authorized": false,
+    "classification": "OWNER_PREREQUISITE_DECLARATION_NOT_PUBLISHER_EVIDENCE"
+  },
+  "sources": [
+    {
+      "publisher": "Zerodha Technology Pvt. Ltd.",
+      "title": "Kite Connect 3 - Market quotes and instruments",
+      "url": "https://kite.trade/docs/connect/v3/market-quotes/",
+      "scope": "current quote identity, last price and clock definitions",
+      "document_hash": null,
+      "copy_retained": false
+    },
+    {
+      "publisher": "Zerodha Technology Pvt. Ltd.",
+      "title": "Kite Connect 3 - WebSocket streaming",
+      "url": "https://kite.trade/docs/connect/v3/websocket/",
+      "scope": "binary non-currency price scaling and packet semantics",
+      "document_hash": null,
+      "copy_retained": false
+    },
+    {
+      "publisher": "Zerodha",
+      "title": "Terms and conditions - Kite Connect trading APIs",
+      "url": "https://kite.trade/terms/",
+      "scope": "private interface, public display, caching, redistribution and audit records",
+      "document_hash": null,
+      "copy_retained": false
+    },
+    {
+      "publisher": "Zerodha Technology Pvt. Ltd.",
+      "title": "Kite Connect 3 - Exceptions and errors",
+      "url": "https://kite.trade/docs/connect/v3/exceptions/",
+      "scope": "quote rate limit and invalid-session behavior",
+      "document_hash": null,
+      "copy_retained": false
+    },
+    {
+      "publisher": "National Stock Exchange of India Limited",
+      "title": "Market Timings and Holidays",
+      "url": "https://www.nseindia.com/resources/exchange-communication-holidays",
+      "scope": "equity regular-session times, declared holidays and special-session notices",
+      "document_hash": null,
+      "copy_retained": false
+    }
+  ],
+  "question_matrix": [
+    {
+      "question": "What does the selected REST quote price represent?",
+      "result": "ANSWERED_CURRENT_LTP_ONLY",
+      "authoritative_statement": "Kite defines full-quote last_price as last traded market price and describes the response as an exchange snapshot at request time.",
+      "project_policy": "Use only immutable current LTP; do not treat it as adjusted history, valuation close or settlement.",
+      "unresolved": null
+    },
+    {
+      "question": "What currency and unit apply to NSE cash-equity REST last_price?",
+      "result": "PARTIALLY_ANSWERED_REST_CURRENCY_LABEL_ABSENT",
+      "authoritative_statement": "Kite WebSocket documentation specifies paise scaling for non-currency packets, while REST quote documentation exposes a decimal last_price without a currency field.",
+      "project_policy": "Do not infer the REST currency label solely from symbol or numerical agreement.",
+      "unresolved": "An authoritative REST NSE-EQ currency/unit binding remains required."
+    },
+    {
+      "question": "Does current last_price require a historical adjustment convention?",
+      "result": "ANSWERED_NOT_A_HISTORICAL_SERIES",
+      "authoritative_statement": "Kite documents last_price as current last traded market price and separately identifies prior-day close.",
+      "project_policy": "Adjustment is not applied by this current-only consumer; no historical or corporate-action comparison may be inferred.",
+      "unresolved": null
+    },
+    {
+      "question": "How can trading and non-trading sessions be classified?",
+      "result": "AUTHORITATIVE_SOURCE_IDENTIFIED_IMPLEMENTATION_ABSENT",
+      "authoritative_statement": "NSE publishes equity timings, annual holidays and special-session notices in IST.",
+      "project_policy": "A versioned calendar must ingest declared dates and explicit special sessions; weekends alone are insufficient and unknown dates fail closed.",
+      "unresolved": "No maintained project calendar or update policy is implemented."
+    },
+    {
+      "question": "What cache, retention and compliance records are allowed or required?",
+      "result": "PARTIALLY_ANSWERED_RECORD_POLICY_REQUIRED",
+      "authoritative_statement": "Kite permits private personal interfaces conditionally, prohibits public redistribution/permanent content copies absent permission, references cache headers, and requires compliance trails for at least five years or applicable law.",
+      "project_policy": "Raw quote bodies and prices remain transient memory only; any durable compliance ledger must exclude credentials, bodies, headers, identities and prices.",
+      "unresolved": "The exact sanitized compliance-ledger schema and whether it fully satisfies applicable obligations require separate review and implementation approval; no quote cache header was inspected."
+    }
+  ],
+  "proposed_session_policy": {
+    "status": "PROPOSED_NOT_IMPLEMENTED",
+    "timezone": "Asia/Kolkata",
+    "regular_equity_session": "09:15-15:30",
+    "pre_open": "09:00-09:08_random_close_last_minute",
+    "non_trading_inputs": "official_annual_holidays_plus_weekends",
+    "special_sessions": "explicit_NSE_circular_required",
+    "unknown_or_stale_calendar": "BLOCK_DISPLAY",
+    "muhurat_or_contingency_session": "NO_INFERENCE_REQUIRE_EXPLICIT_ENTRY"
+  },
+  "proposed_compliance_record_policy": {
+    "status": "PROPOSED_NOT_IMPLEMENTED_NOT_LEGAL_CONCLUSION",
+    "retention": "five_years_or_applicable_law_subject_to_owner_review",
+    "permitted_aggregate_fields": [
+      "request_timestamp",
+      "endpoint_category",
+      "requested_count",
+      "returned_count",
+      "missing_count",
+      "http_status_or_sanitized_error_category",
+      "response_byte_count",
+      "duration_milliseconds",
+      "policy_version",
+      "code_version"
+    ],
+    "prohibited_fields": [
+      "credentials",
+      "authorization_headers",
+      "cookies",
+      "account_identifiers",
+      "instrument_identifiers",
+      "prices",
+      "response_bodies",
+      "sensitive_headers",
+      "private_paths"
+    ],
+    "raw_quote_retention": "transient_memory_only",
+    "shared_cache": false,
+    "public_display": false
+  },
+  "current_gate_updates": {
+    "owner_account_confirmation": "RECORDED_NOT_PUBLISHER_EVIDENCE",
+    "current_ltp_semantics": "RESOLVED_CURRENT_ONLY",
+    "historical_adjustment": "NOT_APPLICABLE_NO_HISTORY_CLAIM",
+    "rest_currency_units": "UNRESOLVED",
+    "session_source": "IDENTIFIED_IMPLEMENTATION_ABSENT",
+    "cache_and_compliance": "POLICY_PROPOSED_IMPLEMENTATION_AND_REVIEW_PENDING",
+    "operational_validation": "NOT_IMPLEMENTED_NOT_EXECUTED",
+    "dashboard_wiring": "NOT_AUTHORIZED"
+  },
+  "network_activity": {
+    "official_documentation_pages_reviewed": true,
+    "authenticated_requests": 0,
+    "market_data_requests": 0,
+    "quote_payloads_retained": 0,
+    "document_copies_retained": 0
+  },
+  "next_separate_scope": "OFFLINE_SESSION_POLICY_AND_SANITIZED_COMPLIANCE_LEDGER_DESIGN_AFTER_OWNER_APPROVAL",
+  "completion_state": "PREREQUISITES_PARTIALLY_RESOLVED_DISPLAY_STILL_BLOCKED"
+}

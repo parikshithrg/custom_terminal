@@ -25,11 +25,12 @@ The earlier PDF and roadmap image are historical snapshots, not regenerated here
 
 All unchecked items are planned, not executed or authorized by this checklist.
 
-1. [ ] **Freeze the equity consumer requirements and acceptance matrix.** Reuse
-   existing contracts: exact universe, fields, timeframe, identity, currency,
-   adjustment basis, exchange session, permission, freshness and missingness.
-   Record pass/fail rules before accessing test results; no revised thresholds
-   to make a result pass. Do not repeat completed contract work.
+1. [x] **Freeze the equity consumer requirements and acceptance matrix.** The
+   `DASHBOARD_EQUITY_DISPLAY_ELIGIBILITY_V1` decision binds the exact current-EQ
+   universe and fields plus independent identity, currency, adjustment, session,
+   permission, freshness, quality, retention and operational gates. All must pass
+   before separate wiring approval; coverage cannot override another gate and
+   thresholds cannot be revised after results. Current decision is not eligible.
 2. [ ] **Resolve the existing exact-price live-test prerequisites.** Bind account
    entitlement, private transient processing and compliance obligations; obtain
    explicit approval of the committed two-request scope and local target binding.
@@ -39,27 +40,39 @@ All unchecked items are planned, not executed or authorized by this checklist.
 4. [ ] **Run the separately approved exact 50-equity operational test.** Report
    requested/returned/missing/unavailable/stale counts truthfully. Complete
    coverage cannot override permission, clock, session or semantic gates.
-5. [ ] **Build an offline Daily Equity Data Health read model.** Start with
+5. [x] **Build an offline Daily Equity Data Health read model.** Implemented in
+   `daily_equity_data_health_v1` with synthetic fixtures only. It reuses existing
+   readiness results and emits sanitized aggregate counts, separate clock ranges,
+   fixture session status, last-successful-refresh and blocking reasons. It is
+   deterministic, in-memory, never market-ready and not wired into the UI.
+   The original planned boundary was: start with
    synthetic fixtures and caller-injected time. One consumer; expose session
    status (without account identifiers), counts, separate provider/retrieval
    clocks, inventory age, last successful refresh and explicit blocking reasons.
    Unknown, expired, stale, incomplete and unavailable states must be tested.
-6. [ ] **Add a sanitized validation/refresh ledger contract.** Bind contract,
-   code/configuration and policy versions, permitted input hashes, counts and
-   rejection reasons; distinguish synthetic, manually reported and verified
-   evidence. No credentials, raw quotes, instrument inventories or private paths.
-   Start in memory; even aggregate/hash persistence needs a separately approved
-   provider-specific record/retention policy. A ledger is not activation authority.
-7. [ ] **Add read-only equity quality diagnostics and stronger fixtures.** Extend
-   existing quality code, not a competing cleaner. Cover duplicates, gaps,
-   malformed identities, nonfinite prices, timestamps and incompatible semantics.
-   Use session-aware expectations; do not count market holidays as missing trades.
-   Preserve original facts: no price interpolation, automatic candle repair,
-   zero substitution, silent duplicate removal or volume-based provider selection.
+6. [x] **Add a sanitized validation/refresh ledger contract.** Implemented as an
+   in-memory, deterministic synthetic contract binding contract, code,
+   configuration and policy versions, permitted input hashes, aggregate counts and
+   rejection reasons. Evidence classification is explicit; manual, provider,
+   historical, quarantined and claimed verified modes fail closed. It contains no
+   credentials, raw quotes, instrument inventories or private paths and grants no
+   persistence, refresh, activation, research or production authority. Aggregate
+   or hash persistence still needs a separately approved provider-specific record
+   and retention policy.
+7. [x] **Add read-only equity quality diagnostics and stronger fixtures.** The
+   aggregate diagnostic extends existing readiness output and covers implicated
+   duplicates, declared-universe gaps, malformed identity refusal,
+   missing/invalid/nonfinite prices, timestamps, incompatible semantics and source
+   failures. Gap checks require an explicit synthetic session: non-trading days
+   are not counted as missing and unknown sessions remain indeterminate. Original
+   facts stay immutable; interpolation, repair, zero substitution, silent duplicate
+   removal, gap filling and provider selection are all unavailable.
 8. [ ] **Wire eligible equity prices and data-health states into Dashboard.**
    Separate consumer/display approval and currency, adjustment and session
    evidence required. Keep the approved visual baseline and display rounding;
-   do not silently promote synthetic fixtures or quarantine data.
+   do not silently promote synthetic fixtures or quarantine data. Eligibility
+   decision v1 is prepared and remains blocked on every frozen prerequisite; no
+   wiring or provider request has occurred.
 9. [ ] **Add separately approved cash-index tiles and change calculations.**
    Explicit previous-close basis, units, as-of and unavailable behavior; no
    derivative-dependent inputs or implied permission from equity access.
@@ -113,5 +126,13 @@ its MIT notice and independent tests. Its mutating cleaning/merging defaults are
 not adopted. The video's process/ledger/operational-check ideas are inspiration,
 not verified performance evidence: [video](https://www.youtube.com/watch?v=TVNOTqv0n1k).
 
-Next useful new build: **offline Daily Equity Data Health contract**, reusing existing
-readiness components. The live-test approval gate remains independent and pending.
+Next useful step: **resolve the frozen Dashboard display prerequisites** through
+owner account/permission confirmation and a bounded official-documentation review
+of currency/units, current-price adjustment meaning, session-calendar handling and
+cache/compliance controls. This remains separate from live testing and UI wiring.
+
+2026-09-19 update: the owner account/application confirmation and bounded official
+documentation review are complete. Current LTP semantics are resolved for a
+current-only display; official NSE session sources are identified. REST NSE-EQ
+currency remains unresolved, and maintained calendar plus sanitized compliance-
+ledger implementations remain separately gated. Dashboard wiring stays blocked.

@@ -127,6 +127,12 @@ def test_panel_load_has_zero_requests(monkeypatch):
     app = AppTest.from_string("from datetime import datetime, timezone\nfrom views._nifty50_manual_test import render\nrender(now=lambda: datetime(2026,9,17,10,tzinfo=timezone.utc), manual_refresh=lambda action: True, provider_error=lambda exc: None)").run()
     assert not app.exception
     assert next(button for button in app.button if button.label.startswith("Test all 50")).disabled
+    assert app.button(key="kite_exact_prepare_binding").disabled
+    assert any("validated official NIFTY 50 list" in item.value
+               for item in app.info)
+    source = (root/"views/_nifty50_manual_test.py").read_text(encoding="utf-8")
+    assert "execute_two_batch_test" not in source
+    assert "disabled=bool(missing_preflight)" in source
 
 
 def test_owner_upload_preserves_declared_lineage_and_no_network(monkeypatch):

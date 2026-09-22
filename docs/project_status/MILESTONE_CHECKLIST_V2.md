@@ -35,8 +35,14 @@ All unchecked items are planned, not executed or authorized by this checklist.
    entitlement, private transient processing and compliance obligations; obtain
    explicit approval of the committed two-request scope and local target binding.
 3. [ ] **Implement and test the bounded exact-price live transport/manual controls.**
-   Only under separately approved scope; preserve immutable Decimal facts,
-   timestamps, budgets, no fallback/retry and transactional combined reporting.
+   The transport core is implemented and tested offline: exact 50-target local
+   binding, two ordered 25-target GETs, fixed URL, streaming byte/deadline checks,
+   no redirects/retries/cache/fallback, response ownership and transactional
+   combined reporting. The local manual preflight/confirmation UI is implemented:
+   it displays only the sanitized binding hash/counts and invalidates changed or
+   expired inputs without requesting data. The owner-triggered live execution
+   control remains pending and separately gated. Immutable Decimal facts and clocks
+   are preserved.
 4. [ ] **Run the separately approved exact 50-equity operational test.** Report
    requested/returned/missing/unavailable/stale counts truthfully. Complete
    coverage cannot override permission, clock, session or semantic gates.
@@ -67,38 +73,47 @@ All unchecked items are planned, not executed or authorized by this checklist.
    are not counted as missing and unknown sessions remain indeterminate. Original
    facts stay immutable; interpolation, repair, zero substitution, silent duplicate
    removal, gap filling and provider selection are all unavailable.
-8. [ ] **Wire eligible equity prices and data-health states into Dashboard.**
+8. [x] **Build offline cash-session and sanitized compliance contracts.** The
+   explicit-date synthetic calendar declares every covered date as normal, closed
+   or special and fails closed for unknown or expired coverage. The aggregate
+   compliance record binds versions, caller-supplied clocks, counts, bytes,
+   sanitized outcomes and a session-resolution hash while excluding credentials,
+   identities, prices, payloads, headers and private paths. Both contracts remain
+   in-memory, synthetic-only and unable to authorize provider access, persistence,
+   Dashboard display, research or production. Official maintained calendar input
+   and provider-specific retention policy remain separate prerequisites.
+9. [ ] **Wire eligible equity prices and data-health states into Dashboard.**
    Separate consumer/display approval and currency, adjustment and session
    evidence required. Keep the approved visual baseline and display rounding;
    do not silently promote synthetic fixtures or quarantine data. Eligibility
    decision v1 is prepared and remains blocked on every frozen prerequisite; no
    wiring or provider request has occurred.
-9. [ ] **Add separately approved cash-index tiles and change calculations.**
+10. [ ] **Add separately approved cash-index tiles and change calculations.**
    Explicit previous-close basis, units, as-of and unavailable behavior; no
    derivative-dependent inputs or implied permission from equity access.
-10. [ ] **Qualify equity history, corporate actions and effective-dated sectors.**
+11. [ ] **Qualify equity history, corporate actions and effective-dated sectors.**
     Include historical membership/delistings and point-in-time provenance where
     required. Existing desktop CSVs are candidates, not qualified sources.
-11. [ ] **Complete Market & Sector Context and Setup Scanner with eligible inputs.**
+12. [ ] **Complete Market & Sector Context and Setup Scanner with eligible inputs.**
     Each calculation needs explicit semantics and test coverage; scoring or
     recommendations remain separately research-gated, not ordinary UI wiring.
-12. [ ] **Build owner-input allocation, portfolio and goal features.** Keep manual
+13. [ ] **Build owner-input allocation, portfolio and goal features.** Keep manual
     inputs distinct from provider facts; use existing accounting/contracts first.
     A core/short-term allocation split is an optional future representation, not
     a prescribed investment strategy. Hidden Trade Management stays hidden.
-13. [ ] **Validate performance, benchmarks and explanatory charts.** Handle cash
+14. [ ] **Validate performance, benchmarks and explanatory charts.** Handle cash
     flows, fees, dividends, return basis, periods and missing benchmarks explicitly.
     Borrow chart layouts, not the reference toolkit's dark theme or demo returns.
     Drawdown/recovery and correlation require suitable, aligned eligible data.
-14. [ ] **Activate approved News & Calendar sources.** Publisher rights, timestamps,
+15. [ ] **Activate approved News & Calendar sources.** Publisher rights, timestamps,
     lineage and consumer gates first. Summaries must distinguish source statements
     from inference; news-driven signals/allocation are not part of this milestone.
-15. [ ] **Complete integration, security, storage and failure-handling checks.**
+16. [ ] **Complete integration, security, storage and failure-handling checks.**
     Test token expiry, reconnects, partial responses, unavailable feeds and privacy.
     Avoid duplicate full datasets; track storage growth. Propose scheduled health
     checks only separately, with exchange-calendar/timezone, request, retention and
     notification controls. No unattended acquisition authorized by roadmap entry.
-16. [ ] **Deploy the private functioning non-F&O terminal within provider permissions.**
+17. [ ] **Deploy the private functioning non-F&O terminal within provider permissions.**
     Deployment readiness is operational, not proof of strategy profitability.
 
 ## Later, separately gated
@@ -136,3 +151,19 @@ documentation review are complete. Current LTP semantics are resolved for a
 current-only display; official NSE session sources are identified. REST NSE-EQ
 currency remains unresolved, and maintained calendar plus sanitized compliance-
 ledger implementations remain separately gated. Dashboard wiring stays blocked.
+
+2026-09-22 update: offline explicit-date session and sanitized compliance contracts
+are implemented and tested. A fresh official-documentation test still found no
+explicit Kite REST `/quote.last_price` currency/major-unit binding. Cross-surface
+WebSocket scaling and NSE rupee denomination remain insufficient under the frozen
+policy, so currency and Dashboard wiring stay blocked without conversion or label.
+
+2026-09-22 usability decision: preserve the safety contracts but replace the
+owner-visible multi-step exact preflight with one deliberate **Check today's
+equity data** action after daily login and, only when necessary, official NIFTY 50
+CSV upload. That action may orchestrate one current-inventory refresh plus the
+existing two bounded 25-target quote requests, with no background activity.
+Counts and freshness are primary; hashes and binding diagnostics move behind
+optional technical details. This simplification is the next implementation
+milestone and does not authorize Dashboard wiring, currency labelling,
+persistence, research, recommendations, or trading.

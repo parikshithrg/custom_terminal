@@ -1,6 +1,7 @@
 {
   "schema_version": "dashboard_equity_display_eligibility_v1",
   "prepared_on": "2026-09-19",
+  "last_updated": "2026-09-22",
   "baseline": "141e1ba27458bd297639fa4a7a8b67190e1023d9",
   "consumer": "dashboard_current_cash_equity_watchlist",
   "candidate_source": "kite_current_equity_full_quote",
@@ -73,9 +74,9 @@
     },
     {
       "gate_id": "CURRENCY_UNITS",
-      "state": "UNVERIFIED_FOR_BOUND_TARGETS",
+      "state": "OFFICIAL_REVIEW_COMPLETE_EXPLICIT_REST_BINDING_ABSENT",
       "required_to_pass": "AUTHORITATIVE_INR_AND_PRICE_UNIT_BINDING",
-      "evidence_class": "NONE",
+      "evidence_class": "AUTHORITATIVE_CROSS_SURFACE_DOCUMENTS_INSUFFICIENT_FOR_EXPLICIT_REST_BINDING",
       "blocking": true
     },
     {
@@ -87,9 +88,9 @@
     },
     {
       "gate_id": "EXCHANGE_SESSION_POLICY",
-      "state": "AUTHORITATIVE_SOURCE_IDENTIFIED_MAINTAINED_CALENDAR_ABSENT",
+      "state": "OFFLINE_SYNTHETIC_CONTRACT_IMPLEMENTED_MAINTAINED_OFFICIAL_CALENDAR_ABSENT",
       "required_to_pass": "VERSIONED_TIMEZONE_AWARE_TRADING_AND_NONTRADING_SESSION_POLICY",
-      "evidence_class": "NONE",
+      "evidence_class": "SYNTHETIC_CONTRACT_TESTS_ONLY",
       "blocking": true
     },
     {
@@ -108,16 +109,16 @@
     },
     {
       "gate_id": "CACHE_RETENTION_AND_COMPLIANCE_RECORDS",
-      "state": "TRANSIENT_SCOPE_CONFIRMED_SANITIZED_RECORD_POLICY_PROPOSED_NOT_IMPLEMENTED",
+      "state": "OFFLINE_SYNTHETIC_SANITIZED_CONTRACT_IMPLEMENTED_PROVIDER_SPECIFIC_POLICY_PENDING",
       "required_to_pass": "PRIVATE_MEMORY_CACHE_AND_SANITIZED_RECORD_POLICY_APPROVED",
-      "evidence_class": "AUTHORITATIVE_TERMS_PLUS_OWNER_CONFIRMATION_PLUS_PROJECT_PROPOSAL",
+      "evidence_class": "AUTHORITATIVE_TERMS_PLUS_OWNER_CONFIRMATION_PLUS_SYNTHETIC_CONTRACT_TESTS",
       "blocking": true
     },
     {
       "gate_id": "BOUNDED_OPERATIONAL_VALIDATION",
-      "state": "NOT_IMPLEMENTED_NOT_EXECUTED",
+      "state": "TRANSPORT_AND_LOCAL_PREFLIGHT_UI_IMPLEMENTED_NOT_EXECUTED_RUNTIME_CONFIRMATION_PENDING",
       "required_to_pass": "SEPARATELY_APPROVED_HASH_BOUND_TWO_REQUEST_TEST_COMPLETED",
-      "evidence_class": "NONE",
+      "evidence_class": "OFFLINE_TRANSPORT_TESTS_ONLY",
       "blocking": true
     }
   ],
@@ -161,6 +162,6 @@
     "trading": false,
     "persistence": false
   },
-  "next_separately_authorized_scope": "OFFLINE_SESSION_POLICY_AND_SANITIZED_COMPLIANCE_LEDGER_DESIGN_THEN_RESOLVE_REST_CURRENCY_BINDING",
+  "next_separately_authorized_scope": "RESOLVE_REST_CURRENCY_BINDING_AND_PREPARE_MAINTAINED_OFFICIAL_CALENDAR_INPUT_AND_PROVIDER_SPECIFIC_COMPLIANCE_POLICY",
   "completion_state": "DISPLAY_ELIGIBILITY_BLOCKED_PENDING_PREREQUISITES"
 }

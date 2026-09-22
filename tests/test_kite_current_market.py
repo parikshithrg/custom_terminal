@@ -89,6 +89,12 @@ def test_instrument_normalization_and_current_only_scope():
     with pytest.raises(TypeError): snapshot.as_historical_universe()
 
 
+def test_inventory_session_date_uses_ist_not_utc_date():
+    instant = datetime(2026, 8, 25, 19, 0, tzinfo=timezone.utc)
+    snapshot = client([Response(text=CSV)], now=lambda: instant).discover_current_instruments()
+    assert snapshot.session_date == "2026-08-26"
+
+
 def test_incomplete_inventory_rows_are_preserved_with_quality_flags():
     broken = CSV + ",,,,,,,,,,NSE,NSE\n"
     snapshot = client([Response(text=broken)]).discover_current_instruments()

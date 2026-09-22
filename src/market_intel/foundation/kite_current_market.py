@@ -1,7 +1,7 @@
 """Allowlisted, GET-only Kite current-market client."""
 from __future__ import annotations
 import csv, io
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Any, Callable, Sequence
 from .current_market import CurrentInstrument,CurrentInstrumentSnapshot,CurrentQuote,CurrentQuoteSnapshot
 from .kite_connect import KiteSession
@@ -9,6 +9,7 @@ API_ROOT="https://api.kite.trade"
 ALLOWED_ENDPOINTS={"profile":("GET","/user/profile"),"instruments":("GET","/instruments"),
     "ltp":("GET","/quote/ltp"),"quote":("GET","/quote"),"ohlc":("GET","/quote/ohlc")}
 MAX_QUOTE_SYMBOLS=25; QUOTE_CACHE_SECONDS=15
+IST=timezone(timedelta(hours=5,minutes=30))
 class KiteCurrentDataError(RuntimeError): pass
 class KiteInvalidSessionError(KiteCurrentDataError): pass
 class KiteEntitlementError(KiteCurrentDataError): pass
@@ -96,7 +97,7 @@ class KiteCurrentMarketClient:
             instruments=tuple(self._normalize_instrument(r) for r in reader)
             if not instruments: raise ValueError
         except Exception as exc: raise KiteCurrentDataError("Kite instrument response has an unsupported schema") from exc
-        now=self._now(); self._inventory=CurrentInstrumentSnapshot("kite_connect",now,now.date().isoformat(),"/instruments","kite_instruments_csv_v1",instruments)
+        now=self._now(); self._inventory=CurrentInstrumentSnapshot("kite_connect",now,now.astimezone(IST).date().isoformat(),"/instruments","kite_instruments_csv_v1",instruments)
         return self._inventory
     def get_current_quotes(self,instrument_keys:Sequence[str],*,mode:str="quote")->CurrentQuoteSnapshot:
         if mode not in {"ltp","quote","ohlc"}: raise KiteReadOnlyViolation("Quote mode is not in the read-only allowlist")

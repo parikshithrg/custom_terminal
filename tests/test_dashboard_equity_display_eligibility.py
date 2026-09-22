@@ -38,6 +38,58 @@ def test_acceptance_matrix_is_complete_independent_and_fail_closed():
     assert policy["synthetic_or_manual_results_can_promote_source"] is False
 
 
+def test_offline_session_and_compliance_contracts_do_not_clear_live_gates():
+    decision = load()
+    gates = {gate["gate_id"]: gate for gate in decision["gates"]}
+    session = gates["EXCHANGE_SESSION_POLICY"]
+    compliance = gates["CACHE_RETENTION_AND_COMPLIANCE_RECORDS"]
+    assert session["state"] == (
+        "OFFLINE_SYNTHETIC_CONTRACT_IMPLEMENTED_MAINTAINED_OFFICIAL_CALENDAR_ABSENT"
+    )
+    assert compliance["state"] == (
+        "OFFLINE_SYNTHETIC_SANITIZED_CONTRACT_IMPLEMENTED_PROVIDER_SPECIFIC_POLICY_PENDING"
+    )
+    assert session["blocking"] is True
+    assert compliance["blocking"] is True
+    assert decision["decision"] == "NOT_ELIGIBLE_FOR_DASHBOARD_WIRING"
+    assert decision["provider_requests_authorized"] is False
+
+
+def test_currency_review_does_not_promote_cross_surface_inference():
+    decision = load()
+    gate = next(gate for gate in decision["gates"]
+                if gate["gate_id"] == "CURRENCY_UNITS")
+    assert gate["state"] == "OFFICIAL_REVIEW_COMPLETE_EXPLICIT_REST_BINDING_ABSENT"
+    assert "INSUFFICIENT" in gate["evidence_class"]
+    assert gate["blocking"] is True
+    review = json.loads((ROOT/"docs/project_status/KITE_REST_CURRENCY_BINDING_REVIEW_V1.json")
+                        .read_text(encoding="utf-8"))
+    assert review["currency_state"] == "NOT_VERIFIED"
+    assert review["dashboard_wiring_authorized"] is False
+
+
+def test_offline_transport_implementation_does_not_claim_operational_validation():
+    decision = load()
+    gate = next(gate for gate in decision["gates"]
+                if gate["gate_id"] == "BOUNDED_OPERATIONAL_VALIDATION")
+    assert gate["state"] == (
+        "TRANSPORT_AND_LOCAL_PREFLIGHT_UI_IMPLEMENTED_NOT_EXECUTED_RUNTIME_CONFIRMATION_PENDING"
+    )
+    assert gate["evidence_class"] == "OFFLINE_TRANSPORT_TESTS_ONLY"
+    assert gate["blocking"] is True
+    implementation = json.loads((
+        ROOT/"docs/project_status/KITE_EXACT_TRANSPORT_IMPLEMENTATION_V1.json"
+    ).read_text(encoding="utf-8"))
+    assert implementation["provider_request_performed"] is False
+    assert implementation["authorization"]["current_status"] == "PENDING"
+    assert implementation["result"]["dashboard_authorized"] is False
+    preflight = json.loads((
+        ROOT/"docs/project_status/KITE_EXACT_PREFLIGHT_UI_V1.json"
+    ).read_text(encoding="utf-8"))
+    assert preflight["live_execution_control"] is False
+    assert preflight["dashboard_wiring_authorized"] is False
+
+
 def test_consumer_fields_do_not_expand_to_change_history_or_trading():
     contract = load()["consumer_contract"]
     assert contract["universe"] == "at_most_25_explicitly_selected_current_NSE_or_BSE_EQ_targets"

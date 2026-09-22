@@ -1,0 +1,40 @@
+{
+  "schema_version": "kite_exact_preflight_ui_v1",
+  "implemented_on": "2026-09-22",
+  "location": "Data Coverage / Current Quotes / NIFTY 50 two-batch equity test",
+  "state": "LOCAL_PREFLIGHT_AND_CONFIRMATION_IMPLEMENTED",
+  "live_execution_control": false,
+  "provider_request_performed_by_preflight": false,
+  "persistent_output": false,
+  "displayed_fields": [
+    "target_count",
+    "batch_sizes",
+    "exchange",
+    "instrument_class",
+    "binding_sha256",
+    "confirmation_expiry"
+  ],
+  "private_fields_displayed": false,
+  "binding": {
+    "target_count": 50,
+    "batch_sizes": [25, 25],
+    "exchange": "NSE",
+    "instrument_class": "EQ",
+    "constituent_hash_bound": true,
+    "selected_inventory_hash_bound": true,
+    "inventory_provenance_bound": true,
+    "confirmation_state": "OWNER_CONFIRMED_LOCAL_BINDING",
+    "maximum_lifetime_seconds": 600
+  },
+  "invalidation": [
+    "constituent_change_or_refresh",
+    "inventory_change_or_refresh",
+    "crosswalk_or_provenance_change",
+    "login_replacement",
+    "disconnect",
+    "ten_minute_preflight_expiry"
+  ],
+  "dashboard_wiring_authorized": false,
+  "currency_state": "NOT_VERIFIED",
+  "next_step": "SEPARATELY_APPROVED_OWNER_TRIGGERED_EXACT_TWO_BATCH_EXECUTION_CONTROL"
+}

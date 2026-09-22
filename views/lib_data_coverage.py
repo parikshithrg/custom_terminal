@@ -137,12 +137,25 @@ with connection_tab:
 with inventory_tab:
     client = st.session_state.get("kite_client")
     if not client:
-        st.info("Authenticate first to load the current instrument inventory.")
-    elif st.button("Refresh current inventory", help="Manual, five-second cooldown"):
+        st.info(
+            "Step 1: open the Kite Connection tab and attach today's access token. "
+            "Step 2: return here and refresh the current inventory."
+        )
+        st.button(
+            "Refresh current inventory",
+            disabled=True,
+            key="kite_inventory_refresh_locked",
+            help="Authenticate in Kite Connection first.",
+        )
+    elif st.button("Refresh current inventory", key="kite_inventory_refresh",
+                   help="Manual, five-second cooldown"):
         if _manual_refresh("inventory"):
             try:
                 snapshot = client.discover_current_instruments()
                 st.session_state["kite_inventory"] = snapshot
+                for key in ("kite_exact_binding", "kite_exact_approval",
+                            "kite_exact_binding_confirmed"):
+                    st.session_state.pop(key, None)
                 st.session_state["kite_last_request"] = snapshot.retrieved_at.isoformat()
                 st.session_state.pop("kite_last_failure_category", None)
             except KiteCurrentDataError as exc:

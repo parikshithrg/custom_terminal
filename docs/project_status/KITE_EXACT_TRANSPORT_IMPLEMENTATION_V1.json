@@ -1,0 +1,38 @@
+{
+  "schema_version": "kite_exact_transport_implementation_v1",
+  "implemented_on": "2026-09-22",
+  "frozen_scope": "kite_exact_live_test_scope_v1",
+  "implementation_state": "OFFLINE_TRANSPORT_CORE_IMPLEMENTED",
+  "execution_state": "NOT_EXECUTED_LOCAL_BINDING_AND_CONFIRMATION_PENDING",
+  "ui_state": "LOCAL_PREFLIGHT_AND_CONFIRMATION_IMPLEMENTED_EXECUTION_CONTROL_ABSENT",
+  "provider_request_performed": false,
+  "credentials_or_session_inspected": false,
+  "private_targets_inspected": false,
+  "limits": {
+    "targets": 50,
+    "batch_sizes": [25, 25],
+    "transactions_max": 2,
+    "response_bytes_max": 65536,
+    "total_bytes_max": 131072,
+    "request_timeout_seconds": 20,
+    "total_deadline_seconds": 60,
+    "owner_session_seconds": 600,
+    "result_retention_seconds": 60,
+    "redirects": 0,
+    "retries": 0
+  },
+  "authorization": {
+    "required_state": "OWNER_CONFIRMED_LOCAL_BINDING",
+    "exact_binding_hash_required": true,
+    "current_status": "PENDING",
+    "generic_chat_approval_executes_requests": false
+  },
+  "result": {
+    "currency_state": "NOT_VERIFIED",
+    "persistence": false,
+    "dashboard_authorized": false,
+    "source_qualified": false,
+    "partial_publication": false
+  },
+  "next_step": "SEPARATELY_APPROVED_OWNER_TRIGGERED_EXACT_TWO_BATCH_EXECUTION_CONTROL"
+}

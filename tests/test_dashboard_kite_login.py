@@ -99,3 +99,23 @@ def test_dashboard_login_interactions_with_zero_requests(monkeypatch):
     next(button for button in app.button if button.label == "Disconnect Kite and clear values").click().run()
     assert not app.exception
     assert all(not field.value for field in app.text_input)
+
+
+def test_inventory_tab_keeps_refresh_step_visible_while_unauthenticated(monkeypatch):
+    site = ROOT/".venv/Lib/site-packages"
+    if site.exists() and str(site) not in sys.path:
+        sys.path.append(str(site))
+    pytest.importorskip("streamlit")
+    import requests
+
+    def denied(*args, **kwargs):
+        raise AssertionError("Viewing the locked inventory control cannot request data")
+
+    monkeypatch.setattr(requests.sessions.Session, "request", denied)
+    from streamlit.testing.v1 import AppTest
+    app = AppTest.from_file(str(ROOT/"views/lib_data_coverage.py"), default_timeout=15).run()
+    assert not app.exception
+    button = app.button(key="kite_inventory_refresh_locked")
+    assert button.label == "Refresh current inventory"
+    assert button.disabled
+    assert any("open the Kite Connection tab" in item.value for item in app.info)

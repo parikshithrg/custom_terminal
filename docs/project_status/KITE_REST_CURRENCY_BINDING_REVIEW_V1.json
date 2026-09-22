@@ -1,0 +1,66 @@
+{
+  "schema_version": "kite_rest_currency_binding_review_v1",
+  "reviewed_on": "2026-09-22",
+  "scope": "PUBLIC_OFFICIAL_DOCUMENTATION_ONLY",
+  "provider_request_performed": false,
+  "authenticated_access_performed": false,
+  "review_copy_retained": false,
+  "question": "EXPLICIT_KITE_REST_NSE_EQ_LAST_PRICE_INR_MAJOR_UNIT_BINDING",
+  "evidence": [
+    {
+      "publisher": "KITE_CONNECT",
+      "surface": "REST_MARKET_QUOTES",
+      "url": "https://kite.trade/docs/connect/v3/market-quotes/",
+      "establishes": [
+        "LAST_PRICE_IS_LAST_TRADED_MARKET_PRICE",
+        "TARGET_IDENTITY_USES_EXCHANGE_SYMBOL_PAIR"
+      ],
+      "does_not_establish": [
+        "REST_FIELD_CURRENCY",
+        "REST_FIELD_MAJOR_OR_MINOR_UNIT"
+      ]
+    },
+    {
+      "publisher": "KITE_CONNECT",
+      "surface": "WEBSOCKET_BINARY_QUOTES",
+      "url": "https://kite.trade/docs/connect/v3/websocket/",
+      "establishes": [
+        "NON_CURRENCY_BINARY_PRICES_ARE_PAISE_DIVIDED_BY_100"
+      ],
+      "does_not_establish": [
+        "REST_JSON_SERIALIZATION_UNIT"
+      ]
+    },
+    {
+      "publisher": "NSE",
+      "surface": "CAPITAL_MARKET",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CMTR62174.pdf",
+      "establishes": [
+        "CASH_SEGMENT_TICK_SIZE_IS_RUPEE_DENOMINATED"
+      ],
+      "does_not_establish": [
+        "KITE_REST_JSON_SERIALIZATION_UNIT"
+      ]
+    },
+    {
+      "publisher": "NSE",
+      "surface": "CAPITAL_MARKET_FEED",
+      "url": "https://nsearchives.nseindia.com/web/sites/default/files/inline-files/Real%20time_CM-L1_L2_L3_V1.29_2.pdf",
+      "establishes": [
+        "EXCHANGE_FEED_TICK_SIZE_CONTEXT_DISTINGUISHES_PAISE_AND_INR"
+      ],
+      "does_not_establish": [
+        "KITE_REST_JSON_SERIALIZATION_UNIT"
+      ]
+    }
+  ],
+  "result": "UNRESOLVED_EXPLICIT_REST_CURRENCY_UNIT_BINDING_ABSENT",
+  "currency_state": "NOT_VERIFIED",
+  "cross_surface_inference_is_authoritative_binding": false,
+  "sample_numeric_agreement_is_authoritative_binding": false,
+  "conversion_authorized": false,
+  "currency_label_authorized": false,
+  "dashboard_wiring_authorized": false,
+  "provider_requests_authorized": false,
+  "next_authoritative_prerequisite": "PROVIDER_ISSUED_EXPLICIT_REST_NSE_EQ_CURRENCY_AND_UNIT_STATEMENT"
+}

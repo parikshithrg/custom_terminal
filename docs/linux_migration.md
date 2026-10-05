@@ -38,3 +38,8 @@ suites. It writes an ignored validation record under `artifacts/`.
 
 `--quick`, `--skip-tests`, and `--allow-dirty` are development diagnostics
 only. They intentionally cannot produce an operational PASS.
+
+For the first Codex chat on the restored Linux machine, use the ready-to-paste
+[Linux restore prompt](project_status/LINUX_RESTORE_CODEX_PROMPT.md). The
+dated [project memory](project_status/PROJECT_MEMORY_2026_10_05.md) records
+the exact handoff state and boundaries.

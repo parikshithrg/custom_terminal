@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import sqlite3
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from typing import Any
 
 import pandas as pd
@@ -43,6 +43,23 @@ def write_parquet_immutable(frame: pd.DataFrame, path: str | Path) -> str:
     return sha256_file(path)
 
 
+def normalize_logical_path(value: str | Path) -> str:
+    """Return a portable relative path for manifests and catalogs.
+
+    Historical catalogs may contain Windows separators, so reads normalize
+    them.  New writes reject absolute or parent-traversing paths: a host path
+    is a runtime locator, not part of canonical artifact identity.
+    """
+    raw = str(value)
+    windows = PureWindowsPath(raw)
+    if windows.is_absolute() or Path(raw).is_absolute():
+        raise ValueError(f"logical artifact path must be relative: {raw}")
+    logical = PurePosixPath(raw.replace("\\", "/"))
+    if not logical.parts or any(part in {"", ".", ".."} for part in logical.parts):
+        raise ValueError(f"invalid logical artifact path: {raw}")
+    return logical.as_posix()
+
+
 class Catalog:
     def __init__(self, path: str | Path):
         self.path = Path(path)
@@ -57,11 +74,23 @@ class Catalog:
         self.db.commit()
 
     def record_run(self, row: dict[str, str]) -> None:
+        portable = dict(row)
+        portable["manifest_path"] = normalize_logical_path(portable["manifest_path"])
         self.db.execute(
             "INSERT INTO runs VALUES (:run_id,:experiment_id,:state,:manifest_path,:manifest_hash,:created_at)",
-            row,
+            portable,
         )
         self.db.commit()
+
+    def runs(self) -> list[dict[str, str]]:
+        """Read catalog rows with historical Windows separators normalized."""
+        columns = ("run_id", "experiment_id", "state", "manifest_path", "manifest_hash", "created_at")
+        rows = []
+        for values in self.db.execute("SELECT * FROM runs ORDER BY run_id"):
+            row = dict(zip(columns, values, strict=True))
+            row["manifest_path"] = normalize_logical_path(row["manifest_path"])
+            rows.append(row)
+        return rows
 
     def close(self) -> None:
         self.db.close()

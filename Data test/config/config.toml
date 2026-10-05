@@ -16,12 +16,14 @@ project = "Data test"
 as_of = 2026-08-13
 
 [paths]
-# Source data lives in the market_gate project and is read STRICTLY read-only.
-# Nothing in this project writes to these paths. They are content-hashed on
-# every run so a result can always be tied to the exact bytes it came from.
-price_dir = "C:/Users/parik/OneDrive/Desktop/Dashboard/data"
-fno_db    = "C:/Users/parik/OneDrive/Desktop/Dashboard/fno.db"
-industry_map = "C:/Users/parik/OneDrive/Desktop/Dashboard/market_gate/data/nifty500.csv"
+# Source data is read STRICTLY read-only.  These portable placeholders are not
+# auto-discovery rules: each machine must bind the exact audited snapshot with
+# DTEST_PRICE_DIR, DTEST_FNO_DB and DTEST_INDUSTRY_MAP.  The environment values
+# override these entries in dtest.config.load_config.  Never point them at a
+# merely similar dataset.
+price_dir = "external_data/prices"
+fno_db    = "external_data/fno.db"
+industry_map = "external_data/nifty500.csv"
 # Macro series this project sourced itself (US VIX, USDINR, DXY, gold - for
 # the cross-asset stress-regime gate). NOT read-only like the three paths
 # above: `scripts/fetch_macro_stress_series.py` writes here, once, as a
@@ -74,14 +76,9 @@ insider_trading_dir = "data/insider_trading"
 index_reconstitution_dir = "data/index_reconstitution"
 # Derived data - the bhavcopy raw/parsed cache and panel parquet files.
 # Regenerable from source + config, gitignored, and DELIBERATELY OUTSIDE
-# OneDrive: this project's own working tree lives under
-# OneDrive/Desktop/Data test, and the predecessor project hit this exact
-# problem before (its 144 MB research cache was pointed outside OneDrive for
-# the same reason - a sync client re-uploading gigabytes of regenerable cache
-# on every ingest run is wasted bandwidth and a source of file-lock errors
-# mid-write). Overridable per-machine via the DTEST_ARTIFACTS_DIR env var
-# (checked in config.py::load_config) without editing this tracked file.
-artifacts = "C:/Users/parik/AppData/Local/dtest_artifacts"
+# a synchronized checkout can still relocate the cache. Override per-machine
+# with DTEST_ARTIFACTS_DIR and DTEST_RUNS_DIR without editing this tracked file.
+artifacts = "artifacts"
 runs      = "runs"
 
 [benchmark]

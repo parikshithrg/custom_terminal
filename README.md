@@ -169,6 +169,14 @@ Opens at `http://127.0.0.1:8501` by default. Use the grouped sidebar or
 home directory cards to open a page. `runOnSave = true` is set; restart
 after edits to imported modules if the preview retains older styling.
 
+## Linux migration
+
+The reproducible Python baseline, external-data bindings, snapshot identity,
+and one-command validation gate are documented in
+[`docs/linux_migration.md`](docs/linux_migration.md). Linux migration requires
+the exact external market-data snapshot; the application will not discover or
+substitute a similarly named directory.
+
 ## Kite Connect daily login
 
 Open **Markets Data Library → Data Coverage → Kite Connection**. Enter the

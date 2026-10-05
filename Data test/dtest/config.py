@@ -14,12 +14,17 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Literal
 
-# Per-machine override for the derived-data cache directory, so a different
-# machine (or a CI runner) never needs to edit the tracked config.toml just to
-# relocate a regenerable cache. Mirrors the predecessor project's
-# MARKET_GATE_RESEARCH_CACHE pattern for the identical reason: this working
-# tree is OneDrive-synced, and the cache must not be.
-ARTIFACTS_ENV_VAR = "DTEST_ARTIFACTS_DIR"
+# Per-machine bindings are deliberately environment-only.  The tracked TOML
+# describes the expected layout, while a workstation binds that layout to the
+# exact audited snapshot without committing a host-specific absolute path.
+PATH_ENV_VARS = {
+    "price_dir": "DTEST_PRICE_DIR",
+    "fno_db": "DTEST_FNO_DB",
+    "industry_map": "DTEST_INDUSTRY_MAP",
+    "artifacts": "DTEST_ARTIFACTS_DIR",
+    "runs": "DTEST_RUNS_DIR",
+}
+ARTIFACTS_ENV_VAR = PATH_ENV_VARS["artifacts"]
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = PROJECT_ROOT / "config" / "config.toml"
@@ -217,9 +222,12 @@ def load_config(path: str | Path | None = None) -> Config:
         splits[name] = Split(name=name, embargo_days=embargo, **block)
 
     paths_raw = dict(raw["paths"])
-    env_override = os.environ.get(ARTIFACTS_ENV_VAR)
-    if env_override:
-        paths_raw["artifacts"] = env_override
+    for key, variable in PATH_ENV_VARS.items():
+        env_override = os.environ.get(variable)
+        if env_override is not None:
+            if not env_override.strip():
+                raise ValueError(f"{variable} is set but empty")
+            paths_raw[key] = env_override
     paths = Paths(**{
         k: _resolve(PROJECT_ROOT, v) for k, v in paths_raw.items()
     })

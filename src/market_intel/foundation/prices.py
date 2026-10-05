@@ -91,6 +91,9 @@ def load_symbol_csvs(
         source_id=source_id, knowledge_cutoff=pd.Timestamp(as_of),
         retrieved_at=pd.Timestamp(retrieved_at), content_hash=content_hash,
         parser_version="daily_csv_v1", survivorship_safe=survivorship_safe,
-        paths=tuple(str(p) for p in paths), quality_flags=flags,
+        # Canonical identity contains logical POSIX names, never a workstation
+        # root.  The content hash binds the bytes; absolute paths are only a
+        # runtime locator and must not change a reproducible manifest.
+        paths=tuple(p.name for p in paths), quality_flags=flags,
     )
     return PricePanels(**panels, aliases=pd.DataFrame(aliases), provenance=pd.DataFrame(provenance), snapshot=snapshot)

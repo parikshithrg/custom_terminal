@@ -1,12 +1,12 @@
 [build-system]
-requires = ["hatchling>=1.27"]
+requires = ["hatchling==1.27.0"]
 build-backend = "hatchling.build"
 
 [project]
 name = "local-terminal-market-intel"
 version = "0.1.0"
 description = "Local-first, point-in-time market research infrastructure"
-requires-python = ">=3.12"
+requires-python = "==3.12.*"
 dependencies = [
   "numpy==2.5.1",
   "pandas==3.0.3",
@@ -19,6 +19,13 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+ui = [
+  "streamlit==1.64.0",
+  "feedparser==6.0.14",
+  "yfinance==1.7.0",
+  "PyYAML==6.0.3",
+  "vaderSentiment==3.3.2",
+]
 test = ["pytest==9.0.2"]
 
 [project.scripts]
@@ -30,5 +37,5 @@ packages = ["src/market_intel", "src/research_contracts"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-ra --basetemp=.pytest_tmp/root"
+addopts = "-ra"
 norecursedirs = ["Data test", "Local Terminal", "artifacts", ".pytest_tmp"]

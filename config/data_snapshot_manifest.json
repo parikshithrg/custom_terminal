@@ -1,0 +1,23 @@
+{
+  "manifest_version": "linux_migration_snapshot_v1",
+  "captured_on": "2026-10-05",
+  "datasets": {
+    "nse_cash_daily": {
+      "binding": "DTEST_PRICE_DIR",
+      "file_count": 430,
+      "total_bytes": 81194328,
+      "inventory_algorithm": "sha256(utf8(join('\\n', sorted(filename + ':' + bytes + ':' + sha256))))",
+      "inventory_sha256": "a96c2d4ff3576d9a7b025dd60baaf6164b41bd7f11e191b72a7cf1f47408a2fa"
+    },
+    "nse_fno_sqlite": {
+      "binding": "DTEST_FNO_DB",
+      "bytes": 48345137152,
+      "sha256": "17154c2243a41505b156260965d186d2a2ad8beb4332df9189a56c66b746a674"
+    },
+    "nifty500_industry_map": {
+      "binding": "DTEST_INDUSTRY_MAP",
+      "bytes": 5630,
+      "sha256": "47e984a8e846d3ed7d50a5439a5100093759bf7c4ed45cf3dfeb70ef8d39a3bc"
+    }
+  }
+}
